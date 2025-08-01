@@ -50,9 +50,9 @@ export default function Hero() {
         <div className="flex-1 flex justify-center items-center w-full mt-4 lg:mt-0 relative max-w-full">
           {/* Soft blurred gradient glow behind image */}
           <div className="absolute inset-0 flex justify-center items-center pointer-events-none select-none z-0 w-full max-w-full">
-            <div className="w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 lg:w-[32rem] lg:h-[32rem] xl:w-[36rem] xl:h-[36rem] rounded-full bg-gradient-to-br from-blue-500/20 via-orange-500/15 to-orange-400/10 blur-2xl lg:blur-3xl opacity-80 max-w-full" />
+            <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-[28rem] md:h-[28rem] lg:w-[36rem] lg:h-[36rem] xl:w-[40rem] xl:h-[40rem] 2xl:w-[44rem] 2xl:h-[44rem] rounded-full bg-gradient-to-br from-blue-500/20 via-orange-500/15 to-orange-400/10 blur-2xl lg:blur-3xl opacity-80 max-w-full" />
           </div>
-          <div className="relative z-10 w-full max-w-[350px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl aspect-[5/4] flex items-center justify-center px-4 lg:px-0">
+          <div className="relative z-10 w-full max-w-[420px] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl aspect-[5/4] flex items-center justify-center px-4 lg:px-0">
             <Image
               src="/Hero Brain 2.png"
               alt="ERP AI Automation Technology Illustration"
