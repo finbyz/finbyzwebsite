@@ -15,6 +15,7 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [expandedMobileItems, setExpandedMobileItems] = useState<string[]>([]);
   const [hoveredService, setHoveredService] = useState<string | null>(null);
+  const [hoveredDropdown, setHoveredDropdown] = useState<string | null>(null);
   const [mobileNavStack, setMobileNavStack] = useState<{title: string, items: any[], parent?: string}[]>([]);
   const [navAnimation, setNavAnimation] = useState<'slide-in' | 'slide-out' | null>(null);
 
@@ -190,7 +191,7 @@ export default function Header() {
   return (
     <>
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-white/80 backdrop-blur-sm shadow-sm"
+        isScrolled ? "bg-gray-900/95 backdrop-blur-md shadow-lg" : "bg-gray-900/80 backdrop-blur-sm shadow-sm"
       }`}>
         <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-20">
           <div className="flex justify-between items-center h-20 lg:h-24">
@@ -198,7 +199,7 @@ export default function Header() {
             <div className="flex items-center">
               <button
                 onClick={scrollToTop}
-                className="text-2xl lg:text-3xl font-bold tracking-wider text-[#1A5276] hover:text-[#FF8C00] transition-colors cursor-pointer"
+                className="text-2xl lg:text-3xl font-bold tracking-wider text-white hover:text-[#FF8C00] transition-colors cursor-pointer"
               >
                 Finbyz.tech
               </button>
@@ -207,21 +208,45 @@ export default function Header() {
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-1">
               {navigationItems.map((item) => (
-                <div key={item.name} className="relative group">
+                <div key={item.name} className="relative">
                   {item.hasDropdown ? (
                     <div className="relative">
                       <Button
                         variant="ghost"
-                        className="text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5 transition-all font-medium flex items-center space-x-1 text-base py-6 px-3 rounded-lg"
+                        className={`text-gray-300 hover:text-[#FF8C00] hover:bg-gray-700/50 transition-all font-medium flex items-center space-x-1 text-base py-6 px-3 rounded-lg ${
+                          hoveredDropdown === item.name ? 'text-[#FF8C00] bg-gray-700/50' : ''
+                        }`}
+                        onMouseEnter={() => setHoveredDropdown(item.name)}
+                        onMouseLeave={() => setHoveredDropdown(null)}
                       >
                         <item.icon className="w-4 h-4" />
                         <span>{item.name}</span>
-                        <ChevronDown className="w-3 h-3 transition-transform group-hover:rotate-180" />
+                        <ChevronDown className={`w-3 h-3 transition-transform ${
+                          hoveredDropdown === item.name ? 'rotate-180' : ''
+                        }`} />
                       </Button>
-                      <div className="absolute top-full left-0 bg-white border border-gray-200 shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+                      <div 
+                        className={`absolute top-full left-0 bg-white border border-gray-200 shadow-2xl rounded-xl transition-all duration-300 transform z-50 ${
+                          hoveredDropdown === item.name 
+                            ? 'opacity-100 visible translate-y-0' 
+                            : 'opacity-0 invisible translate-y-2'
+                        }`}
+                        onMouseEnter={() => setHoveredDropdown(item.name)}
+                        onMouseLeave={(e) => {
+                          // Only close if we're not moving to a child element
+                          const relatedTarget = e.relatedTarget as HTMLElement;
+                          if (!e.currentTarget.contains(relatedTarget)) {
+                            setHoveredDropdown(null);
+                          }
+                        }}
+                      >
                           {item.name === "Services" ? (
                             // Services dropdown with two-panel layout
-                            <div className="flex w-[800px] min-h-[400px]">
+                            <div 
+                              className="flex w-[800px] min-h-[400px]"
+                              onMouseEnter={() => setHoveredDropdown(item.name)}
+                              onMouseLeave={() => setHoveredDropdown(null)}
+                            >
                               {/* Left Panel - Main Categories */}
                               <div className="w-1/2 p-6 border-r border-gray-200 bg-gray-50/30">
                                 <h3 className="font-semibold text-[#1A5276] mb-6 text-lg">Our Services</h3>
@@ -233,7 +258,14 @@ export default function Header() {
                                         hoveredService === mainItem.name ? 'bg-white border-gray-200 shadow-sm text-[#FF8C00]' : ''
                                       }`}
                                       onMouseEnter={() => setHoveredService(mainItem.name)}
-                                      onMouseLeave={() => setHoveredService(null)}
+                                      onMouseLeave={() => {
+                                        // Keep the service selected when moving to right panel
+                                        setTimeout(() => {
+                                          if (hoveredDropdown !== item.name) {
+                                            setHoveredService(null);
+                                          }
+                                        }, 100);
+                                      }}
                                     >
                                       <mainItem.icon className="w-5 h-5 flex-shrink-0" />
                                       <span className="text-sm font-medium">{mainItem.name}</span>
@@ -252,6 +284,12 @@ export default function Header() {
                                         <div
                                           key={subItem.name}
                                           className="flex items-center space-x-3 px-3 py-2 text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5 cursor-pointer transition-all rounded-lg text-sm"
+                                          onClick={() => {
+                                            // Handle click on submenu item
+                                            console.log('Clicked:', subItem.name);
+                                            setHoveredDropdown(null);
+                                            setHoveredService(null);
+                                          }}
                                         >
                                           <subItem.icon className="w-4 h-4 flex-shrink-0" />
                                           <span className="font-medium">{subItem.name}</span>
@@ -268,7 +306,7 @@ export default function Header() {
                                   </div>
                                 )}
                               </div>
-        </div>
+                            </div>
                           ) : (
                             // Regular dropdown for other items
                             <div className="w-80">
@@ -277,7 +315,7 @@ export default function Header() {
                                   {item.items?.map((subItem) => (
                                     <div
                                       key={subItem.name}
-                                      className="flex items-center space-x-3 px-3 py-2.5 text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5 cursor-pointer transition-all rounded-lg"
+                                      className="flex items-center space-x-3 px-3 py-2.5 text-[#1A5276] hover:text-[#FF8C00] hover:bg-gray-100 cursor-pointer transition-all rounded-lg"
                                     >
                                       <subItem.icon className="w-4 h-4 flex-shrink-0" />
                                       <span className="text-sm font-medium">{subItem.name}</span>
@@ -292,7 +330,7 @@ export default function Header() {
                   ) : (
                     <Button
                       variant="ghost"
-                      className="text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5 transition-all font-medium flex items-center space-x-1 text-base py-6 px-3 rounded-lg"
+                      className="text-gray-300 hover:text-[#FF8C00] hover:bg-gray-700/50 transition-all font-medium flex items-center space-x-1 text-base py-6 px-3 rounded-lg"
                     >
                       <item.icon className="w-4 h-4" />
                       <span>{item.name}</span>
@@ -302,11 +340,11 @@ export default function Header() {
               ))}
               
               {/* CTA Button */}
-              <div className="ml-4">
-                <Button className="rounded-full bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white hover:shadow-lg hover:scale-105 transition-all text-sm px-6 py-6 font-medium">
-                  Book Consultation
-                </Button>
-              </div>
+              <Button 
+                className="ml-4 bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white hover:shadow-lg hover:shadow-orange-500/25 transition-all text-sm py-2 px-6 font-medium rounded-full"
+              >
+                Book Consultation
+              </Button>
             </div>
             
             {/* Mobile Menu Button */}
@@ -317,16 +355,16 @@ export default function Header() {
                 onClick={() => {
                   setIsMobileMenuOpen(!isMobileMenuOpen);
                   setMobileNavStack([]);
-                  setNavAnimation(null);
+                  setNavAnimation(null); // Fix: No animation on initial open
                 }}
-                className="text-[#1A5276] hover:bg-[#1A5276]/10 w-12 h-12 rounded-lg"
+                className="text-gray-300 hover:bg-gray-700/50 w-12 h-12 rounded-lg"
               >
                 {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
               </Button>
             </div>
           </div>
         </div>
-        </nav>
+      </nav>
       
       {/* Mobile Slide-in Drawer - Outside nav container */}
       {isMobileMenuOpen && (
