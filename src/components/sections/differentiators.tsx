@@ -35,45 +35,54 @@ const differentiators = [
 
 export default function Differentiators() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-5xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-2" style={{ color: "#1A5276" }}>
+    <section className="py-16 bg-white w-full min-h-screen flex items-center">
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-20">
+        <div className="text-center mb-10 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[#1A5276]">
             Our Differentiators
           </h2>
-          <p className="text-xl" style={{ color: "#1A5276" }}>
+          <p className="text-lg md:text-xl text-[#1A5276] max-w-3xl mx-auto leading-relaxed">
             What sets us apart in the technology landscape
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-8">
-          {differentiators.map((item) => (
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-10">
+          {differentiators.map((item, index) => (
             <div
               key={item.title}
-              className="bg-white rounded-2xl shadow-md p-6 flex items-start gap-4 transition-transform hover:scale-105"
+              className="animate-fade-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div
-                className="w-14 h-14 flex items-center justify-center rounded-xl"
-                style={{ background: item.iconBg }}
-              >
-                <item.icon className="w-7 h-7" style={{ color: item.iconColor }} />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold mb-1" style={{ color: "#1A5276" }}>
-                  {item.title}
-                </h3>
-                <p className="text-gray-700 text-sm">{item.description}</p>
+              <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl p-6 lg:p-8 flex flex-col items-center text-center gap-4 lg:gap-6 transition-all duration-500 hover:scale-105 border border-gray-100 h-full">
+                <div
+                  className="w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-2xl transition-transform duration-300 hover:scale-110 flex-shrink-0"
+                  style={{ background: item.iconBg }}
+                >
+                  <item.icon className="w-7 h-7 lg:w-8 lg:h-8" style={{ color: item.iconColor }} />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg lg:text-xl font-bold mb-2 text-[#1A5276] leading-tight">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm lg:text-base leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
         </div>
-        {/* Quote Section */}
-        <div className="mt-12">
-          <div className="rounded-2xl px-8 py-8 text-center" style={{ background: "#FFF4E5" }}>
-            <div className="text-2xl md:text-3xl font-bold mb-2" style={{ color: "#1A5276" }}>
-              "You bring the vision — <span style={{ color: '#FF8C00' }}>we'll build the roadmap.</span>"
-            </div>
-            <div className="mt-2 font-semibold" style={{ color: "#1A5276" }}>
-              — The Finbyz Promise
+        
+        {/* Quote Section - Made Smaller */}
+        <div className="animate-fade-in-delayed">
+          <div className="max-w-2xl mx-auto">
+            <div className="rounded-2xl px-6 py-6 text-center shadow-md" style={{ background: "#FFF4E5" }}>
+              <div className="text-lg md:text-xl font-bold mb-2 text-[#1A5276] leading-tight">
+                "You bring the vision — <span className="text-[#FF8C00]">we'll build the roadmap.</span>"
+              </div>
+              <div className="text-sm md:text-base font-semibold text-[#1A5276]">
+                — The Finbyz Promise
+              </div>
             </div>
           </div>
         </div>

@@ -50,23 +50,23 @@ const clientLogos = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-20 bg-[#FAFBFC]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1A5276] mb-4">
+    <section id="testimonials" className="py-16 bg-[#FAFBFC] w-full min-h-screen flex items-center">
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-20">
+        <div className="text-center mb-10 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1A5276] mb-4">
             Trusted by Clients Globally
           </h2>
-          <p className="text-xl text-[#1A5276]">
+          <p className="text-lg md:text-xl text-[#1A5276] max-w-3xl mx-auto">
             See what our partners say about working with us
           </p>
         </div>
         
         {/* Client Logos */}
-        <div className="flex justify-center items-center space-x-6 mb-16">
+        <div className="flex justify-center items-center space-x-4 lg:space-x-6 mb-10">
           {clientLogos.map((logo) => (
             <div
               key={logo.name}
-              className="w-28 h-12 rounded-lg flex items-center justify-center text-sm font-bold shadow"
+              className="w-20 h-10 lg:w-28 lg:h-12 rounded-lg flex items-center justify-center text-xs lg:text-sm font-bold shadow-sm"
               style={{
                 background: logo.bg,
                 color: logo.color,
@@ -79,44 +79,44 @@ export default function Testimonials() {
         </div>
         
         {/* Testimonial Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-10">
           {testimonials.map((testimonial, index) => (
             <Card
               key={testimonial.author}
-              className="bg-white h-full border border-gray-200 rounded-2xl shadow-md flex flex-col"
+              className="bg-white h-full border border-gray-200 rounded-2xl shadow-lg hover:shadow-xl flex flex-col transition-all duration-300 hover:scale-105"
               style={{ borderTop: `4px solid ${testimonial.palette.color}` }}
             >
-              <CardContent className="p-8 flex flex-col h-full">
+              <CardContent className="p-6 lg:p-8 flex flex-col h-full">
                 {/* Quote Icon */}
                 <div
-                  className="w-12 h-12 rounded-full flex items-center justify-center mb-6 shadow"
+                  className="w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center mb-4 lg:mb-6 shadow-sm"
                   style={{ background: testimonial.palette.bg }}
                 >
-                  <Quote className="w-6 h-6" style={{ color: testimonial.palette.color }} />
+                  <Quote className="w-5 h-5 lg:w-6 lg:h-6" style={{ color: testimonial.palette.color }} />
                 </div>
                 
                 {/* Rating Stars */}
-                <div className="flex mb-4">
+                <div className="flex mb-3 lg:mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5" style={{ color: "#FF8C00" }} fill="#FF8C00" />
+                    <Star key={i} className="w-4 h-4 lg:w-5 lg:h-5" style={{ color: "#FF8C00" }} fill="#FF8C00" />
                   ))}
                 </div>
                 
                 {/* Quote Text */}
-                <p className="text-lg text-gray-700 mb-6 italic leading-relaxed">
+                <p className="text-base lg:text-lg text-gray-700 mb-4 lg:mb-6 italic leading-relaxed flex-1">
                   &quot;{testimonial.quote}&quot;
                 </p>
                 
                 {/* Author Info */}
                 <div className="flex items-center mt-auto">
-                  <Avatar className="mr-4" style={{ background: testimonial.palette.bg }}>
-                    <AvatarFallback className="text-white font-bold" style={{ background: testimonial.palette.color }}>
+                  <Avatar className="mr-3 lg:mr-4" style={{ background: testimonial.palette.bg }}>
+                    <AvatarFallback className="text-white font-bold text-sm lg:text-base" style={{ background: testimonial.palette.color }}>
                       {testimonial.initials}
                     </AvatarFallback>
                   </Avatar>
                   <div>
-                    <p className="font-semibold text-[#1A5276]">{testimonial.author}</p>
-                    <p className="text-gray-500 text-sm">{testimonial.company}</p>
+                    <p className="font-semibold text-[#1A5276] text-sm lg:text-base">{testimonial.author}</p>
+                    <p className="text-gray-500 text-xs lg:text-sm">{testimonial.company}</p>
                   </div>
                 </div>
               </CardContent>
@@ -128,13 +128,13 @@ export default function Testimonials() {
         <div className="text-center animate-fade-in-delayed">
           <Button 
             size="lg"
-            className="bg-[#1A5276] text-white text-lg px-8 py-4 h-auto rounded-full shadow hover:bg-[#154360] transition-all"
+            className="bg-[#1A5276] text-white text-base lg:text-lg px-6 lg:px-8 py-3 lg:py-4 h-auto rounded-full shadow-lg hover:shadow-xl hover:bg-[#154360] transition-all duration-300"
           >
             See How We Helped Businesses Like Yours →
           </Button>
           
           {/* Trust Indicators */}
-          <div className="mt-8 flex justify-center items-center space-x-8 text-sm text-[#1A5276]">
+          <div className="mt-6 lg:mt-8 flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 lg:space-x-8 text-xs lg:text-sm text-[#1A5276]">
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-[#1A5276] rounded-full"></div>
               <span>500+ Projects Delivered</span>

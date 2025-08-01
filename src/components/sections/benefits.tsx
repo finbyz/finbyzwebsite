@@ -88,42 +88,41 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section className="py-20 bg-[#1A5276] text-white relative overflow-hidden">
-      {/* No gradients, just a solid blue background */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+    <section className="py-24 bg-gradient-to-br from-[#E3F0FF] via-white to-[#FFF7E6] relative overflow-hidden w-full">
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-20 relative">
+        <div className="text-center mb-20 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#1A5276]">
             Why Choose Finbyz
           </h2>
-          <p className="text-xl text-blue-100">
+          <p className="text-xl md:text-2xl text-[#1A5276] max-w-3xl mx-auto leading-relaxed">
             Proven results that speak for themselves
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10">
           {benefits.map((benefit, index) => (
             <div 
               key={benefit.label}
               className="text-center animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="bg-white/10 rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/90 transition-all duration-500 hover:scale-105 border border-white/50 shadow-lg hover:shadow-xl">
                 <div
-                  className="w-16 h-16 rounded-2xl flex items-center justify-center mb-4 mx-auto shadow-lg"
+                  className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg transition-transform duration-300 hover:scale-110"
                   style={{
                     background: benefit.palette.iconBg,
                   }}
                 >
-                  <benefit.icon className="w-8 h-8" style={{ color: benefit.palette.iconColor }} />
+                  <benefit.icon className="w-10 h-10" style={{ color: benefit.palette.iconColor }} />
                 </div>
                 
                 <AnimatedCounter
                   end={benefit.number}
                   suffix={benefit.suffix}
-                  className="text-4xl md:text-5xl font-bold text-white mb-2 block"
+                  className="text-4xl md:text-5xl font-bold text-[#1A5276] mb-4 block"
                 />
                 
-                <p className="text-blue-100 text-sm leading-relaxed">
+                <p className="text-[#1A5276] text-base lg:text-lg leading-relaxed font-medium">
                   {benefit.label}
                 </p>
               </div>
@@ -131,10 +130,10 @@ export default function Benefits() {
           ))}
         </div>
         
-        <div className="text-center mt-16 animate-fade-in-delayed">
+        <div className="text-center mt-20 animate-fade-in-delayed">
           <Button 
             size="lg"
-            className="bg-[#FF8C00] text-white hover:bg-[#e07c00] text-lg px-8 py-4 h-auto transform hover:scale-105 transition-all shadow-lg"
+            className="bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white hover:shadow-xl text-lg px-10 py-4 h-auto transform hover:scale-105 transition-all duration-300 shadow-lg rounded-full font-semibold"
           >
             Let&apos;s Build That Efficiency &rarr;
           </Button>
