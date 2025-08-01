@@ -2,18 +2,41 @@
 
 import { Button } from "@/components/ui/button";
 import { Award, TrendingUp, Globe, Users, Target } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+
+// Intersection Observer Hook
+function useInView(threshold = 0.3) {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    if (!ref.current) return;
+    const observer = new window.IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { threshold }
+    );
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [threshold]);
+
+  return [ref, inView] as const;
+}
 
 interface AnimatedCounterProps {
   end: number;
   suffix: string;
   className: string;
+  start: boolean;
 }
 
-function AnimatedCounter({ end, suffix, className }: AnimatedCounterProps) {
+function AnimatedCounter({ end, suffix, className, start }: AnimatedCounterProps) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
+    if (!start) {
+      setCount(0);
+      return;
+    }
     const duration = 2000; // 2 seconds
     const steps = 60;
     const increment = end / steps;
@@ -30,7 +53,7 @@ function AnimatedCounter({ end, suffix, className }: AnimatedCounterProps) {
     }, duration / steps);
 
     return () => clearInterval(timer);
-  }, [end]);
+  }, [end, start]);
 
   return (
     <div className={className}>
@@ -87,8 +110,10 @@ const benefits = [
 ];
 
 export default function Benefits() {
+  const [sectionRef, inView] = useInView(0.3);
+
   return (
-    <section className="py-24 bg-gradient-to-br from-[#E3F0FF] via-white to-[#FFF7E6] relative overflow-hidden w-full">
+    <section ref={sectionRef} className="py-24 bg-gradient-to-br from-[#E3F0FF] via-white to-[#FFF7E6] relative overflow-hidden w-full">
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-20 relative">
         <div className="text-center mb-20 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#1A5276]">
@@ -98,38 +123,38 @@ export default function Benefits() {
             Proven results that speak for themselves
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10">
-          {benefits.map((benefit, index) => (
-            <div 
-              key={benefit.label}
-              className="text-center animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/90 transition-all duration-500 hover:scale-105 border border-white/50 shadow-lg hover:shadow-xl">
-                <div
-                  className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg transition-transform duration-300 hover:scale-110"
-                  style={{
-                    background: benefit.palette.iconBg,
-                  }}
-                >
-                  <benefit.icon className="w-10 h-10" style={{ color: benefit.palette.iconColor }} />
+        {/* Center the grid and make cards fill space nicely */}
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 w-full">
+            {benefits.map((benefit, index) => (
+              <div 
+                key={benefit.label}
+                className="flex items-stretch h-full animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex flex-col items-center justify-between bg-white/80 backdrop-blur-sm rounded-2xl p-10 hover:bg-white/90 transition-all duration-500 hover:scale-105 border border-white/50 shadow-lg hover:shadow-xl w-full min-h-[320px] max-h-[360px] min-w-[260px] max-w-[340px] mx-auto">
+                  <div
+                    className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg transition-transform duration-300 hover:scale-110"
+                    style={{
+                      background: benefit.palette.iconBg,
+                    }}
+                  >
+                    <benefit.icon className="w-10 h-10" style={{ color: benefit.palette.iconColor }} />
+                  </div>
+                  <AnimatedCounter
+                    end={benefit.number}
+                    suffix={benefit.suffix}
+                    className="text-4xl md:text-5xl font-bold text-[#1A5276] mb-4 block text-center"
+                    start={inView}
+                  />
+                  <p className="text-[#1A5276] text-base lg:text-lg leading-relaxed font-medium">
+                    {benefit.label}
+                  </p>
                 </div>
-                
-                <AnimatedCounter
-                  end={benefit.number}
-                  suffix={benefit.suffix}
-                  className="text-4xl md:text-5xl font-bold text-[#1A5276] mb-4 block"
-                />
-                
-                <p className="text-[#1A5276] text-base lg:text-lg leading-relaxed font-medium">
-                  {benefit.label}
-                </p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-        
         <div className="text-center mt-20 animate-fade-in-delayed">
           <Button 
             size="lg"
@@ -142,4 +167,3 @@ export default function Benefits() {
     </section>
   );
 }
-

@@ -6,10 +6,21 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section
-      className="relative min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-[#E3F0FF] via-white to-[#FFF7E6] overflow-hidden"
+      className="relative min-h-screen w-full flex items-center justify-center bg-white overflow-hidden"
       style={{ minHeight: '100vh' }}
     >
-      <div className="absolute inset-0 pointer-events-none select-none" aria-hidden="true" />
+      {/* Professional Background Pattern */}
+      <div className="absolute inset-0 pointer-events-none select-none" aria-hidden="true">
+        {/* Subtle geometric pattern */}
+        <div className="absolute top-0 left-0 w-full h-full opacity-[0.03]">
+          <div className="absolute top-20 left-10 w-32 h-32 border border-[#1A5276] rounded-full"></div>
+          <div className="absolute top-40 right-20 w-24 h-24 border border-[#FF8C00] rounded-full"></div>
+          <div className="absolute bottom-32 left-1/4 w-16 h-16 border border-[#1A5276] rounded-full"></div>
+          <div className="absolute bottom-20 right-1/3 w-20 h-20 border border-[#FF8C00] rounded-full"></div>
+        </div>
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-[#F8FAFC] opacity-60"></div>
+      </div>
       <div className="relative z-10 w-full flex flex-col lg:flex-row items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 xl:px-20 pt-24 lg:pt-0">
         {/* Left: Content */}
         <div className="flex-1 flex flex-col justify-center items-center lg:items-start text-center lg:text-left lg:pr-8 xl:pr-12 py-8 lg:py-0 w-full max-w-2xl lg:max-w-none">
@@ -43,7 +54,7 @@ export default function Hero() {
           </div>
           <div className="relative z-10 w-full max-w-[280px] sm:max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg aspect-[5/4] flex items-center justify-center px-4 lg:px-0">
             <Image
-              src="/Home Hero Image ERP AI Automation.png"
+              src="/Hero Section.png"
               alt="ERP AI Automation Technology Illustration"
               fill
               style={{ objectFit: "contain" }}

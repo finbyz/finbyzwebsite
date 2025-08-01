@@ -6,10 +6,10 @@ export default function Footer() {
     <footer className="bg-slate-900 text-white w-full">
       {/* Main Footer Content */}
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-20 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-8">
           
-          {/* Company Info - Spans 3 columns */}
-          <div className="lg:col-span-3">
+          {/* Company Info - Spans 1 column */}
+          <div className="lg:col-span-1">
             <div className="space-y-6">
               <div>
                 <h3 className="text-2xl font-bold text-white mb-4">Finbyz.tech</h3>
@@ -35,26 +35,8 @@ export default function Footer() {
             </div>
           </div>
           
-          {/* Quick Links - Spans 2 columns */}
-          <div className="lg:col-span-2">
-            <div className="space-y-4">
-              <h4 className="font-semibold text-white text-lg flex items-center">
-                <Home className="w-5 h-5 mr-2" />
-                Quick Links
-              </h4>
-              <ul className="space-y-3">
-                <li>
-                  <a href="#" className="text-slate-300 hover:text-white transition-colors text-sm flex items-center">
-                    <span className="w-1 h-1 bg-slate-400 rounded-full mr-3"></span>
-                    Home
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          
-          {/* About - Spans 2 columns */}
-          <div className="lg:col-span-2">
+          {/* About - Spans 1 column */}
+          <div className="lg:col-span-1">
             <div className="space-y-4">
               <h4 className="font-semibold text-white text-lg flex items-center">
                 <Users className="w-5 h-5 mr-2" />
@@ -72,8 +54,8 @@ export default function Footer() {
             </div>
           </div>
           
-          {/* Industries - Spans 2 columns */}
-          <div className="lg:col-span-2">
+          {/* Industries - Spans 1 column */}
+          <div className="lg:col-span-1">
             <div className="space-y-4">
               <h4 className="font-semibold text-white text-lg flex items-center">
                 <Building2 className="w-5 h-5 mr-2" />
@@ -92,8 +74,8 @@ export default function Footer() {
             </div>
           </div>
           
-          {/* Services - Spans 2 columns */}
-          <div className="lg:col-span-2">
+          {/* Services - Spans 1 column */}
+          <div className="lg:col-span-1">
             <div className="space-y-4">
               <h4 className="font-semibold text-white text-lg flex items-center">
                 <Wrench className="w-5 h-5 mr-2" />
@@ -110,38 +92,37 @@ export default function Footer() {
             </div>
           </div>
           
-          {/* Blog & Career - Spans 1 column */}
+          {/* Blog - Spans 1 column */}
           <div className="lg:col-span-1">
-            <div className="space-y-8">
-              {/* Blog */}
-              <div className="space-y-4">
-                <h4 className="font-semibold text-white text-lg flex items-center">
-                  <FileText className="w-5 h-5 mr-2" />
-                  Blog
-                </h4>
-                <ul className="space-y-3">
-                  <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">ERPNext</a></li>
-                  <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">AI Automation</a></li>
-                  <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Use Cases</a></li>
-                  <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Success Stories</a></li>
-                  <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">How-to Guides</a></li>
-                </ul>
-              </div>
-              
-              {/* Career */}
-              <div className="space-y-4">
-                <h4 className="font-semibold text-white text-lg flex items-center">
-                  <Briefcase className="w-5 h-5 mr-2" />
-                  Career
-                </h4>
-                <ul className="space-y-3">
-                  <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Life at Finbyz</a></li>
-                  <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Current Openings</a></li>
-                  <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Internships</a></li>
-                  <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Hiring Process</a></li>
-                  <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Testimonials</a></li>
-                </ul>
-              </div>
+            <div className="space-y-4">
+              <h4 className="font-semibold text-white text-lg flex items-center">
+                <FileText className="w-5 h-5 mr-2" />
+                Blog
+              </h4>
+              <ul className="space-y-3">
+                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">ERPNext</a></li>
+                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">AI Automation</a></li>
+                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Use Cases</a></li>
+                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Success Stories</a></li>
+                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">How-to Guides</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          {/* Career - Spans 1 column */}
+          <div className="lg:col-span-1">
+            <div className="space-y-4">
+              <h4 className="font-semibold text-white text-lg flex items-center">
+                <Briefcase className="w-5 h-5 mr-2" />
+                Career
+              </h4>
+              <ul className="space-y-3">
+                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Life at Finbyz</a></li>
+                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Current Openings</a></li>
+                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Internships</a></li>
+                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Hiring Process</a></li>
+                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Testimonials</a></li>
+              </ul>
             </div>
           </div>
         </div>
