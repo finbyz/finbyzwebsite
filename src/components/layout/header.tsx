@@ -19,6 +19,7 @@ export default function Header() {
   const [hoveredDropdown, setHoveredDropdown] = useState<string | null>(null);
   const [mobileNavStack, setMobileNavStack] = useState<{title: string, items: any[], parent?: string}[]>([]);
   const [navAnimation, setNavAnimation] = useState<'slide-in' | 'slide-out' | null>(null);
+  const [isGoingBack, setIsGoingBack] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,6 +55,7 @@ export default function Header() {
 
   // Helper to open a submenu in mobile
   const openMobileSubmenu = (title: string, items: any[]) => {
+    setIsGoingBack(false);
     setNavAnimation('slide-out');
     setTimeout(() => {
       setMobileNavStack((stack) => [...stack, { title, items }]);
@@ -62,6 +64,7 @@ export default function Header() {
   };
   // Helper to go back in mobile menu
   const backMobileMenu = () => {
+    setIsGoingBack(true);
     setNavAnimation('slide-out');
     setTimeout(() => {
       setMobileNavStack((stack) => stack.slice(0, -1));
@@ -73,6 +76,7 @@ export default function Header() {
     setMobileNavStack([]);
     setIsMobileMenuOpen(false);
     setNavAnimation(null);
+    setIsGoingBack(false);
   };
 
   const navigationItems = [
@@ -312,7 +316,7 @@ export default function Header() {
                                   </div>
                                 )}
                               </div>
-                            </div>
+        </div>
                           ) : (
                             // Regular dropdown for other items
                             <div className="w-80">
@@ -370,7 +374,7 @@ export default function Header() {
             </div>
           </div>
         </div>
-      </nav>
+        </nav>
       
       {/* Mobile Slide-in Drawer - Outside nav container */}
       {isMobileMenuOpen && (
@@ -396,7 +400,13 @@ export default function Header() {
               </button>
             </div>
             {/* Navigation Stack */}
-            <div className={`py-2 flex-1 ${navAnimation === 'slide-in' ? 'animate-slide-in-right' : navAnimation === 'slide-out' ? 'animate-slide-out-left' : ''}`}>
+            <div className={`py-2 flex-1 ${
+              navAnimation === 'slide-in' 
+                ? (isGoingBack ? 'animate-slide-in-left' : 'animate-slide-in-right')
+                : navAnimation === 'slide-out' 
+                ? 'animate-slide-out-left' 
+                : ''
+            }`}>
               <div className="py-2">
                 {(mobileNavStack.length === 0 ? navigationItems : mobileNavStack[mobileNavStack.length-1].items).map((item: any) => (
                   <div key={item.name}>

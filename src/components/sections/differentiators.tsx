@@ -1,6 +1,25 @@
 "use client";
 
 import { Eye, Heart, CheckCircle, BarChart3 } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+
+// Intersection Observer Hook
+function useInView(threshold = 0.3) {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    if (!ref.current) return;
+    const observer = new window.IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { threshold }
+    );
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [threshold]);
+
+  return [ref, inView] as const;
+}
 
 const differentiators = [
   {
@@ -34,10 +53,12 @@ const differentiators = [
 ];
 
 export default function Differentiators() {
+  const [sectionRef, inView] = useInView(0.3);
+
   return (
-    <section className="py-16 bg-white w-full min-h-screen flex items-center">
+    <section ref={sectionRef} className="py-16 bg-white w-full min-h-screen flex items-center">
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-20">
-        <div className="text-center mb-10 animate-fade-in">
+        <div className={`text-center mb-10 transition-all duration-1000 ${inView ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[#1A5276]">
             Our Differentiators
           </h2>
@@ -50,8 +71,11 @@ export default function Differentiators() {
           {differentiators.map((item, index) => (
             <div
               key={item.title}
-              className="animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={`transition-all duration-700 ${inView ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}
+              style={{ 
+                transitionDelay: inView ? `${index * 0.2}s` : '0s',
+                animationDelay: inView ? `${index * 0.2}s` : '0s'
+              }}
             >
               <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl p-6 lg:p-8 flex flex-col items-center text-center gap-4 lg:gap-6 transition-all duration-500 hover:scale-105 border border-gray-100 h-full">
                 <div
@@ -74,7 +98,7 @@ export default function Differentiators() {
         </div>
         
         {/* Quote Section - Made Smaller */}
-        <div className="animate-fade-in-delayed">
+        <div className={`transition-all duration-1000 ${inView ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: inView ? '0.8s' : '0s' }}>
           <div className="max-w-2xl mx-auto">
             <div className="rounded-2xl px-6 py-6 text-center shadow-md" style={{ background: "#FFF4E5" }}>
               <div className="text-lg md:text-xl font-bold mb-2 text-[#1A5276] leading-tight">

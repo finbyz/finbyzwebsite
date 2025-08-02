@@ -20,7 +20,8 @@ const testimonials = [
     company: "Millennium Vitrified Tiles Pvt. Ltd. (India)",
     initials: "DP",
     rating: 5,
-    palette: palette[0]
+    palette: palette[0],
+    url: "/reviews/millennium-vitrified-tiles"
   },
   {
     quote: "We at Construction Pillars Company, have been lucky to work with Finbyz Tech. Pvt.LTD for the past few months.And, I personally think they go far and beyond in their delivery and commitments. As well as insuring that their clients are happy and well informed with there needs.I am looking forward to work every day with a such a professional team and a dedicated company.",
@@ -28,7 +29,8 @@ const testimonials = [
     company: "Construction Pillars Company (Saudi Arabia)",
     initials: "ALI",
     rating: 5,
-    palette: palette[1]
+    palette: palette[1],
+    url: "/reviews/construction-pillars"
   },
   {
     quote: "Great and professional software solutions, with a team very focused on client satisfaction.",
@@ -36,7 +38,8 @@ const testimonials = [
     company: "COOPERATIVA DE TRABAJO APICOLA PAMPERO (Argentina)",
     initials: "SL",
     rating: 5,
-    palette: palette[2]
+    palette: palette[2],
+    url: "/reviews/pampero-apicola"
   }
 ];
 
@@ -50,43 +53,26 @@ const clientLogos = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-16 bg-[#FAFBFC] w-full min-h-screen flex items-center">
-      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-20">
-        <div className="text-center mb-10 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1A5276] mb-4">
+    <section id="testimonials" className="py-6 bg-[#FAFBFC] w-full min-h-screen flex items-center">
+      <div className="w-full px-2 sm:px-6 lg:px-8 xl:px-20">
+        <div className="text-center mb-5 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl lg:text-3xl font-bold text-[#1A5276] mb-4">
             Trusted by Clients Globally
           </h2>
-          <p className="text-lg md:text-xl text-[#1A5276] max-w-3xl mx-auto">
+          <p className="text-md md:text-md text-[#1A5276] max-w-3xl mx-auto">
             See what our partners say about working with us
           </p>
         </div>
         
-        {/* Client Logos */}
-        {/* <div className="flex justify-center items-center space-x-4 lg:space-x-6 mb-10">
-          {clientLogos.map((logo) => (
-            <div
-              key={logo.name}
-              className="w-20 h-10 lg:w-28 lg:h-12 rounded-lg flex items-center justify-center text-xs lg:text-sm font-bold shadow-sm"
-              style={{
-                background: logo.bg,
-                color: logo.color,
-                border: `2px solid ${logo.color}`,
-              }}
-            >
-              {logo.name}
-            </div>
-          ))}
-        </div> */}
-        
         {/* Testimonial Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-5">
           {testimonials.map((testimonial, index) => (
             <Card
               key={`${testimonial.author}-${testimonial.company}`}
               className="bg-white h-full border border-gray-200 rounded-2xl shadow-lg hover:shadow-xl flex flex-col transition-all duration-300 hover:scale-105"
               style={{ borderTop: `4px solid ${testimonial.palette.color}` }}
             >
-              <CardContent className="p-6 lg:p-8 flex flex-col h-full">
+              <CardContent className="p-2 lg:p-2 flex flex-col h-full">
                 {/* Quote Icon */}
                 <div
                   className="w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center mb-4 lg:mb-6 shadow-sm"
@@ -98,12 +84,12 @@ export default function Testimonials() {
                 {/* Rating Stars */}
                 <div className="flex mb-3 lg:mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 lg:w-5 lg:h-5" style={{ color: "#FF8C00" }} fill="#FF8C00" />
+                    <Star key={i} className="w-4 h-4 lg:w-5 lg:h-3" style={{ color: "#FF8C00" }} fill="#FF8C00" />
                   ))}
                 </div>
                 
                 {/* Quote Text */}
-                <p className="text-base lg:text-lg text-gray-700 mb-4 lg:mb-6 italic leading-relaxed flex-1">
+                <p className="text-base lg:text-sm text-gray-700 mb-4 lg:mb-6 italic leading-relaxed flex-1">
                   &quot;{testimonial.quote}&quot;
                 </p>
                 
@@ -117,6 +103,12 @@ export default function Testimonials() {
                   <div>
                     <p className="font-semibold text-[#1A5276] text-sm lg:text-base">{testimonial.author}</p>
                     <p className="text-gray-500 text-xs lg:text-sm">{testimonial.company}</p>
+                    <a 
+                      href={testimonial.url}
+                      className="text-gray-500 text-xs lg:text-sm hover:text-[#1A5276] transition-colors cursor-pointer underline"
+                    >
+                      View Review
+                    </a>
                   </div>
                 </div>
               </CardContent>
@@ -128,13 +120,13 @@ export default function Testimonials() {
         <div className="text-center animate-fade-in-delayed">
           <Button 
             size="lg"
-            className="bg-[#1A5276] text-white text-base lg:text-lg px-6 lg:px-8 py-3 lg:py-4 h-auto rounded-full shadow-lg hover:shadow-xl hover:bg-[#154360] transition-all duration-300"
+            className="bg-[#1A5276] text-white text-base lg:text-sm px-6 lg:px-8 py-3 lg:py-4 h-auto rounded-full shadow-lg hover:shadow-xl hover:bg-[#154360] transition-all duration-300"
           >
             See How We Helped Businesses Like Yours →
           </Button>
           
           {/* Trust Indicators */}
-          <div className="mt-6 lg:mt-8 flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 lg:space-x-8 text-xs lg:text-sm text-[#1A5276]">
+          <div className="mt-2 lg:mt-4 flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 lg:space-x-8 text-xs lg:text-sm text-[#1A5276]">
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-[#1A5276] rounded-full"></div>
               <span>500+ Projects Delivered</span>
