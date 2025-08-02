@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="pt-14">
+      <main className="pt-4">
         <Hero />
         <Services />
         <Benefits />
