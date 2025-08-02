@@ -9,6 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import Link from "next/link";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -190,30 +191,33 @@ export default function Header() {
 
   return (
     <>
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-gray-900/95 backdrop-blur-md shadow-lg" : "bg-gray-900/80 backdrop-blur-sm shadow-sm"
-      }`}>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 backdrop-blur-md shadow-lg"
+            : "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 backdrop-blur-sm"
+        }`}
+      >
         <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-20">
-          <div className="flex justify-between items-center h-20 lg:h-24">
+          <div className="flex justify-between items-center h-12 lg:h-14 w-full">
             {/* Logo */}
-            <div className="flex items-center">
-              <button
-                onClick={scrollToTop}
-                className="text-2xl lg:text-3xl font-bold tracking-wider text-white hover:text-[#FF8C00] transition-colors cursor-pointer"
-              >
-                Finbyz.tech
-              </button>
+            <div className="flex-shrink-0">
+              <Link href="/" className="flex items-center">
+                <span className="text-xl lg:text-2xl font-bold text-white">
+                  Finbyz
+                </span>
+              </Link>
             </div>
-            
+
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-1">
+            <div className="hidden lg:flex items-center space-x-8 ml-auto">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative">
                   {item.hasDropdown ? (
                     <div className="relative">
                       <Button
                         variant="ghost"
-                        className={`text-gray-300 hover:text-[#FF8C00] hover:bg-gray-700/50 transition-all font-medium flex items-center space-x-1 text-base py-6 px-3 rounded-lg ${
+                        className={`text-gray-300 hover:text-[#FF8C00] hover:bg-gray-700/50 transition-all font-medium flex items-center space-x-1 text-base py-6 px-3 rounded-lg relative group ${
                           hoveredDropdown === item.name ? 'text-[#FF8C00] bg-gray-700/50' : ''
                         }`}
                         onMouseEnter={() => setHoveredDropdown(item.name)}
@@ -224,6 +228,8 @@ export default function Header() {
                         <ChevronDown className={`w-3 h-3 transition-transform ${
                           hoveredDropdown === item.name ? 'rotate-180' : ''
                         }`} />
+                        {/* Hover underline effect */}
+                        <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FF8C00] transition-all duration-300 group-hover:w-full"></div>
                       </Button>
                       <div 
                         className={`absolute top-full left-0 bg-white border border-gray-200 shadow-2xl rounded-xl transition-all duration-300 transform z-50 ${
@@ -348,7 +354,7 @@ export default function Header() {
             </div>
             
             {/* Mobile Menu Button */}
-            <div className="lg:hidden">
+            <div className="lg:hidden ml-auto">
               <Button
                 variant="ghost"
                 size="icon"

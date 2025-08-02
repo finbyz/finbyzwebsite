@@ -15,25 +15,25 @@ const palette = [
 
 const testimonials = [
   {
-    quote: "Finbyz Tech helped us replace legacy ERP and launched AI workflows — all with clarity and speed.",
-    author: "COO",
-    company: "Manufacturing Group (Germany)",
-    initials: "JD",
+    quote: "We've had an excellent experience working with this software service provider. Their innovative approach to solving complex technical challenges has significantly improved our product. The addition of a dedicated developer to our team ensured seamless communication and consistent progress. They consistently deliver high-quality solutions, demonstrating both technical expertise and a strong commitment to client success. We highly recommend them to anyone seeking reliable, forward-thinking development support.",
+    author: "CEO & Founder",
+    company: "Millennium Vitrified Tiles Pvt. Ltd. (India)",
+    initials: "DP",
     rating: 5,
     palette: palette[0]
   },
   {
-    quote: "The only tech partner we trust to scale with us. Their people are their superpower.",
+    quote: "We at Construction Pillars Company, have been lucky to work with Finbyz Tech. Pvt.LTD for the past few months.And, I personally think they go far and beyond in their delivery and commitments. As well as insuring that their clients are happy and well informed with there needs.I am looking forward to work every day with a such a professional team and a dedicated company.",
     author: "CTO",
-    company: "SaaS Startup (Canada)",
-    initials: "MR",
+    company: "Construction Pillars Company (Saudi Arabia)",
+    initials: "ALI",
     rating: 5,
     palette: palette[1]
   },
   {
-    quote: "From concept to deployment in record time. Finbyz delivered exactly what we envisioned.",
-    author: "CEO",
-    company: "Fintech Platform (Australia)",
+    quote: "Great and professional software solutions, with a team very focused on client satisfaction.",
+    author: "Chief Executive Officer",
+    company: "COOPERATIVA DE TRABAJO APICOLA PAMPERO (Argentina)",
     initials: "SL",
     rating: 5,
     palette: palette[2]
@@ -62,7 +62,7 @@ export default function Testimonials() {
         </div>
         
         {/* Client Logos */}
-        <div className="flex justify-center items-center space-x-4 lg:space-x-6 mb-10">
+        {/* <div className="flex justify-center items-center space-x-4 lg:space-x-6 mb-10">
           {clientLogos.map((logo) => (
             <div
               key={logo.name}
@@ -76,13 +76,13 @@ export default function Testimonials() {
               {logo.name}
             </div>
           ))}
-        </div>
+        </div> */}
         
         {/* Testimonial Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-10">
           {testimonials.map((testimonial, index) => (
             <Card
-              key={testimonial.author}
+              key={`${testimonial.author}-${testimonial.company}`}
               className="bg-white h-full border border-gray-200 rounded-2xl shadow-lg hover:shadow-xl flex flex-col transition-all duration-300 hover:scale-105"
               style={{ borderTop: `4px solid ${testimonial.palette.color}` }}
             >
