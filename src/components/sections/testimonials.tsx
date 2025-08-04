@@ -4,6 +4,26 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Star, Quote } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { useMobileMenu } from "@/contexts/MobileMenuContext";
+
+// Intersection Observer Hook
+function useInView(threshold = 0.3) {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    if (!ref.current) return;
+    const observer = new window.IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { threshold }
+    );
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [threshold]);
+
+  return [ref, inView] as const;
+}
 
 // Palette
 const palette = [
@@ -52,10 +72,21 @@ const clientLogos = [
 ];
 
 export default function Testimonials() {
+  const [sectionRef, inView] = useInView(0.3);
+  const { isMobileMenuOpen } = useMobileMenu();
+
   return (
-    <section id="testimonials" className="py-6 bg-[#FAFBFC] w-full min-h-screen flex items-center">
+    <section ref={sectionRef} id="testimonials" className="py-6 bg-[#FAFBFC] w-full min-h-screen flex items-center">
       <div className="w-full px-2 sm:px-6 lg:px-8 xl:px-20">
-        <div className="text-center mb-5 animate-fade-in">
+        <div className={`text-center mb-5 transition-all duration-1000 ${
+          inView 
+            ? isMobileMenuOpen 
+              ? 'animate-slide-in-left' 
+              : 'animate-fade-in-up' 
+            : isMobileMenuOpen 
+              ? 'opacity-0 -translate-x-10' 
+              : 'opacity-0 translate-y-10'
+        }`}>
           <h2 className="text-3xl md:text-4xl lg:text-3xl font-bold text-[#1A5276] mb-4">
             Trusted by Clients Globally
           </h2>
@@ -67,66 +98,98 @@ export default function Testimonials() {
         {/* Testimonial Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-5">
           {testimonials.map((testimonial, index) => (
-            <Card
+            <div
               key={`${testimonial.author}-${testimonial.company}`}
-              className="bg-white h-full border border-gray-200 rounded-2xl shadow-lg hover:shadow-xl flex flex-col transition-all duration-300 hover:scale-105"
-              style={{ borderTop: `4px solid ${testimonial.palette.color}` }}
+              className={`transition-all duration-700 ${
+                inView 
+                  ? isMobileMenuOpen 
+                    ? 'animate-slide-in-left' 
+                    : 'animate-fade-in-up' 
+                  : isMobileMenuOpen 
+                    ? 'opacity-0 -translate-x-10' 
+                    : 'opacity-0 translate-y-10'
+              }`}
+              style={{ 
+                transitionDelay: inView ? `${index * 0.2}s` : '0s',
+                animationDelay: inView ? `${index * 0.2}s` : '0s'
+              }}
             >
-              <CardContent className="p-2 lg:p-2 flex flex-col h-full">
-                {/* Quote Icon */}
-                <div
-                  className="w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center mb-4 lg:mb-6 shadow-sm"
-                  style={{ background: testimonial.palette.bg }}
-                >
-                  <Quote className="w-5 h-5 lg:w-6 lg:h-6" style={{ color: testimonial.palette.color }} />
-                </div>
-                
-                {/* Rating Stars */}
-                <div className="flex mb-3 lg:mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 lg:w-5 lg:h-3" style={{ color: "#FF8C00" }} fill="#FF8C00" />
-                  ))}
-                </div>
-                
-                {/* Quote Text */}
-                <p className="text-base lg:text-sm text-gray-700 mb-4 lg:mb-6 italic leading-relaxed flex-1">
-                  &quot;{testimonial.quote}&quot;
-                </p>
-                
-                {/* Author Info */}
-                <div className="flex items-center mt-auto">
-                  <Avatar className="mr-3 lg:mr-4" style={{ background: testimonial.palette.bg }}>
-                    <AvatarFallback className="text-white font-bold text-sm lg:text-base" style={{ background: testimonial.palette.color }}>
-                      {testimonial.initials}
-                    </AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <p className="font-semibold text-[#1A5276] text-sm lg:text-base">{testimonial.author}</p>
-                    <p className="text-gray-500 text-xs lg:text-sm">{testimonial.company}</p>
-                    <a 
-                      href={testimonial.url}
-                      className="text-gray-500 text-xs lg:text-sm hover:text-[#1A5276] transition-colors cursor-pointer underline"
-                    >
-                      View Review
-                    </a>
+              <Card
+                className="bg-white h-full border border-gray-200 rounded-2xl shadow-lg hover:shadow-xl flex flex-col transition-all duration-300 hover:scale-105 group"
+                style={{ borderTop: `4px solid ${testimonial.palette.color}` }}
+              >
+                <CardContent className="p-2 lg:p-2 flex flex-col h-full">
+                  {/* Quote Icon */}
+                  <div
+                    className="w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center mb-4 lg:mb-6 shadow-sm transition-transform duration-300 group-hover:scale-110"
+                    style={{ background: testimonial.palette.bg }}
+                  >
+                    <Quote className="w-5 h-5 lg:w-6 lg:h-6" style={{ color: testimonial.palette.color }} />
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                  
+                  {/* Rating Stars */}
+                  <div className="flex mb-3 lg:mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 lg:w-5 lg:h-3" style={{ color: "#FF8C00" }} fill="#FF8C00" />
+                    ))}
+                  </div>
+                  
+                  {/* Quote Text */}
+                  <p className="text-base lg:text-sm text-gray-700 mb-4 lg:mb-6 italic leading-relaxed flex-1">
+                    &quot;{testimonial.quote}&quot;
+                  </p>
+                  
+                  {/* Author Info */}
+                  <div className="flex items-center mt-auto">
+                    <Avatar className="mr-3 lg:mr-4" style={{ background: testimonial.palette.bg }}>
+                      <AvatarFallback className="text-white font-bold text-sm lg:text-base" style={{ background: testimonial.palette.color }}>
+                        {testimonial.initials}
+                      </AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <p className="font-semibold text-[#1A5276] text-sm lg:text-base">{testimonial.author}</p>
+                      <p className="text-gray-500 text-xs lg:text-sm">{testimonial.company}</p>
+                      <a 
+                        href={testimonial.url}
+                        className="text-gray-500 text-xs lg:text-sm hover:text-[#1A5276] transition-colors cursor-pointer underline"
+                      >
+                        View Review
+                      </a>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           ))}
         </div>
         
         {/* Bottom CTA */}
-        <div className="text-center animate-fade-in-delayed">
+        <div className={`text-center transition-all duration-1000 ${
+          inView 
+            ? isMobileMenuOpen 
+              ? 'animate-slide-in-left' 
+              : 'animate-fade-in-up' 
+            : isMobileMenuOpen 
+              ? 'opacity-0 -translate-x-10' 
+              : 'opacity-0 translate-y-10'
+        }`} style={{ transitionDelay: inView ? '0.6s' : '0s' }}>
           <Button 
             size="lg"
-            className="bg-[#1A5276] text-white text-base lg:text-sm px-6 lg:px-8 py-3 lg:py-4 h-auto rounded-full shadow-lg hover:shadow-xl hover:bg-[#154360] transition-all duration-300"
+            className="bg-[#1A5276] text-white text-base lg:text-sm px-6 lg:px-8 py-3 lg:py-4 h-auto rounded-full shadow-lg hover:shadow-xl hover:bg-[#154360] transition-all duration-300 transform hover:scale-105"
           >
             See How We Helped Businesses Like Yours →
           </Button>
           
           {/* Trust Indicators */}
-          <div className="mt-2 lg:mt-4 flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 lg:space-x-8 text-xs lg:text-sm text-[#1A5276]">
+          <div className={`mt-2 lg:mt-4 flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 lg:space-x-8 text-xs lg:text-sm text-[#1A5276] transition-all duration-1000 ${
+            inView 
+              ? isMobileMenuOpen 
+                ? 'animate-slide-in-left' 
+                : 'animate-fade-in-up' 
+              : isMobileMenuOpen 
+                ? 'opacity-0 -translate-x-10' 
+                : 'opacity-0 translate-y-10'
+          }`} style={{ transitionDelay: inView ? '0.8s' : '0s' }}>
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-[#1A5276] rounded-full"></div>
               <span>500+ Projects Delivered</span>

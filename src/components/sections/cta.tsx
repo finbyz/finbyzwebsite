@@ -18,7 +18,7 @@ export default function CTA() {
           {/* Subheading */}
           <div className="inline-flex items-center space-x-2 bg-[#1A5276] text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 shadow-lg mx-auto">
             <CalendarCheck className="w-4 h-4" />
-            <span>AI + ERP Experts</span>
+            <span>Talk to our Experts</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Scale with <span className="text-[#FF8C00]">Smart Tech</span>? Let&apos;s Talk.

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { Building2, Wrench, Users, FileText, Briefcase, Phone, Factory, ShoppingCart, Truck, Heart, GraduationCap, Leaf, TestTube, Hammer, Pill, Zap, Code, UserPlus, Lightbulb, BookOpen, Target, Star, Calendar, Home, Eye, Mail } from "lucide-react";
 
 export default function Footer() {
@@ -12,7 +13,9 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="space-y-6">
               <div>
-                <h3 className="text-2xl font-bold text-white mb-4">Finbyz.tech</h3>
+                <Link href="/" className="flex items-center">
+                  <h3 className="text-2xl font-bold text-white mb-4">Finbyz.tech</h3>
+                </Link>
                 <p className="text-slate-300 text-sm leading-relaxed">
                   Steer your vision with precision technology. ERP, AI, Software, and Top Tech Talent 
                   delivered with clarity, speed & strategy.
@@ -23,7 +26,7 @@ export default function Footer() {
               <div className="flex space-x-4">
                 <Button variant="ghost" size="icon" className="text-slate-400 hover:text-white hover:bg-slate-800 rounded-full w-10 h-10">
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                   </svg>
                 </Button>
                 <Button variant="ghost" size="icon" className="text-slate-400 hover:text-white hover:bg-slate-800 rounded-full w-10 h-10">
@@ -124,6 +127,21 @@ export default function Footer() {
                 <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Testimonials</a></li>
               </ul>
             </div>
+          </div>
+        </div>
+        
+        {/* Newsletter Subscription */}
+        <div className="flex justify-end mb-8 mr-4">
+          <div className="flex items-center space-x-2">
+            <Mail className="w-4 h-4 text-slate-400" />
+            <input
+              type="email"
+              placeholder="Subscribe to newsletter"
+              className="px-3 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400 transition-all duration-200 w-44"
+            />
+            <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-4 py-2 text-sm rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
+              Subscribe
+            </Button>
           </div>
         </div>
       </div>
