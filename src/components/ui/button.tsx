@@ -1,9 +1,46 @@
+/**
+ * @fileoverview Button Component
+ * 
+ * A versatile, accessible button component built with Radix UI and Class Variance Authority.
+ * Supports multiple variants, sizes, and can render as different HTML elements.
+ * 
+ * @component Button
+ * @example
+ * ```tsx
+ * // Default button
+ * <Button>Click me</Button>
+ * 
+ * // Destructive variant
+ * <Button variant="destructive">Delete</Button>
+ * 
+ * // Outline variant with custom size
+ * <Button variant="outline" size="lg">Large Outline</Button>
+ * 
+ * // Icon button
+ * <Button size="icon" variant="ghost">
+ *   <Search className="h-4 w-4" />
+ * </Button>
+ * 
+ * // As child (renders as Link)
+ * <Button asChild>
+ *   <Link href="/dashboard">Go to Dashboard</Link>
+ * </Button>
+ * ```
+ * 
+ * @author AI Assistant
+ * @version 1.0.0
+ */
+
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 
+/**
+ * Button variant configurations using Class Variance Authority.
+ * Defines visual styles for different button types and sizes.
+ */
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
   {
@@ -35,16 +72,65 @@ const buttonVariants = cva(
   }
 )
 
+/**
+ * Button component interface extending HTML button props with variant support.
+ */
+interface ButtonProps extends React.ComponentProps<"button">,
+  VariantProps<typeof buttonVariants> {
+  /** 
+   * When true, renders the button as a child component using Radix UI Slot.
+   * Useful for rendering buttons as links or other elements.
+   * @default false
+   */
+  asChild?: boolean
+}
+
+/**
+ * Versatile button component with multiple variants and sizes.
+ * 
+ * @param props - Button properties
+ * @param props.className - Additional CSS classes
+ * @param props.variant - Visual variant: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link'
+ * @param props.size - Size variant: 'default' | 'sm' | 'lg' | 'icon'
+ * @param props.asChild - Whether to render as child component
+ * @param props.children - Button content
+ * @param props.disabled - Whether button is disabled
+ * @param props.onClick - Click handler
+ * @param props.type - Button type: 'button' | 'submit' | 'reset'
+ * 
+ * @returns React button element with applied variants
+ * 
+ * @example
+ * ```tsx
+ * // Primary action button
+ * <Button onClick={handleSubmit}>Submit Form</Button>
+ * 
+ * // Secondary action with outline style
+ * <Button variant="outline" onClick={handleCancel}>Cancel</Button>
+ * 
+ * // Small destructive button
+ * <Button variant="destructive" size="sm" onClick={handleDelete}>
+ *   Delete Item
+ * </Button>
+ * 
+ * // Icon-only button
+ * <Button size="icon" variant="ghost" onClick={handleSearch}>
+ *   <Search className="h-4 w-4" />
+ * </Button>
+ * 
+ * // Button as link
+ * <Button asChild>
+ *   <Link href="/profile">View Profile</Link>
+ * </Button>
+ * ```
+ */
 function Button({
   className,
   variant,
   size,
   asChild = false,
   ...props
-}: React.ComponentProps<"button"> &
-  VariantProps<typeof buttonVariants> & {
-    asChild?: boolean
-  }) {
+}: ButtonProps) {
   const Comp = asChild ? Slot : "button"
 
   return (

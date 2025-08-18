@@ -1,0 +1,84 @@
+{
+  "title": "{{ title | default('Trusted by Clients Globally') }}",
+  "subtitle": "{{ subtitle | default('See what our partners say about working with us') }}",
+  "ctaButton": "{{ cta_button | default('See How We Helped Businesses Like Yours →') }}",
+  "testimonials": [
+    {
+      "quote": "{{ testimonials.0.quote | default('We\\'ve had an excellent experience working with this software service provider. Their innovative approach to solving complex technical challenges has significantly improved our product. The addition of a dedicated developer to our team ensured seamless communication and consistent progress. They consistently deliver high-quality solutions, demonstrating both technical expertise and a strong commitment to client success. We highly recommend them to anyone seeking reliable, forward-thinking development support.') }}",
+      "author": "{{ testimonials.0.author | default('CEO & Founder') }}",
+      "company": "{{ testimonials.0.company | default('Millennium Vitrified Tiles Pvt. Ltd. (India)') }}",
+      "initials": "{{ testimonials.0.initials | default('DP') }}",
+      "rating": "{{ testimonials.0.rating | default(5) }}",
+      "palette": {
+        "color": "{{ testimonials.0.palette.color | default('#1A5276') }}",
+        "bg": "{{ testimonials.0.palette.bg | default('#EAF1F8') }}"
+      },
+      "url": "{{ testimonials.0.url | default('/reviews/millennium-vitrified-tiles') }}"
+    },
+    {
+      "quote": "{{ testimonials.1.quote | default('We at Construction Pillars Company, have been lucky to work with Finbyz Tech. Pvt.LTD for the past few months.And, I personally think they go far and beyond in their delivery and commitments. As well as insuring that their clients are happy and well informed with there needs.I am looking forward to work every day with a such a professional team and a dedicated company.') }}",
+      "author": "{{ testimonials.1.author | default('CTO') }}",
+      "company": "{{ testimonials.1.company | default('Construction Pillars Company (Saudi Arabia)') }}",
+      "initials": "{{ testimonials.1.initials | default('ALI') }}",
+      "rating": "{{ testimonials.1.rating | default(5) }}",
+      "palette": {
+        "color": "{{ testimonials.1.palette.color | default('#FF8C00') }}",
+        "bg": "{{ testimonials.1.palette.bg | default('#FFF4E5') }}"
+      },
+      "url": "{{ testimonials.1.url | default('/reviews/construction-pillars') }}"
+    },
+    {
+      "quote": "{{ testimonials.2.quote | default('Great and professional software solutions, with a team very focused on client satisfaction.') }}",
+      "author": "{{ testimonials.2.author | default('Chief Executive Officer') }}",
+      "company": "{{ testimonials.2.company | default('COOPERATIVA DE TRABAJO APICOLA PAMPERO (Argentina)') }}",
+      "initials": "{{ testimonials.2.initials | default('SL') }}",
+      "rating": "{{ testimonials.2.rating | default(5) }}",
+      "palette": {
+        "color": "{{ testimonials.2.palette.color | default('#8E44AD') }}",
+        "bg": "{{ testimonials.2.palette.bg | default('#F3EAF8') }}"
+      },
+      "url": "{{ testimonials.2.url | default('/reviews/pampero-apicola') }}"
+    }
+  ],
+  "trustIndicators": [
+    {
+      "text": "{{ trust_indicators.0.text | default('500+ Projects Delivered') }}",
+      "color": "{{ trust_indicators.0.color | default('#1A5276') }}"
+    },
+    {
+      "text": "{{ trust_indicators.1.text | default('98% Client Satisfaction') }}",
+      "color": "{{ trust_indicators.1.color | default('#FF8C00') }}"
+    },
+    {
+      "text": "{{ trust_indicators.2.text | default('15+ Countries Served') }}",
+      "color": "{{ trust_indicators.2.color | default('#8E44AD') }}"
+    }
+  ],
+  "clientLogos": [
+    {
+      "name": "{{ client_logos.0.name | default('TechCorp') }}",
+      "color": "{{ client_logos.0.color | default('#1A5276') }}",
+      "bg": "{{ client_logos.0.bg | default('#EAF1F8') }}"
+    },
+    {
+      "name": "{{ client_logos.1.name | default('InnovateLab') }}",
+      "color": "{{ client_logos.1.color | default('#FF8C00') }}",
+      "bg": "{{ client_logos.1.bg | default('#FFF4E5') }}"
+    },
+    {
+      "name": "{{ client_logos.2.name | default('DataFlow') }}",
+      "color": "{{ client_logos.2.color | default('#8E44AD') }}",
+      "bg": "{{ client_logos.2.bg | default('#F3EAF8') }}"
+    },
+    {
+      "name": "{{ client_logos.3.name | default('CloudSync') }}",
+      "color": "{{ client_logos.3.color | default('#1A5276') }}",
+      "bg": "{{ client_logos.3.bg | default('#EAF1F8') }}"
+    },
+    {
+      "name": "{{ client_logos.4.name | default('SmartTech') }}",
+      "color": "{{ client_logos.4.color | default('#FF8C00') }}",
+      "bg": "{{ client_logos.4.bg | default('#FFF4E5') }}"
+    }
+  ]
+}

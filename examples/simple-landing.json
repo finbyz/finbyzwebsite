@@ -1,0 +1,77 @@
+{
+  "pageName": "simple-landing",
+  "content": {
+    "metadata": {
+      "title": "Simple Landing Page",
+      "description": "A clean and simple landing page example",
+      "keywords": ["landing page", "simple", "example"]
+    },
+    "sections": [
+      {
+        "type": "hero",
+        "data": {
+          "title": "Welcome to Our Platform",
+          "subtitle": "Simple, powerful, and effective",
+          "description": "Get started with our amazing platform today",
+          "primaryButton": {
+            "text": "Get Started",
+            "url": "/signup",
+            "icon": "ArrowRight"
+          },
+          "secondaryButton": {
+            "text": "Learn More",
+            "url": "/about",
+            "icon": "Info"
+          },
+          "image": {
+            "src": "/images/hero-simple.jpg",
+            "alt": "Simple hero image"
+          }
+        }
+      },
+      {
+        "type": "services",
+        "data": {
+          "title": "Our Services",
+          "subtitle": "What we offer",
+          "services": [
+            {
+              "title": "Service 1",
+              "description": "Description of service 1",
+              "icon": "Zap",
+              "iconColor": "#1A5276",
+              "bgColor": "#EAF1F8",
+              "borderColor": "#1A5276",
+              "capabilities": [
+                {
+                  "icon": "Zap",
+                  "label": "Feature 1",
+                  "color": "#1A5276"
+                },
+                {
+                  "icon": "Star",
+                  "label": "Feature 2",
+                  "color": "#FF8C00"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "cta",
+        "data": {
+          "title": "Ready to Get Started?",
+          "subtitle": "Join thousands of satisfied customers",
+          "description": "Don't wait any longer. Start your journey today.",
+          "primaryButton": {
+            "text": "Start Now",
+            "url": "/signup",
+            "icon": "ArrowRight",
+            "variant": "primary"
+          }
+        }
+      }
+    ]
+  }
+}

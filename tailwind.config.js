@@ -41,6 +41,15 @@ module.exports = {
           foreground: 'hsl(var(--destructive-foreground))',
         },
         ring: 'hsl(var(--ring))',
+        // Brand colors
+        'finbyz-blue': '#1A5276',
+        'finbyz-blue-light': '#EAF1F8',
+        'finbyz-orange': '#FF8C00',
+        'finbyz-orange-light': '#FFF4E5',
+        'finbyz-purple': '#8E44AD',
+        'finbyz-purple-light': '#F3EAF8',
+        'finbyz-teal': '#16A085',
+        'finbyz-teal-light': '#E6F7F4',
       },
       borderRadius: {
         lg: 'var(--radius)',

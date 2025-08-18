@@ -1,7 +1,91 @@
+/**
+ * @fileoverview Footer Component
+ * 
+ * A comprehensive footer component with responsive design, multiple sections,
+ * social links, newsletter subscription, and contact information. Features include:
+ * - Responsive grid layout with multiple columns
+ * - Company information and branding
+ * - Social media links
+ * - Organized navigation sections (About, Industries, Services, Blog, Career)
+ * - Newsletter subscription form
+ * - Contact information and legal links
+ * - Dark theme with gradient accents
+ * 
+ * @component Footer
+ * @example
+ * ```tsx
+ * // Basic usage in layout
+ * import Footer from "@/components/layout/footer"
+ * 
+ * export default function Layout({ children }) {
+ *   return (
+ *     <div>
+ *       <main>{children}</main>
+ *       <Footer />
+ *     </div>
+ *   )
+ * }
+ * 
+ * // With custom styling
+ * <div className="min-h-screen flex flex-col">
+ *   <main className="flex-1">{children}</main>
+ *   <Footer className="mt-auto" />
+ * </div>
+ * ```
+ * 
+ * @author AI Assistant
+ * @version 1.0.0
+ * @requires @/components/ui/button - For action buttons
+ * @requires lucide-react - For icon components
+ */
+
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Building2, Wrench, Users, FileText, Briefcase, Phone, Factory, ShoppingCart, Truck, Heart, GraduationCap, Leaf, TestTube, Hammer, Pill, Zap, Code, UserPlus, Lightbulb, BookOpen, Target, Star, Calendar, Home, Eye, Mail } from "lucide-react";
 
+/**
+ * Footer component with comprehensive site navigation and information.
+ * 
+ * Structure:
+ * - Company branding and description
+ * - Social media links
+ * - Organized navigation sections
+ * - Newsletter subscription
+ * - Contact information and legal links
+ * 
+ * Features:
+ * - Responsive grid layout (1 column on mobile, 6 columns on desktop)
+ * - Dark theme with slate color palette
+ * - Hover effects and transitions
+ * - Social media integration
+ * - Newsletter subscription form
+ * - Contact information display
+ * - Legal links and copyright
+ * 
+ * Sections:
+ * - Company Info: Logo, description, social links
+ * - About: Company information links
+ * - Industries: Industry-specific solutions
+ * - Services: Service offerings
+ * - Blog: Content and resources
+ * - Career: Job opportunities and company culture
+ * 
+ * @returns Footer component with full site navigation and information
+ * 
+ * @example
+ * ```tsx
+ * // Custom footer with additional props
+ * <Footer />
+ * 
+ * // Footer with custom newsletter handler
+ * const handleNewsletterSubmit = (email: string) => {
+ *   // Handle newsletter subscription
+ *   console.log('Newsletter subscription:', email)
+ * }
+ * 
+ * <Footer onNewsletterSubmit={handleNewsletterSubmit} />
+ * ```
+ */
 export default function Footer() {
   return (
     <footer className="bg-slate-900 text-white w-full">

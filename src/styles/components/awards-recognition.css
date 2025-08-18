@@ -1,0 +1,359 @@
+/* Awards Recognition Section Styles */
+.awards-recognition-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #1A5276 0%, #2E86AB 100%);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Pattern */
+.awards-recognition-background {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+}
+
+.awards-recognition-pattern-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18rem;
+  height: 18rem;
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(-9rem, -9rem);
+}
+
+.awards-recognition-pattern-2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 24rem;
+  height: 24rem;
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(12rem, 12rem);
+}
+
+.awards-recognition-container {
+  width: 100%;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 640px) {
+  .awards-recognition-container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .awards-recognition-container {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .awards-recognition-container {
+    padding: 0 5rem;
+  }
+}
+
+/* Header */
+.awards-recognition-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  transition: all 1s ease;
+}
+
+.awards-recognition-fade-in-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.awards-recognition-fade-out {
+  opacity: 0;
+  transform: translateY(2.5rem);
+}
+
+.awards-recognition-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: white;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .awards-recognition-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .awards-recognition-title {
+    font-size: 3rem;
+  }
+}
+
+.awards-recognition-subtitle {
+  font-size: 1.125rem;
+  color: #bfdbfe;
+  max-width: 48rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .awards-recognition-subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+/* Awards */
+.awards-recognition-awards {
+  margin-bottom: 4rem;
+}
+
+.awards-recognition-awards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .awards-recognition-awards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .awards-recognition-awards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.awards-recognition-award-wrapper {
+  transition: all 0.7s ease;
+}
+
+.awards-recognition-award-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+
+@media (min-width: 1024px) {
+  .awards-recognition-award-card {
+    padding: 2rem;
+  }
+}
+
+.awards-recognition-award-card:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Award Header */
+.awards-recognition-award-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.awards-recognition-award-icon-container {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.awards-recognition-award-card:hover .awards-recognition-award-icon-container {
+  transform: scale(1.1);
+}
+
+.awards-recognition-award-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.awards-recognition-award-title-section {
+  flex: 1;
+}
+
+.awards-recognition-award-category {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  margin-bottom: 0.5rem;
+}
+
+.awards-recognition-award-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+}
+
+/* Award Content */
+.awards-recognition-award-content {
+  flex: 1;
+}
+
+.awards-recognition-award-description {
+  color: #bfdbfe;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.awards-recognition-award-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+.awards-recognition-award-organization {
+  color: #bfdbfe;
+}
+
+.awards-recognition-award-year {
+  color: white;
+  font-weight: 600;
+}
+
+/* Certifications */
+.awards-recognition-certifications {
+  margin-bottom: 4rem;
+  transition: all 1s ease;
+}
+
+.awards-recognition-certifications-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.awards-recognition-certifications-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .awards-recognition-certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .awards-recognition-certifications-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.awards-recognition-certification-wrapper {
+  transition: all 0.7s ease;
+}
+
+.awards-recognition-certification-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.awards-recognition-certification-card:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.awards-recognition-certification-icon-container {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  margin: 0 auto 1rem;
+  transition: all 0.3s ease;
+}
+
+.awards-recognition-certification-card:hover .awards-recognition-certification-icon-container {
+  transform: scale(1.1);
+}
+
+.awards-recognition-certification-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.awards-recognition-certification-name {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.awards-recognition-certification-level {
+  color: #bfdbfe;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.awards-recognition-certification-year {
+  color: white;
+  font-size: 0.75rem;
+}
+
+/* Stats */
+.awards-recognition-stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  transition: all 1s ease;
+}
+
+@media (min-width: 768px) {
+  .awards-recognition-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.awards-recognition-stat {
+  text-align: center;
+}
+
+.awards-recognition-stat-value {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.awards-recognition-stat-label {
+  color: #bfdbfe;
+}

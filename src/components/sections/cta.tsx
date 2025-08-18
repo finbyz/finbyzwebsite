@@ -2,54 +2,120 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { CalendarCheck, FileText } from "lucide-react";
+import { CalendarCheck, FileText, Rocket, Calendar } from "lucide-react";
+import "@/styles/components/cta.css";
 
-export default function CTA() {
+interface CTAProps {
+  data?: {
+    subheading?: {
+      text?: string;
+      icon?: string;
+    };
+    title?: string;
+    description?: string;
+    primaryButton?: {
+      text?: string;
+      icon?: string;
+      action?: string;
+    };
+    secondaryButton?: {
+      text?: string;
+      icon?: string;
+      action?: string;
+    };
+    trustIndicator?: {
+      text?: string;
+      icon?: string;
+    };
+  };
+}
+
+export default function CTA({ data = {} }: CTAProps) {
+  const {
+    subheading = { text: "Talk to our Experts", icon: "CalendarCheck" },
+    title = "Ready to Scale with Smart Tech? Let's Talk.",
+    description = "Transform your business processes with AI-powered automation and expert implementation.",
+    primaryButton = { text: "Book Demo", icon: "CalendarCheck", action: "demo" },
+    secondaryButton = { text: "Get Proposal", icon: "FileText", action: "proposal" },
+    trustIndicator = { text: "Trusted by 100+ businesses", icon: "CalendarCheck" }
+  } = data;
+
+  const getIconComponent = (iconName: string) => {
+    switch (iconName) {
+      case "CalendarCheck":
+        return CalendarCheck;
+      case "FileText":
+        return FileText;
+      case "Rocket":
+        return Rocket;
+      case "Calendar":
+        return Calendar;
+      default:
+        return CalendarCheck;
+    }
+  };
+
+  const SubheadingIcon = getIconComponent(subheading.icon || "CalendarCheck");
+  const PrimaryIcon = getIconComponent(primaryButton.icon || "CalendarCheck");
+  const SecondaryIcon = getIconComponent(secondaryButton.icon || "FileText");
+  const TrustIcon = getIconComponent(trustIndicator.icon || "CalendarCheck");
+
   return (
-    <section className="py-20 bg-white text-[#1A5276]">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+    <section className="cta-section">
+      <div className="cta-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="relative z-10"
+          className="cta-content"
         >
           {/* Subheading */}
-          <div className="inline-flex items-center space-x-2 bg-[#1A5276] text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 shadow-lg mx-auto">
-            <CalendarCheck className="w-4 h-4" />
-            <span>Talk to our Experts</span>
+          <div className="cta-subheading">
+            <SubheadingIcon className="cta-subheading-icon" />
+            <span>{subheading.text}</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Scale with <span className="text-[#FF8C00]">Smart Tech</span>? Let&apos;s Talk.
+          
+          <h2 className="cta-title">
+            {title.split('Smart Tech').map((part, index) => 
+              index === 0 ? (
+                <span key={index}>{part}<span className="cta-title-highlight">Smart Tech</span></span>
+              ) : (
+                <span key={index}>{part}</span>
+              )
+            )}
           </h2>
-          <p className="text-xl text-[#1A5276] mb-8">
-            Transform your business processes with AI-powered automation and expert implementation.
+          
+          <p className="cta-description">
+            {description}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+          
+          <div className="cta-button-group">
             <Button 
               size="lg"
-              aria-label="Book a demo with our experts"
-              className="bg-[#1A5276] text-white hover:bg-[#154360] text-lg px-8 py-4 h-auto transform hover:scale-105 focus-visible:ring-4 focus-visible:ring-[#1A5276]/40 transition-all"
+              className="cta-primary-button"
+              aria-label={`${primaryButton.text} with our experts`}
             >
-              <CalendarCheck className="w-5 h-5 mr-2" aria-hidden="true" />
-              Book Demo
+              <PrimaryIcon className="cta-button-icon" aria-hidden="true" />
+              {primaryButton.text}
             </Button>
+            
             <Button 
               variant="outline" 
               size="lg"
-              aria-label="Request a custom proposal"
-              className="border-2 border-[#FF8C00] text-[#FF8C00] hover:bg-[#FF8C00] hover:text-white text-lg px-8 py-4 h-auto transition-all focus-visible:ring-4 focus-visible:ring-[#FF8C00]/30"
+              className="cta-secondary-button"
+              aria-label={`${secondaryButton.text}`}
             >
-              <FileText className="w-5 h-5 mr-2" aria-hidden="true" />
-              Get Proposal
+              <SecondaryIcon className="cta-button-icon" aria-hidden="true" />
+              {secondaryButton.text}
             </Button>
           </div>
+          
           {/* Trust Indicator */}
-          <div className="flex items-center justify-center space-x-2 text-[#1A5276] text-sm mt-2">
-            <span className="inline-flex items-center">
-              <CalendarCheck className="w-4 h-4 mr-1 text-[#FF8C00]" />
-              Trusted by 100+ businesses
+          <div className="cta-trust-indicator">
+            <span className="cta-trust-text">
+              <TrustIcon className="cta-trust-icon" />
+              {trustIndicator.text}
             </span>
           </div>
         </motion.div>

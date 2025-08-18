@@ -1,0 +1,159 @@
+{
+  "pageName": "business-solutions",
+  "content": {
+    "metadata": {
+      "title": "Business Solutions",
+      "description": "Comprehensive business solutions for modern enterprises",
+      "keywords": ["business", "solutions", "enterprise", "technology"]
+    },
+    "sections": [
+      {
+        "type": "hero",
+        "data": {
+          "title": "Transform Your Business",
+          "subtitle": "Next-generation business solutions",
+          "description": "Empower your business with cutting-edge technology and innovative solutions",
+          "primaryButton": {
+            "text": "Schedule Demo",
+            "url": "/demo",
+            "icon": "Calendar"
+          },
+          "secondaryButton": {
+            "text": "View Case Studies",
+            "url": "/case-studies",
+            "icon": "FileText"
+          },
+          "image": {
+            "src": "/images/business-hero.jpg",
+            "alt": "Business transformation"
+          }
+        }
+      },
+      {
+        "type": "services",
+        "data": {
+          "title": "Business Solutions",
+          "subtitle": "Comprehensive tools for growth",
+          "services": [
+            {
+              "title": "Digital Transformation",
+              "description": "Modernize your business processes",
+              "icon": "Zap",
+              "iconColor": "#1A5276",
+              "bgColor": "#EAF1F8",
+              "borderColor": "#1A5276",
+              "capabilities": [
+                {
+                  "icon": "Zap",
+                  "label": "Efficiency",
+                  "color": "#1A5276"
+                },
+                {
+                  "icon": "TrendingUp",
+                  "label": "Scalability",
+                  "color": "#FF8C00"
+                },
+                {
+                  "icon": "Lightbulb",
+                  "label": "Innovation",
+                  "color": "#27AE60"
+                }
+              ]
+            },
+            {
+              "title": "Cloud Solutions",
+              "description": "Scalable cloud infrastructure",
+              "icon": "Cloud",
+              "iconColor": "#27AE60",
+              "bgColor": "#E8F8F2",
+              "borderColor": "#27AE60",
+              "capabilities": [
+                {
+                  "icon": "Shield",
+                  "label": "Security",
+                  "color": "#27AE60"
+                },
+                {
+                  "icon": "Zap",
+                  "label": "Performance",
+                  "color": "#8E44AD"
+                },
+                {
+                  "icon": "CheckCircle",
+                  "label": "Reliability",
+                  "color": "#FF8C00"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "testimonials",
+        "data": {
+          "title": "Customer Success Stories",
+          "subtitle": "See what our clients say",
+          "testimonials": [
+            {
+              "name": "John Smith",
+              "role": "CEO",
+              "company": "TechCorp",
+              "content": "Amazing results with their solutions!",
+              "avatar": "/images/avatar1.jpg",
+              "rating": 5,
+              "palette": {
+                "primary": "#1A5276",
+                "secondary": "#EAF1F8",
+                "bg": "#EAF1F8"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "faq",
+        "data": {
+          "title": "Frequently Asked Questions",
+          "subtitle": "Get answers to common questions",
+          "faqs": [
+            {
+              "question": "How long does implementation take?",
+              "answer": "Typically 4-6 weeks depending on complexity",
+              "icon": "Clock"
+            },
+            {
+              "question": "What support do you provide?",
+              "answer": "24/7 support with dedicated account managers",
+              "icon": "Headphones"
+            }
+          ],
+          "palette": {
+            "primary": "#1A5276",
+            "secondary": "#EAF1F8",
+            "bg": "#1A5276"
+          }
+        }
+      },
+      {
+        "type": "cta",
+        "data": {
+          "title": "Ready to Transform?",
+          "subtitle": "Join the future of business",
+          "description": "Contact us today to discuss your business needs",
+          "primaryButton": {
+            "text": "Contact Sales",
+            "url": "/contact",
+            "icon": "Phone",
+            "variant": "primary"
+          },
+          "secondaryButton": {
+            "text": "Download Brochure",
+            "url": "/brochure",
+            "icon": "Download",
+            "variant": "secondary"
+          }
+        }
+      }
+    ]
+  }
+}

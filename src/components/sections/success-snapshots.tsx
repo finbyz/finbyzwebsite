@@ -1,9 +1,10 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { TrendingUp, Clock, CheckCircle } from "lucide-react";
+import { TrendingUp, Clock, CheckCircle, Target } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { useMobileMenu } from "@/contexts/MobileMenuContext";
+import "@/styles/components/success-snapshots.css";
 
 // Intersection Observer Hook
 function useInView(threshold = 0.3) {
@@ -59,62 +60,59 @@ const cases = [
   }
 ];
 
-export default function SuccessSnapshots() {
+export default function SuccessSnapshots({ data = {} }: { data?: Record<string, any> }) {
   const [sectionRef, inView] = useInView(0.3);
-  const { isMobileMenuOpen } = useMobileMenu();
+  const { isOpen } = useMobileMenu();
+
+  // Use provided data or fallback to defaults
+  const {
+    title = "Success Snapshots",
+    subtitle = "Real challenges, measurable results",
+    cases: customCases = cases
+  } = data;
 
   return (
-    <section ref={sectionRef} className="py-16 bg-white w-full min-h-screen flex items-center">
-      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-20">
-        <div className={`text-center mb-10 transition-all duration-1000 ${
-          inView 
-            ? isMobileMenuOpen 
-              ? 'animate-slide-in-left' 
-              : 'animate-fade-in-up' 
-            : isMobileMenuOpen 
-              ? 'opacity-0 -translate-x-10' 
-              : 'opacity-0 translate-y-10'
-        }`}>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[#1A5276]">
-            Success Snapshots
+    <section ref={sectionRef} className="success-snapshots-section">
+      <div className="success-snapshots-container">
+        <div className={`success-snapshots-header ${inView ? 'fade-in-up' : 'fade-out'}`}>
+          <h2 className="success-snapshots-title">
+            {title}
           </h2>
-          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-            Real challenges, measurable results
+          <p className="success-snapshots-subtitle">
+            {subtitle}
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-10">
-          {cases.map((c, i) => (
+        <div className="success-snapshots-grid">
+          {customCases.map((c: any, i: number) => (
             <div
-              key={c.title}
-              className={`transition-all duration-700 ${
-                inView 
-                  ? isMobileMenuOpen 
-                    ? 'animate-slide-in-left' 
-                    : 'animate-fade-in-up' 
-                  : isMobileMenuOpen 
-                    ? 'opacity-0 -translate-x-10' 
-                    : 'opacity-0 translate-y-10'
-              }`}
+              key={c.title || i}
+              className={`success-snapshots-card ${inView ? 'fade-in-up' : 'fade-out'}`}
               style={{ 
                 transitionDelay: inView ? `${i * 0.2}s` : '0s',
                 animationDelay: inView ? `${i * 0.2}s` : '0s'
               }}
             >
               <div
-                className="bg-white rounded-2xl shadow-lg hover:shadow-xl p-6 lg:p-8 flex flex-col border-t-4 h-full transition-all duration-300 hover:scale-105 group"
-                style={{ borderTopColor: c.palette.border }}
+                className={`success-snapshots-card ${c.palette?.border === '#1A5276' ? 'border-color-blue' : c.palette?.border === '#FF8C00' ? 'border-color-orange' : 'border-color-purple'}`}
               >
                 <div className="flex items-center mb-4 lg:mb-6">
-                  <div
-                    className="w-12 h-12 lg:w-14 lg:h-14 flex items-center justify-center rounded-2xl mr-4 transition-transform duration-300 group-hover:scale-110"
-                    style={{ background: c.palette.badgeBg }}
-                  >
-                    <c.icon className="w-6 h-6 lg:w-7 lg:h-7" style={{ color: c.palette.badge }} />
+                  <div className={`success-snapshots-badge ${c.palette?.badgeBg === '#EAF1F8' ? 'badge-bg-blue' : c.palette?.badgeBg === '#FFF4E5' ? 'badge-bg-orange' : 'badge-bg-purple'}`}>
+                    {c.icon ? (
+                      <div 
+                        className={`success-snapshots-badge-icon ${c.palette?.badge === '#1A5276' ? 'badge-color-blue' : c.palette?.badge === '#FF8C00' ? 'badge-color-orange' : 'badge-color-purple'}`}
+                      >
+                        {c.icon}
+                      </div>
+                    ) : (
+                      <div className="success-snapshots-badge-icon badge-color-blue">
+                        <Target className="w-6 h-6" />
+                      </div>
+                    )}
                   </div>
                   <div>
-                    <div className="text-lg lg:text-xl font-bold text-[#1A5276]">{c.title}</div>
-                    <div className="text-sm lg:text-base text-gray-500">{c.subtitle}</div>
+                    <div className="success-snapshots-card-title">{c.title}</div>
+                    <div className="success-snapshots-card-company">{c.subtitle}</div>
                   </div>
                 </div>
                 
@@ -123,16 +121,13 @@ export default function SuccessSnapshots() {
                   <span className="text-gray-700 ml-1 text-sm lg:text-base">{c.challenge}</span>
                 </div>
                 
-                <div className="mb-6 lg:mb-8 flex-1">
-                  <span className="font-semibold" style={{ color: c.palette.border }}>Result:</span>
-                  <span className="text-gray-700 ml-1 text-sm lg:text-base leading-relaxed">{c.result}</span>
+                <div className="success-snapshots-results">
+                  <span className="success-snapshots-result-label">Result:</span>
+                  <span className="success-snapshots-result-value">{c.result}</span>
                 </div>
                 
                 <div className="mt-auto">
-                  <span
-                    className="inline-block px-4 py-2 rounded-full text-white text-xs lg:text-sm font-semibold shadow-sm transition-all duration-300 group-hover:shadow-md"
-                    style={{ background: c.palette.btn }}
-                  >
+                  <span className={`success-snapshots-button ${c.palette?.btn === '#1A5276' ? 'btn-bg-blue' : c.palette?.btn === '#FF8C00' ? 'btn-bg-orange' : 'btn-bg-purple'}`}>
                     {c.badge}
                   </span>
                 </div>
@@ -143,10 +138,10 @@ export default function SuccessSnapshots() {
         
         <div className={`text-center mb-8 transition-all duration-1000 ${
           inView 
-            ? isMobileMenuOpen 
+            ? isOpen 
               ? 'animate-slide-in-left' 
               : 'animate-fade-in-up' 
-            : isMobileMenuOpen 
+            : isOpen 
               ? 'opacity-0 -translate-x-10' 
               : 'opacity-0 translate-y-10'
         }`} style={{ transitionDelay: inView ? '0.6s' : '0s' }}>
@@ -160,10 +155,10 @@ export default function SuccessSnapshots() {
         
         <div className={`flex flex-col sm:flex-row justify-center gap-4 lg:gap-8 text-xs lg:text-sm text-[#1A5276] transition-all duration-1000 ${
           inView 
-            ? isMobileMenuOpen 
+            ? isOpen 
               ? 'animate-slide-in-left' 
               : 'animate-fade-in-up' 
-            : isMobileMenuOpen 
+            : isOpen 
               ? 'opacity-0 -translate-x-10' 
               : 'opacity-0 translate-y-10'
         }`} style={{ transitionDelay: inView ? '0.8s' : '0s' }}>

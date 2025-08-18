@@ -1,19 +1,28 @@
 "use client";
-
-import { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface MobileMenuContextType {
-  isMobileMenuOpen: boolean;
-  setIsMobileMenuOpen: (open: boolean) => void;
+  isOpen: boolean;
+  openMenu: () => void;
+  closeMenu: () => void;
+  toggleMenu: () => void;
 }
 
 const MobileMenuContext = createContext<MobileMenuContextType | undefined>(undefined);
 
-export function MobileMenuProvider({ children }: { children: ReactNode }) {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+interface MobileMenuProviderProps {
+  children: ReactNode;
+}
+
+export function MobileMenuProvider({ children }: MobileMenuProviderProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openMenu = () => setIsOpen(true);
+  const closeMenu = () => setIsOpen(false);
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <MobileMenuContext.Provider value={{ isMobileMenuOpen, setIsMobileMenuOpen }}>
+    <MobileMenuContext.Provider value={{ isOpen, openMenu, closeMenu, toggleMenu }}>
       {children}
     </MobileMenuContext.Provider>
   );
@@ -25,4 +34,4 @@ export function useMobileMenu() {
     throw new Error('useMobileMenu must be used within a MobileMenuProvider');
   }
   return context;
-} 
+}

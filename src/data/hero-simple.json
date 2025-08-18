@@ -1,0 +1,9 @@
+{
+  "title": "{{ title | default('Empower Your Business with AI & ERP') }}",
+  "subtitle": "{{ subtitle | default('Unlock efficiency, automation, and growth with next-gen technology and expert talent.') }}",
+  "image": {
+    "src": "{{ image.src | default('/Steer Your Vision.png') }}",
+    "alt": "{{ image.alt | default('Steer Your Vision - Digital transformation and business guidance') }}"
+  },
+  "scrollTarget": "{{ scroll_target | default('services') }}"
+}

@@ -1,0 +1,87 @@
+{
+  "title": "{{ title | default('Transparent Pricing') }}",
+  "subtitle": "{{ subtitle | default('Choose the perfect plan for your business needs with our flexible pricing options') }}",
+  "pricingPlans": [
+    {
+      "name": "{{ plan1.name | default('Starter') }}",
+      "price": "{{ plan1.price | default('$2,999') }}",
+      "period": "{{ plan1.period | default('month') }}",
+      "description": "{{ plan1.description | default('Perfect for small businesses and startups') }}",
+      "icon": "Zap",
+      "features": [
+        "{{ plan1.features.0 | default('Basic Website Development') }}",
+        "{{ plan1.features.1 | default('Responsive Design') }}",
+        "{{ plan1.features.2 | default('SEO Optimization') }}",
+        "{{ plan1.features.3 | default('3 Months Support') }}",
+        "{{ plan1.features.4 | default('Basic Analytics') }}",
+        "{{ plan1.features.5 | default('Mobile Optimization') }}"
+      ],
+      "popular": false,
+      "iconColor": "#1A5276",
+      "iconBg": "#EAF1F8"
+    },
+    {
+      "name": "{{ plan2.name | default('Professional') }}",
+      "price": "{{ plan2.price | default('$8,999') }}",
+      "period": "{{ plan2.period | default('month') }}",
+      "description": "{{ plan2.description | default('Ideal for growing businesses with advanced needs') }}",
+      "icon": "Shield",
+      "features": [
+        "{{ plan2.features.0 | default('Custom Web Application') }}",
+        "{{ plan2.features.1 | default('Database Integration') }}",
+        "{{ plan2.features.2 | default('API Development') }}",
+        "{{ plan2.features.3 | default('6 Months Support') }}",
+        "{{ plan2.features.4 | default('Advanced Analytics') }}",
+        "{{ plan2.features.5 | default('Performance Optimization') }}",
+        "{{ plan2.features.6 | default('Security Implementation') }}",
+        "{{ plan2.features.7 | default('Third-party Integrations') }}"
+      ],
+      "popular": true,
+      "iconColor": "#FF8C00",
+      "iconBg": "#FFF4E5"
+    },
+    {
+      "name": "{{ plan3.name | default('Enterprise') }}",
+      "price": "{{ plan3.price | default('$19,999') }}",
+      "period": "{{ plan3.period | default('month') }}",
+      "description": "{{ plan3.description | default('Comprehensive solutions for large organizations') }}",
+      "icon": "Globe",
+      "features": [
+        "{{ plan3.features.0 | default('Full-stack Development') }}",
+        "{{ plan3.features.1 | default('Microservices Architecture') }}",
+        "{{ plan3.features.2 | default('Cloud Infrastructure') }}",
+        "{{ plan3.features.3 | default('12 Months Support') }}",
+        "{{ plan3.features.4 | default('Real-time Analytics') }}",
+        "{{ plan3.features.5 | default('Advanced Security') }}",
+        "{{ plan3.features.6 | default('Scalability Planning') }}",
+        "{{ plan3.features.7 | default('Custom Integrations') }}",
+        "{{ plan3.features.8 | default('Performance Monitoring') }}",
+        "{{ plan3.features.9 | default('Dedicated Support Team') }}"
+      ],
+      "popular": false,
+      "iconColor": "#27AE60",
+      "iconBg": "#E8F8F2"
+    }
+  ],
+  "additionalInfo": {
+    "title": "{{ additional_info.title | default('All plans include:') }}",
+    "features": [
+      {
+        "icon": "Clock",
+        "text": "{{ additional_info.features.0 | default('24/7 Support') }}"
+      },
+      {
+        "icon": "Shield",
+        "text": "{{ additional_info.features.1 | default('Security Guarantee') }}"
+      },
+      {
+        "icon": "Award",
+        "text": "{{ additional_info.features.2 | default('Quality Assurance') }}"
+      },
+      {
+        "icon": "Users",
+        "text": "{{ additional_info.features.3 | default('Dedicated Team') }}"
+      }
+    ]
+  }
+}

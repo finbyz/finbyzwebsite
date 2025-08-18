@@ -1,0 +1,298 @@
+/* Component Color System */
+:root {
+  /* Primary Color Palette */
+  --primary-blue: #2563eb;
+  --primary-orange: #d97706;
+  --primary-green: #16a34a;
+  --primary-purple: #9333ea;
+  --primary-red: #dc2626;
+  --primary-yellow: #ca8a04;
+  --primary-teal: #0d9488;
+  --primary-indigo: #4f46e5;
+
+  /* Background Colors */
+  --bg-blue-light: #dbeafe;
+  --bg-orange-light: #fef3c7;
+  --bg-green-light: #dcfce7;
+  --bg-purple-light: #f3e8ff;
+  --bg-red-light: #fee2e2;
+  --bg-yellow-light: #fef9c3;
+  --bg-teal-light: #ccfbf1;
+  --bg-indigo-light: #e0e7ff;
+
+  /* Text Colors */
+  --text-blue: #1e40af;
+  --text-orange: #b45309;
+  --text-green: #15803d;
+  --text-purple: #7c3aed;
+  --text-red: #b91c1c;
+  --text-yellow: #a16207;
+  --text-teal: #0f766e;
+  --text-indigo: #3730a3;
+
+  /* Border Colors */
+  --border-blue: #3b82f6;
+  --border-orange: #f59e0b;
+  --border-green: #22c55e;
+  --border-purple: #a855f7;
+  --border-red: #ef4444;
+  --border-yellow: #eab308;
+  --border-teal: #14b8a6;
+  --border-indigo: #6366f1;
+}
+
+/* ServiceCards Component Colors */
+.service-cards .service-card:nth-child(6n+1) {
+  --service-bg: var(--bg-blue-light);
+  --service-text: var(--text-blue);
+  --service-border: var(--border-blue);
+}
+
+.service-cards .service-card:nth-child(6n+2) {
+  --service-bg: var(--bg-orange-light);
+  --service-text: var(--text-orange);
+  --service-border: var(--border-orange);
+}
+
+.service-cards .service-card:nth-child(6n+3) {
+  --service-bg: var(--bg-green-light);
+  --service-text: var(--text-green);
+  --service-border: var(--border-green);
+}
+
+.service-cards .service-card:nth-child(6n+4) {
+  --service-bg: var(--bg-purple-light);
+  --service-text: var(--text-purple);
+  --service-border: var(--border-purple);
+}
+
+.service-cards .service-card:nth-child(6n+5) {
+  --service-bg: var(--bg-red-light);
+  --service-text: var(--text-red);
+  --service-border: var(--border-red);
+}
+
+.service-cards .service-card:nth-child(6n+6) {
+  --service-bg: var(--bg-yellow-light);
+  --service-text: var(--text-yellow);
+  --service-border: var(--border-yellow);
+}
+
+/* StatsSection Component Colors */
+.stats-section .stat-card:nth-child(4n+1) {
+  --stat-bg: var(--primary-blue);
+  --stat-text: white;
+  --stat-icon: white;
+}
+
+.stats-section .stat-card:nth-child(4n+2) {
+  --stat-bg: var(--primary-orange);
+  --stat-text: white;
+  --stat-icon: white;
+}
+
+.stats-section .stat-card:nth-child(4n+3) {
+  --stat-bg: var(--primary-green);
+  --stat-text: white;
+  --stat-icon: white;
+}
+
+.stats-section .stat-card:nth-child(4n+4) {
+  --stat-bg: var(--primary-purple);
+  --stat-text: white;
+  --stat-icon: white;
+}
+
+/* HeroSection Component Colors */
+.hero-section {
+  --hero-gradient: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+  --hero-highlight: var(--primary-orange);
+  --hero-text: white;
+  --hero-button-primary: linear-gradient(135deg, var(--primary-orange), var(--primary-yellow));
+  --hero-button-secondary: transparent;
+}
+
+/* CallToAction Component Colors */
+.cta-section {
+  --cta-bg: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+  --cta-text: white;
+  --cta-highlight: var(--primary-orange);
+  --cta-button-primary: linear-gradient(135deg, var(--primary-orange), var(--primary-yellow));
+  --cta-button-secondary: transparent;
+}
+
+/* PricingCards Component Colors */
+.pricing-cards .pricing-card:nth-child(3n+1) {
+  --pricing-bg: white;
+  --pricing-border: var(--border-blue);
+  --pricing-text: var(--text-blue);
+  --pricing-button: var(--primary-blue);
+}
+
+.pricing-cards .pricing-card:nth-child(3n+2) {
+  --pricing-bg: var(--bg-orange-light);
+  --pricing-border: var(--border-orange);
+  --pricing-text: var(--text-orange);
+  --pricing-button: var(--primary-orange);
+}
+
+.pricing-cards .pricing-card:nth-child(3n+3) {
+  --pricing-bg: var(--bg-green-light);
+  --pricing-border: var(--border-green);
+  --pricing-text: var(--text-green);
+  --pricing-button: var(--primary-green);
+}
+
+/* TeamSection Component Colors */
+.team-section .team-card:nth-child(4n+1) {
+  --team-bg: var(--bg-blue-light);
+  --team-text: var(--text-blue);
+  --team-border: var(--border-blue);
+}
+
+.team-section .team-card:nth-child(4n+2) {
+  --team-bg: var(--bg-orange-light);
+  --team-text: var(--text-orange);
+  --team-border: var(--border-orange);
+}
+
+.team-section .team-card:nth-child(4n+3) {
+  --team-bg: var(--bg-green-light);
+  --team-text: var(--text-green);
+  --team-border: var(--border-green);
+}
+
+.team-section .team-card:nth-child(4n+4) {
+  --team-bg: var(--bg-purple-light);
+  --team-text: var(--text-purple);
+  --team-border: var(--border-purple);
+}
+
+/* TestimonialCarousel Component Colors */
+.testimonial-carousel .testimonial-card:nth-child(3n+1) {
+  --testimonial-bg: var(--bg-blue-light);
+  --testimonial-text: var(--text-blue);
+  --testimonial-border: var(--border-blue);
+}
+
+.testimonial-carousel .testimonial-card:nth-child(3n+2) {
+  --testimonial-bg: var(--bg-orange-light);
+  --testimonial-text: var(--text-orange);
+  --testimonial-border: var(--border-orange);
+}
+
+.testimonial-carousel .testimonial-card:nth-child(3n+3) {
+  --testimonial-bg: var(--bg-green-light);
+  --testimonial-text: var(--text-green);
+  --testimonial-border: var(--border-green);
+}
+
+/* BlogGrid Component Colors */
+.blog-grid .blog-card:nth-child(4n+1) {
+  --blog-bg: white;
+  --blog-text: var(--text-blue);
+  --blog-border: var(--border-blue);
+}
+
+.blog-grid .blog-card:nth-child(4n+2) {
+  --blog-bg: white;
+  --blog-text: var(--text-orange);
+  --blog-border: var(--border-orange);
+}
+
+.blog-grid .blog-card:nth-child(4n+3) {
+  --blog-bg: white;
+  --blog-text: var(--text-green);
+  --blog-border: var(--border-green);
+}
+
+.blog-grid .blog-card:nth-child(4n+4) {
+  --blog-bg: white;
+  --blog-text: var(--text-purple);
+  --blog-border: var(--border-purple);
+}
+
+/* TimelineSection Component Colors */
+.timeline-section .timeline-item:nth-child(2n+1) {
+  --timeline-bg: var(--bg-blue-light);
+  --timeline-text: var(--text-blue);
+  --timeline-border: var(--border-blue);
+}
+
+.timeline-section .timeline-item:nth-child(2n+2) {
+  --timeline-bg: var(--bg-orange-light);
+  --timeline-text: var(--text-orange);
+  --timeline-border: var(--border-orange);
+}
+
+/* Responsive Color Adjustments */
+@media (max-width: 768px) {
+  /* Mobile: Reduce color variations for better performance */
+  .service-cards .service-card:nth-child(3n+1),
+  .service-cards .service-card:nth-child(3n+2),
+  .service-cards .service-card:nth-child(3n+3) {
+    --service-bg: var(--bg-blue-light);
+    --service-text: var(--text-blue);
+    --service-border: var(--border-blue);
+  }
+}
+
+@media (max-width: 640px) {
+  /* Small mobile: Use single color scheme */
+  .service-cards .service-card,
+  .stats-section .stat-card,
+  .team-section .team-card,
+  .testimonial-carousel .testimonial-card,
+  .blog-grid .blog-card,
+  .timeline-section .timeline-item {
+    --service-bg: var(--bg-blue-light);
+    --service-text: var(--text-blue);
+    --service-border: var(--border-blue);
+    --stat-bg: var(--primary-blue);
+    --stat-text: white;
+    --stat-icon: white;
+    --team-bg: var(--bg-blue-light);
+    --team-text: var(--text-blue);
+    --team-border: var(--border-blue);
+    --testimonial-bg: var(--bg-blue-light);
+    --testimonial-text: var(--text-blue);
+    --testimonial-border: var(--border-blue);
+    --blog-bg: white;
+    --blog-text: var(--text-blue);
+    --blog-border: var(--border-blue);
+    --timeline-bg: var(--bg-blue-light);
+    --timeline-text: var(--text-blue);
+    --timeline-border: var(--border-blue);
+  }
+}
+
+/* Animation and Hover Effects */
+.service-card,
+.stat-card,
+.team-card,
+.testimonial-card,
+.blog-card,
+.timeline-item {
+  transition: all 0.3s ease;
+}
+
+.service-card:hover,
+.stat-card:hover,
+.team-card:hover,
+.testimonial-card:hover,
+.blog-card:hover,
+.timeline-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Focus States for Accessibility */
+.service-card:focus,
+.stat-card:focus,
+.team-card:focus,
+.testimonial-card:focus,
+.blog-card:focus,
+.timeline-item:focus {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
+} 

@@ -1,0 +1,201 @@
+/* Technology Stack Section Styles */
+.technology-stack-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.technology-stack-container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .technology-stack-container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .technology-stack-container {
+    padding: 0 2rem;
+  }
+}
+
+/* Header */
+.technology-stack-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  transition: all 1s;
+}
+
+.technology-stack-header.fade-in-up {
+  animation: fadeInUp 1s ease-out;
+}
+
+.technology-stack-header.fade-out {
+  opacity: 0;
+  transform: translateY(2.5rem);
+}
+
+.technology-stack-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .technology-stack-title {
+    font-size: 3rem;
+  }
+}
+
+.technology-stack-subtitle {
+  font-size: 1.25rem;
+  color: #64748b;
+  max-width: 48rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Grid */
+.technology-stack-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .technology-stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .technology-stack-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+/* Technology Card */
+.technology-stack-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.technology-stack-card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.technology-stack-card.fade-in-up {
+  animation: fadeInUp 0.7s ease-out;
+}
+
+.technology-stack-card.fade-out {
+  opacity: 0;
+  transform: translateY(2.5rem);
+}
+
+/* Icon Container */
+.technology-stack-icon-container {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: all 0.3s;
+}
+
+.technology-stack-card:hover .technology-stack-icon-container {
+  transform: scale(1.1);
+}
+
+@media (min-width: 1024px) {
+  .technology-stack-icon-container {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+.technology-stack-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .technology-stack-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+/* Content */
+.technology-stack-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.technology-stack-description {
+  font-size: 0.875rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(2.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Specific Icon Background Colors */
+.technology-stack-icon-bg-blue {
+  background: #E3F2FD;
+}
+
+.technology-stack-icon-bg-green {
+  background: #E8F5E8;
+}
+
+.technology-stack-icon-bg-purple {
+  background: #E3F2FD;
+}
+
+.technology-stack-icon-bg-orange {
+  background: #FFF3E0;
+}
+
+/* Specific Icon Colors */
+.technology-stack-icon-color-blue {
+  color: #61DAFB;
+}
+
+.technology-stack-icon-color-green {
+  color: #339933;
+}
+
+.technology-stack-icon-color-purple {
+  color: #336791;
+}
+
+.technology-stack-icon-color-orange {
+  color: #FF9900;
+}

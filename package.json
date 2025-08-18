@@ -9,7 +9,10 @@
     "lint": "next lint",
     "deploy": "npm run build && pm2 restart npm --name next-app || pm2 start npm --name next-app -- start",
     "stop": "pm2 stop next-app",
-    "start-pm2": "pm2 start npm --name next-app -- start && pm2 save && pm2 startup"
+    "start-pm2": "pm2 start npm --name next-app -- start && pm2 save && pm2 startup",
+    "generate-page": "tsx src/scripts/generate-page.ts",
+    "validate-page": "tsx src/scripts/generate-page.ts --validate",
+    "create-sample": "tsx src/scripts/generate-page.ts --sample"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.11",
@@ -40,6 +43,7 @@
     "eslint-config-next": "15.4.4",
     "pm2": "^6.0.8",
     "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.2",
     "tw-animate-css": "^1.3.6",
     "typescript": "^5"
   }

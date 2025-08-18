@@ -1,0 +1,310 @@
+{
+  "examples": {
+    "simple_landing_page": {
+      "description": "A simple landing page with hero, services, and CTA sections",
+      "usage": "POST /api/generate-page with this content",
+      "data": {
+        "pageName": "simple-landing",
+        "content": {
+          "metadata": {
+            "title": "Simple Landing Page",
+            "description": "A clean and simple landing page example",
+            "keywords": ["landing page", "simple", "example"]
+          },
+          "sections": [
+            {
+              "type": "hero",
+              "data": {
+                "title": "Welcome to Our Platform",
+                "subtitle": "Simple, powerful, and effective",
+                "description": "Get started with our amazing platform today",
+                "primaryButton": {
+                  "text": "Get Started",
+                  "url": "/signup",
+                  "icon": "ArrowRight"
+                },
+                "secondaryButton": {
+                  "text": "Learn More",
+                  "url": "/about",
+                  "icon": "Info"
+                },
+                "image": {
+                  "src": "/images/hero-simple.jpg",
+                  "alt": "Simple hero image"
+                }
+              }
+            },
+            {
+              "type": "services",
+              "data": {
+                "title": "Our Services",
+                "subtitle": "What we offer",
+                "services": [
+                  {
+                    "title": "Service 1",
+                    "description": "Description of service 1",
+                    "icon": "Zap",
+                    "iconColor": "#1A5276",
+                    "iconBg": "#EAF1F8",
+                    "borderColor": "#1A5276",
+                    "bgColor": "#f8fafc",
+                    "capabilities": [
+                      {
+                        "title": "Features",
+                        "items": [
+                          { "name": "Feature 1", "color": "#1A5276" },
+                          { "name": "Feature 2", "color": "#FF8C00" }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "type": "cta",
+              "data": {
+                "title": "Ready to Get Started?",
+                "subtitle": "Join thousands of satisfied customers",
+                "description": "Don't wait any longer. Start your journey today.",
+                "primaryButton": {
+                  "text": "Start Now",
+                  "url": "/signup",
+                  "icon": "ArrowRight",
+                  "variant": "primary"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "business_page": {
+      "description": "A comprehensive business page with multiple sections",
+      "usage": "POST /api/generate-page with this content",
+      "data": {
+        "pageName": "business-solutions",
+        "content": {
+          "metadata": {
+            "title": "Business Solutions",
+            "description": "Comprehensive business solutions for modern enterprises",
+            "keywords": ["business", "solutions", "enterprise", "technology"]
+          },
+          "sections": [
+            {
+              "type": "hero",
+              "data": {
+                "title": "Transform Your Business",
+                "subtitle": "Next-generation business solutions",
+                "description": "Empower your business with cutting-edge technology and innovative solutions",
+                "primaryButton": {
+                  "text": "Schedule Demo",
+                  "url": "/demo",
+                  "icon": "Calendar"
+                },
+                "secondaryButton": {
+                  "text": "View Case Studies",
+                  "url": "/case-studies",
+                  "icon": "FileText"
+                },
+                "image": {
+                  "src": "/images/business-hero.jpg",
+                  "alt": "Business transformation"
+                }
+              }
+            },
+            {
+              "type": "services",
+              "data": {
+                "title": "Business Solutions",
+                "subtitle": "Comprehensive tools for growth",
+                "services": [
+                  {
+                    "title": "Digital Transformation",
+                    "description": "Modernize your business processes",
+                    "icon": "Zap",
+                    "iconColor": "#1A5276",
+                    "iconBg": "#EAF1F8",
+                    "borderColor": "#1A5276",
+                    "bgColor": "#f8fafc",
+                    "capabilities": [
+                      {
+                        "title": "Key Benefits",
+                        "items": [
+                          { "name": "Efficiency", "color": "#1A5276" },
+                          { "name": "Scalability", "color": "#FF8C00" },
+                          { "name": "Innovation", "color": "#27AE60" }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Cloud Solutions",
+                    "description": "Scalable cloud infrastructure",
+                    "icon": "Cloud",
+                    "iconColor": "#27AE60",
+                    "iconBg": "#E8F8F2",
+                    "borderColor": "#27AE60",
+                    "bgColor": "#f8fafc",
+                    "capabilities": [
+                      {
+                        "title": "Features",
+                        "items": [
+                          { "name": "Security", "color": "#27AE60" },
+                          { "name": "Performance", "color": "#8E44AD" },
+                          { "name": "Reliability", "color": "#FF8C00" }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "type": "testimonials",
+              "data": {
+                "title": "Customer Success Stories",
+                "subtitle": "See what our clients say",
+                "testimonials": [
+                  {
+                    "name": "John Smith",
+                    "role": "CEO",
+                    "company": "TechCorp",
+                    "content": "Amazing results with their solutions!",
+                    "avatar": "/images/avatar1.jpg",
+                    "rating": 5,
+                    "palette": {
+                      "primary": "#1A5276",
+                      "secondary": "#EAF1F8"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "faq",
+              "data": {
+                "title": "Frequently Asked Questions",
+                "subtitle": "Get answers to common questions",
+                "faqs": [
+                  {
+                    "question": "How long does implementation take?",
+                    "answer": "Typically 4-6 weeks depending on complexity",
+                    "icon": "Clock"
+                  },
+                  {
+                    "question": "What support do you provide?",
+                    "answer": "24/7 support with dedicated account managers",
+                    "icon": "Headphones"
+                  }
+                ],
+                "palette": {
+                  "primary": "#1A5276",
+                  "secondary": "#EAF1F8"
+                }
+              }
+            },
+            {
+              "type": "cta",
+              "data": {
+                "title": "Ready to Transform?",
+                "subtitle": "Join the future of business",
+                "description": "Contact us today to discuss your business needs",
+                "primaryButton": {
+                  "text": "Contact Sales",
+                  "url": "/contact",
+                  "icon": "Phone",
+                  "variant": "primary"
+                },
+                "secondaryButton": {
+                  "text": "Download Brochure",
+                  "url": "/brochure",
+                  "icon": "Download",
+                  "variant": "secondary"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "minimal_page": {
+      "description": "A minimal page with just hero and CTA",
+      "usage": "POST /api/generate-page with this content",
+      "data": {
+        "pageName": "minimal-page",
+        "content": {
+          "metadata": {
+            "title": "Minimal Page",
+            "description": "A minimal page example",
+            "keywords": ["minimal", "simple", "clean"]
+          },
+          "sections": [
+            {
+              "type": "hero",
+              "data": {
+                "title": "Minimal Design",
+                "subtitle": "Less is more",
+                "description": "Clean and simple design principles",
+                "primaryButton": {
+                  "text": "Learn More",
+                  "url": "/about",
+                  "icon": "ArrowRight"
+                },
+                "image": {
+                  "src": "/images/minimal.jpg",
+                  "alt": "Minimal design"
+                }
+              }
+            },
+            {
+              "type": "cta",
+              "data": {
+                "title": "Get Started",
+                "subtitle": "Simple and effective",
+                "description": "Ready to begin?",
+                "primaryButton": {
+                  "text": "Start Now",
+                  "url": "/start",
+                  "icon": "ArrowRight",
+                  "variant": "primary"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "api_usage": {
+    "endpoint": "/api/generate-page",
+    "method": "POST",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "request_body_structure": {
+      "pageName": "string (required) - The name of the page to generate",
+      "content": "object (required) - The page content following PageData interface"
+    },
+    "response_structure": {
+      "success": "boolean - Whether the page was generated successfully",
+      "message": "string - Success/error message",
+      "data": {
+        "pageName": "string - The name of the generated page",
+        "pageUrl": "string - The URL where the page can be accessed",
+        "sectionsCount": "number - Number of sections in the page",
+        "sections": "array - Array of section types used",
+        "generatedFiles": "array - Array of generated file paths"
+      }
+    }
+  },
+  "curl_examples": {
+    "simple_landing": "curl -X POST http://localhost:3000/api/generate-page -H 'Content-Type: application/json' -d @simple-landing.json",
+    "business_page": "curl -X POST http://localhost:3000/api/generate-page -H 'Content-Type: application/json' -d @business-page.json",
+    "minimal_page": "curl -X POST http://localhost:3000/api/generate-page -H 'Content-Type: application/json' -d @minimal-page.json"
+  },
+  "javascript_examples": {
+    "fetch_api": "const response = await fetch('/api/generate-page', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ pageName: 'my-page', content: pageData }) });",
+    "axios": "const response = await axios.post('/api/generate-page', { pageName: 'my-page', content: pageData });"
+  }
+}

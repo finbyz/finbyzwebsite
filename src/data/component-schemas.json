@@ -1,0 +1,479 @@
+{
+  "componentSchemas": {
+    "hero": {
+      "description": "Hero section with title, subtitle, buttons, and image",
+      "required": ["title", "subtitle", "primaryButton", "secondaryButton", "image"],
+      "data": {
+        "title": "string - Main headline text",
+        "subtitle": "string - Supporting description text",
+        "primaryButton": "string - Primary CTA button text",
+        "secondaryButton": "string - Secondary CTA button text",
+        "image": {
+          "src": "string - Image source path",
+          "alt": "string - Image alt text"
+        },
+        "scrollTarget": "string (optional) - ID of section to scroll to"
+      },
+      "example": {
+        "title": "Empower Your Business with AI & ERP",
+        "subtitle": "Unlock efficiency, automation, and growth with next-gen technology and expert talent.",
+        "primaryButton": "Book a Free Consultation",
+        "secondaryButton": "Watch Demo",
+        "image": {
+          "src": "/Hero Brain 2.png",
+          "alt": "ERP AI Automation Technology Illustration"
+        },
+        "scrollTarget": "services"
+      }
+    },
+    "services": {
+      "description": "Services showcase with icons, descriptions, and capabilities",
+      "required": ["title", "subtitle", "services"],
+      "data": {
+        "title": "string - Section title",
+        "subtitle": "string - Section subtitle",
+        "services": [
+          {
+            "icon": "string - Lucide icon name (e.g., 'BarChart3', 'Zap', 'Code')",
+            "title": "string - Service title",
+            "description": "string - Service description",
+            "bgColor": "string - Background color hex code",
+            "iconColor": "string - Icon color hex code",
+            "borderColor": "string - Top border color hex code"
+          }
+        ]
+      },
+      "example": {
+        "title": "Our Services",
+        "subtitle": "Comprehensive solutions for modern businesses",
+        "services": [
+          {
+            "icon": "BarChart3",
+            "title": "Analytics & Insights",
+            "description": "Data-driven decision making with advanced analytics",
+            "bgColor": "#EAF1F8",
+            "iconColor": "#1A5276",
+            "borderColor": "#1A5276"
+          }
+        ]
+      }
+    },
+    "testimonials": {
+      "description": "Customer testimonials with avatars, ratings, and company info",
+      "required": ["title", "subtitle", "testimonials"],
+      "data": {
+        "title": "string - Section title",
+        "subtitle": "string - Section subtitle",
+        "testimonials": [
+          {
+            "avatar": "string - Avatar initials or image path",
+            "rating": "number - Star rating (1-5)",
+            "quote": "string - Customer testimonial text",
+            "author": "string - Customer name",
+            "company": "string - Company name",
+            "position": "string (optional) - Job title"
+          }
+        ]
+      },
+      "example": {
+        "title": "What Our Clients Say",
+        "subtitle": "Trusted by businesses worldwide",
+        "testimonials": [
+          {
+            "avatar": "SJ",
+            "rating": 5,
+            "quote": "Finbyz transformed our operations with their ERP implementation.",
+            "author": "Sarah Johnson",
+            "company": "TechCorp Industries"
+          }
+        ]
+      }
+    },
+    "benefits": {
+      "description": "Benefits showcase with statistics and descriptions",
+      "required": ["title", "subtitle", "benefits"],
+      "data": {
+        "title": "string - Section title",
+        "subtitle": "string - Section subtitle",
+        "benefits": [
+          {
+            "number": "number - Statistic value",
+            "suffix": "string - Statistic suffix (%, +, etc.)",
+            "label": "string - Statistic label",
+            "header": "string - Benefit header",
+            "description": "string - Benefit description",
+            "icon": "string - Lucide icon name",
+            "palette": {
+              "iconBg": "string - Icon background color hex",
+              "iconColor": "string - Icon color hex"
+            }
+          }
+        ],
+        "ctaButton": {
+          "text": "string - CTA button text",
+          "action": "string - Action identifier"
+        }
+      },
+      "example": {
+        "title": "Why Choose Finbyz",
+        "subtitle": "Proven results that speak for themselves",
+        "benefits": [
+          {
+            "number": 60,
+            "suffix": "%",
+            "label": "Efficiency Gains with Our Solutions",
+            "header": "Maximum Efficiency",
+            "description": "Transform your operations with intelligent automation",
+            "icon": "TrendingUp",
+            "palette": {
+              "iconBg": "#FF8C00",
+              "iconColor": "#fff"
+            }
+          }
+        ],
+        "ctaButton": {
+          "text": "Let's Build That Efficiency →",
+          "action": "efficiency"
+        }
+      }
+    },
+    "cta": {
+      "description": "Call to action section with buttons and trust indicators",
+      "required": ["title", "subtitle", "description", "primaryButton", "secondaryButton"],
+      "data": {
+        "title": "string - CTA headline",
+        "subtitle": "string - CTA subheadline",
+        "description": "string - Supporting text",
+        "primaryButton": {
+          "text": "string - Button text",
+          "icon": "string - Lucide icon name",
+          "action": "string - Action identifier"
+        },
+        "secondaryButton": {
+          "text": "string - Button text",
+          "icon": "string - Lucide icon name",
+          "action": "string - Action identifier"
+        }
+      },
+      "example": {
+        "title": "Ready to Transform?",
+        "subtitle": "Join the future of business",
+        "description": "Contact us today to discuss your business needs",
+        "primaryButton": {
+          "text": "Contact Sales",
+          "icon": "Phone",
+          "action": "contact"
+        },
+        "secondaryButton": {
+          "text": "Download Brochure",
+          "icon": "Download",
+          "action": "brochure"
+        }
+      }
+    },
+    "faq": {
+      "description": "Frequently asked questions with expandable answers",
+      "required": ["title", "subtitle", "questions"],
+      "data": {
+        "title": "string - Section title",
+        "subtitle": "string - Section subtitle",
+        "questions": [
+          {
+            "question": "string - FAQ question",
+            "answer": "string - FAQ answer"
+          }
+        ]
+      },
+      "example": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Everything you need to know about our services",
+        "questions": [
+          {
+            "question": "How long does implementation take?",
+            "answer": "Implementation typically takes 4-8 weeks depending on complexity."
+          }
+        ]
+      }
+    },
+    "service-pricing": {
+      "description": "Pricing plans with features and comparisons",
+      "required": ["title", "subtitle", "pricingPlans"],
+      "data": {
+        "title": "string - Section title",
+        "subtitle": "string - Section subtitle",
+        "pricingPlans": [
+          {
+            "name": "string - Plan name",
+            "price": "string - Price value",
+            "period": "string - Billing period",
+            "description": "string - Plan description",
+            "icon": "string - Lucide icon name",
+            "features": ["string - Array of feature descriptions"],
+            "popular": "boolean - Whether this is the popular plan",
+            "iconColor": "string - Icon color hex",
+            "iconBg": "string - Icon background color hex"
+          }
+        ]
+      },
+      "example": {
+        "title": "Transparent Pricing",
+        "subtitle": "Choose the perfect plan for your business needs",
+        "pricingPlans": [
+          {
+            "name": "Starter",
+            "price": "$2,999",
+            "period": "month",
+            "description": "Perfect for small businesses and startups",
+            "icon": "Zap",
+            "features": [
+              "Basic Website Development",
+              "Responsive Design",
+              "SEO Optimization"
+            ],
+            "popular": false,
+            "iconColor": "#1A5276",
+            "iconBg": "#EAF1F8"
+          }
+        ]
+      }
+    },
+    "contact-info": {
+      "description": "Contact information and form",
+      "required": ["title", "contactMethods", "form"],
+      "data": {
+        "title": "string - Section title",
+        "contactMethods": [
+          {
+            "icon": "string - Lucide icon name",
+            "title": "string - Contact method title",
+            "value": "string - Contact information",
+            "description": "string - Additional details"
+          }
+        ],
+        "form": {
+          "title": "string - Form title",
+          "nameLabel": "string - Name field label",
+          "namePlaceholder": "string - Name field placeholder",
+          "emailLabel": "string - Email field label",
+          "emailPlaceholder": "string - Email field placeholder",
+          "messageLabel": "string - Message field label",
+          "messagePlaceholder": "string - Message field placeholder",
+          "submitText": "string - Submit button text"
+        }
+      },
+      "example": {
+        "title": "Get in Touch",
+        "contactMethods": [
+          {
+            "icon": "Phone",
+            "title": "Phone",
+            "value": "+1 (555) 123-4567",
+            "description": "Available 24/7"
+          }
+        ],
+        "form": {
+          "title": "Send us a message",
+          "nameLabel": "Full Name",
+          "namePlaceholder": "Enter your full name",
+          "emailLabel": "Email Address",
+          "emailPlaceholder": "Enter your email",
+          "messageLabel": "Message",
+          "messagePlaceholder": "Tell us about your project",
+          "submitText": "Send Message"
+        }
+      }
+    },
+    "stats-showcase": {
+      "description": "Statistics display with animated counters",
+      "required": ["title", "subtitle", "stats"],
+      "data": {
+        "title": "string - Section title",
+        "subtitle": "string - Section subtitle",
+        "stats": [
+          {
+            "value": "string - Statistic value",
+            "label": "string - Statistic label",
+            "description": "string - Additional context",
+            "icon": "string - Lucide icon name",
+            "color": "string - Accent color hex"
+          }
+        ]
+      },
+      "example": {
+        "title": "Our Impact",
+        "subtitle": "Numbers that tell our story",
+        "stats": [
+          {
+            "value": "200+",
+            "label": "Projects Completed",
+            "description": "Successfully delivered",
+            "icon": "CheckCircle",
+            "color": "#27AE60"
+          }
+        ]
+      }
+    },
+    "team-expertise": {
+      "description": "Team member showcase with expertise areas",
+      "required": ["title", "subtitle", "team"],
+      "data": {
+        "title": "string - Section title",
+        "subtitle": "string - Section subtitle",
+        "team": [
+          {
+            "name": "string - Team member name",
+            "position": "string - Job title",
+            "expertise": ["string - Array of expertise areas"],
+            "avatar": "string - Avatar image path or initials",
+            "bio": "string - Short biography",
+            "linkedin": "string (optional) - LinkedIn profile URL"
+          }
+        ]
+      },
+      "example": {
+        "title": "Meet Our Team",
+        "subtitle": "Experts in their fields",
+        "team": [
+          {
+            "name": "John Doe",
+            "position": "Senior Developer",
+            "expertise": ["React", "Node.js", "AWS"],
+            "avatar": "/avatars/john.jpg",
+            "bio": "10+ years of experience in full-stack development"
+          }
+        ]
+      }
+    },
+    "case-studies": {
+      "description": "Case study showcase with results and metrics",
+      "required": ["title", "subtitle", "cases"],
+      "data": {
+        "title": "string - Section title",
+        "subtitle": "string - Section subtitle",
+        "cases": [
+          {
+            "title": "string - Case study title",
+            "company": "string - Company name",
+            "industry": "string - Industry sector",
+            "challenge": "string - Problem description",
+            "solution": "string - Solution implemented",
+            "results": ["string - Array of result metrics"],
+            "image": "string - Case study image path",
+            "logo": "string - Company logo path"
+          }
+        ]
+      },
+      "example": {
+        "title": "Success Stories",
+        "subtitle": "Real results from real clients",
+        "cases": [
+          {
+            "title": "Digital Transformation Success",
+            "company": "TechCorp",
+            "industry": "Technology",
+            "challenge": "Legacy system limitations",
+            "solution": "Modern ERP implementation",
+            "results": [
+              "60% increase in efficiency",
+              "40% reduction in costs"
+            ],
+            "image": "/case-studies/techcorp.jpg",
+            "logo": "/logos/techcorp.png"
+          }
+        ]
+      }
+    }
+  },
+  "pageStructure": {
+    "description": "Standard page structure for sections-based renderer",
+    "required": ["metadata", "sections"],
+    "structure": {
+      "metadata": {
+        "title": "string - Page title (required)",
+        "description": "string - Page description (required)",
+        "keywords": ["string - Array of SEO keywords (optional)"]
+      },
+      "sections": [
+        {
+          "type": "string - Component type (must match available components)",
+          "data": "object - Component-specific data (see component schemas above)",
+          "id": "string (optional) - Section ID for navigation",
+          "className": "string (optional) - Additional CSS classes"
+        }
+      ]
+    },
+    "example": {
+      "metadata": {
+        "title": "Finbyz - AI & ERP Solutions",
+        "description": "Comprehensive AI & ERP solutions for modern businesses",
+        "keywords": ["ERP", "AI", "Business Solutions", "Automation"]
+      },
+      "sections": [
+        {
+          "type": "hero",
+          "data": {
+            "title": "Empower Your Business with AI & ERP",
+            "subtitle": "Unlock efficiency, automation, and growth with next-gen technology.",
+            "primaryButton": "Get Started",
+            "secondaryButton": "Learn More",
+            "image": {
+              "src": "/hero-image.png",
+              "alt": "Business Technology"
+            }
+          },
+          "id": "hero-section"
+        },
+        {
+          "type": "services",
+          "data": {
+            "title": "Our Services",
+            "subtitle": "Comprehensive solutions for modern businesses",
+            "services": [
+              {
+                "icon": "BarChart3",
+                "title": "Analytics & Insights",
+                "description": "Data-driven decision making",
+                "bgColor": "#EAF1F8",
+                "iconColor": "#1A5276",
+                "borderColor": "#1A5276"
+              }
+            ]
+          },
+          "id": "services-section"
+        }
+      ]
+    }
+  },
+  "availableComponents": [
+    "hero",
+    "services", 
+    "testimonials",
+    "benefits",
+    "differentiators",
+    "comment",
+    "cta",
+    "faq",
+    "process-workflow",
+    "industry-solutions",
+    "global-presence",
+    "contact-info",
+    "support-services",
+    "resource-center",
+    "partnerships",
+    "security-compliance",
+    "innovation-lab",
+    "awards-recognition",
+    "service-pricing",
+    "hero-without-button",
+    "client-success-stories",
+    "technology-stack",
+    "case-studies",
+    "business-slider",
+    "services-overview",
+    "client-logos",
+    "stats-showcase",
+    "process-timeline",
+    "team-expertise",
+    "success-snapshots"
+  ]
+}

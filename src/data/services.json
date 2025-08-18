@@ -1,0 +1,107 @@
+{
+  "title": "{{ title | default('What We Do – Snapshot') }}",
+  "subtitle": "{{ subtitle | default('Comprehensive technology solutions for modern businesses') }}",
+  "ctaButton": "{{ cta_button | default('Ready to get started?') }}",
+  "services": [
+    {
+      "icon": "BarChart3",
+      "title": "{{ services.0.title | default('ERP Implementation') }}",
+      "description": "{{ services.0.description | default('Streamline operations and scale faster with expert ERPNext implementations — from vanilla to custom builds.') }}",
+      "iconColor": "{{ services.0.iconColor | default('#1A5276') }}",
+      "bgColor": "{{ services.0.bgColor | default('#EAF1F8') }}",
+      "borderColor": "{{ services.0.borderColor | default('#1A5276') }}",
+      "capabilities": [
+        {
+          "icon": "Database",
+          "label": "{{ services.0.capabilities.0.label | default('ERP') }}",
+          "color": "{{ services.0.capabilities.0.color | default('#1A5276') }}"
+        },
+        {
+          "icon": "BarChart3",
+          "label": "{{ services.0.capabilities.1.label | default('Analytics') }}",
+          "color": "{{ services.0.capabilities.1.color | default('#FF8C00') }}"
+        },
+        {
+          "icon": "GitBranch",
+          "label": "{{ services.0.capabilities.2.label | default('Integration') }}",
+          "color": "{{ services.0.capabilities.2.color | default('#27AE60') }}"
+        }
+      ]
+    },
+    {
+      "icon": "Zap",
+      "title": "{{ services.1.title | default('AI Automation') }}",
+      "description": "{{ services.1.description | default('Automate intelligently. From data workflows to business logic, we build AI that works where it matters.') }}",
+      "iconColor": "{{ services.1.iconColor | default('#FF8C00') }}",
+      "bgColor": "{{ services.1.bgColor | default('#FFF4E5') }}",
+      "borderColor": "{{ services.1.borderColor | default('#FF8C00') }}",
+      "capabilities": [
+        {
+          "icon": "Brain",
+          "label": "{{ services.1.capabilities.0.label | default('AI') }}",
+          "color": "{{ services.1.capabilities.0.color | default('#8E44AD') }}"
+        },
+        {
+          "icon": "Zap",
+          "label": "{{ services.1.capabilities.1.label | default('Automation') }}",
+          "color": "{{ services.1.capabilities.1.color | default('#FF8C00') }}"
+        },
+        {
+          "icon": "Cpu",
+          "label": "{{ services.1.capabilities.2.label | default('ML') }}",
+          "color": "{{ services.1.capabilities.2.color | default('#27AE60') }}"
+        }
+      ]
+    },
+    {
+      "icon": "Code",
+      "title": "{{ services.2.title | default('Software Development') }}",
+      "description": "{{ services.2.description | default('From SaaS apps to custom tools, we develop scalable, user-centric software built to solve real problems.') }}",
+      "iconColor": "{{ services.2.iconColor | default('#27AE60') }}",
+      "bgColor": "{{ services.2.bgColor | default('#E8F8F2') }}",
+      "borderColor": "{{ services.2.borderColor | default('#27AE60') }}",
+      "capabilities": [
+        {
+          "icon": "Code",
+          "label": "{{ services.2.capabilities.0.label | default('Development') }}",
+          "color": "{{ services.2.capabilities.0.color | default('#27AE60') }}"
+        },
+        {
+          "icon": "Database",
+          "label": "{{ services.2.capabilities.1.label | default('SaaS') }}",
+          "color": "{{ services.2.capabilities.1.color | default('#1A5276') }}"
+        },
+        {
+          "icon": "GitBranch",
+          "label": "{{ services.2.capabilities.2.label | default('Custom') }}",
+          "color": "{{ services.2.capabilities.2.color | default('#FF8C00') }}"
+        }
+      ]
+    },
+    {
+      "icon": "Users",
+      "title": "{{ services.3.title | default('Resource Augmentation') }}",
+      "description": "{{ services.3.description | default('Tap into our skilled developers and consultants — as dedicated team members or project-based specialists.') }}",
+      "iconColor": "{{ services.3.iconColor | default('#8E44AD') }}",
+      "bgColor": "{{ services.3.bgColor | default('#F3EAF8') }}",
+      "borderColor": "{{ services.3.borderColor | default('#8E44AD') }}",
+      "capabilities": [
+        {
+          "icon": "Users",
+          "label": "{{ services.3.capabilities.0.label | default('Team') }}",
+          "color": "{{ services.3.capabilities.0.color | default('#8E44AD') }}"
+        },
+        {
+          "icon": "Code",
+          "label": "{{ services.3.capabilities.1.label | default('Consulting') }}",
+          "color": "{{ services.3.capabilities.1.color | default('#27AE60') }}"
+        },
+        {
+          "icon": "GitBranch",
+          "label": "{{ services.3.capabilities.2.label | default('Dedicated') }}",
+          "color": "{{ services.3.capabilities.2.color | default('#1A5276') }}"
+        }
+      ]
+    }
+  ]
+}

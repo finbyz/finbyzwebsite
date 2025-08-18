@@ -1,0 +1,43 @@
+{
+  "pageName": "minimal-page",
+  "content": {
+    "metadata": {
+      "title": "Minimal Page",
+      "description": "A minimal page example",
+      "keywords": ["minimal", "simple", "clean"]
+    },
+    "sections": [
+      {
+        "type": "hero",
+        "data": {
+          "title": "Minimal Design",
+          "subtitle": "Less is more",
+          "description": "Clean and simple design principles",
+          "primaryButton": {
+            "text": "Learn More",
+            "url": "/about",
+            "icon": "ArrowRight"
+          },
+          "image": {
+            "src": "/images/minimal.jpg",
+            "alt": "Minimal design"
+          }
+        }
+      },
+      {
+        "type": "cta",
+        "data": {
+          "title": "Get Started",
+          "subtitle": "Simple and effective",
+          "description": "Ready to begin?",
+          "primaryButton": {
+            "text": "Start Now",
+            "url": "/start",
+            "icon": "ArrowRight",
+            "variant": "primary"
+          }
+        }
+      }
+    ]
+  }
+}

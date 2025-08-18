@@ -1,0 +1,347 @@
+/* Process Workflow Section Styles */
+.process-workflow-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #1A5276 0%, #2E86AB 100%);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Pattern */
+.process-workflow-background {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+}
+
+.process-workflow-pattern-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18rem;
+  height: 18rem;
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(-9rem, -9rem);
+}
+
+.process-workflow-pattern-2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 24rem;
+  height: 24rem;
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(12rem, 12rem);
+}
+
+.process-workflow-container {
+  width: 100%;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 640px) {
+  .process-workflow-container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .process-workflow-container {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .process-workflow-container {
+    padding: 0 5rem;
+  }
+}
+
+/* Header */
+.process-workflow-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  transition: all 1s ease;
+}
+
+.process-workflow-fade-in-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.process-workflow-fade-out {
+  opacity: 0;
+  transform: translateY(2.5rem);
+}
+
+.process-workflow-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: white;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .process-workflow-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .process-workflow-title {
+    font-size: 3rem;
+  }
+}
+
+.process-workflow-subtitle {
+  font-size: 1.125rem;
+  color: #bfdbfe;
+  max-width: 48rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .process-workflow-subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+/* Grid */
+.process-workflow-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .process-workflow-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .process-workflow-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+/* Card Wrapper */
+.process-workflow-card-wrapper {
+  transition: all 0.7s ease;
+  position: relative;
+}
+
+/* Card */
+.process-workflow-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .process-workflow-card {
+    padding: 2rem;
+  }
+}
+
+.process-workflow-card:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Card Header */
+.process-workflow-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Icon Container */
+.process-workflow-icon-container {
+  position: relative;
+}
+
+.process-workflow-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.process-workflow-card:hover .process-workflow-icon-wrapper {
+  transform: scale(1.1);
+}
+
+.process-workflow-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Step Badge */
+.process-workflow-step-badge {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.process-workflow-step-number {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #1A5276;
+}
+
+/* Card Title Section */
+.process-workflow-card-title-section {
+  flex: 1;
+}
+
+.process-workflow-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+@media (min-width: 1024px) {
+  .process-workflow-card-title {
+    font-size: 1.5rem;
+  }
+}
+
+.process-workflow-duration {
+  color: #bfdbfe;
+  font-size: 0.875rem;
+}
+
+/* Card Content */
+.process-workflow-card-content {
+  flex: 1;
+}
+
+.process-workflow-description {
+  color: #bfdbfe;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 1024px) {
+  .process-workflow-description {
+    font-size: 1rem;
+  }
+}
+
+/* Details */
+.process-workflow-details {
+  margin-top: 1rem;
+}
+
+.process-workflow-details-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #bfdbfe;
+  margin-bottom: 0.5rem;
+}
+
+.process-workflow-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.process-workflow-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.process-workflow-detail-bullet {
+  width: 0.375rem;
+  height: 0.375rem;
+  background-color: #93c5fd;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.process-workflow-detail-text {
+  color: #bfdbfe;
+  font-size: 0.75rem;
+}
+
+/* Arrow */
+.process-workflow-arrow {
+  position: absolute;
+  top: 50%;
+  right: -1.25rem;
+  transform: translateY(-50%);
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .process-workflow-arrow {
+    display: block;
+  }
+}
+
+.process-workflow-arrow-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Stats */
+.process-workflow-stats {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  transition: all 1s ease;
+}
+
+@media (min-width: 768px) {
+  .process-workflow-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.process-workflow-stat {
+  text-align: center;
+}
+
+.process-workflow-stat-number {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.process-workflow-stat-label {
+  color: #bfdbfe;
+}

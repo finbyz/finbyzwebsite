@@ -1,0 +1,93 @@
+/* Comment Section Styles */
+.comment-section {
+  padding: 4rem 0;
+  background-color: white;
+}
+
+.comment-container {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Content */
+.comment-content {
+  max-width: 64rem;
+  margin: 0 auto;
+  transition: all 1s ease;
+}
+
+.comment-fade-in-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.comment-fade-out {
+  opacity: 0;
+  transform: translateY(2.5rem);
+}
+
+.comment-slide-in-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.comment-slide-out-left {
+  opacity: 0;
+  transform: translateX(-2.5rem);
+}
+
+/* Layout */
+.comment-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* Symbol */
+.comment-symbol {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #87CEEB;
+  line-height: 1;
+  flex-shrink: 0;
+  padding-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .comment-symbol {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .comment-symbol {
+    font-size: 3.75rem;
+  }
+}
+
+/* Text Container */
+.comment-text-container {
+  flex: 1;
+  padding-top: 1.5rem;
+}
+
+/* Text */
+.comment-text {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .comment-text {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .comment-text {
+    font-size: 1.25rem;
+  }
+}
