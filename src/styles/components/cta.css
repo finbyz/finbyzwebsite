@@ -1,9 +1,11 @@
 /* CTA Section Styles */
 .cta-section {
   padding: 5rem 0;
-  background-color: white;
+  background: linear-gradient(135deg, rgb(227, 240, 255) 0%, white 50%, rgb(255, 247, 230) 100%);;
   color: #1A5276;
 }
+
+/* Let CTA share viewport with the previous section (no forced full height) */
 
 .cta-container {
   max-width: 64rem;

@@ -33,6 +33,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import { Send, X, MessageCircle, Info } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import "@/styles/components/business-slider.css";
@@ -80,6 +81,12 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
     return () => document.removeEventListener("mousedown", handleClick);
   }, [open]);
 
+  // Auto open on initial page load with a slight delay for nicer animation
+  useEffect(() => {
+    const timer = setTimeout(() => setOpen(true), 400);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="business-slider-container">
       {/* Inquiry Tab */}
@@ -93,7 +100,7 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
             <span>Inquiry</span>
             <div className="inquiry-icons">
               <div className="inquiry-icon">
-                <MessageCircle className="w-4 h-4 text-black" />
+                <Image src="/enquire-icon.svg" alt="Inquiry" width={20} height={20} />
               </div>
             </div>
           </button>

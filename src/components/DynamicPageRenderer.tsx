@@ -7,6 +7,7 @@ import Hero from './sections/hero';
 import Testimonials from './sections/testimonials';
 // Removed per request: SecurityCompliance
 import CTA from './sections/cta';
+import ResponsiveCardGrid from './sections/responsive-card-grid';
 // Removed per request: FAQ
 
 // ============================================================================
@@ -35,6 +36,7 @@ export const DynamicPageRenderer: React.FC<DynamicPageRendererProps> = ({
     testimonials: Testimonials,
     // 'security-compliance': SecurityCompliance,
     cta: CTA,
+    'responsive-card-grid': ResponsiveCardGrid,
     // faq: FAQ
   };
 

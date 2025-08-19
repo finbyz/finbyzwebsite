@@ -860,7 +860,7 @@ export function ClientLogosCarousel() {
         </div>
 
         {/* Carousel Container */}
-        <div className="relative max-w-6xl mx-auto">
+        <div className="relative max-w-10xl mx-auto">
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}

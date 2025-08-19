@@ -1,0 +1,169 @@
+{
+  "metadata": {
+    "title": "Responsive Card Grid Demo",
+    "description": "Demonstration of the responsive card grid component with automatic row handling",
+    "keywords": ["responsive", "card", "grid", "demo", "components"]
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "data": {
+        "title": "Responsive Card Grid Component",
+        "subtitle": "Automatically handles different numbers of cards in rows",
+        "primaryButton": {
+          "text": "View Examples",
+          "url": "#examples"
+        },
+        "secondaryButton": {
+          "text": "Learn More",
+          "url": "#learn-more"
+        },
+        "image": {
+          "src": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
+          "alt": "Responsive Card Grid"
+        }
+      }
+    },
+    {
+      "type": "responsive-card-grid",
+      "data": {
+        "title": "Our Services (6 Cards - 2 Rows)",
+        "subtitle": "Standard layout with 6 cards automatically arranged in 2 rows of 3 columns each",
+        "layout": "standard",
+        "showImage": true,
+        "imageHeight": 200,
+        "imageWidth": 300,
+        "cards": [
+          {
+            "id": 1,
+            "title": "Software Development",
+            "description": "Innovative Solutions to Automate your Business!",
+            "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
+            "imageAlt": "Software Development"
+          },
+          {
+            "id": 2,
+            "title": "Web Design",
+            "description": "Beautiful and functional websites that convert visitors into customers.",
+            "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=400&h=300&fit=crop",
+            "imageAlt": "Web Design"
+          },
+          {
+            "id": 3,
+            "title": "Mobile Apps",
+            "description": "Native and cross-platform mobile applications for iOS and Android.",
+            "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop",
+            "imageAlt": "Mobile Apps"
+          },
+          {
+            "id": 4,
+            "title": "Cloud Solutions",
+            "description": "Scalable cloud infrastructure and deployment solutions.",
+            "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop",
+            "imageAlt": "Cloud Solutions"
+          },
+          {
+            "id": 5,
+            "title": "Data Analytics",
+            "description": "Transform your data into actionable insights and reports.",
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+            "imageAlt": "Data Analytics"
+          },
+          {
+            "id": 6,
+            "title": "AI & Machine Learning",
+            "description": "Intelligent automation and predictive analytics solutions.",
+            "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop",
+            "imageAlt": "AI & Machine Learning"
+          }
+        ]
+      }
+    },
+    {
+      "type": "responsive-card-grid",
+      "data": {
+        "title": "Compact Layout (4 Cards - 1 Row)",
+        "subtitle": "Compact layout with 4 cards in a single row",
+        "layout": "compact",
+        "showImage": true,
+        "imageHeight": 150,
+        "imageWidth": 250,
+        "cards": [
+          {
+            "id": 7,
+            "title": "Cybersecurity",
+            "description": "Protect your business with advanced security solutions.",
+            "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop",
+            "imageAlt": "Cybersecurity"
+          },
+          {
+            "id": 8,
+            "title": "Digital Marketing",
+            "description": "Comprehensive digital marketing strategies that drive growth.",
+            "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+            "imageAlt": "Digital Marketing"
+          },
+          {
+            "id": 9,
+            "title": "Consulting",
+            "description": "Expert guidance to optimize your business processes and strategy.",
+            "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+            "imageAlt": "Consulting"
+          },
+          {
+            "id": 10,
+            "title": "Training",
+            "description": "Comprehensive training programs to upskill your team.",
+            "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop",
+            "imageAlt": "Training"
+          }
+        ]
+      }
+    },
+    {
+      "type": "responsive-card-grid",
+      "data": {
+        "title": "2 Cards Layout",
+        "subtitle": "Two cards in a single row",
+        "layout": "standard",
+        "showImage": true,
+        "cards": [
+          {
+            "id": 11,
+            "title": "Enterprise Solutions",
+            "description": "Scalable enterprise-grade solutions for large organizations.",
+            "image": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=300&fit=crop",
+            "imageAlt": "Enterprise Solutions"
+          },
+          {
+            "id": 12,
+            "title": "Startup Support",
+            "description": "Tailored solutions to help startups scale and grow rapidly.",
+            "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+            "imageAlt": "Startup Support"
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "title": "Ready to Get Started?",
+        "subtitle": "Transform your business with our comprehensive solutions",
+        "description": "Contact us today to discuss how we can help you achieve your goals.",
+        "primaryButton": {
+          "text": "Get Started",
+          "url": "/contact",
+          "icon": "ArrowRight",
+          "variant": "primary"
+        },
+        "secondaryButton": {
+          "text": "Learn More",
+          "url": "/about",
+          "icon": "Info",
+          "variant": "secondary"
+        }
+      }
+    }
+  ]
+}

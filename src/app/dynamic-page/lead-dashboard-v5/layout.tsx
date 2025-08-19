@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Simple Landing Page',
-  description: 'A clean and simple landing page example',
-  keywords: ["landing page","simple","example"],
+  title: 'lead dashboard v5',
+  description: '',
+  keywords: [],
 };
 
 export default function Layout({

@@ -382,6 +382,54 @@
           }
         ]
       }
+    },
+    "responsive-card-grid": {
+      "description": "Responsive card grid that automatically handles different numbers of cards in rows",
+      "required": ["cards"],
+      "data": {
+        "title": "string (optional) - Section title",
+        "subtitle": "string (optional) - Section subtitle",
+        "cards": [
+          {
+            "id": "string|number - Unique card identifier",
+            "title": "string - Card title",
+            "description": "string - Card description",
+            "image": "string - Image URL",
+            "imageAlt": "string (optional) - Image alt text",
+            "className": "string (optional) - Additional CSS classes for the card"
+          }
+        ],
+        "layout": "string (optional) - 'standard' or 'compact' (default: 'standard')",
+        "showImage": "boolean (optional) - Whether to show images (default: true)",
+        "imageHeight": "number (optional) - Image height in pixels",
+        "imageWidth": "number (optional) - Image width in pixels",
+        "className": "string (optional) - Additional CSS classes for the section",
+        "cardClassName": "string (optional) - Additional CSS classes for all cards"
+      },
+      "example": {
+        "title": "Our Services",
+        "subtitle": "Comprehensive solutions for modern businesses",
+        "layout": "standard",
+        "showImage": true,
+        "imageHeight": 200,
+        "imageWidth": 300,
+        "cards": [
+          {
+            "id": 1,
+            "title": "Software Development",
+            "description": "Innovative Solutions to Automate your Business!",
+            "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
+            "imageAlt": "Software Development"
+          },
+          {
+            "id": 2,
+            "title": "Web Design",
+            "description": "Beautiful and functional websites that convert visitors into customers.",
+            "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=400&h=300&fit=crop",
+            "imageAlt": "Web Design"
+          }
+        ]
+      }
     }
   },
   "pageStructure": {
@@ -474,6 +522,7 @@
     "stats-showcase",
     "process-timeline",
     "team-expertise",
-    "success-snapshots"
+    "success-snapshots",
+    "responsive-card-grid"
   ]
 }

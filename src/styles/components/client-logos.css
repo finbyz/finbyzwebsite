@@ -5,6 +5,8 @@
   position: relative;
 }
 
+/* Do NOT force full viewport for this section so it can share the viewport with CTA */
+
 .client-logos-container {
   max-width: 72rem;
   margin: 0 auto;

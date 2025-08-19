@@ -93,7 +93,7 @@ export function TimelineSection({
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">{subtitle}</p>
         </div>
         
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-10xl mx-auto">
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-purple-600"></div>

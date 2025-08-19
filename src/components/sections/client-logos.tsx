@@ -157,37 +157,37 @@ export default function ClientLogos({ data }: ClientLogosProps) {
   };
 
   return (
-    <section className="py-16 bg-white relative">
-      <div className="container mx-auto px-4">
+    <section className="client-logos-section">
+      <div className="client-logos-container">
         {/* Banner Title */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+        <div className="client-logos-header">
+          <h2 className="client-logos-title">
             {title}
           </h2>
           {subtitle && (
-            <p className="text-lg text-gray-600">{subtitle}</p>
+            <p className="client-logos-subtitle">{subtitle}</p>
           )}
         </div>
 
         {/* Carousel Container */}
-        <div className="relative max-w-6xl mx-auto">
+        <div className="client-logos-carousel-container">
           {/* Navigation Arrows */}
           {carouselSettings.showArrows && (
             <>
               <button
                 onClick={prevSlide}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+                className="client-logos-nav-button prev"
                 aria-label="Previous slide"
               >
-                <ChevronLeft className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
+                <ChevronLeft className="client-logos-nav-icon" />
               </button>
 
               <button
                 onClick={nextSlide}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+                className="client-logos-nav-button next"
                 aria-label="Next slide"
               >
-                <ChevronRight className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
+                <ChevronRight className="client-logos-nav-icon" />
               </button>
             </>
           )}
@@ -195,12 +195,12 @@ export default function ClientLogos({ data }: ClientLogosProps) {
           {/* Carousel Track */}
           <div 
             ref={ref}
-            className={`overflow-hidden transition-all duration-1000 ${
-              inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            className={`client-logos-track ${
+              inView ? 'fade-in' : 'fade-out'
             }`}
           >
             <div 
-              className="flex transition-transform duration-500 ease-in-out"
+              className="client-logos-slides"
               style={{
                 transform: `translateX(-${currentIndex * 100}%)`,
                 width: `${clientLogos.length * 100}%`
@@ -209,41 +209,39 @@ export default function ClientLogos({ data }: ClientLogosProps) {
               {clientLogos.map((client, index) => (
                 <div
                   key={index}
-                  className="w-full flex-shrink-0 px-4"
+                  className="client-logos-slide"
                   style={{ width: `${100 / clientLogos.length}%` }}
                 >
-                  <div className="grid grid-cols-6 gap-8 items-center">
+                  <div className="client-logos-grid">
                     {clientLogos.slice(index, index + 6).map((clientItem, itemIndex) => {
                       const actualIndex = (index + itemIndex) % clientLogos.length;
                       return (
                         <div
                           key={actualIndex}
-                          className="flex flex-col items-center justify-center group"
+                          className="client-logo-item group"
                         >
                           {/* Logo Container with actual logo designs */}
-                          <div className="w-24 h-24 mb-3 flex items-center justify-center relative">
+                          <div className="client-logo-container">
                             {/* South India Trading Co. */}
                             {clientItem.name === "South India Trading Co." && (
                               <div className="text-center">
-                                <div className="w-16 h-16 mb-2 relative">
+                                <div className="client-logo-india-map">
                                   {/* India map outline */}
-                                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 via-orange-500 to-green-500 rounded-lg opacity-80"></div>
-                                  <div className="absolute inset-1 bg-white rounded-md flex items-center justify-center">
+                                  <div className="client-logo-india-map-bg"></div>
+                                  <div className="client-logo-india-map-inner">
                                     <span className="text-lg font-bold text-gray-800">SJC</span>
                                   </div>
                                 </div>
-                                <div className="text-xs font-bold text-yellow-500" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
-                                  SOUTH INDIA TRADING CO.
-                                </div>
-                                <div className="text-xs text-gray-600">DELHI, INDIA</div>
+                                <div className="client-logo-india-text">SOUTH INDIA TRADING CO.</div>
+                                <div className="client-logo-location">DELHI, INDIA</div>
                               </div>
                             )}
 
                             {/* Elkins Trade Link Ltd. */}
                             {clientItem.name === "Elkins Trade Link Ltd." && (
                               <div className="text-center">
-                                <div className="text-2xl font-bold text-blue-400 mb-1">elkins</div>
-                                <div className="text-xs text-gray-500">TRADE LINK LTD.</div>
+                                <div className="client-logo-elkins">elkins</div>
+                                <div className="client-logo-location">TRADE LINK LTD.</div>
                               </div>
                             )}
 

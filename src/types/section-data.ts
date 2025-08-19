@@ -337,6 +337,30 @@ export interface ClientSuccessStoriesData {
 }
 
 // ============================================================================
+// RESPONSIVE CARD GRID SECTION
+// ============================================================================
+export interface CardItem {
+  id: string | number;
+  title: string;
+  description: string;
+  image: string;
+  imageAlt?: string;
+  className?: string;
+}
+
+export interface ResponsiveCardGridData {
+  title?: string;
+  subtitle?: string;
+  cards: CardItem[];
+  layout?: 'standard' | 'compact';
+  showImage?: boolean;
+  imageHeight?: number;
+  imageWidth?: number;
+  className?: string;
+  cardClassName?: string;
+}
+
+// ============================================================================
 // GLOBAL PRESENCE SECTION (Updated)
 // ============================================================================
 export interface GlobalLocation {
@@ -728,7 +752,8 @@ export type SectionData =
   | { type: 'team-expertise'; data: TeamExpertiseData }
   | { type: 'technology-stack'; data: TechnologyStackData }
   | { type: 'business-slider'; data: BusinessSliderData }
-  | { type: 'client-success-stories'; data: ClientSuccessStoriesData };
+  | { type: 'client-success-stories'; data: ClientSuccessStoriesData }
+  | { type: 'responsive-card-grid'; data: ResponsiveCardGridData };
 
 // ============================================================================
 // PAGE DATA STRUCTURE
@@ -771,5 +796,6 @@ export const COMPONENT_MAP: Record<string, string> = {
   'team-expertise': 'TeamExpertise',
   'technology-stack': 'TechnologyStack',
   'business-slider': 'BusinessSlider',
-  'client-success-stories': 'ClientSuccessStories'
+  'client-success-stories': 'ClientSuccessStories',
+  'responsive-card-grid': 'ResponsiveCardGrid'
 };

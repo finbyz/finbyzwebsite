@@ -168,11 +168,22 @@ export default function Hero({ data = {} }: { data?: Record<string, any> }) {
       {/* Scroll Down Arrow */}
       <div className="hero-scroll-arrow">
         <button 
-          onClick={() => {
-            const nextSection = document.getElementById(renderedData.scrollTarget);
-            if (nextSection) {
-              nextSection.scrollIntoView({ behavior: 'smooth' });
+          onClick={(e) => {
+            // Prefer configured target first
+            let nextSection: HTMLElement | null = null;
+            if (renderedData.scrollTarget) {
+              const byId = document.getElementById(renderedData.scrollTarget);
+              if (byId) nextSection = byId as HTMLElement;
             }
+
+            // Fallback: scroll to the immediate next section after this hero
+            if (!nextSection) {
+              const sectionEl = (e.currentTarget as HTMLElement).closest('section');
+              const sibling = sectionEl?.nextElementSibling as HTMLElement | null;
+              if (sibling) nextSection = sibling;
+            }
+
+            nextSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }}
           className="hero-scroll-button"
         >

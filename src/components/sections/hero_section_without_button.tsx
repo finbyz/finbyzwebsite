@@ -66,11 +66,20 @@ export default function Hero({ data = {} }: HeroSectionProps) {
       {/* Scroll Down Arrow */}
       <div className="hero-scroll-arrow">
         <button 
-          onClick={() => {
-            const nextSection = document.getElementById(renderedData.scrollTarget);
-            if (nextSection) {
-              nextSection.scrollIntoView({ behavior: 'smooth' });
+          onClick={(e) => {
+            let nextSection: HTMLElement | null = null;
+            if (renderedData.scrollTarget) {
+              const byId = document.getElementById(renderedData.scrollTarget);
+              if (byId) nextSection = byId as HTMLElement;
             }
+
+            if (!nextSection) {
+              const sectionEl = (e.currentTarget as HTMLElement).closest('section');
+              const sibling = sectionEl?.nextElementSibling as HTMLElement | null;
+              if (sibling) nextSection = sibling;
+            }
+
+            nextSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }}
           className="hero-scroll-button"
         >

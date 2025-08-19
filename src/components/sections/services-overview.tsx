@@ -70,7 +70,7 @@ export default function ServicesOverview({ data }: ServicesOverviewProps) {
 
   return (
     <section className="py-10 sm:py-16">
-      <div className="mx-auto max-w-6xl px-4">
+      <div className="mx-auto max-w-10xl px-4">
         <div className="grid gap-8 sm:gap-10 md:grid-cols-2">
           {services.map((item: ServiceItem, index: number) => {
             const isHighlighted = index === highlightedIndex;

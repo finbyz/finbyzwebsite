@@ -5,9 +5,8 @@ import Benefits from "@/components/sections/benefits";
 import Testimonials from "@/components/sections/testimonials";
 import CTA from "@/components/sections/cta";
 import ClientLogos from "@/components/sections/client-logos";
-import StatsShowcase from "@/components/sections/stats-showcase";
-import TechnologyStack from "@/components/sections/technology-stack";
-import Link from 'next/link';
+import ResponsiveCardGrid from "@/components/sections/responsive-card-grid";
+import BusinessSlider from "@/components/sections/business-slider";
 
 export default function Home() {
   return (
@@ -15,68 +14,84 @@ export default function Home() {
       <Header />
       <main className="pt-4">
         <Hero />
-        
+
         <Benefits />
-        
-        <StatsShowcase />
-        
-        <TechnologyStack />
-        
-        <ClientLogos />
-        
+
+        <ResponsiveCardGrid 
+            data={{
+              title: "Our Services",
+              subtitle: "Discover our comprehensive range of services designed to help your business grow and succeed in the digital world.",
+              variant: "iconCard",
+              layout: "standard",
+              showImage: false,
+              imageHeight: 200,
+              imageWidth: 300,
+              debug: false,
+              cards: [
+                {
+                  id: 1,
+                  title: "Software Development",
+                  description: "Innovative Solutions to Automate your Business!",
+                  icon: "Award",
+                  iconBg: "#1A5276",
+                  iconColor: "#ffffff"
+                },
+                {
+                  id: 2,
+                  title: "Web Design",
+                  description: "Beautiful and functional websites that convert visitors into customers.",
+                  icon: "TrendingUp",
+                  iconBg: "#FF8C00",
+                  iconColor: "#ffffff"
+                },
+                {
+                  id: 3,
+                  title: "Mobile Apps",
+                  description: "Native and cross-platform mobile applications for iOS and Android.",
+                  icon: "Globe",
+                  iconBg: "#27AE60",
+                  iconColor: "#ffffff"
+                },
+                {
+                  id: 4,
+                  title: "Cloud Solutions",
+                  description: "Scalable cloud infrastructure and deployment solutions.",
+                  icon: "Target",
+                  iconBg: "#8E44AD",
+                  iconColor: "#ffffff"
+                },
+                {
+                  id: 5,
+                  title: "Data Analytics",
+                  description: "Transform your data into actionable insights and reports.",
+                  icon: "BarChart3",
+                  iconBg: "#1A5276",
+                  iconColor: "#ffffff"
+                },
+                {
+                  id: 6,
+                  title: "AI & Machine Learning",
+                  description: "Intelligent automation and predictive analytics solutions.",
+                  icon: "Cpu",
+                  iconBg: "#8E44AD",
+                  iconColor: "#ffffff"
+                }
+              ]
+            }}
+          />
+
+        <BusinessSlider />
+
         <Testimonials />
-        
+
+        <ClientLogos />
         <CTA />
-        
-        {/* Navigation to Component System */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Component System</h2>
-              <p className="text-lg text-gray-600">Explore our dynamic component library and page builder</p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
-              <Link
-                href="/page-builder"
-                className="group bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
-              >
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  Page Builder
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Create dynamic pages by selecting components and providing custom data.
-                </p>
-                <span className="text-blue-600 font-medium">Build Pages →</span>
-              </Link>
 
-              <Link
-                href="/dynamic-page-example"
-                className="group bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
-              >
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  Dynamic Page Example
-                </h3>
-                <p className="text-lg text-gray-600 mb-4">
-                  See a complete example of creating a page with 40+ components from JSON data.
-                </p>
-                <span className="text-blue-600 font-medium">View Example →</span>
-              </Link>
+        {/* Contact form (simple, compact) */}
+        {/* If you want this on a separate page, we can move it to /contact */}
+        {/* import ContactFormSection at top if you want to render here */}
 
-              <Link
-                href="/dynamic-page/test2561454"
-                className="group bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
-              >
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  Test Dynamic Page
-                </h3>
-                <p className="text-lg text-gray-600 mb-4">
-                  View the test dynamic page with all components.
-                </p>
-                <span className="text-blue-600 font-medium">View Test Page →</span>
-              </Link>
-            </div>
-          </div>
-        </section>
+
       </main>
       <Footer />
     </div>

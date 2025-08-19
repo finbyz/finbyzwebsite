@@ -381,7 +381,7 @@ export default function AnimatedAboutPage() {
               </p>
             </div>
             
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-10xl mx-auto">
               <div className="relative">
                 {/* Timeline line */}
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-[#FF8C00] to-[#FFA500]"></div>

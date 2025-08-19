@@ -6,10 +6,10 @@ import { PageData } from '@/types/section-data';
 import pageData from './page-data.json';
 
 // ============================================================================
-// DYNAMIC PAGE: ALL-COMPONE
+// DYNAMIC PAGE: LEAD-DASHBOARD-V5
 // ============================================================================
 
-export default function AllComponePage() {
+export default function LeadDashboardV5Page() {
   const { renderedSections, handleSectionRender } = useSectionsBasedPage(pageData as PageData);
 
   return (
@@ -18,14 +18,14 @@ export default function AllComponePage() {
       <SectionsBasedRenderer
         pageData={pageData as PageData}
         onSectionRender={handleSectionRender}
-        className="dynamic-page-all-compone"
+        className="dynamic-page-lead-dashboard-v5"
       />
 
       {/* Debug Panel */}
       <div className="fixed bottom-4 right-4 z-50 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-lg p-4 shadow-lg max-w-xs">
         <h3 className="font-semibold text-sm text-gray-800 mb-2">Page Info</h3>
         <div className="text-xs text-gray-600 space-y-1">
-          <div>Page: all-compone</div>
+          <div>Page: lead-dashboard-v5</div>
           <div>Sections: {pageData.sections.length}</div>
           <div>Rendered: {renderedSections.length}</div>
           <div className="text-xs text-gray-500 mt-2">

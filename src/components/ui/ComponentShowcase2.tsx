@@ -87,7 +87,7 @@ export function PricingCards() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Choose Your Plan</h2>
           <p className="text-gray-600">Flexible pricing options for every business size</p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-10xl mx-auto">
           {plans.map((plan, index) => (
             <div key={index} className={`relative bg-white rounded-lg shadow-lg p-8 ${plan.popular ? 'ring-2 ring-blue-500' : ''}`}>
               {plan.popular && (

@@ -150,7 +150,7 @@ export default function YearFilterTimeline() {
 
   return (
     <section id="year-filter-timeline" className="py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-10xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className={`text-center mb-16 transition-all duration-1000 ${
           isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'

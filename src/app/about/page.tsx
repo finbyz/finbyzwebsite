@@ -122,7 +122,7 @@ export default function AboutPage() {
 
         {/* Mission & Vision Section */}
         <section className="py-24 bg-gradient-to-br from-green-50 via-white to-blue-50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-10xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <Badge className="mb-6 bg-gradient-to-r from-green-500 to-blue-600 text-white border-0">
                 Our Foundation
@@ -217,7 +217,7 @@ export default function AboutPage() {
 
         {/* Values Section */}
         <section className="py-24 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-10xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <Badge className="mb-6 bg-gradient-to-r from-blue-500 to-indigo-600 text-white border-0">
                 Our Values
@@ -265,7 +265,7 @@ export default function AboutPage() {
 
         {/* Related Pages */}
         <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-10xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <Badge className="mb-6 bg-gradient-to-r from-gray-500 to-blue-600 text-white border-0">
                 Explore More

@@ -1,10 +1,29 @@
 /* Benefits Section Styles */
 .benefits-section {
-  padding: 6rem 0;
-  background: linear-gradient(135deg, #E3F0FF 0%, white 50%, #FFF7E6 100%);
+  padding: 3rem 0; /* Further reduced to fit one screen */
+  background: white;
   position: relative;
   overflow: hidden;
   width: 100%;
+}
+
+/* Full viewport height on md+ */
+@media (min-width: 768px) {
+  .benefits-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    /* Minimal vertical padding so content can occupy more height */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .benefits-section {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
 }
 
 .benefits-container {
@@ -27,15 +46,25 @@
 
 @media (min-width: 1280px) {
   .benefits-container {
-    padding: 0 5rem;
+    padding: 0 2rem; /* reduce side gutters to use more width */
   }
 }
 
 /* Header */
 .benefits-header {
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 0.75rem;
   transition: all 1s ease;
+}
+
+/* Make container fill the section height and distribute space */
+@media (min-width: 768px) {
+  .benefits-container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .benefits-fade-in-up {
@@ -49,38 +78,34 @@
 }
 
 .benefits-title {
-  font-size: 2.25rem;
+  font-size: 1.5rem; /* Further reduced */
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem; /* Further reduced */
   color: #1A5276;
   line-height: 1.2;
 }
 
 @media (min-width: 768px) {
-  .benefits-title {
-    font-size: 3rem;
-  }
+  .benefits-title { font-size: 1.75rem; }
 }
 
 .benefits-subtitle {
-  font-size: 1.25rem;
+  font-size: 0.9rem; /* Further reduced */
   color: #1A5276;
   max-width: 48rem;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 @media (min-width: 768px) {
-  .benefits-subtitle {
-    font-size: 1.5rem;
-  }
+  .benefits-subtitle { font-size: 1rem; }
 }
 
 /* Grid */
 .benefits-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 0.75rem; /* Further reduced */
 }
 
 @media (min-width: 768px) {
@@ -90,9 +115,14 @@
 }
 
 @media (min-width: 1024px) {
+  .benefits-grid { grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+}
+
+/* Let the grid take available space between header and CTA on larger screens */
+@media (min-width: 768px) {
   .benefits-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2.5rem;
+    flex: 1;
+    align-content: center;
   }
 }
 
@@ -104,6 +134,8 @@
 /* Card */
 .benefits-card {
   height: 100%;
+  /* Scale card height with viewport to reduce surrounding whitespace */
+  min-height: clamp(240px, 28vh, 340px);
   border: none;
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(4px);
@@ -123,7 +155,7 @@
 
 /* Card Content */
 .benefits-card-content {
-  padding: 2rem;
+  padding: 1rem; /* slightly increased for breathing room */
   position: relative;
   z-index: 10;
   display: flex;
@@ -134,20 +166,18 @@
 }
 
 @media (min-width: 1024px) {
-  .benefits-card-content {
-    padding: 2.5rem;
-  }
+  .benefits-card-content { padding: 1rem; }
 }
 
 /* Icon Container */
 .benefits-icon-container {
-  width: 5rem;
-  height: 5rem;
-  border-radius: 1rem;
+  width: 3rem; /* Further reduced */
+  height: 3rem; /* Further reduced */
+  border-radius: 0.6rem; /* Further reduced */
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem; /* Further reduced */
   transition: transform 0.3s ease;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
@@ -157,84 +187,76 @@
 }
 
 .benefits-icon {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.5rem; /* Further reduced */
+  height: 1.5rem; /* Further reduced */
 }
 
 /* Card Header */
 .benefits-card-header {
-  font-size: 1.25rem;
+  font-size: 1rem; /* Further reduced */
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.4rem; /* Further reduced */
   text-align: center;
   line-height: 1.2;
   color: #1A5276;
 }
 
 @media (min-width: 1024px) {
-  .benefits-card-header {
-    font-size: 1.5rem;
-  }
+  .benefits-card-header { font-size: 1.1rem; }
 }
 
 /* Counter */
 .benefits-counter {
-  font-size: 2.25rem;
+  font-size: 1.5rem; /* Further reduced */
   font-weight: 700;
   color: #1A5276;
-  margin-bottom: 1rem;
+  margin-bottom: 0.4rem; /* Further reduced */
   display: block;
   text-align: center;
 }
 
 @media (min-width: 768px) {
-  .benefits-counter {
-    font-size: 3rem;
-  }
+  .benefits-counter { font-size: 1.75rem; }
 }
 
 /* Card Description */
 .benefits-card-description {
   color: #1A5276;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 0.875rem; /* Further reduced */
+  line-height: 1.4; /* Further reduced */
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-bottom: 0.4rem; /* Further reduced */
 }
 
 @media (min-width: 1024px) {
-  .benefits-card-description {
-    font-size: 1.125rem;
-  }
+  .benefits-card-description { font-size: 0.95rem; }
 }
 
 /* Card Label */
 .benefits-card-label {
   color: #1A5276;
-  font-size: 0.875rem;
-  line-height: 1.6;
+  font-size: 0.75rem; /* Further reduced */
+  line-height: 1.4; /* Further reduced */
   font-weight: 500;
   margin-top: auto;
 }
 
 @media (min-width: 1024px) {
-  .benefits-card-label {
-    font-size: 1rem;
-  }
+  .benefits-card-label { font-size: 0.8rem; }
 }
 
 /* CTA */
 .benefits-cta {
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 0.5rem; /* Further reduced */
   transition: all 1s ease;
 }
 
 .benefits-cta-button {
   background: linear-gradient(to right, #FF8C00, #FFA500);
   color: white;
-  font-size: 1.125rem;
-  padding: 1rem 2.5rem;
+  font-size: 0.9rem; /* Further reduced */
+  padding: 0.5rem 1.5rem; /* Further reduced */
   height: auto;
   transform: scale(1);
   transition: all 0.3s ease;
