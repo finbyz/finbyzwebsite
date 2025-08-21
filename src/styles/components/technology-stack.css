@@ -35,11 +35,6 @@
   animation: fadeInUp 1s ease-out;
 }
 
-.technology-stack-header.fade-out {
-  opacity: 0;
-  transform: translateY(2.5rem);
-}
-
 .technology-stack-title {
   font-size: 2.25rem;
   font-weight: 700;
@@ -81,6 +76,22 @@
   }
 }
 
+/* Large screens: adapt columns to item count */
+@media (min-width: 1024px) {
+  /* 2 items → 2 columns */
+  .technology-stack-grid:not(:has(> :nth-child(3))) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  /* 3 items → 3 columns */
+  .technology-stack-grid:not(:has(> :nth-child(4))):has(> :nth-child(3)) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  /* Exactly 6 items → 3 columns (2 rows) */
+  .technology-stack-grid:has(> :nth-child(6)):not(:has(> :nth-child(7))) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 /* Technology Card */
 .technology-stack-card {
   background: white;
@@ -98,11 +109,6 @@
 
 .technology-stack-card.fade-in-up {
   animation: fadeInUp 0.7s ease-out;
-}
-
-.technology-stack-card.fade-out {
-  opacity: 0;
-  transform: translateY(2.5rem);
 }
 
 /* Icon Container */
@@ -158,7 +164,7 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(2.5rem);
+    transform: translateY(-30px);
   }
   to {
     opacity: 1;

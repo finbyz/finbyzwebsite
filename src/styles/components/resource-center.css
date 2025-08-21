@@ -65,7 +65,7 @@
 .resource-center-header {
   text-align: center;
   margin-bottom: 4rem;
-  transition: all 1s ease;
+  transition: all 0.3s ease;
 }
 
 .resource-center-fade-in-up {
@@ -75,7 +75,7 @@
 
 .resource-center-fade-out {
   opacity: 0;
-  transform: translateY(2.5rem);
+  transform: translateY(0);
 }
 
 .resource-center-title {
@@ -118,7 +118,7 @@
   grid-template-columns: 1fr;
   gap: 2rem;
   margin-bottom: 4rem;
-  transition: all 1s ease;
+  transition: all 0.3s ease;
 }
 
 @media (min-width: 768px) {
@@ -127,8 +127,21 @@
   }
 }
 
+/* Large screens: adapt categories to item count */
+@media (min-width: 1024px) {
+  .resource-center-categories:not(:has(> :nth-child(3))) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .resource-center-categories:not(:has(> :nth-child(4))):has(> :nth-child(3)) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .resource-center-categories:has(> :nth-child(6)):not(:has(> :nth-child(7))) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 .resource-center-category-wrapper {
-  transition: all 0.7s ease;
+  transition: all 0.3s ease;
 }
 
 .resource-center-category-card {
@@ -216,8 +229,18 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .resource-center-featured-grid:not(:has(> :nth-child(3))) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  /* Exactly 8 featured resources → 4 columns (2 rows) */
+  .resource-center-featured-grid:has(> :nth-child(8)):not(:has(> :nth-child(9))) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 .resource-center-resource-wrapper {
-  transition: all 0.7s ease;
+  transition: all 0.3s ease;
 }
 
 .resource-center-resource-card {
@@ -389,8 +412,15 @@
   }
 }
 
+/* Large screens: exactly 8 events → 4 columns (2 rows) */
+@media (min-width: 1024px) {
+  .resource-center-events-grid:has(> :nth-child(8)):not(:has(> :nth-child(9))) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 .resource-center-event-wrapper {
-  transition: all 0.7s ease;
+  transition: all 0.3s ease;
 }
 
 .resource-center-event-card {

@@ -8,6 +8,160 @@ export interface ComponentManifest {
 }
 
 export const componentManifest: { [key: string]: ComponentManifest } = {
+  "ContentIllustrationRight": {
+    name: "ContentIllustrationRight",
+    purpose: "Present explanatory text with a supporting illustration aligned to the right.",
+    optimalUsage: [
+      "Use for short instructional steps or highlights.",
+      "Keep paragraphs concise (2–4) for readability.",
+      "Provide properly sized responsive images."
+    ],
+    jsonSchema: {
+      component: "ContentIllustrationRight",
+      data: {
+        title: "string",
+        paragraphs: ["string"],
+        imageSrc: "string",
+        imageAlt: "string"
+      }
+    },
+    example: {
+      component: "ContentIllustrationRight",
+      data: {
+        title: "2. Pick the Right Tools",
+        paragraphs: [
+          "Choose analytics tools that suit your business needs.",
+          "Popular options include Google Analytics, Mixpanel, and Adobe Analytics each offering unique features.",
+          "Select tools that provide the insights necessary for making informed, data‑driven decisions."
+        ],
+        imageSrc: "/AboutUs.png",
+        imageAlt: "Analytics tools illustration"
+      }
+    }
+  },
+  "content-illustration-right": {
+    name: "ContentIllustrationRight",
+    purpose: "Present explanatory text with a supporting illustration aligned to the right.",
+    optimalUsage: [
+      "Use for short instructional steps or highlights.",
+      "Keep paragraphs concise (2–4) for readability.",
+      "Provide properly sized responsive images."
+    ],
+    jsonSchema: {
+      component: "ContentIllustrationRight",
+      data: {
+        title: "string",
+        paragraphs: ["string"],
+        imageSrc: "string",
+        imageAlt: "string"
+      }
+    },
+    example: {
+      component: "ContentIllustrationRight",
+      data: {
+        title: "2. Pick the Right Tools",
+        paragraphs: [
+          "Choose analytics tools that suit your business needs.",
+          "Popular options include Google Analytics, Mixpanel, and Adobe Analytics each offering unique features.",
+          "Select tools that provide the insights necessary for making informed, data‑driven decisions."
+        ],
+        imageSrc: "/AboutUs.png",
+        imageAlt: "Analytics tools illustration"
+      }
+    }
+  },
+
+  "ContentIllustrationLeft": {
+    name: "ContentIllustrationLeft",
+    purpose: "Present explanatory text with a supporting illustration aligned to the left.",
+    optimalUsage: [
+      "Use for short instructional steps or highlights.",
+      "Keep paragraphs concise (2–4) for readability.",
+      "Provide properly sized responsive images."
+    ],
+    jsonSchema: {
+      component: "ContentIllustrationLeft",
+      data: {
+        title: "string",
+        paragraphs: ["string"],
+        imageSrc: "string",
+        imageAlt: "string"
+      }
+    },
+    example: {
+      component: "ContentIllustrationLeft",
+      data: {
+        title: "2. Pick the Right Tools",
+        paragraphs: [
+          "Choose analytics tools that suit your business needs.",
+          "Popular options include Google Analytics, Mixpanel, and Adobe Analytics each offering unique features.",
+          "Select tools that provide the insights necessary for making informed, data‑driven decisions."
+        ],
+        imageSrc: "/AboutUs.png",
+        imageAlt: "Analytics tools illustration"
+      }
+    }
+  },
+
+  "content-illustration-left": {
+    name: "ContentIllustrationLeft",
+    purpose: "Present explanatory text with a supporting illustration aligned to the left.",
+    optimalUsage: [
+      "Use for short instructional steps or highlights.",
+      "Keep paragraphs concise (2–4) for readability.",
+      "Provide properly sized responsive images."
+    ],
+    jsonSchema: {
+      component: "ContentIllustrationLeft",
+      data: {
+        title: "string",
+        paragraphs: ["string"],
+        imageSrc: "string",
+        imageAlt: "string"
+      }
+    },
+    example: {
+      component: "ContentIllustrationLeft",
+      data: {
+        title: "2. Pick the Right Tools",
+        paragraphs: [
+          "Choose analytics tools that suit your business needs.",
+          "Popular options include Google Analytics, Mixpanel, and Adobe Analytics each offering unique features.",
+          "Select tools that provide the insights necessary for making informed, data‑driven decisions."
+        ],
+        imageSrc: "/AboutUs.png",
+        imageAlt: "Analytics tools illustration"
+      }
+    }
+  },
+  "ERPIntroText": {
+    name: "ERPIntroText",
+    purpose: "Introductory section with a large headline, quote icon, and long-form paragraphs.",
+    optimalUsage: [
+      "Use at the start of ERP or services pages to set context.",
+      "Keep paragraphs concise; 1–3 is ideal.",
+      "Use the highlight link to draw attention to a key resource.",
+    ],
+    jsonSchema: {
+      component: "ERPIntroText",
+      data: {
+        title: "string",
+        paragraphs: ["string"],
+        highlightLink: { text: "string", href: "string" }
+      }
+    },
+    example: {
+      component: "ERPIntroText",
+      data: {
+        title: "Looking for Leading ERP Software Development Company?",
+        paragraphs: [
+          "ERP systems are essential for the efficient functioning of modern businesses...",
+          "As a trusted ERPNext software company, Finbyz Tech guides your digital transformation journey..."
+        ],
+        highlightLink: { text: "benefits of ERP implementation", href: "#" }
+      }
+    }
+  },
   "HeroSection": {
     name: "HeroSection",
     purpose: "Use this component for the main landing section of your page. It includes a headline, description, and call-to-action buttons.",
@@ -204,42 +358,6 @@ export const componentManifest: { [key: string]: ComponentManifest } = {
     }
   },
 
-  "ServicesOverview": {
-    name: "ServicesOverview",
-    purpose: "Display a four-tile services grid with one highlighted tile (e.g., IT Consulting).",
-    optimalUsage: [
-      "Use to introduce top-level service categories.",
-      "Highlight one strategic service using highlightedIndex.",
-      "Prefer concise descriptions (1–2 lines)."
-    ],
-    jsonSchema: {
-      component: "ServicesOverview",
-      data: {
-        services: [
-          {
-            title: "string",
-            description: "string",
-            href: "string",
-            icon: "string",
-            imageSrc: "string"
-          }
-        ],
-        highlightedIndex: "number"
-      }
-    },
-    example: {
-      component: "ServicesOverview",
-      data: {
-        highlightedIndex: 1,
-        services: [
-          { title: "ERP Implementation", description: "Technology at work, a better way of doing the things!", icon: "BarChart3" },
-          { title: "IT Consulting", description: "We help you align technology to achieve your business goals.", icon: "Briefcase" },
-          { title: "Software Development", description: "From idea to production with modern engineering practices.", icon: "Code2" },
-          { title: "Data Analytics", description: "Insights that accelerate decision‑making and growth.", icon: "Database" }
-        ]
-      }
-    }
-  },
 
   "FileUpload": {
     name: "FileUpload",
@@ -275,73 +393,9 @@ export const componentManifest: { [key: string]: ComponentManifest } = {
     }
   },
 
-  "ERPModules": {
-    name: "ERPModules",
-    purpose: "ERP modules showcase with statistics, company info, and interactive module cards.",
-    optimalUsage: [
-      "Use to showcase ERP system capabilities and company expertise.",
-      "Perfect for enterprise software landing pages.",
-      "Includes interactive module navigation and statistics display."
-    ],
-    jsonSchema: {
-      component: "ERPModules",
-      data: {
-        companyName: "string",
-        companyDescription: "string",
-        yearsOfExperience: "number",
-        statistics: [
-          {
-            number: "string",
-            label: "string"
-          }
-        ],
-        services: [
-          {
-            id: "string",
-            title: "string",
-            description: "string"
-          }
-        ]
-      }
-    },
-    example: {
-      component: "ERPModules",
-      data: {
-        companyName: "Finbyz Tech Pvt Ltd",
-        companyDescription: "Finbyz Tech Pvt Ltd track record spans over 10+ years of IT business solutions. We have technology in our genes. We provide innovative solution that work for all the Industries/businesses. We are adept enough to help fit an ERP solution that exactly meets your goals.",
-        yearsOfExperience: 10,
-        statistics: [
-          { number: "100+", label: "Completed Projects" },
-          { number: "6000+", label: "Active Users" },
-          { number: "25+", label: "Expert Resources" }
-        ],
-        services: [
-          {
-            id: "erp-implementation",
-            title: "ERP Implementation",
-            description: "Technology at work, A better way of doing the Things!"
-          },
-          {
-            id: "it-consulting",
-            title: "IT Consulting",
-            description: "It's about your company, Your Business & Your Success."
-          },
-          {
-            id: "software-development",
-            title: "Software Development",
-            description: "Building digital solutions that drive your business forward."
-          },
-          {
-            id: "data-analytics",
-            title: "Data Analytics",
-            description: "Transform data into actionable insights for growth."
-          }
-        ]
-      }
-    }
-  },
   
-  "hero_section_without_button1": {
+  
+  "hero_section_without_button": {
     name: "Hero Section Without Button",
     purpose: "Use this component as the primary landing section for pages. It displays a main headline, subtitle, and hero image without any action buttons - perfect for informational or content-focused pages.",
     optimalUsage: [
@@ -365,8 +419,11 @@ export const componentManifest: { [key: string]: ComponentManifest } = {
       data: {
         title: "Empower Your Business with AI & ERP",
         subtitle: "Unlock efficiency, automation, and growth with next-gen technology and expert talent.",
-        imageSrc: "/Steer Your Vision.png",
-        imageAlt: "Steer Your Vision - Digital transformation and business guidance"
+        image: {
+          src: "/Steer Your Vision.png",
+          alt: "Steer Your Vision - Digital transformation and business guidance"
+        },
+        scrollTarget: "services"
       }
     },
     notes: "This hero variant is perfect for pages where you want to inform rather than immediately convert. The highlighted words (AI, ERP) will automatically appear in orange."
@@ -543,45 +600,6 @@ export const componentManifest: { [key: string]: ComponentManifest } = {
     notes: "This component includes auto-play functionality, navigation arrows, and indicator dots. The carousel automatically advances every 3 seconds."
   },
 
-  "services-overview": {
-    name: "Services Overview",
-    purpose: "Display a grid of services with one highlighted card to showcase your main offerings.",
-    optimalUsage: [
-      "Use **after hero section** to immediately showcase services.",
-      "Include **3-4 main services** for optimal impact.",
-      "Highlight your **primary service** with special styling.",
-      "Use **clear icons and descriptions** for each service.",
-      "Ensure **responsive design** for mobile devices."
-    ],
-    jsonSchema: {
-      component: "ServicesOverview",
-      data: {
-        services: [
-          {
-            title: "string",
-            description: "string",
-            href: "string",
-            icon: "string",
-            imageSrc: "string"
-          }
-        ],
-        highlightedIndex: "number"
-      }
-    },
-    example: {
-      component: "ServicesOverview",
-      data: {
-        highlightedIndex: 1,
-        services: [
-          { title: "ERP Implementation", description: "Technology at work, a better way of doing the things!", icon: "BarChart3" },
-          { title: "IT Consulting", description: "We help you align technology to achieve your business goals.", icon: "Briefcase" },
-          { title: "Software Development", description: "From idea to production with modern engineering practices.", icon: "Code2" },
-          { title: "Data Analytics", description: "Insights that accelerate decision‑making and growth.", icon: "Database" }
-        ]
-      }
-    },
-    notes: "This component includes a highlighted service card with special styling and responsive grid layout."
-  },
 
   "file-upload": {
     name: "File Upload",
@@ -620,61 +638,7 @@ export const componentManifest: { [key: string]: ComponentManifest } = {
     notes: "This component includes drag & drop functionality, file preview, and progress tracking."
   },
 
-  "erp-modules": {
-    name: "ERP Modules",
-    purpose: "Showcase ERP modules with statistics, company information, and interactive module cards.",
-    optimalUsage: [
-      "Use to **highlight ERP capabilities** and **company expertise**.",
-      "Include **key statistics** to build credibility.",
-      "Show **years of experience** prominently.",
-      "Use **clear module descriptions** with benefits.",
-      "Include **interactive elements** for engagement."
-    ],
-    jsonSchema: {
-      component: "ERPModules",
-      data: {
-        companyName: "string",
-        companyDescription: "string",
-        yearsOfExperience: "number",
-        statistics: [
-          {
-            number: "string",
-            label: "string"
-          }
-        ],
-        modules: [
-          {
-            title: "string",
-            description: "string",
-            icon: "string",
-            features: ["string"]
-          }
-        ]
-      }
-    },
-    example: {
-      component: "ERPModules",
-      data: {
-        companyName: "FinByz Solutions",
-        companyDescription: "Leading ERP implementation and consulting services",
-        yearsOfExperience: 15,
-        statistics: [
-          { number: "500+", label: "Projects Completed" },
-          { number: "50+", label: "Expert Consultants" },
-          { number: "98%", label: "Client Satisfaction" }
-        ],
-        modules: [
-          {
-            title: "Financial Management",
-            description: "Comprehensive financial planning and accounting",
-            icon: "DollarSign",
-            features: ["General Ledger", "Accounts Payable", "Accounts Receivable"]
-          }
-        ]
-      }
-    },
-    notes: "This component includes company statistics, module showcase, and interactive elements."
-  },
+  
 
   "business-slider": {
     name: "Business Slider",
@@ -1424,56 +1388,7 @@ export const componentManifest: { [key: string]: ComponentManifest } = {
     notes: "This component includes search functionality and category organization."
   },
 
-  "data-table": {
-    name: "Data Table",
-    purpose: "Display structured data in a sortable, filterable table format.",
-    optimalUsage: [
-      "Use for **data presentation** and **comparisons**.",
-      "Include **sortable columns** for better UX.",
-      "Add **search and filter** capabilities.",
-      "Implement **pagination** for large datasets.",
-      "Ensure **responsive design** for mobile."
-    ],
-    jsonSchema: {
-      component: "DataTable",
-      data: {
-        title: "string",
-        columns: [
-          {
-            key: "string",
-            label: "string",
-            sortable: "boolean"
-          }
-        ],
-        data: ["object"],
-        pagination: {
-          pageSize: "number",
-          totalItems: "number"
-        }
-      }
-    },
-    example: {
-      component: "DataTable",
-      data: {
-        title: "Project Portfolio",
-        columns: [
-          { key: "name", label: "Project Name", sortable: true },
-          { key: "client", label: "Client", sortable: true },
-          { key: "status", label: "Status", sortable: true },
-          { key: "completion", label: "Completion %", sortable: true }
-        ],
-        data: [
-          { name: "ERP Implementation", client: "TechCorp", status: "In Progress", completion: 75 },
-          { name: "AI Analytics Platform", client: "InnovateTech", status: "Completed", completion: 100 }
-        ],
-        pagination: {
-          pageSize: 10,
-          totalItems: 25
-        }
-      }
-    },
-    notes: "This component includes sorting, filtering, and pagination functionality."
-  },
+
 
   "modal-dialog": {
     name: "Modal Dialog",

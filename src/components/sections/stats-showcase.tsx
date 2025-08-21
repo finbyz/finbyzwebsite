@@ -8,19 +8,24 @@ import "@/styles/components/stats-showcase.css";
 // Intersection Observer Hook
 function useInView(threshold = 0.3) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [inView, setInView] = useState(false);
+  const [revealed, setRevealed] = useState(false);
 
   useEffect(() => {
-    if (!ref.current) return;
+    if (!ref.current || revealed) return;
     const observer = new window.IntersectionObserver(
-      ([entry]) => setInView(entry.isIntersecting),
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setRevealed(true);
+          observer.disconnect();
+        }
+      },
       { threshold }
     );
     observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [threshold]);
+  }, [threshold, revealed]);
 
-  return [ref, inView] as const;
+  return [ref, revealed] as const;
 }
 
 interface AnimatedCounterProps {
@@ -139,7 +144,7 @@ const stats = [
 ];
 
 export default function StatsShowcase({ data = {} }: { data?: Record<string, any> }) {
-  const [sectionRef, inView] = useInView(0.3);
+  const [sectionRef, hasAnimated] = useInView(0.3);
 
   // Use provided data or fallback to defaults
   const {
@@ -153,7 +158,7 @@ export default function StatsShowcase({ data = {} }: { data?: Record<string, any
       {/* Background Pattern removed */}
       
       <div className="stats-showcase-container">
-        <div className={`stats-showcase-header ${inView ? 'fade-in-up' : 'fade-out'}`}>
+        <div className={`stats-showcase-header ${hasAnimated ? 'fade-in-up' : ''}`}>
           <h2 className="stats-showcase-title">
             {title}
           </h2>
@@ -165,29 +170,25 @@ export default function StatsShowcase({ data = {} }: { data?: Record<string, any
         <div className="stats-showcase-grid">
           {customStats.map((stat: any, index: number) => (
             <div
-              key={stat.label || index}
-              className={`stats-showcase-card ${inView ? 'fade-in-up' : 'fade-out'}`}
+              key={`${stat.label || 'stat'}-${index}`}
+              className={`stats-showcase-card ${hasAnimated ? 'fade-in-up' : ''}`}
               style={{ 
-                transitionDelay: inView ? `${index * 0.1}s` : '0s',
-                animationDelay: inView ? `${index * 0.1}s` : '0s'
+                transitionDelay: hasAnimated ? `${index * 0.1}s` : '0s',
+                animationDelay: hasAnimated ? `${index * 0.1}s` : '0s'
               }}
             >
               <div className="stats-showcase-icon-container">
-                {stat.icon ? (
-                  <div 
-                    className="stats-showcase-icon"
-                    style={{ 
-                      color: stat.color || "#1A5276",
-                      backgroundColor: stat.iconBg || "#EAF1F8"
-                    }}
-                  >
-                    {React.createElement(stat.icon, { className: "w-8 h-8" })}
-                  </div>
-                ) : (
-                  <div className="stats-showcase-icon">
-                    <Target className="w-8 h-8" />
-                  </div>
-                )}
+                {(() => {
+                  const iconPool = [TrendingUp, Users, Globe, Award, Clock, Zap, Shield, Target];
+                  const IconComponent = stat.icon || iconPool[index % iconPool.length] || Target;
+                  const fg = stat.iconColor || ["#1A5276","#FF8C00","#27AE60","#8E44AD"][index % 4];
+                  const bg = stat.iconBg || ["#EAF1F8","#FFF4E5","#E8F8F2","#F3EAF8"][index % 4];
+                  return (
+                    <div className="stats-showcase-icon" style={{ color: fg, backgroundColor: bg }}>
+                      {React.createElement(IconComponent, { className: "w-8 h-8" })}
+                    </div>
+                  );
+                })()}
               </div>
               <div className="stats-showcase-content">
                 <div className="stats-showcase-value">
@@ -195,7 +196,7 @@ export default function StatsShowcase({ data = {} }: { data?: Record<string, any
                     end={stat.value || 100}
                     suffix={stat.suffix || ""}
                     className="text-white"
-                    start={inView}
+                    start={hasAnimated}
                   />
                 </div>
                 <h3 className="stats-showcase-label">

@@ -64,8 +64,8 @@ export default function CTA({ data = {} }: CTAProps) {
     <section className="cta-section">
       <div className="cta-container">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="cta-content"

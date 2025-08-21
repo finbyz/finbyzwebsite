@@ -162,7 +162,7 @@ export default function VisualTimeline() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className={`text-center mb-20 transition-all duration-1000 ${
-          isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
+          isVisible ? 'animate-fade-in-up opacity-100' : ''
         }`}>
           <Badge className="mb-6 bg-gradient-to-r from-slate-600 to-blue-600 text-white border-0">
             Our Journey
@@ -177,7 +177,7 @@ export default function VisualTimeline() {
 
         {/* Timeline Grid */}
         <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 ${
-          isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
+          isVisible ? 'animate-fade-in-up opacity-100' : ''
         }`} style={{ transitionDelay: '200ms' }}>
           {timelineData.map((item, index) => (
             <Card 
@@ -228,7 +228,7 @@ export default function VisualTimeline() {
 
         {/* Stats Section */}
         <div className={`mt-20 grid grid-cols-1 md:grid-cols-4 gap-8 transition-all duration-1000 ${
-          isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
+          isVisible ? 'animate-fade-in-up opacity-100' : ''
         }`} style={{ transitionDelay: '400ms' }}>
           <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200">
             <div className="text-3xl font-bold text-blue-600 mb-2">10+</div>
@@ -240,7 +240,7 @@ export default function VisualTimeline() {
           </div>
           <div className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-xl border border-green-200">
             <div className="text-3xl font-bold text-green-600 mb-2">15+</div>
-            <div className="text-green-700 font-medium">Industries Served</div>
+            <div className="text-blue-700 font-medium">Industries Served</div>
           </div>
           <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl border border-orange-200">
             <div className="text-3xl font-bold text-orange-600 mb-2">100%</div>
@@ -250,7 +250,7 @@ export default function VisualTimeline() {
 
         {/* Call to Action */}
         <div className={`text-center mt-16 transition-all duration-1000 ${
-          isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
+          isVisible ? 'animate-fade-in-up opacity-100' : ''
         }`} style={{ transitionDelay: '600ms' }}>
           <h3 className="text-2xl font-bold text-slate-800 mb-4">
             Ready to write the next chapter with us?

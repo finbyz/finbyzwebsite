@@ -24,17 +24,17 @@
 
 .comment-fade-out {
   opacity: 0;
-  transform: translateY(2.5rem);
+  transform: translateY(0);
 }
 
-.comment-slide-in-left {
+.comment-slide-in-up {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
-.comment-slide-out-left {
+.comment-slide-out-up {
   opacity: 0;
-  transform: translateX(-2.5rem);
+  transform: translateY(30px);
 }
 
 /* Layout */

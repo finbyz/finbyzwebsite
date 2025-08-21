@@ -231,105 +231,76 @@ export default function VerticalTimeline() {
       <div className="max-w-10xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className={`text-center mb-20 transition-all duration-1000 ${
-          isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
+          isVisible ? 'animate-fade-in-up opacity-100' : ''
         }`}>
           <Badge className="mb-6 bg-gradient-to-r from-slate-600 to-blue-600 text-white border-0">
-            Our Story
+            Our Journey
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
-            A Decade of Growth & Innovation
+            A Decade of Innovation
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Follow our journey from a small consulting firm to a leading technology partner.
+            From humble beginnings to industry leadership — explore our evolution through the years.
           </p>
         </div>
 
         {/* Timeline */}
-        <div className="relative">
-          {/* Timeline Line */}
-          <div className="absolute left-8 md:left-1/2 md:transform md:-translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-600"></div>
+        <div className={`relative transition-all duration-1000 ${
+          isVisible ? 'animate-fade-in-up opacity-100' : ''
+        }`} style={{ transitionDelay: '200ms' }}>
+          {/* Vertical Line */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-blue-500 to-purple-600 h-full"></div>
           
-          {timelineData.map((item, index) => {
-            const colorClasses = getColorClasses(item.color);
-            const isEven = index % 2 === 0;
-            
-            return (
-              <div 
-                key={index}
-                className={`relative mb-12 transition-all duration-700 ${
-                  isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
-                }`}
-                style={{ transitionDelay: `${index * 100}ms` }}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
-              >
-                {/* Timeline Dot */}
-                <div className="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full border-4 border-white shadow-lg z-10"></div>
-                
+          {timelineData.map((item, index) => (
+            <div key={index} className={`relative mb-16 transition-all duration-700 ${
+              isVisible ? 'animate-fade-in-up opacity-100' : ''
+            }`} style={{ transitionDelay: `${index * 200}ms` }}>
+              {/* Timeline Item */}
+              <div className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                 {/* Content */}
-                <div className={`ml-16 md:ml-0 md:w-5/12 ${isEven ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'}`}>
-                  <Card className={`border-2 ${colorClasses.border} ${colorClasses.bg} ${colorClasses.hover} transition-all duration-500 shadow-lg hover:shadow-xl group cursor-pointer`}>
-                    <CardHeader className="pb-4">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className={`w-12 h-12 bg-gradient-to-br from-${item.color}-500 to-${item.color}-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                          <item.icon className="w-6 h-6 text-white" />
-                        </div>
+                <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                  <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm overflow-hidden group hover:scale-105">
+                    <CardHeader>
+                      <div className="flex items-center justify-between">
+                        <CardTitle className="text-lg font-bold text-slate-800">{item.title}</CardTitle>
                         <Badge className="bg-gradient-to-r from-orange-500 to-red-500 text-white border-0">
                           {item.year}
                         </Badge>
                       </div>
-                      <CardTitle className={`text-xl font-bold ${colorClasses.text} group-hover:text-${item.color}-800 transition-colors duration-300`}>
-                        {item.title}
-                      </CardTitle>
-                      <div className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4 text-slate-400" />
-                        <span className="text-sm text-slate-500 font-medium">{item.category}</span>
-                      </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-slate-600 leading-relaxed mb-4">
-                        {item.description}
-                      </p>
-                      
-                      {/* Impact Section */}
-                      <div className="bg-white/50 rounded-lg p-4 border border-slate-200">
-                        <div className="flex items-center gap-2 mb-2">
-                          <Target className="w-4 h-4 text-slate-500" />
-                          <span className="text-sm font-semibold text-slate-700">Impact</span>
-                        </div>
-                        <p className="text-sm text-slate-600">{item.impact}</p>
-                      </div>
-                      
-                      <div className="flex items-center justify-between mt-4">
-                        <div className="flex items-center gap-2 text-sm text-slate-500">
-                          <Award className="w-4 h-4" />
-                          <span>Milestone {index + 1}</span>
-                        </div>
-                        <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-slate-600 transition-colors duration-300" />
-                      </div>
+                      <p className="text-slate-600 leading-relaxed">{item.description}</p>
                     </CardContent>
                   </Card>
                 </div>
+                
+                {/* Timeline dot */}
+                <div className="w-2/12 flex justify-center">
+                  <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full shadow-lg border-4 border-white"></div>
+                </div>
+                
+                {/* Empty space for alignment */}
+                <div className="w-5/12"></div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
 
-        {/* Summary Stats */}
+        {/* Stats Section */}
         <div className={`mt-20 grid grid-cols-1 md:grid-cols-4 gap-8 transition-all duration-1000 ${
-          isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
-        }`} style={{ transitionDelay: '1200ms' }}>
+          isVisible ? 'animate-fade-in-up opacity-100' : ''
+        }`} style={{ transitionDelay: '400ms' }}>
           <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200">
             <div className="text-3xl font-bold text-blue-600 mb-2">10+</div>
-            <div className="text-blue-700 font-medium">Years of Excellence</div>
+            <div className="text-blue-700 font-medium">Years of Experience</div>
           </div>
           <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl border border-purple-200">
             <div className="text-3xl font-bold text-purple-600 mb-2">50+</div>
-            <div className="text-purple-700 font-medium">Successful Projects</div>
+            <div className="text-purple-700 font-medium">Projects Delivered</div>
           </div>
           <div className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-xl border border-green-200">
             <div className="text-3xl font-bold text-green-600 mb-2">15+</div>
-            <div className="text-green-700 font-medium">Industries Served</div>
+            <div className="text-blue-700 font-medium">Industries Served</div>
           </div>
           <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl border border-orange-200">
             <div className="text-3xl font-bold text-orange-600 mb-2">100%</div>
@@ -339,8 +310,8 @@ export default function VerticalTimeline() {
 
         {/* Call to Action */}
         <div className={`text-center mt-16 transition-all duration-1000 ${
-          isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
-        }`} style={{ transitionDelay: '1400ms' }}>
+          isVisible ? 'animate-fade-in-up opacity-100' : ''
+        }`} style={{ transitionDelay: '600ms' }}>
           <h3 className="text-2xl font-bold text-slate-800 mb-4">
             Ready to write the next chapter with us?
           </h3>

@@ -82,19 +82,24 @@ import "@/styles/components/testimonials.css";
  */
 function useInView(threshold = 0.3) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [inView, setInView] = useState(false);
+  const [revealed, setRevealed] = useState(false);
 
   useEffect(() => {
-    if (!ref.current) return;
+    if (!ref.current || revealed) return;
     const observer = new window.IntersectionObserver(
-      ([entry]) => setInView(entry.isIntersecting),
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setRevealed(true);
+          observer.disconnect();
+        }
+      },
       { threshold }
     );
     observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [threshold]);
+  }, [threshold, revealed]);
 
-  return [ref, inView] as const;
+  return [ref, revealed] as const;
 }
 
 /**
@@ -183,10 +188,10 @@ export default function Testimonials({ data = {} }: { data?: Record<string, any>
         <div className={`testimonials-header ${
           inView 
             ? isOpen 
-              ? 'testimonials-slide-in-left' 
+              ? 'testimonials-slide-in-up' 
               : 'testimonials-fade-in-up' 
             : isOpen 
-              ? 'testimonials-slide-out-left' 
+              ? 'testimonials-slide-out-up' 
               : 'testimonials-fade-out'
         }`}>
           <h2 className="testimonials-title">
@@ -205,10 +210,10 @@ export default function Testimonials({ data = {} }: { data?: Record<string, any>
               className={`testimonial-card-wrapper ${
                 inView 
                   ? isOpen 
-                    ? 'testimonials-slide-in-left' 
+                    ? 'testimonials-slide-in-up' 
                     : 'testimonials-fade-in-up' 
                   : isOpen 
-                    ? 'testimonials-slide-out-left' 
+                    ? 'testimonials-slide-out-up' 
                     : 'testimonials-fade-out'
               }`}
               style={{ 
@@ -269,10 +274,10 @@ export default function Testimonials({ data = {} }: { data?: Record<string, any>
         <div className={`testimonials-cta ${
           inView 
             ? isOpen 
-              ? 'testimonials-slide-in-left' 
+              ? 'testimonials-slide-in-up' 
               : 'testimonials-fade-in-up' 
             : isOpen 
-              ? 'testimonials-slide-out-left' 
+              ? 'testimonials-slide-out-up' 
               : 'testimonials-fade-out'
         }`} style={{ transitionDelay: inView ? '0.6s' : '0s' }}>
           <Button 
@@ -286,10 +291,10 @@ export default function Testimonials({ data = {} }: { data?: Record<string, any>
           <div className={`testimonials-trust-indicators ${
             inView 
               ? isOpen 
-                ? 'testimonials-slide-in-left' 
+                ? 'testimonials-slide-in-up' 
                 : 'testimonials-fade-in-up' 
               : isOpen 
-                ? 'testimonials-slide-out-left' 
+                ? 'testimonials-slide-out-up' 
                 : 'testimonials-fade-out'
           }`} style={{ transitionDelay: inView ? '0.8s' : '0s' }}>
             {renderedData.trustIndicators.map((indicator: any, index: number) => (

@@ -207,9 +207,9 @@ export default function AnimatedAboutPage() {
               <AnimatePresence mode="wait" initial={false}>
                 <motion.div
                   key={timelineIndex}
-                  initial={{ opacity: 0, y: direction > 0 ? 80 : -80 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: direction > 0 ? -80 : 80 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
                   transition={{ duration: 0.5 }}
                   className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden p-8 text-center w-full"
                 >
@@ -248,7 +248,7 @@ export default function AnimatedAboutPage() {
           </div>
           
           <div className="w-full relative">
-            <div className={`text-center mb-20 transition-all duration-1000 ${isVisible['mission-vision'] ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
+            <div className={`text-center mb-20 transition-all duration-1000 ${isVisible['mission-vision'] ? 'animate-fade-in-up' : ''}`}>
               <Badge className="mb-6 bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white border-0 animate-fade-in-up-delayed">
                 Our Foundation
               </Badge>
@@ -258,7 +258,7 @@ export default function AnimatedAboutPage() {
             </div>
             
             <div className="max-w-4xl mx-auto">
-              <div className={`grid grid-cols-1 lg:grid-cols-3 gap-8 transition-all duration-1000 ${isVisible['mission-vision'] ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
+              <div className={`grid grid-cols-1 lg:grid-cols-3 gap-8 transition-all duration-1000 ${isVisible['mission-vision'] ? 'animate-fade-in-up' : ''}`}>
                 <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-700 bg-white/80 backdrop-blur-sm overflow-hidden group hover:scale-105">
                   <CardHeader className="text-center">
                     <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg animate-pulse">
@@ -312,7 +312,7 @@ export default function AnimatedAboutPage() {
           </div>
           
           <div className="w-full relative">
-            <div className={`text-center mb-20 transition-all duration-1000 ${isVisible['innovation-impact'] ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
+            <div className={`text-center mb-20 transition-all duration-1000 ${isVisible['innovation-impact'] ? 'animate-fade-in-up' : ''}`}>
               <Badge className="mb-6 bg-gradient-to-r from-green-500 to-blue-600 text-white border-0 animate-fade-in-up-delayed">
                 Our Journey
               </Badge>
@@ -344,7 +344,7 @@ export default function AnimatedAboutPage() {
           </div>
           
           <div className="w-full relative">
-            <div className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${isVisible['quote-section'] ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
+            <div className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${isVisible['quote-section'] ? 'animate-fade-in-up' : ''}`}>
               <div className="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-[#FF8C00] to-[#FFA500] rounded-full flex items-center justify-center shadow-lg animate-pulse">
                 <Quote className="w-10 h-10 text-white" />
               </div>
@@ -369,7 +369,7 @@ export default function AnimatedAboutPage() {
           </div>
           
           <div className="w-full relative">
-            <div className={`text-center mb-20 transition-all duration-1000 ${isVisible['timeline'] ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
+            <div className={`text-center mb-20 transition-all duration-1000 ${isVisible['timeline'] ? 'animate-fade-in-up' : ''}`}>
               <Badge className="mb-6 bg-gradient-to-r from-pink-500 to-purple-600 text-white border-0 animate-fade-in-up-delayed">
                 Our History
               </Badge>
@@ -392,7 +392,7 @@ export default function AnimatedAboutPage() {
                     className={`relative mb-12 transition-all duration-700 ${
                       isVisible['timeline'] 
                         ? 'animate-fade-in-up opacity-100 translate-y-0' 
-                        : 'opacity-0 translate-y-10'
+                        : ''
                     }`}
                     style={{ transitionDelay: `${index * 100}ms` }}
                   >
@@ -442,7 +442,7 @@ export default function AnimatedAboutPage() {
           </div>
           
           <div className="w-full relative">
-            <div className={`text-center mb-20 transition-all duration-1000 ${isVisible['values'] ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
+            <div className={`text-center mb-20 transition-all duration-1000 ${isVisible['values'] ? 'animate-fade-in-up' : ''}`}>
               <Badge className="mb-6 bg-gradient-to-r from-blue-500 to-indigo-600 text-white border-0 animate-fade-in-up-delayed">
                 Our Values
               </Badge>
@@ -469,7 +469,7 @@ export default function AnimatedAboutPage() {
                     className={`border-0 shadow-lg hover:shadow-xl transition-all duration-700 bg-white/80 backdrop-blur-sm overflow-hidden group hover:scale-105 ${
                       isVisible['values'] 
                         ? 'animate-fade-in-up opacity-100 translate-y-0' 
-                        : 'opacity-0 translate-y-10'
+                        : ''
                     }`}
                     style={{ transitionDelay: `${index * 200}ms` }}
                   >

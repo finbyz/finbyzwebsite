@@ -510,9 +510,9 @@ export function TimelineCarousel({
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: direction > 0 ? 80 : -80 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: direction > 0 ? -80 : 80 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
             className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden px-12 py-6 sm:px-20 sm:py-8 max-w-2xl w-full text-center select-none outline-none focus:ring-2 focus:ring-blue-400"
             title="Auto-advancing timeline milestone"

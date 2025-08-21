@@ -74,7 +74,7 @@
 
 .benefits-fade-out {
   opacity: 0;
-  transform: translateY(2.5rem);
+  transform: translateY(0);
 }
 
 .benefits-title {
@@ -118,6 +118,22 @@
   .benefits-grid { grid-template-columns: repeat(4, 1fr); gap: 1rem; }
 }
 
+/* Large screens: adapt columns to actual item count */
+@media (min-width: 1024px) {
+  /* 2 items → 2 columns */
+  .benefits-grid:not(:has(> :nth-child(3))) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  /* 3 items → 3 columns */
+  .benefits-grid:not(:has(> :nth-child(4))):has(> :nth-child(3)) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  /* Exactly 6 items → 3 columns (2 rows) */
+  .benefits-grid:has(> :nth-child(6)):not(:has(> :nth-child(7))) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 /* Let the grid take available space between header and CTA on larger screens */
 @media (min-width: 768px) {
   .benefits-grid {
@@ -128,8 +144,15 @@
 
 /* Card Wrapper */
 .benefits-card-wrapper {
-  transition: all 0.7s ease;
+  transition: all 0.3s ease;
 }
+
+/* Staggered animation/transition delays */
+.benefits-delay-0 { transition-delay: 0s; animation-delay: 0s; }
+.benefits-delay-1 { transition-delay: 0.2s; animation-delay: 0.2s; }
+.benefits-delay-2 { transition-delay: 0.4s; animation-delay: 0.4s; }
+.benefits-delay-3 { transition-delay: 0.6s; animation-delay: 0.6s; }
+.benefits-delay-4 { transition-delay: 0.8s; animation-delay: 0.8s; }
 
 /* Card */
 .benefits-card {
@@ -178,9 +201,22 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 0.5rem; /* Further reduced */
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
+
+/* Icon background palettes mapped by icon name */
+.benefits-icon-container--award { background: #1A5276; }
+.benefits-icon-container--trendingup { background: #FF8C00; }
+.benefits-icon-container--globe { background: #27AE60; }
+.benefits-icon-container--target { background: #8E44AD; }
+.benefits-icon-container--default { background: #EAF1F8; }
+
+/* Per-card variant colors to ensure 4 distinct colors per row */
+.benefits-icon-container--v0 { background: #FF8C00; }
+.benefits-icon-container--v1 { background: #1A5276; }
+.benefits-icon-container--v2 { background: #27AE60; }
+.benefits-icon-container--v3 { background: #8E44AD; }
 
 .benefits-card:hover .benefits-icon-container {
   transform: scale(1.1);
@@ -190,6 +226,10 @@
   width: 1.5rem; /* Further reduced */
   height: 1.5rem; /* Further reduced */
 }
+
+/* Icon color variants */
+.benefits-icon-color--light { color: #fff; }
+.benefits-icon-color--default { color: #1A5276; }
 
 /* Card Header */
 .benefits-card-header {

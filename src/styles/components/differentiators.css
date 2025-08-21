@@ -35,7 +35,7 @@
 .differentiators-header {
   text-align: center;
   margin-bottom: 2.5rem;
-  transition: all 1s ease;
+  transition: all 0.3s ease;
 }
 
 .differentiators-fade-in-up {
@@ -45,7 +45,7 @@
 
 .differentiators-fade-out {
   opacity: 0;
-  transform: translateY(2.5rem);
+  transform: translateY(0);
 }
 
 .differentiators-title {
@@ -103,9 +103,21 @@
   }
 }
 
+/* Large screens: adapt to item count so rows are filled */
+@media (min-width: 1024px) {
+  /* 2 items → 2 equal columns */
+  .differentiators-grid:not(:has(> :nth-child(3))) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  /* 3 items → 3 equal columns */
+  .differentiators-grid:not(:has(> :nth-child(4))):has(> :nth-child(3)) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 /* Card Wrapper */
 .differentiators-card-wrapper {
-  transition: all 0.7s ease;
+  transition: all 0.3s ease;
 }
 
 /* Card */
@@ -206,7 +218,7 @@
 
 /* Quote */
 .differentiators-quote {
-  transition: all 1s ease;
+  transition: all 0.3s ease;
 }
 
 .differentiators-quote-container {

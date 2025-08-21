@@ -121,19 +121,7 @@ export async function GET() {
           }
         },
 
-        // Client Success Stories (case study lite)
-        {
-          type: "client-success-stories",
-          id: "client-success-section",
-          data: {
-            title: "Client Success Stories",
-            subtitle: "Highlights from projects we've delivered",
-            stories: [
-              { client: "TechCorp", result: "60% efficiency gain", summary: "ERP + AI automation" },
-              { client: "DataFlow", result: "300% faster reports", summary: "AI analytics platform" }
-            ]
-          }
-        },
+
 
         // Global Presence
         {

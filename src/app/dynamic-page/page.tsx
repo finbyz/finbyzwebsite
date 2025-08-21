@@ -3,7 +3,7 @@
 import React from 'react';
 import { DynamicPageRenderer, DynamicPageErrorBoundary, useDynamicPage } from '@/components/DynamicPageRenderer';
 import { PageData } from '@/types/section-data';
-import samplePageData from '@/../../data/sample-landing-page.json';
+import samplePageData from '../../../data/sample-landing-page.json';
 
 // ============================================================================
 // DYNAMIC PAGE DEMONSTRATION

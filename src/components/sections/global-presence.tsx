@@ -7,19 +7,24 @@ import "@/styles/components/global-presence.css";
 // Intersection Observer Hook
 function useInView(threshold = 0.3) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [inView, setInView] = useState(false);
+  const [revealed, setRevealed] = useState(false);
 
   useEffect(() => {
-    if (!ref.current) return;
+    if (!ref.current || revealed) return;
     const observer = new window.IntersectionObserver(
-      ([entry]) => setInView(entry.isIntersecting),
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setRevealed(true);
+          observer.disconnect();
+        }
+      },
       { threshold }
     );
     observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [threshold]);
+  }, [threshold, revealed]);
 
-  return [ref, inView] as const;
+  return [ref, revealed] as const;
 }
 
 interface GlobalOffice {
@@ -217,10 +222,7 @@ export default function GlobalPresence({ data = {} }: GlobalPresenceProps) {
   return (
     <section ref={sectionRef} className="global-presence-section">
       {/* Background Pattern */}
-      <div className="global-presence-background">
-        <div className="global-presence-pattern-1"></div>
-        <div className="global-presence-pattern-2"></div>
-      </div>
+      
       
       <div className="global-presence-container">
         <div className={`global-presence-header ${inView ? 'global-presence-fade-in-up' : 'global-presence-fade-out'}`}>

@@ -8,19 +8,24 @@ import "@/styles/components/technology-stack.css";
 // Intersection Observer Hook
 function useInView(threshold = 0.3) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [inView, setInView] = useState(false);
+  const [revealed, setRevealed] = useState(false);
 
   useEffect(() => {
-    if (!ref.current) return;
+    if (!ref.current || revealed) return;
     const observer = new window.IntersectionObserver(
-      ([entry]) => setInView(entry.isIntersecting),
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setRevealed(true);
+          observer.disconnect();
+        }
+      },
       { threshold }
     );
     observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [threshold]);
+  }, [threshold, revealed]);
 
-  return [ref, inView] as const;
+  return [ref, revealed] as const;
 }
 
 const technologies = [
@@ -92,6 +97,14 @@ const technologies = [
 
 export default function TechnologyStack({ data = {} }: { data?: Record<string, any> }) {
   const [sectionRef, inView] = useInView(0.3);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  // Set hasAnimated to true when element comes into view for the first time
+  useEffect(() => {
+    if (inView && !hasAnimated) {
+      setHasAnimated(true);
+    }
+  }, [inView, hasAnimated]);
 
   // Use provided data or fallback to defaults
   const {
@@ -100,11 +113,38 @@ export default function TechnologyStack({ data = {} }: { data?: Record<string, a
     technologies: customTechnologies = technologies
   } = data;
 
+  // Map string icon names from JSON to lucide-react components
+  const iconMap: Record<string, React.ElementType> = {
+    Code,
+    Database,
+    Cloud,
+    Shield,
+    Zap,
+    Globe,
+    Cpu,
+    GitBranch,
+    Monitor,
+  };
+
+  const defaultIconPool: React.ElementType[] = [
+    Code,
+    Database,
+    Cloud,
+    Cpu,
+    Shield,
+    Zap,
+    GitBranch,
+    Globe,
+  ];
+
+  const fallbackFg: string[] = ["#1A5276", "#FF8C00", "#27AE60", "#8E44AD"]; // blue, orange, green, purple
+  const fallbackBg: string[] = ["#EAF1F8", "#FFF4E5", "#E8F8F2", "#F3EAF8"];
+
   return (
     <section ref={sectionRef} className="technology-stack-section">
       
       <div className="technology-stack-container">
-        <div className={`technology-stack-header ${inView ? 'fade-in-up' : 'fade-out'}`}>
+        <div className={`technology-stack-header ${hasAnimated ? 'fade-in-up' : ''}`}>
           <h2 className="technology-stack-title">
             {title}
           </h2>
@@ -117,28 +157,31 @@ export default function TechnologyStack({ data = {} }: { data?: Record<string, a
           {customTechnologies.map((tech: any, index: number) => (
             <div
               key={tech.category || tech.name || index}
-              className={`technology-stack-card ${inView ? 'fade-in-up' : 'fade-out'}`}
+              className={`technology-stack-card ${hasAnimated ? 'fade-in-up' : ''}`}
               style={{ 
-                transitionDelay: inView ? `${index * 0.1}s` : '0s',
-                animationDelay: inView ? `${index * 0.1}s` : '0s'
+                transitionDelay: hasAnimated ? `${index * 0.1}s` : '0s',
+                animationDelay: hasAnimated ? `${index * 0.1}s` : '0s'
               }}
             >
               <div className="technology-stack-icon-container">
-                {tech.icon ? (
-                  <div 
-                    className="technology-stack-icon"
-                    style={{ 
-                      color: tech.color || "#1A5276",
-                      backgroundColor: tech.bgColor || "#EAF1F8"
-                    }}
-                  >
-                    {React.createElement(tech.icon, { className: "w-8 h-8" })}
-                  </div>
-                ) : (
-                  <div className="technology-stack-icon">
-                    <Monitor className="w-8 h-8" />
-                  </div>
-                )}
+                {(() => {
+                  let IconComponent: React.ElementType | undefined;
+                  if (typeof tech.icon === 'string') {
+                    IconComponent = iconMap[tech.icon];
+                  } else if (tech.icon) {
+                    IconComponent = tech.icon as React.ElementType;
+                  }
+                  if (!IconComponent) {
+                    IconComponent = defaultIconPool[index % defaultIconPool.length] || Monitor;
+                  }
+                  const fg = tech.color || fallbackFg[index % fallbackFg.length];
+                  const bg = tech.bgColor || fallbackBg[index % fallbackBg.length];
+                  return (
+                    <div className="technology-stack-icon" style={{ color: fg, backgroundColor: bg }}>
+                      {React.createElement(IconComponent, { className: "w-8 h-8" })}
+                    </div>
+                  );
+                })()}
               </div>
               <div className="flex-1">
                 <h3 className="technology-stack-name">

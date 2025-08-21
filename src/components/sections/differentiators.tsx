@@ -7,19 +7,24 @@ import "@/styles/components/differentiators.css";
 // Intersection Observer Hook
 function useInView(threshold = 0.3) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [inView, setInView] = useState(false);
+  const [revealed, setRevealed] = useState(false);
 
   useEffect(() => {
-    if (!ref.current) return;
+    if (!ref.current || revealed) return;
     const observer = new window.IntersectionObserver(
-      ([entry]) => setInView(entry.isIntersecting),
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setRevealed(true);
+          observer.disconnect();
+        }
+      },
       { threshold }
     );
     observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [threshold]);
+  }, [threshold, revealed]);
 
-  return [ref, inView] as const;
+  return [ref, revealed] as const;
 }
 
 interface DifferentiatorItem {
@@ -86,6 +91,21 @@ export default function Differentiators({ data = {} }: DifferentiatorsProps) {
     }
   } = data;
 
+  // Ensure distinct icons across items (fallback rotates through pool)
+  const allIconNames = ["Eye", "Heart", "CheckCircle", "BarChart3"];
+  const normalizeDistinct = (items: DifferentiatorItem[]) => {
+    const used = new Set<string>();
+    return items.map((item) => {
+      let name = item.icon;
+      if (used.has(name) || !allIconNames.includes(name)) {
+        name = allIconNames.find((n) => !used.has(n)) || name;
+      }
+      used.add(name);
+      return { ...item, icon: name } as DifferentiatorItem;
+    });
+  };
+  const distinctDifferentiators = normalizeDistinct(differentiators);
+
   const getIconComponent = (iconName: string) => {
     switch (iconName) {
       case "Eye":
@@ -114,7 +134,7 @@ export default function Differentiators({ data = {} }: DifferentiatorsProps) {
         </div>
         
         <div className="differentiators-grid">
-          {differentiators.map((item, index) => {
+          {distinctDifferentiators.map((item, index) => {
             const IconComponent = getIconComponent(item.icon);
             
             return (

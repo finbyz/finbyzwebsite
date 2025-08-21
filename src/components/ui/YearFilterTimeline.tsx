@@ -153,7 +153,7 @@ export default function YearFilterTimeline() {
       <div className="max-w-10xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className={`text-center mb-16 transition-all duration-1000 ${
-          isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
+          isVisible ? 'animate-fade-in-up opacity-100' : ''
         }`}>
           <Badge className="mb-6 bg-gradient-to-r from-slate-600 to-blue-600 text-white border-0">
             Our Journey
@@ -168,7 +168,7 @@ export default function YearFilterTimeline() {
 
         {/* Year Navigation */}
         <div className={`flex flex-wrap justify-center gap-3 mb-12 transition-all duration-1000 ${
-          isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
+          isVisible ? 'animate-fade-in-up opacity-100' : ''
         }`} style={{ transitionDelay: '200ms' }}>
           {years.map((year) => (
             <button
@@ -187,7 +187,7 @@ export default function YearFilterTimeline() {
 
         {/* Timeline Card */}
         <div className={`transition-all duration-1000 ${
-          isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
+          isVisible ? 'animate-fade-in-up opacity-100' : ''
         }`} style={{ transitionDelay: '400ms' }}>
           <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-500 bg-white/80 backdrop-blur-sm overflow-hidden group cursor-pointer hover:scale-105 max-w-4xl mx-auto">
             <CardHeader className="pb-6">
@@ -221,7 +221,7 @@ export default function YearFilterTimeline() {
 
         {/* Stats Section */}
         <div className={`mt-20 grid grid-cols-1 md:grid-cols-4 gap-8 transition-all duration-1000 ${
-          isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
+          isVisible ? 'animate-fade-in-up opacity-100' : ''
         }`} style={{ transitionDelay: '600ms' }}>
           <div className="text-center">
             <div className="text-3xl font-bold text-blue-600 mb-2">10+</div>

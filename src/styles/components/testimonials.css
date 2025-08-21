@@ -24,6 +24,13 @@
   @apply grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-5;
 }
 
+/* If only two cards, make it two equal columns on large screens */
+@media (min-width: 1024px) {
+  .testimonials-grid:not(:has(> :nth-child(3))) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 .testimonial-card-wrapper {
   @apply transition-all duration-700;
 }
@@ -114,17 +121,31 @@
 
 /* Animation classes */
 .testimonials-fade-in-up {
-  @apply animate-fade-in-up;
+  animation: fadeInUp 0.8s ease-out forwards;
 }
 
-.testimonials-slide-in-left {
-  @apply animate-slide-in-left;
+.testimonials-slide-in-up {
+  animation: slideInUp 0.4s ease-out forwards;
 }
 
 .testimonials-fade-out {
-  @apply opacity-0 translate-y-10;
+  opacity: 0;
+  transform: translateY(0);
 }
 
-.testimonials-slide-out-left {
-  @apply opacity-0 -translate-x-10;
+.testimonials-slide-out-up {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Keyframes */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -1,94 +1,42 @@
 'use client';
 
 import React, { useState } from 'react';
-import { 
-  HeroSection,
-  ServiceCards,
-  StatsSection,
-  CallToAction,
-  AccordionSection,
-  ImageGallery,
-  TestimonialCarousel
-} from '@/components/ui/ComponentShowcase';
-import Comment from "@/components/sections/comment";
-import Features from "@/app/features";
-import ClientSuccessStories from "@/components/sections/client-success-stories";
-import TechnologyStack from "@/components/sections/technology-stack";
-import {
-  PricingCards,
-  ContactForm
-} from '@/components/ui/ComponentShowcase2';
-
-import {
-  TimelineSection,
-  TimelineCarousel,
-  TeamSection,
-  BlogGrid,
-  FAQSection
-} from '@/components/ui/ComponentShowcase3';
-
-import {
-  DataTable,
-  ModalDialog,
-  NotificationToast
-} from '@/components/ui/ComponentShowcase4';
-
-import {
-  SearchBar,
-  FilterTags,
-  Breadcrumbs,
-  SidebarMenu,
-  FooterLinks,
-  SocialMediaIcons,
-  LoadingSpinner,
-  ErrorBoundary,
-  TooltipComponent
-} from '@/components/ui/ComponentShowcase5';
-
-import Hero from "@/components/sections/hero_section_without_button";
-import Testimonials from "@/components/sections/testimonials";
 import { componentSchemas, getAllCategories, getComponentSchemasByCategory } from '@/lib/componentSchemas';
 import { componentManifest, getComponentManifest } from '@/lib/componentManifest';
 import { ChevronDown, ChevronRight, Copy, Eye, Code, BookOpen } from 'lucide-react';
+
+// Import actual components that exist
+import Testimonials from "@/components/sections/testimonials";
 import BusinessSlider from '@/components/sections/business-slider';
-import ServicesOverview from "@/components/sections/services-overview";
-import FileUpload from "@/components/ui/FileUpload";
-import ERPModules from "@/components/ui/ERPModules";
-
-// Import additional components from ComponentShowcase files
-import { 
-  ClientLogosCarousel
-} from '@/components/ui/ComponentShowcase';
-
-// Import additional components from other ComponentShowcase files
-import { AlertBanners } from '@/components/ui/ComponentShowcase4';
-import { FullScreenTimeline } from '@/components/ui/ComponentShowcase3';
-
-// Import all section components
 import Benefits from "@/components/sections/benefits";
 import ClientLogos from "@/components/sections/client-logos";
 import StatsShowcase from "@/components/sections/stats-showcase";
 import TeamExpertise from "@/components/sections/team-expertise";
-import AwardsRecognition from "@/components/sections/awards-recognition";
-import InnovationLab from "@/components/sections/innovation-lab";
+
 import ResourceCenter from "@/components/sections/resource-center";
 import ContactInfo from "@/components/sections/contact-info";
 import GlobalPresence from "@/components/sections/global-presence";
 import CTA from "@/components/sections/cta";
 import Differentiators from "@/components/sections/differentiators";
-// Removed components per request
-// import CaseStudies from "@/components/sections/case-studies";
-// import ProcessTimeline from "@/components/sections/process-timeline";
-// import IndustrySolutions from "@/components/sections/industry-solutions";
-// import ServicePricing from "@/components/sections/service-pricing";
-// import Services from "@/components/sections/services";
-// import SecurityCompliance from "@/components/sections/security-compliance";
-// import Partnerships from "@/components/sections/partnerships";
-// import SupportServices from "@/components/sections/support-services";
-// import FAQ from "@/components/sections/faq";
-// import ProcessWorkflow from "@/components/sections/process-workflow";
 import HeroSectionWithoutButton from "@/components/sections/hero_section_without_button";
-import SuccessSnapshots from "@/components/sections/success-snapshots";
+import Hero from "@/components/sections/hero";
+
+import Comment from "@/components/sections/comment";
+import ProcessWorkflow from "@/components/sections/process-workflow";
+
+import TechnologyStack from "@/components/sections/technology-stack";
+import ERPIntroText from "@/components/sections/erp-intro-text";
+import ContentIllustrationRight from "@/components/sections/content-illustration-right";
+import ContentIllustrationLeft from "@/components/sections/content-illustration-left";
+import FileUpload from "@/components/ui/FileUpload";
+import { ServiceCards, StatsSection, CallToAction, AccordionSection, TestimonialCarousel, ImageGallery } from "@/components/ui/ComponentShowcase";
+import { Services } from "@/utils/components";
+import Features from "@/app/features";
+import { PricingCards, ContactForm } from "@/components/ui/ComponentShowcase2";
+import { TimelineSection, TeamSection, BlogGrid, FAQSection } from "@/components/ui/ComponentShowcase3";
+import TimelineComponent from "@/components/ui/TimelineComponent";
+import { ModalDialog, NotificationToast } from "@/components/ui/ComponentShowcase4";
+import { SearchBar, FilterTags, Breadcrumbs, SidebarMenu, FooterLinks, SocialMediaIcons, LoadingSpinner, ErrorBoundary, TooltipComponent } from "@/components/ui/ComponentShowcase5";
 
 export default function ComponentsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -102,33 +50,8 @@ export default function ComponentsPage() {
     ? componentSchemas 
     : getComponentSchemasByCategory(selectedCategory);
 
-  // Hide specific sections from the Components page
-  const hiddenIds = new Set<string>([
-    'services-overview',
-    'erp-modules',
-    'hero-section',
-    'testimonial-carousel',
-    'data-table',
-    'modal-dialog',
-    'notification-toast',
-    'search-bar',
-    'filter-tags',
-    'breadcrumbs',
-    'sidebar-menu',
-    'error-boundary',
-    'tooltip-component',
-    'industry-solutions',
-    'service-pricing',
-    'case-studies',
-    'security-compliance',
-    'partnerships',
-    'support-services',
-    'process-timeline',
-    'process-workflow',
-    'services',
-    'faq'
-  ]);
-  const schemasToRender = filteredSchemas.filter((schema) => !hiddenIds.has(schema.id));
+  // Show all components on the Components page
+  const schemasToRender = filteredSchemas;
 
   const toggleSchema = (id: string) => {
     const newExpanded = new Set(expandedSchemas);
@@ -176,29 +99,45 @@ export default function ComponentsPage() {
 
   const renderComponentPreview = (schema: any) => {
     const componentMap: { [key: string]: React.ComponentType<any> } = {
-      'hero-section': HeroSection,
-      'comment': Comment,
-      'hero_section_without_button1': Hero,
-      'services-overview': ServicesOverview,
-      'service-cards': ServiceCards,
-      'stats-section': Benefits,
-      'call-to-action': CallToAction,
-      'business-slider': BusinessSlider,
-      'accordion-section': AccordionSection,
-      'image-gallery': ImageGallery,
-      'testimonial-carousel': TestimonialCarousel,
+      'hero_section_without_button_alt': HeroSectionWithoutButton,
+      'hero-section': Hero,
       'testimonials': Testimonials,
-      'features': Features,
-      'client-success-stories': ClientSuccessStories,
+      'business-slider': BusinessSlider,
+      'benefits': Benefits,
+      'client-logos': ClientLogos,
+      'stats-showcase': StatsShowcase,
+      'team-expertise': TeamExpertise,
+
+      
+      'resource-center': ResourceCenter,
+      'contact-info': ContactInfo,
+      'global-presence': GlobalPresence,
+      'cta': CTA,
+      'differentiators': Differentiators,
+
+      'comment': Comment,
+
       'technology-stack': TechnologyStack,
-      // 'case-studies': CaseStudies,
+      'erp-intro-text': ERPIntroText,
+      'content-illustration-right': ContentIllustrationRight,
+      'content-illustration-left': ContentIllustrationLeft,
+      'file-upload': FileUpload,
+      'services': Services,
+      'features': Features,
+      'service-cards': ServiceCards,
+      'stats-section': StatsSection,
+      'call-to-action': CallToAction,
+      'accordion-section': AccordionSection,
+      'testimonial-carousel': TestimonialCarousel,
       'pricing-cards': PricingCards,
       'contact-form': ContactForm,
-      'timeline-section': TimelineCarousel,
+      'timeline-section': TimelineSection,
+      'process-timeline': TimelineComponent,
+      'image-gallery': ImageGallery,
       'team-section': TeamSection,
       'blog-grid': BlogGrid,
       'faq-section': FAQSection,
-      'data-table': DataTable,
+
       'modal-dialog': ModalDialog,
       'notification-toast': NotificationToast,
       'search-bar': SearchBar,
@@ -210,39 +149,84 @@ export default function ComponentsPage() {
       'loading-spinner': LoadingSpinner,
       'error-boundary': ErrorBoundary,
       'tooltip-component': TooltipComponent,
-      'file-upload': FileUpload,
-      'erp-modules': ERPModules,
-      // New section components
-      'benefits': Benefits,
-      'client-logos': ClientLogos,
-      'stats-showcase': StatsShowcase,
-      // 'process-timeline': ProcessTimeline,
-      'team-expertise': TeamExpertise,
-      // 'industry-solutions': IndustrySolutions,
-      // 'service-pricing': ServicePricing,
-      // 'services': Services,
-      'awards-recognition': AwardsRecognition,
-      'innovation-lab': InnovationLab,
-      // 'security-compliance': SecurityCompliance,
-      // 'partnerships': Partnerships,
-      'resource-center': ResourceCenter,
-      // 'support-services': SupportServices,
-      'contact-info': ContactInfo,
-      'global-presence': GlobalPresence,
-      'cta': CTA,
-      'differentiators': Differentiators,
-      // 'faq': FAQ,
-      // 'process-workflow': ProcessWorkflow,
-      'hero_section_without_button': HeroSectionWithoutButton,
-      'success-snapshots': SuccessSnapshots,
-      // Additional components from ComponentShowcase files
-      'client-logos-carousel': ClientLogosCarousel,
-      'alert-banners': AlertBanners,
-      'full-screen-timeline': FullScreenTimeline
+      
+      // Add missing mappings for components that exist in schemas but not in componentMap
+      'process-workflow': ProcessWorkflow,
+      'faq': FAQSection, // Map 'faq' to 'FAQSection' component
     };
 
     const Component = componentMap[schema.id];
-    return Component ? <Component data={getComponentManifest(schema.id)} /> : <div>Component not found</div>;
+    
+    console.log('Component lookup:', {
+      id: schema.id,
+      component: Component,
+      componentType: typeof Component,
+      isReactComponent: Component && typeof Component === 'function' && Component.prototype?.isReactComponent
+    });
+    
+    if (Component) {
+      const manifest = getComponentManifest(schema.id);
+      try {
+        // Validate that Component is a valid React component
+        if (typeof Component !== 'function') {
+          throw new Error(`Component is not a function: ${typeof Component}`);
+        }
+        
+        return (
+          <div className="p-6">
+            <Component data={manifest?.example?.data || {}} />
+          </div>
+        );
+      } catch (error: any) {
+        console.error('Error rendering component:', error);
+        return (
+          <div className="p-6 bg-red-50 border border-red-200 rounded-lg">
+            <p className="text-red-800">Error rendering component: {schema.name}</p>
+            <p className="text-sm text-red-600">{error?.message || 'Unknown error'}</p>
+          </div>
+        );
+      }
+    } else {
+      // Fallback to documentation view if component doesn't exist
+      const manifest = getComponentManifest(schema.id);
+      return (
+        <div className="p-6 bg-gray-100 rounded-lg">
+          <div className="mb-4">
+            <h4 className="text-lg font-semibold text-gray-800 mb-2">Component Preview</h4>
+            <p className="text-gray-600">Component: {schema.name}</p>
+            <p className="text-sm text-gray-500">ID: {schema.id}</p>
+            <p className="text-sm text-orange-600 mt-2">⚠️ Component not available for preview</p>
+          </div>
+          
+          {manifest && (
+            <div className="space-y-4">
+              <div>
+                <h5 className="font-medium text-gray-700 mb-2">Purpose:</h5>
+                <p className="text-sm text-gray-600">{manifest.purpose}</p>
+              </div>
+              
+              {manifest.optimalUsage && manifest.optimalUsage.length > 0 && (
+                <div>
+                  <h5 className="font-medium text-gray-700 mb-2">Optimal Usage:</h5>
+                  <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
+                    {manifest.optimalUsage.map((usage: string, index: number) => (
+                      <li key={index}>{usage}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              
+              {manifest.notes && (
+                <div>
+                  <h5 className="font-medium text-gray-700 mb-2">Notes:</h5>
+                  <p className="text-sm text-gray-600">{manifest.notes}</p>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      );
+    }
   };
 
   return (
@@ -332,9 +316,22 @@ export default function ComponentsPage() {
 
               {showSchema.has(schema.id) && (
                 <div className="p-6 bg-gray-50">
-                  <pre className="text-sm whitespace-pre-wrap">
+                  <h4 className="text-lg font-semibold text-gray-800 mb-4">Component Schema</h4>
+                  <pre className="text-sm whitespace-pre-wrap bg-white p-4 rounded-lg border overflow-x-auto">
                     {JSON.stringify(getComponentManifest(schema.id), null, 2)}
                   </pre>
+                </div>
+              )}
+
+              {showAIDocs.has(schema.id) && (
+                <div className="p-6 bg-purple-50">
+                  <h4 className="text-lg font-semibold text-purple-800 mb-4">AI Documentation</h4>
+                  <div className="bg-white p-4 rounded-lg border border-purple-200">
+                    <p className="text-sm text-gray-700">
+                      This component can be used with AI-powered page builders and content management systems.
+                      The JSON schema provides structured data that AI systems can understand and manipulate.
+                    </p>
+                  </div>
                 </div>
               )}
 

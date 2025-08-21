@@ -94,7 +94,7 @@ export default function Features() {
   return (
     <section ref={sectionRef} className="py-20 bg-gradient-to-br from-gray-50 to-white w-full">
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-20">
-        <div className={`text-center mb-16 transition-all duration-1000 ${inView ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
+        <div className={`text-center mb-16 transition-all duration-1000 ${inView ? 'animate-fade-in-up' : ''}`}>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-[#1A5276]">
             Powerful Features
           </h2>
@@ -107,7 +107,7 @@ export default function Features() {
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className={`transition-all duration-700 ${inView ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}
+              className={`transition-all duration-700 ${inView ? 'animate-fade-in-up' : ''}`}
               style={{ 
                 transitionDelay: inView ? `${index * 0.1}s` : '0s',
                 animationDelay: inView ? `${index * 0.1}s` : '0s'

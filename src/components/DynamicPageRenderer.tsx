@@ -1,14 +1,32 @@
 'use client';
 
 import React from 'react';
-import { PageData, SectionData, COMPONENT_MAP } from '@/types/section-data';
+import { PageData, SectionData } from '@/types/section-data';
+
+// Sections imports
 import Hero from './sections/hero';
-// Removed per request: Services
+import HeroWithoutButton from './sections/hero_section_without_button';
 import Testimonials from './sections/testimonials';
-// Removed per request: SecurityCompliance
+import Benefits from './sections/benefits';
+import Differentiators from './sections/differentiators';
+import Comment from './sections/comment';
 import CTA from './sections/cta';
+import ProcessWorkflow from './sections/process-workflow';
+import GlobalPresence from './sections/global-presence';
+import ContactInfo from './sections/contact-info';
+import ResourceCenter from './sections/resource-center';
+import TechnologyStack from './sections/technology-stack';
+import BusinessSlider from './sections/business-slider';
+import ClientLogos from './sections/client-logos';
+import StatsShowcase from './sections/stats-showcase';
+import TeamExpertise from './sections/team-expertise';
+import ERPIntroText from './sections/erp-intro-text';
 import ResponsiveCardGrid from './sections/responsive-card-grid';
-// Removed per request: FAQ
+import ContentIllustrationLeft from './sections/content-illustration-left';
+import ContentIllustrationRight from './sections/content-illustration-right';
+import JobDetailSection from './sections/job-detail';
+import ContactFormSection from './sections/contact-form';
+import ContactWithMap from './sections/contact-with-map';
 
 // ============================================================================
 // DYNAMIC PAGE RENDERER
@@ -29,15 +47,31 @@ export const DynamicPageRenderer: React.FC<DynamicPageRendererProps> = ({
   className = '',
   onSectionRender
 }) => {
-  // Component mapping for dynamic rendering
+  // Component mapping for dynamic rendering (all sections/*)
   const componentMap: Record<string, React.ComponentType<any>> = {
-    hero: Hero,
-    // services: Services,
-    testimonials: Testimonials,
-    // 'security-compliance': SecurityCompliance,
-    cta: CTA,
+    'hero': Hero,
+    'hero-without-button': HeroWithoutButton,
+    'testimonials': Testimonials,
+    'benefits': Benefits,
+    'differentiators': Differentiators,
+    'comment': Comment,
+    'cta': CTA,
+    'process-workflow': ProcessWorkflow,
+    'global-presence': GlobalPresence,
+    'contact-info': ContactInfo,
+    'resource-center': ResourceCenter,
+    'technology-stack': TechnologyStack,
+    'business-slider': BusinessSlider,
+    'client-logos': ClientLogos,
+    'stats-showcase': StatsShowcase,
+    'team-expertise': TeamExpertise,
+    'erp-intro-text': ERPIntroText,
     'responsive-card-grid': ResponsiveCardGrid,
-    // faq: FAQ
+    'content-illustration-left': ContentIllustrationLeft,
+    'content-illustration-right': ContentIllustrationRight,
+    'job-detail': JobDetailSection,
+    'contact-form': ContactFormSection,
+    'contact-with-map': ContactWithMap
   };
 
   /**
@@ -51,10 +85,11 @@ export const DynamicPageRenderer: React.FC<DynamicPageRendererProps> = ({
       return null;
     }
 
-    // Call the callback when section is rendered
-    if (onSectionRender) {
-      onSectionRender(section.type, index);
-    }
+    // Defer callback to after commit to avoid setState during render
+    React.useEffect(() => {
+      if (onSectionRender) onSectionRender(section.type, index);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
       <Component
@@ -96,14 +131,14 @@ export const DynamicPageRenderer: React.FC<DynamicPageRendererProps> = ({
 
   return (
     <div className={`dynamic-page ${className}`}>
-      {/* Page Metadata */}
-      <head>
-        <title>{pageData.metadata.title}</title>
-        <meta name="description" content={pageData.metadata.description} />
+      {/* Page Metadata - Display as content instead of head tags */}
+      <div className="page-metadata" style={{ display: 'none' }}>
+        <div data-title={pageData.metadata.title}></div>
+        <div data-description={pageData.metadata.description}></div>
         {pageData.metadata.keywords && (
-          <meta name="keywords" content={pageData.metadata.keywords.join(', ')} />
+          <div data-keywords={pageData.metadata.keywords.join(', ')}></div>
         )}
-      </head>
+      </div>
 
       {/* Render all sections */}
       <main className="page-content">

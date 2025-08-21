@@ -42,16 +42,14 @@ import {
 // Import all section components
 import Benefits from '@/components/sections/benefits';
 import ClientLogos from '@/components/sections/client-logos';
-import ServicesOverview from '@/components/sections/services-overview';
 import StatsShowcase from '@/components/sections/stats-showcase';
 import TeamExpertise from '@/components/sections/team-expertise';
 import TechnologyStack from '@/components/sections/technology-stack';
-import ClientSuccessStories from '@/components/sections/client-success-stories';
+
 import BusinessSlider from '@/components/sections/business-slider';
 import Hero from '@/components/sections/hero';
 import Testimonials from '@/components/sections/testimonials';
-import AwardsRecognition from '@/components/sections/awards-recognition';
-import InnovationLab from '@/components/sections/innovation-lab';
+
 import ResourceCenter from '@/components/sections/resource-center';
 // Removed per request
 // import IndustrySolutions from '@/components/sections/industry-solutions';
@@ -69,7 +67,7 @@ import Differentiators from '@/components/sections/differentiators';
 // import FAQ from '@/components/sections/faq';
 // import ProcessWorkflow from '@/components/sections/process-workflow';
 import HeroSectionWithoutButton from '@/components/sections/hero_section_without_button';
-import SuccessSnapshots from '@/components/sections/success-snapshots';
+
 
 // 1. Hero Section Component
 export function HeroSection({ data }: { data?: any }) {
@@ -648,9 +646,7 @@ export function ImageGallery() {
               <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <div className="text-center text-white">
                   <h3 className="text-xl font-semibold mb-2">{image.title}</h3>
-                  <button className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                    View Details
-                  </button>
+                 
                 </div>
               </div>
             </div>
@@ -974,39 +970,31 @@ export function ClientLogosSection() {
   return <ClientLogos />;
 }
 
-// 11. Services Overview Component
-export function ServicesOverviewSection() {
-  return <ServicesOverview />;
-}
+
 
 // 12. Stats Showcase Component
 export function StatsShowcaseSection() {
   return <StatsShowcase />;
 }
 
-// 13. Process Timeline Component
-export function ProcessTimelineSection() { return null; }
+
 
 // 14. Team Expertise Component
 export function TeamExpertiseSection() {
   return <TeamExpertise />;
 }
 
-// 15. Industry Solutions Component
-export function IndustrySolutionsSection() { return null; }
+
 
 // 16. Technology Stack Component
 export function TechnologyStackSection() {
   return <TechnologyStack />;
 }
 
-// 17. Case Studies Component
-export function CaseStudiesSection() { return null; }
+
 
 // 18. Client Success Stories Component
-export function ClientSuccessStoriesSection() {
-  return <ClientSuccessStories />;
-}
+
 
 // 19. Business Slider Component
 export function BusinessSliderSection() {
@@ -1018,40 +1006,30 @@ export function HeroSectionComponent() {
   return <Hero />;
 }
 
-// 21. Service Pricing Component
-export function ServicePricingSection() { return null; }
 
-// 22. Services Component
-export function ServicesSection() { return null; }
+
+
 
 // 23. Testimonials Component
 export function TestimonialsSection() {
   return <Testimonials />;
 }
 
-// 24. Awards Recognition Component
-export function AwardsRecognitionSection() {
-  return <AwardsRecognition />;
-}
+
 
 // 25. Innovation Lab Component
-export function InnovationLabSection() {
-  return <InnovationLab />;
-}
+ 
 
-// 26. Security Compliance Component
-export function SecurityComplianceSection() { return null; }
 
-// 27. Partnerships Component
-export function PartnershipsSection() { return null; }
+
+
 
 // 28. Resource Center Component
 export function ResourceCenterSection() {
   return <ResourceCenter />;
 }
 
-// 29. Support Services Component
-export function SupportServicesSection() { return null; }
+
 
 // 30. Contact Info Component
 export function ContactInfoSection() {
@@ -1079,17 +1057,13 @@ export function DifferentiatorsSection() {
 }
 
 // 35. FAQ Component
-export function FAQSection() { return null; }
+
 
 // 36. Process Workflow Component
-export function ProcessWorkflowSection() { return null; }
+
 
 // 37. Hero Section Without Button Component
 export function HeroSectionWithoutButtonComponent() {
   return <HeroSectionWithoutButton />;
 }
 
-// 38. Success Snapshots Component
-export function SuccessSnapshotsSection() {
-  return <SuccessSnapshots />;
-}

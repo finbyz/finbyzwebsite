@@ -14,27 +14,7 @@
   opacity: 0.1;
 }
 
-.process-workflow-pattern-1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 18rem;
-  height: 18rem;
-  background-color: white;
-  border-radius: 50%;
-  transform: translate(-9rem, -9rem);
-}
 
-.process-workflow-pattern-2 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 24rem;
-  height: 24rem;
-  background-color: white;
-  border-radius: 50%;
-  transform: translate(12rem, 12rem);
-}
 
 .process-workflow-container {
   width: 100%;
@@ -65,7 +45,7 @@
 .process-workflow-header {
   text-align: center;
   margin-bottom: 4rem;
-  transition: all 1s ease;
+  transition: all 0.3s ease;
 }
 
 .process-workflow-fade-in-up {
@@ -75,7 +55,7 @@
 
 .process-workflow-fade-out {
   opacity: 0;
-  transform: translateY(2.5rem);
+  transform: translateY(0);
 }
 
 .process-workflow-title {
@@ -132,9 +112,29 @@
   }
 }
 
+/* Large screens: adapt columns to item count */
+@media (min-width: 1024px) {
+  /* 2 items → 2 columns */
+  .process-workflow-grid:not(:has(> :nth-child(3))) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  /* 3 items → 3 columns */
+  .process-workflow-grid:not(:has(> :nth-child(4))):has(> :nth-child(3)) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  /* Exactly 6 items → 3 columns (2 rows) */
+  .process-workflow-grid:has(> :nth-child(6)):not(:has(> :nth-child(7))) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  /* Exactly 8 items → 4 columns (2 rows) */
+  .process-workflow-grid:has(> :nth-child(8)):not(:has(> :nth-child(9))) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 /* Card Wrapper */
 .process-workflow-card-wrapper {
-  transition: all 0.7s ease;
+  transition: all 0.3s ease;
   position: relative;
 }
 
@@ -322,7 +322,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  transition: all 1s ease;
+  transition: all 0.3s ease;
 }
 
 @media (min-width: 768px) {

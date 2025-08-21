@@ -7,19 +7,24 @@ import "@/styles/components/contact-info.css";
 // Intersection Observer Hook
 function useInView(threshold = 0.3) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [inView, setInView] = useState(false);
+  const [revealed, setRevealed] = useState(false);
 
   useEffect(() => {
-    if (!ref.current) return;
+    if (!ref.current || revealed) return;
     const observer = new window.IntersectionObserver(
-      ([entry]) => setInView(entry.isIntersecting),
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setRevealed(true);
+          observer.disconnect();
+        }
+      },
       { threshold }
     );
     observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [threshold]);
+  }, [threshold, revealed]);
 
-  return [ref, inView] as const;
+  return [ref, revealed] as const;
 }
 
 interface ContactMethod {
@@ -207,6 +212,22 @@ export default function ContactInfo({ data = {} }: ContactInfoProps) {
     }
   } = data;
 
+  // Ensure distinct icons in methods by cycling a pool if duplicates
+  const methodIconPool = ["Phone", "Mail", "MessageCircle", "Users"];
+  const normalizeIcons = <T extends { icon: string }>(items: T[], pool: string[]) => {
+    const used = new Set<string>();
+    return items.map((it, i) => {
+      let icon = it.icon;
+      if (used.has(icon)) {
+        icon = pool.find((n) => !used.has(n)) || icon;
+      }
+      used.add(icon);
+      return { ...it, icon } as T;
+    });
+  };
+
+  const distinctContactMethods = normalizeIcons(contactMethods as any[], methodIconPool);
+
   const getIconComponent = (iconName: string) => {
     switch (iconName) {
       case "Phone":
@@ -233,10 +254,7 @@ export default function ContactInfo({ data = {} }: ContactInfoProps) {
   return (
     <section ref={sectionRef} className="contact-info-section">
       {/* Background Pattern */}
-      <div className="contact-info-background">
-        <div className="contact-info-pattern-1"></div>
-        <div className="contact-info-pattern-2"></div>
-      </div>
+      
       
       <div className="contact-info-container">
         <div className={`contact-info-header ${inView ? 'contact-info-fade-in-up' : 'contact-info-fade-out'}`}>
@@ -282,7 +300,7 @@ export default function ContactInfo({ data = {} }: ContactInfoProps) {
         <div className="contact-info-methods">
           <h3 className="contact-info-methods-title">Contact Methods</h3>
           <div className="contact-info-methods-grid">
-            {contactMethods.map((method: any, index: number) => {
+            {distinctContactMethods.map((method: any, index: number) => {
               const IconComponent = getIconComponent(method.icon);
               
               return (

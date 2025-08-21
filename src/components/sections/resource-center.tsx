@@ -7,19 +7,24 @@ import "@/styles/components/resource-center.css";
 // Intersection Observer Hook
 function useInView(threshold = 0.3) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [inView, setInView] = useState(false);
+  const [revealed, setRevealed] = useState(false);
 
   useEffect(() => {
-    if (!ref.current) return;
+    if (!ref.current || revealed) return;
     const observer = new window.IntersectionObserver(
-      ([entry]) => setInView(entry.isIntersecting),
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setRevealed(true);
+          observer.disconnect();
+        }
+      },
       { threshold }
     );
     observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [threshold]);
+  }, [threshold, revealed]);
 
-  return [ref, inView] as const;
+  return [ref, revealed] as const;
 }
 
 interface Resource {
@@ -231,6 +236,26 @@ export default function ResourceCenter({ data = {} }: ResourceCenterProps) {
     }
   } = data;
 
+  // Enforce distinct icons within each subgroup
+  const distinctify = <T extends { icon: string }>(items: T[], pool: string[]) => {
+    const used = new Set<string>();
+    return items.map((it) => {
+      let name = it.icon;
+      if (used.has(name) || !pool.includes(name)) {
+        name = pool.find((n) => !used.has(n)) || name;
+      }
+      used.add(name);
+      return { ...it, icon: name } as T;
+    });
+  };
+
+  const categoryPool = ["BookOpen", "Play", "Video", "Download", "Calendar", "Users", "FileText", "Star"];
+  const resourcePool = ["BookOpen", "FileText", "Video", "Download", "Play", "Calendar"];
+  const eventPool = ["Users", "Calendar", "Play"];
+
+  const distinctCategories = distinctify(resourceCategories, categoryPool);
+  const distinctResources = distinctify(resources, resourcePool);
+  const distinctEvents = distinctify(upcomingEvents, eventPool);
   const getIconComponent = (iconName: string) => {
     switch (iconName) {
       case "BookOpen":
@@ -274,7 +299,7 @@ export default function ResourceCenter({ data = {} }: ResourceCenterProps) {
         
         {/* Resource Categories */}
         <div className={`resource-center-categories ${inView ? 'resource-center-fade-in-up' : 'resource-center-fade-out'}`}>
-          {resourceCategories.map((category, index) => {
+          {distinctCategories.map((category, index) => {
             const IconComponent = getIconComponent(category.icon);
             
             return (
@@ -306,7 +331,7 @@ export default function ResourceCenter({ data = {} }: ResourceCenterProps) {
         <div className="resource-center-featured">
           <h3 className="resource-center-featured-title">Featured Resources</h3>
           <div className="resource-center-featured-grid">
-            {resources.map((resource, index) => {
+            {distinctResources.map((resource, index) => {
               const IconComponent = getIconComponent(resource.icon);
               
               return (
@@ -375,7 +400,7 @@ export default function ResourceCenter({ data = {} }: ResourceCenterProps) {
         <div className={`resource-center-events ${inView ? 'resource-center-fade-in-up' : 'resource-center-fade-out'}`}>
           <h3 className="resource-center-events-title">Upcoming Events</h3>
           <div className="resource-center-events-grid">
-            {upcomingEvents.map((event, index) => {
+            {distinctEvents.map((event, index) => {
               const IconComponent = getIconComponent(event.icon);
               
               return (

@@ -43,11 +43,6 @@
   animation: fadeInUp 1s ease-out;
 }
 
-.stats-showcase-header.fade-out {
-  opacity: 0;
-  transform: translateY(2.5rem);
-}
-
 .stats-showcase-title {
   font-size: 1.875rem;
   font-weight: 700;
@@ -101,6 +96,26 @@
   }
 }
 
+/* Large screens: adapt columns to item count */
+@media (min-width: 1024px) {
+  /* 2 items → 2 columns */
+  .stats-showcase-grid:not(:has(> :nth-child(3))) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  /* 3 items → 3 columns */
+  .stats-showcase-grid:not(:has(> :nth-child(4))):has(> :nth-child(3)) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  /* Exactly 6 items → 3 columns (2 rows) */
+  .stats-showcase-grid:has(> :nth-child(6)):not(:has(> :nth-child(7))) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  /* Exactly 8 items → 4 columns (2 rows) */
+  .stats-showcase-grid:has(> :nth-child(8)):not(:has(> :nth-child(9))) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 /* Stats Card */
 .stats-showcase-card {
   background: rgba(255, 255, 255, 0.1);
@@ -130,11 +145,6 @@
 
 .stats-showcase-card.fade-in-up {
   animation: fadeInUp 0.7s ease-out;
-}
-
-.stats-showcase-card.fade-out {
-  opacity: 0;
-  transform: translateY(2.5rem);
 }
 
 /* Icon Container */
@@ -221,7 +231,7 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(2.5rem);
+    transform: translateY(-30px);
   }
   to {
     opacity: 1;

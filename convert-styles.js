@@ -35,13 +35,13 @@ const commonCSSPatterns = `
 
 .fade-out {
   opacity: 0;
-  transform: translateY(2.5rem);
+  transform: translateY(0);
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(2.5rem);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;

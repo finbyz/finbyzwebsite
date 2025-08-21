@@ -8,40 +8,93 @@ export interface ComponentSchema {
 }
 
 export const componentSchemas: ComponentSchema[] = [
+
   {
-    id: "services-overview",
-    name: "Services Overview",
-    description: "Four-tile services overview grid with one highlighted card (e.g., IT Consulting).",
+    id: "content-illustration-right",
+    name: "Content + Illustration (Right)",
+    description: "Left-aligned title and paragraphs with an illustration image on the right",
     category: "Sections",
     schema: {
-      component: "ServicesOverview",
+      component: "ContentIllustrationRight",
       data: {
-        services: {
-          type: "array",
-          items: {
-            type: "object",
-            properties: {
-              title: { type: "string" },
-              description: { type: "string" },
-              href: { type: "string" },
-              icon: { type: "string" },
-              imageSrc: { type: "string" }
-            }
-          }
-        },
-        highlightedIndex: { type: "number" }
+        title: { type: "string" },
+        paragraphs: { type: "array", items: { type: "string" } },
+        imageSrc: { type: "string" },
+        imageAlt: { type: "string" }
       }
     },
     example: {
-      component: "ServicesOverview",
+      component: "ContentIllustrationRight",
       data: {
-        highlightedIndex: 1,
-        services: [
-          { title: "ERP Implementation", description: "Technology at work, a better way of doing the things!", icon: "BarChart3" },
-          { title: "IT Consulting", description: "We help you align technology to achieve your business goals.", icon: "Briefcase" },
-          { title: "Software Development", description: "From idea to production with modern engineering practices.", icon: "Code2" },
-          { title: "Data Analytics", description: "Insights that accelerate decision‑making and growth.", icon: "Database" }
-        ]
+        title: "2. Pick the Right Tools",
+        paragraphs: [
+          "Choose analytics tools that suit your business needs.",
+          "Popular options include Google Analytics, Mixpanel, and Adobe Analytics each offering unique features.",
+          "Select tools that provide the insights necessary for making informed, data‑driven decisions."
+        ],
+        imageSrc: "/images/analytics-tools.png",
+        imageAlt: "Analytics tools illustration"
+      }
+    }
+  },
+
+  {
+    id: "content-illustration-left",
+    name: "Content + Illustration (Left)",
+    description: "Left-aligned image with title and paragraphs on the right",
+    category: "Sections",
+    schema: {
+      component: "ContentIllustrationLeft",
+      data: {
+        title: { type: "string" },
+        paragraphs: { type: "array", items: { type: "string" } },
+        imageSrc: { type: "string" },
+        imageAlt: { type: "string" }
+      }
+    },
+    example: {
+      component: "ContentIllustrationLeft",
+      data: {
+        title: "2. Pick the Right Tools",
+        paragraphs: [
+          "Choose analytics tools that suit your business needs.",
+          "Popular options include Google Analytics, Mixpanel, and Adobe Analytics each offering unique features.",
+          "Select tools that provide the insights necessary for making informed, data‑driven decisions."
+        ],
+        imageSrc: "/images/analytics-tools.png",
+        imageAlt: "Analytics tools illustration"
+      }
+    }
+  },
+
+  {
+    id: "erp-intro-text",
+    name: "ERP Intro Text",
+    description: "Large headline with quote icon and spacious descriptive paragraphs",
+    category: "Sections",
+    schema: {
+      component: "ERPIntroText",
+      data: {
+        title: { type: "string" },
+        paragraphs: { type: "array", items: { type: "string" } },
+        highlightLink: {
+          type: "object",
+          properties: {
+            text: { type: "string" },
+            href: { type: "string" }
+          }
+        }
+      }
+    },
+    example: {
+      component: "ERPIntroText",
+      data: {
+        title: "Looking for Leading ERP Software Development Company?",
+        paragraphs: [
+          "ERP systems are essential for the efficient functioning of modern businesses. As a leading ERP software provider, we understand the importance of integrating business processes, streamlining data management, and enhancing overall productivity. With technology evolving rapidly, ERP solutions especially open-source options like ERPNext have become more accessible and effective for businesses of all sizes. At Finbyz Tech, we offer premium ERP software development services in Ahmedabad, empowering organizations to overcome operational challenges and drive sustainable growth.",
+          "As a trusted ERPNext software company, Finbyz Tech guides your digital transformation journey by thoroughly understanding your existing workflows and recommending the most suitable ERP solutions. We help businesses unlock the full benefits of ERP implementation. Our goal is not just to deliver ERP systems, but to become your long-term IT partner. We go beyond the role of a typical ERP software supplier by offering end-to-end ERP software development services, including user training and post-implementation support. Our hands-on approach ensures a smooth transition to a more streamlined, professionally managed business operation."
+        ],
+        highlightLink: { text: "benefits of ERP implementation", href: "#" }
       }
     }
   },
@@ -73,78 +126,6 @@ export const componentSchemas: ComponentSchema[] = [
         acceptedTypes: ["image/*", "application/pdf", "text/*"],
         uploadButtonText: "Upload Files",
         dragText: "Drop files here"
-      }
-    }
-  },
-
-  {
-    id: "erp-modules",
-    name: "ERP Modules",
-    description: "ERP modules showcase with statistics, company info, and interactive module cards",
-    category: "Sections",
-    schema: {
-      component: "ERPModules",
-      data: {
-        companyName: { type: "string" },
-        companyDescription: { type: "string" },
-        yearsOfExperience: { type: "number" },
-        statistics: {
-          type: "array",
-          items: {
-            type: "object",
-            properties: {
-              number: { type: "string" },
-              label: { type: "string" }
-            }
-          }
-        },
-        modules: {
-          type: "array",
-          items: {
-            type: "object",
-            properties: {
-              id: { type: "string" },
-              title: { type: "string" },
-              quote: { type: "string" },
-              author: { type: "string" }
-            }
-          }
-        }
-      }
-    },
-    example: {
-      component: "ERPModules",
-      data: {
-        companyName: "Finbyz Tech Pvt Ltd",
-        companyDescription: "Finbyz Tech Pvt Ltd track record spans over 10+ years of IT business solutions. We have technology in our genes. We provide innovative solution that work for all the Industries/businesses. We are adept enough to help fit an ERP solution that exactly meets your goals.",
-        yearsOfExperience: 10,
-        statistics: [
-          { number: "100+", label: "Completed Projects" },
-          { number: "6000+", label: "Active Users" },
-          { number: "25+", label: "Expert Resources" }
-        ],
-        services: [
-          {
-            id: "erp-implementation",
-            title: "ERP Implementation",
-            description: "Technology at work, A better way of doing the Things!"
-          },
-          {
-            id: "it-consulting",
-            title: "IT Consulting",
-            description: "It's about your company, Your Business & Your Success."
-          },
-          {
-            id: "software-development",
-            title: "Software Development",
-            description: "Building digital solutions that drive your business forward."
-          },
-          {
-            id: "data-analytics",
-            title: "Data Analytics",
-            description: "Transform data into actionable insights for growth."
-          }
-        ]
       }
     }
   },
@@ -211,9 +192,9 @@ export const componentSchemas: ComponentSchema[] = [
   },
 
   {
-    id: "hero_section_without_button1",
-    name: "Hero Section Without Button",
-    description: "Hero section with title, subtitle, and image - no action buttons",
+    id: "hero_section_without_button_alt",
+    name: "Hero Section Without Button (Alternative)",
+    description: "Alternative hero section with title, subtitle, and image - no action buttons",
     category: "Sections",
     schema: {
       component: "Hero",
@@ -798,50 +779,7 @@ export const componentSchemas: ComponentSchema[] = [
 
 
 
-  {
-    id: "data-table",
-    name: "Data Table",
-    description: "Interactive data table with sorting and status indicators",
-    category: "Data",
-    schema: {
-      type: "object",
-      properties: {
-        title: { type: "string" },
-        subtitle: { type: "string" },
-        columns: {
-          type: "array",
-          items: { type: "string" }
-        },
-        data: {
-          type: "array",
-          items: {
-            type: "object",
-            properties: {
-              id: { type: "number" },
-              name: { type: "string" },
-              status: { type: "string" },
-              progress: { type: "number" },
-              priority: { type: "string" }
-            }
-          }
-        }
-      }
-    },
-    example: {
-      title: "Data Table",
-      subtitle: "Interactive data table with sorting and filtering",
-      columns: ["Project", "Status", "Progress", "Priority"],
-      data: [
-        {
-          id: 1,
-          name: "ERP Implementation",
-          status: "Completed",
-          progress: 100,
-          priority: "High"
-        }
-      ]
-    }
-  },
+
 
   {
     id: "modal-dialog",
@@ -1335,116 +1273,9 @@ export const componentSchemas: ComponentSchema[] = [
     }
   },
 
-  {
-    id: "client-success-stories",
-    name: "Client Success Stories",
-    description: "Showcase of client success stories with detailed case studies and results",
-    category: "Content",
-    schema: {
-      component: "ClientSuccessStories",
-      data: {
-        title: { type: "string", description: "Section title" },
-        subtitle: { type: "string", description: "Section subtitle" },
-        stories: {
-          type: "array",
-          items: {
-            type: "object",
-            properties: {
-              company: { type: "string" },
-              industry: { type: "string" },
-              logo: { type: "string" },
-              challenge: { type: "string" },
-              solution: { type: "string" },
-              results: {
-                type: "object",
-                properties: {
-                  performance: { type: "string" },
-                  users: { type: "string" },
-                  revenue: { type: "string" },
-                  uptime: { type: "string" }
-                }
-              },
-              duration: { type: "string" },
-              rating: { type: "number" },
-              testimonial: { type: "string" }
-            }
-          }
-        }
-      },
-      required: ["title", "subtitle", "stories"]
-    },
-    example: {
-      component: "ClientSuccessStories",
-      data: {
-        title: "Client Success Stories",
-        subtitle: "Real results from real clients. Discover how we've transformed businesses across industries",
-        stories: [
-          {
-            company: "TechCorp Solutions",
-            industry: "SaaS Platform",
-            logo: "TC",
-            challenge: "Scaling their platform to handle 10x user growth",
-            solution: "Implemented microservices architecture with auto-scaling",
-            results: {
-              performance: "300%",
-              users: "50K+",
-              revenue: "200%",
-              uptime: "99.9%"
-            },
-            duration: "6 months",
-            rating: 5,
-            testimonial: "The team delivered exceptional results, exceeding our expectations."
-          }
-        ]
-      }
-    }
-  },
 
-  {
-    id: "industry-solutions",
-    name: "Industry Solutions",
-    description: "Industry-specific solutions and expertise across different sectors",
-    category: "Content",
-    schema: {
-      component: "IndustrySolutions",
-      data: {
-        title: { type: "string", description: "Section title" },
-        subtitle: { type: "string", description: "Section subtitle" },
-        solutions: {
-          type: "array",
-          items: {
-            type: "object",
-            properties: {
-              industry: { type: "string" },
-              icon: { type: "string" },
-              description: { type: "string" },
-              solutions: { type: "array", items: { type: "string" } },
-              benefits: { type: "array", items: { type: "string" } },
-              stats: { type: "string" }
-            }
-          }
-        }
-      },
-      required: ["title", "subtitle", "solutions"]
-    },
-    example: {
-      component: "IndustrySolutions",
-      data: {
-        title: "Industry Solutions",
-        subtitle: "Tailored technology solutions designed specifically for your industry's unique challenges",
-        solutions: [
-          {
-            industry: "Healthcare",
-            icon: "Heart",
-            description: "Secure, HIPAA-compliant solutions for patient care",
-            solutions: ["Patient Management Systems", "Telemedicine Platforms"],
-            benefits: ["HIPAA Compliance", "Real-time Monitoring"],
-            stats: "25+ healthcare clients"
-          }
-        ]
-      }
-    }
-  },
+
+
 
   {
     id: "stats-showcase",
@@ -1580,51 +1411,7 @@ export const componentSchemas: ComponentSchema[] = [
     }
   },
 
-  {
-    id: "service-pricing",
-    name: "Service Pricing",
-    description: "Transparent pricing plans with features and benefits",
-    category: "Business",
-    schema: {
-      component: "ServicePricing",
-      data: {
-        title: { type: "string", description: "Section title" },
-        subtitle: { type: "string", description: "Section subtitle" },
-        plans: {
-          type: "array",
-          items: {
-            type: "object",
-            properties: {
-              name: { type: "string" },
-              price: { type: "string" },
-              period: { type: "string" },
-              description: { type: "string" },
-              features: { type: "array", items: { type: "string" } },
-              popular: { type: "boolean" }
-            }
-          }
-        }
-      },
-      required: ["title", "subtitle", "plans"]
-    },
-    example: {
-      component: "ServicePricing",
-      data: {
-        title: "Transparent Pricing",
-        subtitle: "Choose the perfect plan for your business needs",
-        plans: [
-          {
-            name: "Starter",
-            price: "$2,999",
-            period: "month",
-            description: "Perfect for small businesses",
-            features: ["Basic Website Development", "Responsive Design", "SEO Optimization"],
-            popular: false
-          }
-        ]
-      }
-    }
-  },
+
 
   {
     id: "process-workflow",
@@ -1670,191 +1457,10 @@ export const componentSchemas: ComponentSchema[] = [
     }
   },
 
-  {
-    id: "case-studies",
-    name: "Case Studies",
-    description: "Detailed project showcases with results and technologies",
-    category: "Content",
-    schema: {
-      component: "CaseStudies",
-      data: {
-        title: { type: "string", description: "Section title" },
-        subtitle: { type: "string", description: "Section subtitle" },
-        studies: {
-          type: "array",
-          items: {
-            type: "object",
-            properties: {
-              title: { type: "string" },
-              company: { type: "string" },
-              industry: { type: "string" },
-              challenge: { type: "string" },
-              solution: { type: "string" },
-              results: { type: "array", items: { type: "string" } },
-              technologies: { type: "array", items: { type: "string" } },
-              duration: { type: "string" },
-              team: { type: "string" },
-              rating: { type: "number" }
-            }
-          }
-        }
-      },
-      required: ["title", "subtitle", "studies"]
-    },
-    example: {
-      component: "CaseStudies",
-      data: {
-        title: "Case Studies",
-        subtitle: "Real projects, real results",
-        studies: [
-          {
-            title: "E-commerce Platform",
-            company: "Global Retail Inc",
-            industry: "E-commerce",
-            challenge: "Legacy system struggling with traffic",
-            solution: "Built modern scalable platform",
-            results: ["300% performance increase", "50% cart abandonment reduction"],
-            technologies: ["React", "Node.js", "PostgreSQL"],
-            duration: "6 months",
-            team: "8 developers",
-            rating: 5
-          }
-        ]
-      }
-    }
-  },
 
-  {
-    id: "awards-recognition",
-    name: "Awards & Recognition",
-    description: "Industry awards, certifications, and achievements",
-    category: "Business",
-    schema: {
-      component: "AwardsRecognition",
-      data: {
-        title: { type: "string", description: "Section title" },
-        subtitle: { type: "string", description: "Section subtitle" },
-        awards: {
-          type: "array",
-          items: {
-            type: "object",
-            properties: {
-              title: { type: "string" },
-              organization: { type: "string" },
-              year: { type: "string" },
-              category: { type: "string" },
-              description: { type: "string" }
-            }
-          }
-        },
-        certifications: {
-          type: "array",
-          items: {
-            type: "object",
-            properties: {
-              name: { type: "string" },
-              level: { type: "string" },
-              year: { type: "string" }
-            }
-          }
-        }
-      },
-      required: ["title", "subtitle", "awards", "certifications"]
-    },
-    example: {
-      component: "AwardsRecognition",
-      data: {
-        title: "Awards & Recognition",
-        subtitle: "Industry recognition and certifications",
-        awards: [
-          {
-            title: "Best Software Development Company 2024",
-            organization: "Tech Excellence Awards",
-            year: "2024",
-            category: "Excellence",
-            description: "Recognized for outstanding innovation"
-          }
-        ],
-        certifications: [
-          {
-            name: "AWS Solutions Architect",
-            level: "Professional",
-            year: "2024"
-          }
-        ]
-      }
-    }
-  },
 
-  {
-    id: "innovation-lab",
-    name: "Innovation Lab",
-    description: "Research projects and innovation initiatives",
-    category: "Content",
-    schema: {
-      component: "InnovationLab",
-      data: {
-        title: { type: "string", description: "Section title" },
-        subtitle: { type: "string", description: "Section subtitle" },
-        projects: {
-          type: "array",
-          items: {
-            type: "object",
-            properties: {
-              title: { type: "string" },
-              description: { type: "string" },
-              status: { type: "string" },
-              progress: { type: "number" },
-              team: { type: "string" },
-              timeline: { type: "string" },
-              technologies: { type: "array", items: { type: "string" } },
-              impact: { type: "string" }
-            }
-          }
-        },
-        researchAreas: {
-          type: "array",
-          items: {
-            type: "object",
-            properties: {
-              area: { type: "string" },
-              focus: { type: "string" },
-              publications: { type: "number" },
-              patents: { type: "number" }
-            }
-          }
-        }
-      },
-      required: ["title", "subtitle", "projects", "researchAreas"]
-    },
-    example: {
-      component: "InnovationLab",
-      data: {
-        title: "Innovation Lab",
-        subtitle: "Pushing the boundaries of technology",
-        projects: [
-          {
-            title: "AI-Powered Analytics Platform",
-            description: "Advanced machine learning algorithms",
-            status: "In Development",
-            progress: 75,
-            team: "8 researchers",
-            timeline: "6 months",
-            technologies: ["TensorFlow", "Python", "React"],
-            impact: "Expected 300% improvement"
-          }
-        ],
-        researchAreas: [
-          {
-            area: "Artificial Intelligence",
-            focus: "Machine Learning & Deep Learning",
-            publications: 12,
-            patents: 3
-          }
-        ]
-      }
-    }
-  },
+
+
 
   {
     id: "global-presence",
@@ -1926,133 +1532,9 @@ export const componentSchemas: ComponentSchema[] = [
     }
   },
 
-  {
-    id: "security-compliance",
-    name: "Security & Compliance",
-    description: "Security measures and compliance certifications",
-    category: "Business",
-    schema: {
-      component: "SecurityCompliance",
-      data: {
-        title: { type: "string", description: "Section title" },
-        subtitle: { type: "string", description: "Section subtitle" },
-        measures: {
-          type: "array",
-          items: {
-            type: "object",
-            properties: {
-              category: { type: "string" },
-              description: { type: "string" },
-              features: { type: "array", items: { type: "string" } }
-            }
-          }
-        },
-        certifications: {
-          type: "array",
-          items: {
-            type: "object",
-            properties: {
-              name: { type: "string" },
-              organization: { type: "string" },
-              status: { type: "string" },
-              validity: { type: "string" },
-              description: { type: "string" }
-            }
-          }
-        }
-      },
-      required: ["title", "subtitle", "measures", "certifications"]
-    },
-    example: {
-      component: "SecurityCompliance",
-      data: {
-        title: "Security & Compliance",
-        subtitle: "Enterprise-grade security measures",
-        measures: [
-          {
-            category: "Data Encryption",
-            description: "End-to-end encryption for all data",
-            features: ["AES-256 encryption", "SSL/TLS protocols"]
-          }
-        ],
-        certifications: [
-          {
-            name: "SOC 2 Type II",
-            organization: "AICPA",
-            status: "Certified",
-            validity: "Annual",
-            description: "Security controls certification"
-          }
-        ]
-      }
-    }
-  },
 
-  {
-    id: "partnerships",
-    name: "Strategic Partnerships",
-    description: "Partnerships and collaborations with industry leaders",
-    category: "Business",
-    schema: {
-      component: "Partnerships",
-      data: {
-        title: { type: "string", description: "Section title" },
-        subtitle: { type: "string", description: "Section subtitle" },
-        partners: {
-          type: "array",
-          items: {
-            type: "object",
-            properties: {
-              name: { type: "string" },
-              category: { type: "string" },
-              level: { type: "string" },
-              description: { type: "string" },
-              benefits: { type: "array", items: { type: "string" } },
-              projects: { type: "number" },
-              years: { type: "number" }
-            }
-          }
-        },
-        categories: {
-          type: "array",
-          items: {
-            type: "object",
-            properties: {
-              category: { type: "string" },
-              count: { type: "number" },
-              description: { type: "string" }
-            }
-          }
-        }
-      },
-      required: ["title", "subtitle", "partners", "categories"]
-    },
-    example: {
-      component: "Partnerships",
-      data: {
-        title: "Strategic Partnerships",
-        subtitle: "Collaborating with industry leaders",
-        partners: [
-          {
-            name: "Microsoft",
-            category: "Technology Partner",
-            level: "Gold Partner",
-            description: "Strategic partnership for Azure solutions",
-            benefits: ["Azure cloud expertise", "Enterprise solutions"],
-            projects: 25,
-            years: 5
-          }
-        ],
-        categories: [
-          {
-            category: "Cloud Partners",
-            count: 8,
-            description: "Leading cloud providers"
-          }
-        ]
-      }
-    }
-  },
+
+
 
   {
     id: "resource-center",
@@ -2126,71 +1608,7 @@ export const componentSchemas: ComponentSchema[] = [
     }
   },
 
-  {
-    id: "support-services",
-    name: "Support Services",
-    description: "Support tiers and specialized services",
-    category: "Business",
-    schema: {
-      component: "SupportServices",
-      data: {
-        title: { type: "string", description: "Section title" },
-        subtitle: { type: "string", description: "Section subtitle" },
-        tiers: {
-          type: "array",
-          items: {
-            type: "object",
-            properties: {
-              name: { type: "string" },
-              description: { type: "string" },
-              responseTime: { type: "string" },
-              availability: { type: "string" },
-              features: { type: "array", items: { type: "string" } },
-              price: { type: "string" }
-            }
-          }
-        },
-        services: {
-          type: "array",
-          items: {
-            type: "object",
-            properties: {
-              service: { type: "string" },
-              description: { type: "string" },
-              responseTime: { type: "string" },
-              coverage: { type: "string" }
-            }
-          }
-        }
-      },
-      required: ["title", "subtitle", "tiers", "services"]
-    },
-    example: {
-      component: "SupportServices",
-      data: {
-        title: "Support Services",
-        subtitle: "Comprehensive support solutions",
-        tiers: [
-          {
-            name: "Basic Support",
-            description: "Essential support for small projects",
-            responseTime: "24 hours",
-            availability: "Business Hours",
-            features: ["Email support", "Documentation access"],
-            price: "Free"
-          }
-        ],
-        services: [
-          {
-            service: "Technical Support",
-            description: "Expert technical assistance",
-            responseTime: "2-24 hours",
-            coverage: "All technologies"
-          }
-        ]
-      }
-    }
-  },
+
 
   {
     id: "contact-info",
@@ -2557,75 +1975,9 @@ export const componentSchemas: ComponentSchema[] = [
     }
   },
 
-  {
-    id: "hero_section_without_button",
-    name: "Hero Section Without Button",
-    description: "Hero section without call-to-action buttons",
-    category: "Sections",
-    schema: {
-      component: "HeroSectionWithoutButton",
-      data: {
-        title: { type: "string" },
-        subtitle: { type: "string" },
-        background: { type: "string" }
-      }
-    },
-    example: {
-      component: "HeroSectionWithoutButton",
-      data: {
-        title: "Welcome to Finbyz",
-        subtitle: "Empowering businesses with innovative solutions",
-        background: "gradient"
-      }
-    }
-  },
 
-  {
-    id: "success-snapshots",
-    name: "Success Snapshots",
-    description: "Success stories and achievements showcase",
-    category: "Sections",
-    schema: {
-      component: "SuccessSnapshots",
-      data: {
-        title: { type: "string" },
-        subtitle: { type: "string" },
-        snapshots: {
-          type: "array",
-          items: {
-            type: "object",
-            properties: {
-              title: { type: "string" },
-              description: { type: "string" },
-              metric: { type: "string" },
-              icon: { type: "string" }
-            }
-          }
-        }
-      }
-    },
-    example: {
-      component: "SuccessSnapshots",
-      data: {
-        title: "Success Stories",
-        subtitle: "Real results from our clients",
-        snapshots: [
-          {
-            title: "Increased Efficiency",
-            description: "Streamlined operations for manufacturing client",
-            metric: "40%",
-            icon: "TrendingUp"
-          },
-          {
-            title: "Cost Reduction",
-            description: "Optimized processes for retail business",
-            metric: "25%",
-            icon: "DollarSign"
-          }
-        ]
-      }
-    }
-  }
+
+
 ];
 
 export const getComponentSchema = (id: string): ComponentSchema | undefined => {

@@ -35,11 +35,6 @@
   animation: fadeInUp 1s ease-out;
 }
 
-.team-expertise-header.fade-out {
-  opacity: 0;
-  transform: translateY(2.5rem);
-}
-
 .team-expertise-title {
   font-size: 2.25rem;
   font-weight: 700;
@@ -81,6 +76,17 @@
   }
 }
 
+/* If only two cards are present, use two equal columns on large screens */
+@media (min-width: 1024px) {
+  .team-expertise-grid:not(:has(> :nth-child(3))) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  /* Exactly 8 team items → 4 columns (2 rows) */
+  .team-expertise-grid:has(> :nth-child(8)):not(:has(> :nth-child(9))) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 /* Team Card */
 .team-expertise-card {
   background: white;
@@ -99,11 +105,6 @@
 
 .team-expertise-card.fade-in-up {
   animation: fadeInUp 0.7s ease-out;
-}
-
-.team-expertise-card.fade-out {
-  opacity: 0;
-  transform: translateY(2.5rem);
 }
 
 /* Avatar */
@@ -234,7 +235,7 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(2.5rem);
+    transform: translateY(-30px);
   }
   to {
     opacity: 1;

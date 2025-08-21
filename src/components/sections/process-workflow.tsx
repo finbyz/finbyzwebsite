@@ -7,19 +7,24 @@ import "@/styles/components/process-workflow.css";
 // Intersection Observer Hook
 function useInView(threshold = 0.3) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [inView, setInView] = useState(false);
+  const [revealed, setRevealed] = useState(false);
 
   useEffect(() => {
-    if (!ref.current) return;
+    if (!ref.current || revealed) return;
     const observer = new window.IntersectionObserver(
-      ([entry]) => setInView(entry.isIntersecting),
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setRevealed(true);
+          observer.disconnect();
+        }
+      },
       { threshold }
     );
     observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [threshold]);
+  }, [threshold, revealed]);
 
-  return [ref, inView] as const;
+  return [ref, revealed] as const;
 }
 
 interface ProcessStep {
@@ -155,6 +160,21 @@ export default function ProcessWorkflow({ data = {} }: ProcessWorkflowProps) {
     }
   } = data;
 
+  // Ensure distinct icons across steps using available pool
+  const stepIconPool = ["Search", "Lightbulb", "Code", "TestTube", "Rocket", "CheckCircle"];
+  const normalizeDistinct = (items: ProcessStep[]) => {
+    const used = new Set<string>();
+    return items.map((item) => {
+      let name = item.icon;
+      if (used.has(name) || !stepIconPool.includes(name)) {
+        name = stepIconPool.find((n) => !used.has(n)) || name;
+      }
+      used.add(name);
+      return { ...item, icon: name } as ProcessStep;
+    });
+  };
+  const distinctSteps = normalizeDistinct(processSteps);
+
   const getIconComponent = (iconName: string) => {
     switch (iconName) {
       case "Search":
@@ -177,10 +197,7 @@ export default function ProcessWorkflow({ data = {} }: ProcessWorkflowProps) {
   return (
     <section ref={sectionRef} className="process-workflow-section">
       {/* Background Pattern */}
-      <div className="process-workflow-background">
-        <div className="process-workflow-pattern-1"></div>
-        <div className="process-workflow-pattern-2"></div>
-      </div>
+
       
       <div className="process-workflow-container">
         <div className={`process-workflow-header ${inView ? 'process-workflow-fade-in-up' : 'process-workflow-fade-out'}`}>
@@ -193,12 +210,12 @@ export default function ProcessWorkflow({ data = {} }: ProcessWorkflowProps) {
         </div>
         
         <div className="process-workflow-grid">
-          {processSteps.map((step, index) => {
+          {distinctSteps.map((step, index) => {
             const IconComponent = getIconComponent(step.icon);
             
             return (
               <div
-                key={step.step}
+                key={`${step.step}-${step.title}-${index}`}
                 className={`process-workflow-card-wrapper ${inView ? 'process-workflow-fade-in-up' : 'process-workflow-fade-out'}`}
                 style={{ 
                   transitionDelay: inView ? `${index * 0.15}s` : '0s',

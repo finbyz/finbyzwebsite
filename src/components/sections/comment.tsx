@@ -40,19 +40,24 @@ import "@/styles/components/comment.css";
  */
 function useInView(threshold = 0.3) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [inView, setInView] = useState(false);
+  const [revealed, setRevealed] = useState(false);
 
   useEffect(() => {
-    if (!ref.current) return;
+    if (!ref.current || revealed) return;
     const observer = new window.IntersectionObserver(
-      ([entry]) => setInView(entry.isIntersecting),
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setRevealed(true);
+          observer.disconnect();
+        }
+      },
       { threshold }
     );
     observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [threshold]);
+  }, [threshold, revealed]);
 
-  return [ref, inView] as const;
+  return [ref, revealed] as const;
 }
 
 interface CommentProps {
@@ -93,8 +98,8 @@ export default function Comment({ data = {} }: CommentProps) {
               ? 'comment-slide-in-left' 
               : 'comment-fade-in-up' 
             : isOpen 
-              ? 'comment-slide-out-left' 
-              : 'comment-fade-out'
+                      ? 'comment-slide-out-up'
+        : 'comment-fade-out'
         }`}>
           <div className="comment-layout">
             {/* Symbol Design */}

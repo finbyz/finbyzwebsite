@@ -7,19 +7,24 @@ import "@/styles/components/team-expertise.css";
 // Intersection Observer Hook
 function useInView(threshold = 0.3) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [inView, setInView] = useState(false);
+  const [revealed, setRevealed] = useState(false);
 
   useEffect(() => {
-    if (!ref.current) return;
+    if (!ref.current || revealed) return;
     const observer = new window.IntersectionObserver(
-      ([entry]) => setInView(entry.isIntersecting),
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setRevealed(true);
+          observer.disconnect();
+        }
+      },
       { threshold }
     );
     observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [threshold]);
+  }, [threshold, revealed]);
 
-  return [ref, inView] as const;
+  return [ref, revealed] as const;
 }
 
 const expertiseAreas = [
@@ -115,6 +120,14 @@ const expertiseAreas = [
 
 export default function TeamExpertise({ data = {} }: { data?: Record<string, any> }) {
   const [sectionRef, inView] = useInView(0.3);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  // Set hasAnimated to true when element comes into view for the first time
+  useEffect(() => {
+    if (inView && !hasAnimated) {
+      setHasAnimated(true);
+    }
+  }, [inView, hasAnimated]);
 
   // Use provided data or fallback to defaults
   const {
@@ -128,7 +141,7 @@ export default function TeamExpertise({ data = {} }: { data?: Record<string, any
       {/* Background Pattern removed */}
       
       <div className="team-expertise-container">
-        <div className={`team-expertise-header ${inView ? 'fade-in-up' : 'fade-out'}`}>
+        <div className={`team-expertise-header ${hasAnimated ? 'fade-in-up' : ''}`}>
           <h2 className="team-expertise-title">
             {title}
           </h2>
@@ -141,10 +154,10 @@ export default function TeamExpertise({ data = {} }: { data?: Record<string, any
           {customTeam.map((member: any, index: number) => (
             <div
               key={member.category || member.name || index}
-              className={`team-expertise-card ${inView ? 'fade-in-up' : 'fade-out'}`}
+              className={`team-expertise-card ${hasAnimated ? 'fade-in-up' : ''}`}
               style={{ 
-                transitionDelay: inView ? `${index * 0.1}s` : '0s',
-                animationDelay: inView ? `${index * 0.1}s` : '0s'
+                transitionDelay: hasAnimated ? `${index * 0.1}s` : '0s',
+                animationDelay: hasAnimated ? `${index * 0.1}s` : '0s'
               }}
             >
               <div className="flex items-center justify-between mb-4">
@@ -213,23 +226,23 @@ export default function TeamExpertise({ data = {} }: { data?: Record<string, any
           ))}
         </div>
         
-        {/* Team Stats */}
-        <div className={`mt-16 grid md:grid-cols-4 gap-8 transition-all duration-1000 ${inView ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
+        {/* Stats Section */}
+        <div className={`mt-16 grid md:grid-cols-4 gap-8 transition-all duration-1000 ${inView ? 'animate-fade-in-up' : ''}`}>
           <div className="text-center">
-            <div className="text-4xl font-bold text-[#1A5276] mb-2">70+</div>
+            <div className="text-3xl font-bold text-blue-600 mb-2">50+</div>
             <div className="text-gray-600">Team Members</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-[#1A5276] mb-2">830+</div>
-            <div className="text-gray-600">Projects Completed</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-[#1A5276] mb-2">15+</div>
+            <div className="text-3xl font-bold text-purple-600 mb-2">15+</div>
             <div className="text-gray-600">Years Experience</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-[#1A5276] mb-2">98%</div>
-            <div className="text-gray-600">Client Satisfaction</div>
+            <div className="text-3xl font-bold text-green-600 mb-2">100+</div>
+            <div className="text-gray-600">Projects Delivered</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-orange-600 mb-2">24/7</div>
+            <div className="text-gray-600">Support Available</div>
           </div>
         </div>
       </div>

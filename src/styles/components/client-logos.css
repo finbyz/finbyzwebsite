@@ -93,7 +93,7 @@
 
 .client-logos-track.fade-out {
   opacity: 0;
-  transform: translateY(2rem);
+  transform: translateY(0);
 }
 
 .client-logos-slides {

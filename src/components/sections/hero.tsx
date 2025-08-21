@@ -153,14 +153,22 @@ export default function Hero({ data = {} }: { data?: Record<string, any> }) {
             <div className="hero-glow-effect"></div>
           </div>
           <div className="hero-image-wrapper">
-            <Image
-              src={renderedData.image.src}
-              alt={renderedData.image.alt}
-              fill
-              style={{ objectFit: "contain" }}
-              className="hero-image"
-              priority
-            />
+            {(() => {
+              const src: string = renderedData?.image?.src || '';
+              const alt: string = renderedData?.image?.alt || 'Hero Image';
+              const isExternal = /^https?:\/\//i.test(src);
+              return (
+                <Image
+                  src={src}
+                  alt={alt}
+                  fill
+                  style={{ objectFit: "contain" }}
+                  className="hero-image"
+                  priority
+                  unoptimized={isExternal}
+                />
+              );
+            })()}
           </div>
         </div>
       </div>

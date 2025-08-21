@@ -9,19 +9,24 @@ import "@/styles/components/benefits.css";
 // Intersection Observer Hook
 function useInView(threshold = 0.3) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [inView, setInView] = useState(false);
+  const [revealed, setRevealed] = useState(false);
 
   useEffect(() => {
-    if (!ref.current) return;
+    if (!ref.current || revealed) return;
     const observer = new window.IntersectionObserver(
-      ([entry]) => setInView(entry.isIntersecting),
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setRevealed(true);
+          observer.disconnect();
+        }
+      },
       { threshold }
     );
     observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [threshold]);
+  }, [threshold, revealed]);
 
-  return [ref, inView] as const;
+  return [ref, revealed] as const;
 }
 
 interface AnimatedCounterProps {
@@ -136,6 +141,33 @@ export default function Benefits({ data = {} }: BenefitsProps) {
     ctaButton = { text: "Let's Build That Efficiency →", action: "efficiency" }
   } = data;
 
+  // Ensure distinct icons across benefits (fallback rotates through pool)
+  const benefitIconPool = [
+    "Award",
+    "TrendingUp",
+    "Globe",
+    "Target",
+    "CheckCircle",
+    "Zap",
+    "Shield",
+    "Clock",
+  ];
+  const normalizeDistinct = (items: BenefitItem[]) => {
+    const used = new Set<string>();
+    return items.map((item) => {
+      let name = item.icon;
+      if (used.has(name) || !benefitIconPool.includes(name)) {
+        name = benefitIconPool.find((n) => !used.has(n)) || name;
+      }
+      used.add(name);
+      return { ...item, icon: name } as BenefitItem;
+    });
+  };
+  const distinctBenefits = normalizeDistinct(benefits);
+
+  const getDelayClass = (index: number) => `benefits-delay-${index}`;
+  const getVariantClass = (index: number) => `benefits-icon-container--v${index % 4}`;
+
   const getIconComponent = (iconName: string) => {
     switch (iconName) {
       case "Award":
@@ -159,6 +191,22 @@ export default function Benefits({ data = {} }: BenefitsProps) {
     }
   };
 
+  const getIconContainerClass = (iconName: string) => {
+    const key = (iconName || '').toLowerCase();
+    switch (key) {
+      case 'award':
+        return 'benefits-icon-container--award';
+      case 'trendingup':
+        return 'benefits-icon-container--trendingup';
+      case 'globe':
+        return 'benefits-icon-container--globe';
+      case 'target':
+        return 'benefits-icon-container--target';
+      default:
+        return 'benefits-icon-container--default';
+    }
+  };
+
   return (
     <section ref={sectionRef} className="benefits-section">
       <div className="benefits-container">
@@ -173,27 +221,20 @@ export default function Benefits({ data = {} }: BenefitsProps) {
         
         {/* Grid layout for 4 cards */}
         <div className="benefits-grid">
-          {benefits.map((benefit, index) => {
+          {distinctBenefits.map((benefit, index) => {
             const IconComponent = getIconComponent(benefit.icon);
             
             return (
               <div 
                 key={benefit.label}
-                className={`benefits-card-wrapper ${inView ? 'benefits-fade-in-up' : 'benefits-fade-out'}`}
-                style={{ 
-                  transitionDelay: inView ? `${index * 0.2}s` : '0s',
-                  animationDelay: inView ? `${index * 0.2}s` : '0s'
-                }}
+                className={`benefits-card-wrapper ${inView ? 'benefits-fade-in-up' : 'benefits-fade-out'} ${getDelayClass(index)}`}
               >
                 <Card className="benefits-card">
                   <CardContent className="benefits-card-content">
                     <div
-                      className="benefits-icon-container"
-                      style={{
-                        background: benefit.palette?.iconBg || '#EAF1F8',
-                      }}
+                      className={`benefits-icon-container ${getIconContainerClass(benefit.icon)} ${getVariantClass(index)}`}
                     >
-                      <IconComponent className="benefits-icon" style={{ color: benefit.palette?.iconColor || '#1A5276' }} />
+                      <IconComponent className={`benefits-icon benefits-icon-color--light`} />
                     </div>
                     
                     {/* Header */}
@@ -226,7 +267,7 @@ export default function Benefits({ data = {} }: BenefitsProps) {
         </div>
         
         {/* Bottom CTA */}
-        <div className={`benefits-cta ${inView ? 'benefits-fade-in-up' : 'benefits-fade-out'}`} style={{ transitionDelay: inView ? '0.8s' : '0s' }}>
+        <div className={`benefits-cta ${inView ? 'benefits-fade-in-up' : 'benefits-fade-out'} benefits-delay-4`}>
           <Button 
             size="lg"
             className="benefits-cta-button"

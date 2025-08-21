@@ -36,7 +36,6 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Send, X, MessageCircle, Info } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import "@/styles/components/business-slider.css";
 
 interface FormData {
   name: string;

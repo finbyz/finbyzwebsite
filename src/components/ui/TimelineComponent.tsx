@@ -156,7 +156,7 @@ export default function TimelineComponent() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className={`text-center mb-16 transition-all duration-1000 ${
-          isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
+          isVisible ? 'animate-fade-in-up opacity-100' : ''
         }`}>
           <Badge className="mb-6 bg-gradient-to-r from-slate-600 to-blue-600 text-white border-0">
             Our Journey
@@ -171,7 +171,7 @@ export default function TimelineComponent() {
 
         {/* Year Filter */}
         <div className={`flex flex-wrap justify-center gap-3 mb-12 transition-all duration-1000 ${
-          isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
+          isVisible ? 'animate-fade-in-up opacity-100' : ''
         }`} style={{ transitionDelay: '200ms' }}>
           {years.map((year) => (
             <button
@@ -190,7 +190,7 @@ export default function TimelineComponent() {
 
         {/* Timeline Grid */}
         <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 ${
-          isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
+          isVisible ? 'animate-fade-in-up opacity-100' : ''
         }`} style={{ transitionDelay: '400ms' }}>
           {filteredData.map((item, index) => (
             <Card 
@@ -229,7 +229,7 @@ export default function TimelineComponent() {
 
         {/* Stats Section */}
         <div className={`mt-20 grid grid-cols-1 md:grid-cols-4 gap-8 transition-all duration-1000 ${
-          isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
+          isVisible ? 'animate-fade-in-up opacity-100' : ''
         }`} style={{ transitionDelay: '600ms' }}>
           <div className="text-center">
             <div className="text-3xl font-bold text-blue-600 mb-2">10+</div>

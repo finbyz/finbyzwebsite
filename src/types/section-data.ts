@@ -321,20 +321,7 @@ export interface BusinessSliderData {
   solutions: BusinessSolution[];
 }
 
-// ============================================================================
-// CLIENT SUCCESS STORIES SECTION
-// ============================================================================
-export interface SuccessStory {
-  client: string;
-  result: string;
-  summary: string;
-}
 
-export interface ClientSuccessStoriesData {
-  title: string;
-  subtitle: string;
-  stories: SuccessStory[];
-}
 
 // ============================================================================
 // RESPONSIVE CARD GRID SECTION
@@ -608,44 +595,7 @@ export interface SecurityComplianceData {
 // ============================================================================
 // INNOVATION LAB SECTION
 // ============================================================================
-export interface InnovationProject {
-  title: string;
-  description: string;
-  status: string;
-  progress: number;
-  team: string;
-  timeline: string;
-  technologies: string[];
-  impact: string;
-  icon: string;
-  iconColor: string;
-  iconBg: string;
-}
-
-export interface ResearchArea {
-  area: string;
-  focus: string;
-  publications: number;
-  patents: number;
-  icon: string;
-  iconColor: string;
-  iconBg: string;
-}
-
-export interface InnovationStats {
-  papers: string;
-  patents: string;
-  projects: string;
-  researchers: string;
-}
-
-export interface InnovationLabData {
-  title: string;
-  subtitle: string;
-  innovationProjects: InnovationProject[];
-  researchAreas: ResearchArea[];
-  innovationStats: InnovationStats;
-}
+ 
 
 // ============================================================================
 // AWARDS RECOGNITION SECTION
@@ -670,20 +620,7 @@ export interface Certification {
   iconBg: string;
 }
 
-export interface RecognitionStats {
-  awards: string;
-  certifications: string;
-  partnerships: string;
-  years: string;
-}
 
-export interface AwardsRecognitionData {
-  title: string;
-  subtitle: string;
-  awards: Award[];
-  certifications: Certification[];
-  recognitionStats: RecognitionStats;
-}
 
 // ============================================================================
 // SERVICE PRICING SECTION
@@ -743,8 +680,8 @@ export type SectionData =
   | { type: 'resource-center'; data: ResourceCenterData }
   // | { type: 'partnerships'; data: PartnershipsData }
   // | { type: 'security-compliance'; data: SecurityComplianceData }
-  | { type: 'innovation-lab'; data: InnovationLabData }
-  | { type: 'awards-recognition'; data: AwardsRecognitionData }
+  
+
   // | { type: 'service-pricing'; data: ServicePricingData }
   | { type: 'hero_section_without_button'; data: HeroWithoutButtonData }
   | { type: 'client-logos'; data: ClientLogosData }
@@ -752,7 +689,7 @@ export type SectionData =
   | { type: 'team-expertise'; data: TeamExpertiseData }
   | { type: 'technology-stack'; data: TechnologyStackData }
   | { type: 'business-slider'; data: BusinessSliderData }
-  | { type: 'client-success-stories'; data: ClientSuccessStoriesData }
+
   | { type: 'responsive-card-grid'; data: ResponsiveCardGridData };
 
 // ============================================================================
@@ -787,8 +724,8 @@ export const COMPONENT_MAP: Record<string, string> = {
   'resource-center': 'ResourceCenter',
   'partnerships': 'Partnerships',
   'security-compliance': 'SecurityCompliance',
-  'innovation-lab': 'InnovationLab',
-  'awards-recognition': 'AwardsRecognition',
+  
+
   'service-pricing': 'ServicePricing',
   'hero_section_without_button': 'HeroSectionWithoutButton',
   'client-logos': 'ClientLogos',
@@ -796,6 +733,6 @@ export const COMPONENT_MAP: Record<string, string> = {
   'team-expertise': 'TeamExpertise',
   'technology-stack': 'TechnologyStack',
   'business-slider': 'BusinessSlider',
-  'client-success-stories': 'ClientSuccessStories',
+
   'responsive-card-grid': 'ResponsiveCardGrid'
 };

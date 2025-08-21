@@ -14,27 +14,7 @@
   opacity: 0.05;
 }
 
-.contact-info-pattern-1 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 18rem;
-  height: 18rem;
-  background-color: #1A5276;
-  border-radius: 50%;
-  transform: translate(9rem, -9rem);
-}
 
-.contact-info-pattern-2 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 24rem;
-  height: 24rem;
-  background-color: #FF8C00;
-  border-radius: 50%;
-  transform: translate(-12rem, 12rem);
-}
 
 .contact-info-container {
   width: 100%;
@@ -65,7 +45,7 @@
 .contact-info-header {
   text-align: center;
   margin-bottom: 4rem;
-  transition: all 1s ease;
+  transition: all 0.3s ease;
 }
 
 .contact-info-fade-in-up {
@@ -75,7 +55,7 @@
 
 .contact-info-fade-out {
   opacity: 0;
-  transform: translateY(2.5rem);
+  transform: translateY(0);
 }
 
 .contact-info-title {
@@ -118,7 +98,7 @@
   grid-template-columns: 1fr;
   gap: 2rem;
   margin-bottom: 4rem;
-  transition: all 1s ease;
+  transition: all 0.3s ease;
 }
 
 @media (min-width: 768px) {
@@ -128,7 +108,7 @@
 }
 
 .contact-info-stat-wrapper {
-  transition: all 0.7s ease;
+  transition: all 0.3s ease;
 }
 
 .contact-info-stat-card {
@@ -217,7 +197,7 @@
 }
 
 .contact-info-method-wrapper {
-  transition: all 0.7s ease;
+  transition: all 0.3s ease;
 }
 
 .contact-info-method-card {
@@ -347,8 +327,27 @@
   }
 }
 
+/* Adapt offices grid to actual item count */
+@media (min-width: 768px) {
+  /* 2 items → 2 columns */
+  .contact-info-offices-grid:not(:has(> :nth-child(3))) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Exactly 4 items → 4 columns */
+  .contact-info-offices-grid:has(> :nth-child(4)):not(:has(> :nth-child(5))) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  /* Exactly 8 items → 4 columns (2 rows) */
+  .contact-info-offices-grid:has(> :nth-child(8)):not(:has(> :nth-child(9))) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 .contact-info-office-wrapper {
-  transition: all 0.7s ease;
+  transition: all 0.3s ease;
 }
 
 .contact-info-office-card {
@@ -454,7 +453,7 @@
 /* CTA */
 .contact-info-cta {
   text-align: center;
-  transition: all 1s ease;
+  transition: all 0.3s ease;
 }
 
 .contact-info-cta-card {

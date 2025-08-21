@@ -6,7 +6,6 @@ import Footer from '@/components/layout/footer';
 
 // Import all components from sections folder
 import Hero from './sections/hero';
-// Removed per request: Services
 import Testimonials from './sections/testimonials';
 import Benefits from './sections/benefits';
 import Differentiators from './sections/differentiators';
@@ -21,20 +20,26 @@ import ContactInfo from './sections/contact-info';
 import ResourceCenter from './sections/resource-center';
 // Removed per request: Partnerships
 // Removed per request: SecurityCompliance
-import InnovationLab from './sections/innovation-lab';
-import AwardsRecognition from './sections/awards-recognition';
+
 // Removed per request: ServicePricing
 import HeroWithoutButton from './sections/hero_section_without_button';
-import ClientSuccessStories from './sections/client-success-stories';
+
 import TechnologyStack from './sections/technology-stack';
 // Removed per request: CaseStudies
 import BusinessSlider from './sections/business-slider';
-import ServicesOverview from './sections/services-overview';
 import ClientLogos from './sections/client-logos';
 import StatsShowcase from './sections/stats-showcase';
 // Removed per request: ProcessTimeline
 import TeamExpertise from './sections/team-expertise';
-import SuccessSnapshots from './sections/success-snapshots';
+
+import ERPIntroText from './sections/erp-intro-text';
+// Additional sections to support all components in the folder
+import ContactForm from './sections/contact-form';
+import ContactWithMap from './sections/contact-with-map';
+import ContentIllustrationLeft from './sections/content-illustration-left';
+import ContentIllustrationRight from './sections/content-illustration-right';
+import JobDetail from './sections/job-detail';
+import ResponsiveCardGrid from './sections/responsive-card-grid';
 
 // ============================================================================
 // SECTIONS-BASED RENDERER
@@ -66,42 +71,86 @@ interface SectionsBasedRendererProps {
  * Component mapping - only uses components from sections folder
  */
 const COMPONENT_MAP: Record<string, React.ComponentType<any>> = {
+  // Generic keys (new) and legacy keys (aliases) both map to the same components
+  // Hero variants
   'hero': Hero,
-  // 'services': Services,
+  'hero-basic': HeroWithoutButton,
+  'hero-without-button': HeroWithoutButton,
+
+  // Testimonial/long description cards
+  'long-description-cards': Testimonials,
   'testimonials': Testimonials,
+
+  // Number/KPI cards
+  'number-cards': Benefits,
   'benefits': Benefits,
+
+  // Feature cards (differentiators)
+  'feature-cards': Differentiators,
   'differentiators': Differentiators,
+
+  // Highlight quote
+  'highlight-quote': Comment,
   'comment': Comment,
+
+  // Call to action
+  'call-to-action': CTA,
   'cta': CTA,
   // 'faq': FAQ,
+  'process-steps': ProcessWorkflow,
   'process-workflow': ProcessWorkflow,
   // 'industry-solutions': IndustrySolutions,
   'global-presence': GlobalPresence,
+  'contact-info-block': ContactInfo,
   'contact-info': ContactInfo,
   // 'support-services': SupportServices,
   'resource-center': ResourceCenter,
   // 'partnerships': Partnerships,
   // 'security-compliance': SecurityCompliance,
-  'innovation-lab': InnovationLab,
-  'awards-recognition': AwardsRecognition,
+  
+
   // 'service-pricing': ServicePricing,
-  'hero-without-button': HeroWithoutButton,
-  'client-success-stories': ClientSuccessStories,
+  // Technology categories
+  'technology-categories': TechnologyStack,
   'technology-stack': TechnologyStack,
   // 'case-studies': CaseStudies,
-  'business-slider': ServicesOverview, // Map to services-overview for business solutions
-  'services-overview': ServicesOverview,
+  // Component 'services' and 'services-overview' removed
+  // 'business-slider' remains mapped to its dedicated component
+  'inquiry-panel': BusinessSlider,
+  'business-slider': BusinessSlider,
+
+  // Logos carousel
+  'logos-carousel': ClientLogos,
   'client-logos': ClientLogos,
+
+  // Stats cards
+  'stats-cards': StatsShowcase,
   'stats-showcase': StatsShowcase,
   // 'process-timeline': ProcessTimeline,
+  'team-expertise-cards': TeamExpertise,
   'team-expertise': TeamExpertise,
-  'success-snapshots': SuccessSnapshots
+
+  // Intro text
+  'intro-text': ERPIntroText,
+  'erp-intro-text': ERPIntroText,
+
+  // Newly added mappings to use every component in sections folder
+  'contact-form': ContactForm,
+  'contact-with-map': ContactWithMap,
+  'content-with-illustration-left': ContentIllustrationLeft,
+  'content-illustration-left': ContentIllustrationLeft,
+  'content-with-illustration-right': ContentIllustrationRight,
+  'content-illustration-right': ContentIllustrationRight,
+  'job-detail-section': JobDetail,
+  'job-detail': JobDetail,
+  'card-grid': ResponsiveCardGrid,
+  'responsive-card-grid': ResponsiveCardGrid
 };
 
 /**
  * Renders a single section
  */
-function SectionRenderer({ section, onSectionRender }: { section: SectionData; onSectionRender?: (sectionType: string, index: number) => void }) {
+function SectionRenderer({ section, index, onSectionRender }: { section: SectionData; index: number; onSectionRender?: (sectionType: string, index: number) => void }) {
   const Component = COMPONENT_MAP[section.type];
   
   if (!Component) {
@@ -115,10 +164,12 @@ function SectionRenderer({ section, onSectionRender }: { section: SectionData; o
     );
   }
 
-  // Call the callback when section is rendered
-  if (onSectionRender) {
-    onSectionRender(section.type, 0);
-  }
+  // Notify after render commit to avoid setState during render
+  React.useEffect(() => {
+    if (onSectionRender) {
+      onSectionRender(section.type, index);
+    }
+  }, [onSectionRender, section.type, index]);
 
   return (
     <section 
@@ -170,14 +221,14 @@ export const SectionsBasedRenderer: React.FC<SectionsBasedRendererProps> = ({
 
   return (
     <div className={`sections-based-page ${className}`}>
-      {/* Page Metadata */}
-      <head>
-        <title>{pageData.metadata.title}</title>
-        <meta name="description" content={pageData.metadata.description} />
+      {/* Page Metadata - Display as content instead of head tags */}
+      <div className="page-metadata" style={{ display: 'none' }}>
+        <div data-title={pageData.metadata.title}></div>
+        <div data-description={pageData.metadata.description}></div>
         {pageData.metadata.keywords && (
-          <meta name="keywords" content={pageData.metadata.keywords.join(', ')} />
+          <div data-keywords={pageData.metadata.keywords.join(', ')}></div>
         )}
-      </head>
+      </div>
 
       {/* Standard Header - Automatically Added */}
       <Header />
@@ -188,6 +239,7 @@ export const SectionsBasedRenderer: React.FC<SectionsBasedRendererProps> = ({
           <SectionRenderer
             key={`${section.type}-${index}`}
             section={section}
+            index={index}
             onSectionRender={onSectionRender}
           />
         ))}

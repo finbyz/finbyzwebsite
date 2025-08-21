@@ -1,20 +1,30 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { HeroSection, ServiceCards, StatsSection, CallToAction } from './ui/ComponentShowcase';
 import { PricingCards, ContactForm } from './ui/ComponentShowcase2';
 import { TimelineSection, TimelineCarousel, TeamSection, BlogGrid, FAQSection } from './ui/ComponentShowcase3';
-import { DataTable, ModalDialog, NotificationToast } from './ui/ComponentShowcase4';
+import { ModalDialog, NotificationToast } from './ui/ComponentShowcase4';
 import { SearchBar, FilterTags, Breadcrumbs, SidebarMenu, FooterLinks, SocialMediaIcons, LoadingSpinner, ErrorBoundary, TooltipComponent } from './ui/ComponentShowcase5';
 import Hero from './sections/hero_section_without_button';
 import Testimonials from './sections/testimonials';
 import Benefits from './sections/benefits';
 import Differentiators from './sections/differentiators';
 import Comment from './sections/comment';
-import ClientSuccessStories from './sections/client-success-stories';
+
 import TechnologyStack from './sections/technology-stack';
 import BusinessSlider from './sections/business-slider';
-import ServicesOverview from './sections/services-overview';
+import ClientLogos from './sections/client-logos';
+import StatsShowcase from './sections/stats-showcase';
+import GlobalPresence from './sections/global-presence';
+
+import ResourceCenter from './sections/resource-center';
+import TeamExpertise from './sections/team-expertise';
+import CTA from './sections/cta';
+import ERPIntroText from './sections/erp-intro-text';
+import ResponsiveCardGrid from './sections/responsive-card-grid';
+import ContentIllustrationLeft from './sections/content-illustration-left';
+import ContentIllustrationRight from './sections/content-illustration-right';
 import FileUpload from './ui/FileUpload';
 import ERPModules from './ui/ERPModules';
 
@@ -69,7 +79,7 @@ function ComponentRenderer({ componentData }: { componentData: ComponentData }) 
     'TeamSection': TeamSection,
     'BlogGrid': BlogGrid,
     'FAQSection': FAQSection,
-    'DataTable': DataTable,
+
     'ModalDialog': ModalDialog,
     'NotificationToast': NotificationToast,
     'SearchBar': SearchBar,
@@ -86,10 +96,19 @@ function ComponentRenderer({ componentData }: { componentData: ComponentData }) 
     'Benefits': Benefits,
     'Differentiators': Differentiators,
     'Comment': Comment,
-    'ClientSuccessStories': ClientSuccessStories,
+    'ClientLogos': ClientLogos,
+    'StatsShowcase': StatsShowcase,
+    'GlobalPresence': GlobalPresence,
+    'ResourceCenter': ResourceCenter,
+    'TeamExpertise': TeamExpertise,
+    'CTASection': CTA,
+    'ERPIntroText': ERPIntroText,
+    'ResponsiveCardGrid': ResponsiveCardGrid,
+    'ContentIllustrationLeft': ContentIllustrationLeft,
+    'ContentIllustrationRight': ContentIllustrationRight,
+    
     'TechnologyStack': TechnologyStack,
     'BusinessSlider': BusinessSlider,
-    'ServicesOverview': ServicesOverview,
     'FileUpload': FileUpload,
     'ERPModules': ERPModules,
     // Add more component mappings as needed
@@ -195,43 +214,7 @@ function ComponentRenderer({ componentData }: { componentData: ComponentData }) 
         </button>
       </div>
     ),
-    'Contact': ({ data }: any) => (
-      <div className="bg-white p-6 rounded-lg shadow-md">
-        <h3 className="text-xl font-semibold mb-4">{data.title}</h3>
-        <form className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium mb-1">{data.nameLabel}</label>
-            <input
-              type="text"
-              placeholder={data.namePlaceholder}
-              className="w-full p-2 border border-gray-300 rounded"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-1">{data.emailLabel}</label>
-            <input
-              type="email"
-              placeholder={data.emailPlaceholder}
-              className="w-full p-2 border border-gray-300 rounded"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-1">{data.messageLabel}</label>
-            <textarea
-              placeholder={data.messagePlaceholder}
-              rows={4}
-              className="w-full p-2 border border-gray-300 rounded"
-            />
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-blue-600 text-white py-2 rounded font-medium"
-          >
-            {data.submitText}
-          </button>
-        </form>
-      </div>
-    ),
+
     'CTA': ({ data }: any) => (
       <div className="bg-blue-600 text-white py-12 text-center">
         <h2 className="text-3xl font-bold mb-4">{data.title}</h2>
@@ -265,10 +248,10 @@ function ComponentRenderer({ componentData }: { componentData: ComponentData }) 
 /**
  * Renders a section containing multiple components
  */
-function SectionRenderer({ section, onSectionRender }: { section: HtmlSection; onSectionRender?: (sectionType: string, index: number) => void }) {
-  if (onSectionRender) {
-    onSectionRender(section.type, 0);
-  }
+function SectionRenderer({ section, index, onSectionRender }: { section: HtmlSection; index: number; onSectionRender?: (sectionType: string, index: number) => void }) {
+  useEffect(() => {
+    if (onSectionRender) onSectionRender(section.type, index);
+  }, [onSectionRender, section.type, index]);
 
   return (
     <div className={`section-${section.type}`}>
@@ -318,17 +301,17 @@ export const HtmlComponentsRenderer: React.FC<HtmlComponentsRendererProps> = ({
 
   return (
     <div className={`html-components-page ${className}`}>
-      {/* Page Metadata */}
-      <head>
-        <title>{pageData.metadata.title}</title>
-        <meta name="description" content={pageData.metadata.description} />
+      {/* Page Metadata - Display as content instead of head tags */}
+      <div className="page-metadata" style={{ display: 'none' }}>
+        <div data-title={pageData.metadata.title}></div>
+        <div data-description={pageData.metadata.description}></div>
         {pageData.metadata.keywords && (
-          <meta name="keywords" content={pageData.metadata.keywords.join(', ')} />
+          <div data-keywords={pageData.metadata.keywords.join(', ')}></div>
         )}
         {pageData.metadata.viewport && (
-          <meta name="viewport" content={pageData.metadata.viewport} />
+          <div data-viewport={pageData.metadata.viewport}></div>
         )}
-      </head>
+      </div>
 
       {/* Render all sections */}
       <main className="page-content">
@@ -336,6 +319,7 @@ export const HtmlComponentsRenderer: React.FC<HtmlComponentsRendererProps> = ({
           <SectionRenderer
             key={`${section.type}-${index}`}
             section={section}
+            index={index}
             onSectionRender={onSectionRender}
           />
         ))}
@@ -348,15 +332,15 @@ export const HtmlComponentsRenderer: React.FC<HtmlComponentsRendererProps> = ({
  * Hook for managing HTML components page state
  */
 export const useHtmlComponentsPage = (pageData: HtmlPageData) => {
-  const [renderedSections, setRenderedSections] = React.useState<string[]>([]);
-  const [isLoading, setIsLoading] = React.useState(false);
-  const [error, setError] = React.useState<string | null>(null);
+  const [renderedSections, setRenderedSections] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSectionRender = React.useCallback((sectionType: string, index: number) => {
+  const handleSectionRender = useCallback((sectionType: string, index: number) => {
     setRenderedSections(prev => [...prev, `${sectionType}-${index}`]);
   }, []);
 
-  const resetPage = React.useCallback(() => {
+  const resetPage = useCallback(() => {
     setRenderedSections([]);
     setError(null);
   }, []);

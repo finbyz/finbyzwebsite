@@ -5,6 +5,27 @@
 /* Import component color system */
 @import '../styles/component-colors.css';
 
+/* Import component-specific CSS files */
+@import '../styles/components/business-slider.css';
+@import '../styles/components/technology-stack.css';
+@import '../styles/components/stats-showcase.css';
+@import '../styles/components/benefits.css';
+@import '../styles/components/responsive-card-grid.css';
+@import '../styles/components/cta.css';
+@import '../styles/components/client-logos.css';
+
+@import '../styles/components/team-expertise.css';
+@import '../styles/components/testimonials.css';
+
+ 
+@import '../styles/components/resource-center.css';
+@import '../styles/components/contact-info.css';
+@import '../styles/components/global-presence.css';
+@import '../styles/components/comment.css';
+@import '../styles/components/differentiators.css';
+@import '../styles/components/process-workflow.css';
+@import '../styles/components/hero.css';
+
 :root {
   --radius: 0.75rem;
   --background: hsl(0, 0%, 100%);
@@ -167,7 +188,6 @@
   
   .animate-fade-in-up {
     animation: fadeInUp 0.8s ease-out forwards;
-    opacity: 0;
   }
   
   .animate-fade-in-up-delayed {
@@ -195,17 +215,24 @@
     animation: slideIn 0.6s ease-out forwards;
   }
   
-  .animate-slide-in-left {
-    animation: slideInLeft 0.4s ease-out forwards;
+  .animate-slide-in-up {
+    animation: slideInUp 0.4s ease-out forwards;
   }
   
-  .animate-slide-in-right {
-    animation: slideInRight 0.4s ease-out forwards;
+  .animate-slide-in-up-delayed {
+    animation: slideInUp 0.4s ease-out 0.2s forwards;
   }
   
-  .animate-slide-out-left {
-    animation: slideOutLeft 0.3s ease-in forwards;
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
   }
+  
+  .fade-out {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  
+
   
   @keyframes fadeIn {
     from {
@@ -219,7 +246,7 @@
   @keyframes fadeInUp {
     from {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(0);
     }
     to {
       opacity: 1;
@@ -241,7 +268,7 @@
   @keyframes slideIn {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(0);
     }
     to {
       opacity: 1;
@@ -249,38 +276,18 @@
     }
   }
   
-  @keyframes slideInLeft {
+  @keyframes slideInUp {
     from {
       opacity: 0;
-      transform: translateX(-100%);
+      transform: translateY(0);
     }
     to {
       opacity: 1;
-      transform: translateX(0);
+      transform: translateY(0);
     }
   }
   
-  @keyframes slideInRight {
-    from {
-      opacity: 0;
-      transform: translateX(100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes slideOutLeft {
-    from {
-      opacity: 1;
-      transform: translateX(0);
-    }
-    to {
-      opacity: 0;
-      transform: translateX(-100%);
-    }
-  }
+
   
   .animate-float {
     animation: float 3s ease-in-out infinite;
@@ -304,6 +311,26 @@
   .bg-grid-pattern {
     background-image: radial-gradient(circle, hsl(210, 50%, 25%, 0.1) 1px, transparent 1px);
     background-size: 20px 20px;
+  }
+
+  /* Ensure two-card grids expand to full width on larger breakpoints */
+  @media (min-width: 768px) {
+    .grid.md\:grid-cols-3:not(:has(> :nth-child(3))),
+    .grid.md\:grid-cols-4:not(:has(> :nth-child(3))) {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+  }
+  @media (min-width: 1024px) {
+    .grid.lg\:grid-cols-3:not(:has(> :nth-child(3))),
+    .grid.lg\:grid-cols-4:not(:has(> :nth-child(3))) {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+  }
+  @media (min-width: 1280px) {
+    .grid.xl\:grid-cols-3:not(:has(> :nth-child(3))),
+    .grid.xl\:grid-cols-4:not(:has(> :nth-child(3))) {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
   }
 }
 

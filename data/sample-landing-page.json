@@ -42,6 +42,20 @@
       }
     },
     {
+      "type": "erp-intro-text",
+      "data": {
+        "title": "Looking for Leading ERP Software Development Company?",
+        "paragraphs": [
+          "ERP systems are essential for efficient business operations. We integrate processes, streamline data, and boost productivity with modern, scalable ERP solutions.",
+          "As a trusted ERPNext partner, we assess your workflows and recommend the right solution, providing implementation, training, and ongoing support."
+        ],
+        "highlightLink": {
+          "text": "benefits of ERP implementation",
+          "href": "#"
+        }
+      }
+    },
+    {
       "type": "services",
       "data": {
         "title": "Our Financial Solutions",
