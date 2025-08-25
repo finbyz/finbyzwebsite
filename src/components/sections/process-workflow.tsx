@@ -47,6 +47,7 @@ interface ProcessStats {
 
 interface ProcessWorkflowProps {
   data?: {
+    component_type?: "Timeline";
     title?: string;
     subtitle?: string;
     processSteps?: ProcessStep[];
@@ -58,6 +59,7 @@ export default function ProcessWorkflow({ data = {} }: ProcessWorkflowProps) {
   const [sectionRef, inView] = useInView(0.3);
 
   const {
+    component_type = "Timeline",
     title = "Our Development Process",
     subtitle = "A proven methodology that ensures quality, transparency, and successful project delivery",
     processSteps = [
@@ -160,9 +162,14 @@ export default function ProcessWorkflow({ data = {} }: ProcessWorkflowProps) {
     }
   } = data;
 
+  // Ensure processSteps is always an array and has fallback values
+  const safeProcessSteps = processSteps || [];
+  const safeStats = stats || { steps: "0", weeks: "0", transparency: "0%", support: "0" };
+
   // Ensure distinct icons across steps using available pool
   const stepIconPool = ["Search", "Lightbulb", "Code", "TestTube", "Rocket", "CheckCircle"];
   const normalizeDistinct = (items: ProcessStep[]) => {
+    if (!Array.isArray(items)) return [];
     const used = new Set<string>();
     return items.map((item) => {
       let name = item.icon;
@@ -173,7 +180,7 @@ export default function ProcessWorkflow({ data = {} }: ProcessWorkflowProps) {
       return { ...item, icon: name } as ProcessStep;
     });
   };
-  const distinctSteps = normalizeDistinct(processSteps);
+  const distinctSteps = normalizeDistinct(safeProcessSteps);
 
   const getIconComponent = (iconName: string) => {
     switch (iconName) {
@@ -251,7 +258,7 @@ export default function ProcessWorkflow({ data = {} }: ProcessWorkflowProps) {
                     <div className="process-workflow-details">
                       <h4 className="process-workflow-details-title">Key Activities:</h4>
                       <div className="process-workflow-details-list">
-                        {step.details.map((detail, detailIndex) => (
+                        {(step.details || []).map((detail, detailIndex) => (
                           <div key={detailIndex} className="process-workflow-detail-item">
                             <div className="process-workflow-detail-bullet"></div>
                             <span className="process-workflow-detail-text">{detail}</span>
@@ -261,7 +268,7 @@ export default function ProcessWorkflow({ data = {} }: ProcessWorkflowProps) {
                     </div>
                   </div>
                   
-                  {index < processSteps.length - 1 && (
+                  {index < safeProcessSteps.length - 1 && (
                     <div className="process-workflow-arrow">
                       <ArrowRight className="process-workflow-arrow-icon" />
                     </div>
@@ -275,19 +282,19 @@ export default function ProcessWorkflow({ data = {} }: ProcessWorkflowProps) {
         {/* Process Stats */}
         <div className={`process-workflow-stats ${inView ? 'process-workflow-fade-in-up' : 'process-workflow-fade-out'}`}>
           <div className="process-workflow-stat">
-            <div className="process-workflow-stat-number">{stats.steps}</div>
+            <div className="process-workflow-stat-number">{safeStats.steps}</div>
             <div className="process-workflow-stat-label">Process Steps</div>
           </div>
           <div className="process-workflow-stat">
-            <div className="process-workflow-stat-number">{stats.weeks}</div>
+            <div className="process-workflow-stat-number">{safeStats.weeks}</div>
             <div className="process-workflow-stat-label">Weeks Average</div>
           </div>
           <div className="process-workflow-stat">
-            <div className="process-workflow-stat-number">{stats.transparency}</div>
+            <div className="process-workflow-stat-number">{safeStats.transparency}</div>
             <div className="process-workflow-stat-label">Transparency</div>
           </div>
           <div className="process-workflow-stat">
-            <div className="process-workflow-stat-number">{stats.support}</div>
+            <div className="process-workflow-stat-number">{safeStats.support}</div>
             <div className="process-workflow-stat-label">Support Available</div>
           </div>
         </div>

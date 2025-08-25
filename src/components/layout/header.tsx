@@ -419,12 +419,7 @@ export default function Header() {
       icon: BarChart3,
       href: "/insights"
     },
-    {
-      name: "Components",
-      hasDropdown: false,
-      icon: Code,
-      href: "/components"
-    },
+    
     {
       name: "Company",
       hasDropdown: true,

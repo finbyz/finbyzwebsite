@@ -45,6 +45,11 @@ interface FormData {
 }
 
 export default function BusinessSlider({ data = {} }: { data?: Record<string, any> }) {
+  const {
+    component_type = "Form",
+    ...otherData
+  } = data;
+  
   const [formData, setFormData] = useState<FormData>({
     name: "",
     organization: "",

@@ -1,31 +1,5 @@
-"use client";
-
 import { Eye, Heart, CheckCircle, BarChart3 } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
 import "@/styles/components/differentiators.css";
-
-// Intersection Observer Hook
-function useInView(threshold = 0.3) {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const [revealed, setRevealed] = useState(false);
-
-  useEffect(() => {
-    if (!ref.current || revealed) return;
-    const observer = new window.IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setRevealed(true);
-          observer.disconnect();
-        }
-      },
-      { threshold }
-    );
-    observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [threshold, revealed]);
-
-  return [ref, revealed] as const;
-}
 
 interface DifferentiatorItem {
   icon: string;
@@ -37,6 +11,7 @@ interface DifferentiatorItem {
 
 interface DifferentiatorsProps {
   data?: {
+    component_type?: "FOQ";
     title?: string;
     subtitle?: string;
     differentiators?: DifferentiatorItem[];
@@ -49,9 +24,9 @@ interface DifferentiatorsProps {
 }
 
 export default function Differentiators({ data = {} }: DifferentiatorsProps) {
-  const [sectionRef, inView] = useInView(0.3);
 
   const {
+    component_type = "FOQ",
     title = "Our Differentiators",
     subtitle = "What sets us apart in the technology landscape",
     differentiators = [
@@ -122,9 +97,9 @@ export default function Differentiators({ data = {} }: DifferentiatorsProps) {
   };
 
   return (
-    <section ref={sectionRef} className="differentiators-section">
+    <section className="differentiators-section">
       <div className="differentiators-container">
-        <div className={`differentiators-header ${inView ? 'differentiators-fade-in-up' : 'differentiators-fade-out'}`}>
+        <div className={`differentiators-header`}>
           <h2 className="differentiators-title">
             {title}
           </h2>
@@ -140,10 +115,10 @@ export default function Differentiators({ data = {} }: DifferentiatorsProps) {
             return (
               <div
                 key={item.title}
-                className={`differentiators-card-wrapper ${inView ? 'differentiators-fade-in-up' : 'differentiators-fade-out'}`}
+                className={`differentiators-card-wrapper`}
                 style={{ 
-                  transitionDelay: inView ? `${index * 0.2}s` : '0s',
-                  animationDelay: inView ? `${index * 0.2}s` : '0s'
+                  transitionDelay: `${index * 0.2}s`,
+                  animationDelay: `${index * 0.2}s`
                 }}
               >
                 <div className="differentiators-card">
@@ -168,7 +143,7 @@ export default function Differentiators({ data = {} }: DifferentiatorsProps) {
         </div>
         
         {/* Quote Section */}
-        <div className={`differentiators-quote ${inView ? 'differentiators-fade-in-up' : 'differentiators-fade-out'}`} style={{ transitionDelay: inView ? '0.8s' : '0s' }}>
+        <div className={`differentiators-quote`} style={{ transitionDelay: '0.8s' }}>
           <div className="differentiators-quote-container">
             <div className="differentiators-quote-content">
                              <div className="differentiators-quote-text">

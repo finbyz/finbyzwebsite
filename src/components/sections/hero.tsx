@@ -36,8 +36,6 @@
  * @requires next/image - For optimized image display
  */
 
-"use client";
-
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import heroData from "@/data/hero.json";
@@ -100,6 +98,12 @@ import "@/styles/components/hero.css";
 export default function Hero({ data = {} }: { data?: Record<string, any> }) {
   // Render the template with provided data
   const renderedData = renderTemplateObject(heroData, data);
+
+  // Add component_type to the data
+  const componentData = {
+    component_type: "Hero",
+    ...renderedData
+  };
 
   return (
     <section className="hero-section">
@@ -173,43 +177,7 @@ export default function Hero({ data = {} }: { data?: Record<string, any> }) {
         </div>
       </div>
       
-      {/* Scroll Down Arrow */}
-      <div className="hero-scroll-arrow">
-        <button 
-          onClick={(e) => {
-            // Prefer configured target first
-            let nextSection: HTMLElement | null = null;
-            if (renderedData.scrollTarget) {
-              const byId = document.getElementById(renderedData.scrollTarget);
-              if (byId) nextSection = byId as HTMLElement;
-            }
-
-            // Fallback: scroll to the immediate next section after this hero
-            if (!nextSection) {
-              const sectionEl = (e.currentTarget as HTMLElement).closest('section');
-              const sibling = sectionEl?.nextElementSibling as HTMLElement | null;
-              if (sibling) nextSection = sibling;
-            }
-
-            nextSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }}
-          className="hero-scroll-button"
-        >
-          <svg 
-            className="hero-scroll-icon" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-          >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
-        </button>
-      </div>
+      {/* Scroll arrow removed for server-only rendering */}
     </section>
   );
 }

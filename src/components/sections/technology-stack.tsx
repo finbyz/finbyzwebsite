@@ -1,32 +1,10 @@
-"use client";
-
+ 
 import React from "react";
 import { Code, Database, Cloud, Shield, Zap, Globe, Cpu, GitBranch, Monitor } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
+ 
 import "@/styles/components/technology-stack.css";
 
-// Intersection Observer Hook
-function useInView(threshold = 0.3) {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const [revealed, setRevealed] = useState(false);
-
-  useEffect(() => {
-    if (!ref.current || revealed) return;
-    const observer = new window.IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setRevealed(true);
-          observer.disconnect();
-        }
-      },
-      { threshold }
-    );
-    observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [threshold, revealed]);
-
-  return [ref, revealed] as const;
-}
+// Server-side render: no IntersectionObserver hooks
 
 const technologies = [
   {
@@ -96,18 +74,10 @@ const technologies = [
 ];
 
 export default function TechnologyStack({ data = {} }: { data?: Record<string, any> }) {
-  const [sectionRef, inView] = useInView(0.3);
-  const [hasAnimated, setHasAnimated] = useState(false);
-
-  // Set hasAnimated to true when element comes into view for the first time
-  useEffect(() => {
-    if (inView && !hasAnimated) {
-      setHasAnimated(true);
-    }
-  }, [inView, hasAnimated]);
 
   // Use provided data or fallback to defaults
   const {
+    component_type = "Card",
     title = "Technology Stack",
     subtitle = "Cutting-edge technologies and tools that power our innovative solutions",
     technologies: customTechnologies = technologies
@@ -141,10 +111,10 @@ export default function TechnologyStack({ data = {} }: { data?: Record<string, a
   const fallbackBg: string[] = ["#EAF1F8", "#FFF4E5", "#E8F8F2", "#F3EAF8"];
 
   return (
-    <section ref={sectionRef} className="technology-stack-section">
+    <section className="technology-stack-section">
       
       <div className="technology-stack-container">
-        <div className={`technology-stack-header ${hasAnimated ? 'fade-in-up' : ''}`}>
+        <div className={`technology-stack-header`}>
           <h2 className="technology-stack-title">
             {title}
           </h2>
@@ -157,10 +127,10 @@ export default function TechnologyStack({ data = {} }: { data?: Record<string, a
           {customTechnologies.map((tech: any, index: number) => (
             <div
               key={tech.category || tech.name || index}
-              className={`technology-stack-card ${hasAnimated ? 'fade-in-up' : ''}`}
+              className={`technology-stack-card`}
               style={{ 
-                transitionDelay: hasAnimated ? `${index * 0.1}s` : '0s',
-                animationDelay: hasAnimated ? `${index * 0.1}s` : '0s'
+                transitionDelay: `${index * 0.1}s`,
+                animationDelay: `${index * 0.1}s`
               }}
             >
               <div className="technology-stack-icon-container">
@@ -178,7 +148,7 @@ export default function TechnologyStack({ data = {} }: { data?: Record<string, a
                   const bg = tech.bgColor || fallbackBg[index % fallbackBg.length];
                   return (
                     <div className="technology-stack-icon" style={{ color: fg, backgroundColor: bg }}>
-                      {React.createElement(IconComponent, { className: "w-8 h-8" })}
+                      {(IconComponent as any) ? <IconComponent className="w-8 h-8" /> : null}
                     </div>
                   );
                 })()}
@@ -195,10 +165,7 @@ export default function TechnologyStack({ data = {} }: { data?: Record<string, a
                     {tech.technologies.map((technology: string, techIndex: number) => (
                       <span
                         key={technology}
-                        className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full transition-all duration-300 hover:bg-[#1A5276] hover:text-white"
-                        style={{ 
-                          transitionDelay: inView ? `${(index * 0.1) + (techIndex * 0.05)}s` : '0s'
-                        }}
+                        className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full"
                       >
                         {technology}
                       </span>

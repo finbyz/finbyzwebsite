@@ -1,6 +1,4 @@
-"use client";
-
-import React from "react";
+ 
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
@@ -68,7 +66,7 @@ export default function ResponsiveCardGrid({ data = { cards: [] }, className }: 
   } = data;
 
   // Map of supported icons (extend as needed)
-  const iconMap: Record<string, React.ComponentType<{ size?: number; color?: string }>> = {
+  const iconMap: Record<string, any> = {
     Award,
     TrendingUp,
     Globe,
@@ -174,9 +172,12 @@ export default function ResponsiveCardGrid({ data = { cards: [] }, className }: 
                           ['--icon-fg' as any]: (card.iconColor || "#fff"),
                           ['--icon-bg-hover' as any]: darken(card.iconBg || palette[index % palette.length] || "#1A5276", 0.12),
                           ['--icon-fg-hover' as any]: '#ffffff',
-                        } as React.CSSProperties}
+                        } as any}
                       >
-                        {React.createElement(iconMap[card.icon], { size: 36 })}
+                        {(() => {
+                          const Icon = iconMap[card.icon];
+                          return Icon ? <Icon size={36} /> : null;
+                        })()}
                       </div>
                     ) : (
                       showImage && card.image && (

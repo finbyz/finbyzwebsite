@@ -1,6 +1,4 @@
-"use client";
-
-import React from "react";
+ 
 import { Phone, Headset, BriefcaseBusiness, Mail, MapPin, CircleUserRound } from "lucide-react";
 
 export interface ContactItem {
@@ -11,6 +9,7 @@ export interface ContactItem {
 }
 
 export interface ContactWithMapData {
+  component_type: "Text";
   title?: string;
   subtitle?: string;
   items?: ContactItem[];
@@ -20,7 +19,7 @@ export interface ContactWithMapData {
 }
 
 function getIconComponent(name?: string) {
-  const map: Record<string, React.ElementType> = {
+  const map: Record<string, any> = {
     phone: Phone,
     headset: Headset,
     briefcase: BriefcaseBusiness,
@@ -33,6 +32,7 @@ function getIconComponent(name?: string) {
 
 export default function ContactWithMap({
   data = {
+    component_type: "Text",
     title: "Contact Us",
     subtitle: "We'd love to hear from you",
     items: [

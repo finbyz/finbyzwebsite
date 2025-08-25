@@ -1,31 +1,5 @@
-"use client";
-
 import { Users, Code, Database, Cloud, Shield, Zap, Globe, Cpu, GitBranch, Award, Clock, Target } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
 import "@/styles/components/team-expertise.css";
-
-// Intersection Observer Hook
-function useInView(threshold = 0.3) {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const [revealed, setRevealed] = useState(false);
-
-  useEffect(() => {
-    if (!ref.current || revealed) return;
-    const observer = new window.IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setRevealed(true);
-          observer.disconnect();
-        }
-      },
-      { threshold }
-    );
-    observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [threshold, revealed]);
-
-  return [ref, revealed] as const;
-}
 
 const expertiseAreas = [
   {
@@ -119,29 +93,21 @@ const expertiseAreas = [
 ];
 
 export default function TeamExpertise({ data = {} }: { data?: Record<string, any> }) {
-  const [sectionRef, inView] = useInView(0.3);
-  const [hasAnimated, setHasAnimated] = useState(false);
-
-  // Set hasAnimated to true when element comes into view for the first time
-  useEffect(() => {
-    if (inView && !hasAnimated) {
-      setHasAnimated(true);
-    }
-  }, [inView, hasAnimated]);
 
   // Use provided data or fallback to defaults
   const {
+    component_type = "Card",
     title = "Team Expertise",
     subtitle = "Meet our diverse team of experts with deep domain knowledge and proven track records",
     team: customTeam = expertiseAreas
   } = data;
 
   return (
-    <section ref={sectionRef} className="team-expertise-section">
+    <section className="team-expertise-section">
       {/* Background Pattern removed */}
       
       <div className="team-expertise-container">
-        <div className={`team-expertise-header ${hasAnimated ? 'fade-in-up' : ''}`}>
+        <div className={`team-expertise-header`}>
           <h2 className="team-expertise-title">
             {title}
           </h2>
@@ -154,10 +120,10 @@ export default function TeamExpertise({ data = {} }: { data?: Record<string, any
           {customTeam.map((member: any, index: number) => (
             <div
               key={member.category || member.name || index}
-              className={`team-expertise-card ${hasAnimated ? 'fade-in-up' : ''}`}
+              className={`team-expertise-card`}
               style={{ 
-                transitionDelay: hasAnimated ? `${index * 0.1}s` : '0s',
-                animationDelay: hasAnimated ? `${index * 0.1}s` : '0s'
+                transitionDelay: `${index * 0.1}s`,
+                animationDelay: `${index * 0.1}s`
               }}
             >
               <div className="flex items-center justify-between mb-4">
@@ -227,7 +193,7 @@ export default function TeamExpertise({ data = {} }: { data?: Record<string, any
         </div>
         
         {/* Stats Section */}
-        <div className={`mt-16 grid md:grid-cols-4 gap-8 transition-all duration-1000 ${inView ? 'animate-fade-in-up' : ''}`}>
+        <div className={`mt-16 grid md:grid-cols-4 gap-8 transition-all duration-1000`}>
           <div className="text-center">
             <div className="text-3xl font-bold text-blue-600 mb-2">50+</div>
             <div className="text-gray-600">Team Members</div>

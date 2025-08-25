@@ -1,5 +1,4 @@
-"use client";
-
+ 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import heroSimpleData from "@/data/hero-simple.json";
@@ -63,41 +62,7 @@ export default function Hero({ data = {} }: HeroSectionProps) {
         </div>
       </div>
       
-      {/* Scroll Down Arrow */}
-      <div className="hero-scroll-arrow">
-        <button 
-          onClick={(e) => {
-            let nextSection: HTMLElement | null = null;
-            if (renderedData.scrollTarget) {
-              const byId = document.getElementById(renderedData.scrollTarget);
-              if (byId) nextSection = byId as HTMLElement;
-            }
-
-            if (!nextSection) {
-              const sectionEl = (e.currentTarget as HTMLElement).closest('section');
-              const sibling = sectionEl?.nextElementSibling as HTMLElement | null;
-              if (sibling) nextSection = sibling;
-            }
-
-            nextSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }}
-          className="hero-scroll-button"
-        >
-          <svg 
-            className="hero-scroll-icon" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-          >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
-        </button>
-      </div>
+      {/* Scroll arrow removed for server-only rendering */}
     </section>
   );
 }

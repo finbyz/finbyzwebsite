@@ -37,18 +37,26 @@ import { TimelineSection, TeamSection, BlogGrid, FAQSection } from "@/components
 import TimelineComponent from "@/components/ui/TimelineComponent";
 import { ModalDialog, NotificationToast } from "@/components/ui/ComponentShowcase4";
 import { SearchBar, FilterTags, Breadcrumbs, SidebarMenu, FooterLinks, SocialMediaIcons, LoadingSpinner, ErrorBoundary, TooltipComponent } from "@/components/ui/ComponentShowcase5";
+import { inferComponentType } from '@/utils/componentType';
 
 export default function ComponentsPage() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedType, setSelectedType] = useState<string>('all');
   const [expandedSchemas, setExpandedSchemas] = useState<Set<string>>(new Set());
   const [showPreview, setShowPreview] = useState<Set<string>>(new Set());
   const [showSchema, setShowSchema] = useState<Set<string>>(new Set());
   const [showAIDocs, setShowAIDocs] = useState<Set<string>>(new Set());
 
-  const categories = ['all', ...getAllCategories()];
-  const filteredSchemas = selectedCategory === 'all' 
-    ? componentSchemas 
-    : getComponentSchemasByCategory(selectedCategory);
+  // Build type filters from inferred component types
+  const typeOptions = ['all', ...Array.from(new Set(
+    componentSchemas
+      .map((s) => inferComponentType(s.name))
+      .filter((t): t is NonNullable<ReturnType<typeof inferComponentType>> => Boolean(t))
+      .map((t) => t as string)
+  ))];
+
+  const filteredSchemas = selectedType === 'all'
+    ? componentSchemas
+    : componentSchemas.filter((s) => inferComponentType(s.name) === selectedType);
 
   // Show all components on the Components page
   const schemasToRender = filteredSchemas;
@@ -174,7 +182,7 @@ export default function ComponentsPage() {
         
         return (
           <div className="p-6">
-            <Component data={manifest?.example?.data || {}} />
+            <Component data={(manifest?.example?.data ?? schema.example?.data ?? schema.example ?? {})} />
           </div>
         );
       } catch (error: any) {
@@ -239,20 +247,20 @@ export default function ComponentsPage() {
           A comprehensive collection of reusable UI components with their JSON structure definitions
         </p>
 
-        {/* Category Filter */}
+        {/* Component Type Filter */}
         <div className="mb-8">
           <div className="flex flex-wrap gap-2 justify-center">
-            {categories.map((category) => (
+            {typeOptions.map((type) => (
               <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
+                key={type}
+                onClick={() => setSelectedType(type)}
                 className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                  selectedCategory === category
+                  selectedType === type
                     ? 'bg-blue-600 text-white'
                     : 'bg-white text-gray-700 hover:bg-gray-100'
                 }`}
               >
-                {category.charAt(0).toUpperCase() + category.slice(1)}
+                {type.charAt(0).toUpperCase() + type.slice(1)}
               </button>
             ))}
           </div>
@@ -267,9 +275,19 @@ export default function ComponentsPage() {
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900">{schema.name}</h3>
                     <p className="text-gray-600 mt-1">{schema.description}</p>
-                    <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mt-2">
-                      {schema.category}
-                    </span>
+                    <div className="mt-2 flex items-center gap-2">
+                      <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
+                        {schema.category}
+                      </span>
+                      {(() => {
+                        const t = inferComponentType(schema.name);
+                        return t ? (
+                          <span className="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full">
+                            {t}
+                          </span>
+                        ) : null;
+                      })()}
+                    </div>
                   </div>
                   <div className="flex space-x-2">
                     <button
@@ -318,7 +336,7 @@ export default function ComponentsPage() {
                 <div className="p-6 bg-gray-50">
                   <h4 className="text-lg font-semibold text-gray-800 mb-4">Component Schema</h4>
                   <pre className="text-sm whitespace-pre-wrap bg-white p-4 rounded-lg border overflow-x-auto">
-                    {JSON.stringify(getComponentManifest(schema.id), null, 2)}
+                    {JSON.stringify(getComponentManifest(schema.id) ?? { schema: schema.schema, example: schema.example }, null, 2)}
                   </pre>
                 </div>
               )}
@@ -340,7 +358,14 @@ export default function ComponentsPage() {
                   <div className="flex items-center justify-between mb-4">
                     <h4 className="text-lg font-semibold text-green-800">JSON Data</h4>
                     <button
-                      onClick={() => copyToClipboard(JSON.stringify(getComponentManifest(schema.id)?.example, null, 2))}
+                      onClick={() => {
+                        const manifest = getComponentManifest(schema.id);
+                        const fallbackComponent = schema.schema?.component || schema.id;
+                        const fallbackData = (manifest?.example?.data ?? schema.example?.data ?? schema.example ?? {});
+                        const base = manifest?.example ?? { component: fallbackComponent, data: fallbackData };
+                        const withType = { ...base, componentType: inferComponentType(schema.name) };
+                        copyToClipboard(JSON.stringify(withType, null, 2))
+                      }}
                       className="flex items-center px-3 py-1 text-sm bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition-colors"
                     >
                       <Copy className="w-4 h-4 mr-1" />
@@ -348,7 +373,14 @@ export default function ComponentsPage() {
                     </button>
                   </div>
                   <pre className="text-sm whitespace-pre-wrap bg-white p-4 rounded-lg border border-green-200 overflow-x-auto">
-                    {JSON.stringify(getComponentManifest(schema.id)?.example, null, 2)}
+                    {(() => {
+                      const manifest = getComponentManifest(schema.id);
+                      const fallbackComponent = schema.schema?.component || schema.id;
+                      const fallbackData = (manifest?.example?.data ?? schema.example?.data ?? schema.example ?? {});
+                      const base = manifest?.example ?? { component: fallbackComponent, data: fallbackData };
+                      const withType = { ...base, componentType: inferComponentType(schema.name) };
+                      return JSON.stringify(withType, null, 2);
+                    })()}
                   </pre>
                 </div>
               )}

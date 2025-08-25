@@ -1,31 +1,5 @@
-"use client";
-
 import { Phone, Mail, MapPin, Clock, MessageCircle, Globe, Building, Users } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
 import "@/styles/components/contact-info.css";
-
-// Intersection Observer Hook
-function useInView(threshold = 0.3) {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const [revealed, setRevealed] = useState(false);
-
-  useEffect(() => {
-    if (!ref.current || revealed) return;
-    const observer = new window.IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setRevealed(true);
-          observer.disconnect();
-        }
-      },
-      { threshold }
-    );
-    observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [threshold, revealed]);
-
-  return [ref, revealed] as const;
-}
 
 interface ContactMethod {
   method: string;
@@ -92,7 +66,6 @@ interface ContactInfoProps {
 }
 
 export default function ContactInfo({ data = {} }: ContactInfoProps) {
-  const [sectionRef, inView] = useInView(0.3);
 
   const {
     title = "Contact Information",
@@ -252,12 +225,12 @@ export default function ContactInfo({ data = {} }: ContactInfoProps) {
   };
 
   return (
-    <section ref={sectionRef} className="contact-info-section">
+    <section className="contact-info-section">
       {/* Background Pattern */}
       
       
       <div className="contact-info-container">
-        <div className={`contact-info-header ${inView ? 'contact-info-fade-in-up' : 'contact-info-fade-out'}`}>
+        <div className={`contact-info-header`}>
           <h2 className="contact-info-title">
             {title}
           </h2>
@@ -267,17 +240,17 @@ export default function ContactInfo({ data = {} }: ContactInfoProps) {
         </div>
         
         {/* Contact Stats */}
-        <div className={`contact-info-stats ${inView ? 'contact-info-fade-in-up' : 'contact-info-fade-out'}`}>
+        <div className={`contact-info-stats`}>
           {contactStats.map((stat, index) => {
             const IconComponent = getIconComponent(stat.icon);
             
             return (
               <div
                 key={stat.label}
-                className={`contact-info-stat-wrapper ${inView ? 'contact-info-fade-in-up' : 'contact-info-fade-out'}`}
+                className={`contact-info-stat-wrapper`}
                 style={{ 
-                  transitionDelay: inView ? `${index * 0.1}s` : '0s',
-                  animationDelay: inView ? `${index * 0.1}s` : '0s'
+                  transitionDelay: `${index * 0.1}s`,
+                  animationDelay: `${index * 0.1}s`
                 }}
               >
                 <div className="contact-info-stat-card">
@@ -306,10 +279,10 @@ export default function ContactInfo({ data = {} }: ContactInfoProps) {
               return (
                 <div
                   key={method.method || method.title || index}
-                  className={`contact-info-method-wrapper ${inView ? 'contact-info-fade-in-up' : 'contact-info-fade-out'}`}
+                  className={`contact-info-method-wrapper`}
                   style={{ 
-                    transitionDelay: inView ? `${(index + 4) * 0.15}s` : '0s',
-                    animationDelay: inView ? `${(index + 4) * 0.15}s` : '0s'
+                    transitionDelay: `${(index + 4) * 0.15}s`,
+                    animationDelay: `${(index + 4) * 0.15}s`
                   }}
                 >
                   <div className="contact-info-method-card">
@@ -350,7 +323,7 @@ export default function ContactInfo({ data = {} }: ContactInfoProps) {
         
         {/* Contact Form */}
         {data?.form && (
-          <div className={`contact-info-form ${inView ? 'contact-info-fade-in-up' : 'contact-info-fade-out'}`}>
+          <div className={`contact-info-form`}>
             <h3 className="contact-info-form-title">{data.form.title}</h3>
             <form className="contact-info-form-container">
               <div className="contact-info-form-field">
@@ -394,7 +367,7 @@ export default function ContactInfo({ data = {} }: ContactInfoProps) {
         )}
         
         {/* Office Locations */}
-        <div className={`contact-info-offices ${inView ? 'contact-info-fade-in-up' : 'contact-info-fade-out'}`}>
+        <div className={`contact-info-offices`}>
           <h3 className="contact-info-offices-title">Office Locations</h3>
           <div className="contact-info-offices-grid">
             {officeLocations.map((office, index) => {
@@ -403,10 +376,10 @@ export default function ContactInfo({ data = {} }: ContactInfoProps) {
               return (
                 <div
                   key={office.city}
-                  className={`contact-info-office-wrapper ${inView ? 'contact-info-fade-in-up' : 'contact-info-fade-out'}`}
+                  className={`contact-info-office-wrapper`}
                   style={{ 
-                    transitionDelay: inView ? `${(index + 8) * 0.1}s` : '0s',
-                    animationDelay: inView ? `${(index + 8) * 0.1}s` : '0s'
+                    transitionDelay: `${(index + 8) * 0.1}s`,
+                    animationDelay: `${(index + 8) * 0.1}s`
                   }}
                 >
                   <div className="contact-info-office-card">
@@ -455,7 +428,7 @@ export default function ContactInfo({ data = {} }: ContactInfoProps) {
         </div>
         
         {/* Contact Form CTA */}
-        <div className={`contact-info-cta ${inView ? 'contact-info-fade-in-up' : 'contact-info-fade-out'}`}>
+        <div className={`contact-info-cta`}>
           <div className="contact-info-cta-card">
             <h3 className="contact-info-cta-title">{cta.title}</h3>
             <p className="contact-info-cta-description">

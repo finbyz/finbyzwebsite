@@ -1,73 +1,9 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 import { Award, TrendingUp, Globe, Target, CheckCircle, Zap, Shield, Clock } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { useState, useEffect, useRef } from "react";
 import "@/styles/components/benefits.css";
 
-// Intersection Observer Hook
-function useInView(threshold = 0.3) {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const [revealed, setRevealed] = useState(false);
-
-  useEffect(() => {
-    if (!ref.current || revealed) return;
-    const observer = new window.IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setRevealed(true);
-          observer.disconnect();
-        }
-      },
-      { threshold }
-    );
-    observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [threshold, revealed]);
-
-  return [ref, revealed] as const;
-}
-
-interface AnimatedCounterProps {
-  end: number;
-  suffix: string;
-  className: string;
-  start: boolean;
-}
-
-function AnimatedCounter({ end, suffix, className, start }: AnimatedCounterProps) {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (!start) {
-      setCount(0);
-      return;
-    }
-    const duration = 2000; // 2 seconds
-    const steps = 60;
-    const increment = end / steps;
-    let current = 0;
-
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(current));
-      }
-    }, duration / steps);
-
-    return () => clearInterval(timer);
-  }, [end, start]);
-
-  return (
-    <div className={className}>
-      {count}{suffix}
-    </div>
-  );
-}
+// Server-side render: static display without IntersectionObserver/counter hooks
 
 interface BenefitItem {
   number: number;
@@ -84,6 +20,7 @@ interface BenefitItem {
 
 interface BenefitsProps {
   data?: {
+    component_type?: "Card";
     title?: string;
     subtitle?: string;
     benefits?: BenefitItem[];
@@ -95,9 +32,9 @@ interface BenefitsProps {
 }
 
 export default function Benefits({ data = {} }: BenefitsProps) {
-  const [sectionRef, inView] = useInView(0.3);
 
   const {
+    component_type = "Card",
     title = "Why Choose Finbyz",
     subtitle = "Proven results that speak for themselves",
     benefits = [
@@ -208,9 +145,9 @@ export default function Benefits({ data = {} }: BenefitsProps) {
   };
 
   return (
-    <section ref={sectionRef} className="benefits-section">
+    <section className="benefits-section">
       <div className="benefits-container">
-        <div className={`benefits-header ${inView ? 'benefits-fade-in-up' : 'benefits-fade-out'}`}>
+        <div className={`benefits-header`}>
           <h2 className="benefits-title">
             {title}
           </h2>
@@ -227,7 +164,7 @@ export default function Benefits({ data = {} }: BenefitsProps) {
             return (
               <div 
                 key={benefit.label}
-                className={`benefits-card-wrapper ${inView ? 'benefits-fade-in-up' : 'benefits-fade-out'} ${getDelayClass(index)}`}
+                className={`benefits-card-wrapper ${getDelayClass(index)}`}
               >
                 <Card className="benefits-card">
                   <CardContent className="benefits-card-content">
@@ -243,12 +180,9 @@ export default function Benefits({ data = {} }: BenefitsProps) {
                     </h3>
                     
                     {/* Animated Counter */}
-                    <AnimatedCounter
-                      end={benefit.number}
-                      suffix={benefit.suffix}
-                      className="benefits-counter"
-                      start={inView}
-                    />
+                    <div className="benefits-counter">
+                      {benefit.number}{benefit.suffix}
+                    </div>
                     
                     {/* Description */}
                     <p className="benefits-card-description">
@@ -267,7 +201,7 @@ export default function Benefits({ data = {} }: BenefitsProps) {
         </div>
         
         {/* Bottom CTA */}
-        <div className={`benefits-cta ${inView ? 'benefits-fade-in-up' : 'benefits-fade-out'} benefits-delay-4`}>
+        <div className={`benefits-cta benefits-delay-4`}>
           <Button 
             size="lg"
             className="benefits-cta-button"

@@ -1,31 +1,5 @@
-"use client";
-
 import { MapPin, Globe, Users, Clock, Phone, Mail, Building, Flag } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
 import "@/styles/components/global-presence.css";
-
-// Intersection Observer Hook
-function useInView(threshold = 0.3) {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const [revealed, setRevealed] = useState(false);
-
-  useEffect(() => {
-    if (!ref.current || revealed) return;
-    const observer = new window.IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setRevealed(true);
-          observer.disconnect();
-        }
-      },
-      { threshold }
-    );
-    observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [threshold, revealed]);
-
-  return [ref, revealed] as const;
-}
 
 interface GlobalOffice {
   city: string;
@@ -76,7 +50,6 @@ interface GlobalPresenceProps {
 }
 
 export default function GlobalPresence({ data = {} }: GlobalPresenceProps) {
-  const [sectionRef, inView] = useInView(0.3);
 
   const {
     title = "Global Presence",
@@ -220,12 +193,12 @@ export default function GlobalPresence({ data = {} }: GlobalPresenceProps) {
   };
 
   return (
-    <section ref={sectionRef} className="global-presence-section">
+    <section className="global-presence-section">
       {/* Background Pattern */}
       
       
       <div className="global-presence-container">
-        <div className={`global-presence-header ${inView ? 'global-presence-fade-in-up' : 'global-presence-fade-out'}`}>
+        <div className={`global-presence-header`}>
           <h2 className="global-presence-title">
             {title}
           </h2>
@@ -235,17 +208,17 @@ export default function GlobalPresence({ data = {} }: GlobalPresenceProps) {
         </div>
         
         {/* Global Stats */}
-        <div className={`global-presence-stats ${inView ? 'global-presence-fade-in-up' : 'global-presence-fade-out'}`}>
+        <div className={`global-presence-stats`}>
           {globalStats.map((stat, index) => {
             const IconComponent = getIconComponent(stat.icon);
             
             return (
               <div
                 key={stat.metric}
-                className={`global-presence-stat-wrapper ${inView ? 'global-presence-fade-in-up' : 'global-presence-fade-out'}`}
+                className={`global-presence-stat-wrapper`}
                 style={{ 
-                  transitionDelay: inView ? `${index * 0.1}s` : '0s',
-                  animationDelay: inView ? `${index * 0.1}s` : '0s'
+                  transitionDelay: `${index * 0.1}s`,
+                  animationDelay: `${index * 0.1}s`
                 }}
               >
                 <div className="global-presence-stat-card">
@@ -272,10 +245,10 @@ export default function GlobalPresence({ data = {} }: GlobalPresenceProps) {
             return (
               <div
                 key={office.city}
-                className={`global-presence-office-wrapper ${inView ? 'global-presence-fade-in-up' : 'global-presence-fade-out'}`}
+                className={`global-presence-office-wrapper`}
                 style={{ 
-                  transitionDelay: inView ? `${(index + 4) * 0.15}s` : '0s',
-                  animationDelay: inView ? `${(index + 4) * 0.15}s` : '0s'
+                  transitionDelay: `${(index + 4) * 0.15}s`,
+                  animationDelay: `${(index + 4) * 0.15}s`
                 }}
               >
                 <div className="global-presence-office-card">
@@ -343,7 +316,7 @@ export default function GlobalPresence({ data = {} }: GlobalPresenceProps) {
         
         {/* Simple Locations Display (when locations data is provided) */}
         {locations && locations.length > 0 && (
-          <div className={`global-presence-locations ${inView ? 'global-presence-fade-in-up' : 'global-presence-fade-out'}`}>
+          <div className={`global-presence-locations`}>
             <h3 className="global-presence-locations-title">Our Locations</h3>
             <div className="global-presence-locations-grid">
               {locations.map((location, index) => (
@@ -351,8 +324,8 @@ export default function GlobalPresence({ data = {} }: GlobalPresenceProps) {
                   key={`${location.city}-${location.country}`}
                   className="global-presence-location-card"
                   style={{ 
-                    transitionDelay: inView ? `${(index + 4) * 0.15}s` : '0s',
-                    animationDelay: inView ? `${(index + 4) * 0.15}s` : '0s'
+                    transitionDelay: `${(index + 4) * 0.15}s`,
+                    animationDelay: `${(index + 4) * 0.15}s`
                   }}
                 >
                   <div className="global-presence-location-icon-container">
@@ -370,7 +343,7 @@ export default function GlobalPresence({ data = {} }: GlobalPresenceProps) {
         )}
         
         {/* Global Coverage */}
-        <div className={`global-presence-coverage ${inView ? 'global-presence-fade-in-up' : 'global-presence-fade-out'}`}>
+        <div className={`global-presence-coverage`}>
           <h3 className="global-presence-coverage-title">Global Coverage</h3>
           <div className="global-presence-coverage-grid">
             {globalCoverage.regions.map((region, index) => (

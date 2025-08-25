@@ -1,12 +1,11 @@
-"use client";
-
+ 
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import { CalendarCheck, FileText, Rocket, Calendar } from "lucide-react";
 import "@/styles/components/cta.css";
 
 interface CTAProps {
   data?: {
+    component_type?: "Text";
     subheading?: {
       text?: string;
       icon?: string;
@@ -32,6 +31,7 @@ interface CTAProps {
 
 export default function CTA({ data = {} }: CTAProps) {
   const {
+    component_type = "Text",
     subheading = { text: "Talk to our Experts", icon: "CalendarCheck" },
     title = "Ready to Scale with Smart Tech? Let's Talk.",
     description = "Transform your business processes with AI-powered automation and expert implementation.",
@@ -63,13 +63,7 @@ export default function CTA({ data = {} }: CTAProps) {
   return (
     <section className="cta-section">
       <div className="cta-container">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="cta-content"
-        >
+        <div className="cta-content">
           {/* Subheading */}
           <div className="cta-subheading">
             <SubheadingIcon className="cta-subheading-icon" />
@@ -118,7 +112,7 @@ export default function CTA({ data = {} }: CTAProps) {
               {trustIndicator.text}
             </span>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

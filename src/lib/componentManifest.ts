@@ -162,6 +162,35 @@ export const componentManifest: { [key: string]: ComponentManifest } = {
       }
     }
   },
+  // Alias to match schema.id used on the Components page
+  "erp-intro-text": {
+    name: "ERPIntroText",
+    purpose: "Introductory section with a large headline, quote icon, and long-form paragraphs.",
+    optimalUsage: [
+      "Use at the start of ERP or services pages to set context.",
+      "Keep paragraphs concise; 1–3 is ideal.",
+      "Use the highlight link to draw attention to a key resource.",
+    ],
+    jsonSchema: {
+      component: "ERPIntroText",
+      data: {
+        title: "string",
+        paragraphs: ["string"],
+        highlightLink: { text: "string", href: "string" }
+      }
+    },
+    example: {
+      component: "ERPIntroText",
+      data: {
+        title: "Looking for Leading ERP Software Development Company?",
+        paragraphs: [
+          "ERP systems are essential for the efficient functioning of modern businesses...",
+          "As a trusted ERPNext software company, Finbyz Tech guides your digital transformation journey..."
+        ],
+        highlightLink: { text: "benefits of ERP implementation", href: "#" }
+      }
+    }
+  },
   "HeroSection": {
     name: "HeroSection",
     purpose: "Use this component for the main landing section of your page. It includes a headline, description, and call-to-action buttons.",
@@ -412,6 +441,40 @@ export const componentManifest: { [key: string]: ComponentManifest } = {
         subtitle: "string", // Supporting description text
         imageSrc: "string", // Path to hero image
         imageAlt: "string" // Alt text for accessibility
+      }
+    },
+    example: {
+      component: "Hero",
+      data: {
+        title: "Empower Your Business with AI & ERP",
+        subtitle: "Unlock efficiency, automation, and growth with next-gen technology and expert talent.",
+        image: {
+          src: "/Steer Your Vision.png",
+          alt: "Steer Your Vision - Digital transformation and business guidance"
+        },
+        scrollTarget: "services"
+      }
+    },
+    notes: "This hero variant is perfect for pages where you want to inform rather than immediately convert. The highlighted words (AI, ERP) will automatically appear in orange."
+  },
+  // Alias to match schema.id "hero_section_without_button_alt"
+  "hero_section_without_button_alt": {
+    name: "Hero Section Without Button",
+    purpose: "Use this component as the primary landing section for pages. It displays a main headline, subtitle, and hero image without any action buttons - perfect for informational or content-focused pages.",
+    optimalUsage: [
+      "Best used as the **first section** on a page to create immediate visual impact.",
+      "Ideal for **informational pages** where you want to showcase content without driving immediate action.",
+      "The title should be **concise and impactful** - highlight key terms like AI, ERP, or other important concepts.",
+      "Keep the subtitle **descriptive but brief** - focus on the core value proposition.",
+      "Use high-quality images that **align with your brand** and message."
+    ],
+    jsonSchema: {
+      component: "Hero",
+      data: {
+        title: "string",
+        subtitle: "string",
+        imageSrc: "string",
+        imageAlt: "string"
       }
     },
     example: {

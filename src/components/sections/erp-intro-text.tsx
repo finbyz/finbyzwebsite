@@ -1,9 +1,8 @@
-"use client";
-
-import React from "react";
+ 
 import Image from "next/image";
 
 export interface ERPIntroTextData {
+  component_type?: "Text";
   title: string;
   paragraphs: string[];
   highlightLink?: { text: string; href: string };
@@ -20,6 +19,7 @@ export default function ERPIntroText({
 
   const content: ERPIntroTextData =
     resolved ?? {
+      component_type: "Text",
       title: "Looking for Leading ERP Software Development Company?",
       paragraphs: [
         "ERP systems are essential for the efficient functioning of modern businesses. As a leading ERP software provider, we understand the importance of integrating business processes, streamlining data management, and enhancing overall productivity. With technology evolving rapidly, ERP solutions—especially open-source options like ERPNext—have become more accessible and effective for businesses of all sizes. At Finbyz Tech, we offer premium ERP software development services in Ahmedabad, empowering organizations to overcome operational challenges and drive sustainable growth.",
@@ -30,6 +30,11 @@ export default function ERPIntroText({
       },
     };
 
+  // Ensure paragraphs is always an array with fallback
+  const paragraphs = content.paragraphs || [
+    "ERP systems are essential for the efficient functioning of modern businesses. As a leading ERP software provider, we understand the importance of integrating business processes, streamlining data management, and enhancing overall productivity."
+  ];
+
   return (
     <section className="py-14 md:py-20 bg-white">
       <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
@@ -38,10 +43,10 @@ export default function ERPIntroText({
             <Image src="/Quotation%20Mark.png" alt="Quote" width={80} height={80} className="w-12 md:w-16 h-auto" />
           </div>
           <h4 className="text-2xl md:text-3xl lg:text-[25px] font-semibold leading-tight text-[#1A5276]">
-            {content.title}
+            {content.title || "Looking for Leading ERP Software Development Company?"}
           </h4>
           <div className="col-start-2 max-w-[1040px]">
-            {content.paragraphs.map((paragraph, idx) => (
+            {paragraphs.map((paragraph, idx) => (
               <p
                 key={idx}
                 className="text-slate-700 text-base md:text-lg leading-8 md:leading-9 text-justify mb-6 md:mb-7"

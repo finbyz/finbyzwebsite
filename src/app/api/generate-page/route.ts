@@ -137,94 +137,32 @@ function generatePageComponent(pageName: string, pageData: any): string {
   
   if (isHtmlComponentsFormat) {
     // Generate HTML Components renderer
-    return `'use client';
-
-import React from 'react';
-import { HtmlComponentsRenderer, useHtmlComponentsPage } from '@/components/HtmlComponentsRenderer';
-import { DynamicPageErrorBoundary } from '@/components/DynamicPageRenderer';
+    return `import { HtmlComponentsPageClient } from '@/components/HtmlComponentsPageClient';
 import pageData from './page-data.json';
 
-// ============================================================================
-// DYNAMIC PAGE: ${pageName.toUpperCase()}
-// ============================================================================
-
 export default function ${functionName}Page() {
-  const { renderedSections, handleSectionRender } = useHtmlComponentsPage(pageData);
-
-  return (
-    <DynamicPageErrorBoundary>
-      <div className="min-h-screen">
-        {/* Dynamic Page Content */}
-        <HtmlComponentsRenderer
-          pageData={pageData}
-          onSectionRender={handleSectionRender}
-          className="dynamic-page-${pageName}"
-        />
-
-        {/* Debug Panel */}
-        <div className="fixed bottom-4 right-4 z-50 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-lg p-4 shadow-lg max-w-xs">
-          <h3 className="font-semibold text-sm text-gray-800 mb-2">Page Info</h3>
-          <div className="text-xs text-gray-600 space-y-1">
-            <div>Page: ${pageName}</div>
-            <div>Sections: {pageData.sections.length}</div>
-            <div>Rendered: {renderedSections.length}</div>
-            <div className="text-xs text-gray-500 mt-2">
-              {renderedSections.map((section, index) => (
-                <div key={index} className="truncate">
-                  ✓ {section}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </DynamicPageErrorBoundary>
-  );
+	return (
+		<HtmlComponentsPageClient
+			pageData={pageData as any}
+			className="dynamic-page-${pageName}"
+			pageKey="${pageName}"
+		/>
+	);
 }
 `;
   } else {
     // Generate SectionsBasedRenderer (includes standard Header/Footer and supports all sections)
-    return `'use client';
-
-import React from 'react';
-import { SectionsBasedRenderer, useSectionsBasedPage } from '@/components/SectionsBasedRenderer';
-import { PageData } from '@/types/section-data';
+    return `import { SectionsBasedPageClient } from '@/components/SectionsBasedPageClient';
 import pageData from './page-data.json';
 
-// ============================================================================
-// DYNAMIC PAGE: ${pageName.toUpperCase()}
-// ============================================================================
-
 export default function ${functionName}Page() {
-  const { renderedSections, handleSectionRender } = useSectionsBasedPage(pageData as PageData);
-
-  return (
-    <div className="min-h-screen">
-      {/* Dynamic Page Content with Standard Header/Footer */}
-      <SectionsBasedRenderer
-        pageData={pageData as PageData}
-        onSectionRender={handleSectionRender}
-        className="dynamic-page-${pageName}"
-      />
-
-      {/* Debug Panel */}
-      <div className="fixed bottom-4 right-4 z-50 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-lg p-4 shadow-lg max-w-xs">
-        <h3 className="font-semibold text-sm text-gray-800 mb-2">Page Info</h3>
-        <div className="text-xs text-gray-600 space-y-1">
-          <div>Page: ${pageName}</div>
-          <div>Sections: {pageData.sections.length}</div>
-          <div>Rendered: {renderedSections.length}</div>
-          <div className="text-xs text-gray-500 mt-2">
-            {renderedSections.map((section, index) => (
-              <div key={index} className="truncate">
-                ✓ {section}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+	return (
+		<SectionsBasedPageClient
+			pageData={pageData as any}
+			className="dynamic-page-${pageName}"
+			pageKey="${pageName}"
+		/>
+	);
 }
 `;
   }

@@ -25,10 +25,8 @@
  * @requires @/contexts/MobileMenuContext - For mobile menu state
  */
 
-"use client";
-
-import { useState, useEffect, useRef } from "react";
-import { useMobileMenu } from "@/contexts/MobileMenuContext";
+ 
+ 
 import "@/styles/components/comment.css";
 
 /**
@@ -38,27 +36,7 @@ import "@/styles/components/comment.css";
  * @param threshold - Intersection threshold (0-1, default: 0.3)
  * @returns Tuple of [ref, inView] where ref is the element reference and inView is boolean
  */
-function useInView(threshold = 0.3) {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const [revealed, setRevealed] = useState(false);
-
-  useEffect(() => {
-    if (!ref.current || revealed) return;
-    const observer = new window.IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setRevealed(true);
-          observer.disconnect();
-        }
-      },
-      { threshold }
-    );
-    observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [threshold, revealed]);
-
-  return [ref, revealed] as const;
-}
+// Removed IntersectionObserver hook for server-side compatibility
 
 interface CommentProps {
   data?: {
@@ -80,8 +58,6 @@ interface CommentProps {
  * @returns Simple comment section with quotation mark design
  */
 export default function Comment({ data = {} }: CommentProps) {
-  const [sectionRef, inView] = useInView(0.3);
-  const { isOpen } = useMobileMenu();
 
   const {
     text = "Looking for a Trusted CRM Software Development Company?",
@@ -89,18 +65,10 @@ export default function Comment({ data = {} }: CommentProps) {
   } = data;
 
   return (
-    <section ref={sectionRef} id="comments" className="comment-section">
+    <section id="comments" className="comment-section">
       <div className="comment-container">
         {/* Main Quote Display */}
-        <div className={`comment-content ${
-          inView 
-            ? isOpen 
-              ? 'comment-slide-in-left' 
-              : 'comment-fade-in-up' 
-            : isOpen 
-                      ? 'comment-slide-out-up'
-        : 'comment-fade-out'
-        }`}>
+        <div className={`comment-content comment-fade-in-up`}>
           <div className="comment-layout">
             {/* Symbol Design */}
             <div className="comment-symbol">

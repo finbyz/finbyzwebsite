@@ -1,31 +1,9 @@
-"use client";
-
-import { useState, useEffect, useRef } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+ 
+ 
 import "@/styles/components/client-logos.css";
 
 // Intersection Observer Hook
-function useInView(threshold = 0.3) {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const [revealed, setRevealed] = useState(false);
-
-  useEffect(() => {
-    if (!ref.current || revealed) return;
-    const observer = new window.IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setRevealed(true);
-          observer.disconnect();
-        }
-      },
-      { threshold }
-    );
-    observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [threshold, revealed]);
-
-  return [ref, revealed] as const;
-}
+// Server-side render: static grid; no intersection observer
 
 // Default client logos data
 const defaultClientLogos = [
@@ -94,18 +72,13 @@ const defaultClientLogos = [
   }
 ];
 
-// Default carousel settings
-const defaultCarouselSettings = {
-  autoPlay: true,
-  interval: 3000,
-  showArrows: true,
-  showIndicators: true
-};
+// No carousel settings in server-only mode
 
 
 
 interface ClientLogosProps {
   data?: {
+    component_type?: "Carousal";
     title?: string;
     subtitle?: string;
     clients?: any[];
@@ -119,47 +92,14 @@ interface ClientLogosProps {
 }
 
 export default function ClientLogos({ data }: ClientLogosProps) {
-  const [ref, inView] = useInView(0.2);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   // Use provided data or defaults
-  const clientLogos = data?.clients || defaultClientLogos;
-  const carouselSettings = { ...defaultCarouselSettings, ...data?.carousel };
-  const title = data?.title || "Some of The Loyal Clients of FinByz";
-  const subtitle = data?.subtitle || "Trusted by leading companies worldwide";
-
-  // Auto-play functionality
-  useEffect(() => {
-    if (!isAutoPlaying || !carouselSettings.autoPlay) return;
-    
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
-        prevIndex === clientLogos.length - 1 ? 0 : prevIndex + 1
-      );
-    }, carouselSettings.interval); // Change slide every 3 seconds
-
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, carouselSettings.autoPlay, carouselSettings.interval, clientLogos.length]);
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === clientLogos.length - 1 ? 0 : prevIndex + 1
-    );
-    setIsAutoPlaying(false);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === 0 ? clientLogos.length - 1 : prevIndex - 1
-    );
-    setIsAutoPlaying(false);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-    setIsAutoPlaying(false);
-  };
+  const {
+    component_type = "Carousal",
+    clients: clientLogos = defaultClientLogos,
+    title = "Some of The Loyal Clients of FinByz",
+    subtitle = "Trusted by leading companies worldwide"
+  } = data || {};
 
   return (
     <section className="client-logos-section">
@@ -174,59 +114,12 @@ export default function ClientLogos({ data }: ClientLogosProps) {
           )}
         </div>
 
-        {/* Carousel Container */}
-        <div className="client-logos-carousel-container">
-          {/* Navigation Arrows */}
-          {carouselSettings.showArrows && (
-            <>
-              <button
-                onClick={prevSlide}
-                className="client-logos-nav-button prev"
-                aria-label="Previous slide"
-              >
-                <ChevronLeft className="client-logos-nav-icon" />
-              </button>
-
-              <button
-                onClick={nextSlide}
-                className="client-logos-nav-button next"
-                aria-label="Next slide"
-              >
-                <ChevronRight className="client-logos-nav-icon" />
-              </button>
-            </>
-          )}
-
-          {/* Carousel Track */}
-          <div 
-            ref={ref}
-            className={`client-logos-track ${
-              inView ? 'fade-in' : 'fade-out'
-            }`}
-          >
-            <div 
-              className="client-logos-slides"
-              style={{
-                transform: `translateX(-${currentIndex * 100}%)`,
-                width: `${clientLogos.length * 100}%`
-              }}
-            >
-              {clientLogos.map((client, index) => (
-                <div
-                  key={index}
-                  className="client-logos-slide"
-                  style={{ width: `${100 / clientLogos.length}%` }}
-                >
-                  <div className="client-logos-grid">
-                    {clientLogos.slice(index, index + 6).map((clientItem, itemIndex) => {
-                      const actualIndex = (index + itemIndex) % clientLogos.length;
-                      return (
-                        <div
-                          key={actualIndex}
-                          className="client-logo-item group"
-                        >
-                          {/* Logo Container with actual logo designs */}
-                          <div className="client-logo-container">
+        {/* Static Grid Container */}
+        <div className="client-logos-grid-container">
+          <div className="client-logos-grid">
+            {clientLogos.map((clientItem, actualIndex) => (
+              <div key={actualIndex} className="client-logo-item group">
+                <div className="client-logo-container">
                             {/* South India Trading Co. */}
                             {clientItem.name === "South India Trading Co." && (
                               <div className="text-center">
@@ -298,31 +191,10 @@ export default function ClientLogos({ data }: ClientLogosProps) {
                                 </div>
                               </div>
                             )}
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-
-          {/* Carousel Indicators */}
-          {carouselSettings.showIndicators && (
-            <div className="client-logos-indicators">
-              {clientLogos.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`client-logos-indicator ${
-                    index === currentIndex ? 'active' : 'inactive'
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div>
-          )}
         </div>
 
 

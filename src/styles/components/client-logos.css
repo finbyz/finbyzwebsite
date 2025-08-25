@@ -37,11 +37,16 @@
 }
 
 /* Carousel Container */
-.client-logos-carousel-container {
-  position: relative;
-  max-width: 72rem;
-  margin: 0 auto;
-}
+.client-logos-carousel-container,
+.client-logos-track,
+.client-logos-slides,
+.client-logos-slide,
+.client-logos-nav-button,
+.client-logos-nav-icon,
+.client-logos-indicators,
+.client-logos-indicator { display: none; }
+
+.client-logos-grid-container { max-width: 72rem; margin: 0 auto; }
 
 /* Navigation Arrows */
 .client-logos-nav-button {
@@ -81,30 +86,7 @@
 }
 
 /* Carousel Track */
-.client-logos-track {
-  overflow: hidden;
-  transition: all 1s;
-}
-
-.client-logos-track.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.client-logos-track.fade-out {
-  opacity: 0;
-  transform: translateY(0);
-}
-
-.client-logos-slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.client-logos-slide {
-  flex-shrink: 0;
-  padding: 0 1rem;
-}
+/* Removed carousel track styles for server-only grid */
 
 .client-logos-grid {
   display: grid;

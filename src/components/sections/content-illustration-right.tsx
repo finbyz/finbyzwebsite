@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 export interface ContentIllustrationRightData {
+  component_type?: "Text";
   title: string;
   paragraphs: string[];
   imageSrc: string;
@@ -14,6 +15,7 @@ export default function ContentIllustrationRight({ data }: { data?: any }) {
     (data?.data as ContentIllustrationRightData) ||
     (data as ContentIllustrationRightData);
 
+  const component_type = resolved?.component_type ?? "Text";
   const title = resolved?.title ?? "";
   const paragraphs = resolved?.paragraphs ?? [];
   const imageSrc = resolved?.imageSrc ?? "";

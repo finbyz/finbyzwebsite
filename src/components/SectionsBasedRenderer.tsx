@@ -1,5 +1,4 @@
-'use client';
-
+ 
 import React from 'react';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
@@ -153,6 +152,17 @@ const COMPONENT_MAP: Record<string, React.ComponentType<any>> = {
 function SectionRenderer({ section, index, onSectionRender }: { section: SectionData; index: number; onSectionRender?: (sectionType: string, index: number) => void }) {
   const Component = COMPONENT_MAP[section.type];
   
+  // Use useEffect to call onSectionRender after component mounts
+  React.useEffect(() => {
+    if (onSectionRender) {
+      try { 
+        onSectionRender(section.type, index); 
+      } catch (error) {
+        console.warn('Error in onSectionRender:', error);
+      }
+    }
+  }, [onSectionRender, section.type, index]);
+  
   if (!Component) {
     console.warn(`Unknown section type: ${section.type}`);
     return (
@@ -163,13 +173,6 @@ function SectionRenderer({ section, index, onSectionRender }: { section: Section
       </div>
     );
   }
-
-  // Notify after render commit to avoid setState during render
-  React.useEffect(() => {
-    if (onSectionRender) {
-      onSectionRender(section.type, index);
-    }
-  }, [onSectionRender, section.type, index]);
 
   return (
     <section 

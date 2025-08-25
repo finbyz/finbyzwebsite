@@ -50,14 +50,10 @@
  * @requires @/contexts/MobileMenuContext - For mobile menu state
  */
 
-"use client";
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Star, Quote } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
-import { useMobileMenu } from "@/contexts/MobileMenuContext";
 import testimonialsData from "@/data/testimonials.json";
 import { renderTemplateObject } from "@/utils/templateEngine";
 import "@/styles/components/testimonials.css";
@@ -80,27 +76,7 @@ import "@/styles/components/testimonials.css";
  * )
  * ```
  */
-function useInView(threshold = 0.3) {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const [revealed, setRevealed] = useState(false);
-
-  useEffect(() => {
-    if (!ref.current || revealed) return;
-    const observer = new window.IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setRevealed(true);
-          observer.disconnect();
-        }
-      },
-      { threshold }
-    );
-    observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [threshold, revealed]);
-
-  return [ref, revealed] as const;
-}
+// Server-side render: removed IntersectionObserver animations
 
 /**
  * Color palette for testimonial cards and client logos.
@@ -176,24 +152,20 @@ interface ClientLogo {
  * ```
  */
 export default function Testimonials({ data = {} }: { data?: Record<string, any> }) {
-  const [sectionRef, inView] = useInView(0.3);
-  const { isOpen } = useMobileMenu();
   
   // Render the template with provided data
   const renderedData = renderTemplateObject(testimonialsData, data);
 
+  // Add component_type to the data
+  const componentData = {
+    component_type: "Card",
+    ...renderedData
+  };
+
   return (
-    <section ref={sectionRef} id="testimonials" className="testimonials-section">
+    <section id="testimonials" className="testimonials-section">
       <div className="testimonials-container">
-        <div className={`testimonials-header ${
-          inView 
-            ? isOpen 
-              ? 'testimonials-slide-in-up' 
-              : 'testimonials-fade-in-up' 
-            : isOpen 
-              ? 'testimonials-slide-out-up' 
-              : 'testimonials-fade-out'
-        }`}>
+        <div className={`testimonials-header`}>
           <h2 className="testimonials-title">
             {renderedData.title}
           </h2>
@@ -207,18 +179,10 @@ export default function Testimonials({ data = {} }: { data?: Record<string, any>
           {renderedData.testimonials.map((testimonial: Testimonial, index: number) => (
             <div
               key={`${testimonial.author}-${testimonial.company}`}
-              className={`testimonial-card-wrapper ${
-                inView 
-                  ? isOpen 
-                    ? 'testimonials-slide-in-up' 
-                    : 'testimonials-fade-in-up' 
-                  : isOpen 
-                    ? 'testimonials-slide-out-up' 
-                    : 'testimonials-fade-out'
-              }`}
+              className={`testimonial-card-wrapper`}
               style={{ 
-                transitionDelay: inView ? `${index * 0.2}s` : '0s',
-                animationDelay: inView ? `${index * 0.2}s` : '0s'
+                transitionDelay: `${index * 0.2}s`,
+                animationDelay: `${index * 0.2}s`
               }}
             >
               <Card
@@ -271,15 +235,7 @@ export default function Testimonials({ data = {} }: { data?: Record<string, any>
         </div>
         
         {/* Bottom CTA */}
-        <div className={`testimonials-cta ${
-          inView 
-            ? isOpen 
-              ? 'testimonials-slide-in-up' 
-              : 'testimonials-fade-in-up' 
-            : isOpen 
-              ? 'testimonials-slide-out-up' 
-              : 'testimonials-fade-out'
-        }`} style={{ transitionDelay: inView ? '0.6s' : '0s' }}>
+        <div className={`testimonials-cta`}>
           <Button 
             size="lg"
             className="testimonials-cta-button"
@@ -288,15 +244,7 @@ export default function Testimonials({ data = {} }: { data?: Record<string, any>
           </Button>
           
           {/* Trust Indicators */}
-          <div className={`testimonials-trust-indicators ${
-            inView 
-              ? isOpen 
-                ? 'testimonials-slide-in-up' 
-                : 'testimonials-fade-in-up' 
-              : isOpen 
-                ? 'testimonials-slide-out-up' 
-                : 'testimonials-fade-out'
-          }`} style={{ transitionDelay: inView ? '0.8s' : '0s' }}>
+          <div className={`testimonials-trust-indicators`}>
             {renderedData.trustIndicators.map((indicator: any, index: number) => (
               <div key={index} className="trust-indicator">
                 <div 
