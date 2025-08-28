@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 import Image from 'next/image'
 
 interface FrappeImageProps {
@@ -14,6 +14,8 @@ interface FrappeImageProps {
     defaultImage?: string
 }
 
+const FRAPPE_BASE = process.env.FRAPPE_URL
+
 const FrappeImage: React.FC<FrappeImageProps> = ({
     fileUrl,
     alt,
@@ -25,26 +27,50 @@ const FrappeImage: React.FC<FrappeImageProps> = ({
     defaultImage,
 }) => {
     const [imageError, setImageError] = useState(false)
-    const [imageSrc, setImageSrc] = useState(fileUrl)
+
+    const resolvedSrc = useMemo(() => {
+        if (!fileUrl) return ''
+        // Absolute URLs: use as-is
+        if (/^https?:\/\//i.test(fileUrl)) return fileUrl
+
+        // Keep ERPNext '/file/{hash}/{filename}' as requested; just prepend the base domain
+        if (fileUrl.startsWith('/file/')) {
+            const base = FRAPPE_BASE?.replace(/\/$/, '')
+            return base ? `${base}${fileUrl}` : fileUrl
+        }
+
+        // Public files served directly
+        if (fileUrl.startsWith('/files/')) {
+            const base = FRAPPE_BASE?.replace(/\/$/, '')
+            return base ? `${base}${fileUrl}` : fileUrl
+        }
+
+        // Private files must go via proxy (requires auth)
+        if (fileUrl.startsWith('/private/')) {
+            const encoded = encodeURIComponent(fileUrl)
+            return `/api/fb/method/frappe.utils.file_manager.get_file?file_url=${encoded}`
+        }
+
+        // Fallback: treat as public path under base
+        const base = FRAPPE_BASE?.replace(/\/$/, '')
+        return base ? `${base}${fileUrl}` : fileUrl
+    }, [fileUrl])
 
     const handleImageError = () => {
         if (defaultImage && !imageError) {
-            setImageSrc(defaultImage)
             setImageError(true)
         }
     }
 
     return (
-        <Image
-            src={imageSrc}
+        <img
+            src={imageError && defaultImage ? defaultImage : resolvedSrc}
             alt={alt}
             className={className}
             id={id}
             style={style}
-            width={400}
-            height={300}
-            onError={handleImageError}
             loading={lazyLoad ? 'lazy' : 'eager'}
+            onError={handleImageError}
         />
     )
 }

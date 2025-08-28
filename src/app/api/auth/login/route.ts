@@ -5,7 +5,7 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { username, password } = body;
 
-    // Validate input
+    // Validate inputT
     if (!username || !password) {
       return NextResponse.json(
         { error: 'Username and password are required' },
@@ -23,6 +23,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Make login request to Frappe backend
+    console.log('frappeUrl', frappeUrl)
     const loginResponse = await fetch(`${frappeUrl}/api/method/login`, {
       method: 'POST',
       headers: {

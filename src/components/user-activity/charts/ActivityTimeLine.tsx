@@ -127,24 +127,6 @@ const ActivityTimeLine = ({
         }
     }, [date, hour])
 
-    if (isLoading) {
-        return (
-            <div className='col-md-11'>
-                <div style={{ 
-                    height: '100px', 
-                    width: '100%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    backgroundColor: '#f8f9fa',
-                    borderRadius: '4px'
-                }}>
-                    <div style={{ fontSize: '12px', color: '#6c757d' }}>Loading...</div>
-                </div>
-            </div>
-        )
-    }
-
     return (
         <div className='col-md-11'>
             <div ref={chartRef} style={{ height: '100px', width: '100%' }} />

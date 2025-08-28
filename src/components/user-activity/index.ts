@@ -1,6 +1,3 @@
-// Main page
-export { default as UserActivity } from '../app/user-activity/page'
-
 // Chart components
 export { default as WorkIntensityChart } from './charts/WorkIntensityChart'
 export { default as ApplicationUsageChart } from './charts/ApplicationUsageChart'

@@ -14,10 +14,22 @@ export default function JobApplication() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [fileName, setFileName] = useState<string>("");
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const WEB_FORM_NAME = "job-application";
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
+      // Validate file size (5MB limit)
+      if (file.size > 5 * 1024 * 1024) {
+        alert("File size exceeds 5MB limit. Please upload a smaller file.");
+        return;
+      }
+      // Validate file type
+      const allowedTypes = ["application/pdf", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
+      if (!allowedTypes.includes(file.type)) {
+        alert("Please upload a file in PDF, DOC, or DOCX format.");
+        return;
+      }
       setSelectedFile(file);
       setFileName(file.name);
     }
@@ -35,11 +47,85 @@ export default function JobApplication() {
     }
   };
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      const form = e.currentTarget;
+      const getValue = (id: string) =>
+        (form.querySelector(`#${id}`) as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement)?.value || '';
+
+      // Prepare form data
+      const formData = new FormData();
+      formData.append("web_form", WEB_FORM_NAME);
+      formData.append("for_payment", "0");
+      // Prepare document data
+      const doc = {
+        job_title: getValue("jobOpening"),
+        applicant_name: getValue("applicantName"),
+        gender: getValue("gender"),
+        email_id: getValue("email"),
+        mobile: getValue("mobile"),
+        location: getValue("location"),
+        applicant_type: getValue("applicantType"),
+        qualification: getValue("qualification"),
+        additional_info: getValue("additionalInfo"),
+        linkedin_link : getValue("linkedin_link")
+      };
+
+      // Append document data as JSON
+      formData.append("data", JSON.stringify(doc));
+
+      // Append file if selected
+      if (selectedFile) {
+        formData.append("resume", selectedFile, selectedFile.name);
+      } else {
+        alert("Please upload a resume.");
+        return;
+      }
+
+      // Send request to Frappe web form API
+      const res = await fetch("/api/frappe/frappe.website.doctype.web_form.web_form.accept", {
+        method: "POST",
+        body: formData,
+      });
+
+      // Handle response
+      if (!res.ok) {
+        const raw = await res.text();
+        let message = raw;
+        try {
+          const json = JSON.parse(raw);
+          message = json.message || json._server_messages || json.exc || raw;
+          if (json.exc_type === "ValidationError") {
+            message = "Invalid form data. Please check all required fields and the resume file.";
+          } else if (json.exc_type === "PermissionError") {
+            message = "You do not have permission to submit this form. Please contact support.";
+          }
+        } catch {}
+        if (res.status === 409) {
+          alert("Application already exists. Thank you!");
+        } else {
+          alert(message || "An error occurred while submitting your application.");
+        }
+        return;
+      }
+
+      // Success
+      alert("Application submitted successfully.");
+      form.reset();
+      setSelectedFile(null);
+      setFileName("");
+      if (fileInputRef.current) fileInputRef.current.value = "";
+    } catch (err) {
+      console.error("Application submission failed:", err);
+      alert("Sorry, something went wrong submitting your application. Please try again.");
+    }
+  };
+
   return (
     <div className={styles.container}>
       <Header />
       <main className={styles.main}>
-        {/* Hero Section */}
         <section className={styles.heroSection}>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className={styles.heroContainer}>
@@ -49,11 +135,8 @@ export default function JobApplication() {
                   Back to Careers
                 </Link>
               </div>
-              
               <div className={styles.heroContent}>
-                <h1 className={styles.heroTitle}>
-                  Job Application Form
-                </h1>
+                <h1 className={styles.heroTitle}>Job Application Form</h1>
                 <p className={styles.heroDescription}>
                   Join our team and be part of innovative projects. Please fill out the form below to apply for the position.
                 </p>
@@ -62,18 +145,15 @@ export default function JobApplication() {
           </div>
         </section>
 
-        {/* Application Form Section */}
         <section className={styles.formSection}>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className={styles.formContainer}>
-              <form className={styles.applicationForm}>
-                {/* Personal Information Section */}
+              <form className={styles.applicationForm} onSubmit={handleSubmit}>
                 <div className={styles.formSectionHeader}>
                   <h3 className={styles.sectionTitle}>Personal Information</h3>
                   <p className={styles.sectionDescription}>Basic details about the applicant</p>
                 </div>
 
-                {/* Job Opening */}
                 <div className={styles.formGroup}>
                   <label htmlFor="jobOpening" className={styles.formLabel}>
                     Job Opening <span className={styles.required}>*</span>
@@ -91,7 +171,6 @@ export default function JobApplication() {
                   </select>
                 </div>
 
-                {/* Applicant Name */}
                 <div className={styles.formGroup}>
                   <label htmlFor="applicantName" className={styles.formLabel}>
                     Applicant Name <span className={styles.required}>*</span>
@@ -105,7 +184,6 @@ export default function JobApplication() {
                   />
                 </div>
 
-                {/* Gender */}
                 <div className={styles.formGroup}>
                   <label htmlFor="gender" className={styles.formLabel}>
                     Gender <span className={styles.required}>*</span>
@@ -119,7 +197,6 @@ export default function JobApplication() {
                   </select>
                 </div>
 
-                {/* Email Address */}
                 <div className={styles.formGroup}>
                   <label htmlFor="email" className={styles.formLabel}>
                     Email Address <span className={styles.required}>*</span>
@@ -133,7 +210,6 @@ export default function JobApplication() {
                   />
                 </div>
 
-                {/* Mobile Number */}
                 <div className={styles.formGroup}>
                   <label htmlFor="mobile" className={styles.formLabel}>
                     Mobile Number <span className={styles.required}>*</span>
@@ -147,7 +223,6 @@ export default function JobApplication() {
                   />
                 </div>
 
-                {/* Current Location */}
                 <div className={styles.formGroup}>
                   <label htmlFor="location" className={styles.formLabel}>
                     Current Location <span className={styles.required}>*</span>
@@ -161,7 +236,6 @@ export default function JobApplication() {
                   />
                 </div>
 
-                {/* Applicant Type */}
                 <div className={styles.formGroup}>
                   <label htmlFor="applicantType" className={styles.formLabel}>
                     Applicant Type <span className={styles.required}>*</span>
@@ -175,7 +249,6 @@ export default function JobApplication() {
                   </select>
                 </div>
 
-                {/* Highest Qualification */}
                 <div className={styles.formGroup}>
                   <label htmlFor="qualification" className={styles.formLabel}>
                     Highest Qualification <span className={styles.required}>*</span>
@@ -191,22 +264,32 @@ export default function JobApplication() {
                   </select>
                 </div>
 
-                {/* Documents & Additional Information Section */}
                 <div className={styles.formSectionHeader}>
                   <h3 className={styles.sectionTitle}>Documents & Additional Information</h3>
                   <p className={styles.sectionDescription}>Resume and additional details</p>
                 </div>
 
-                {/* Resume Attachment */}
+                <div className={styles.formGroup}>
+                  <label htmlFor="linkedin_link" className={styles.formLabel}>
+                    LinkedIn Profile URL
+                  </label>
+                  <Input
+                    id="linkedin_link"
+                    type="url"
+                    placeholder="Enter your LinkedIn profile URL (e.g., https://www.linkedin.com/in/username)"
+                    className={styles.textInput}
+                  />
+                </div>
+
                 <div className={styles.formGroup}>
                   <label htmlFor="resume" className={styles.formLabel}>
                     Resume Attachment <span className={styles.required}>*</span>
                   </label>
                   <div className={styles.fileUploadContainer}>
                     {!selectedFile ? (
-                      <Button 
-                        type="button" 
-                        variant="outline" 
+                      <Button
+                        type="button"
+                        variant="outline"
                         className={styles.attachButton}
                         onClick={handleAttachClick}
                       >
@@ -219,9 +302,9 @@ export default function JobApplication() {
                           <FileText className={styles.fileIcon} />
                           <span className={styles.fileName}>{fileName}</span>
                         </div>
-                        <Button 
-                          type="button" 
-                          variant="outline" 
+                        <Button
+                          type="button"
+                          variant="outline"
                           size="sm"
                           className={styles.removeButton}
                           onClick={handleRemoveFile}
@@ -244,7 +327,6 @@ export default function JobApplication() {
                   </div>
                 </div>
 
-                {/* Additional Information */}
                 <div className={styles.formGroup}>
                   <label htmlFor="additionalInfo" className={styles.formLabel}>
                     Additional Information
@@ -257,7 +339,6 @@ export default function JobApplication() {
                   />
                 </div>
 
-                {/* Action Buttons */}
                 <div className={styles.actionButtons}>
                   <Button type="button" variant="outline" className={styles.discardButton}>
                     <X className={styles.buttonIcon} />

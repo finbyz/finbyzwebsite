@@ -1,6 +1,6 @@
 .user-activity-layout {
     min-height: 100vh;
-    background-color: #f8f9fa;
+    background: #0b1220; /* flat dark navy */
 }
 
 .page-content {
@@ -8,101 +8,190 @@
 }
 
 .page-title-box {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 30px 0;
+    background: #0b1220; /* unified with page */
+    color: #ffffff;
+    padding: 40px 0;
     margin-bottom: 30px;
-    border-radius: 10px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
 .page-title {
     margin: 0;
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 2.2rem;
+    font-weight: 800;
 }
+
+.breadcrumb {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.breadcrumb a { color: #c7d2fe; text-decoration: none; }
+.breadcrumb a:hover { color: #ffffff; }
 
 .form-label {
     font-weight: 600;
-    color: #495057;
+    color: #cbd5e1;
     margin-bottom: 8px;
 }
 
 .form-control {
-    border: 2px solid #e9ecef;
-    border-radius: 8px;
+    border: 2px solid #1f2937;
+    border-radius: 10px;
     padding: 12px 16px;
     font-size: 14px;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
+    background: #0f172a;
+    color: #e5e7eb;
 }
 
 .form-control:focus {
-    border-color: #667eea;
-    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+    border-color: #1e40af; /* blue */
+    box-shadow: 0 0 0 0.2rem rgba(30, 64, 175, 0.35);
+    outline: none;
 }
 
 .card {
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    background: #0f172a; /* flat panel */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
-.card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
+.card-title { color: #e2e8f0; font-weight: 700; font-size: 1.1rem; }
+.card-body { color: #cbd5e1; }
 
-.card-title {
-    color: #495057;
-    font-weight: 600;
-    font-size: 1.1rem;
-}
-
-.recent-activity-list {
-    background: white;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.clickable-image {
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.clickable-image:hover {
-    transform: scale(1.05);
-}
-
-.text-nowrap {
-    white-space: nowrap;
-}
-
-.mb-4 {
-    margin-bottom: 1.5rem !important;
-}
-
-.mt-4 {
-    margin-top: 1.5rem !important;
-}
-
-.text-center {
+.kpi-card {
+    background: #0f172a;
+    border: 1px solid #1f2937;
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
     text-align: center;
 }
 
-.text-danger {
-    color: #dc3545;
+.kpi-value { font-size: 2.1rem; font-weight: 800; }
+.kpi-label { font-size: 0.85rem; opacity: 0.9; letter-spacing: 0.4px; color: #cbd5e1; }
+
+.filters-section {
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 30px;
+    border: 1px solid #1f2937;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .page-title {
-        font-size: 1.5rem;
-    }
-    
-    .page-title-box {
-        padding: 20px 0;
-        margin-bottom: 20px;
-    }
+.filters-section h5 { color: #e2e8f0; font-weight: 800; margin-bottom: 16px; }
+
+.chart-section {
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 30px;
+    border: 1px solid #1f2937;
 }
+
+.chart-section h5 {
+    color: #e2e8f0;
+    font-weight: 800;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chart-section h5::before {
+    content: '';
+    width: 4px;
+    height: 18px;
+    background: #ea580c; /* orange accent */
+    border-radius: 2px;
+}
+
+.btn-primary {
+    background: #ea580c; /* flat orange */
+    border: 0;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-weight: 700;
+    color: #0b1220;
+}
+
+.btn-primary:hover { filter: brightness(1.05); }
+
+.btn-outline-primary {
+    border: 2px solid #1e40af;
+    color: #c7d2fe;
+    background: transparent;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-weight: 700;
+}
+
+.btn-outline-primary:hover { background: #1e40af; color: #ffffff; }
+
+.recent-activity-list {
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid #1f2937;
+}
+
+.text-primary { color: #1e40af !important; }
+.text-warning { color: #ea580c !important; }
+.badge-primary { background: #1e40af; color: #ffffff; border-radius: 14px; padding: 6px 10px; font-weight: 700; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-title { font-size: 1.8rem; }
+    .card-body { padding: 20px; }
+    .filters-section, .chart-section { padding: 20px; }
+}
+
+/* Prevent header overlap */
+.user-activity-layout main { padding-top: 80px; }
+
+/* Scrollbar */
+.user-activity-layout ::-webkit-scrollbar { width: 8px; }
+.user-activity-layout ::-webkit-scrollbar-track { background: #0b1220; }
+.user-activity-layout ::-webkit-scrollbar-thumb { background: #1e40af; }
+.user-activity-layout ::-webkit-scrollbar-thumb:hover { background: #3247b7; }
+
+/* Themed compact table for overview */
+.ua-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #0f172a; /* panel background */
+    color: #e2e8f0;
+    border: 1px solid #1f2937;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.ua-table thead th {
+    background: #0b1220;
+    color: #e2e8f0;
+    font-weight: 700;
+    padding: 10px 12px;
+    border-bottom: 1px solid #1f2937;
+}
+.ua-table tbody td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #1f2937;
+}
+.ua-table tbody tr:nth-child(odd) td {
+    background: rgba(255, 255, 255, 0.02);
+}
+.ua-table tfoot th,
+.ua-table tfoot td {
+    padding: 12px;
+    background: #0b1220;
+    border-top: 1px solid #1f2937;
+    font-weight: 800;
+}
+.ua-table .ua-num { text-align: center; width: 140px; }
+.ua-table .ua-date { width: 160px; white-space: nowrap; }

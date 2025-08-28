@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Home, Users, Building2, Wrench, FileText, Briefcase, Phone, BookOpen, Target, Factory, ShoppingCart, Heart, GraduationCap, Truck, Leaf, TestTube, Hammer, Pill, Eye, Zap, Code, UserPlus, Lightbulb, Calendar, Star, Mail, ChevronLeft, ChevronRight, Handshake, Rocket, Send, Sparkles, BarChart3, Package, DollarSign, TrendingUp, Search, Video, Newspaper, Smartphone, Brain, CheckCircle, MapPin } from "lucide-react";
+import { Menu, X, ChevronDown, Home, Users, Building2, Wrench, FileText, Briefcase, Phone, BookOpen, Target, Factory, ShoppingCart, Heart, GraduationCap, Truck, Leaf, TestTube, Hammer, Pill, Eye, Zap, Code, UserPlus, Lightbulb, Calendar, Star, Mail, ChevronLeft, ChevronRight, Handshake, Rocket, Send, Sparkles, BarChart3, Package, DollarSign, TrendingUp, Search, Video, Newspaper, Smartphone, Brain, CheckCircle, MapPin, LogIn } from "lucide-react";
 import { useMobileMenu } from "@/contexts/MobileMenuContext";
 import {
   DropdownMenu,
@@ -691,6 +691,16 @@ export default function Header() {
               >
                 Book Consultation
               </Button>
+
+              <Link href="/login" className="ml-2">
+                <Button 
+                  variant="ghost"
+                  className="text-gray-300 hover:text-[#FF8C00] hover:bg-gray-700/50 transition-all font-medium flex items-center space-x-2 text-sm py-2 px-4 rounded-full"
+                >
+                  <LogIn className="w-4 h-4" />
+                  <span>Login</span>
+                </Button>
+              </Link>
             </div>
             
             <div className="lg:hidden ml-auto">
@@ -787,6 +797,12 @@ export default function Header() {
               </div>
             </div>
             <div className="px-6 py-4 border-t border-gray-100">
+              <Link href="/login" className="block mb-3">
+                <Button className="w-full rounded-full bg-gray-900 text-white hover:bg-gray-800 transition-all text-sm py-3 font-medium flex items-center justify-center space-x-2">
+                  <LogIn className="w-4 h-4" />
+                  <span>Login</span>
+                </Button>
+              </Link>
               <Button className="w-full rounded-full bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white hover:shadow-lg transition-all text-sm py-3 font-medium">
                 Book Consultation
               </Button>

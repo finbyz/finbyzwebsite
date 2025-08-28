@@ -8,7 +8,7 @@ Create a `.env.local` file in your project root with the following configuration
 
 ```bash
 # Frappe Backend Configuration
-FRAPPE_URL=https://website.finbyz.com
+FRAPPE_URL=https://finbyz.tech
 
 # For local development (if needed)
 # FRAPPE_URL=http://localhost:8000
