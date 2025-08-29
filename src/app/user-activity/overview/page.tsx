@@ -277,7 +277,7 @@ function EmployeeChart({ title, data, onBarClick }: { title: string; data: { nam
     return <div id={id} ref={ref} style={{ height: 300 }} />
 }
 
-function FiltersBar({ onChange, initial }: { onChange: (filters: { start: Date; end: Date; project: string }) => void, initial?: { start?: Date; end?: Date; project?: string } }) {
+function FiltersBar({ onChange, initial, timeSpanRef, projectRef }: { onChange: (filters: { start: Date; end: Date; project: string }) => void, initial?: { start?: Date; end?: Date; project?: string }, timeSpanRef?: React.RefObject<HTMLSelectElement | null>, projectRef?: React.RefObject<HTMLSelectElement | null> }) {
     const [timeSpan, setTimeSpan] = useState<'today' | 'last7' | 'last30' | 'thisMonth' | 'custom'>(initial?.start || initial?.end ? 'custom' : 'last7')
     const [customFrom, setCustomFrom] = useState<Date | null>(initial?.start ?? null)
     const [customTo, setCustomTo] = useState<Date | null>(initial?.end ?? null)
@@ -363,6 +363,7 @@ type TimeSpan = 'today' | 'last7' | 'last30' | 'thisMonth' | 'custom'
                                 }
                                 setTimeSpan(v)
                             }}
+                            ref={timeSpanRef}
                         >
                             <option value='today'>Today</option>
                             <option value='last7'>Last 7 days</option>
@@ -395,7 +396,7 @@ type TimeSpan = 'today' | 'last7' | 'last30' | 'thisMonth' | 'custom'
                     )}
                     <Col md={3} sm={6}>
                         <label className='form-label'>Project</label>
-                        <select className='form-control' value={project} onChange={(e) => setProject(e.target.value.trim())}>
+                        <select className='form-control' value={project} onChange={(e) => setProject(e.target.value.trim())} ref={projectRef}>
                         {projectOptions.map((p) => (
                             <option key={p.name} value={p.name}>{p.name || p.name}</option>
                         ))}
@@ -410,6 +411,16 @@ type TimeSpan = 'today' | 'last7' | 'last30' | 'thisMonth' | 'custom'
 function formatDayLabel(dateStr: string) {
     const d = new Date(dateStr)
     return d.toLocaleDateString(undefined, { day: '2-digit', month: 'short' })
+}
+
+function formatDDMMYY(value?: string | Date) {
+    if (!value) return ''
+    const d = new Date(value as any)
+    if (isNaN(d.getTime())) return ''
+    const dd = String(d.getDate()).padStart(2, '0')
+    const mm = String(d.getMonth() + 1).padStart(2, '0')
+    const yy = String(d.getFullYear()).slice(-2)
+    return `${dd}-${mm}-${yy}`
 }
 
 function OverviewInner() {
@@ -454,6 +465,38 @@ function OverviewInner() {
     const [showTutorial, setShowTutorial] = useState<boolean>(false)
     const [tutorialStep, setTutorialStep] = useState<number>(0)
 
+    // Tutorial anchors
+    const timeSpanRef = React.useRef<HTMLSelectElement>(null)
+    const projectRef = React.useRef<HTMLSelectElement>(null)
+    const stackedChartRef = React.useRef<HTMLDivElement>(null)
+    const employeeChartRef = React.useRef<HTMLDivElement>(null)
+
+    const Coachmark: React.FC<{ target?: Element | null; title: string; body: string; onSkip: () => void; onDont: () => void; onNext: () => void; side?: 'right' | 'left' | 'bottom' | 'top' }>=({ target, title, body, onSkip, onDont, onNext, side='right' }) => {
+        const [style, setStyle] = React.useState<React.CSSProperties>({ position: 'fixed', zIndex: 10000, top: 0, left: 0, visibility: 'hidden' })
+        React.useEffect(() => {
+            if (!target) return
+            const rect = target.getBoundingClientRect()
+            const gap = 8
+            const pos: any = { position: 'fixed', zIndex: 10000 }
+            if (side === 'right') { pos.top = rect.top + rect.height/2 - 80; pos.left = rect.right + gap }
+            if (side === 'left') { pos.top = rect.top + rect.height/2 - 80; pos.left = Math.max(8, rect.left - 300 - gap) }
+            if (side === 'bottom') { pos.top = rect.bottom + gap; pos.left = rect.left }
+            if (side === 'top') { pos.top = Math.max(8, rect.top - 120 - gap); pos.left = rect.left }
+            setStyle({ ...pos, visibility: 'visible' })
+        }, [target])
+        return (
+            <div style={style} className='tutorial-card'>
+                <div className='tutorial-title'>{title}</div>
+                <div className='tutorial-body'>{body}</div>
+                <div className='tutorial-actions'>
+                    <button className='btn btn-sm btn-outline-secondary' onClick={onSkip}>Skip</button>
+                    <button className='btn btn-sm btn-outline-danger' onClick={onDont}>Don't show again</button>
+                    <button className='btn btn-sm btn-primary' onClick={onNext}>Next</button>
+                </div>
+            </div>
+        )
+    }
+
     useEffect(() => {
         try {
             const dont = localStorage.getItem('dontShowOverviewTutorial') === '1'
@@ -481,16 +524,6 @@ function OverviewInner() {
             try { localStorage.setItem('overviewTutorialStep', String(n)) } catch {}
             return n
         })
-    }
-
-    const formatDDMMYY = (value?: string | Date) => {
-        if (!value) return ''
-        const d = new Date(value as any)
-        if (isNaN(d.getTime())) return ''
-        const dd = String(d.getDate()).padStart(2, '0')
-        const mm = String(d.getMonth() + 1).padStart(2, '0')
-        const yy = String(d.getFullYear()).slice(-2)
-        return `${dd}-${mm}-${yy}`
     }
 
     React.useEffect(() => {
@@ -743,7 +776,31 @@ function OverviewInner() {
                     <div style={{ width: 64, height: 4, background: '#ea580c', borderRadius: 2, marginTop: 8 }} />
                 </div>
                 {/* <Breadcrumbs title='Dashboards' breadcrumbItem='Activity Overview' /> */}
-                <FiltersBar onChange={setFilters} initial={{ start: parseISO(initialFromParam), end: parseISO(initialToParam), project: initialProjectParam }} />
+                <div style={{ position: 'relative' }}>
+                    <FiltersBar onChange={setFilters} initial={{ start: parseISO(initialFromParam), end: parseISO(initialToParam), project: initialProjectParam }} timeSpanRef={timeSpanRef} projectRef={projectRef} />
+                    {showTutorial && tutorialStep === 0 && (
+                        <Coachmark
+                            target={timeSpanRef.current}
+                            title='Choose a time span'
+                            body='Start here. Select the period you want to analyze.'
+                            onSkip={() => endTutorial(false)}
+                            onDont={() => endTutorial(true)}
+                            onNext={nextTutorial}
+                            side='right'
+                        />
+                    )}
+                    {showTutorial && tutorialStep === 1 && (
+                        <Coachmark
+                            target={projectRef.current}
+                            title='Filter by project'
+                            body='Optionally narrow down the view to a single project.'
+                            onSkip={() => endTutorial(false)}
+                            onDont={() => endTutorial(true)}
+                            onNext={nextTutorial}
+                            side='right'
+                        />
+                    )}
+                </div>
 
                 {/* KPIs */}
                 <Row className='mb-4'>
@@ -835,7 +892,7 @@ function OverviewInner() {
                 <Row className='mb-4'>
                     <Col lg={12}><h5 className='mb-3' style={{ color: '#ffffff' }}>Day-wise Hours Breakdown</h5></Col>
                     <Col lg={12} className='mb-4'>
-                        <div className='chart-section'>
+                        <div className='chart-section' ref={stackedChartRef}>
                             <h5>Daily Hours by Employee</h5>
                             <LoadingErrorWrapper>
                                 <StackedBarChart
@@ -854,17 +911,15 @@ function OverviewInner() {
                                 />
                             </LoadingErrorWrapper>
                             {showTutorial && tutorialStep === 2 && (
-                                <div className='tutorial-popover'>
-                                    <div className='tutorial-card'>
-                                        <div className='tutorial-title'>Explore the chart</div>
-                                        <div className='tutorial-body'>Hover each bar to see the details; click a day to focus.</div>
-                                        <div className='tutorial-actions'>
-                                            <button className='btn btn-sm btn-outline-secondary' onClick={() => endTutorial(false)}>Skip</button>
-                                            <button className='btn btn-sm btn-outline-danger' onClick={() => endTutorial(true)}>Don't show again</button>
-                                            <button className='btn btn-sm btn-primary' onClick={nextTutorial}>Next</button>
-                                        </div>
-                                    </div>
-                                </div>
+                                <Coachmark
+                                    target={stackedChartRef.current}
+                                    title='Day-wise chart'
+                                    body='Point at a bar to inspect. Click a bar/day to focus.'
+                                    onSkip={() => endTutorial(false)}
+                                    onDont={() => endTutorial(true)}
+                                    onNext={nextTutorial}
+                                    side='top'
+                                />
                             )}
                         </div>
                     </Col>
@@ -910,7 +965,7 @@ function OverviewInner() {
                 <Row className='mb-4'>
                     <Col lg={12}><h5 className='mb-3' style={{ color: '#ffffff' }}>Employee Performance Overview</h5></Col>
                     <Col lg={12} className='mb-4'>
-                        <div className='chart-section'>
+                        <div className='chart-section' ref={employeeChartRef}>
                             <h5>Total Hours by Employee</h5>
                             <LoadingErrorWrapper>
                                 <EmployeeChart
@@ -936,17 +991,15 @@ function OverviewInner() {
                                 />
                             </LoadingErrorWrapper>
                             {showTutorial && tutorialStep === 3 && (
-                                <div className='tutorial-popover'>
-                                    <div className='tutorial-card'>
-                                        <div className='tutorial-title'>Click an employee</div>
-                                        <div className='tutorial-body'>Open the detail page by clicking a bar.</div>
-                                        <div className='tutorial-actions'>
-                                            <button className='btn btn-sm btn-outline-secondary' onClick={() => endTutorial(false)}>Skip</button>
-                                            <button className='btn btn-sm btn-outline-danger' onClick={() => endTutorial(true)}>Don't show again</button>
-                                            <button className='btn btn-sm btn-primary' onClick={nextTutorial}>Next</button>
-                                        </div>
-                                    </div>
-                                </div>
+                                <Coachmark
+                                    target={employeeChartRef.current}
+                                    title='Open employee details'
+                                    body='Click a bar to navigate to the Employee Activity page.'
+                                    onSkip={() => endTutorial(false)}
+                                    onDont={() => endTutorial(true)}
+                                    onNext={nextTutorial}
+                                    side='top'
+                                />
                             )}
                         </div>
                     </Col>
@@ -974,7 +1027,7 @@ function OverviewInner() {
                                         <tbody>
                                             {employeeDayTable.map((row) => (
                                                 <tr key={row.date} style={{ cursor: 'pointer' }} onClick={() => setSelectedEmployeeDay(row.date)}>
-                                                    <td className='ua-date'>{formatDayLabel(row.date)}</td>
+                                                    <td className='ua-date'>{formatDDMMYY(row.date)}</td>
                                                     <td className='ua-num'>{row.total.toFixed(2)}</td>
                                                     <td className='ua-num'>{row.application.toFixed(2)}</td>
                                                     <td className='ua-num'>{row.call.toFixed(2)}</td>

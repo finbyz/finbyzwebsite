@@ -37,15 +37,7 @@ export default function EmployeeActivityPage() {
 
 	// Final tutorial popup when landing here
 	const [showFinalTip, setShowFinalTip] = React.useState(false)
-
-	React.useEffect(() => {
-		try {
-			const dont = localStorage.getItem('dontShowOverviewTutorial') === '1'
-			if (!dont) {
-				setShowFinalTip(true)
-			}
-		} catch {}
-	}, [])
+	const finalTipShown = React.useRef(false)
 
 	// Completed tasks state
 	const [tasks, setTasks] = React.useState<Array<{ id: string; subject: string; assignee: string; completedOn: string }>>([])
@@ -142,6 +134,20 @@ export default function EmployeeActivityPage() {
 		})()
 		return () => { cancelled = true; controller.abort() }
 	}, [apiEmployee, project, from, to])
+
+// Show final tip only after data is rendered (no loading and rows exist)
+React.useEffect(() => {
+    if (loading) return
+    if (finalTipShown.current) return
+    if (rows.length === 0) return
+    try {
+        const dont = localStorage.getItem('dontShowOverviewTutorial') === '1'
+        if (!dont) {
+            setShowFinalTip(true)
+            finalTipShown.current = true
+        }
+    } catch {}
+}, [loading, rows.length])
 
 	// Fetch completed tasks for the period (abortable)
 	React.useEffect(() => {
@@ -281,7 +287,7 @@ export default function EmployeeActivityPage() {
 										<tbody>
 											{rows.map((r) => (
 												<tr key={r.date} style={{ cursor: 'pointer' }} onClick={() => { setSelectedDay(r.date); setShowFinalTip(false); }}>
-													<td className='ua-date'>{new Date(r.date).toLocaleDateString(undefined, { day: '2-digit', month: 'short' })}</td>
+													<td className='ua-date'>{formatDDMMYY(r.date)}</td>
 													<td className='ua-num'>{r.total.toFixed(2)}</td>
 													<td className='ua-num'>{r.application.toFixed(2)}</td>
 													<td className='ua-num'>{r.call.toFixed(2)}</td>
