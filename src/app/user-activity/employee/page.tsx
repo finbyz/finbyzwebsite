@@ -35,10 +35,32 @@ export default function EmployeeActivityPage() {
 	const [error, setError] = React.useState<string | null>(null)
 	const [selectedDay, setSelectedDay] = React.useState<string | null>(day || null)
 
+	// Final tutorial popup when landing here
+	const [showFinalTip, setShowFinalTip] = React.useState(false)
+
+	React.useEffect(() => {
+		try {
+			const dont = localStorage.getItem('dontShowOverviewTutorial') === '1'
+			if (!dont) {
+				setShowFinalTip(true)
+			}
+		} catch {}
+	}, [])
+
 	// Completed tasks state
 	const [tasks, setTasks] = React.useState<Array<{ id: string; subject: string; assignee: string; completedOn: string }>>([])
 	const [tasksLoading, setTasksLoading] = React.useState(false)
 	const [tasksError, setTasksError] = React.useState<string | null>(null)
+
+	const formatDDMMYY = (value?: string | Date) => {
+		if (!value) return ''
+		const d = new Date(value as any)
+		if (isNaN(d.getTime())) return ''
+		const dd = String(d.getDate()).padStart(2, '0')
+		const mm = String(d.getMonth() + 1).padStart(2, '0')
+		const yy = String(d.getFullYear()).slice(-2)
+		return `${dd}-${mm}-${yy}`
+	}
 
 	// Task detail modal state
 	const [taskModalOpen, setTaskModalOpen] = React.useState(false)
@@ -133,7 +155,10 @@ export default function EmployeeActivityPage() {
 				qp.append('from_date', startDate.toISOString().slice(0, 10))
 				qp.append('to_date', endDate.toISOString().slice(0, 10))
 				if (project && project !== 'all') qp.append('project', project)
-				const url = `/api/fb/api/method/productivity_next.api.get_task_list?${qp.toString()}`
+				// Pass the selected employee id as assignee for filtering (fallback to name if id missing)
+				if (employee_id) qp.append('assignee', employee_id)
+				else if (employee) qp.append('assignee', employee)
+				const url = `/api/fb/method/productivity_next.api.get_task_list?${qp.toString()}`
 				const res = await fetch(url, { cache: 'no-store', signal: controller.signal })
 				if (!res.ok) throw new Error(`Tasks ${res.status}`)
 				const j = await res.json()
@@ -191,7 +216,7 @@ export default function EmployeeActivityPage() {
 													<td>{t.id}</td>
 													<td>{t.subject}</td>
 													<td>{t.assignee}</td>
-													<td>{t.completedOn ? new Date(t.completedOn).toLocaleString() : ''}</td>
+													<td>{formatDDMMYY(t.completedOn)}</td>
 												</tr>
 											))}
 											{tasks.length === 0 && !tasksLoading && (
@@ -255,7 +280,7 @@ export default function EmployeeActivityPage() {
 										</thead>
 										<tbody>
 											{rows.map((r) => (
-												<tr key={r.date} style={{ cursor: 'pointer' }} onClick={() => setSelectedDay(r.date)}>
+												<tr key={r.date} style={{ cursor: 'pointer' }} onClick={() => { setSelectedDay(r.date); setShowFinalTip(false); }}>
 													<td className='ua-date'>{new Date(r.date).toLocaleDateString(undefined, { day: '2-digit', month: 'short' })}</td>
 													<td className='ua-num'>{r.total.toFixed(2)}</td>
 													<td className='ua-num'>{r.application.toFixed(2)}</td>
@@ -301,6 +326,18 @@ export default function EmployeeActivityPage() {
 					</Col>
 				</Row>
 			</Container>
+			{showFinalTip && (
+				<div style={{ position: 'fixed', bottom: 16, right: 16, zIndex: 1000 }}>
+					<div style={{ background: '#0b1220', border: '1px solid #334155', borderRadius: 8, padding: 12, width: 320, boxShadow: '0 6px 24px rgba(0,0,0,0.4)' }}>
+						<div style={{ color: '#fff', fontWeight: 600, marginBottom: 6 }}>View screenshots</div>
+						<div style={{ color: '#cbd5e1', fontSize: 13, marginBottom: 10 }}>Click a day in the table to open the screenshots timeline for that date.</div>
+						<div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end' }}>
+							<button className='btn btn-sm btn-outline-danger' onClick={() => { try { localStorage.setItem('dontShowOverviewTutorial', '1') } catch {}; setShowFinalTip(false) }}>Don't show me again</button>
+							<button className='btn btn-sm btn-primary' onClick={() => setShowFinalTip(false)}>Finish</button>
+						</div>
+					</div>
+				</div>
+			)}
 		</div>
 	)
 }

@@ -11,9 +11,10 @@ interface RecentActivityProps {
     employee: string
     startDate: string | Date
     endDate: string | Date
+    project?: string
 }
 
-const RecentActivity: React.FC<RecentActivityProps> = ({ employee, startDate, endDate }) => {
+const RecentActivity: React.FC<RecentActivityProps> = ({ employee, startDate, endDate, project }) => {
     const [imageData, setImageData] = useState<any[]>([])
     const [visibleData, setVisibleData] = useState<any[]>([])
     const [isLoading, setIsLoading] = useState(false)
@@ -37,44 +38,32 @@ const RecentActivity: React.FC<RecentActivityProps> = ({ employee, startDate, en
             const isoStart = moment(startDate).startOf('day').format('YYYY-MM-DD HH:mm:ss')
             const isoEnd = moment(endDate).endOf('day').format('YYYY-MM-DD HH:mm:ss')
 
-            const endpoints = [
-                // Page method used in some sites
-                '/api/fb/method/finbyz.finbyz.page.productify_activity_analysis_finbyz.productify_activity_analysis_finbyz.user_activity_images',
-                // Direct app method from provided server snippet
-                '/api/fb/api/method/productivity_next.api.user_activity_images',
-            ]
-
-            const paramCombos: Array<Record<string, string>> = [
-                { user: String(employee || ''), start_date: ddmmyyStart, end_date: ddmmyyEnd },
-                { employee: String(employee || ''), start_date: ddmmyyStart, end_date: ddmmyyEnd },
-                { user: String(employee || ''), start_date: isoStart, end_date: isoEnd },
-                { employee: String(employee || ''), start_date: isoStart, end_date: isoEnd },
+            const attempts: Array<{ params: Record<string, string> }> = [
+                { params: { user: String(employee || ''), start_date: ddmmyyStart, end_date: ddmmyyEnd, ...(project ? { project } : {}) } },
+                { params: { employee: String(employee || ''), start_date: ddmmyyStart, end_date: ddmmyyEnd, ...(project ? { project } : {}) } },
+                { params: { user: String(employee || ''), start_date: isoStart, end_date: isoEnd, ...(project ? { project } : {}) } },
+                { params: { employee: String(employee || ''), start_date: isoStart, end_date: isoEnd, ...(project ? { project } : {}) } },
             ]
 
             let processedList: any[] | null = null
             let lastStatus = 0
-            let lastUrl = ''
 
-            outer: for (const ep of endpoints) {
-                for (const params of paramCombos) {
-                    const qs = new URLSearchParams(params)
-                    const url = `${ep}?${qs.toString()}`
-                    lastUrl = url
-                    console.log('[RecentActivity] try', { ep, params })
-                    const res = await fetch(url, { credentials: 'include', cache: 'no-store' })
-                    lastStatus = res.status
-                    if (!res.ok) continue
-                    let json: any = null
-                    try { json = await res.json() } catch { json = {} }
-                    const list = Array.isArray(json?.message) ? json.message : (Array.isArray(json?.data) ? json.data : [])
-                    if (Array.isArray(list) && list.length > 0) {
-                        processedList = list.map((item: any) => ({
-                            ...item,
-                            active_application: item.active_application || item.active_app,
-                            time: item.time || item.time_,
-                        }))
-                        break outer
-                    }
+            for (const attempt of attempts) {
+                const qs = new URLSearchParams(attempt.params)
+                const url = `/api/fb/method/finbyz.finbyz.page.productify_activity_analysis_finbyz.productify_activity_analysis_finbyz.user_activity_images?${qs.toString()}`
+                console.log('[RecentActivity] try', attempt.params)
+                const res = await fetch(url, { credentials: 'include', cache: 'no-store' })
+                lastStatus = res.status
+                if (!res.ok) continue
+                const json = await res.json().catch(() => ({}))
+                const list = Array.isArray(json?.message) ? json.message : (Array.isArray(json?.data) ? json.data : [])
+                if (Array.isArray(list) && list.length > 0) {
+                    processedList = list.map((item: any) => ({
+                        ...item,
+                        active_application: item.active_application || item.active_app,
+                        time: item.time || item.time_,
+                    }))
+                    break
                 }
             }
 
@@ -88,7 +77,7 @@ const RecentActivity: React.FC<RecentActivityProps> = ({ employee, startDate, en
                 setCurrentTime(initialTimeLimit)
                 setHasMore(processedList.some((item: any) => moment(item.time).isSameOrBefore(initialTimeLimit)))
             } else {
-                throw new Error(`Upstream returned no data (last status ${lastStatus}) @ ${lastUrl}`)
+                throw new Error(`Upstream returned no data (last status ${lastStatus})`)
             }
         } catch (e: any) {
             console.error('[RecentActivity] fetch failed', e)
@@ -99,7 +88,7 @@ const RecentActivity: React.FC<RecentActivityProps> = ({ employee, startDate, en
         } finally {
             setIsLoading(false)
         }
-    }, [employee, startDate, endDate, currentTime])
+    }, [employee, project, startDate, endDate, currentTime])
 
     const showImageDialog = useCallback((imgSrc: string, activeApp: string) => {
         setModalImage(imgSrc)
@@ -131,7 +120,7 @@ const RecentActivity: React.FC<RecentActivityProps> = ({ employee, startDate, en
     useEffect(() => {
         fetchActivity()
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [employee, startDate, endDate])
+    }, [employee, project, startDate, endDate])
 
     useEffect(() => {
         if (inView && hasMore && !isLoading) {

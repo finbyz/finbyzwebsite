@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useMemo, useState, Suspense } from 'react'
+import React, { useMemo, useState, Suspense, useEffect } from 'react'
 import { Container, Row, Col, Card, CardBody, Badge, Spinner } from 'reactstrap'
 // import Breadcrumbs from '@/components/user-activity/common/Breadcrumbs'
 import * as echarts from 'echarts'
@@ -450,6 +450,49 @@ function OverviewInner() {
     const [tasksLoading, setTasksLoading] = useState(false)
     const [tasksError, setTasksError] = useState<string | null>(null)
 
+    // Tutorial state
+    const [showTutorial, setShowTutorial] = useState<boolean>(false)
+    const [tutorialStep, setTutorialStep] = useState<number>(0)
+
+    useEffect(() => {
+        try {
+            const dont = localStorage.getItem('dontShowOverviewTutorial') === '1'
+            if (!dont) {
+                // start tutorial on first load
+                setShowTutorial(true)
+                const savedStep = parseInt(localStorage.getItem('overviewTutorialStep') || '0', 10)
+                setTutorialStep(isNaN(savedStep) ? 0 : savedStep)
+            }
+        } catch {}
+    }, [])
+
+    const endTutorial = (dontShow: boolean) => {
+        setShowTutorial(false)
+        setTutorialStep(0)
+        try {
+            if (dontShow) localStorage.setItem('dontShowOverviewTutorial', '1')
+            localStorage.removeItem('overviewTutorialStep')
+        } catch {}
+    }
+
+    const nextTutorial = () => {
+        setTutorialStep((s) => {
+            const n = s + 1
+            try { localStorage.setItem('overviewTutorialStep', String(n)) } catch {}
+            return n
+        })
+    }
+
+    const formatDDMMYY = (value?: string | Date) => {
+        if (!value) return ''
+        const d = new Date(value as any)
+        if (isNaN(d.getTime())) return ''
+        const dd = String(d.getDate()).padStart(2, '0')
+        const mm = String(d.getMonth() + 1).padStart(2, '0')
+        const yy = String(d.getFullYear()).slice(-2)
+        return `${dd}-${mm}-${yy}`
+    }
+
     React.useEffect(() => {
         if (!filters) return
         // Clear existing selections and data immediately so UI resets while new data loads
@@ -558,17 +601,24 @@ function OverviewInner() {
                 const qp = new URLSearchParams()
                 qp.append('from_date', filters.start.toISOString().slice(0, 10))
                 qp.append('to_date', filters.end.toISOString().slice(0, 10))
-                if (filters.project && filters.project !== 'all') qp.append('project', filters.project)
-                const url = `/api/fb/api/method/productivity_next.api.get_task_list?${qp.toString()}`
+                qp.append('project', filters.project && filters.project !== 'all' ? filters.project : '')
+                const url = `/api/fb/method/productivity_next.api.get_task_list?${qp.toString()}`
                 const res = await fetch(url, { cache: 'no-store' })
-                if (!res.ok) throw new Error(`Tasks ${res.status}`)
+                if (!res.ok) {
+                    const raw = await res.text().catch(() => '')
+                    const status = res.status
+                    if (status === 401 || status === 403) {
+                        throw new Error('Permission denied for tasks (portal user or login required)')
+                    }
+                    throw new Error(`Tasks ${status}: ${raw?.slice(0, 200)}`)
+                }
                 const j = await res.json()
                 const arr: any[] = Array.isArray(j?.message) ? j.message : (Array.isArray(j?.data) ? j.data : [])
                 const mapped = arr.map((t: any) => ({
-                    id: String(t.name ?? t.id ?? t.task_id ?? ''),
-                    subject: String(t.subject ?? t.title ?? ''),
-                    assignee: String(t.assignee ?? t.allocated_to ?? ''),
-                    completedOn: String(t.completed_on ?? t.completed_on_datetime ?? t.modified ?? ''),
+                    id: String(t.task_id ?? t.name ?? ''),
+                    subject: String(t.subject ?? ''),
+                    assignee: String(t.assignee ?? ''),
+                    completedOn: String(t.completed_on ?? ''),
                 }))
                 setTasks(mapped)
             } catch (e: any) {
@@ -679,6 +729,14 @@ function OverviewInner() {
         <div className='page-content'>
             <LoadingOverlay show={loading} />
             <Container fluid>
+                {/* Tutorial styles */}
+                <style>{`
+                    .tutorial-popover { position: relative; }
+                    .tutorial-card { position: absolute; z-index: 1000; top: -12px; right: -12px; background: #0b1220; border: 1px solid #334155; border-radius: 8px; padding: 12px; width: 280px; box-shadow: 0 6px 24px rgba(0,0,0,0.4); }
+                    .tutorial-title { color: #fff; font-weight: 600; margin-bottom: 6px; }
+                    .tutorial-body { color: #cbd5e1; font-size: 13px; margin-bottom: 10px; }
+                    .tutorial-actions { display: flex; gap: 8px; justify-content: flex-end; }
+                `}</style>
                 {/* Title header without breadcrumb */}
                 <div className='mb-4'>
                     <h2 className='page-title' style={{ color: '#e2e8f0' }}>Activity Overview</h2>
@@ -758,7 +816,7 @@ function OverviewInner() {
                                                 <td>{t.id}</td>
                                                 <td>{t.subject}</td>
                                                 <td>{t.assignee}</td>
-                                                <td>{t.completedOn ? new Date(t.completedOn).toLocaleString() : ''}</td>
+                                                <td>{formatDDMMYY(t.completedOn)}</td>
                                             </tr>
                                         ))}
                                         {tasks.length === 0 && !tasksLoading && (
@@ -795,6 +853,19 @@ function OverviewInner() {
                                     }} 
                                 />
                             </LoadingErrorWrapper>
+                            {showTutorial && tutorialStep === 2 && (
+                                <div className='tutorial-popover'>
+                                    <div className='tutorial-card'>
+                                        <div className='tutorial-title'>Explore the chart</div>
+                                        <div className='tutorial-body'>Hover each bar to see the details; click a day to focus.</div>
+                                        <div className='tutorial-actions'>
+                                            <button className='btn btn-sm btn-outline-secondary' onClick={() => endTutorial(false)}>Skip</button>
+                                            <button className='btn btn-sm btn-outline-danger' onClick={() => endTutorial(true)}>Don't show again</button>
+                                            <button className='btn btn-sm btn-primary' onClick={nextTutorial}>Next</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     </Col>
                 </Row>
@@ -849,7 +920,7 @@ function OverviewInner() {
                                     onBarClick={(emp) => {
                                         try {
                                             const params = new URLSearchParams()
-                                            // Look up employee_id from baseData
+                                            // lookup employee_id from baseData
                                             const match = baseData.find(r => r.employee === emp)
                                             if (match?.employee_id) params.set('employee_id', match.employee_id)
                                             params.set('employee', emp)
@@ -857,12 +928,26 @@ function OverviewInner() {
                                             if (filters?.end) params.set('to', filters.end.toISOString().slice(0, 10))
                                             if (filters?.project && filters.project !== 'all') params.set('project', filters.project)
                                             router.push(`/user-activity/employee?${params.toString()}`)
+                                            if (showTutorial && tutorialStep === 3) nextTutorial()
                                         } catch {
                                             setSelectedEmployee(emp)
                                         }
                                     }}
                                 />
                             </LoadingErrorWrapper>
+                            {showTutorial && tutorialStep === 3 && (
+                                <div className='tutorial-popover'>
+                                    <div className='tutorial-card'>
+                                        <div className='tutorial-title'>Click an employee</div>
+                                        <div className='tutorial-body'>Open the detail page by clicking a bar.</div>
+                                        <div className='tutorial-actions'>
+                                            <button className='btn btn-sm btn-outline-secondary' onClick={() => endTutorial(false)}>Skip</button>
+                                            <button className='btn btn-sm btn-outline-danger' onClick={() => endTutorial(true)}>Don't show again</button>
+                                            <button className='btn btn-sm btn-primary' onClick={nextTutorial}>Next</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     </Col>
                 </Row>
