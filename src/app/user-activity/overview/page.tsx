@@ -471,11 +471,12 @@ function OverviewInner() {
     const stackedChartRef = React.useRef<HTMLDivElement>(null)
     const employeeChartRef = React.useRef<HTMLDivElement>(null)
 
-    const Coachmark: React.FC<{ target?: Element | null; title: string; body: string; onSkip: () => void; onDont: () => void; onNext: () => void; side?: 'right' | 'left' | 'bottom' | 'top' }>=({ target, title, body, onSkip, onDont, onNext, side='right' }) => {
+    const Coachmark: React.FC<{ target?: Element | null; selector?: string; title: string; body: string; onSkip: () => void; onDont: () => void; onNext: () => void; side?: 'right' | 'left' | 'bottom' | 'top' }>=({ target, selector, title, body, onSkip, onDont, onNext, side='right' }) => {
         const [style, setStyle] = React.useState<React.CSSProperties>({ position: 'fixed', zIndex: 10000, top: 0, left: 0, visibility: 'hidden' })
         React.useEffect(() => {
-            if (!target) return
-            const rect = target.getBoundingClientRect()
+            const el = target || (selector ? document.querySelector(selector) : null)
+            if (!el) return
+            const rect = el.getBoundingClientRect()
             const gap = 8
             const pos: any = { position: 'fixed', zIndex: 10000 }
             if (side === 'right') { pos.top = rect.top + rect.height/2 - 80; pos.left = rect.right + gap }
@@ -483,7 +484,7 @@ function OverviewInner() {
             if (side === 'bottom') { pos.top = rect.bottom + gap; pos.left = rect.left }
             if (side === 'top') { pos.top = Math.max(8, rect.top - 120 - gap); pos.left = rect.left }
             setStyle({ ...pos, visibility: 'visible' })
-        }, [target])
+        }, [target, selector])
         return (
             <div style={style} className='tutorial-card'>
                 <div className='tutorial-title'>{title}</div>
@@ -497,17 +498,22 @@ function OverviewInner() {
         )
     }
 
+    // Start tutorial only after data is rendered (not during loading)
+    const overviewTipShown = React.useRef(false)
     useEffect(() => {
+        if (loading) return
+        if (overviewTipShown.current) return
+        if (!baseData || baseData.length === 0) return
         try {
             const dont = localStorage.getItem('dontShowOverviewTutorial') === '1'
             if (!dont) {
-                // start tutorial on first load
-                setShowTutorial(true)
                 const savedStep = parseInt(localStorage.getItem('overviewTutorialStep') || '0', 10)
                 setTutorialStep(isNaN(savedStep) ? 0 : savedStep)
+                setShowTutorial(true)
+                overviewTipShown.current = true
             }
         } catch {}
-    }, [])
+    }, [loading, baseData.length])
 
     const endTutorial = (dontShow: boolean) => {
         setShowTutorial(false)
@@ -771,9 +777,23 @@ function OverviewInner() {
                     .tutorial-actions { display: flex; gap: 8px; justify-content: flex-end; }
                 `}</style>
                 {/* Title header without breadcrumb */}
-                <div className='mb-4'>
-                    <h2 className='page-title' style={{ color: '#e2e8f0' }}>Activity Overview</h2>
-                    <div style={{ width: 64, height: 4, background: '#ea580c', borderRadius: 2, marginTop: 8 }} />
+                <div className='mb-4' style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <div>
+                        <h2 className='page-title' style={{ color: '#e2e8f0', marginBottom: 8 }}>Activity Overview</h2>
+                        <div style={{ width: 64, height: 4, background: '#ea580c', borderRadius: 2 }} />
+                    </div>
+                    <div>
+                        <button
+                            className='btn btn-sm btn-outline-primary'
+                            onClick={() => {
+                                try { localStorage.removeItem('dontShowOverviewTutorial'); localStorage.setItem('overviewTutorialStep', '0') } catch {}
+                                setTutorialStep(0)
+                                setShowTutorial(true)
+                            }}
+                        >
+                            Show tutorial
+                        </button>
+                    </div>
                 </div>
                 {/* <Breadcrumbs title='Dashboards' breadcrumbItem='Activity Overview' /> */}
                 <div style={{ position: 'relative' }}>
@@ -892,7 +912,7 @@ function OverviewInner() {
                 <Row className='mb-4'>
                     <Col lg={12}><h5 className='mb-3' style={{ color: '#ffffff' }}>Day-wise Hours Breakdown</h5></Col>
                     <Col lg={12} className='mb-4'>
-                        <div className='chart-section' ref={stackedChartRef}>
+                        <div className='chart-section' ref={stackedChartRef} id='overview-stacked-chart'>
                             <h5>Daily Hours by Employee</h5>
                             <LoadingErrorWrapper>
                                 <StackedBarChart
@@ -913,6 +933,7 @@ function OverviewInner() {
                             {showTutorial && tutorialStep === 2 && (
                                 <Coachmark
                                     target={stackedChartRef.current}
+                                    selector='#overview-stacked-chart'
                                     title='Day-wise chart'
                                     body='Point at a bar to inspect. Click a bar/day to focus.'
                                     onSkip={() => endTutorial(false)}
@@ -965,7 +986,7 @@ function OverviewInner() {
                 <Row className='mb-4'>
                     <Col lg={12}><h5 className='mb-3' style={{ color: '#ffffff' }}>Employee Performance Overview</h5></Col>
                     <Col lg={12} className='mb-4'>
-                        <div className='chart-section' ref={employeeChartRef}>
+                        <div className='chart-section' ref={employeeChartRef} id='overview-employee-chart'>
                             <h5>Total Hours by Employee</h5>
                             <LoadingErrorWrapper>
                                 <EmployeeChart
@@ -993,6 +1014,7 @@ function OverviewInner() {
                             {showTutorial && tutorialStep === 3 && (
                                 <Coachmark
                                     target={employeeChartRef.current}
+                                    selector='#overview-employee-chart'
                                     title='Open employee details'
                                     body='Click a bar to navigate to the Employee Activity page.'
                                     onSkip={() => endTutorial(false)}
