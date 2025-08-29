@@ -413,14 +413,14 @@ function formatDayLabel(dateStr: string) {
     return d.toLocaleDateString(undefined, { day: '2-digit', month: 'short' })
 }
 
-function formatDDMMYY(value?: string | Date) {
+function formatDDMMMYY(value?: string | Date) {
     if (!value) return ''
     const d = new Date(value as any)
     if (isNaN(d.getTime())) return ''
     const dd = String(d.getDate()).padStart(2, '0')
-    const mm = String(d.getMonth() + 1).padStart(2, '0')
+    const mmm = d.toLocaleString(undefined, { month: 'short' })
     const yy = String(d.getFullYear()).slice(-2)
-    return `${dd}-${mm}-${yy}`
+    return `${dd}-${mmm}-${yy}`
 }
 
 function OverviewInner() {
@@ -873,7 +873,7 @@ function OverviewInner() {
                                                 <td>{t.id}</td>
                                                 <td>{t.subject}</td>
                                                 <td>{t.assignee}</td>
-                                                <td>{formatDDMMYY(t.completedOn)}</td>
+                                                <td>{formatDDMMMYY(t.completedOn)}</td>
                                             </tr>
                                         ))}
                                         {tasks.length === 0 && !tasksLoading && (
@@ -1027,7 +1027,7 @@ function OverviewInner() {
                                         <tbody>
                                             {employeeDayTable.map((row) => (
                                                 <tr key={row.date} style={{ cursor: 'pointer' }} onClick={() => setSelectedEmployeeDay(row.date)}>
-                                                    <td className='ua-date'>{formatDDMMYY(row.date)}</td>
+                                                    <td className='ua-date'>{formatDDMMMYY(row.date)}</td>
                                                     <td className='ua-num'>{row.total.toFixed(2)}</td>
                                                     <td className='ua-num'>{row.application.toFixed(2)}</td>
                                                     <td className='ua-num'>{row.call.toFixed(2)}</td>

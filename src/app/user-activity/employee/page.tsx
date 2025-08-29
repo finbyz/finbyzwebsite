@@ -44,14 +44,14 @@ export default function EmployeeActivityPage() {
 	const [tasksLoading, setTasksLoading] = React.useState(false)
 	const [tasksError, setTasksError] = React.useState<string | null>(null)
 
-	const formatDDMMYY = (value?: string | Date) => {
+	const formatDDMMMYY = (value?: string | Date) => {
 		if (!value) return ''
 		const d = new Date(value as any)
 		if (isNaN(d.getTime())) return ''
 		const dd = String(d.getDate()).padStart(2, '0')
-		const mm = String(d.getMonth() + 1).padStart(2, '0')
+		const mmm = d.toLocaleString(undefined, { month: 'short' })
 		const yy = String(d.getFullYear()).slice(-2)
-		return `${dd}-${mm}-${yy}`
+		return `${dd}-${mmm}-${yy}`
 	}
 
 	// Task detail modal state
@@ -222,7 +222,7 @@ React.useEffect(() => {
 													<td>{t.id}</td>
 													<td>{t.subject}</td>
 													<td>{t.assignee}</td>
-													<td>{formatDDMMYY(t.completedOn)}</td>
+													<td>{formatDDMMMYY(t.completedOn)}</td>
 												</tr>
 											))}
 											{tasks.length === 0 && !tasksLoading && (
@@ -287,7 +287,7 @@ React.useEffect(() => {
 										<tbody>
 											{rows.map((r) => (
 												<tr key={r.date} style={{ cursor: 'pointer' }} onClick={() => { setSelectedDay(r.date); setShowFinalTip(false); }}>
-													<td className='ua-date'>{formatDDMMYY(r.date)}</td>
+													<td className='ua-date'>{formatDDMMMYY(r.date)}</td>
 													<td className='ua-num'>{r.total.toFixed(2)}</td>
 													<td className='ua-num'>{r.application.toFixed(2)}</td>
 													<td className='ua-num'>{r.call.toFixed(2)}</td>
