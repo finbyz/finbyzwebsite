@@ -679,7 +679,7 @@ export type SectionData =
   // | { type: 'support-services'; data: SupportServicesData }
   | { type: 'resource-center'; data: ResourceCenterData }
   // | { type: 'partnerships'; data: PartnershipsData }
-  // | { type: 'security-compliance'; data: SecurityComplianceData }
+  | { type: 'security-compliance'; data: SecurityComplianceData }
   
 
   // | { type: 'service-pricing'; data: ServicePricingData }
@@ -734,5 +734,6 @@ export const COMPONENT_MAP: Record<string, string> = {
   'technology-stack': 'TechnologyStack',
   'business-slider': 'BusinessSlider',
 
-  'responsive-card-grid': 'ResponsiveCardGrid'
+  'responsive-card-grid': 'ResponsiveCardGrid',
+  'forward-contracting-text': 'ForwardContractingText'
 };

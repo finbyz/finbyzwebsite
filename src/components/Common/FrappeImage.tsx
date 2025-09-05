@@ -14,7 +14,7 @@ interface FrappeImageProps {
     defaultImage?: string
 }
 
-const FRAPPE_BASE = process.env.FRAPPE_URL
+const FRAPPE_BASE = "/api/fb/n"
 
 const FrappeImage: React.FC<FrappeImageProps> = ({
     fileUrl,

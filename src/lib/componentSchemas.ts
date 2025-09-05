@@ -10,6 +10,81 @@ export interface ComponentSchema {
 export const componentSchemas: ComponentSchema[] = [
 
   {
+    id: "points",
+    name: "Points",
+    description: "Bulleted list with optional title",
+    category: "Sections",
+    schema: {
+      component: "Points",
+      data: {
+        title: { type: "string" },
+        points: { type: "array", items: { type: "string" } }
+      }
+    },
+    example: {
+      component: "Points",
+      data: {
+        component_type: "Text",
+        title: "Forward Contract Utilization Steps",
+        points: [
+          "Go to the Payment Entry list and click on 'New'.",
+          "Select the Party Type and the relevant Customer/Supplier.",
+          "Choose the Bank or Cash Account for 'Paid To' and 'Paid From'.",
+          "Select the forward contract and enter the amount utilized.",
+          "Enter the Amount Paid and provide bank reference.",
+          "Save and Submit the entry."
+        ]
+      }
+    }
+  },
+
+  {
+    id: "text",
+    name: "Text",
+    description: "Single-column rich text block with optional title",
+    category: "Sections",
+    schema: {
+      component: "Text",
+      data: {
+        title: { type: "string" },
+        paragraphs: { type: "array", items: { type: "string" } }
+      }
+    },
+    example: {
+      component: "Text",
+      data: {
+        component_type: "Text",
+        paragraphs: [
+          "Forward contracting in ERPNext is a powerful tool for currency hedging, allowing businesses to lock in exchange rates for future international transactions. Through the forward contract ERPNext feature, importers and exporters can minimize the impact of currency fluctuations by setting a fixed rate in advance. With integrated forward contract accounting ERPNext capabilities, companies can efficiently track forward contracts, manage gains or losses, and maintain accurate financial records aligned with their forex exposures."
+        ]
+      }
+    }
+  },
+
+  {
+    id: "video",
+    name: "Video",
+    description: "Responsive YouTube video embed with optional title",
+    category: "Media",
+    schema: {
+      component: "Video",
+      data: {
+        title: { type: "string" },
+        url: { type: "string" },
+        videoId: { type: "string" }
+      }
+    },
+    example: {
+      component: "Video",
+      data: {
+        component_type: "Video",
+        title: "ERPNext Tutorial (Custom Features)",
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      }
+    }
+  },
+
+  {
     id: "content-illustration-right",
     name: "Content + Illustration (Right)",
     description: "Left-aligned title and paragraphs with an illustration image on the right",
@@ -144,6 +219,47 @@ export const componentSchemas: ComponentSchema[] = [
     example: {
       component: "BusinessSlider",
       data: {}
+    }
+  },
+
+  {
+    id: "inquiry-form",
+    name: "Inquiry Form",
+    description: "A beautiful inquiry form for requesting free demos with illustration and form fields",
+    category: "Forms",
+    schema: {
+      component: "InquiryForm",
+      data: {
+        component_type: { type: "string", default: "Form" },
+        title: { type: "string" },
+        description: { type: "string" },
+        fields: {
+          type: "object",
+          properties: {
+            name: { type: "string" },
+            organization: { type: "string" },
+            email: { type: "string" },
+            mobile: { type: "string" }
+          }
+        },
+        submitText: { type: "string" },
+        backgroundImage: { type: "string" }
+      }
+    },
+    example: {
+      component: "InquiryForm",
+      data: {
+        component_type: "Form",
+        title: "Request for FREE Demo",
+        description: "Get started with your free demo today",
+        fields: {
+          name: "Name",
+          organization: "Organization Name",
+          email: "Email",
+          mobile: "Mobile No"
+        },
+        submitText: "SUBMIT"
+      }
     }
   },
   {

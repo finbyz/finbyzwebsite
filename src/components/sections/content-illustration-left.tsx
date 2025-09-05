@@ -1,4 +1,5 @@
 import Image from "next/image";
+import FrappeImage from "../Common/FrappeImage";
 
 export interface ContentIllustrationLeftData {
   component_type?: "Text";
@@ -27,12 +28,12 @@ export default function ContentIllustrationLeft({ data }: { data?: any }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           <div className="lg:col-span-4">
             {imageSrc && (
-              <Image
-                src={imageSrc}
+              <FrappeImage
+                fileUrl={`${imageSrc}`}
                 alt={imageAlt}
-                width={420}
-                height={320}
                 className="w-[320px] md:w-[380px] lg:w-[420px] h-auto"
+                lazyLoad={false}
+                loadPrivate={true}
               />
             )}
           </div>

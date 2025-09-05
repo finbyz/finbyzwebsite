@@ -1,5 +1,6 @@
 export type ComponentType =
   | "Text"
+  | "Video"
   | "Hero"
   | "Card"
   | "Carousal"
@@ -18,7 +19,12 @@ const NAME_TO_TYPE_ENTRIES: Array<[ComponentType, string[]]> = [
     "Call to Action",
     "Modal Dialog",
     "Comment Section",
-    "Call to Action"
+    "Call to Action",
+    "Text",
+    "Points"
+  ]],
+  ["Video", [
+    "Video"
   ]],
   ["Hero", [
     "Hero Section",
@@ -52,7 +58,8 @@ const NAME_TO_TYPE_ENTRIES: Array<[ComponentType, string[]]> = [
   ]],
   ["Form", [
     "Business Slider",
-    "Contact Form"
+    "Contact Form",
+    "Inquiry Form"
   ]],
   ["Timeline", [
     "Timeline Section",

@@ -32,6 +32,9 @@ import StatsShowcase from './sections/stats-showcase';
 import TeamExpertise from './sections/team-expertise';
 
 import ERPIntroText from './sections/erp-intro-text';
+import Text from './sections/forward-contracting-text';
+import Video from './sections/video';
+import Points from './sections/points';
 // Additional sections to support all components in the folder
 import ContactForm from './sections/contact-form';
 import ContactWithMap from './sections/contact-with-map';
@@ -39,6 +42,7 @@ import ContentIllustrationLeft from './sections/content-illustration-left';
 import ContentIllustrationRight from './sections/content-illustration-right';
 import JobDetail from './sections/job-detail';
 import ResponsiveCardGrid from './sections/responsive-card-grid';
+import SecurityCompliance from './sections/security-compliance';
 
 // ============================================================================
 // SECTIONS-BASED RENDERER
@@ -132,6 +136,9 @@ const COMPONENT_MAP: Record<string, React.ComponentType<any>> = {
   // Intro text
   'intro-text': ERPIntroText,
   'erp-intro-text': ERPIntroText,
+  'text': Text,
+  'video': Video,
+  'points': Points,
 
   // Newly added mappings to use every component in sections folder
   'contact-form': ContactForm,
@@ -143,7 +150,8 @@ const COMPONENT_MAP: Record<string, React.ComponentType<any>> = {
   'job-detail-section': JobDetail,
   'job-detail': JobDetail,
   'card-grid': ResponsiveCardGrid,
-  'responsive-card-grid': ResponsiveCardGrid
+  'responsive-card-grid': ResponsiveCardGrid,
+  'security-compliance': SecurityCompliance
 };
 
 /**

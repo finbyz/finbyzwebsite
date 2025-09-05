@@ -7,6 +7,7 @@ import CTA from "@/components/sections/cta";
 import ClientLogos from "@/components/sections/client-logos";
 import ResponsiveCardGrid from "@/components/sections/responsive-card-grid";
 import BusinessSlider from "@/components/sections/business-slider";
+import InquiryForm from "@/components/ui/InquiryForm";
 
 export default function Home() {
   return (
@@ -86,6 +87,22 @@ export default function Home() {
 
         <ClientLogos />
         <CTA />
+
+        {/* Inquiry Form */}
+        <InquiryForm 
+          data={{
+            component_type: "Form",
+            title: "Request for FREE Demo",
+            description: "Get started with your free demo today and discover how our solutions can transform your business",
+            fields: {
+              name: "Name",
+              organization: "Organization Name",
+              email: "Email",
+              mobile: "Mobile No"
+            },
+            submitText: "SUBMIT"
+          }}
+        />
 
         {/* Contact form (simple, compact) */}
         {/* If you want this on a separate page, we can move it to /contact */}

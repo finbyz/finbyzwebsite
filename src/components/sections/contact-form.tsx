@@ -1,74 +1,123 @@
-import React from "react";
+
+"use client";
+
+import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import styles from "./contact-form.module.css";
 
-export interface ContactFormInitial {
-  name?: string;
-  email?: string;
-  mobile?: string;
-  message?: string;
-}
+export default function ContactFormSection() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    mobile: "",
+    message: "",
+  });
 
-export interface ContactFormProps {
-  component_type?: "Form";
-  title?: string;
-  subtitle?: string;
-  initialValues?: ContactFormInitial;
-  submitLabel?: string;
-  toEmail?: string; // where to send mailto by default
-  onSubmit?: (payload: Required<ContactFormInitial>) => Promise<void> | void;
-}
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-export default function ContactFormSection({
-  component_type = "Form",
-  title = "Contact",
-  subtitle,
-  initialValues = {},
-  submitLabel = "Submit",
-  toEmail = "info@finbyz.tech",
-  onSubmit,
-}: ContactFormProps) {
+    const payload = {
+      lead_name: formData.name,
+      company_name: "Website",
+      mobile_no: formData.mobile,
+      title: "Contact Form Submission",
+      email: formData.email,
+      notes: formData.message,
+    };
+
+    console.log("Form Payload:", payload);
+
+    try {
+      const res = await fetch(
+        "https://website.finbyz.com/api/method/finbyzweb.api.set_form_contact_data",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      const data = await res.json();
+      // console.log("Response Data:", data);
+
+      if (res.ok) {
+        alert(
+          `Thank you ${payload.lead_name}!\nYour inquiry has been received. Our team will contact you shortly.`
+        );
+
+        // Reset state instead of form.reset()
+        setFormData({ name: "", email: "", mobile: "", message: "" });
+      } else {
+        alert(
+          `Unable to submit your inquiry.\nReason: Something went wrong while creating your lead.`
+        );
+      }
+    } catch (err) {
+      console.error(err);
+     
+    }
+  };
 
   return (
-    <section className="w-full py-8 bg-white">
-      <div className="container mx-auto px-4 max-w-5xl">
-        {title && (
-          <h2 className="text-xl md:text-2xl font-bold mb-2 text-gray-900">{title}</h2>
-        )}
-        {subtitle && <p className="text-gray-600 mb-6">{subtitle}</p>}
-
-        <form action={onSubmit ? undefined : undefined} method="post" className="space-y-4">
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Name *</label>
-            <Input name="name" placeholder="Enter your name" required />
+    <section className={styles.section}>
+      <div className={styles.container}>
+        <h2 className={styles.title}>Contact</h2>
+        <form onSubmit={handleSubmit} className={styles.form}>
+          <div className={styles.group}>
+            <label className={styles.label}>Name *</label>
+            <Input
+              name="name"
+              placeholder="Enter your name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
           </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Email *</label>
-            <Input type="email" name="email" placeholder="Enter your email" required pattern={emailRegex.source} />
+          <div className={styles.group}>
+            <label className={styles.label}>Email *</label>
+            <Input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
           </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Mobile *</label>
-            <Input name="mobile" placeholder="Enter your mobile" required />
+          <div className={styles.group}>
+            <label className={styles.label}>Mobile *</label>
+            <Input
+              name="mobile"
+              placeholder="Enter your mobile"
+              value={formData.mobile}
+              onChange={handleChange}
+              required
+            />
           </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-            <Textarea rows={8} name="message" placeholder="Write your message" />
+          <div className={styles.group}>
+            <label className={styles.label}>Message</label>
+            <Textarea
+              rows={8}
+              name="message"
+              placeholder="Write your message"
+              value={formData.message}
+              onChange={handleChange}
+            />
           </div>
-
-          <div className="pt-2">
-            <Button type="submit">{submitLabel}</Button>
+          <div className={styles.actions}>
+            <Button type="submit" className={styles.submitButton}>
+              Send Message
+            </Button>
           </div>
         </form>
       </div>
     </section>
   );
 }
-
-

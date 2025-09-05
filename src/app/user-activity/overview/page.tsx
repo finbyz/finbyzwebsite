@@ -351,7 +351,7 @@ type TimeSpan = 'today' | 'last7' | 'last30' | 'thisMonth' | 'custom'
                 <Row className='gy-3 align-items-end'>
                     <Col md={3} sm={6}>
                         <label className='form-label'>Time span</label>
-                        <select
+                        <select id='filter-timespan'
                             className='form-control'
                             value={timeSpan}
                             onChange={(e) => {
@@ -396,7 +396,7 @@ type TimeSpan = 'today' | 'last7' | 'last30' | 'thisMonth' | 'custom'
                     )}
                     <Col md={3} sm={6}>
                         <label className='form-label'>Project</label>
-                        <select className='form-control' value={project} onChange={(e) => setProject(e.target.value.trim())} ref={projectRef}>
+                        <select id='filter-project' className='form-control' value={project} onChange={(e) => setProject(e.target.value.trim())} ref={projectRef}>
                         {projectOptions.map((p) => (
                             <option key={p.name} value={p.name}>{p.name || p.name}</option>
                         ))}
@@ -472,18 +472,29 @@ function OverviewInner() {
     const employeeChartRef = React.useRef<HTMLDivElement>(null)
 
     const Coachmark: React.FC<{ target?: Element | null; selector?: string; title: string; body: string; onSkip: () => void; onDont: () => void; onNext: () => void; side?: 'right' | 'left' | 'bottom' | 'top' }>=({ target, selector, title, body, onSkip, onDont, onNext, side='right' }) => {
-        const [style, setStyle] = React.useState<React.CSSProperties>({ position: 'fixed', zIndex: 10000, top: 0, left: 0, visibility: 'hidden' })
+        const [style, setStyle] = React.useState<React.CSSProperties>({ position: 'fixed', zIndex: 10000, top: '40%', left: '50%', transform: 'translate(-50%, -50%)', visibility: 'visible' })
         React.useEffect(() => {
-            const el = target || (selector ? document.querySelector(selector) : null)
-            if (!el) return
-            const rect = el.getBoundingClientRect()
-            const gap = 8
-            const pos: any = { position: 'fixed', zIndex: 10000 }
-            if (side === 'right') { pos.top = rect.top + rect.height/2 - 80; pos.left = rect.right + gap }
-            if (side === 'left') { pos.top = rect.top + rect.height/2 - 80; pos.left = Math.max(8, rect.left - 300 - gap) }
-            if (side === 'bottom') { pos.top = rect.bottom + gap; pos.left = rect.left }
-            if (side === 'top') { pos.top = Math.max(8, rect.top - 120 - gap); pos.left = rect.left }
-            setStyle({ ...pos, visibility: 'visible' })
+            let attempts = 0
+            const maxAttempts = 20
+            const tryPosition = () => {
+                const el = target || (selector ? document.querySelector(selector) : null)
+                attempts++
+                if (!el) {
+                    if (attempts < maxAttempts) setTimeout(tryPosition, 200)
+                    else setStyle((s) => ({ ...s, visibility: 'visible' })) // center fallback
+                    return
+                }
+                try { (el as any).scrollIntoView?.({ behavior: 'smooth', block: 'center', inline: 'center' }) } catch {}
+                const rect = el.getBoundingClientRect()
+                const gap = 8
+                const pos: any = { position: 'fixed', zIndex: 10000 }
+                if (side === 'right') { pos.top = rect.top + rect.height/2 - 80; pos.left = rect.right + gap }
+                if (side === 'left') { pos.top = rect.top + rect.height/2 - 80; pos.left = Math.max(8, rect.left - 300 - gap) }
+                if (side === 'bottom') { pos.top = rect.bottom + gap; pos.left = rect.left }
+                if (side === 'top') { pos.top = Math.max(8, rect.top - 120 - gap); pos.left = rect.left }
+                setStyle({ ...pos, visibility: 'visible' })
+            }
+            setTimeout(tryPosition, 50)
         }, [target, selector])
         return (
             <div style={style} className='tutorial-card'>
@@ -498,22 +509,8 @@ function OverviewInner() {
         )
     }
 
-    // Start tutorial only after data is rendered (not during loading)
-    const overviewTipShown = React.useRef(false)
-    useEffect(() => {
-        if (loading) return
-        if (overviewTipShown.current) return
-        if (!baseData || baseData.length === 0) return
-        try {
-            const dont = localStorage.getItem('dontShowOverviewTutorial') === '1'
-            if (!dont) {
-                const savedStep = parseInt(localStorage.getItem('overviewTutorialStep') || '0', 10)
-                setTutorialStep(isNaN(savedStep) ? 0 : savedStep)
-                setShowTutorial(true)
-                overviewTipShown.current = true
-            }
-        } catch {}
-    }, [loading, baseData.length])
+    // Auto-start disabled: tutorial begins only when user clicks "Show tutorial"
+    useEffect(() => {}, [])
 
     const endTutorial = (dontShow: boolean) => {
         setShowTutorial(false)
@@ -787,6 +784,7 @@ function OverviewInner() {
                             className='btn btn-sm btn-outline-primary'
                             onClick={() => {
                                 try { localStorage.removeItem('dontShowOverviewTutorial'); localStorage.setItem('overviewTutorialStep', '0') } catch {}
+                                try { window.scrollTo({ top: 0, behavior: 'smooth' }) } catch {}
                                 setTutorialStep(0)
                                 setShowTutorial(true)
                             }}
@@ -798,28 +796,7 @@ function OverviewInner() {
                 {/* <Breadcrumbs title='Dashboards' breadcrumbItem='Activity Overview' /> */}
                 <div style={{ position: 'relative' }}>
                     <FiltersBar onChange={setFilters} initial={{ start: parseISO(initialFromParam), end: parseISO(initialToParam), project: initialProjectParam }} timeSpanRef={timeSpanRef} projectRef={projectRef} />
-                    {showTutorial && tutorialStep === 0 && (
-                        <Coachmark
-                            target={timeSpanRef.current}
-                            title='Choose a time span'
-                            body='Start here. Select the period you want to analyze.'
-                            onSkip={() => endTutorial(false)}
-                            onDont={() => endTutorial(true)}
-                            onNext={nextTutorial}
-                            side='right'
-                        />
-                    )}
-                    {showTutorial && tutorialStep === 1 && (
-                        <Coachmark
-                            target={projectRef.current}
-                            title='Filter by project'
-                            body='Optionally narrow down the view to a single project.'
-                            onSkip={() => endTutorial(false)}
-                            onDont={() => endTutorial(true)}
-                            onNext={nextTutorial}
-                            side='right'
-                        />
-                    )}
+                    {/* centralized coachmark renderer below */}
                 </div>
 
                 {/* KPIs */}
@@ -931,16 +908,7 @@ function OverviewInner() {
                                 />
                             </LoadingErrorWrapper>
                             {showTutorial && tutorialStep === 2 && (
-                                <Coachmark
-                                    target={stackedChartRef.current}
-                                    selector='#overview-stacked-chart'
-                                    title='Day-wise chart'
-                                    body='Point at a bar to inspect. Click a bar/day to focus.'
-                                    onSkip={() => endTutorial(false)}
-                                    onDont={() => endTutorial(true)}
-                                    onNext={nextTutorial}
-                                    side='top'
-                                />
+                                <></>
                             )}
                         </div>
                     </Col>
@@ -1012,16 +980,7 @@ function OverviewInner() {
                                 />
                             </LoadingErrorWrapper>
                             {showTutorial && tutorialStep === 3 && (
-                                <Coachmark
-                                    target={employeeChartRef.current}
-                                    selector='#overview-employee-chart'
-                                    title='Open employee details'
-                                    body='Click a bar to navigate to the Employee Activity page.'
-                                    onSkip={() => endTutorial(false)}
-                                    onDont={() => endTutorial(true)}
-                                    onNext={nextTutorial}
-                                    side='top'
-                                />
+                                <></>
                             )}
                         </div>
                     </Col>
@@ -1117,6 +1076,29 @@ function OverviewInner() {
                             </div>
                         </Col>
                     </Row>
+                )}
+                {/* Global coachmark host: renders once with selector by step */}
+                {showTutorial && (
+                    (() => {
+                        const stepToSelector: Record<number, { selector: string; title: string; body: string; side?: 'right' | 'left' | 'bottom' | 'top' }> = {
+                            0: { selector: '#filter-timespan', title: 'Choose a time span', body: 'Start here. Select the period you want to analyze.', side: 'right' },
+                            1: { selector: '#filter-project', title: 'Filter by project', body: 'Optionally narrow down the view to a single project.', side: 'right' },
+                            2: { selector: '#overview-stacked-chart', title: 'Day-wise chart', body: 'Point at a bar to inspect. Click a bar/day to focus.', side: 'top' },
+                            3: { selector: '#overview-employee-chart', title: 'Open employee details', body: 'Click a bar to navigate to the Employee Activity page.', side: 'top' },
+                        }
+                        const cfg = stepToSelector[tutorialStep]
+                        return cfg ? (
+                            <Coachmark
+                                selector={cfg.selector}
+                                title={cfg.title}
+                                body={cfg.body}
+                                onSkip={() => endTutorial(false)}
+                                onDont={() => endTutorial(true)}
+                                onNext={nextTutorial}
+                                side={cfg.side}
+                            />
+                        ) : null
+                    })()
                 )}
             </Container>
         </div>

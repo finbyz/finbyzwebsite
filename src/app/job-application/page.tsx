@@ -7,14 +7,106 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Upload, ArrowLeft, Save, X, FileText } from "lucide-react";
 import Link from "next/link";
-import { useState, useRef } from "react";
+import {  useEffect,useState, useRef } from "react";
 import styles from "./job-application.module.css";
+import { log } from "console";
 
 export default function JobApplication() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [fileName, setFileName] = useState<string>("");
+  const [applicantTypes, setApplicantTypes] = useState<string[]>([]);
+  const [jobOpenings, setJobOpenings] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const WEB_FORM_NAME = "job-application";
+
+  console.log(applicantTypes)
+
+useEffect(() => {
+  const fetchJobOpenings = async () => {
+    try {
+      const res = await fetch(
+        "https://website.finbyz.com/api/method/finbyzweb.api.get_all_job_openings"
+      );
+      const data = await res.json();
+      console.log("Job Openings API response:", data);
+
+      if (Array.isArray(data.message?.data)) {
+        setJobOpenings(data.message.data);
+      } else {
+        setJobOpenings([]);
+      }
+    } catch (error) {
+      console.error("Error fetching job openings:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  fetchJobOpenings();
+}, []);
+
+
+  //  useEffect(() => {
+  //   const fetchJobOpenings = async () => {
+  //     try {
+  //       const res = await fetch(
+  //         "https://website.finbyz.com/api/method/finbyzweb.api.get_all_job_openings"
+  //       );
+  //       const data = await res.json();
+  //       console.log("Job Openings API response:", data.message.data);
+
+
+  //       // ✅ Ensure it's always an array
+  //       if (Array.isArray(data.message)) {
+  //         setJobOpenings(data.message);
+  //       } else if (data.message) {
+  //         setJobOpenings([data.message]); // wrap single object in array
+  //       } 
+
+        
+
+  //       // if (data?.message) {
+  //       //   setJobOpenings(data.message); 
+  //       //   console.log("Job Openings data",data.message)
+  //       // }
+  //     } catch (error) {
+  //       console.error("Error fetching job openings:", error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+
+  //   fetchJobOpenings();
+  // }, []);
+
+ useEffect(() => {
+  async function fetchApplicantTypes() {
+    try {
+      const res = await fetch(
+        "https://website.finbyz.com/api/method/finbyzweb.api.get_applicant_types"
+      );
+      const data = await res.json();
+      // console.log("Applicant types API response:", data.message);
+
+      if (data.message) {
+        // Split string by newline if it's a string
+        const types = typeof data.message === "string" 
+          ? data.message.split("\n") 
+          : Array.isArray(data.message) 
+            ? data.message 
+            : [];
+        setApplicantTypes(types);
+        console.log("Applicatin data",setApplicantTypes(types))
+      }
+    } catch (err) {
+      console.error("Failed to fetch applicant types: ", err);
+    }
+  }
+  fetchApplicantTypes();
+}, []);
+
+
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -48,6 +140,7 @@ export default function JobApplication() {
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    
     e.preventDefault();
     try {
       const form = e.currentTarget;
@@ -83,8 +176,11 @@ export default function JobApplication() {
         return;
       }
 
+      console.log("formData prepared:", formData);
+      
+
       // Send request to Frappe web form API
-      const res = await fetch("/api/frappe/frappe.website.doctype.web_form.web_form.accept", {
+      const res = await fetch("https://website.finbyz.com/api/method/finbyzweb.api.set_form_job_applicant", {
         method: "POST",
         body: formData,
       });
@@ -154,7 +250,7 @@ export default function JobApplication() {
                   <p className={styles.sectionDescription}>Basic details about the applicant</p>
                 </div>
 
-                <div className={styles.formGroup}>
+                {/* <div className={styles.formGroup}>
                   <label htmlFor="jobOpening" className={styles.formLabel}>
                     Job Opening <span className={styles.required}>*</span>
                   </label>
@@ -169,7 +265,25 @@ export default function JobApplication() {
                     <option value="data-analyst">Data Analyst</option>
                     <option value="qa-engineer">QA Engineer</option>
                   </select>
-                </div>
+                </div> */}
+                <div className={styles.formGroup}>
+                    <label htmlFor="jobOpening" className={styles.formLabel}>
+                      Job Opening <span className={styles.required}>*</span>
+                    </label>
+                
+                    <select id="jobOpening" className={styles.selectInput} required>
+                      <option value="">{loading ? "Loading..." : "Select a job opening"}</option>
+
+                      {!loading &&
+                    jobOpenings.map((job, index) => (
+                      <option key={index} value={job.designation}>
+                        {job.designation}
+                      </option>
+                    ))}
+                    </select>
+                  </div>
+                 
+  
 
                 <div className={styles.formGroup}>
                   <label htmlFor="applicantName" className={styles.formLabel}>
@@ -241,12 +355,15 @@ export default function JobApplication() {
                     Applicant Type <span className={styles.required}>*</span>
                   </label>
                   <select id="applicantType" className={styles.selectInput} required>
-                    <option value="">Select applicant type</option>
-                    <option value="fresher">Fresher</option>
-                    <option value="experienced">Experienced</option>
-                    <option value="intern">Intern</option>
-                    <option value="contractor">Contractor</option>
-                  </select>
+                  <option value="">Select applicant type</option>
+                  {/* <option value="Fresher">Fresher</option>
+                  <option value="Experience">Experience</option>  */}
+                   {applicantTypes.map((type, idx) => (
+                    <option key={idx} value={type}>
+                      {type}
+                    </option>
+                  ))}
+                </select>
                 </div>
 
                 <div className={styles.formGroup}>

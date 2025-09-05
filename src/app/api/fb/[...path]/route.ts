@@ -51,13 +51,7 @@ async function handleRequest(
   method: string
 ) {
   try {
-    const frappeUrl = process.env.FRAPPE_URL;
-    if (!frappeUrl) {
-      return NextResponse.json(
-        { error: 'Frappe backend URL not configured' },
-        { status: 500 }
-      );
-    }
+    const frappeUrl = process.env.FRAPPE_URL || 'https://website.finbyz.com';
 
     const [first, ...rest] = pathSegments;
     const frappePath = first === 'n' ? rest.join('/') : pathSegments.join('/');
@@ -68,7 +62,6 @@ async function handleRequest(
 
     const headers: Record<string, string> = {
       'Content-Type': 'application/json',
-      'Accept-Encoding': 'identity',
     };
 
     // Forward cookies if present
@@ -90,7 +83,18 @@ async function handleRequest(
 
     request.headers.forEach((value, key) => {
       const lower = key.toLowerCase();
-      if (lower !== 'host' && lower !== 'cookie' && lower !== 'accept-encoding' && lower !== 'authorization') {
+      // Only forward safe headers, exclude problematic ones
+      if (lower !== 'host' && 
+          lower !== 'cookie' && 
+          lower !== 'authorization' &&
+          lower !== 'connection' &&
+          lower !== 'upgrade' &&
+          lower !== 'proxy-connection' &&
+          lower !== 'te' &&
+          lower !== 'trailers' &&
+          lower !== 'transfer-encoding' &&
+          lower !== 'content-encoding' &&
+          lower !== 'content-length') {
         headers[key] = value as string;
       }
     });
@@ -104,6 +108,10 @@ async function handleRequest(
         body = await request.text();
       }
     }
+
+    // Debug logging
+    console.log(`Making ${method} request to: ${targetUrl}`);
+    console.log('Headers:', JSON.stringify(headers, null, 2));
 
     const frappeResponse = await fetch(targetUrl, {
       method,

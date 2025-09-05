@@ -37,8 +37,8 @@ export default function ERPIntroText({
 
   return (
     <section className="py-14 md:py-20 bg-white">
-      <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
-        <div className="grid grid-cols-[64px_1fr] md:grid-cols-[80px_1fr] gap-x-4 md:gap-x-6 items-start w-fit mx-auto justify-center">
+      <div className="container-fluid">
+        <div className="grid grid-cols-[64px_1fr] md:grid-cols-[80px_1fr] gap-x-4 md:gap-x-6 items-start w-fit justify-center mx-auto">
           <div className="mt-1 md:mt-0">
             <Image src="/Quotation%20Mark.png" alt="Quote" width={80} height={80} className="w-12 md:w-16 h-auto" />
           </div>

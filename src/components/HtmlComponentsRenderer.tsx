@@ -22,6 +22,10 @@ import ResourceCenter from './sections/resource-center';
 import TeamExpertise from './sections/team-expertise';
 import CTA from './sections/cta';
 import ERPIntroText from './sections/erp-intro-text';
+import Text from './sections/forward-contracting-text';
+import Video from './sections/video';
+import Points from './sections/points';
+import ForwardContractingText from './sections/forward-contracting-text';
 import ResponsiveCardGrid from './sections/responsive-card-grid';
 import ContentIllustrationLeft from './sections/content-illustration-left';
 import ContentIllustrationRight from './sections/content-illustration-right';
@@ -103,6 +107,10 @@ function ComponentRenderer({ componentData }: { componentData: ComponentData }) 
     'TeamExpertise': TeamExpertise,
     'CTASection': CTA,
     'ERPIntroText': ERPIntroText,
+    'Text': Text,
+    'Video': Video,
+    'Points': Points,
+    'ForwardContractingText': ForwardContractingText,
     'ResponsiveCardGrid': ResponsiveCardGrid,
     'ContentIllustrationLeft': ContentIllustrationLeft,
     'ContentIllustrationRight': ContentIllustrationRight,

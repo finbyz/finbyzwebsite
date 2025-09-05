@@ -21,12 +21,17 @@ import ClientLogos from './sections/client-logos';
 import StatsShowcase from './sections/stats-showcase';
 import TeamExpertise from './sections/team-expertise';
 import ERPIntroText from './sections/erp-intro-text';
+import Text from './sections/forward-contracting-text';
+import Video from './sections/video';
+import Points from './sections/points';
+import ForwardContractingText from './sections/forward-contracting-text';
 import ResponsiveCardGrid from './sections/responsive-card-grid';
 import ContentIllustrationLeft from './sections/content-illustration-left';
 import ContentIllustrationRight from './sections/content-illustration-right';
 import JobDetailSection from './sections/job-detail';
 import ContactFormSection from './sections/contact-form';
 import ContactWithMap from './sections/contact-with-map';
+import SecurityCompliance from './sections/security-compliance';
 
 // ============================================================================
 // DYNAMIC PAGE RENDERER
@@ -66,12 +71,17 @@ export const DynamicPageRenderer: React.FC<DynamicPageRendererProps> = ({
     'stats-showcase': StatsShowcase,
     'team-expertise': TeamExpertise,
     'erp-intro-text': ERPIntroText,
+    'text': Text,
+    'video': Video,
+    'points': Points,
+    'forward-contracting-text': ForwardContractingText,
     'responsive-card-grid': ResponsiveCardGrid,
     'content-illustration-left': ContentIllustrationLeft,
     'content-illustration-right': ContentIllustrationRight,
     'job-detail': JobDetailSection,
     'contact-form': ContactFormSection,
-    'contact-with-map': ContactWithMap
+    'contact-with-map': ContactWithMap,
+    'security-compliance': SecurityCompliance
   };
 
   /**

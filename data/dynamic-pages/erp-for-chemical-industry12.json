@@ -1,0 +1,866 @@
+{
+  "metadata": {
+    "title": "Complete Component Showcase",
+    "description": "A comprehensive demonstration of all available components in the system",
+    "keywords": [
+      "components",
+      "showcase",
+      "demo",
+      "ui",
+      "sections"
+    ]
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "component_type": "Hero",
+      "id": "hero-section",
+      "data": {
+        "title": "Complete Component Showcase",
+        "subtitle": "Every available component from the sections folder in one comprehensive page",
+        "description": "This page demonstrates all the available section components with realistic data and proper structure.",
+        "primaryButton": {
+          "text": "Get Started",
+          "url": "/get-started",
+          "icon": "ArrowRight"
+        },
+        "secondaryButton": {
+          "text": "View Documentation",
+          "url": "/docs",
+          "icon": "BookOpen"
+        },
+        "image": {
+          "src": "/Hero Brain 2.png",
+          "alt": "Component Showcase Hero"
+        },
+        "stats": [
+          {
+            "value": "25+",
+            "label": "Components Available"
+          },
+          {
+            "value": "100%",
+            "label": "Type Safe"
+          },
+          {
+            "value": "24/7",
+            "label": "Support"
+          }
+        ]
+      }
+    },
+    {
+      "type": "hero-basic",
+      "component_type": "Hero",
+      "id": "hero-basic-section",
+      "data": {
+        "title": "Hero Section Without Button",
+        "subtitle": "A simpler hero variant without action buttons",
+        "description": "Perfect for informational pages or when you want to focus on content rather than actions."
+      }
+    },
+    {
+      "type": "intro-text",
+      "component_type": "Text",
+      "id": "intro-text-section",
+      "data": {
+        "title": "Introduction to Our Component Library",
+        "paragraphs": [
+          "This comprehensive showcase demonstrates every available component in our system.",
+          "Each component is designed with flexibility, accessibility, and performance in mind."
+        ]
+      }
+    },
+    {
+      "type": "erp-intro-text",
+      "component_type": "Text",
+      "id": "erp-intro-section",
+      "data": {
+        "title": "ERP Software Development Excellence",
+        "paragraphs": [
+          "We specialize in creating robust ERP solutions that streamline business operations.",
+          "Our expertise spans across multiple industries and business sizes."
+        ],
+        "highlightLink": {
+          "text": "ERP solutions",
+          "href": "/erp-solutions"
+        }
+      }
+    },
+    {
+      "type": "benefits",
+      "component_type": "Card",
+      "id": "benefits-section",
+      "data": {
+        "title": "Why Choose Our Solutions",
+        "subtitle": "Proven benefits that drive measurable results",
+        "benefits": [
+          {
+            "number": 60,
+            "suffix": "%",
+            "label": "Efficiency Improvement",
+            "header": "Maximum Efficiency",
+            "description": "Transform operations with intelligent automation",
+            "icon": "TrendingUp",
+            "palette": {
+              "iconBg": "#1A5276",
+              "iconColor": "#fff"
+            }
+          },
+          {
+            "number": 40,
+            "suffix": "%",
+            "label": "Cost Reduction",
+            "header": "Cost Effective",
+            "description": "Reduce operational costs significantly",
+            "icon": "DollarSign",
+            "palette": {
+              "iconBg": "#FF8C00",
+              "iconColor": "#fff"
+            }
+          },
+          {
+            "number": 99,
+            "suffix": "%",
+            "label": "Client Satisfaction",
+            "header": "Happy Clients",
+            "description": "Exceed expectations consistently",
+            "icon": "Heart",
+            "palette": {
+              "iconBg": "#27AE60",
+              "iconColor": "#fff"
+            }
+          },
+          {
+            "number": 24,
+            "suffix": "/7",
+            "label": "Support Available",
+            "header": "Always Here",
+            "description": "Round-the-clock support and maintenance",
+            "icon": "Clock",
+            "palette": {
+              "iconBg": "#8E44AD",
+              "iconColor": "#fff"
+            }
+          }
+        ],
+        "ctaButton": {
+          "text": "Experience the Benefits →",
+          "action": "benefits"
+        }
+      }
+    },
+    {
+      "type": "differentiators",
+      "component_type": "FOQ",
+      "id": "differentiators-section",
+      "data": {
+        "title": "What Sets Us Apart",
+        "subtitle": "Unique advantages that make us the preferred choice",
+        "differentiators": [
+          {
+            "icon": "Shield",
+            "title": "Enterprise Security",
+            "description": "Bank-grade security with SOC 2 compliance",
+            "iconColor": "#1A5276",
+            "iconBg": "#EAF1F8"
+          },
+          {
+            "icon": "Zap",
+            "title": "Lightning Fast",
+            "description": "Optimized performance with sub-second response times",
+            "iconColor": "#FF8C00",
+            "iconBg": "#FFF4E5"
+          },
+          {
+            "icon": "Users",
+            "title": "Scalable Solutions",
+            "description": "Grow from startup to enterprise seamlessly",
+            "iconColor": "#27AE60",
+            "iconBg": "#E8F8F2"
+          },
+          {
+            "icon": "Globe",
+            "title": "Global Reach",
+            "description": "Deploy anywhere with multi-region support",
+            "iconColor": "#8E44AD",
+            "iconBg": "#F3EAF8"
+          }
+        ]
+      }
+    },
+    {
+      "type": "testimonials",
+      "component_type": "Card",
+      "id": "testimonials-section",
+      "data": {
+        "title": "What Our Clients Say",
+        "subtitle": "Trusted by businesses worldwide with proven results",
+        "testimonials": [
+          {
+            "quote": "Finbyz transformed our operations with their ERP implementation. The automation features alone saved us 40% in processing time.",
+            "author": "Sarah Johnson",
+            "company": "TechCorp Industries",
+            "initials": "SJ",
+            "rating": 5,
+            "palette": {
+              "color": "#1A5276",
+              "bg": "#EAF1F8"
+            },
+            "url": "/reviews/sarah-johnson"
+          },
+          {
+            "quote": "The AI automation they built for us is incredible. It handles complex workflows that used to take hours in minutes.",
+            "author": "Michael Chen",
+            "company": "DataFlow Solutions",
+            "initials": "MC",
+            "rating": 5,
+            "palette": {
+              "color": "#FF8C00",
+              "bg": "#FFF4E5"
+            },
+            "url": "/reviews/michael-chen"
+          },
+          {
+            "quote": "Professional team, excellent communication, and delivered exactly what we needed on time and budget.",
+            "author": "Amanda Lee",
+            "company": "InnovateLab",
+            "initials": "AL",
+            "rating": 5,
+            "palette": {
+              "color": "#27AE60",
+              "bg": "#E8F8F2"
+            },
+            "url": "/reviews/amanda-lee"
+          }
+        ],
+        "ctaButton": "View All Reviews",
+        "trustIndicators": [
+          {
+            "text": "Trusted by 100+ businesses",
+            "color": "#1A5276"
+          },
+          {
+            "text": "4.9/5 average rating",
+            "color": "#FF8C00"
+          }
+        ]
+      }
+    },
+    {
+      "type": "stats-showcase",
+      "component_type": "Carousal",
+      "id": "stats-section",
+      "data": {
+        "title": "Our Impact in Numbers",
+        "subtitle": "Metrics that tell our success story",
+        "stats": [
+          {
+            "icon": "CheckCircle",
+            "value": 200,
+            "suffix": "+",
+            "label": "Projects Completed",
+            "description": "Successfully delivered across industries",
+            "iconColor": "#1A5276",
+            "iconBg": "#EAF1F8"
+          },
+          {
+            "icon": "Globe",
+            "value": 50,
+            "suffix": "+",
+            "label": "Countries Served",
+            "description": "Global presence and reach",
+            "iconColor": "#FF8C00",
+            "iconBg": "#FFF4E5"
+          },
+          {
+            "icon": "Shield",
+            "value": 99.9,
+            "suffix": "%",
+            "label": "Uptime",
+            "description": "Reliable service delivery",
+            "iconColor": "#27AE60",
+            "iconBg": "#E8F8F2"
+          },
+          {
+            "icon": "Users",
+            "value": 1000,
+            "suffix": "+",
+            "label": "Happy Clients",
+            "description": "Satisfied customers worldwide",
+            "iconColor": "#8E44AD",
+            "iconBg": "#F3EAF8"
+          }
+        ]
+      }
+    },
+    {
+      "type": "team-expertise",
+      "component_type": "Card",
+      "id": "team-section",
+      "data": {
+        "title": "Meet Our Expert Team",
+        "subtitle": "Skilled professionals with years of experience",
+        "team": [
+          {
+            "name": "Frontend Development",
+            "experts": 15,
+            "experience": "8+ years",
+            "skills": [
+              "React",
+              "Next.js",
+              "TypeScript",
+              "Vue.js"
+            ],
+            "description": "Expert frontend developers creating responsive, accessible, and performant user interfaces.",
+            "iconColor": "#1A5276",
+            "iconBg": "#EAF1F8",
+            "projects": 200
+          },
+          {
+            "name": "Backend Development",
+            "experts": 12,
+            "experience": "10+ years",
+            "skills": [
+              "Node.js",
+              "Python",
+              "Java",
+              "Go"
+            ],
+            "description": "Senior backend engineers building scalable, secure, and high-performance server solutions.",
+            "iconColor": "#FF8C00",
+            "iconBg": "#FFF4E5",
+            "projects": 150
+          },
+          {
+            "name": "AI & Machine Learning",
+            "experts": 6,
+            "experience": "5+ years",
+            "skills": [
+              "TensorFlow",
+              "PyTorch",
+              "OpenAI",
+              "LangChain"
+            ],
+            "description": "AI engineers developing intelligent solutions and automation systems.",
+            "iconColor": "#27AE60",
+            "iconBg": "#E8F8F2",
+            "projects": 45
+          }
+        ]
+      }
+    },
+    {
+      "type": "technology-stack",
+      "component_type": "Card",
+      "id": "tech-stack-section",
+      "data": {
+        "title": "Our Technology Stack",
+        "subtitle": "Modern tools and frameworks we use to build robust solutions",
+        "technologies": [
+          {
+            "category": "Frontend",
+            "icon": "Code",
+            "technologies": [
+              "React",
+              "Next.js",
+              "TypeScript",
+              "Tailwind CSS"
+            ],
+            "description": "Modern, responsive web applications",
+            "iconColor": "#1A5276",
+            "iconBg": "#EAF1F8"
+          },
+          {
+            "category": "Backend",
+            "icon": "Database",
+            "technologies": [
+              "Node.js",
+              "Python",
+              "Java",
+              "Go"
+            ],
+            "description": "Scalable and robust server solutions",
+            "iconColor": "#FF8C00",
+            "iconBg": "#FFF4E5"
+          },
+          {
+            "category": "Cloud & DevOps",
+            "icon": "Cloud",
+            "technologies": [
+              "AWS",
+              "Docker",
+              "Kubernetes",
+              "CI/CD"
+            ],
+            "description": "Cloud-native deployment and scaling",
+            "iconColor": "#27AE60",
+            "iconBg": "#E8F8F2"
+          },
+          {
+            "category": "AI & ML",
+            "icon": "Cpu",
+            "technologies": [
+              "TensorFlow",
+              "PyTorch",
+              "OpenAI",
+              "LangChain"
+            ],
+            "description": "Intelligent automation and insights",
+            "iconColor": "#8E44AD",
+            "iconBg": "#F3EAF8"
+          }
+        ]
+      }
+    },
+    {
+      "type": "process-workflow",
+      "component_type": "Timeline",
+      "id": "process-section",
+      "data": {
+        "title": "Our Development Process",
+        "subtitle": "Proven methodology that ensures successful project delivery",
+        "processSteps": [
+          {
+            "step": "01",
+            "title": "Discovery & Planning",
+            "description": "Understanding requirements and creating detailed project roadmap",
+            "icon": "Search",
+            "details": [
+              "Business Requirements Gathering",
+              "Technical Architecture Planning",
+              "Market Research & Analysis",
+              "Stakeholder Interviews"
+            ],
+            "duration": "1-2 weeks",
+            "iconColor": "#1A5276",
+            "iconBg": "#EAF1F8"
+          },
+          {
+            "step": "02",
+            "title": "Design & Prototyping",
+            "description": "Creating wireframes, mockups, and interactive prototypes",
+            "icon": "Lightbulb",
+            "details": [
+              "UI/UX Design Creation",
+              "Wireframing & Prototyping",
+              "Technical Architecture Design",
+              "User Journey Mapping"
+            ],
+            "duration": "2-3 weeks",
+            "iconColor": "#FF8C00",
+            "iconBg": "#FFF4E5"
+          },
+          {
+            "step": "03",
+            "title": "Development",
+            "description": "Building the solution with regular check-ins and demos",
+            "icon": "Code",
+            "details": [
+              "Frontend Development",
+              "Backend API Development",
+              "Database Implementation",
+              "Third-party Integrations"
+            ],
+            "duration": "4-8 weeks",
+            "iconColor": "#27AE60",
+            "iconBg": "#E8F8F2"
+          }
+        ],
+        "stats": {
+          "steps": "3",
+          "weeks": "7-13",
+          "transparency": "100%",
+          "support": "24/7"
+        }
+      }
+    },
+    {
+      "type": "global-presence",
+      "component_type": "Card",
+      "id": "global-section",
+      "data": {
+        "title": "Global Presence",
+        "subtitle": "Serving clients worldwide with local expertise and global reach",
+        "locations": [
+          {
+            "city": "New York",
+            "country": "USA",
+            "timezone": "EST",
+            "icon": "MapPin"
+          },
+          {
+            "city": "London",
+            "country": "UK",
+            "timezone": "GMT",
+            "icon": "MapPin"
+          },
+          {
+            "city": "Singapore",
+            "country": "Singapore",
+            "timezone": "SGT",
+            "icon": "MapPin"
+          },
+          {
+            "city": "Sydney",
+            "country": "Australia",
+            "timezone": "AEST",
+            "icon": "MapPin"
+          }
+        ]
+      }
+    },
+    {
+      "type": "resource-center",
+      "component_type": "Card",
+      "id": "resources-section",
+      "data": {
+        "title": "Resource Center",
+        "subtitle": "Knowledge hub with guides, tutorials, and best practices",
+        "categories": [
+          {
+            "title": "Technical Documentation",
+            "description": "Comprehensive guides and API references",
+            "resources": [
+              {
+                "title": "Getting Started Guide",
+                "type": "PDF",
+                "size": "2.5 MB",
+                "downloads": 1500
+              },
+              {
+                "title": "API Reference",
+                "type": "Interactive",
+                "size": "Online",
+                "downloads": 3000
+              }
+            ]
+          },
+          {
+            "title": "Video Tutorials",
+            "description": "Step-by-step video guides for common tasks",
+            "resources": [
+              {
+                "title": "Quick Start Tutorial",
+                "type": "Video",
+                "size": "15 min",
+                "downloads": 800
+              },
+              {
+                "title": "Advanced Features",
+                "type": "Video",
+                "size": "45 min",
+                "downloads": 500
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "contact-info",
+      "component_type": "Card",
+      "id": "contact-info-section",
+      "data": {
+        "title": "Get in Touch",
+        "subtitle": "Ready to start your project? Let's discuss how we can help",
+        "contactMethods": [
+          {
+            "icon": "Phone",
+            "title": "Phone",
+            "value": "+1 (555) 123-4567",
+            "description": "Available 24/7 for urgent matters"
+          },
+          {
+            "icon": "Mail",
+            "title": "Email",
+            "value": "hello@finbyz.com",
+            "description": "Response within 2 hours during business hours"
+          },
+          {
+            "icon": "MapPin",
+            "title": "Office",
+            "value": "123 Business Ave, Suite 100",
+            "description": "New York, NY 10001"
+          }
+        ],
+        "form": {
+          "title": "Send us a message",
+          "nameLabel": "Full Name",
+          "namePlaceholder": "Enter your full name",
+          "emailLabel": "Email Address",
+          "emailPlaceholder": "Enter your email address",
+          "messageLabel": "Message",
+          "messagePlaceholder": "Tell us about your project or inquiry",
+          "submitText": "Send Message"
+        }
+      }
+    },
+    {
+      "type": "business-slider",
+      "component_type": "Form",
+      "id": "business-slider-section",
+      "data": {
+        "title": "Business Solutions",
+        "subtitle": "Comprehensive solutions tailored for every industry and business size",
+        "solutions": [
+          {
+            "title": "E-commerce",
+            "description": "Complete online store solutions with payment processing and inventory management",
+            "icon": "ShoppingCart"
+          },
+          {
+            "title": "Healthcare",
+            "description": "Digital health platforms with HIPAA compliance and patient management",
+            "icon": "Heart"
+          },
+          {
+            "title": "Finance",
+            "description": "Fintech and banking solutions with security and compliance features",
+            "icon": "DollarSign"
+          },
+          {
+            "title": "Education",
+            "description": "Learning management systems with analytics and student tracking",
+            "icon": "BookOpen"
+          }
+        ]
+      }
+    },
+    {
+      "type": "client-logos",
+      "component_type": "Carousal",
+      "id": "client-logos-section",
+      "data": {
+        "title": "Trusted By Industry Leaders",
+        "subtitle": "We work with companies across various sectors",
+        "clients": [
+          {
+            "name": "South India Trading Co.",
+            "location": "DELHI, INDIA",
+            "logo": "SJC",
+            "colors": {
+              "primary": "#FFD700",
+              "secondary": "#FF6B35",
+              "accent": "#4CAF50"
+            },
+            "description": "Multi-colored map of India with bold yellow text"
+          },
+          {
+            "name": "Elkins Trade Link Ltd.",
+            "location": "TRADE LINK LTD.",
+            "logo": "elkins",
+            "colors": {
+              "primary": "#87CEEB",
+              "secondary": "#808080"
+            },
+            "description": "Light blue text with stylized 'k' as shopping bag"
+          },
+          {
+            "name": "G.M.'s Tulsi Tea",
+            "location": "TEA",
+            "logo": "Tulsi",
+            "colors": {
+              "primary": "#8A2BE2",
+              "secondary": "#FFD700",
+              "text": "#FFFFFF"
+            },
+            "description": "Purple background with yellow banner and white text"
+          }
+        ],
+        "carousel": {
+          "autoPlay": true,
+          "interval": 3000,
+          "showArrows": true,
+          "showIndicators": true
+        }
+      }
+    },
+    {
+      "type": "contact-form",
+      "component_type": "Form",
+      "id": "contact-form-section",
+      "data": {
+        "title": "Get In Touch",
+        "subtitle": "Ready to transform your business? Let's talk.",
+        "initialValues": {
+          "name": "",
+          "email": "",
+          "mobile": "",
+          "message": ""
+        },
+        "submitLabel": "Send Message",
+        "toEmail": "info@finbyz.tech"
+      }
+    },
+    {
+      "type": "contact-with-map",
+      "component_type": "Text",
+      "id": "contact-map-section",
+      "data": {
+        "title": "Contact Us",
+        "subtitle": "We'd love to hear from you",
+        "items": [
+          {
+            "label": "Sales Inquiry",
+            "value": "+91-9925701446",
+            "href": "tel:+919925701446",
+            "icon": "phone"
+          },
+          {
+            "label": "Service & Support",
+            "value": "+91-8200899005",
+            "href": "tel:+918200899005",
+            "icon": "headset"
+          },
+          {
+            "label": "Job Interviews",
+            "value": "079 48912428",
+            "href": "tel:+9107948912428",
+            "icon": "briefcase"
+          },
+          {
+            "label": "Email",
+            "value": "info@finbyz.tech",
+            "href": "mailto:info@finbyz.tech",
+            "icon": "mail"
+          }
+        ],
+        "addressTitle": "Registered Office",
+        "addressLines": [
+          "504-Addor Ambition, Nr. Navrang Circle, Vimal House",
+          "Navrangpura, Ahmedabad, Gujarat 380009"
+        ],
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.3816282476478!2d72.5582982!3d23.046466399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848b56e4b749%3A0x4b6f73a235b252e3!2sFinByz%20Tech%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1755512221321!5m2!1sen!2sin"
+      }
+    },
+    {
+      "type": "content-with-illustration-left",
+      "component_type": "Text",
+      "id": "illustration-left-section",
+      "data": {
+        "title": "Content with Left Illustration",
+        "paragraphs": [
+          "This component displays content with an illustration positioned on the left side.",
+          "Perfect for explaining concepts, showcasing features, or providing detailed information with visual support."
+        ],
+        "imageSrc": "/images/left-illustration.png",
+        "imageAlt": "Left side illustration"
+      }
+    },
+    {
+      "type": "content-with-illustration-right",
+      "component_type": "Text",
+      "id": "illustration-right-section",
+      "data": {
+        "title": "Content with Right Illustration",
+        "paragraphs": [
+          "This component displays content with an illustration positioned on the right side.",
+          "Great for visual storytelling and maintaining reading flow from left to right."
+        ],
+        "imageSrc": "/images/right-illustration.png",
+        "imageAlt": "Right side illustration"
+      }
+    },
+    {
+      "type": "comment",
+      "component_type": "Text",
+      "id": "comment-section",
+      "data": {
+        "title": "Highlight Quote",
+        "subtitle": "Featured testimonial or important message",
+        "content": "This component is perfect for highlighting important quotes, testimonials, or key messages that need to stand out from the rest of the content.",
+        "author": "System Component",
+        "source": "Component Library"
+      }
+    },
+    {
+      "type": "call-to-action",
+      "component_type": "Text",
+      "id": "cta-section",
+      "data": {
+        "title": "Ready to Get Started?",
+        "subtitle": "Talk to our Experts",
+        "description": "Transform your business processes with AI-powered automation and expert implementation.",
+        "primaryButton": {
+          "text": "Book Demo",
+          "icon": "CalendarCheck",
+          "action": "demo"
+        },
+        "secondaryButton": {
+          "text": "Get Proposal",
+          "icon": "FileText",
+          "action": "proposal"
+        },
+        "trustIndicator": {
+          "text": "Trusted by 100+ businesses",
+          "icon": "CalendarCheck"
+        }
+      }
+    },
+    {
+      "type": "job-detail",
+      "component_type": "Card",
+      "id": "job-detail-section",
+      "data": {
+        "title": "Senior Full-Stack Developer",
+        "subtitle": "Join our dynamic team and build amazing solutions",
+        "jobDetails": {
+          "location": "Remote / New York",
+          "type": "Full-time",
+          "experience": "5+ years",
+          "salary": "$120k - $150k",
+          "department": "Engineering"
+        },
+        "description": "We're looking for a talented full-stack developer to join our growing team.",
+        "requirements": [
+          "Strong experience with React, Node.js, and TypeScript",
+          "Experience with cloud platforms (AWS, Azure, or GCP)",
+          "Knowledge of database design and optimization",
+          "Excellent problem-solving and communication skills"
+        ],
+        "benefits": [
+          "Competitive salary and equity",
+          "Flexible work arrangements",
+          "Professional development opportunities",
+          "Health, dental, and vision insurance"
+        ]
+      }
+    },
+    {
+      "type": "responsive-card-grid",
+      "component_type": "Card",
+      "id": "card-grid-section",
+      "data": {
+        "title": "Responsive Card Grid",
+        "subtitle": "Flexible grid layout for various content types",
+        "cards": [
+          {
+            "title": "Feature Card 1",
+            "description": "This is a sample feature card with responsive design.",
+            "icon": "Star",
+            "color": "#1A5276"
+          },
+          {
+            "title": "Feature Card 2",
+            "description": "Another feature card demonstrating the grid layout.",
+            "icon": "Heart",
+            "color": "#FF8C00"
+          },
+          {
+            "title": "Feature Card 3",
+            "description": "Third feature card showing consistent styling.",
+            "icon": "Zap",
+            "color": "#27AE60"
+          },
+          {
+            "title": "Feature Card 4",
+            "description": "Fourth feature card completing the grid.",
+            "icon": "Shield",
+            "color": "#8E44AD"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -162,6 +162,199 @@ export const componentManifest: { [key: string]: ComponentManifest } = {
       }
     }
   },
+  "Text": {
+    name: "Text",
+    purpose: "Single-column rich text block with optional title.",
+    optimalUsage: [
+      "Use for explanatory content between sections.",
+      "Split long paragraphs into shorter ones for readability.",
+      "Keep line length comfortable on large screens."
+    ],
+    jsonSchema: {
+      component: "Text",
+      data: { title: "string", paragraphs: ["string"] }
+    },
+    example: {
+      component: "Text",
+      data: {
+        component_type: "Text",
+        title: "How to Manage Forward Contract in ERPNext?",
+        paragraphs: [
+          "Forward contracting in ERPNext is a powerful tool for currency hedging..."
+        ]
+      }
+    }
+  },
+  "text": {
+    name: "Text",
+    purpose: "Single-column rich text block with optional title.",
+    optimalUsage: [
+      "Use for explanatory content between sections.",
+      "Split long paragraphs into shorter ones for readability.",
+      "Keep line length comfortable on large screens."
+    ],
+    jsonSchema: {
+      component: "Text",
+      data: { title: "string", paragraphs: ["string"] }
+    },
+    example: {
+      component: "Text",
+      data: {
+        component_type: "Text",
+        paragraphs: [
+          "Forward contracting in ERPNext is a powerful tool for currency hedging..."
+        ]
+      }
+    }
+  },
+  "Video": {
+    name: "Video",
+    purpose: "Embed a responsive YouTube player with optional title.",
+    optimalUsage: [
+      "Use for tutorial or promo videos.",
+      "Provide either a full YouTube URL or a videoId.",
+      "Keep surrounding content minimal to focus attention."
+    ],
+    jsonSchema: {
+      component: "Video",
+      data: { title: "string", url: "string", videoId: "string" }
+    },
+    example: {
+      component: "Video",
+      data: {
+        component_type: "Video",
+        title: "ERPNext Tutorial (Custom Features)",
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      }
+    }
+  },
+  "Points": {
+    name: "Points",
+    purpose: "Display a bulleted list with an optional heading.",
+    optimalUsage: [
+      "Use for concise procedural steps or key takeaways.",
+      "Keep each bullet short and scannable.",
+      "Prefer 4–10 bullets for readability."
+    ],
+    jsonSchema: {
+      component: "Points",
+      data: { title: "string", points: ["string"] }
+    },
+    example: {
+      component: "Points",
+      data: {
+        component_type: "Text",
+        title: "Forward Contract Utilization Steps",
+        points: [
+          "Go to the Payment Entry list and click on 'New'.",
+          "Select the Party Type and the relevant Customer/Supplier.",
+          "Choose the Bank or Cash Account for 'Paid To' and 'Paid From'.",
+          "Select the forward contract and enter the amount utilized.",
+          "Enter the Amount Paid and provide bank reference.",
+          "Save and Submit the entry."
+        ]
+      }
+    }
+  },
+  "points": {
+    name: "Points",
+    purpose: "Display a bulleted list with an optional heading.",
+    optimalUsage: [
+      "Use for concise procedural steps or key takeaways.",
+      "Keep each bullet short and scannable.",
+      "Prefer 4–10 bullets for readability."
+    ],
+    jsonSchema: {
+      component: "Points",
+      data: { title: "string", points: ["string"] }
+    },
+    example: {
+      component: "Points",
+      data: {
+        component_type: "Text",
+        title: "Forward Contract Utilization Steps",
+        points: [
+          "Go to the Payment Entry list and click on 'New'.",
+          "Select the Party Type and the relevant Customer/Supplier.",
+          "Choose the Bank or Cash Account for 'Paid To' and 'Paid From'.",
+          "Select the forward contract and enter the amount utilized.",
+          "Enter the Amount Paid and provide bank reference.",
+          "Save and Submit the entry."
+        ]
+      }
+    }
+  },
+  "video": {
+    name: "Video",
+    purpose: "Embed a responsive YouTube player with optional title.",
+    optimalUsage: [
+      "Use for tutorial or promo videos.",
+      "Provide either a full YouTube URL or a videoId.",
+      "Keep surrounding content minimal to focus attention."
+    ],
+    jsonSchema: {
+      component: "Video",
+      data: { title: "string", url: "string", videoId: "string" }
+    },
+    example: {
+      component: "Video",
+      data: {
+        component_type: "Video",
+        title: "ERPNext Tutorial (Custom Features)",
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      }
+    }
+  },
+  "ForwardContractingText": {
+    name: "ForwardContractingText",
+    purpose: "Explains forward contracting in ERPNext using a simple text block.",
+    optimalUsage: [
+      "Use on ERP/Forex pages to describe forward contracts.",
+      "Keep paragraph text concise and scannable.",
+      "Use as a lead-in before forms or CTAs."
+    ],
+    jsonSchema: {
+      component: "ForwardContractingText",
+      data: {
+        title: "string",
+        paragraphs: ["string"]
+      }
+    },
+    example: {
+      component: "ForwardContractingText",
+      data: {
+        component_type: "Text",
+        paragraphs: [
+          "Forward contracting in ERPNext is a powerful tool for currency hedging, allowing businesses to lock in exchange rates for future international transactions. Through the forward contract ERPNext feature, importers and exporters can minimize the impact of currency fluctuations by setting a fixed rate in advance. With integrated forward contract accounting ERPNext capabilities, companies can efficiently track forward contracts, manage gains or losses, and maintain accurate financial records aligned with their forex exposures."
+        ]
+      }
+    }
+  },
+  "forward-contracting-text": {
+    name: "ForwardContractingText",
+    purpose: "Explains forward contracting in ERPNext using a simple text block.",
+    optimalUsage: [
+      "Use on ERP/Forex pages to describe forward contracts.",
+      "Keep paragraph text concise and scannable.",
+      "Use as a lead-in before forms or CTAs."
+    ],
+    jsonSchema: {
+      component: "ForwardContractingText",
+      data: {
+        title: "string",
+        paragraphs: ["string"]
+      }
+    },
+    example: {
+      component: "ForwardContractingText",
+      data: {
+        component_type: "Text",
+        paragraphs: [
+          "Forward contracting in ERPNext is a powerful tool for currency hedging, allowing businesses to lock in exchange rates for future international transactions. Through the forward contract ERPNext feature, importers and exporters can minimize the impact of currency fluctuations by setting a fixed rate in advance. With integrated forward contract accounting ERPNext capabilities, companies can efficiently track forward contracts, manage gains or losses, and maintain accurate financial records aligned with their forex exposures."
+        ]
+      }
+    }
+  },
   // Alias to match schema.id used on the Components page
   "erp-intro-text": {
     name: "ERPIntroText",
@@ -420,6 +613,91 @@ export const componentManifest: { [key: string]: ComponentManifest } = {
         dragText: "Drop files here"
       }
     }
+  },
+
+  "InquiryForm": {
+    name: "Inquiry Form",
+    purpose: "A beautiful and modern inquiry form for collecting demo requests with visual illustration and form validation.",
+    optimalUsage: [
+      "Use for lead generation and demo requests.",
+      "Perfect for landing pages and contact sections.",
+      "Provides visual appeal with custom illustration.",
+      "Includes form validation and submission feedback."
+    ],
+    jsonSchema: {
+      component: "InquiryForm",
+      data: {
+        component_type: "Form",
+        title: "string",
+        description: "string",
+        fields: {
+          name: "string",
+          organization: "string",
+          email: "string",
+          mobile: "string"
+        },
+        submitText: "string",
+        backgroundImage: "string"
+      }
+    },
+    example: {
+      component: "InquiryForm",
+      data: {
+        title: "Request for FREE Demo",
+        description: "Get started with your free demo today",
+        fields: {
+          name: "Name",
+          organization: "Organization Name",
+          email: "Email",
+          mobile: "Mobile No"
+        },
+        submitText: "SUBMIT"
+      }
+    },
+    notes: "This component features a responsive design with a custom illustration showing a smartphone and envelope, perfect for demo request forms."
+  },
+
+  "inquiry-form": {
+    name: "Inquiry Form",
+    purpose: "A beautiful and modern inquiry form for collecting demo requests with visual illustration and form validation.",
+    optimalUsage: [
+      "Use for lead generation and demo requests.",
+      "Perfect for landing pages and contact sections.",
+      "Provides visual appeal with custom illustration.",
+      "Includes form validation and submission feedback."
+    ],
+    jsonSchema: {
+      component: "InquiryForm",
+      data: {
+        component_type: "Form",
+        title: "string",
+        description: "string",
+        fields: {
+          name: "string",
+          organization: "string",
+          email: "string",
+          mobile: "string"
+        },
+        submitText: "string",
+        backgroundImage: "string"
+      }
+    },
+    example: {
+      component: "InquiryForm",
+      data: {
+        component_type: "Form",
+        title: "Request for FREE Demo",
+        description: "Get started with your free demo today",
+        fields: {
+          name: "Name",
+          organization: "Organization Name",
+          email: "Email",
+          mobile: "Mobile No"
+        },
+        submitText: "SUBMIT"
+      }
+    },
+    notes: "This component features a responsive design with a custom illustration showing a smartphone and envelope, perfect for demo request forms."
   },
 
   

@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "title": "EMD Management in ERPNext | Earnest Money Deposit ERP Module - Finbyz Tech",
+    "description": "",
+    "keywords": []
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "component_type": "Hero",
+      "id": "sec-hero-emd-management",
+      "data": {
+        "title": "EMD Management in ERPNext",
+        "subtitle": "Streamline and automate your Earnest Money Deposit management with ERPNext's EMD app",
+        "description": "An EMD app in ERPNext streamlines and automates the management of Earnest Money Deposits, providing enhanced financial control and real-time visibility into EMD transactions. Integration with other ERPNext modules allows seamless management and increased productivity.",
+        "image": "/images/emd-management-hero.png",
+        "image_alt": "EMD Management Dashboard in ERPNext"
+      }
+    },
+    {
+      "type": "intro-text",
+      "component_type": "Text",
+      "id": "sec-intro-text",
+      "data": {
+        "heading": "Introduction",
+        "text": "As an exporter, you can receive benefits from the government in the form of RODTEP and Duty Drawback against your exported goods. This app is designed to manage your RODTEP and Duty Drawback claims on an export-wise basis."
+      }
+    },
+    {
+      "type": "video",
+      "component_type": "Video",
+      "id": "sec-video-overview",
+      "data": {
+        "video_url": "https://www.youtube.com/embed/oArobHyygSQ",
+        "title": "EMD Management Overview Video"
+      }
+    },
+    {
+      "type": "benefits",
+      "component_type": "Card",
+      "id": "sec-benefits-emd-app",
+      "data": {
+        "heading": "Why do you Need this App in ERPNext",
+        "items": [
+          {
+            "title": "Streamlined EMD Management",
+            "description": "An EMD app in ERPNext can help you centralize and automate the management of EMDs, making it easier to track, record, and manage EMD transactions in a systematic manner."
+          },
+          {
+            "title": "Enhanced Financial Control",
+            "description": "The EMD app can provide financial control features, such as setting EMD amounts, due dates, refund policies and other charges ensuring that your EMD processes are aligned with your business policies and requirements."
+          },
+          {
+            "title": "Real-time EMD Status",
+            "description": "The EMD app can provide real-time visibility into the status of EMD transactions, including pending EMDs, refunded EMDs, and forfeited EMDs, helping you to monitor and track the EMD status for each transaction."
+          },
+          {
+            "title": "Send Automated Reminders",
+            "description": "EMDs are also type of receivables from customer after maturity date. The system can send automated reminders to customers for follow up for refund of EMDs."
+          },
+          {
+            "title": "EMD Return and Interest Management",
+            "description": "When EMDs are received back with some interest the user can do return entry mentioning interest amount and interest account. System will automatically create respective JV and mark EMD as returned."
+          },
+          {
+            "title": "Efficient & Compliant Management",
+            "description": "Having an EMD app in ERPNext can provide you with a streamlined solution for efficient and compliant EMD management, aligned with your organization's specific needs and workflows."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content-with-illustration-left",
+      "component_type": "Text",
+      "id": "sec-content-how-to-use-emd",
+      "data": {
+        "heading": "How to use EMD Management in ERPNext",
+        "subsections": [
+          {
+            "subheading": "At Time of Giving EMD",
+            "text": "Fill out EMD form with details such as Customer, Due Date, Deposit Account, Bank Account, Tender Name, Tender No, Amount, Extra Charges, Payment Mode, Reference Number etc. and submit the entry. On submission the system will create an EMD Journal Entry marking expense for charges and create receivable from customer. This will also mark EMD status as Paid.",
+            "image": "/files/EMD_Paid-26-36.gif",
+            "image_alt": "EMD Paid entry in ERPNext"
+          },
+          {
+            "subheading": "When EMD is Due",
+            "text": "System will check if any EMD has not been received after due date, it will mark the EMD status Due. If you wish to send reminder for repayment to customer, you can click checkbox “Send Weekly Reminder”. It will make reminder setup section visible. The contact person email address will auto populate in Recipient email. You can add more persons in recipient or in CC To field. EMD Reminder email template will auto populate. You can change the text below as per your requirements. System will send weekly reminders with selected text till the time EMD is not returned.",
+            "image": "/files/EMD_Due-52-62.gif",
+            "image_alt": "EMD Due reminder setup in ERPNext"
+          },
+          {
+            "subheading": "When EMD is Returned",
+            "text": "Open the EMD which is refunded from customer, and click on checkbox returned. Fill Interest amount, account to credit interest and bank account where funds are received in return section. On update system will pass journal entry for the return and mark the EMD status as refunded.",
+            "image": "/files/EMD_Returned-90-100.gif",
+            "image_alt": "EMD Returned marking in ERPNext"
+          },
+          {
+            "subheading": "If EMD Forfeited",
+            "text": "If for any reason EMD is forfeited, and you are not expecting it back, you can click on checkbox forfeited. Select the write off account and system will pass Journal Entry for the writing off EMD from balance sheet and mark EMD status as forfeited.",
+            "image": "/files/EMD_Forfieted-115-125.gif",
+            "image_alt": "EMD Forfeited marking in ERPNext"
+          }
+        ]
+      }
+    }
+  ]
+}

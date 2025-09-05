@@ -62,7 +62,7 @@ export default function ContactWithMap({
   } = data;
 
   return (
-    <section className="w-full py-8 md:py-10 bg-white">
+    <section className="w-full bg-white">
       <div className="container-fluid mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           {/* Left: Contact details */}

@@ -11,6 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Link from "next/link";
+import Image from "next/image";
 
 interface NavigationItem {
   name: string;
@@ -525,9 +526,13 @@ export default function Header() {
           <div className="flex justify-between items-center h-12 lg:h-14 w-full">
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center">
-                <span className="text-xl lg:text-2xl font-bold text-white">
-                  Finbyz
-                </span>
+                <Image
+                  src="/FinByz_2025_Rect-removebg-preview.png"
+                  alt="Finbyz"
+                  width={120}
+                  height={32}
+                  priority
+                />
               </Link>
             </div>
 

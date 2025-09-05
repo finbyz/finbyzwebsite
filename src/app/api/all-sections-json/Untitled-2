@@ -1,0 +1,22 @@
+
+web_content_setting = frappe.get_single("Web Schema Generation Setting")
+content_formatter_agent_doc_name = web_content_setting.web_page_content_agent
+web_page_name_to_test = "erp-software-development"
+
+ai_agent =  ai_agent = frappe.get_doc("AI Agent",content_formatter_agent_doc_name)
+
+web_page_doc = frappe.get_doc("Web Page", web_page_name_to_test)
+
+
+ai_input_data = {
+    "webpage_title": web_page_doc.title,
+    "seo_title": web_page_doc.seo_title,
+    "seo_description": web_page_doc.small_description,
+    "main_section_html": web_page_doc.main_section_html
+}
+
+result = ai_agent.invoke(**ai_input_data)
+web_page_doc.web_page_content = result.json()
+
+web_page_doc.save()
+

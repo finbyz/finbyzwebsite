@@ -26,6 +26,9 @@ import ProcessWorkflow from "@/components/sections/process-workflow";
 
 import TechnologyStack from "@/components/sections/technology-stack";
 import ERPIntroText from "@/components/sections/erp-intro-text";
+import Text from "@/components/sections/forward-contracting-text";
+import Video from "@/components/sections/video";
+import Points from "@/components/sections/points";
 import ContentIllustrationRight from "@/components/sections/content-illustration-right";
 import ContentIllustrationLeft from "@/components/sections/content-illustration-left";
 import FileUpload from "@/components/ui/FileUpload";
@@ -38,6 +41,7 @@ import TimelineComponent from "@/components/ui/TimelineComponent";
 import { ModalDialog, NotificationToast } from "@/components/ui/ComponentShowcase4";
 import { SearchBar, FilterTags, Breadcrumbs, SidebarMenu, FooterLinks, SocialMediaIcons, LoadingSpinner, ErrorBoundary, TooltipComponent } from "@/components/ui/ComponentShowcase5";
 import { inferComponentType } from '@/utils/componentType';
+import InquiryForm from "@/components/ui/InquiryForm";
 
 export default function ComponentsPage() {
   const [selectedType, setSelectedType] = useState<string>('all');
@@ -127,6 +131,9 @@ export default function ComponentsPage() {
 
       'technology-stack': TechnologyStack,
       'erp-intro-text': ERPIntroText,
+      'text': Text,
+      'video': Video,
+      'points': Points,
       'content-illustration-right': ContentIllustrationRight,
       'content-illustration-left': ContentIllustrationLeft,
       'file-upload': FileUpload,
@@ -157,6 +164,7 @@ export default function ComponentsPage() {
       'loading-spinner': LoadingSpinner,
       'error-boundary': ErrorBoundary,
       'tooltip-component': TooltipComponent,
+      'inquiry-form': InquiryForm,
       
       // Add missing mappings for components that exist in schemas but not in componentMap
       'process-workflow': ProcessWorkflow,
