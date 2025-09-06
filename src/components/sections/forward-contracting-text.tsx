@@ -1,6 +1,7 @@
 'use client';
 
 import React from "react";
+import "@/styles/components/unified-container.css";
 
 export interface TextData {
   component_type?: "Text";
@@ -32,10 +33,10 @@ export default function Text({
       ];
 
   return (
-    <section className="py-12 md:py-16 bg-white">
-      <div className="container-fluid  max-w-6xl mx-auto">
+    <section className="py-12 md:py-16 bg-white section-spacing-optimized">
+      <div className="unified-container-full">
         {content.title && (
-          <h2 className="text-2xl md:text-3xl font-semibold text-[#1A5276] mb-4">
+          <h2 className="unified-heading-secondary text-[#1A5276]">
             {content.title}
           </h2>
         )}
@@ -43,7 +44,7 @@ export default function Text({
           {paragraphs.map((paragraph, idx) => (
             <p
               key={idx}
-              className="text-slate-700 text-base md:text-lg leading-8 md:leading-9 text-justify mb-6 md:mb-7"
+              className="text-slate-700 unified-text-large text-justify unified-text-content"
               style={{ hyphens: 'auto' as const }}
             >
               {paragraph}

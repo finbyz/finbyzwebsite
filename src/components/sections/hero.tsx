@@ -41,6 +41,7 @@ import Image from "next/image";
 import heroData from "@/data/hero.json";
 import { renderTemplateObject } from "@/utils/templateEngine";
 import "@/styles/components/hero.css";
+import "@/styles/components/unified-container.css";
 
 /**
  * Hero section component with animated content and interactive elements.

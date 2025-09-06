@@ -1,0 +1,262 @@
+/* Unified Container System for Consistent Margins */
+
+/* Base container class for all sections */
+.unified-container {
+  width: 100%;
+  max-width: 1400px; /* Consistent max-width across all components - same as unified-container-full */
+  margin: 0 auto;
+  padding: 0 1rem; /* Consistent base padding */
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+/* Responsive padding that's consistent across all components */
+@media (min-width: 640px) {
+  .unified-container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .unified-container {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .unified-container {
+    padding: 0 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .unified-container {
+    padding: 0 3rem;
+  }
+}
+
+/* Full-width container for components that need more space */
+.unified-container-full {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .unified-container-full {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .unified-container-full {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .unified-container-full {
+    padding: 0 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .unified-container-full {
+    padding: 0 3rem;
+  }
+}
+
+/* Compact container for tighter layouts */
+.unified-container-compact {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .unified-container-compact {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .unified-container-compact {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .unified-container-compact {
+    padding: 0 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .unified-container-compact {
+    padding: 0 3rem;
+  }
+}
+
+/* Global spacing optimizations for better visual alignment */
+.section-spacing-optimized {
+  /* Reduce excessive vertical spacing between sections */
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Ensure consistent line height and spacing for text content */
+.unified-text-content {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.unified-text-content:last-child {
+  margin-bottom: 0;
+}
+
+/* Consistent heading spacing */
+.unified-heading {
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+/* Responsive text sizing for better readability */
+.unified-text-responsive {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .unified-text-responsive {
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+}
+
+@media (min-width: 1024px) {
+  .unified-text-responsive {
+    font-size: 1.25rem;
+    line-height: 1.8;
+  }
+}
+
+/* Typography Hierarchy System */
+.unified-heading-primary {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .unified-heading-primary {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .unified-heading-primary {
+    font-size: 3rem;
+  }
+}
+
+.unified-heading-secondary {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .unified-heading-secondary {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .unified-heading-secondary {
+    font-size: 2.25rem;
+  }
+}
+
+.unified-heading-tertiary {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .unified-heading-tertiary {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .unified-heading-tertiary {
+    font-size: 2rem;
+  }
+}
+
+.unified-text-large {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .unified-text-large {
+    font-size: 1.25rem;
+    line-height: 1.8;
+  }
+}
+
+@media (min-width: 1024px) {
+  .unified-text-large {
+    font-size: 1.375rem;
+    line-height: 1.9;
+  }
+}
+
+.unified-text-medium {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .unified-text-medium {
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+}
+
+@media (min-width: 1024px) {
+  .unified-text-medium {
+    font-size: 1.25rem;
+    line-height: 1.8;
+  }
+}
+
+.unified-text-small {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .unified-text-small {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+@media (min-width: 1024px) {
+  .unified-text-small {
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+}

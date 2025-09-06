@@ -5,6 +5,9 @@
 /* Import component color system */
 @import '../styles/component-colors.css';
 
+/* Import unified container system */
+@import '../styles/components/unified-container.css';
+
 /* Import component-specific CSS files */
 @import '../styles/components/business-slider.css';
 @import '../styles/components/technology-stack.css';

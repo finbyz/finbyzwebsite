@@ -8,11 +8,12 @@
 /* Let CTA share viewport with the previous section (no forced full height) */
 
 .cta-container {
-  max-width: 64rem;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 1rem;
   text-align: center;
   position: relative;
+  box-sizing: border-box;
 }
 
 @media (min-width: 640px) {
@@ -21,9 +22,21 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .cta-container {
     padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cta-container {
+    padding: 0 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .cta-container {
+    padding: 0 3rem;
   }
 }
 

@@ -1,5 +1,6 @@
  
 import Image from "next/image";
+import "@/styles/components/unified-container.css";
 
 export interface ERPIntroTextData {
   component_type?: "Text";
@@ -37,8 +38,8 @@ export default function ERPIntroText({
 
   return (
     <section className="py-14 md:py-20 bg-white">
-      <div className="container-fluid">
-        <div className="grid grid-cols-[64px_1fr] md:grid-cols-[80px_1fr] gap-x-4 md:gap-x-6 items-start w-fit justify-center mx-auto">
+      <div className="unified-container-full">
+        <div className="grid grid-cols-[64px_1fr] md:grid-cols-[80px_1fr] gap-x-4 md:gap-x-6 items-start w-fit justify-center">
           <div className="mt-1 md:mt-0">
             <Image src="/Quotation%20Mark.png" alt="Quote" width={80} height={80} className="w-12 md:w-16 h-auto" />
           </div>

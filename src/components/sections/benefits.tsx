@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Award, TrendingUp, Globe, Target, CheckCircle, Zap, Shield, Clock } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import "@/styles/components/benefits.css";
+import "@/styles/components/unified-container.css";
 
 // Server-side render: static display without IntersectionObserver/counter hooks
 

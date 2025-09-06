@@ -28,6 +28,8 @@
 
 .benefits-container {
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   padding: 0 1rem;
   position: relative;
 }
@@ -38,15 +40,21 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .benefits-container {
     padding: 0 2rem;
   }
 }
 
+@media (min-width: 1024px) {
+  .benefits-container {
+    padding: 0 2.5rem;
+  }
+}
+
 @media (min-width: 1280px) {
   .benefits-container {
-    padding: 0 2rem; /* reduce side gutters to use more width */
+    padding: 0 3rem;
   }
 }
 

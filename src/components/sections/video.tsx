@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import "@/styles/components/unified-container.css";
 
 export interface VideoData {
   component_type?: 'Video';
@@ -45,10 +46,10 @@ export default function Video({ data }: { data?: VideoData }) {
   const src = getEmbedSrc({ url: content.url, videoId: content.videoId }) || '';
 
   return (
-    <section className="py-8 md:py-12 bg-white">
-      <div className="container mx-auto px-6 lg:px-8 max-w-6xl">
+    <section className="py-8 md:py-12 bg-white section-spacing-optimized">
+      <div className="unified-container-full">
         {content.title && (
-          <h2 className="text-2xl md:text-3xl font-semibold text-[#1A5276] mb-4">{content.title}</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold text-[#1A5276] mb-4 unified-heading">{content.title}</h2>
         )}
         <div className="relative w-full" style={{ paddingBottom: '56.25%', height: 0 }}>
           <iframe

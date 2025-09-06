@@ -10,7 +10,10 @@
 
 .differentiators-container {
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 @media (min-width: 640px) {
@@ -19,15 +22,21 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .differentiators-container {
     padding: 0 2rem;
   }
 }
 
+@media (min-width: 1024px) {
+  .differentiators-container {
+    padding: 0 2.5rem;
+  }
+}
+
 @media (min-width: 1280px) {
   .differentiators-container {
-    padding: 0 5rem;
+    padding: 0 3rem;
   }
 }
 

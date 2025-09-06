@@ -1,5 +1,6 @@
 import Image from "next/image";
 import FrappeImage from "../Common/FrappeImage";
+import "@/styles/components/unified-container.css";
 
 export interface ContentIllustrationLeftData {
   component_type?: "Text";
@@ -23,8 +24,8 @@ export default function ContentIllustrationLeft({ data }: { data?: any }) {
   const imageAlt = resolved?.imageAlt ?? "Illustration";
 
   return (
-    <section className="py-12 md:py-16">
-      <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
+    <section className="py-12 md:py-16 section-spacing-optimized">
+      <div className="unified-container-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           <div className="lg:col-span-4">
             {imageSrc && (
@@ -38,10 +39,10 @@ export default function ContentIllustrationLeft({ data }: { data?: any }) {
             )}
           </div>
           <div className="lg:col-span-8">
-            <h2 className="text-2xl md:text-3xl font-semibold text-[#1A5276] mb-6">{title}</h2>
-            <div className="text-slate-700 text-base md:text-lg leading-8">
+            <h2 className="unified-heading-secondary text-[#1A5276]">{title}</h2>
+            <div className="text-slate-700 unified-text-responsive">
               {paragraphs?.map((p, idx) => (
-                <p key={idx} className="text-justify">{p}</p>
+                <p key={idx} className="text-justify unified-text-content">{p}</p>
               ))}
             </div>
           </div>
