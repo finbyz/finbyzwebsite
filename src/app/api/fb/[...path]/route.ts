@@ -59,9 +59,8 @@ async function handleRequest(
     const url = new URL(request.url);
     const queryString = url.search || '';
     const targetUrl = `${frappeUrl}/${basePath}${queryString}`;
-
+    console.log('targetUrl', targetUrl);
     const headers: Record<string, string> = {
-      'Content-Type': 'application/json',
     };
 
     // Forward cookies if present
@@ -109,16 +108,50 @@ async function handleRequest(
       }
     }
 
-    // Debug logging
-    console.log(`Making ${method} request to: ${targetUrl}`);
-    console.log('Headers:', JSON.stringify(headers, null, 2));
 
-    const frappeResponse = await fetch(targetUrl, {
-      method,
-      headers,
-      body,
-    });
+    let frappeResponse;
+    let retryCount = 0;
+    const maxRetries = 2;
 
+    while (retryCount <= maxRetries) {
+      // Create new AbortController for each attempt
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout
+
+      try {
+        frappeResponse = await fetch(targetUrl, {
+          method,
+          headers,
+          body,
+          signal: controller.signal,
+        });
+        clearTimeout(timeoutId);
+        break; // Success, exit retry loop
+      } catch (error: any) {
+        retryCount++;
+        clearTimeout(timeoutId);
+        
+        if (error.name === 'AbortError' || error.code === 'UND_ERR_CONNECT_TIMEOUT') {
+          if (retryCount <= maxRetries) {
+            console.log(`Request timeout, retrying... (${retryCount}/${maxRetries})`);
+            // Wait before retry (exponential backoff)
+            await new Promise(resolve => setTimeout(resolve, Math.pow(2, retryCount) * 1000));
+            continue;
+          } else {
+            throw new Error(`Request failed after ${maxRetries + 1} attempts: Connection timeout`);
+          }
+        } else {
+          throw error; // Re-throw non-timeout errors
+        }
+      }
+    }
+    
+    // Ensure frappeResponse is defined
+    if (!frappeResponse) {
+      throw new Error('No response received from Frappe server');
+    }
+    
+    console.log('frappeResponse', frappeResponse);
     if (frappeResponse.status === 401 || frappeResponse.status === 403) {
       return NextResponse.json(
         { error: 'Authentication failed or insufficient permissions' },
@@ -145,10 +178,36 @@ async function handleRequest(
       headers: safeHeaders,
     });
 
-  } catch (error) {
+  } catch (error: any) {
     console.error(`Frappe API error (${method} /${pathSegments.join('/')}):`, error);
+    
+    // Handle specific timeout errors
+    if (error.message && error.message.includes('Connection timeout')) {
+      return NextResponse.json(
+        { 
+          error: 'Request timeout - the Frappe server is taking too long to respond. Please try again.',
+          details: 'Connection timeout after multiple retry attempts'
+        },
+        { status: 504 }
+      );
+    }
+    
+    // Handle other fetch errors
+    if (error.name === 'AbortError' || error.code === 'UND_ERR_CONNECT_TIMEOUT') {
+      return NextResponse.json(
+        { 
+          error: 'Request timeout - unable to connect to Frappe server',
+          details: 'The request was aborted due to timeout'
+        },
+        { status: 504 }
+      );
+    }
+    
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { 
+        error: 'Internal server error',
+        details: error.message || 'An unexpected error occurred'
+      },
       { status: 500 }
     );
   }

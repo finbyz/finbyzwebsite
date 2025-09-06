@@ -1,0 +1,172 @@
+{
+  "page_title": "Advanced Authorisation Licence",
+  "metadata": {
+    "title": "Advanced Authorisation Licence",
+    "description": "This app in ERPNext helps manage Advance Authorisation Licences, which exempt import duties on raw materials for manufacturing export products. The app ensures licenses are properly utilized to prevent penalties and loss of duty drawback benefits.",
+    "keywords": [
+      "Advanced Authorisation Licence",
+      "ERPNext",
+      "Advance Authorization License",
+      "Import Duty Exemption",
+      "Export License Management",
+      "Duty Drawback",
+      "Foreign Trade Policy",
+      "India Trade License"
+    ]
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "component_type": "Hero",
+      "id": "hero-1",
+      "data": {
+        "component_type": "Text",
+        "title": "Advanced Authorisation Licence App",
+        "paragraphs": [
+          "This app in ERPNext helps manage Advance Authorisation Licences, which exempt import duties on raw materials for manufacturing export products. The app ensures that licenses are not overutilized for imports and exports, preventing penalties and loss of duty drawback benefits. The user can create and utilize licenses, and the system calculates remaining quantities and amounts for each declared item."
+        ],
+        "imageSrc": "/images/advanced-authorisation-licence-hero.png",
+        "imageAlt": "Advanced Authorisation Licence App Illustration"
+      }
+    },
+    {
+      "type": "intro-text",
+      "component_type": "Text",
+      "id": "intro-text-1",
+      "data": {
+        "component_type": "Text",
+        "title": "Introduction",
+        "paragraphs": [
+          "Advance Authorisation Scheme (AAS) or Advance License Scheme is a type of duty exemption scheme introduced by the Government of India under the Foreign Trade Policy 2015-2020. Under this scheme, exemption from the payment of import duties is given to raw materials/inputs required for the manufacture of export products i.e., you can import raw materials/inputs at zero customs duty for the production of export products. The purpose of this scheme is to make India’s products competitive in the global market. When duties paid on raw materials are saved, it automatically brings down the cost of the final export product."
+        ],
+        "highlightLink": null
+      }
+    },
+    {
+      "type": "video",
+      "component_type": "Video",
+      "id": "video-1",
+      "data": {
+        "component_type": "Video",
+        "title": "Introduction Video: Advanced Authorisation Licence",
+        "url": "https://www.youtube.com/embed/iFIIVCgj_Zc",
+        "videoId": "iFIIVCgj_Zc"
+      }
+    },
+    {
+      "type": "benefits",
+      "component_type": "Card",
+      "id": "benefits-1",
+      "data": {
+        "component_type": "Card",
+        "title": "Why do you Need this App in ERPNext",
+        "subtitle": "Challenges solved by the app",
+        "benefits": [
+          {
+            "number": null,
+            "suffix": null,
+            "label": null,
+            "header": "General Challenges",
+            "description": "You have to declare the Export quantity and amount you will do against Advance authorisation license through which you will get benefit of Import duties. So for Each license the export and import quantity and amount are predefined. So there are two challenges:",
+            "icon": null,
+            "palette": null
+          },
+          {
+            "number": null,
+            "suffix": null,
+            "label": null,
+            "header": "For Imports",
+            "description": "You can not duty free import of declared items beyond approved quantity and amount. If you by mistake over utilize the license at time of import, you may attract penalties at any future date, when the mistake is caught by the department.",
+            "icon": "/files/import.svg",
+            "palette": null
+          },
+          {
+            "number": null,
+            "suffix": null,
+            "label": null,
+            "header": "For Exports",
+            "description": "When you do export against Advance authorization license you forgo the Duty draw back benefit against that export consignment. So while you must do the export of declared qty and value, doing export more than declared value means you will lose on duty drawback benefit for access amount.",
+            "icon": "/files/export.svg",
+            "palette": null
+          },
+          {
+            "number": null,
+            "suffix": null,
+            "label": null,
+            "header": "App Solution",
+            "description": "When you do import against Advance authorization license, the challenge is you have to ensure you do not use license beyond approved amount for import to avoid penalties. Same way for export if you do more exports then required against license you end up losing duty drawback benefit. This app makes management of Advance authorization license error free with minimal efforts.",
+            "icon": null,
+            "palette": null
+          }
+        ],
+        "ctaButton": null
+      }
+    },
+    {
+      "type": "content-with-illustration-left",
+      "component_type": "Text",
+      "id": "content-with-illustration-left-1",
+      "data": {
+        "component_type": "Text",
+        "title": "How to Manage or create Advance authorisation Licence",
+        "paragraphs": [
+          "1. Go to Advance Authorisation Licence list, click on add Advance Authorisation Licence.",
+          "2. Enter License details:",
+          "  a. License Number",
+          "  b. Export Item: Select item which you use import material to produce",
+          "  c. Application File No.",
+          "  d. Export Approved Qty and Export Approved Amount",
+          "  e. License Amount",
+          "  f. Currency",
+          "  g. Date: License Date",
+          "  h. Due Date: License End Date",
+          "  i. Application File Date",
+          "3. The items you have declared for import and their ratio against export should be mentioned in the Item import ratio table. Ratio must be between 0.01 to 1.",
+          "Once this license is created it can be utilized against export and import consignments of declared items."
+        ],
+        "imageSrc": "/files/AA-34-to-44.gif",
+        "imageAlt": "Advance Authorisation Licence Creation Example"
+      }
+    },
+    {
+      "type": "content-with-illustration-left",
+      "component_type": "Text",
+      "id": "content-with-illustration-left-2",
+      "data": {
+        "component_type": "Text",
+        "title": "How to use Advance Authorisation licence for Import",
+        "paragraphs": [
+          "1. Create import purchase invoice with all the details.",
+          "2. In Items table you will see fields to select Advance Authorization license.",
+          "3. Enter CIF Value and FOB value for imported product.",
+          "4. On submit of this purchase invoice these import details will be updated against the license.",
+          "5. System will automatically calculate remaining quantities and amount for each declared import item.",
+          "6. If sufficient quantity or amount is not available to utilize in any license, system will not allow you to submit this purchase invoice, throwing exact error of maximum available quantity of license.",
+          "This will ensure license is never overutilized by the user."
+        ],
+        "imageSrc": "/files/AA-1.40-to-1.47.gif",
+        "imageAlt": "Using Advance Authorisation Licence for Import Example"
+      }
+    },
+    {
+      "type": "content-with-illustration-left",
+      "component_type": "Text",
+      "id": "content-with-illustration-left-3",
+      "data": {
+        "component_type": "Text",
+        "title": "How to use Advance Authorisation licence at the time of Export",
+        "paragraphs": [
+          "1. Create Export Sales Invoice with all the details.",
+          "2. In Items table you will see fields to select Advance Authorization license.",
+          "3. Enter Freight and Insurance amount in invoice currency to get FOB Value.",
+          "4. On submit of this Sales Invoice these export details will be updated against the license.",
+          "5. System will automatically calculate remaining export quantity and amount.",
+          "6. If sufficient quantity or amount is not available to utilize in any license, system will not allow you to submit this purchase invoice, throwing exact error of maximum available quantity of license.",
+          "For export you can allow maximum variation allowed on higher side to ensure you are fulfilling at least committed value of exports against the export license. This will ensure user is not wasting duty drawback benefit on export by limiting excesses to acceptable levels only."
+        ],
+        "imageSrc": "/files/AA-1.16-to-1.29.gif",
+        "imageAlt": "Using Advance Authorisation Licence at Export Example"
+      }
+    }
+  ]
+}

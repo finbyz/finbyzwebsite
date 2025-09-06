@@ -33,7 +33,7 @@ export default function Text({
 
   return (
     <section className="py-12 md:py-16 bg-white">
-      <div className="container-fluid  max-w-8xl">
+      <div className="container-fluid  max-w-6xl mx-auto">
         {content.title && (
           <h2 className="text-2xl md:text-3xl font-semibold text-[#1A5276] mb-4">
             {content.title}

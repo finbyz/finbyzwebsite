@@ -117,7 +117,10 @@ const COMPONENT_MAP: Record<string, React.ComponentType<any>> = {
   'technology-categories': TechnologyStack,
   'technology-stack': TechnologyStack,
   // 'case-studies': CaseStudies,
-  // Component 'services' and 'services-overview' removed
+  // Services section - maps to ResponsiveCardGrid
+  'services': ResponsiveCardGrid,
+  'services-overview': ResponsiveCardGrid,
+  
   // 'business-slider' remains mapped to its dedicated component
   'inquiry-panel': BusinessSlider,
   'business-slider': BusinessSlider,

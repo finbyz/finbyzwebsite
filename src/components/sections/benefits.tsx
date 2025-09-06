@@ -206,7 +206,7 @@ export default function Benefits({ data = {} }: BenefitsProps) {
             size="lg"
             className="benefits-cta-button"
           >
-            {ctaButton.text}
+            {ctaButton?.text}
           </Button>
         </div>
       </div>
