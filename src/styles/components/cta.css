@@ -1,7 +1,8 @@
 /* CTA Section Styles */
 .cta-section {
   padding: 5rem 0;
-  background: linear-gradient(135deg, rgb(227, 240, 255) 0%, white 50%, rgb(255, 247, 230) 100%);;
+  background: #F5F5F5;
+
   color: #1A5276;
 }
 

@@ -153,7 +153,9 @@ export const DynamicPageRenderer: React.FC<DynamicPageRendererProps> = ({
       {/* Render all sections */}
       <main className="page-content">
         {pageData.sections.map((section, index) => 
-          renderSection(section, index)
+          <div key={`section-${index}-${section.type}`}>
+            {renderSection(section, index)}
+          </div>
         )}
       </main>
     </div>

@@ -114,7 +114,7 @@
 
 /* CallToAction Component Colors */
 .cta-section {
-  --cta-bg: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+  /* --cta-bg: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)); */
   --cta-text: white;
   --cta-highlight: var(--primary-orange);
   --cta-button-primary: linear-gradient(135deg, var(--primary-orange), var(--primary-yellow));

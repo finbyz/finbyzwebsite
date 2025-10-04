@@ -1,0 +1,41 @@
+{
+  "Benefits": {
+    "path": "@/components/sections/benefits",
+    "props": "{ data?: { component_type?: \"Card\"; title?: string; subtitle?: string; benefits?: { number: number; suffix: string; label: string; header: string; description: string; icon: string; palette: { iconBg: string; iconColor: string } }[]; ctaButton?: { text?: string; action?: string } } }"
+  },
+  "StatsShowcase": {
+    "path": "@/components/sections/stats-showcase",
+    "props": "{ data?: { component_type?: \"Carousal\"; title?: string; subtitle?: string; stats?: { icon?: any; value: number; suffix?: string; label: string; description?: string; iconColor?: string; iconBg?: string }[] } }"
+  },
+  "TechnologyStack": {
+    "path": "@/components/sections/technology-stack",
+    "props": "{ data?: { component_type?: \"Card\"; title?: string; subtitle?: string; technologies?: { category?: string; name?: string; description?: string; icon?: string; color?: string; bgColor?: string; technologies?: string[] }[] } }"
+  },
+  "Hero": {
+    "path": "@/components/sections/hero",
+    "props": "{ data?: { title?: string; subtitle?: string; primaryButton?: string; secondaryButton?: string; image?: { src: string; alt?: string } } }"
+  },
+  "CTA": {
+    "path": "@/components/sections/cta",
+    "props": "{ data?: { component_type?: \"Text\"; subheading?: { text?: string; icon?: string }; title?: string; description?: string; primaryButton?: { text?: string; icon?: string; action?: string }; secondaryButton?: { text?: string; icon?: string; action?: string }; trustIndicator?: { text?: string; icon?: string } } }"
+  },
+  "ClientLogos": {
+    "path": "@/components/sections/client-logos",
+    "props": "{ data?: { component_type?: \"Carousal\"; title?: string; subtitle?: string; clients?: { name: string; location?: string; logo?: string; colors?: { primary?: string; secondary?: string; accent?: string; text?: string }; description?: string }[]; carousel?: { autoPlay?: boolean; interval?: number; showArrows?: boolean; showIndicators?: boolean } } }"
+  },
+  "Testimonials": {
+    "path": "@/components/sections/testimonials",
+    "props": "{ data?: { title?: string; subtitle?: string; testimonials?: { quote: string; author: string; company: string; initials: string; rating: number | string; palette: { color: string; bg: string }; url: string }[]; ctaButton?: string; trustIndicators?: { text: string; color: string }[] } }"
+  },
+  "Points": {
+    "path": "@/components/sections/points",
+    "props": "{ data?: { component_type?: \"Text\"; title?: string; points?: string[] } }"
+  },
+  "ContactFormSection": {
+    "path": "@/components/sections/contact-form",
+    "props": "{ title?: string; subtitle?: string; submitLabel?: string; toEmail?: string }"
+  }
+}
+
+
+

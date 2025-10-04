@@ -1,5 +1,6 @@
 // import type { NextConfig } from "next";
 
+
 // const nextConfig: NextConfig = {
 //   /* config options here */
 //   eslint:{
@@ -62,6 +63,13 @@ const nextConfig = {
         pathname: "/**",
       },
       {
+        protocol: 'https',
+        hostname: 'web.finbyz.tech',
+        port: '',
+        pathname: '/api/fb/n/**',
+        search: '',
+      },
+      {
         protocol: "https",
         hostname: "via.placeholder.com",
         port: "",
@@ -73,18 +81,18 @@ const nextConfig = {
         port: "",
         pathname: "/**",
       },
-      {
-        protocol: "https",
-        hostname: "source.unsplash.com",
-        port: "",
-        pathname: "/**",
-      },
     ],
   },
   async rewrites() {
     return [
       {
-        source: "/api/frappe/:path*",
+        source: "/api/fb/n/:path*",
+        destination: "https://website.finbyz.com/:path*",
+
+        
+      },
+      {
+        source: "/api/fb/:path*",
         destination: "https://website.finbyz.com/api/method/:path*",
 
         

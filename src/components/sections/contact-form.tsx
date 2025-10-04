@@ -7,7 +7,15 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import styles from "./contact-form.module.css";
 
-export default function ContactFormSection() {
+interface ContactFormProps {
+  title?: string;
+  subtitle?: string;
+  submitLabel?: string;
+  toEmail?: string;
+}
+
+export default function ContactFormSection(props: ContactFormProps = {}) {
+  const { title = "Contact", subtitle, submitLabel = "Send Message" } = props;
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -68,7 +76,8 @@ export default function ContactFormSection() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Contact</h2>
+        <h2 className={styles.title}>{title}</h2>
+        {subtitle ? <p className={styles.subtitle}>{subtitle}</p> : null}
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.group}>
             <label className={styles.label}>Name *</label>
@@ -113,7 +122,7 @@ export default function ContactFormSection() {
           </div>
           <div className={styles.actions}>
             <Button type="submit" className={styles.submitButton}>
-              Send Message
+              {submitLabel}
             </Button>
           </div>
         </form>

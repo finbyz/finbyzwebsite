@@ -32,10 +32,9 @@ export default function TextSection({
       ];
 
   return (
-    <section className="bg-white">
-      <div className="container mx-auto px-6 lg:px-8 max-w-6xl">
+      <div className="mx-auto max-w-6xl">
         {content.title && (
-          <h2 className="text-2xl md:text-3xl font-semibold text-[#1A5276] mb-4 text-center">
+          <h2 className="text-2xl text-bold md:text-3xl font-semibold text-[#1A5276] mb-4 ">
             {content.title}
           </h2>
         )}
@@ -43,7 +42,7 @@ export default function TextSection({
           {paragraphs.map((paragraph, idx) => (
             <p
               key={idx}
-              className="text-slate-700 text-base md:text-lg leading-8 md:leading-9 text-center mb-6 md:mb-7"
+              className="text-slate-700 text-base md:text-lg leading-8 md:leading-9 mb-6 md:mb-7"
               style={{ hyphens: 'auto' as const }}
             >
               {paragraph}
@@ -51,7 +50,6 @@ export default function TextSection({
           ))}
         </div>
       </div>
-    </section>
   );
 }
 

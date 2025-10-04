@@ -96,12 +96,12 @@ export default function Header() {
   };
 
   const navigationItems: NavigationItem[] = [
-    {
-      name: "Solutions",
-      hasDropdown: false,
-      icon: Target,
-      href: "/solutions"
-    },
+    // {
+    //   name: "Solutions",
+    //   hasDropdown: false,
+    //   icon: Target,
+    //   href: "/solutions"
+    // },
     {
       name: "ERPNext",
       hasDropdown: true,

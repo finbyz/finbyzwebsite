@@ -15,12 +15,12 @@ interface CTAProps {
     primaryButton?: {
       text?: string;
       icon?: string;
-      action?: string;
+      action?: ()=>void;
     };
     secondaryButton?: {
       text?: string;
       icon?: string;
-      action?: string;
+      action?: ()=>void;
     };
     trustIndicator?: {
       text?: string;
@@ -89,6 +89,7 @@ export default function CTA({ data = {} }: CTAProps) {
               size="lg"
               className="cta-primary-button"
               aria-label={`${primaryButton.text} with our experts`}
+              onClick={primaryButton.action}
             >
               <PrimaryIcon className="cta-button-icon" aria-hidden="true" />
               {primaryButton.text}
@@ -99,6 +100,7 @@ export default function CTA({ data = {} }: CTAProps) {
               size="lg"
               className="cta-secondary-button"
               aria-label={`${secondaryButton.text}`}
+              onClick={secondaryButton.action}
             >
               <SecondaryIcon className="cta-button-icon" aria-hidden="true" />
               {secondaryButton.text}

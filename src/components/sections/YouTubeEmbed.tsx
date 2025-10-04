@@ -102,7 +102,7 @@ const aspectToPadding = (aspect: YouTubeEmbedProps['aspectRatio']): string => {
     }
 }
 
-const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ url, title, className, aspectRatio = '16:9' }) => {
+const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ url, title, className, aspectRatio = '21:9' }) => {
     const embedSrc = useMemo(() => normalizeToEmbedUrl(url), [url])
 
     if (!embedSrc) return null
