@@ -92,7 +92,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <meta itemProp="description" content="Employee Joining details" />
         {children}
       </article>
-      
       <BusinessSlider />
     </>
   );

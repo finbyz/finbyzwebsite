@@ -95,6 +95,21 @@ export default function Header() {
     setIsGoingBack(false);
   };
 
+  // Scroll to inquiry form section
+  function GotoInquiryForm() {
+    console.log("Navigating to inquiry form working...");
+    const inquiryForm = document.getElementsByClassName('inquiry-form')[0];;
+    console.log("Inquiry form element:", inquiryForm);
+    if (inquiryForm) {
+      inquiryForm.scrollIntoView({ behavior: 'smooth' });
+    }
+   
+      
+    
+    
+  }
+
+
   const navigationItems: NavigationItem[] = [
     // {
     //   name: "Solutions",
@@ -296,19 +311,19 @@ export default function Header() {
             name: "ERPNext Implementation",
             description: "Complete ERPNext setup",
             icon: Wrench,
-            href: "/services/erpnext-implementation"
+            href: "/erpnext-implementation"
           },
           {
             name: "Custom ERP Development",
             description: "Custom ERP solutions",
             icon: Code,
-            href: "/services/custom-erp"
+            href: "/custom-erp"
           },
           {
             name: "ERP Migration",
             description: "Data migration services",
             icon: Truck,
-            href: "/services/erp-migration"
+            href: "/erp-migration"
           }
         ],
         "AI Automation": [
@@ -316,19 +331,19 @@ export default function Header() {
             name: "Process Automation",
             description: "Automate business processes",
             icon: Zap,
-            href: "/services/process-automation"
+            href: "/process-automation"
           },
           {
             name: "AI Integration",
             description: "AI-powered solutions",
             icon: Sparkles,
-            href: "/services/ai-integration"
+            href: "/ai-integration"
           },
           {
             name: "Machine Learning",
             description: "ML-based automation",
             icon: Brain,
-            href: "/services/machine-learning"
+            href: "/machine-learning"
           }
         ],
         "Software Development": [
@@ -336,39 +351,58 @@ export default function Header() {
             name: "Web Applications",
             description: "Custom web development",
             icon: Code,
-            href: "/services/web-development"
+            href: "/web-development"
           },
           {
             name: "Mobile Apps",
             description: "Mobile application development",
             icon: Smartphone,
-            href: "/services/mobile-development"
+            href: "/mobile-development"
           },
           {
             name: "API Development",
             description: "API and middleware services",
             icon: Code,
-            href: "/services/api-development"
-          }
+            href: "/api-development"
+          },
+           {
+            name: "CRM Software",
+            description: "Customer Relationship Management",
+            icon: Lightbulb,
+            href: "/crm-software"
+          },
+           {
+            name: "Human Resource System",
+            description: "Comprehensive HR management system",
+            icon: Users,
+            href: "/human-resource-system"
+          },
+          
         ],
         "Consulting": [
           {
             name: "Digital Transformation",
             description: "Transform your business digitally",
             icon: Zap,
-            href: "/services/digital-transformation"
+            href: "/digital-transformation"
           },
           {
             name: "Process Consulting",
             description: "Optimize business processes",
             icon: Target,
-            href: "/services/process-consulting"
+            href: "/process-consulting"
           },
           {
             name: "Technology Consulting",
             description: "Technology strategy and planning",
             icon: Lightbulb,
-            href: "/services/technology-consulting"
+            href: "/technology-consulting"
+          },
+           {
+            name: "IT Consulting",
+            description: "Expert guidance on technology strategy and IT solutions to drive business growth.",
+            icon: Lightbulb,
+            href: "/it-consulting"
           }
         ],
         "Support & Maintenance": [
@@ -376,19 +410,19 @@ export default function Header() {
             name: "24/7 Support",
             description: "Round-the-clock technical support",
             icon: Phone,
-            href: "/services/24-7-support"
+            href: "/24-7-support"
           },
           {
             name: "System Maintenance",
             description: "Regular system maintenance",
             icon: Wrench,
-            href: "/services/system-maintenance"
+            href: "/system-maintenance"
           },
           {
             name: "Performance Optimization",
             description: "Optimize system performance",
             icon: TrendingUp,
-            href: "/services/performance-optimization"
+            href: "/performance-optimization"
           }
         ]
       }
@@ -416,9 +450,13 @@ export default function Header() {
     },
     {
       name: "Insights",
-      hasDropdown: false,
+      hasDropdown: true,
       icon: BarChart3,
-      href: "/insights"
+      mainItems: [
+        { name: "Blogs", icon: Wrench },
+        { name: "Gallary", icon: Handshake },
+        { name: "Tech Update", icon: Briefcase }
+      ],
     },
     
     {
@@ -693,7 +731,8 @@ export default function Header() {
               
               <Button 
                 className="ml-4 bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white hover:shadow-lg hover:shadow-orange-500/25 transition-all text-sm py-2 px-6 font-medium rounded-full"
-              >
+             onClick={GotoInquiryForm}
+             >
                 Book Consultation
               </Button>
 
@@ -808,7 +847,12 @@ export default function Header() {
                   <span>Login</span>
                 </Button>
               </Link>
-              <Button className="w-full rounded-full bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white hover:shadow-lg transition-all text-sm py-3 font-medium">
+              <Button className="w-full rounded-full bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white hover:shadow-lg transition-all text-sm py-3 font-medium"
+              onClick={()=>{
+                GotoInquiryForm();
+                toggleMenu();
+              }}
+              >
                 Book Consultation
               </Button>
             </div>

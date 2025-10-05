@@ -5,7 +5,7 @@ import Section from '@/components/sections/Section';
 import CTA from '@/components/sections/cta';
 import EmployeeJoiningForm from '@/components/ai_components/EmployeeJoiningForm';
 import { UserPlus } from 'lucide-react';
-
+import FinbyzGallery from "@/components/sections/FinbyzGallery";
 const excludedFieldnames = [
   "employee_name", "status", "company_email", "designation", "department", "salary_mode", "job_applicant", "job_offer", "naming_series", "url", "employment_type", "salary_slip", "is_intern"
 ];
@@ -47,11 +47,10 @@ export default function Page() {
           action: () => {
             window.open('/contact', '_blank');
           }
-        }}
+      }}
         heroImage={{
           alt: "Employee Joining details",
           src: "api/fb/n/files/employee-joining-hero.png",
-          videoSrc: null
         }}
       />
       <Section>
@@ -127,6 +126,7 @@ export default function Page() {
           />
         </div>
       </Section>
+      <FinbyzGallery />
     </>
   );
 }

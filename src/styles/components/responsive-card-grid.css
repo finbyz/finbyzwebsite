@@ -1,7 +1,7 @@
 /* Responsive Card Grid Section Styles */
 .responsive-card-grid-section {
   padding: 2rem 0;
-  background: linear-gradient(135deg, #E3F0FF 0%, white 50%, #FFF7E6 100%);
+  background: #F5F5F5;
   position: relative;
   overflow: hidden;
   width: 100%;

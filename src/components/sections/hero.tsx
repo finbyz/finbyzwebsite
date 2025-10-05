@@ -36,6 +36,8 @@
  * @requires next/image - For optimized image display
  */
 
+
+"use client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import heroData from "@/data/hero.json";
@@ -106,6 +108,16 @@ export default function Hero({ data = {} }: { data?: Record<string, any> }) {
     ...renderedData
   };
 
+  // Scroll to inquiry form section
+  function GotoInquiryForm() {
+    console.log("Navigating to inquiry form working...");
+    const inquiryForm = document.getElementsByClassName('inquiry-form')[0];;
+    console.log("Inquiry form element:", inquiryForm);
+    if (inquiryForm) {
+      inquiryForm.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   return (
     <section className="hero-section">
       {/* Professional Background Pattern */}
@@ -139,9 +151,11 @@ export default function Hero({ data = {} }: { data?: Record<string, any> }) {
             <Button 
               size="lg"
               className="hero-primary-button"
+              onClick={GotoInquiryForm}
             >
               {renderedData.primaryButton}
             </Button>
+           
             <Button 
               variant="outline" 
               size="lg"

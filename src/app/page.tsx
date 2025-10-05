@@ -91,8 +91,8 @@ export default function Home() {
         {/* Inquiry Form */}
         <InquiryForm 
           data={{
-            component_type: "Form",
-            title: "Request for FREE Demo",
+            // component_type: "Form",  
+            title: "Book a Free Consultation",
             description: "Get started with your free demo today and discover how our solutions can transform your business",
             fields: {
               name: "Name",

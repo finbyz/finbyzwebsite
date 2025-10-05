@@ -41,7 +41,7 @@
 
 .inquiry-form__content {
   /* Blue-shaded gradient: navy → indigo → blue */
-  background: linear-gradient(135deg, #E3F0FF 0%, white 50%, #FFF7E6 100%);
+  background: #F5F5F5;
   padding: 2rem;
   display: flex;
   flex-direction: column;

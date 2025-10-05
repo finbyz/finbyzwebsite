@@ -6,8 +6,8 @@ import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import WhyPythonUniqueList from '@/components/ai_components/WhyPythonUniqueList';
 import WhereNotToUsePythonGrid from '@/components/ai_components/WhereNotToUsePythonGrid';
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { FlipCard } from '@/components/ai_components/FlipCard';
-import { WhyChooseFinbyzGrid } from '@/components/ai_components/WhyChooseFinbyzGrid';
+import FlipCard from '@/components/ai_components/FlipCard';
+import WhyChooseFinbyzGrid from '@/components/ai_components/WhyChooseFinbyzGrid';
 import CTA from '@/components/sections/cta';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -32,7 +32,6 @@ const heroProps = {
   heroImage: {
     alt: 'Hire Python Developer',
     src: '/api/fb/n/files/Hire-Python-Dev.svg',
-    videoSrc: null
   }
 };
 

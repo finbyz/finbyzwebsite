@@ -162,7 +162,7 @@ export default function Page() {
 
       {/* Conclusion & CTA */}
       <Section>
-        <div className="container-custom py-8">
+        <div className="container-custom">
           <CTA
             data={{
               subheading: {

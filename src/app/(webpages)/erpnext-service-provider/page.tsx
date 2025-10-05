@@ -11,7 +11,7 @@ export default function Page() {
     <>
       <HeroSection
         headline="ERPNext Service Provider"
-        highlightWords={["ERPNext", "Service", "Provider"]}
+        highlightWords={["Service", "Provider"]}
         description="Discover leading ERPNext service providers for seamless business management solutions. Expert customization, support, and integration services."
         primaryButton={{
           text: 'Get Started',
@@ -32,7 +32,6 @@ export default function Page() {
         heroImage={{
           alt: 'ERPNext Service Provider',
           src: 'api/fb/n/files/Frappe-Certified-Erpnext-Partner.svg',
-          videoSrc: null,
         }}
       />
 

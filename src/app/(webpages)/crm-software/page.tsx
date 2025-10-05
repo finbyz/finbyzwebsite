@@ -5,10 +5,7 @@ import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
 import CTA from '@/components/sections/cta';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
-import FlipCard from '@/components/ai_components/FlipCard';
 import FeatureCard from '@/components/ai_components/FeatureCard';
-import Image from 'next/image';
-import { CheckCircle2 } from 'lucide-react';
 import UniqueSellingPropositions from '@/components/ai_components/UniqueSellingPropositions';
 import CoreFeaturesFlipCards from '@/components/ai_components/CoreFeaturesFlipCards';
 import AdvancedCRMCards from '@/components/ai_components/AdvancedCRMCards';
@@ -37,7 +34,6 @@ export default function Page() {
         heroImage={{
           alt: 'CRM Software',
           src: 'api/fb/n/files/CRMWord.svg',
-          videoSrc: null,
         }}
       />
 

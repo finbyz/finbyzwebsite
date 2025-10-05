@@ -6,9 +6,7 @@ import YouTubeEmbed from '@/components/sections/YouTubeEmbed';
 import List from '@/components/sections/list';
 import CTA from '@/components/sections/cta';
 import ImportExportInfoCards from '@/components/ai_components/ImportExportInfoCards';
-import Image from 'next/image';
-import { FaCheckCircle } from 'react-icons/fa';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 
 export default function Page() {

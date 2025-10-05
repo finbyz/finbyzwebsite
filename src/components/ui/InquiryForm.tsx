@@ -23,7 +23,7 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
 
   const defaultData = {
     component_type: "Form",
-    title: "Request for FREE Demo",
+    title: "Book a Free Consultation",
     description: "Get started with your free demo today and discover how our solutions can transform your business",
     fields: {
       name: "Name",
@@ -148,9 +148,9 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
             <div className="inquiry-form__content">
               <div className="inquiry-form__content-wrapper">
                 {/* Component Type Display */}
-                <div className="inquiry-form__type">
+                {/* <div className="inquiry-form__type">
                   Component Type: {component_type}
-                </div>
+                </div> */}
                 
                 <h2 className="inquiry-form__title">
                   {formConfig.title}

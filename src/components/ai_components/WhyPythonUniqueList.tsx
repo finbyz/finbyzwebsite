@@ -1,5 +1,5 @@
 import React from "react";
-import { List } from "@/components/sections/list";
+import List from "@/components/sections/list";
 
 const items = [
   "Easy to Learn and Use: Python has a simple and straightforward syntax, making it easy to learn and use, even for beginners. This makes it an ideal choice for those who are new to programming, or those who want to quickly prototype their ideas.",
