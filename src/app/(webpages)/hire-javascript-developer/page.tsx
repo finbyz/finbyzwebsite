@@ -268,7 +268,7 @@ export default function Page() {
         heroImage={{
           alt: 'Hire JavaScript Developer',
           src: '/api/fb/n/files/Hire-JS-Dev.svg',
-          videoSrc: null
+          
         }}
       />
 

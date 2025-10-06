@@ -89,7 +89,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {/* Semantic HTML wrapper for better content extraction */}
       <article itemScope itemType="https://schema.org/WebPage">
         <meta itemProp="name" content="WhatsApp Privacy Policy | Finbyz Tech Data Protection and User Privacy" />
-        <meta itemProp="description" content="We care about protecting the personal information of our customers and visitors who use our website www.finbyz.tech, our products or services (collectively, our \"Users\").\nThis Privacy Policy governs the manner in which Finbyz Tech collects, uses, shares, maintains and discloses information collected from users (each, a \"User\", you ) of the https://www.finbyz.tech/privacy-policy website (\"Site\"). This privacy policy applies to the Site and all products and services offered by Finbyz Tech. In this policy, \"we\", \"us\" and \"our\" referred to Finbyz Tech and Finbyz Tech Corporate family\n" />
+        <meta itemProp="description" content={`We care about protecting the personal information of our customers and visitors who use our website www.finbyz.tech, our products or services (collectively, our Users).\nThis Privacy Policy governs the manner in which Finbyz Tech collects, uses, shares, maintains and discloses information collected from users (each, a \"User\", you ) of the https://www.finbyz.tech/privacy-policy website (\"Site\"). This privacy policy applies to the Site and all products and services offered by Finbyz Tech. In this policy, \"we\", \"us\" and "our" referred to Finbyz Tech and Finbyz Tech Corporate family\n`} />
       </article>
       {children}
       

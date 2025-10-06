@@ -75,7 +75,6 @@ export default function Page() {
                 width={250}
                 height={220}
                 className="rounded-xl shadow-lg animate-fade-in"
-                priority
               />
             </div>
             <div className="flex-1">
@@ -118,7 +117,6 @@ export default function Page() {
                 width={250}
                 height={220}
                 className="rounded-xl shadow-lg animate-fade-in"
-                priority
               />
             </div>
             <div className="flex-1">

@@ -32,7 +32,7 @@ export default function Page() {
         heroImage={{
           alt: 'ERPNext Certified Partner',
           src: 'api/fb/n/files/Frappe-Certified-parnter-Page Design-SVG.svg',
-          videoSrc: null
+          
         }}
       />
 
@@ -64,7 +64,6 @@ export default function Page() {
                 width={270}
                 height={140}
                 className="rounded-lg shadow-lg border border-gray-200 hover:scale-105 transition-transform duration-300"
-                priority
               />
             </a>
           </div>

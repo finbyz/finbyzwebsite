@@ -19,11 +19,9 @@ export default function Page() {
           text: 'Explore Openings',
           action: () => window.location.assign('/jobs'),
         }}
-        secondaryButton={null}
         heroImage={{
           alt: 'Life at Finbyz',
           src: '/api/fb/n/files/Final banner LAF.jpg',
-          videoSrc: null,
         }}
       />
 

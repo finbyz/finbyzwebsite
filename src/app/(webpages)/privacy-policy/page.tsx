@@ -31,7 +31,7 @@ export default function Page() {
         heroImage={{
           alt: 'Finbyz Tech Privacy Policy',
           src: '/images/privacy-policy-hero.svg',
-          videoSrc: null
+          
         }}
       />
 
@@ -56,6 +56,7 @@ export default function Page() {
         <div className="container-custom py-8 animate-fade-in-up">
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2"><Cloud className="text-primary" /> What is Finbyz Tech</h2>
           <List
+            title=''
             items={[
               "Finbyz Tech Pvt Ltd is an IT business solutions provider. We have technology in our genes and provide innovative solutions for all industries and businesses. We help fit an ERP solution that exactly meets your goals.",
               "Finbyz Tech is a third party service provider of the 'WhatsApp Business CRM' tool. The product provides a 'Conversation Cloud Platform' with WhatsApp Business that allows our Customers to store, manipulate, analyze and transfer messages between their business systems and their customers on a variety of third-party messaging channels (the 'Service').",
@@ -69,6 +70,7 @@ export default function Page() {
         <div className="container-custom py-8 animate-fade-in-up">
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2"><UserCheck className="text-primary" /> Collection and Use of Personal Data</h2>
           <List
+            title=''
             items={[
               "Finbyz Tech collects information, including Personal Data, for the following purposes:",
               "Providing and managing the Service",
@@ -97,6 +99,7 @@ export default function Page() {
         <div className="container-custom py-8 animate-fade-in-up">
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2"><UserCheck className="text-primary" /> Providing and Managing the Service</h2>
           <List
+            title=''
             items={[
               "In the course of providing the Service, Finbyz Tech may receive, access, analyze, process and maintain Personal Data on behalf of our Customers.",
               "Our Customers determine the types of Personal Data that will be collected and used within the Service, how it will be used and disclosed, and how long it will be stored. For any questions related to how your Personal Data is used by our Customers, please contact them directly.",
@@ -115,6 +118,7 @@ export default function Page() {
         <div className="container-custom py-8 animate-fade-in-up">
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2"><Mail className="text-primary" /> Communicating with You and Marketing Practices</h2>
           <List
+            title=''
             items={[
               "Responding to your request for a product demo: When you request a free demo, we may collect your first and last name, job title, WhatsApp number, business email address, and information about your company. We use this information to contact you and otherwise facilitate your free demo.",
               "Responding to your inquiries: When you contact us with a comment, question or complaint, you may be asked for information that identifies you, such as your name, address and telephone number, along with additional information we need to help us promptly answer your question or respond to your comment. We may retain this information to assist you in the future and to improve our customer service and service offerings (including the Service and Website).",
@@ -138,6 +142,7 @@ export default function Page() {
         <div className="container-custom py-8 animate-fade-in-up">
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2"><RefreshCw className="text-primary" /> To Understand and Improve our Services and Website</h2>
           <List
+            title=''
             items={[
               "Understanding how you use the Service. Service Usage Information is collected, including information about how you are accessing and using the Service. We use this information to understand and improve our Services and to investigate and prevent security issues, abuse, and fraud.",
               "Visiting our Website. We collect the IP (Internet protocol) addresses of all visitors to our Website and other related information such as page requests, browser type, operating system and average time spent on our Website. We use this information to help us understand our Website activity and to monitor and improve our Website. In addition to the information described above, our Website uses Cookies. Please refer to the Cookie Policy below for additional details.",
@@ -151,6 +156,7 @@ export default function Page() {
         <div className="container-custom py-8 animate-fade-in-up">
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2"><Link2 className="text-primary" /> Disclosure of your Personal Data</h2>
           <List
+            title=''
             items={[
               "As a matter of practice, Finbyz Tech does not disclose, trade, rent, sell or otherwise transfer Personal Data, except as set out in this policy.",
               "We may transfer or disclose Personal Data as follows:",
@@ -168,6 +174,7 @@ export default function Page() {
         <div className="container-custom py-8 animate-fade-in-up">
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2"><Users className="text-primary" /> Access and Correction of Personal Data</h2>
           <List
+            title=''
             items={[
               "If we receive a request from an individual to access or update Personal Data we have collected on behalf of a particular Customer, we will direct that individual to the relevant Customer. We will assist our Customers wherever possible in responding to individual access requests.",
               "If you submit Personal Data via our Website or otherwise provide us with your Personal Data, you may request access, updating or correction of your Personal Data by submitting a written request to us. We may request certain Personal Data for the purposes of verifying your identity."
@@ -187,6 +194,7 @@ export default function Page() {
         <div className="container-custom py-8 animate-fade-in-up">
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2"><Cookie className="text-primary" /> Cookie Policy</h2>
           <List
+            title=''
             items={[
               "Finbyz Tech uses cookies and similar technologies to record log data. We use both session-based and persistent cookies.",
               "Cookies are small text files sent by us to your computer and from your computer or mobile device to us each time you visit our website or use our desktop application. They are unique to your account or your browser. Session-based cookies last only while your browser is open and are automatically deleted when you close your browser. Persistent cookies last until you or your browser delete them or until they expire.",

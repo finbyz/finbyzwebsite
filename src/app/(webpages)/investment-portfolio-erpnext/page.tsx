@@ -30,7 +30,7 @@ export default function Page() {
         heroImage={{
           alt: 'Investment Portfolio Management in ERPNext',
           src: 'api/fb/n/files/portfolio management (1).svg',
-          videoSrc: null
+          
         }}
       />
 

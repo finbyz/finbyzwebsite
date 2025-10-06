@@ -26,7 +26,6 @@ export default function Page() {
         heroImage={{
           alt: 'RODTEP Claim Management in ERPNext',
           src: 'api/fb/n/files/Rodtep-App-PageDesign-SVG.svg',
-          videoSrc: null,
         }}
       />
 

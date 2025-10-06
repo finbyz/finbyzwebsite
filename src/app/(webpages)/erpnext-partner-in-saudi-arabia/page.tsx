@@ -32,7 +32,6 @@ export default function Page() {
         heroImage={{
           alt: 'ERPNext Partner in Saudi Arabia',
           src: 'api/fb/n/files/Frappe-Certified-Erpnext-Partner.svg',
-          videoSrc: null,
         }}
       />
 

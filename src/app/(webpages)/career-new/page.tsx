@@ -61,7 +61,6 @@ export default function Page() {
                 width={64}
                 height={64}
                 className="opacity-70 animate-fade-in-up"
-                priority
               />
             </div>
           </div>

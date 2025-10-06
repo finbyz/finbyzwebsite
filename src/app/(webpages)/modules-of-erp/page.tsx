@@ -180,7 +180,7 @@ export default function Page() {
         heroImage={{
           alt: 'Modules of ERP Software',
           src: '/api/fb/n/files/erp-modules.svg',
-          videoSrc: null
+          
         }}
       />
       <Section useGradient>

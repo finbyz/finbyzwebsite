@@ -28,7 +28,7 @@ const CultureValuesGrid: FC<CultureValuesGridProps> = ({ items }) => (
         whileInView="animate"
         viewport={{ once: true }}
         custom={i}
-        variants={cardVariants}
+        variants={{cardVariants}}
       >
         <Card className="border-none shadow-lg hover:shadow-2xl transition-shadow h-full flex flex-col items-center py-6 bg-white">
           <CardHeader className="flex items-center justify-center pb-2">

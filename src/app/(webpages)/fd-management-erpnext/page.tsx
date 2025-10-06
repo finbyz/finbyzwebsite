@@ -31,7 +31,7 @@ export default function Page() {
         heroImage={{
           alt: 'FD Management In ERPNext',
           src: 'api/fb/n/files/FD-Management-PageDesign.svg',
-          videoSrc: null
+          
         }}
       />
 
@@ -53,7 +53,6 @@ export default function Page() {
               width={420}
               height={320}
               className="rounded-xl shadow-lg object-contain bg-white"
-              priority
             />
           </div>
         </div>

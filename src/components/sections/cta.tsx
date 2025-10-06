@@ -35,8 +35,8 @@ export default function CTA({ data = {} }: CTAProps) {
     subheading = { text: "Talk to our Experts", icon: "CalendarCheck" },
     title = "Ready to Scale with Smart Tech? Let's Talk.",
     description = "Transform your business processes with AI-powered automation and expert implementation.",
-    primaryButton = { text: "Book Demo", icon: "CalendarCheck", action: "demo" },
-    secondaryButton = { text: "Get Proposal", icon: "FileText", action: "proposal" },
+    primaryButton = { text: "Book Demo", icon: "CalendarCheck", action: undefined },
+    secondaryButton = { text: "Get Proposal", icon: "FileText", action: undefined },
     trustIndicator = { text: "Trusted by 100+ businesses", icon: "CalendarCheck" }
   } = data;
 
@@ -89,7 +89,7 @@ export default function CTA({ data = {} }: CTAProps) {
               size="lg"
               className="cta-primary-button"
               aria-label={`${primaryButton.text} with our experts`}
-              onClick={primaryButton.action}
+              onClick={typeof primaryButton?.action === "function" ? primaryButton.action : undefined}
             >
               <PrimaryIcon className="cta-button-icon" aria-hidden="true" />
               {primaryButton.text}
@@ -100,7 +100,8 @@ export default function CTA({ data = {} }: CTAProps) {
               size="lg"
               className="cta-secondary-button"
               aria-label={`${secondaryButton.text}`}
-              onClick={secondaryButton.action}
+              onClick={typeof secondaryButton?.action === "function" ? secondaryButton.action : undefined}
+
             >
               <SecondaryIcon className="cta-button-icon" aria-hidden="true" />
               {secondaryButton.text}

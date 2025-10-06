@@ -85,8 +85,8 @@ export default function Page() {
             </div>
           </div>
           <div className="mt-6 text-gray-700">
-            <p>Manufacturing processes involve many interconnected activities: procurement, production planning, shop floor control, inventory tracking, and delivery. Without an ERP system, these processes often operate in silos, leading to delays, miscommunication, and inefficiencies. A robust manufacturing ERP system bridges these gaps by:</p>
             <List
+              title='Manufacturing processes involve many interconnected activities: procurement, production planning, shop floor control, inventory tracking, and delivery. Without an ERP system, these processes often operate in silos, leading to delays, miscommunication, and inefficiencies. A robust manufacturing ERP system bridges these gaps by:'
               items={[
                 'Unifying Departments: Connects production, finance, inventory, sales, and HR into one system.',
                 'Real-Time Visibility: Tracks operations live from raw materials to finished goods.',
@@ -202,6 +202,7 @@ export default function Page() {
           <div className="mt-6 text-gray-700">
             <p>The major key <a className="text-blue-600 underline" href="/benefits-of-erp" target="_blank" rel="noopener noreferrer">benefits of ERP system</a> in the manufacturing industry are as follows:</p>
             <List
+              title=''
               items={[
                 'Reduces operating costs',
                 'Standardize the business processes',

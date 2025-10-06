@@ -109,6 +109,7 @@ export default function Page() {
           <div className="mt-8">
             <p className="mb-4 text-gray-700">ERP software for engineering companies also provides additional benefits:</p>
             <List
+              title=''
               items={[
                 'Operational excellence',
                 'Simplifies the Exchange of Information',

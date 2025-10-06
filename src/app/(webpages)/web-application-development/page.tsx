@@ -69,7 +69,6 @@ export default function Page() {
                 width={320}
                 height={250}
                 className="object-contain"
-                priority
               />
             </div>
           </div>

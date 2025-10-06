@@ -115,7 +115,6 @@ export default function Page() {
         heroImage={{
           alt: 'ERPNext SEO',
           src: '/files/seo.png',
-          videoSrc: null,
         }}
       />
 
@@ -136,7 +135,8 @@ export default function Page() {
               listStyleType: 'none',
               paddingLeft: 0,
             }}
-            icon={<CheckCircle className="text-green-500 w-5 h-5 mr-2" />}
+            Icon={CheckCircle}
+            iconColor='green'
           />
         </div>
       </Section>
@@ -158,7 +158,8 @@ export default function Page() {
               listStyleType: 'none',
               paddingLeft: 0,
             }}
-            icon={<CheckCircle className="text-green-500 w-5 h-5 mr-2" />}
+            Icon={CheckCircle}
+            iconColor='green'
           />
         </div>
       </Section>

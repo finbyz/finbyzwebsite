@@ -18,7 +18,7 @@ export default async function MainLayout({
   // Above line only works during dynamic rendering, not for static build.
   // So we’ll handle static routes separately below.
   const currentRoute = paths[paths.length - 1]
-  const data = await getPageData("Web Page",currentRoute || "home");
+  const data = await getPageData("Blog Post",currentRoute || "home");
   return (
     <>
         <Header />

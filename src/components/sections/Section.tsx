@@ -1,6 +1,6 @@
 import React, { CSSProperties, ReactNode } from 'react';
 
-interface SectionProps {
+interface SectionProps extends React.HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
   className?: string;
   style?: CSSProperties;
@@ -11,7 +11,8 @@ const Section: React.FC<SectionProps> = ({
   children, 
   className = '', 
   style = {},
-  useGradient = false 
+  useGradient = false,
+  ...props
 }) => {
   const defaultGradientStyle: CSSProperties = {
     background: '#F5F5F5'
@@ -24,7 +25,8 @@ const Section: React.FC<SectionProps> = ({
   return (
     <div
       style={appliedStyle}
-      className={`${className}`}
+      className={className}
+      {...props}
     >
       {children}
     </div>

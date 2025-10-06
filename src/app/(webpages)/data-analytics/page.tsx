@@ -78,7 +78,7 @@ export default function Page() {
         heroImage={{
           alt: 'Data Analytics',
           src: 'api/fb/n/files/banner-analysis.svg',
-          videoSrc: null
+          
         }}
       />
 

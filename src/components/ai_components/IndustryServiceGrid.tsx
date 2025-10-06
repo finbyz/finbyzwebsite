@@ -32,7 +32,7 @@ const IndustryServiceGrid: FC<IndustryServiceGridProps> = ({ services }) => (
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
-        variants={cardVariants}
+        variants={{cardVariants}}
       >
         <Card className="border-none bg-white shadow-sm hover:shadow-lg transition-shadow duration-300">
           <CardHeader className="flex flex-col items-center">

@@ -96,6 +96,7 @@ export default function Page() {
             <span className="font-semibold">Location Data (Field Personnel):</span> For users engaging in fieldwork, Productify may collect location data via the mobile app. This data is collected only with user consent and serves to:
           </p>
           <List
+            title=''
             items={[
               'Provide accurate time tracking for travel and customer meetings.',
               'Allow organizations to manage field resources effectively by optimizing visit schedules.',

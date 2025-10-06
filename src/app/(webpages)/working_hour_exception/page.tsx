@@ -41,7 +41,7 @@ export default function Page() {
         heroImage={{
           alt: 'Working Hour Exception',
           src: '/images/working-hour-exception-hero.png',
-          videoSrc: null
+          
         }}
       />
 

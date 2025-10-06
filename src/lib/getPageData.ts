@@ -1,26 +1,58 @@
 
-interface GalleryItem {
-    name: string
-    route : string
-    image: string
-    animated_gif: string
+export async function getPageData(doctype:string,route: string): Promise<FinbyzGalleryProps> {
+    const links = await getLinks(doctype, route)
+    const webpages = await getWebpages(
+        links.related_links
+            .filter(item => item.reference_doctype === "Web Page")
+            .map(item => item.reference_name)
+    )
+    const galleries = await getGalleries(links.gallery_links.map(gallery => gallery.gallery))
+    const blogs = await getBlogs(links.related_links
+        .filter(item => item.reference_doctype === "Blog Post")
+        .map(item => item.reference_name))
+
+    const galleryItems: GalleryItem[] = galleries.map(gallery => {
+        return {
+            name: gallery.name,
+            description: gallery.title || gallery.seo_title,
+            image: gallery.image,
+            reference_name: gallery.name,
+            title: gallery.title,
+            route: gallery.route,
+            animated_gif: gallery.animated_image || ''
+        }
+    })
+
+    const relatedReads: RelatedRead[] = []
+    for (const webpage of webpages) {
+        relatedReads.push({
+            description: webpage.seo_title,
+            image: webpage.image,
+            route: webpage.route,
+            reference_name: webpage.name,
+            title: webpage.title
+        })
+    }
+
+    for (const blog of blogs) {
+        relatedReads.push({
+            description: blog.seo_title,
+            image: blog.image,
+            route: blog.route,
+            reference_name: blog.name,
+            title: blog.title
+        })
+    }
+
+    return {
+        galleryItems,
+        relatedReads
+    }
 }
 
-interface RelatedRead {
-    route: string
-    description: string
-    image: string
-    title: string
-    reference_name: string
-}
 
-interface FinbyzGalleryProps {
-    galleryItems: GalleryItem[]
-    relatedReads: RelatedRead[]
-}
-
-export async function getPageData(route: string): Promise<FinbyzGalleryProps> {
-    const url = `${process.env.FRAPPE_URL}/api/resource/Web Page?filters=${encodeURIComponent(
+async function getLinks(doctype: string, route: string): Promise<Links> {
+    const url = `${process.env.FRAPPE_URL}/api/resource/${doctype}?filters=${encodeURIComponent(
         JSON.stringify([["route", "=", route]])
     )}`;
     const response = await fetch(url, {
@@ -29,63 +61,107 @@ export async function getPageData(route: string): Promise<FinbyzGalleryProps> {
         },
     });
     const jsonData = await response.json();
-    const webpageID = jsonData.data?.[0]['name'] || {};
-
-    const webpageUrl = `${process.env.FRAPPE_URL}/api/resource/Web Page/${webpageID}`;
-    const webpageResponse = await fetch(webpageUrl, {
-        headers: {
-            "Authorization": `token ${process.env.FRAPPE_API_KEY}:${process.env.FRAPPE_API_SECRET}`,
-        },
-    });
-    const webpage = await webpageResponse.json()
-    const doc = webpage['data']
-
-    let galleryItems = (doc.gallery_links || []).map((g: any) => ({
-        name: g.gallery,
-        route: null,
-        title: g.title || "",
-        image: null,
-        animated_gif: null,
-    }));
-
-    // Prepare URL to fetch detailed gallery info
-    const galleryUrl = `${process.env.FRAPPE_URL}/api/resource/Gallery?filters=${encodeURIComponent(
-        JSON.stringify([["name", "in", galleryItems.map((item: GalleryItem) => item.name)]]))}
-        &fields=${JSON.stringify(["name", "route", "svg_image", "animated_image"])}`;
-
-        // Fetch gallery data
-        const galleryResponse = await fetch(galleryUrl, {
-        headers: {
-            "Authorization": `token ${process.env.FRAPPE_API_KEY}:${process.env.FRAPPE_API_SECRET}`,
-        },
-    });
-
-    const galleryData = await galleryResponse.json();
-    const galleryList = galleryData.data || [];
-
-    // Update galleryItems with fetched data
-    galleryItems = galleryItems.map((item: { name: string }) => {
-    const galleryInfo = galleryList.find((g: { name: string }) => g.name === item.name);
-    if (galleryInfo) {
+    if(!response.ok || jsonData?.data?.length == 0){
         return {
-        ...item,
-        route: galleryInfo.route,
-        image: galleryInfo.svg_image,
-        animated_gif: galleryInfo.animated_image,
-        };
+            related_links:[],
+            gallery_links:[]
+        }
     }
-    return item; // keep original if no match found
+    const ID = jsonData.data?.[0]['name'] || '';
+
+    const docUrl = `${process.env.FRAPPE_URL}/api/resource/${doctype}/${ID}`;
+    const docResponse = await fetch(docUrl, {
+        headers: {
+            "Authorization": `token ${process.env.FRAPPE_API_KEY}:${process.env.FRAPPE_API_SECRET}`,
+        },
+    });
+    const docJson = await docResponse.json()
+    const doc = docJson['data']
+    return {
+        related_links: doc.related_links || [],
+        gallery_links: doc.gallery_links || []
+    }
+}
+
+async function getWebpages(names: string[]): Promise<RelatedLinksData[]> {
+    if (names.length === 0) return [];
+
+    const webpagePayload = `${process.env.FRAPPE_URL}/api/resource/Web Page?filters=${encodeURIComponent(JSON.stringify([
+        ["name", "in", names]
+    ]))}&fields=${encodeURIComponent(JSON.stringify(["name", "route", "title", "seo_title", "image", "video"]))}`;
+
+    const webpagesResponse = await fetch(webpagePayload, {
+        headers: {
+            Authorization: `token ${process.env.FRAPPE_API_KEY}:${process.env.FRAPPE_API_SECRET}`,
+        },
     });
 
-    const relatedReads = (doc.related_links || []).map((rl: any) => ({
-        route: rl.route || "",
-        description: rl.description || "",
-        image: rl.image || "",
-        title: rl.title || "",
-    }));
+    const webpagesJson = await webpagesResponse.json();
+    const webpagesData: RelatedLinksData[] = webpagesJson.data || [];
 
-    return {
-        galleryItems,
-        relatedReads,
-    };
+    return webpagesData.map(webpage => {
+        return {
+            name: webpage.name,
+            route: webpage.route,
+            title: webpage.title,
+            seo_title: webpage.seo_title,
+            image: webpage.image,
+            video: webpage.video
+        }
+    })
+}
+
+async function getBlogs(names: string[]): Promise<RelatedLinksData[]> {
+    if (names.length === 0) return [];
+
+    const webpagePayload = `${process.env.FRAPPE_URL}/api/resource/Blog Post?filters=${encodeURIComponent(JSON.stringify([
+        ["name", "in", names]
+    ]))}&fields=${encodeURIComponent(JSON.stringify(["name", "route", "title", "seo_title", "image_seo as image"]))}`;
+
+    const blogsResponse = await fetch(webpagePayload, {
+        headers: {
+            Authorization: `token ${process.env.FRAPPE_API_KEY}:${process.env.FRAPPE_API_SECRET}`,
+        },
+    });
+
+    const blogsJson = await blogsResponse.json();
+    const blogsData: RelatedLinksData[] = blogsJson.data || [];
+
+    return blogsData.map(blog => {
+        return {
+            name: blog.name,
+            route: blog.route,
+            title: blog.title,
+            seo_title: blog.seo_title,
+            image: blog.image
+        }
+    })
+}
+
+async function getGalleries(names: string[]): Promise<RelatedLinksData[]> {
+    if (names.length === 0) return [];
+
+    const galleryPayload = `${process.env.FRAPPE_URL}/api/resource/Gallery?filters=${encodeURIComponent(JSON.stringify([
+        ["name", "in", names]
+    ]))}&fields=${encodeURIComponent(JSON.stringify(["name", "route", "gallery_title as title", "seo_title", "svg_image as image", "animated_image"]))}`;
+
+    const galleriesResponse = await fetch(galleryPayload, {
+        headers: {
+            Authorization: `token ${process.env.FRAPPE_API_KEY}:${process.env.FRAPPE_API_SECRET}`,
+        },
+    });
+
+    const galleriesJson = await galleriesResponse.json();
+    const galleriesData: RelatedLinksData[] = galleriesJson.data || [];
+
+    return galleriesData.map(gallery => {
+        return {
+            name: gallery.name,
+            route: gallery.route,
+            title: gallery.title,
+            seo_title: gallery.title || gallery.seo_title,
+            image: gallery.image,
+            animated_image: gallery.animated_image,
+        }
+    })
 }

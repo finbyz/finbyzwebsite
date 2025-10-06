@@ -30,8 +30,7 @@ export default function Page() {
         secondaryButton={{ text: 'Contact Us', action: handleContact }}
         heroImage={{
           alt: 'Workflow Transition',
-          src: 'api/fb/n/files/workflow-transition.png',
-          videoSrc: null,
+          src: 'api/fb/n/files/workflow-transition.png'
         }}
       />
 
@@ -111,6 +110,7 @@ export default function Page() {
           />
           <h4 className="text-md font-semibold mt-6 mb-2">Overdue Notifications</h4>
           <List
+            title=''
             items={[
               'Emails are sent based on Role assignments',
               'Only users with the specified role receive overdue notifications',
@@ -148,6 +148,7 @@ export default function Page() {
             When the <strong>Sales Mail Project Condition</strong> checkbox is enabled:
           </p>
           <List
+            title=''
             items={[
               'The system respects project-level permissions in addition to role assignments',
               'Example: If 100 users have the "Sales Invoice" role, but only 10 users have permissions for a specific project, only those 10 users will receive the notification',
@@ -196,6 +197,7 @@ export default function Page() {
             <p className="mb-2"><strong>Purpose:</strong> Tracks the time taken for documents to move from one state to another.</p>
             <p className="mb-2"><strong>Details:</strong></p>
             <List
+              title=''
               items={[
                 'Shows how long each document spent in different workflow states',
                 'Displays time duration for individual entries',
@@ -222,6 +224,7 @@ export default function Page() {
             <p className="mb-2"><strong>Purpose:</strong> Provides average time statistics for state transitions across all documents.</p>
             <p className="mb-2"><strong>Details:</strong></p>
             <List
+              title=''
               items={[
                 'Calculates average duration for transitions between specific states',
                 'Example: "Draft to Approve" might show an average of 31 days',
@@ -239,6 +242,7 @@ export default function Page() {
             <p className="mb-2"><strong>Purpose:</strong> Comprehensive audit trail of all workflow state changes.</p>
             <p className="mb-2"><strong>Key Features:</strong></p>
             <List
+              title=''
               items={[
                 'User Activity Tracking: Shows which user changed which workflow state',
                 'Document-Level Details: Filter by specific document to see its complete state change history',
@@ -288,16 +292,16 @@ export default function Page() {
       <Section>
         <div className="container-custom py-8">
           <h2 className="text-2xl font-bold mb-4">4. System Requirements</h2>
-          <h3 className="text-lg font-semibold mb-2">Daily Operations</h3>
           <List
+            title='Daily Operations'
             items={[
               'The reminder system executes daily at 12:00 AM',
               'No manual intervention required once configured',
               'Automatically processes all active workflows',
             ]}
           />
-          <h3 className="text-lg font-semibold mt-6 mb-2">User Permissions</h3>
           <List
+            title='User Permissions'
             items={[
               'Role-based access controls determine email recipients',
               'Project permissions further refine notification distribution',

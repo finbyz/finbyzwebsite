@@ -18,7 +18,7 @@ interface NavigationItem {
   hasDropdown: boolean;
   icon: React.ComponentType<{ className?: string }>;
   href?: string;
-  mainItems?: Array<{ name: string; icon: React.ComponentType<{ className?: string }> }>;
+  mainItems?: Array<{ name: string; icon: React.ComponentType<{ className?: string }> ,href?:string }>;
   detailedItems?: Record<string, Array<{ name: string; description: string; icon: React.ComponentType<{ className?: string }>; href: string }>>;
 }
 
@@ -97,9 +97,9 @@ export default function Header() {
 
   // Scroll to inquiry form section
   function GotoInquiryForm() {
-    console.log("Navigating to inquiry form working...");
+    // console.log("Navigating to inquiry form working...");
     const inquiryForm = document.getElementsByClassName('inquiry-form')[0];;
-    console.log("Inquiry form element:", inquiryForm);
+    // console.log("Inquiry form element:", inquiryForm);
     if (inquiryForm) {
       inquiryForm.scrollIntoView({ behavior: 'smooth' });
     }
@@ -311,7 +311,7 @@ export default function Header() {
             name: "ERPNext Implementation",
             description: "Complete ERPNext setup",
             icon: Wrench,
-            href: "/erpnext-implementation"
+            href: "/hire-erpnext-implementer"
           },
           {
             name: "Custom ERP Development",
@@ -351,7 +351,7 @@ export default function Header() {
             name: "Web Applications",
             description: "Custom web development",
             icon: Code,
-            href: "/web-development"
+            href: "/website-development"
           },
           {
             name: "Mobile Apps",
@@ -432,32 +432,34 @@ export default function Header() {
       hasDropdown: true,
       icon: Factory,
       mainItems: [
-        { name: "Manufacturing", icon: Factory },
-        { name: "Textile", icon: ShoppingCart },
-        { name: "Trading & Distribution", icon: Truck },
-        { name: "Services", icon: Wrench },
-        { name: "Electronics", icon: Zap },
-        { name: "Retail & eCommerce", icon: ShoppingCart },
-        { name: "Construction", icon: Hammer },
-        { name: "Healthcare", icon: Heart },
-        { name: "Education", icon: GraduationCap },
-        { name: "Logistics", icon: Truck },
-        { name: "Agriculture", icon: Leaf },
-        { name: "Chemicals", icon: TestTube },
-        { name: "Mining", icon: Hammer },
-        { name: "Pharmaceuticals", icon: Pill }
+        { name: "Manufacturing", icon: Factory , href: "/erp-for-manufacturing-industry" },
+        { name: "Textile", icon: ShoppingCart , href: "/erp-for-textile-industry" },
+        { name: "Trading & Distribution", icon: Truck , href: "/erp-for-trading-industry" },
+        { name: "Services", icon: Wrench ,href: "/erp-for-service-industry" },
+        { name: "Electronics", icon: Zap, href: "/erp-for-electronic-industry" },
+        { name: "Retail & eCommerce", icon: ShoppingCart ,href: "/erp-for-retail-industry"},
+        { name: "Construction", icon: Hammer,href: "/erp-for-construction-industry" },
+        { name: "Healthcare", icon: Heart, href: "/erp-for-healthcare-industry" },
+        { name: "Education", icon: GraduationCap,href: "/erp-for-education" },
+        { name: "Logistics", icon: Truck, href: "/erp-for-logistics-industry" },
+        { name: "Agriculture", icon: Leaf, href: "/erp-for-agriculture" },
+        { name: "Chemicals", icon: TestTube , href: "/erp-for-chemical-industry"},
+        { name: "Mining", icon: Hammer,href: "/erp-for-mining" },
+        { name: "Pharmaceuticals", icon: Pill ,href: "/erp-for-pharmaceuticals"}
       ],
+     
     },
     {
-      name: "Insights",
+      name: "Insights",   
       hasDropdown: true,
       icon: BarChart3,
       mainItems: [
-        { name: "Blogs", icon: Wrench },
-        { name: "Gallary", icon: Handshake },
-        { name: "Tech Update", icon: Briefcase }
+        { name: "Blogs", icon: Wrench ,href:"/blog"},
+        { name: "Gallery", icon: Handshake, href:"/gallery" },
+        { name: "Tech Update", icon: Briefcase, href:"/tech-update" },
       ],
-    },
+      
+  },
     
     {
       name: "Company",
@@ -574,8 +576,8 @@ export default function Header() {
               </Link>
             </div>
 
-            <div className="hidden lg:flex items-center space-x-8 ml-auto">
-              {navigationItems.map((item) => (
+            <div className="hidden lg:flex items-center space-x-3 ml-auto">
+              {navigationItems.map((item,index) => (
                 <div key={item.name} className="relative">
                   {item.hasDropdown ? (
                     <div className="relative">
@@ -609,8 +611,15 @@ export default function Header() {
                         style={{
                           maxWidth: '90vw',
                           maxHeight: '85vh',
-                          left: '50%',
-                          transform: 'translateX(-50%)',
+
+                          ...(index === 0 ? {
+                            left: '0',
+                            transform: 'none'
+                          } : {
+                            left: '50%',
+                            transform: 'translateX(-50%)'
+                          }),
+              
                           minWidth: '300px',
                           overflow: 'hidden',
                           right: 'auto'
@@ -701,7 +710,7 @@ export default function Header() {
                               {item.mainItems?.map((mainItem) => (
                                 <Link
                                   key={mainItem.name}
-                                  href={item.detailedItems?.[mainItem.name]?.[0]?.href || "#"}
+                                  href={mainItem.href || item.detailedItems?.[mainItem.name]?.[0]?.href || "#"}
                                   className="flex items-center space-x-3 px-4 py-3 text-[#1A5276] hover:text-[#FF8C00] hover:bg-gray-50 cursor-pointer transition-all rounded-lg border border-transparent hover:border-gray-200 hover:shadow-sm"
                                   onClick={() => {
                                     setHoveredDropdown(null);

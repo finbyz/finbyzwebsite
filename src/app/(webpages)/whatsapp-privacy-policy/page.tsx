@@ -32,7 +32,6 @@ export default function Page() {
         heroImage={{
           alt: 'Whatsapp Privacy Policy',
           src: '/images/privacy-policy-hero.svg',
-          videoSrc: null,
         }}
       />
 

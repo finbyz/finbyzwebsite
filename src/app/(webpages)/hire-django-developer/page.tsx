@@ -35,7 +35,7 @@ export default function Page() {
         heroImage={{
           alt: 'Hire Django Developer',
           src: 'api/fb/n/files/Hire-dJango-Dev - New.svg',
-          videoSrc: null
+          
         }}
       />
 

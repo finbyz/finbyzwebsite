@@ -32,7 +32,7 @@ export default function Page() {
         heroImage={{
           alt: 'Forward Contract Management in ERPNext',
           src: 'api/fb/n/files/Forward-Contract-PageDesign.svg',
-          videoSrc: null
+          
         }}
       />
 
@@ -61,6 +61,7 @@ export default function Page() {
             Introduction
           </h2>
           <List
+            title=''
             items={[
               'A forward contract in ERPNext is primarily used for currency hedging ERPNext, helping businesses mitigate foreign exchange risks for future settlements. For example, an importer or exporter with an FX contract limit can lock in the current exchange rate through a forward contract to avoid potential adverse currency fluctuations.',
               'The key benefit of using a forward contract ERPNext feature is to fix the exchange rate in advance, thus eliminating uncertainty from exchange rate movements. Forward Rates = Spot Rate +/- Premium/Discount.',
@@ -89,6 +90,7 @@ export default function Page() {
         <div className="container-custom py-8">
           <h2 className="text-2xl font-bold mb-4 animate-fade-in-up">How to create Forward Contracts</h2>
           <List
+            title=''
             items={[
               'Navigate to the Forward Contract List and click on "Add Forward Contract".',
               'Enter the Booking Reference Number provided by the bank.',
@@ -114,12 +116,14 @@ export default function Page() {
         <div className="container-custom py-8">
           <h2 className="text-2xl font-bold mb-4 animate-fade-in-up">How to utilize Forward Contracts</h2>
           <List
+            title=''
             items={[
               'A forward contract can be utilized at the time of payment receipt or disbursement. In such cases, the multi-currency transaction is executed at the forward contract rate configured in ERPNext.',
               'The outstanding amount of the forward contract is reduced by the amount utilized. For forward contract accounting ERPNext steps:'
             ]}
           />
           <List
+            title=''
             items={[
               'Go to the Payment Entry list and click on "New".',
               'Select the Party Type and the relevant Customer/Supplier.',
@@ -144,11 +148,13 @@ export default function Page() {
         <div className="container-custom py-8">
           <h2 className="text-2xl font-bold mb-4 animate-fade-in-up">How to Cancel Forward Contracts</h2>
           <List
+            title=''
             items={[
               'If a forward contract cannot be utilized before maturity, or you decide to terminate it for other reasons, ERPNext provides functionality for forward contract cancellation. This process decreases the outstanding forward contract amount and records any gain or loss under the correct profit or loss account, ensuring accuracy in forward contract accounting ERPNext.'
             ]}
           />
           <List
+            title=''
             items={[
               'Go to the Forward Contract List and open the specific forward contract to be cancelled.',
               'In the Cancellation Section, input the Cancellation Date, Cancellation Amount, and Cancellation Rate. Also, choose the bank account where gain/loss should be posted.',

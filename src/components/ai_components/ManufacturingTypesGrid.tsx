@@ -32,7 +32,7 @@ const ManufacturingTypesGrid: React.FC<ManufacturingTypesGridProps> = ({ types }
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
-        variants={cardVariants}
+        variants={{cardVariants}}
         className="rounded-xl bg-white shadow-lg p-6 flex flex-col items-center hover:shadow-2xl transition-shadow duration-300"
       >
         <div className="mb-4">

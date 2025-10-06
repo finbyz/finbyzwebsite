@@ -30,7 +30,7 @@ const SeoImprovementGrid: React.FC<SeoImprovementGridProps> = ({ items }) => (
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         custom={i}
-        variants={cardVariants}
+        variants={{cardVariants}}
       >
         <div className="mb-4">
           <Image

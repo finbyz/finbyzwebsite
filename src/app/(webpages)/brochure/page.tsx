@@ -156,7 +156,7 @@ export default function Page() {
         heroImage={{
           alt: "Brochure",
           src: "api/fb/n/files/brocure banner.svg",
-          videoSrc: null
+          
         }}
       />
 

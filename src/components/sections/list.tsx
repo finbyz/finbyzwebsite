@@ -12,7 +12,7 @@ interface ListProps {
     iconSize?:number
 }
 
-const List = ({ 
+export const List = ({ 
   title = "Why do you Need this App in ERPNext",
   items = [],
   conclusion = "",

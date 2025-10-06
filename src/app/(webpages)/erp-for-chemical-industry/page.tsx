@@ -5,7 +5,7 @@ import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
 import CTA from '@/components/sections/cta';
 import Image from 'next/image';
-import { QuoteBlock } from '@/components/ai_components/QuoteBlock';
+import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import ChemFeatureCheckboxGrid from '@/components/ai_components/ChemFeatureCheckboxGrid';
 import ChemInfoBox from '@/components/ai_components/ChemInfoBox';
 import { CheckCircle } from 'lucide-react';
@@ -246,8 +246,8 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold text-primary mb-4">Benefits of Implementing Our Chemical ERP Software</h2>
           <List
+            title='Benefits of Implementing Our Chemical ERP Software'
             items={[
               'Enhanced Operational Efficiency: Automate processes, reduce manual work, and improve workflow.',
               'Improved Regulatory Compliance: Simplify adherence to complex chemical industry standards.',

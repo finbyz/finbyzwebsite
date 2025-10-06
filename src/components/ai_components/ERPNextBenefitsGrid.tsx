@@ -29,7 +29,7 @@ const ERPNextBenefitsGrid: FC<ERPNextBenefitsGridProps> = ({ benefits }) => (
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
-        variants={cardVariants}
+        variants={{cardVariants}}
       >
         <Card className="border-none bg-gray-50 shadow-sm hover:shadow-lg transition-shadow duration-300">
           <CardHeader>

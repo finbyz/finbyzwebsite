@@ -225,7 +225,7 @@ export default function Page() {
         heroImage={{
           alt: 'ERPNext Services in Canada',
           src: '/api/fb/n/files/Hire-ERPNext-Implementor679475.svg',
-          videoSrc: null
+          
         }}
       />
       <Section>

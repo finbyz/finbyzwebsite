@@ -33,7 +33,6 @@ export default function Page() {
         heroImage={{
           alt: 'ERPNext',
           src: 'api/fb/n/files/Hire-ERPNext-Implementor679475.svg',
-          videoSrc: null,
         }}
       />
 

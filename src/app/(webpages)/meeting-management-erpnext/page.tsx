@@ -29,7 +29,6 @@ export default function Page() {
         heroImage={{
           alt: 'Meeting Management In ERPNext',
           src: 'api/fb/n/files/Meeting-Management-PageDesign-SVG.avif',
-          videoSrc: null,
         }}
       />
 

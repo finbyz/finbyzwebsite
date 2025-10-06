@@ -44,7 +44,7 @@ const ModuleSection: React.FC<ModuleSectionProps> = ({ title, image, alt, quote,
       <CardContent>
         <QuoteBlock text={quote} isHeading={false} />
         <p className="mt-4 text-muted-foreground leading-relaxed">{description}</p>
-        <List items={features} style={{ marginTop: 16 }} />
+        <List title="" items={features} style={{ marginTop: 16 }} />
       </CardContent>
     </Card>
   </motion.div>

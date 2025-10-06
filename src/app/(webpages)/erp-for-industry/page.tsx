@@ -85,7 +85,6 @@ export default function Page() {
         heroImage={{
           alt: 'Customized ERP For Industries',
           src: '/api/fb/n/files/INDUSTRY.svg',
-          videoSrc: null,
         }}
       />
 

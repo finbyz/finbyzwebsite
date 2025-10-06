@@ -120,7 +120,7 @@ export default function Page() {
         heroImage={{
           alt: 'Website Development',
           src: 'api/fb/n/files/web-development.svg',
-          videoSrc: null
+          
         }}
       />
 

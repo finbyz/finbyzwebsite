@@ -86,7 +86,16 @@ const AnimatedSections: React.FC<AnimatedSectionsProps> = ({
 
   // Process children to ensure they're Section components
   const sections = Children.toArray(children).filter(child => 
-    isValidElement(child) && (child.type === Section || child.props?.className?.includes('section'))
+    isValidElement(child) && (
+      child.type === Section ||
+      (
+        typeof child.props === 'object' &&
+        child.props !== null &&
+        'className' in child.props &&
+        typeof child.props.className === 'string' &&
+        child.props.className.includes('section')
+      )
+    )
   );
 
   useEffect(() => {
@@ -304,8 +313,9 @@ const AnimatedSections: React.FC<AnimatedSectionsProps> = ({
 
       {Children.map(children, (child, index) => {
         if (isValidElement(child) && child.type === Section) {
+          const props = typeof child.props === 'object' && child.props !== null ? child.props : {};
           return cloneElement(child, {
-            ...child.props,
+            ...props,
             key: index
           });
         }
