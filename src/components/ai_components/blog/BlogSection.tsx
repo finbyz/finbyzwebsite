@@ -1,3 +1,5 @@
+import { Separator } from "@/components/ui/separator";
+
 interface BlogSectionProps {
   id: string;
   title: string;
@@ -6,10 +8,13 @@ interface BlogSectionProps {
 
 const BlogSection = ({ id, title, children }: BlogSectionProps) => {
   return (
-    <section id={id} className="mb-12">
-      <h2 className="text-3xl font-bold text-foreground mb-4">{title}</h2>
-      {children}
-    </section>
+    <>
+      <section id={id} className="mb-12">
+        <h2 className="text-3xl font-bold text-foreground mb-4">{title}</h2>
+        {children}
+      </section>
+      <Separator className="my-2" />
+    </>
   );
 };
 

@@ -25,8 +25,8 @@ const BlogHero = ({
   readTime
 }: BlogHeroProps) => {
   return (
-    <div className="w-full bg-muted/30 border-b">
-      <div className="container-custom py-12 md:py-16">
+    <div className="w-full bg-muted/30 border-b max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-screen-xl px-4 sm:px-6 mx-auto">
+      <div className="py-12 md:py-16">
         <div className="space-y-6">
           <div className="flex flex-wrap gap-3">
             <Badge variant="default" className="rounded-full">
