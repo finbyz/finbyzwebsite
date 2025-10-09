@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Comprehensive Guide to ERP Implementation Methodologies: Traditional vs. Modern Approaches",
   description: "ERP implementation methodology #1 Traditional Method, #2 Turnkey Method , choosing right kind of ERP system reduces risk and losses.",
   keywords: "ERP System Implementation,\nERP Implementation methodology,\ntraditional methodology, \nturnkey  methodology",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/erp-implementation-methodology",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Comprehensive Guide to ERP Implementation Methodologies: Traditional vs. Modern Approaches",
     description: "ERP implementation methodology #1 Traditional Method, #2 Turnkey Method , choosing right kind of ERP system reduces risk and losses.",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -59,8 +56,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -69,7 +66,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       "articleBody": "<section class=\"\">\n    <div class=\"tech_update\">\n        <div class=\"container-fluid\">\n            <div class=\"row p-lr-50\">\n                <div class=\"col-md-12 rollover finbyz-fadeinup\">\n                    <img alt=\"ERP Implementation Methodology\" title=\"ERP Implementation Methodology\" height=\"100%\"\n                        src=\"/files/ERP_Implement_Methodology.svg\" width=\"100%\">\n                </div>\n            </div>\n\n        </div>\n    </div>\n</section>\n<section>\n    <div class=\"row\">\n  ",
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

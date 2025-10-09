@@ -319,6 +319,7 @@ export default function Page() {
           />
         </div>
       </Section>
+     
 
       <Section>
         <div className="container-custom py-8 flex flex-col gap-6">
@@ -328,10 +329,13 @@ export default function Page() {
             isHeading={false}
           />
         </div>
+        
+
+       
       </Section>
 
-      <Section useGradient>
-        <div className="container-custom py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+       <Section useGradient>
+      ` <div className="container-custom py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {jsFrameworkCards.map((card, idx) => (
             <FlipCard
               key={idx}
@@ -343,6 +347,9 @@ export default function Page() {
         </div>
       </Section>
 
+
+      <div className="clear-both py-8"></div>
+        <br></br><br></br><br></br><br></br><br></br><br></br>
       <Section>
         <div className="container-custom py-8 flex flex-col gap-6">
           <h2 className="text-2xl font-bold mb-4">Node.JS Development Company</h2>
@@ -352,7 +359,7 @@ export default function Page() {
           <p className="text-base text-muted-foreground">
             Node.js allows developers to use JavaScript, a language commonly used for client-side scripting in web browsers, on the server side. This enables developers to build full-stack web applications using a single language, making it easier to manage and maintain the codebase.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
             {nodeJsFeatures.map((feature, idx) => (
               <FeatureCard
                 key={feature.title}
@@ -362,7 +369,26 @@ export default function Page() {
                 description={feature.description}
               />
             ))}
+          </div> */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            {nodeJsFeatures.map((feature, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col items-center p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 w-full h-full text-center"
+              >
+               
+
+                {/* Title */}
+                <h3 className="text-lg font-semibold mb-2 m-10">{feature.title}</h3>
+
+                {/* Description */}
+                <p className="text-muted-foreground text-base opacity-90 transition-opacity duration-300 hover:opacity-100">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
           </div>
+
         </div>
       </Section>
 
@@ -394,9 +420,9 @@ export default function Page() {
           </div>
         </div>
       </Section>
-
+      {/* flex flex-col items-center */}
       <Section>
-        <div className="container-custom py-8 flex flex-col items-center">
+        <div className="py-8 ">
           <CTA
             data={{
               subheading: {

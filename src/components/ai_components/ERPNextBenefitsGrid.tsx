@@ -38,7 +38,7 @@ const ERPNextBenefitsGrid: FC<ERPNextBenefitsGridProps> = ({ benefits }) => (
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-gray-700 text-center">{benefit.description}</p>
+            <p className="text-gray-700 text-justify">{benefit.description}</p>
           </CardContent>
         </Card>
       </motion.div>

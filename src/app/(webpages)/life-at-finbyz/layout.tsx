@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Life at Finbyz | Work Culture, Innovation & Career Growth",
   description: "Discover life at Finbyz Tech – where innovation meets growth. Explore our vibrant work culture, values, and commitment to learning, collaboration, and work-life balance. Join a team that empowers creativity and professional development.",
   keywords: "Life at Finbyz,Work culture in tech companies,Learning and development in tech",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/life-at-finbyz",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Life at Finbyz | Work Culture, Innovation & Career Growth",
     description: "Discover life at Finbyz Tech – where innovation meets growth. Explore our vibrant work culture, values, and commitment to learning, collaboration, and work-life balance. Join a team that empowers creativity and professional development.",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     images: ["/files/Final banner LAF.jpg"],
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -60,8 +57,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -70,7 +67,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

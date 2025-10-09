@@ -75,16 +75,13 @@
 }
 
 @layer base {
-  html {
-    overflow-x: hidden;
-  }
   
   * {
     border-color: hsl(var(--border));
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground overflow-x-hidden;
+    @apply font-sans antialiased bg-background text-foreground;
     font-family: 'Inter', sans-serif;
   }
 }
@@ -151,7 +148,7 @@
   }
   
   .gradient-text {
-    background: linear-gradient(135deg, hsl(210, 50%, 25%) 0%, hsl(25, 100%, 50%) 100%);
+    background: hsl(25, 100%, 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -339,4 +336,11 @@
 
 .container-custom {
   @apply mx-auto px-12 sm:px-8 lg:px-16 xl:px-20 2xl:px-24;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }

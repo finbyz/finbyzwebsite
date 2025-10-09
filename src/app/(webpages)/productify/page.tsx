@@ -30,7 +30,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'Productify',
-          src: '/api/fb/n/files/Productify image (1).svg',
+          src: '/files/Productify%20image%20(1).svg',
           videoSrc: undefined,
         }}
       />
@@ -50,7 +50,7 @@ export default function Page() {
             Productify is a powerful Staff Monitoring Software, available both as a desktop app and a browser extension. Supporting Google Chrome, Microsoft Edge, and Brave, it ensures effective employee supervision regardless of location. Whether your workforce is remote or office-based, this time tracking software delivers actionable insights and secure activity monitoring to maximize productivity while maintaining data integrity.
           </p>
           <ProductifyImageSection
-            src="api/fb/n/files/Productify Activity Analysis Overall.jpg"
+            src="/api/fb/n/files/Productify%20Activity%20Analysis%20Overall.jpg"
             alt="Productify Activity Analysis Overall"
             caption="Productify Activity Analysis Overall"
           />
@@ -114,7 +114,7 @@ export default function Page() {
         <div className="container-custom py-8">
           <h2 className="text-2xl font-semibold text-center mb-6 animate-fadeInUp">Activity Summary</h2>
           <ProductifyImageSection
-            src="api/fb/n/files/Productify Activity Summary.jpg"
+            src="/api/fb/n/files/Productify%20Activity%20Summary.jpg"
             alt="Productify Activity Summary"
             caption="Visual breakdown of employee actions through a Gantt chart."
           />
@@ -133,7 +133,7 @@ export default function Page() {
         <div className="container-custom py-8">
           <h2 className="text-2xl font-semibold text-center mb-6 animate-fadeInUp">Activity Summary Report</h2>
           <ProductifyImageSection
-            src="api/fb/n/files/Productify Activity Summary Report.png"
+            src="/api/fb/n/files/Productify%20Activity%20Summary%20Report.png"
             alt="Productify Activity Summary Report"
             caption="Line Chart tracking Total Hours, Active Hours, Call Hours, and Meeting Hours."
           />
@@ -152,7 +152,7 @@ export default function Page() {
         <div className="container-custom py-8">
           <h2 className="text-2xl font-semibold text-center mb-6 animate-fadeInUp">System Activity</h2>
           <ProductifyImageSection
-            src="api/fb/n/files/Productify Work Intensity.jpg"
+            src="/api/fb/n/files/Productify%20Work%20Intensity.jpg"
             alt="Productify Work Intensity"
             caption="Work Intensity Heatmap for keystrokes and mouse clicks."
           />
@@ -168,30 +168,47 @@ export default function Page() {
       </Section>
 
       <Section>
-        <div className="container-custom py-8">
-          <h2 className="text-2xl font-semibold text-center mb-6 animate-fadeInUp">Applications and Web Browsing Insights</h2>
-          <ProductifyDualImageSection
-            images={[
-              {
-                src: '/api/fb/n/files/Productify Applications Used.jpg',
-                alt: 'Productify Applications Used',
-                caption: 'Our Doughnut Chart breaks down employee software usage, showcasing how much time is spent per application.'
-              },
-              {
-                src: '/api/fb/n/files/Productify Web Browsing Time.jpg',
-                alt: 'Productify Web Browsing Time',
-                caption: 'Track all web activity with Productify’s Pie Chart, categorizing browsing time by domain.'
-              }
-            ]}
-          />
+      <div className="container-custom py-8">
+        <h2 className="text-2xl font-semibold text-center mb-6 animate-fadeInUp">
+          Applications and Web Browsing Insights
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* First Image */}
+          <div className="flex flex-col items-center">
+            <div className="w-full aspect-square overflow-hidden rounded-lg shadow-lg">
+              <img
+                src="/api/fb/n/files/Productify%20Applications%20Used.jpg"
+                alt="Productify Applications Used"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <p className="mt-4 text-center text-muted-foreground text-sm">
+              Our Doughnut Chart breaks down employee software usage, showcasing how much time is spent per application.
+            </p>
+          </div>
+
+          {/* Second Image */}
+          <div className="flex flex-col items-center">
+            <div className="w-full aspect-square overflow-hidden rounded-lg shadow-lg">
+              <img
+                src="/api/fb/n/files/Productify%20Web%20Browsing%20Time.jpg"
+                alt="Productify Web Browsing Time"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <p className="mt-4 text-center text-muted-foreground text-sm">
+              Track all web activity with Productify's Pie Chart, categorizing browsing time by domain.
+            </p>
+          </div>
         </div>
-      </Section>
+      </div>
+    </Section>
 
       <Section useGradient>
         <div className="container-custom py-8">
           <h2 className="text-2xl font-semibold text-center mb-6 animate-fadeInUp">Domain Analysis Report</h2>
           <ProductifyImageSection
-            src="api/fb/n/files/Report Domain Analysis.png"
+            src="/api/fb/n/files/Report%20Domain%20Analysis.png"
             alt="Report Domain Analysis"
             caption="Browser usage by user and date for complete transparency."
           />
@@ -210,30 +227,45 @@ export default function Page() {
       </Section>
 
       <Section>
-        <div className="container-custom py-8">
-          <h2 className="text-2xl font-semibold text-center mb-6 animate-fadeInUp">Top Phone Calls and Types of Calls</h2>
-          <ProductifyDualImageSection
-            images={[
-              {
-                src: '/api/fb/n/files/Productify Top Phone Calls.jpg',
-                alt: 'Productify Top Phone Calls',
-                caption: 'Top Phone Calls in the Productify app, visualized using a Pie-in-a-Doughnut chart.'
-              },
-              {
-                src: '/api/fb/n/files/Type of Calls.png',
-                alt: 'Type of Calls',
-                caption: 'Categorizes internal and external communications to enhance strategic decisions.'
-              }
-            ]}
+  <div className="container-custom py-8">
+    <h2 className="text-2xl font-semibold text-center mb-6 animate-fadeInUp">Top Phone Calls and Types of Calls</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+      {/* First Image */}
+      <div className="flex flex-col items-center">
+        <div className="w-full max-w-md overflow-hidden rounded-lg shadow-lg bg-white p-4">
+          <img
+            src="/api/fb/n/files/Productify%20Top%20Phone%20Calls.jpg"
+            alt="Productify Top Phone Calls"
+            className="w-full h-auto object-contain"
           />
         </div>
-      </Section>
+        <p className="mt-4 text-center text-muted-foreground text-sm">
+          Top Phone Calls in the Productify app, visualized using a Pie-in-a-Doughnut chart.
+        </p>
+      </div>
+
+      {/* Second Image */}
+      <div className="flex flex-col items-center">
+        <div className="w-full max-w-sm overflow-hidden rounded-lg shadow-lg bg-white p-4">
+          <img
+            src="/api/fb/n/files/Type%20of%20Calls.png"
+            alt="Type of Calls"
+            className="w-full h-auto object-contain"
+          />
+        </div>
+        <p className="mt-4 text-center text-muted-foreground text-sm">
+          Categorizes internal and external communications to enhance strategic decisions.
+        </p>
+      </div>
+    </div>
+  </div>
+</Section>
 
       <Section useGradient>
         <div className="container-custom py-8">
           <h2 className="text-2xl font-semibold text-center mb-6 animate-fadeInUp">Hourly Calls Analysis</h2>
           <ProductifyImageSection
-            src="api/fb/n/files/Productify Hourly Calls.jpg"
+            src="/api/fb/n/files/Productify%20Hourly%20Calls.jpg"
             alt="Productify Hourly Calls"
             caption="Hourly Calls help organizations optimize team schedules by revealing detailed call patterns."
           />
@@ -249,7 +281,7 @@ export default function Page() {
         <div className="container-custom py-8">
           <h2 className="text-2xl font-semibold text-center mb-6 animate-fadeInUp">Consolidated Analysis</h2>
           <ProductifyImageSection
-            src="api/fb/n/files/Consolidated table.png"
+            src="/api/fb/n/files/Consolidated%20table.png"
             alt="Productify Consolidated Analysis"
             caption="The User Analysis dashboard consolidates all core productivity metrics."
           />
@@ -261,7 +293,7 @@ export default function Page() {
         </div>
       </Section>
 
-      <Section>
+      {/* <Section>
         <div className="container-custom py-8 flex flex-col items-center gap-4 animate-fadeInUp">
           <h4 className="text-lg font-semibold">Download:</h4>
           <a
@@ -273,7 +305,21 @@ export default function Page() {
             <FaDownload className="w-5 h-5" /> Productify
           </a>
         </div>
-      </Section>
+      </Section> */}
+
+    <Section>
+    <div className="container-custom py-12 flex flex-col items-center gap-6 animate-fadeInUp">
+      <h2 className="text-2xl font-semibold text-center">Download:</h2>
+      <a
+        href="https://frappecloud.com/marketplace/apps/productivity_next"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-3 px-8 py-3 rounded-lg bg-white text-black font-semibold text-lg shadow-lg hover:bg-gray-800 hover:shadow-xl transition-all duration-300"
+      >
+        <FaDownload className="w-5 h-5" /> Productivity Next
+      </a>
+    </div>
+  </Section>
 
       <Section useGradient>
         <div className="container-custom py-8">

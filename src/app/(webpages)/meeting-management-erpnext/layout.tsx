@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "ERPNext Meeting Management",
   description: "Optimize your meeting processes with ERPNext\'s Meeting Management App. Schedule meetings, record summaries, and track action items seamlessly within your CRM.",
   keywords: "ERPNext for Meeting Management,\nerpnext meeting scheduling,\nmeeting summary erpnext,\nmeeting management,\nmanagement meeting,\nevent management plans,\nmanagement and meeting,\nmanagerial meeting",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/meeting-management-erpnext",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ERPNext Meeting Management",
     description: "Optimize your meeting processes with ERPNext\'s Meeting Management App. Schedule meetings, record summaries, and track action items seamlessly within your CRM.",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     images: ["/files/Meeting-Management-PageDesign-SVG.avif"],
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -60,8 +57,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -70,7 +67,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

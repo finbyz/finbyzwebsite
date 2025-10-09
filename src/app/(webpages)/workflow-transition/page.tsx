@@ -126,6 +126,8 @@ export default function Page() {
               className="rounded-lg shadow object-contain"
               style={{ width: '65%', height: 'auto' }}
             />
+           </div>
+           <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-8 animate-fade-in">
             <img
               src="api/fb/n/files/ds.jpg"
               alt="Reminder Config 2"
@@ -134,6 +136,9 @@ export default function Page() {
               className="rounded-lg shadow object-contain"
               style={{ width: '65%', height: 'auto' }}
             />
+            </div>
+            <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-8 animate-fade-in">
+
             <img
               src="api/fb/n/files/so_2.jpg"
               alt="Reminder Config 3"
@@ -142,7 +147,8 @@ export default function Page() {
               className="rounded-lg shadow object-contain"
               style={{ width: '65%', height: 'auto' }}
             />
-          </div>
+            </div>
+         
           <h4 className="text-md font-semibold mt-8 mb-2">Project-Based Permissions</h4>
           <p className="text-gray-700 mb-4">
             When the <strong>Sales Mail Project Condition</strong> checkbox is enabled:
@@ -164,6 +170,8 @@ export default function Page() {
               className="rounded-lg shadow object-contain"
               style={{ width: '65%', height: 'auto' }}
             />
+          </div>
+          <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-8 animate-fade-in">
             <img
               src="api/fb/n/files/po.jpg"
               alt="Project Permission 2"
@@ -268,6 +276,9 @@ export default function Page() {
               className="rounded-lg shadow object-contain"
               style={{ width: '65%', height: 'auto' }}
             />
+            </div>
+            <br></br>
+            <div className="flex flex-col md:flex-row gap-6 justify-center items-center animate-fade-in">
             <img
               src="api/fb/n/files/state_change_report_1.jpg"
               alt="State Change Report 2"
@@ -276,6 +287,9 @@ export default function Page() {
               className="rounded-lg shadow object-contain"
               style={{ width: '65%', height: 'auto' }}
             />
+            </div>
+            <br></br>
+            <div className="flex flex-col md:flex-row gap-6 justify-center items-center animate-fade-in">
             <img
               src="api/fb/n/files/expence_claim.jpg"
               alt="Expense Claim Report"
@@ -348,7 +362,7 @@ export default function Page() {
 
       {/* Conclusion & CTA */}
       <Section>
-        <div className="container-custom py-8">
+        <div className="py-8">
           <h2 className="text-2xl font-bold mb-4">Conclusion</h2>
           <p className="text-gray-700 mb-6">
             This workflow transition system provides comprehensive tracking, automated notifications, and detailed reporting to ensure smooth document processing and accountability across the organization. By leveraging role-based permissions and project-specific access controls, the system ensures relevant stakeholders stay informed while maintaining data security.

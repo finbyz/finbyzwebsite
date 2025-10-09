@@ -23,7 +23,7 @@ export default function ERPNextPartnerServices() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
       {services.map((service, idx) => (
-        <Card key={service.title} className="border-none shadow-lg hover:scale-[1.03] transition-transform duration-300 bg-white/90">
+        <Card key={service.title} className="border-none shadow-lg hover:scale-[1.03] transition-transform duration-300 bg-white/90 cursor-pointer hover:shadow-xl ">
           <CardHeader className="flex flex-col items-center">
             {service.icon}
             <CardTitle className="text-lg text-center font-semibold mb-2">{service.title}</CardTitle>

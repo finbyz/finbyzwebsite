@@ -51,7 +51,7 @@ const BlogHero = ({
           <div className="flex flex-wrap items-center gap-4 md:gap-6 text-sm text-muted-foreground pt-4 border-t">
             <div className="flex items-center gap-2">
               <img 
-                src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${author.avatarSeed || author.name}`}
+                src={`/files/Mukesh.jpg`}
                 alt={author.name}
                 className="w-10 h-10 rounded-full border-2 border-background"
               />

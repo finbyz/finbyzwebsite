@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Top Challenges in Digital Transformation and How to Overcome Them",
   description: "Discover What\'s the biggest challenge for most businesses when going online. Learn strategies to stand out in the crowded digital space. Rea",
   keywords: "What\'s the biggest challenge for most businesses when going online,\ndigital transformation challenges,\nonline business challenges",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/whats-the-biggest-challenge-for-most-businesses-when-going-online",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Top Challenges in Digital Transformation and How to Overcome Them",
     description: "Discover What\'s the biggest challenge for most businesses when going online. Learn strategies to stand out in the crowded digital space. Rea",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -59,8 +56,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -69,7 +66,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         "articleBody": "Biggest online challenges for businesses: visibility, trust, tech adoption, competition.",
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

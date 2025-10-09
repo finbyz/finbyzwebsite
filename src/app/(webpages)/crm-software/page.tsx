@@ -70,7 +70,7 @@ export default function Page() {
       <Section>
         <div className="container-custom py-8 relative">
           <div className="absolute right-0 bottom-0 hidden sm:block opacity-30 pointer-events-none">
-            <img src="api/fb/n/files/three-hexagon.svg" alt="haxagon-image" width={120} height={120} />
+            <img src="/files/three-hexagon.svg" alt="haxagon-image" width={120} height={120} />
           </div>
           <h2 className="text-3xl font-bold text-center mb-4">Benefits that CRM software offers</h2>
           <p className="text-center mb-8">
@@ -157,7 +157,7 @@ export default function Page() {
 
       {/* Conclusion/CTA Section */}
       <Section>
-        <div className="container-custom py-8">
+        <div className="py-8">
           <QuoteBlock
             text="Looking for a Trusted CRM Software Development Company?"
             isHeading={true}

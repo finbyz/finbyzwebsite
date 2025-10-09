@@ -28,7 +28,7 @@ const IndustryGrid: React.FC<IndustryGridProps> = ({ industries }) => {
       {industries.map((industry, idx) => (
         <div
           key={industry.title}
-          className={`rounded-xl shadow-sm transition-transform duration-300 hover:scale-105 ${industry.bg || bgClasses[idx % bgClasses.length]} p-6 flex flex-col items-center`}
+          className={`rounded-xl shadow-sm transition-transform duration-300 hover:scale-105 ${industry.bg || bgClasses[idx % bgClasses.length]} p-6 flex flex-col items-center border hover:border-gray-300` }
         >
           <div className="flex justify-center">
             <Image

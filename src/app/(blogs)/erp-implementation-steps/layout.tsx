@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Comprehensive Guide to ERP Implementation Steps for Business Success",
   description: "ERP Implementation steps includes analyzing why do we need it,assessing its scope,transferring the data,training,customization and many more",
   keywords: "erp implementation steps, \nprocess of erp implementation,\nerp implementation companies\nERP Implementation",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/erp-implementation-steps",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Comprehensive Guide to ERP Implementation Steps for Business Success",
     description: "ERP Implementation steps includes analyzing why do we need it,assessing its scope,transferring the data,training,customization and many more",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -59,8 +56,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -69,7 +66,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       "articleBody": "<section>\n    <div class=\"tech_update\">\n        <div class=\"container-fluid\">\n            <div class=\"row p-lr-50\">\n                <div class=\"col-md-12 rollover finbyz-fadeinup\"><img alt=\"ERP with CLoud\" height=\"100%\"\n                        src=\"/files/ERP_Implement.svg\" title=\"Upgrade old ERP with cloud ERP\" width=\"100%\"></div>\n            </div>\n        </div>\n    </div>\n</section>\n<section class=\"mt-50\">\n    <div class=\"finbyz-fadeinup\">\n        <div class=\"row\">\n            <",
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

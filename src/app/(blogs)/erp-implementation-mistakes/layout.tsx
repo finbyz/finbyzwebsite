@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Top ERP Implementation Challenges & Mistakes: Comprehensive Guide",
   description: "Avoiding some common ERP implementation mistakes and following the right strategies will pave your path towards successful implementation.",
   keywords: "challenges in implementing erp system, ERP Implementation mistakes , ERP implementation guide",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/erp-implementation-mistakes",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Top ERP Implementation Challenges & Mistakes: Comprehensive Guide",
     description: "Avoiding some common ERP implementation mistakes and following the right strategies will pave your path towards successful implementation.",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -59,8 +56,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -69,7 +66,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       "articleBody": "<section>\n    <div class=\"container-fluid\">\n        <div class=\"row p-lr-50\">\n            <div class=\"col-md-12 rollover finbyz-fadeinup\"><img alt=\"ERP implementation mistakes\" height=\"100%\"\n                    src=\"/files/erp-implementation-mistakes-how-to-avoid-failures.svg\"\n                    title=\"ERP implementation mistakes\" width=\"100%\"></div>\n        </div>\n    </div>\n</section>\n<section class=\"mt-50\">\n    <div class=\" finbyz-fadeinup\">\n        <div class=\"row\">\n            ",
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

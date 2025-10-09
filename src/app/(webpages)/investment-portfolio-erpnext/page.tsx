@@ -34,20 +34,24 @@ export default function Page() {
         }}
       />
 
-      <Section>
-        <div className="container-custom py-8 flex flex-col gap-6 animate-fade-in">
-          <p className="text-lg text-zinc-700 dark:text-zinc-200">
-            ERPNext Investment Management empowers you to seamlessly track and manage your financial assets in one place. From stocks and bonds to mutual funds, equity, and ETFs, this portfolio overview ERPNext solution simplifies your investment tracking and provides a unified dashboard for insightful decision-making.
-          </p>
-        </div>
-      </Section>
+<Section>
+  <div className="container-custom py-8 flex flex-col gap-6 animate-fade-in">
+    <p className="text-lg text-black">
+      ERPNext Investment Management empowers you to seamlessly track and manage your financial assets in one place. 
+      From stocks and bonds to mutual funds, equity, and ETFs, this portfolio overview ERPNext solution simplifies 
+      your investment tracking and provides a unified dashboard for insightful decision-making.
+    </p>
+  </div>
+</Section>
+
 
       <Section>
         <div className="container-custom py-8" id="how-to-use">
-          <h2 className="text-2xl font-bold mb-6 text-zinc-800 dark:text-zinc-100 flex items-center gap-2">
-            <CheckCircle className="text-green-500 w-6 h-6" />
-            How to Use ERPNext Investment Portfolio
-          </h2>
+        <h2 className="text-2xl font-bold mb-6 text-black flex items-center gap-2">
+  <CheckCircle className="text-green-500 w-6 h-6" />
+  How to Use ERPNext Investment Portfolio
+</h2>
+
           <div className="grid md:grid-cols-2 gap-8">
             <div className="flex flex-col gap-6">
               <InvestmentProcessStepCard
@@ -83,10 +87,11 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-6 text-zinc-800 dark:text-zinc-100 flex items-center gap-2">
-            <CheckCircle className="text-blue-500 w-6 h-6" />
-            Exit Process of Investment Portfolio in ERPNext
-          </h2>
+        <h2 className="text-2xl font-bold mb-6 text-black flex items-center gap-2">
+  <CheckCircle className="text-blue-500 w-6 h-6" />
+  Exit Process of Investment Portfolio in ERPNext
+</h2>
+
           <div className="grid md:grid-cols-2 gap-8">
             <div className="flex flex-col gap-6">
               <InvestmentProcessStepCard

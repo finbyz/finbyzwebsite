@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Comprehensive Human Resource & Payroll Software Solutions | Finbyz Tech",
   description: "Discover Finbyz Tech\'s human resource software designed to streamline HR and payroll processes. Enhance efficiency, ensure compliance, and empower your workforce.",
   keywords: "human resource software,\nhr software,\nhr and payroll software,\nHuman Resource Management, \nLeave approval system, \nExpense claims management, \nworker Shift Management, \nRecruitment software, \nTraining and development software,\nhr system,\nbest hr software,\nemployee management software,\nemployee management system,\nhr software companies,\nhr payroll,\nhr system software,\nhr management software,\nhr management systems,\nhr payroll software",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/human-resource-system",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Comprehensive Human Resource & Payroll Software Solutions | Finbyz Tech",
     description: "Discover Finbyz Tech\'s human resource software designed to streamline HR and payroll processes. Enhance efficiency, ensure compliance, and empower your workforce.",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     images: ["/files/hr_system 2019-07-27 18_25_22.svg"],
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -60,8 +57,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -70,7 +67,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

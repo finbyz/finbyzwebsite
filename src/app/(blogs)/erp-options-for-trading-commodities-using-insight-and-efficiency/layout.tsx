@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Commodity Trading ERP Solutions: Streamlining Operations and Enhancing Profitability",
   description: "Discover how ERP for commodity management enhances trading efficiency, risk management, and profitability in volatile markets.",
   keywords: "commodity trading erp, ERP for commodity, ERP for commodity management \n",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/erp-options-for-trading-commodities-using-insight-and-efficiency",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Commodity Trading ERP Solutions: Streamlining Operations and Enhancing Profitability",
     description: "Discover how ERP for commodity management enhances trading efficiency, risk management, and profitability in volatile markets.",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -59,8 +56,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -69,7 +66,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       "articleBody": "<section>\n    <div class=\"container-fluid text-justify\">\n        <div class=\"row p-lr-50\">\n            <div class=\"col-md-12 rollover finbyz-fadeinup text-center\"><img alt=\"erp-for-trading\"\n                    height=\"80%\" src=\"/files/drawing-1.svg\" title=\"erp-options-for-trading-commodities-using-insight-and-efficiency\"\n                    width=\"80%\"></div>\n        </div>\n    </div>\n</section>\n<section class=\"mt-5\">\n    <div class=\" finbyz-fadeinup\">\n        <div class=\"row\">\n     ",
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

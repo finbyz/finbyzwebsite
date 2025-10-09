@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Top Benefits and Advantages of ERP Systems for Business Efficiency",
   description: "There are various benefits of ERP systems like real time information,high productivity,better analytics,improved collaboration and security,",
   keywords: "benefits of ERP, advantages of erp, advantages of erp systems,  erp benefits, advantages of erp system, erp software advantages, benefits of erp system, erp benefits presentation, erp software benefits advantages, erp system benefits advantages",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/benefits-of-erp",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Top Benefits and Advantages of ERP Systems for Business Efficiency",
     description: "There are various benefits of ERP systems like real time information,high productivity,better analytics,improved collaboration and security,",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -59,8 +56,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -69,7 +66,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       "articleBody": "<div class=\"container-fluid\">\n    <div class=\"row p-lr-50\">\n        <div class=\"col-md-12 finbyz-fadeinup\"><img alt=\"Benefits of ERP\" title=\"Benefits of ERP\"\n                src=\"/files/Benefits-of-ERP.svg\" width=\"100%\"></div>\n    </div>\n</div>\n<br>\n<div>\n    <div class=\"row\">\n        <div class=\"col-md-12\">\n            <h2 class=\"title-font\">Benefits of ERP</h2>\n            <br>\n            <div>\n                <p class=\"text-justify\">Modern, cloud-based Enterprise Resource Planni",
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

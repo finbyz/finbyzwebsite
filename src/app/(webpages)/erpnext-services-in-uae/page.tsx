@@ -161,30 +161,42 @@ export default function Page() {
               <a href="/erpnext-software" className="text-primary underline hover:text-primary/80">ERPNext</a> is a versatile open-source ERP software that caters to a wide range of industries, including manufacturing, distribution, retail, trading, services, education, non-profits, and healthcare. It is a cloud-based solution that is easy to use and affordable, making it a popular choice for businesses of all sizes in the UAE.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-            {flipCards.map((card, idx) => (
-              <FlipCard
-                key={card.title}
-                front={
-                  <div className="flex flex-col items-center justify-center p-6">
-                    <img src={card.image} alt={card.alt} width={64} height={64} />
-                    <h3 className="font-semibold text-lg mt-4 text-center">{card.title}</h3>
-                  </div>
-                }
-                back={
-                  <div className="flex items-center justify-center h-full p-6">
-                    <p className="text-center text-sm text-muted-foreground">{card.description}</p>
-                  </div>
-                }
-                className="shadow-md border-none bg-white hover:shadow-lg transition-all duration-300"
-              />
-            ))}
-          </div>
+         
+
+         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 justify-items-center ">
+          {flipCards.map((card, idx) => (
+            <FlipCard
+              key={card.title}
+              front={
+                <div className="flex flex-col items-center justify-center h-full p-6 text-center">
+                  <img
+                    src={card.image}
+                    alt={card.alt}
+                    width={64}
+                    height={64}
+                    className="object-contain"
+                  />
+                  <h3 className="font-semibold text-lg mt-4">{card.title}</h3>
+                </div>
+              }
+              back={
+                <div className="flex items-center justify-center h-full p-6">
+                  <p className="text-center text-muted-foreground text-base pt-2 opacity-90 transition-opacity duration-300 hover:opacity-100">
+                    {card.description}
+                  </p>
+                </div>
+              }
+              className="shadow-md border-none bg-white hover:shadow-lg transition-all duration-300 w-full sm:w-[280px] md:w-[350px] lg:w-[380px] h-[240px] flex items-center justify-center"
+            />
+          ))}
+        </div>
+
+
         </div>
       </Section>
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-6">ERPNext provides a diverse array of features, which include</h2>
+          {/* <h2 className="text-2xl font-bold mb-6">ERPNext provides a diverse array of features, which include</h2> */}
           <List
             title="ERPNext provides a diverse array of features, which include"
             items={erpFeatures}
@@ -197,7 +209,7 @@ export default function Page() {
           <div className="grid md:grid-cols-2 gap-8 mt-10">
             <FeatureCard
               title="Improved efficiency"
-              image="api/fb/n/files/three-hexagon.svg"
+              image="/files/three-hexagon.svg"
               alt="Improved efficiency"
               description="ERPNext can help businesses in the UAE to improve their efficiency by automating many of their manual tasks. This can free up time for employees to focus on more important tasks, such as sales and customer service."
             />

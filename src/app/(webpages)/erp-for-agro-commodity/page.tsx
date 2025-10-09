@@ -96,7 +96,7 @@ export default function Page() {
         <div className="container-custom py-8 relative">
           <div className="absolute right-0 bottom-0 hidden sm:block opacity-70 pointer-events-none">
             <img
-              src="api/fb/n/files/three-hexagon.svg"
+              src="/files/three-hexagon.svg"
               alt="hexagon background"
               width={120}
               height={120}

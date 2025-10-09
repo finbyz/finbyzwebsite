@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Certified ERPNext & Frappe Partner in Ahmedabad, Gujarat | Finbyz Tech",
   description: "Finbyz Tech, a certified ERPNext and Frappe Partner in Ahmedabad, offers expert ERP implementation, customization, and support services tailored to your business needs.",
   keywords: "erpnext partner,\nfrappe partner,\nerpnext partner in ahmedabad, gujarat\nerpnext,\nerpnext software,\nerpnext certified partner in india,\nerpnext service providers,erpnext service in uk,\nerpnext service in Canada,	\nerpnext service provider in uk,\nerpnext certified partners,\nerpnext service provider in Canada,\nerpnext partners in uk,\nERP Software, CRM Software, \nAccounting Software, \nManufacturing Software",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/erpnext-certified-partner",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Certified ERPNext & Frappe Partner in Ahmedabad, Gujarat | Finbyz Tech",
     description: "Finbyz Tech, a certified ERPNext and Frappe Partner in Ahmedabad, offers expert ERP implementation, customization, and support services tailored to your business needs.",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     images: ["/files/Frappe-Certified-parnter-Page Design-SVG.svg"],
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -60,8 +57,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -70,7 +67,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

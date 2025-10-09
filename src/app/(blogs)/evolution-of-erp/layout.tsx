@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Evolution of ERP Systems: From MRP to Intelligent Cloud-Based Solutions",
   description: "Evolution of ERP systems has started for more than 2 decades now,  latest being the cloud ERP. ",
   keywords: "ERP Application ,Evolution of ERP, ERP System evolution, Cloud ERP, ERP system, ERP System, ERP , ERP applications, ERP evolution, ERP web application, ERP system evolution, ERP systems are an evolution of, stage ERP, base ERP, development of ERP	\n",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/evolution-of-erp",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Evolution of ERP Systems: From MRP to Intelligent Cloud-Based Solutions",
     description: "Evolution of ERP systems has started for more than 2 decades now,  latest being the cloud ERP. ",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -59,8 +56,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -69,7 +66,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       "articleBody": "    <div class=\"tech_update container-field\">\n    <div class=\"row p-lr-50\">\n        <div class=\"col-lg-12\"><img alt=\"ERP Evolution\" title=\"ERP Evolution\" height=\"100%\" src=\"/files/Evolution_of_ERP.svg\" width=\"100%\"> </div>\n    </div>\n</div>\n<br><br><br>\n<div class=\"container-field\">\n    <div class=\"row\">\n        <div class=\"col-lg-12\">\n            <h2 align=\"center\" class=\"title-font\">Evolution of ERP System</h2>\n            <!-- <svg class=\"title-underline1\">                  <use xli",
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

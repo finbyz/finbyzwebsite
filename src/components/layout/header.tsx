@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Home, Users, Building2, Wrench, FileText, Briefcase, Phone, BookOpen, Target, Factory, ShoppingCart, Heart, GraduationCap, Truck, Leaf, TestTube, Hammer, Pill, Eye, Zap, Code, UserPlus, Lightbulb, Calendar, Star, Mail, ChevronLeft, ChevronRight, Handshake, Rocket, Send, Sparkles, BarChart3, Package, DollarSign, TrendingUp, Search, Video, Newspaper, Smartphone, Brain, CheckCircle, MapPin, LogIn } from "lucide-react";
+import { Menu, X, ChevronDown, Home, Users, Building2, Wrench, FileText, Briefcase, Phone, BookOpen, Target, Factory, ShoppingCart, Heart, GraduationCap, Truck, Leaf, TestTube, Hammer, Pill, Eye, Zap, Code, UserPlus, Lightbulb, Calendar, Star, Mail, ChevronLeft, ChevronRight, Handshake, Rocket, Send, Sparkles, BarChart3, Package, DollarSign, TrendingUp, Search, Video, Newspaper, Smartphone, Brain, CheckCircle, MapPin, LogIn, Globe } from "lucide-react";
 import { useMobileMenu } from "@/contexts/MobileMenuContext";
 import {
   DropdownMenu,
@@ -12,6 +12,19 @@ import {
 } from "@/components/ui/dropdown-menu";
 import Link from "next/link";
 import Image from "next/image";
+import { FileCheck } from 'lucide-react';
+import { Repeat } from 'lucide-react';
+import { Receipt } from "lucide-react";
+import { ClipboardCheck } from "lucide-react";
+import { Cpu } from "lucide-react";
+import { CodeSquare } from "lucide-react";
+import { Database } from "lucide-react";
+import { Cog } from "lucide-react";
+import { Laptop } from "lucide-react";
+
+
+
+
 
 interface NavigationItem {
   name: string;
@@ -37,6 +50,11 @@ export default function Header() {
   const [isGoingBack, setIsGoingBack] = useState(false);
   const [hoveredService, setHoveredService] = useState<string | null>(null);
   const [hoveredDropdown, setHoveredDropdown] = useState<string | null>(null);
+  const [blogPosts, setBlogPosts] = useState<Array<{ name: string; title: string; route?: string; image?: string }>>([]);
+  const [blogsLoading, setBlogsLoading] = useState(false);
+  const [showAllBlogs, setShowAllBlogs] = useState(false);
+ 
+ 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,6 +64,18 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Load blogs when hovering Insights → Blogs
+  useEffect(() => {
+    const shouldFetch = hoveredDropdown === "Insights" && hoveredService === "Blogs" && !blogsLoading && blogPosts.length === 0;
+    if (!shouldFetch) return;
+    setBlogsLoading(true);
+    fetch("/api/blog-posts")
+      .then(r => r.json())
+      .then(j => setBlogPosts(Array.isArray(j?.data) ? j.data : []))
+      .catch(() => setBlogPosts([]))
+      .finally(() => setBlogsLoading(false));
+  }, [hoveredDropdown, hoveredService, blogsLoading, blogPosts.length]);
 
   const toggleMobileItem = (itemName: string) => {
     setExpandedMobileItems(prev => 
@@ -125,14 +155,14 @@ export default function Header() {
         { name: "ERPNext Services", icon: Wrench },
         { name: "ERPNext Products & Add-ons", icon: Package },
         { name: "ERPNext Solutions", icon: Target },
-        { name: "ERPNext Partners", icon: Handshake }
+        // { name: "ERPNext Partners", icon: Handshake }
       ],
       detailedItems: {
         "ERPNext Services": [
           {
             name: "ERPNext Implementation",
             description: "Complete ERPNext setup and configuration",
-            icon: Wrench,
+            icon: Cpu,
             href: "/hire-erpnext-implementer"
           },
           {
@@ -206,7 +236,7 @@ export default function Header() {
           {
             name: "RODTEP Claim",
             description: "Remission of Duties and Taxes on Exported Products",
-            icon: FileText,
+            icon: ClipboardCheck,
             href: "/rodtep-claim-erpnext"
           },
           {
@@ -218,13 +248,19 @@ export default function Header() {
           {
             name: "Advanced Authorisation Licence",
             description: "Advanced authorization license management",
-            icon: FileText,
+            icon: FileCheck,
             href: "/advanced-authorisation-licence-erpnext"
+          },
+           {
+            name: "Workflow Transitions",
+            description: "Workflow Transitions management",
+            icon: Repeat,
+            href: "/workflow-transition"
           },
           {
             name: "Argentina E-Invoicing",
             description: "Argentina electronic invoicing compliance",
-            icon: FileText,
+            icon: Receipt,
             href: "/argentina-electronic-invoicing-erpnext-afip-compliance-automation"
           }
         ],
@@ -244,7 +280,7 @@ export default function Header() {
           {
             name: "Human Resource System",
             description: "Comprehensive HR management system",
-            icon: Users,
+            icon: UserPlus,
             href: "/human-resource-system"
           },
           {
@@ -272,26 +308,26 @@ export default function Header() {
             href: "/erp-for-education"
           }
         ],
-        "ERPNext Partners": [
-          {
-            name: "Become a Partner",
-            description: "Join our partner network",
-            icon: Handshake,
-            href: "/erpnext/partners/join"
-          },
-          {
-            name: "Partner Benefits",
-            description: "Benefits of partnering with us",
-            icon: Star,
-            href: "/erpnext/partners/benefits"
-          },
-          {
-            name: "Partner Portal",
-            description: "Access partner resources",
-            icon: Users,
-            href: "/erpnext/partners/portal"
-          }
-        ]
+        // "ERPNext Partners": [
+        //   {
+        //     name: "Become a Partner",
+        //     description: "Join our partner network",
+        //     icon: Handshake,
+        //     href: "/erpnext/partners/join"
+        //   },
+        //   {
+        //     name: "Partner Benefits",
+        //     description: "Benefits of partnering with us",
+        //     icon: Star,
+        //     href: "/erpnext/partners/benefits"
+        //   },
+        //   {
+        //     name: "Partner Portal",
+        //     description: "Access partner resources",
+        //     icon: Users,
+        //     href: "/erpnext/partners/portal"
+        //   }
+        // ]
       }
     },
     {
@@ -303,15 +339,16 @@ export default function Header() {
         { name: "AI Automation", icon: Zap },
         { name: "Software Development", icon: Code },
         { name: "Consulting", icon: Lightbulb },
-        { name: "Support & Maintenance", icon: Phone }
+        { name: "Support & Maintenance", icon: Phone },
+        {name:"Resource Augmentation", icon: Globe}
       ],
       detailedItems: {
         "ERP Implementation": [
           {
             name: "ERPNext Implementation",
             description: "Complete ERPNext setup",
-            icon: Wrench,
-            href: "/hire-erpnext-implementer"
+            icon: Cpu,
+            href: "/erpnext-implementer"
           },
           {
             name: "Custom ERP Development",
@@ -322,7 +359,7 @@ export default function Header() {
           {
             name: "ERP Migration",
             description: "Data migration services",
-            icon: Truck,
+            icon: Database,
             href: "/erp-migration"
           }
         ],
@@ -351,7 +388,7 @@ export default function Header() {
             name: "Web Applications",
             description: "Custom web development",
             icon: Code,
-            href: "/website-development"
+            href: "/web-application-development"
           },
           {
             name: "Mobile Apps",
@@ -362,7 +399,7 @@ export default function Header() {
           {
             name: "API Development",
             description: "API and middleware services",
-            icon: Code,
+            icon: CodeSquare,
             href: "/api-development"
           },
            {
@@ -374,10 +411,15 @@ export default function Header() {
            {
             name: "Human Resource System",
             description: "Comprehensive HR management system",
-            icon: Users,
+            icon: UserPlus,
             href: "/human-resource-system"
           },
-          
+          {
+            name: "Data Analytics",
+            description: "",
+            icon: Rocket,
+            href: "/data-analytics"
+          },
         ],
         "Consulting": [
           {
@@ -395,36 +437,47 @@ export default function Header() {
           {
             name: "Technology Consulting",
             description: "Technology strategy and planning",
-            icon: Lightbulb,
+            icon: Cog,
             href: "/technology-consulting"
           },
            {
             name: "IT Consulting",
             description: "Expert guidance on technology strategy and IT solutions to drive business growth.",
-            icon: Lightbulb,
+            icon: Laptop,
             href: "/it-consulting"
           }
         ],
         "Support & Maintenance": [
           {
-            name: "24/7 Support",
+            name: "ERPNext Support",
             description: "Round-the-clock technical support",
             icon: Phone,
             href: "/24-7-support"
           },
           {
-            name: "System Maintenance",
+            name: "ERPNext System Maintenance",
             description: "Regular system maintenance",
             icon: Wrench,
             href: "/system-maintenance"
           },
           {
-            name: "Performance Optimization",
+            name: "ERPNext Performance Optimization",
             description: "Optimize system performance",
             icon: TrendingUp,
             href: "/performance-optimization"
           }
-        ]
+        ],
+        
+      "Resource Augmentation":[
+           { name: "Hire Python Developer", description:"Hire Python Developer", icon: Wrench ,href:"/hire-python-developer"},
+        { name: "Hire Web Application Developers", icon: Handshake, description:"Hire Web Application Developers" ,href:"/hire-web-application-developers" },
+        { name: "Hire Javascript Developer", icon: Briefcase, description:"Hire Javascript Developer", href:"/hire-javascript-developer" },
+        { name: "Hire Django developer", icon: Globe,description:"Hire Django developer", href:"/hire-django-developer" },
+        { name: "Hire ERPNext Implementer", icon: Laptop,description:"Hire Django developer", href:"/hire-erpnext-implementer" }
+      ]
+      
+      
+  
       }
     },
     {
@@ -432,34 +485,134 @@ export default function Header() {
       hasDropdown: true,
       icon: Factory,
       mainItems: [
-        { name: "Manufacturing", icon: Factory , href: "/erp-for-manufacturing-industry" },
-        { name: "Textile", icon: ShoppingCart , href: "/erp-for-textile-industry" },
-        { name: "Trading & Distribution", icon: Truck , href: "/erp-for-trading-industry" },
-        { name: "Services", icon: Wrench ,href: "/erp-for-service-industry" },
-        { name: "Electronics", icon: Zap, href: "/erp-for-electronic-industry" },
-        { name: "Retail & eCommerce", icon: ShoppingCart ,href: "/erp-for-retail-industry"},
-        { name: "Construction", icon: Hammer,href: "/erp-for-construction-industry" },
-        { name: "Healthcare", icon: Heart, href: "/erp-for-healthcare-industry" },
-        { name: "Education", icon: GraduationCap,href: "/erp-for-education" },
-        { name: "Logistics", icon: Truck, href: "/erp-for-logistics-industry" },
-        { name: "Agriculture", icon: Leaf, href: "/erp-for-agriculture" },
-        { name: "Chemicals", icon: TestTube , href: "/erp-for-chemical-industry"},
-        { name: "Mining", icon: Hammer,href: "/erp-for-mining" },
-        { name: "Pharmaceuticals", icon: Pill ,href: "/erp-for-pharmaceuticals"}
+        { name: "Manufacturing & Production", icon: Factory },
+        { name: "Operations & Services", icon: Wrench},
+        { name: "Healthcare & Education", icon: Heart},
+        { name: "E-Commerce & Logistics", icon: ShoppingCart},
       ],
-     
-    },
+      detailedItems: {
+        "Manufacturing & Production": [
+          {
+            name: "Manufacturing",
+            description: "Complete ERPNext setup",
+            icon: Factory,
+            href: "/erp-for-manufacturing-industry"
+          },
+          {
+            name: "Textile",
+            description: "",
+            icon: ShoppingCart,
+            href: "/erp-for-textile"
+          },
+          {
+            name: "Chemicals",
+            description: "",
+            icon: TestTube,
+            href: "/erp-for-chemical-industry"
+          },
+          {
+            name: "Electronics",
+            description: "",
+            icon: Zap,
+            href: "/erp-for-electronics"
+          },
+          {
+            name: "Mining",
+            description: "",
+            icon: Hammer,
+            href: "/erp-for-mining"
+          },
+          {
+            name: "Agriculture",
+            description: "",
+            icon: Leaf,
+            href: "/erp-for-agro-commodity"
+          },  
+          {
+            name: "Pharmaceuticals",
+            description: "",
+            icon: Pill,
+            href: "/erp-for-pharmaceuticals"
+          }],
+          "Operations & Services": [
+          {
+            name: "Services",
+            description: "",
+            icon: Wrench,
+            href: "services"
+          },
+          {
+            name: "Construction",
+            description: "",
+            icon: Hammer,
+            href: "/erp-for-construction"
+          },
+          {
+            name: "Engineering",
+            description: "",
+            icon: GraduationCap,
+            href: "/erp-for-engineering-industry"
+          }],
+          "Healthcare & Education": [
+          {
+            name: "Healthcare",
+            description: "",
+            icon: Heart,
+            href: "/erp-for-healthcare"
+          },
+          {
+            name: "Education",
+            description: "",
+            icon: GraduationCap,
+            href: "/erp-for-education"
+          }],
+          "E-Commerce & Logistics": [
+            {
+              name: "Trading & Distribution",
+              description: "",
+              icon: Truck,
+              href: "/erp-for-trading-industry"
+            },
+            {
+              name: "Retail & eCommerce",
+              description: "",
+              icon: ShoppingCart,
+              href: "erp-for-retailer"
+            },
+            {
+              name: "Logistics",
+              description: "",
+              icon: Truck,
+              href: "/erp-for-logistics-industry"
+            },
+              
+  ]},
+  
+},
+    
+    
     {
       name: "Insights",   
       hasDropdown: true,
       icon: BarChart3,
       mainItems: [
-        { name: "Blogs", icon: Wrench ,href:"/blog"},
+        { name: "Blogs", icon: Wrench ,href:"/blog-post"},
         { name: "Gallery", icon: Handshake, href:"/gallery" },
         { name: "Tech Update", icon: Briefcase, href:"/tech-update" },
       ],
-      
+
+      detailedItems: {
+        "Blogs": [
+          {
+            name: "Blogs",
+            description: "Learn about our Blogs",
+            icon: Wrench,
+            href: "/blog-post"
+          },
+        ]
+      }
   },
+  
     
     {
       name: "Company",
@@ -520,7 +673,7 @@ export default function Header() {
             name: "Contact Us",
             description: "Get in touch with our team",
             icon: Phone,
-            href: "/contact-us"
+            href: "/contact"
           }
         ],
         "Careers": [
@@ -562,7 +715,7 @@ export default function Header() {
             : "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 backdrop-blur-sm"
         }`}
       >
-        <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-20">
+        <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-18">
           <div className="flex justify-between items-center h-12 lg:h-14 w-full">
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center">
@@ -667,22 +820,73 @@ export default function Header() {
                               {hoveredService ? (
                                 <div>
                                   <h4 className="font-semibold text-[#1A5276] mb-4 text-lg border-b border-gray-100 pb-2">{hoveredService}</h4>
-                                  <div className="space-y-2">
-                                    {(item.detailedItems as any)?.[hoveredService]?.map((subItem: any) => (
-                                      <Link
-                                        key={subItem.name}
-                                        href={subItem.href || "#"}
-                                        className="flex items-center space-x-3 px-3 py-2 text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5 cursor-pointer transition-all rounded-lg text-sm"
-                                        onClick={() => {
-                                          setHoveredDropdown(null);
-                                          setHoveredService(null);
-                                        }}
-                                      >
-                                        <subItem.icon className="w-4 h-4 flex-shrink-0" />
-                                        <span className="font-medium">{subItem.name}</span>
-                                      </Link>
-                                    ))}
-                                  </div>
+                                  {item.name === "Insights" && hoveredService === "Blogs" ? (
+                                    <div className="space-y-2">
+                                      {blogsLoading ? (
+                                        <div className="text-sm text-gray-500 px-3 py-2">Loading blogs...</div>
+                                      ) : blogPosts.length === 0 ? (
+                                        <div className="text-sm text-gray-500 px-3 py-2">No blog posts found.</div>
+                                      ) : (
+                                        (showAllBlogs ? blogPosts : blogPosts.slice(0, 5)).map((post) => (
+                                          <Link
+                                            key={post.name}
+                                            href={post.route || "/blog-post"}
+                                            className="flex items-center space-x-3 px-3 py-2 text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5 cursor-pointer transition-all rounded-lg text-sm"
+                                            onClick={() => {
+                                              setHoveredDropdown(null);
+                                              setHoveredService(null);
+                                              setShowAllBlogs(false);
+                                            }}
+                                          >
+                                            {/* {post.image ? (
+                                              <Image src={post.image} alt={post.title} width={32} height={32} className="rounded object-cover" />
+                                            ) : (
+                                              <div className="w-8 h-8 rounded bg-gray-100" />
+                                            )} */}
+                                            <span className="font-medium line-clamp-1">{post.title}</span>
+                                          </Link>
+                                        ))
+                                      )}
+                                      {blogPosts.length > 5 && (
+                                        <div className="pt-2 flex items-center gap-3">
+                                          <button
+                                            className="text-sm px-3 py-2 rounded-lg text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5"
+                                            onClick={() => setShowAllBlogs(v => !v)}
+                                          >
+                                            {showAllBlogs ? "Show less" : "View more"}
+                                          </button>
+                                          <Link
+                                            href="/blog-post"
+                                            className="text-sm px-3 py-2 rounded-lg text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5"
+                                            onClick={() => {
+                                              setHoveredDropdown(null);
+                                              setHoveredService(null);
+                                              setShowAllBlogs(false);
+                                            }}
+                                          >
+                                            View all
+                                          </Link>
+                                        </div>
+                                      )}
+                                    </div>
+                                  ) : (
+                                    <div className="space-y-2">
+                                      {(item.detailedItems as any)?.[hoveredService]?.map((subItem: any) => (
+                                        <Link
+                                          key={subItem.name}
+                                          href={subItem.href || "#"}
+                                          className="flex items-center space-x-3 px-3 py-2 text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5 cursor-pointer transition-all rounded-lg text-sm"
+                                          onClick={() => {
+                                            setHoveredDropdown(null);
+                                            setHoveredService(null);
+                                          }}
+                                        >
+                                          <subItem.icon className="w-4 h-4 flex-shrink-0" />
+                                          <span className="font-medium">{subItem.name}</span>
+                                        </Link>
+                                      ))}
+                                    </div>
+                                  )}
                                 </div>
                               ) : (
                                 <div className="flex items-center justify-center h-full">

@@ -40,38 +40,47 @@ const cards = [
 
 const ITConsultingFlipCards: React.FC = () => {
   return (
-    <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      {cards.map((card, idx) => (
-        <FlipCard
-          key={card.title}
-          className="border-none shadow-lg hover:scale-105 transition-transform duration-300 bg-white rounded-xl"
-          front={
-            <div className="flex flex-col items-center justify-center py-8 px-4">
-              <Image
-                src={card.image}
-                alt={card.alt}
-                width={180}
-                height={180}
-                className="mb-4"
-                loading="lazy"
-              />
-              <h3 className="text-lg font-semibold text-center text-gray-900 mt-2">{card.title}</h3>
-            </div>
-          }
-          back={
-            <div className="flex flex-col items-center justify-center py-8 px-4 h-full">
-              <h3 className="text-lg font-semibold text-center text-gray-900 mb-2">{card.title}</h3>
-              <div className="flex items-center gap-2 mb-2 text-primary">
-                <FaQuoteLeft className="text-xl text-primary" />
-                <span className="italic text-sm text-gray-700">{card.quote}</span>
-              </div>
-              <p className="text-gray-700 text-sm mt-4 text-center">{card.description}</p>
-            </div>
-          }
-          flipOnClick={true}
-        />
-      ))}
-    </div>
+   <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  {cards.map((card, idx) => (
+    <FlipCard
+      key={card.title}
+      className="border-none shadow-lg hover:scale-105 transition-transform duration-300 bg-white rounded-xl overflow-hidden"
+      front={
+        <div className="flex flex-col items-center justify-center py-8 px-4 text-center break-words">
+          <Image
+            src={card.image}
+            alt={card.alt}
+            width={180}
+            height={180}
+            className="mb-4 max-w-full h-auto object-contain"
+            loading="lazy"
+          />
+          <h3 className="text-lg font-semibold text-gray-900 mt-2 leading-snug">
+            {card.title}
+          </h3>
+        </div>
+      }
+      back={
+        <div className="flex flex-col items-center justify-center py-8 px-4 h-full text-center overflow-hidden break-words">
+          <h3 className="text-lg font-semibold text-gray-900 mb-2 leading-snug">
+            {card.title}
+          </h3>
+          <div className="flex items-start gap-2 mb-2 text-primary flex-wrap justify-center">
+            <FaQuoteLeft className="text-xl text-primary shrink-0" />
+            <span className="italic text-sm text-gray-700 break-words">
+              {card.quote}
+            </span>
+          </div>
+          <p className="text-gray-700 text-sm mt-4 leading-relaxed break-words">
+            {card.description}
+          </p>
+        </div>
+      }
+      flipOnClick={true}
+    />
+  ))}
+</div>
+
   );
 };
 

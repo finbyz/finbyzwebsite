@@ -46,10 +46,10 @@ const IndustryTabs: React.FC<IndustryTabsProps> = ({ tabs }) => {
         ))}
       </div>
       <div className="rounded-xl bg-gradient-to-br from-primary/80 to-primary/60 text-white p-8 shadow-lg transition-all duration-300 animate-fade-in">
-        <h3 className="text-2xl font-semibold mb-3 flex items-center gap-2">
+        <h3 className="text-2xl text-black font-semibold mb-3 flex items-center gap-2">
           {active.title}
         </h3>
-        <p className="mb-6 text-base leading-relaxed">
+        <p className="mb-6 text-black text-justify leading-relaxed">
           {active.description}
         </p>
         <Button

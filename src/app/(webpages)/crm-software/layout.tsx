@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Best CRM Software & Open Source CRM System | Finbyz Tech",
   description: "Streamline your sales, marketing, and support with Finbyz CRM Software. Discover our powerful CRM system and flexible open source CRM solutions designed for growth.",
   keywords: "CRM Software, \ncrm system,\nopen source crm,\nSales Tracker Software,\nsales crm,\ncrm programs,\ncustomer management system,\ncrm companies,\n",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/crm-software",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Best CRM Software & Open Source CRM System | Finbyz Tech",
     description: "Streamline your sales, marketing, and support with Finbyz CRM Software. Discover our powerful CRM system and flexible open source CRM solutions designed for growth.",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     images: ["/files/CRMWord.svg"],
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -60,8 +57,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -70,7 +67,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

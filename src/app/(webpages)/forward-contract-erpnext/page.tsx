@@ -170,19 +170,7 @@ export default function Page() {
       </Section>
 
       {/* Download Section */}
-      <Section>
-        <div className="container-custom py-8 flex flex-col items-center">
-          <h4 className="text-lg font-semibold mb-2">Download:</h4>
-          <Link
-            href="https://frappecloud.com/marketplace/apps/forward_contract"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-2 rounded-lg bg-primary text-white font-medium shadow hover:bg-primary/90 transition-colors animate-fade-in-up"
-          >
-            Forward Contract
-          </Link>
-        </div>
-      </Section>
+    
 
       {/* CTA Section */}
       <Section useGradient>

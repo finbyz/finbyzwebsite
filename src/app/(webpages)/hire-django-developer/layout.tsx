@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Hire Django Developers Today \n",
   description: "Looking to hire Django developers? Find expert Python Django developers for your project needs. Hire Django developers today and level up your project!",
   keywords: "Django developers,\nhire django developer,\npython django developer,\npython and django developer\ndjango developer,\nfreelance django developer,\nhire django developer,\ndjango freelancer,\nremote django developer,\ndjango company,\nhire python django developer,	\n",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/hire-django-developer",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Hire Django Developers Today \n",
     description: "Looking to hire Django developers? Find expert Python Django developers for your project needs. Hire Django developers today and level up your project!",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     images: ["/files/Hire-dJango-Dev - New.svg"],
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -60,8 +57,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -70,7 +67,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

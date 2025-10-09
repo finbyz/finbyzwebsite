@@ -173,10 +173,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 <img 
                   src={heroImage.poster || heroImage.src} 
                   alt={heroImage.alt}
-                  className="w-full h-auto max-h-[520px] rounded-2xl object-contain"
+                  className="w-[90%] max-w-[480px] h-auto max-h-[360px] rounded-2xl object-contain mx-auto"
                   loading="lazy"
                 />
               )}
+              {/* "w-full h-auto max-h-[520px] rounded-2xl object-contain" */}
               
               {/* Decorative floating elements */}
               <div className={`absolute -top-4 -right-4 w-8 h-8 ${colors.bg} rounded-full opacity-80 animate-pulse`}></div>

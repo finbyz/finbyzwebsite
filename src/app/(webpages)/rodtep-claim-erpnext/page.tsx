@@ -21,13 +21,14 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Contact Us',
-          action: () => window.open('https://finbyz.tech/contact', '_blank'),
+          action: () => window.open('https://web.finbyz.tech/contact', '_blank'),
         }}
         heroImage={{
           alt: 'RODTEP Claim Management in ERPNext',
           src: 'api/fb/n/files/Rodtep-App-PageDesign-SVG.svg',
         }}
       />
+      {/* https://finbyz.tech/contact */}
 
       <Section>
         <div className="container-custom py-8">
@@ -123,19 +124,19 @@ export default function Page() {
         </div>
       </Section>
 
-      <Section>
+      {/* <Section>
         <div className="container-custom py-8 flex flex-col items-center">
           <a
             href="https://frappecloud.com/marketplace/apps/rodtep_claim_management"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-white font-semibold shadow-md hover:bg-primary/90 transition-colors text-lg"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary font-semibold shadow-md hover:bg-primary/90 transition-colors text-lg"
           >
             <LucideDownload className="w-5 h-5" />
             Download: RODTEP Claim
           </a>
         </div>
-      </Section>
+      </Section> */}
 
       <Section useGradient>
         <div className="container-custom py-8">

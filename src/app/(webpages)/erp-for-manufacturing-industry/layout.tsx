@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "ERP Software for Manufacturing Industry | FinByz Tech",
   description: "FinByz Tech’s ERPNext manufacturing ERP software streamlines production and inventory management, reducing costs and improving efficiency.",
   keywords: "erp software for manufacturing industry,\nmanufacturing erp software,\nerpnext for manufacturing,\nbest erp for manufacturing,\nerp for manufacturing industry,\nerp software manufacturing industry,\nerp for manufacturing,\nerp software for manufacturing,\nerp for manufacturing industry,\nbest erp for manufacturing,\nmanufacturing resource planning,\nbest manufacturing erp software,\nerpnext manufacturing",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/erp-for-manufacturing-industry",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ERP Software for Manufacturing Industry | FinByz Tech",
     description: "FinByz Tech’s ERPNext manufacturing ERP software streamlines production and inventory management, reducing costs and improving efficiency.",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     images: ["https://finbyz.tech/files/Manufacturingc334bc.svg"],
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -60,8 +57,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -70,7 +67,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

@@ -39,7 +39,7 @@ export const List = ({
                   className={`flex-shrink-0 text-${iconColor}-600 mt-1`} 
                   size={iconSize} 
                 />
-                <p className="text-lg leading-relaxed">
+                <p className="text-lg text-justify leading-relaxed">
                   {item}
                 </p>
               </li>

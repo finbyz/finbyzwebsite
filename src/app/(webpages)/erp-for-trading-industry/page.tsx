@@ -137,6 +137,7 @@ export default function Page() {
         </div>
       </Section>
 
+
       <Section>
         <div className="container-custom py-8">
           <div className="flex flex-col items-center gap-4 animate-fade-in-up">
@@ -150,6 +151,8 @@ export default function Page() {
           </div>
         </div>
       </Section>
+
+      
 
       <Section useGradient>
         <div className="container-custom py-8">

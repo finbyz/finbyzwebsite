@@ -48,7 +48,7 @@ const IndustryServiceGrid: FC<IndustryServiceGridProps> = ({ services }) => (
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-gray-700 text-center">{service.description}</p>
+            <p className="text-gray-700 text-justify">{service.description}</p>
           </CardContent>
         </Card>
       </motion.div>

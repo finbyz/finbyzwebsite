@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Hire Dedicated Python Developers\n\n",
   description: "Looking for top Python development companies? Hire Python developer with expertise. Find skilled Python coders for your projects. Python developer hire.",
   keywords: "python development companies,\nhire python developer,\npython developers,\npython coder,\npython developer hire,\npython developers,\nfull stack developers,\npython development companies,\npython api development,\nweb app python,\npython company,\npython developers in india\n\n\n\n",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/hire-python-developer",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Hire Dedicated Python Developers\n\n",
     description: "Looking for top Python development companies? Hire Python developer with expertise. Find skilled Python coders for your projects. Python developer hire.",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     images: ["/files/Hire-Python-Dev.svg"],
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -60,8 +57,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -70,7 +67,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

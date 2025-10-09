@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "ERP for Chemical Industry: Comprehensive Cost-Benefit Analysis Guide",
   description: "Discover the financial benefits and costs of ERP systems in the chemical industry with our comprehensive guide to making informed decisions.",
   keywords: "Chemical Industry ERP,\nchemical ERP Software,\nERP For Chemical, \nERP in Chemical Industry\n\n",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/cost-benefit-analysis-of-erp-investments-in-the-chemical-sector",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ERP for Chemical Industry: Comprehensive Cost-Benefit Analysis Guide",
     description: "Discover the financial benefits and costs of ERP systems in the chemical industry with our comprehensive guide to making informed decisions.",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -59,8 +56,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -69,7 +66,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       "articleBody": "<section>\n    <div class=\"container-fluid text-justify\">\n        <div class=\"row p-lr-50\">\n            <div class=\"col-md-12 rollover finbyz-fadeinup text-center\"><img alt=\"cost-benefit-analysis-of-erp-investments-in-the-chemical-sector\"\n                    height=\"100%\" src=\"/files/15-04-24.svg\" title=\"cost-benefit-analysis-of-erp-investments-in-the-chemical-sector\"\n                    width=\"80%\"></div>\n        </div>\n    </div>\n<br> \n</section>\n<section class=\"mt-5\">\n    <div class",
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

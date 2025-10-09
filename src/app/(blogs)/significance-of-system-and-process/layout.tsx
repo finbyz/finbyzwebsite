@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Enhancing Business Efficiency: The Importance of Systems, Processes, and SOPs",
   description: "Various Significance of System and Process are uniformity, precision, scalablity, productivity and adaptability.",
   keywords: "standard operating procedures,\nprocess improvement,\nSystem and process",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/significance-of-system-and-process",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Enhancing Business Efficiency: The Importance of Systems, Processes, and SOPs",
     description: "Various Significance of System and Process are uniformity, precision, scalablity, productivity and adaptability.",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -59,8 +56,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -69,7 +66,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       "articleBody": "<section class=\"mt-4\">\n    <div class=\"container-fluid\">\n        <div class=\"row pt-20 pb-20\">\n            <div class=\"col-12 col-sm-12 text-center\">\n                <img alt=\"Significance of System and Process\" class=\"blog-main-img\"\n                    src=\"/files/significance-of-system.svg\" title=\"Significance of System and Process\">\n            </div>\n            <div class=\"col-sm-12 text-center finbyz-fadeinup\" style=\"padding-top: 30px;\">\n                <h2>Significance of System a",
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

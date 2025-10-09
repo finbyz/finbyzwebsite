@@ -22,7 +22,7 @@ const heroProps = {
   primaryCategory: 'Business',
   author: {
     name: 'mukesh',
-    title: 'mukesh',
+    title: 'Mukesh Variyani',
   },
   publishDate: '2018-12-06',
   readTime: '6 min read',

@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "WhatsApp Privacy Policy | Finbyz Tech Data Protection and User Privacy",
   description: "We care about protecting the personal information of our customers and visitors who use our website www.finbyz.tech, our products or services (collectively, our \"Users\").\nThis Privacy Policy governs the manner in which Finbyz Tech collects, uses, shares, maintains and discloses information collected from users (each, a \"User\", you ) of the https://www.finbyz.tech/privacy-policy website (\"Site\"). This privacy policy applies to the Site and all products and services offered by Finbyz Tech. In this policy, \"we\", \"us\" and \"our\" referred to Finbyz Tech and Finbyz Tech Corporate family\n",
   keywords: "Finbyz WhatsApp privacy policy,\nWhatsApp data usage policy,\nFinbyz Tech data protection,\nWhatsApp communication privacy",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/whatsapp-privacy-policy",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "WhatsApp Privacy Policy | Finbyz Tech Data Protection and User Privacy",
     description: "We care about protecting the personal information of our customers and visitors who use our website www.finbyz.tech, our products or services (collectively, our \"Users\").\nThis Privacy Policy governs the manner in which Finbyz Tech collects, uses, shares, maintains and discloses information collected from users (each, a \"User\", you ) of the https://www.finbyz.tech/privacy-policy website (\"Site\"). This privacy policy applies to the Site and all products and services offered by Finbyz Tech. In this policy, \"we\", \"us\" and \"our\" referred to Finbyz Tech and Finbyz Tech Corporate family\n",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -60,8 +57,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -70,7 +67,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

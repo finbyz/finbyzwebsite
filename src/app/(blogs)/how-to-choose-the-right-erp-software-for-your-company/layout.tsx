@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "How to Choose the Best ERP Software: A Comprehensive Guide to Top ERP Solutions",
   description: "Confused what’s the best ERP software for your business? Here’s a guide to help you choose best ERP solution for your company.",
   keywords: "Best ERP Software,\nerp solutions,\nbest erp system,\nERP Software,\nERP System\n",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/how-to-choose-the-right-erp-software-for-your-company",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "How to Choose the Best ERP Software: A Comprehensive Guide to Top ERP Solutions",
     description: "Confused what’s the best ERP software for your business? Here’s a guide to help you choose best ERP solution for your company.",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -59,8 +56,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -69,7 +66,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       "articleBody": "<section class=\"mt-4\">\n    <div class=\"container-fluid\">\n        <div class=\"row p-lr-50 pt-20 pb-20\">\n            <div class=\"col-12 col-sm-12 text-center\">\n                <img class=\"blog-main-img w-100\" src=\"/files/right-erp-software.svg\"\n                    alt=\"How to choose the right ERP Software for your company\"\n                    title=\"How to choose the right ERP Software for your company\">\n            </div>\n        </div>\n    </div>\n        <div class=\"row\">\n        <div",
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

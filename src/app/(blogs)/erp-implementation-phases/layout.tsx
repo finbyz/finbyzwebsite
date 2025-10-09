@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "ERP Implementation Life Cycle: Comprehensive Guide to ERP Implementation Phases",
   description: "ERP has several implementation phases like finding out the right software,project planning,gap analysis",
   keywords: "erp implementation life cycle, ERP Implementation Phase, different phases of erp implementation, implementation phases of erp, phases of erp implementation life cycle, erp implementation cycle, erp life cycle phases, steps in erp implementation life cycle, phases of erp implementation",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/erp-implementation-phases",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ERP Implementation Life Cycle: Comprehensive Guide to ERP Implementation Phases",
     description: "ERP has several implementation phases like finding out the right software,project planning,gap analysis",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -59,8 +56,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -69,7 +66,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       "articleBody": "<section class=\"\">\n    <div class=\"tech_update\">\n        <div class=\"container-fluid\">\n            <div class=\"row p-lr-50\">\n                <div class=\"col-md-12 rollover finbyz-fadeinup\"><img alt=\"Phases of ERP Implementation life cycle\"\n                        title=\"Phases of ERP Implementation life cycle\" height=\"100%\"\n                        src=\"/files/Phases_of_ERP_Implementation.svg\" width=\"100%\"></div>\n            </div>\n        </div>\n    </div>\n</section>\n<section>\n      ",
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

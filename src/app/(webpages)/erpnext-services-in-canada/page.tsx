@@ -238,17 +238,29 @@ export default function Page() {
               ERPNext is a flexible open-source ERP software designed to support a diverse array of sectors, including manufacturing, distribution, retail, trading, services, education, non-profits, and healthcare. Its cloud-based nature, ease of use, and affordability make it an attractive option for Canadian businesses of various sizes.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 justify-items-center">
             {flipCards.map((card, idx) => (
               <FlipCard
                 key={idx}
-                front={card.front}
-                back={card.back}
-                className="h-full min-h-[260px]"
+                front={
+                <div className="flex flex-col items-center justify-center h-full p-6 text-center">
+               { card.front}
+                </div>
+                
+                }
+                back={
+                   <div className="flex flex-col items-center justify-center h-full p-6 text-center">
+               { card.back}
+                </div>
+                }
+                className="h-full min-h-[300px] lg:w-72 w-64 bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
                 flipOnClick
               />
             ))}
           </div>
+
+
+           
         </div>
       </Section>
       <Section useGradient>
@@ -261,14 +273,14 @@ export default function Page() {
           />
           <div className="flex flex-col gap-3 mt-4">
             <p>ERPNext is adaptable to cater to the unique requirements of any enterprise, continuously evolving with new features and enhancements to stay ahead of business demands.</p>
-            <p>In Canada, <a href="/erpnext-software" className="text-primary underline hover:text-primary/80 transition">ERPNext</a> is a preferred choice among businesses for several compelling reasons. Firstly, it provides an all-encompassing solution to manage every facet of a business. Secondly, its user-friendly interface and cost-effectiveness make it accessible to companies of all sizes. Lastly, being cloud-based, it allows for flexible access from any location with an internet connection, aligning with the dynamic needs of Canadian businesses.</p>
+            <p>In Canada, <a href="/erpnext-software" className="text-primary text-justify underline hover:text-primary/80 transition">ERPNext</a> is a preferred choice among businesses for several compelling reasons. Firstly, it provides an all-encompassing solution to manage every facet of a business. Secondly, its user-friendly interface and cost-effectiveness make it accessible to companies of all sizes. Lastly, being cloud-based, it allows for flexible access from any location with an internet connection, aligning with the dynamic needs of Canadian businesses.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
             <Card className="border-none bg-gray-50 shadow-sm animate-fadeInUp">
               <CardHeader>
                 <CardTitle className="text-center">Enhanced Efficiency</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className='text-justify'>
                 <p>ERPNext streamlines business processes across Canada by automating routine tasks, allowing employees to dedicate more time to critical activities such as sales and customer engagement.</p>
               </CardContent>
             </Card>
@@ -276,15 +288,15 @@ export default function Page() {
               <CardHeader>
                 <CardTitle className="text-center">Cost Savings</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="text-justify" >
                 <p>By serving as an all-encompassing ERP solution, ERPNext reduces the need for Canadian businesses to invest in and manage multiple software platforms, significantly cutting down operational costs.</p>
-              </CardContent>
+              </CardContent >
             </Card>
             <Card className="border-none bg-gray-50 shadow-sm animate-fadeInUp">
               <CardHeader>
                 <CardTitle className="text-center">Greater Transparency</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="text-justify">
                 <p>ERPNext affords Canadian enterprises a real-time overview of their operations, facilitating quick identification and resolution of issues, as well as enabling more informed decision-making.</p>
               </CardContent>
             </Card>
@@ -292,7 +304,7 @@ export default function Page() {
               <CardHeader>
                 <CardTitle className="text-center">Regulatory Compliance</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="text-justify">
                 <p>With frequent updates to ensure adherence to the latest Canadian laws and regulations, ERPNext simplifies compliance for Canadian businesses, keeping them up to date with local legal requirements.</p>
               </CardContent>
             </Card>
@@ -342,7 +354,7 @@ export default function Page() {
       <Section>
         <div className="container-custom py-8 flex flex-col gap-8">
           <h2 className="text-2xl font-bold text-center mb-2">Serving Businesses Worldwide from Canada</h2>
-          <p className="text-center">
+          <p className="text-justify">
             As a premier global ERP implementation partner, FinByz Tech is dedicated to supporting businesses not only in Canada but also in India, the USA, the UK, UAE, and Saudi Arabia. Our experienced team is always on standby, ready to address your ERP implementation needs, no matter where your business is located. Whether you're looking for information, seeking expert consultations, or in need of any assistance, don't hesitate to reach out to us. We're committed to fulfilling your ERP requirements in these varied markets, ensuring your business is equipped with the best ERP solutions, tailored to the global stage.
           </p>
           <ClientCountryGrid countries={clientCountries} />

@@ -90,7 +90,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8" id="industry-intro">
-          <p className="text-lg leading-relaxed animate-fade-in">
+          <p className="text-lg text-justify leading-relaxed animate-fade-in">
             When it comes to ERP Software, customization on the basis of industries plays a very important role. Industry-specific ERP is more beneficial to a company as they are very flexible and provide the possibility of adding features and integrating add-on customization as per the specific industry that your company belongs to. It is a solution that is made according to the different requirements and needs of various departments of your business. Implementation of Industry-specific ERP in your business helps you to simplify and fasten the planning and decision making of your business. The Industrial Specific ERP mainly provides the advantages of speed, efficiency, and convenience. Some of the main Industry Specific ERP Software are as follows:
           </p>
         </div>
@@ -104,14 +104,14 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8">
-          <p className="text-lg leading-relaxed animate-fade-in">
+          <p className="text-lg text-justify leading-relaxed animate-fade-in">
             In the realm of <a href="/erp-software" className="text-primary underline hover:text-primary/80 transition-colors">ERP software</a>, tailoring solutions to specific industry needs is crucial for maximizing effectiveness. Industry-specific ERP solutions offer unparalleled flexibility, enabling the seamless addition of features and integration of bespoke customizations tailored to the unique requirements of your business sector. These tailored solutions are crafted to meet the diverse needs of various departments within your organization, providing a cohesive tool that enhances operational efficiency. As a distinguished <a href="/erpnext-certified-partner" className="text-primary underline hover:text-primary/80 transition-colors">ERPNext service provider</a>, we excel in delivering customized ERPNext solutions that cater to the unique demands of your industry. Implementing an industry-specific ERP system within your business streamlines planning and decision-making processes, significantly boosting speed, efficiency, and convenience. Key sectors that benefit from our specialized ERPNext solutions include manufacturing, retail, healthcare, and education, among others. Partner with us to harness the power of ERPNext and propel your business towards streamlined operations and strategic growth.
           </p>
         </div>
       </Section>
 
       <Section>
-        <div className="container-custom py-8">
+        <div className="py-8">
           <CTA
             data={{
               subheading: {

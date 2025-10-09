@@ -46,7 +46,7 @@ export default function Page() {
             text="The Future belongs to those who see possibilities before they become obvious - John Scully"
             isHeading={false}
           />
-          <div className="text-gray-700 text-lg leading-relaxed">
+          <div className="text-gray-700 text-justify text-lg leading-relaxed">
             <p className="mb-4">
               Human resource, often considered the backbone of any organization, is the only function with a strong human element at its core. As businesses move toward complete automation, it’s essential for HR departments to embrace technology through advanced human resource software. While automation may seem to reduce the “human touch,” it actually empowers HR professionals by simplifying complex processes. With increasing business demands, automating HR functions—especially recruitment—has become a necessity. Our HR software offers the perfect solution to streamline your operations, reduce manual workload, and enhance productivity.
             </p>
@@ -54,239 +54,6 @@ export default function Page() {
               Every business has a unique structure, but core HR functions remain largely similar. Implementing effective human resource software simplifies day-to-day activities, increases efficiency, and accelerates task execution across all departments.
             </p>
           </div>
-        </div>
-      </Section>
-
-      {/* HR Features Flip Cards Section */}
-      <Section useGradient>
-        <div className="container-custom py-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Recruitment */}
-          <FlipCard
-            front={
-              <Card className="border-none shadow-lg transition-transform duration-300 hover:scale-105 bg-white flex flex-col items-center justify-center h-full">
-                <CardHeader className="flex flex-col items-center">
-                  <CardTitle className="text-xl font-semibold mb-2">Recruitment</CardTitle>
-                  <img
-                    src="api/fb/n/files/recruitment.svg"
-                    alt="Recruitment"
-                    width={120}
-                    height={120}
-                    className="mb-2"
-                  />
-                  <CardDescription className="text-center text-gray-600">
-                    Accurate data gives you the power to attract great talent” – Rob Williams
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-            }
-            back={
-              <Card className="border-none shadow-lg bg-white flex flex-col h-full">
-                <CardContent className="flex-1 flex flex-col justify-center">
-                  <p className="mb-4 text-gray-700">
-                    Every organization aims to hire rare and highly competent talent. With the growth of the pool of equally capable candidates, it is essential to hire the best one in all perspectives. Recruitment software reduces the time to hire the right talent and also reduces the cost involved per hire. The quality of the candidates also proves to come out as more efficient and suitable. Recruitment software helps in:
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="text-green-500 mt-1" size={20} />
-                      <span>Systematically store data.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="text-green-500 mt-1" size={20} />
-                      <span>Improves the quality of talents hired</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="text-green-500 mt-1" size={20} />
-                      <span>Reduces per hire cost and leads to efficiency.</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            }
-            className="h-full"
-          />
-
-          {/* Employee and Attendance */}
-          <FlipCard
-            front={
-              <Card className="border-none shadow-lg transition-transform duration-300 hover:scale-105 bg-white flex flex-col items-center justify-center h-full">
-                <CardHeader className="flex flex-col items-center">
-                  <CardTitle className="text-xl font-semibold mb-2">Employee and Attendance</CardTitle>
-                  <img
-                    src="api/fb/n/files/employee-attendance.svg"
-                    alt="Employee and Attendance"
-                    width={120}
-                    height={120}
-                    className="mb-2"
-                  />
-                  <CardDescription className="text-center text-gray-600">
-                    I want to hire employees who arrive late - said no Boss ever...
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-            }
-            back={
-              <Card className="border-none shadow-lg bg-white flex flex-col h-full">
-                <CardContent className="flex-1 flex flex-col justify-center">
-                  <p className="text-gray-700">
-                    With the emergence of flexible timings, tracking employee entry and exit becomes challenging without a proper system. Modern organizations use biometric systems integrated with HR software for accurate attendance tracking.
-                  </p>
-                </CardContent>
-              </Card>
-            }
-            className="h-full"
-          />
-
-          {/* Leave Management */}
-          <FlipCard
-            front={
-              <Card className="border-none shadow-lg transition-transform duration-300 hover:scale-105 bg-white flex flex-col items-center justify-center h-full">
-                <CardHeader className="flex flex-col items-center">
-                  <CardTitle className="text-xl font-semibold mb-2">Leave Management</CardTitle>
-                  <img
-                    src="api/fb/n/files/leave-management.svg"
-                    alt="Leave Management"
-                    width={120}
-                    height={120}
-                    className="mb-2"
-                  />
-                  <CardDescription className="text-center text-gray-600">
-                    Take a break and be mentally and physically refreshed
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-            }
-            back={
-              <Card className="border-none shadow-lg bg-white flex flex-col h-full">
-                <CardContent className="flex-1 flex flex-col justify-center">
-                  <p className="text-gray-700">
-                    Occasional leaves are important for employee well-being, but excessive absence can impact productivity. Leave management software tracks leave balances and patterns, reflecting on overall performance.
-                  </p>
-                </CardContent>
-              </Card>
-            }
-            className="h-full"
-          />
-
-          {/* Appraisal */}
-          <FlipCard
-            front={
-              <Card className="border-none shadow-lg transition-transform duration-300 hover:scale-105 bg-white flex flex-col items-center justify-center h-full">
-                <CardHeader className="flex flex-col items-center">
-                  <CardTitle className="text-xl font-semibold mb-2">Appraisal</CardTitle>
-                  <img
-                    src="api/fb/n/files/appraisal.svg"
-                    alt="Appraisal"
-                    width={120}
-                    height={120}
-                    className="mb-2"
-                  />
-                  <CardDescription className="text-center text-gray-600">
-                    I love my Job and my Boss
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-            }
-            back={
-              <Card className="border-none shadow-lg bg-white flex flex-col h-full">
-                <CardContent className="flex-1 flex flex-col justify-center">
-                  <p className="mb-4 text-gray-700">
-                    Appraisals are the best motivator for every employee. Manual performance reviews are tedious. Automated appraisals review individual performance and alignment to objectives. Benefits include:
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="text-green-500 mt-1" size={20} />
-                      <span>Helps in effective communication.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="text-green-500 mt-1" size={20} />
-                      <span>Reviews the performance of employees.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="text-green-500 mt-1" size={20} />
-                      <span>Makes it more reliable.</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            }
-            className="h-full"
-          />
-
-          {/* Expense Claim */}
-          <FlipCard
-            front={
-              <Card className="border-none shadow-lg transition-transform duration-300 hover:scale-105 bg-white flex flex-col items-center justify-center h-full">
-                <CardHeader className="flex flex-col items-center">
-                  <CardTitle className="text-xl font-semibold mb-2">Expense Claim</CardTitle>
-                  <img
-                    src="api/fb/n/files/expence-claim.svg"
-                    alt="Expense Claim"
-                    width={120}
-                    height={120}
-                    className="mb-2"
-                  />
-                  <CardDescription className="text-center text-gray-600">
-                    I want to hire employees who arrive late” said no Boss ever...
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-            }
-            back={
-              <Card className="border-none shadow-lg bg-white flex flex-col h-full">
-                <CardContent className="flex-1 flex flex-col justify-center">
-                  <p className="mb-4 text-gray-700">
-                    Many expenses that employees incur are paid by the organization, such as travel, bills, rent, and more. Expense management software helps:
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="text-green-500 mt-1" size={20} />
-                      <span>Reduce the documentation of every single bill</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="text-green-500 mt-1" size={20} />
-                      <span>Reimbursements to employees</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="text-green-500 mt-1" size={20} />
-                      <span>Reduces the processing time and cost</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            }
-            className="h-full"
-          />
-
-          {/* Payroll */}
-          <FlipCard
-            front={
-              <Card className="border-none shadow-lg transition-transform duration-300 hover:scale-105 bg-white flex flex-col items-center justify-center h-full">
-                <CardHeader className="flex flex-col items-center">
-                  <CardTitle className="text-xl font-semibold mb-2">Payroll</CardTitle>
-                  <img
-                    src="api/fb/n/files/payroll.svg"
-                    alt="Payroll"
-                    width={120}
-                    height={120}
-                    className="mb-2"
-                  />
-                  <CardDescription className="text-center text-gray-600">
-                    The biggest thrill is not winning on Sunday but meeting Payroll on Monday – Art Rooney
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-            }
-            back={
-              <Card className="border-none shadow-lg bg-white flex flex-col h-full">
-                <CardContent className="flex-1 flex flex-col justify-center">
-                  <p className="text-gray-700">
-                    Compensation is the direct motivator for employees. Payroll management software ensures regular and timely pay, accuracy, and eliminates redundancy and delays.
-                  </p>
-                </CardContent>
-              </Card>
-            }
-            className="h-full"
-          />
         </div>
       </Section>
 
@@ -298,12 +65,12 @@ export default function Page() {
             <img
               src="api/fb/n/files/icon Real-time information.svg"
               alt="Flawless UI with Real-time information"
-              width={48}
-              height={48}
-              className="mb-2"
+              width={80}
+              height={80}
+              className="mb-2 "
             />
-            <CardTitle className="text-lg font-bold mb-2">Recruitment</CardTitle>
-            <CardDescription className="text-center mb-2">
+            <CardTitle className="text-2xl font-bold mb-2">Recruitment</CardTitle>
+            <CardDescription className="text-justify text-lg mb-2">
               Finding and hiring the right talent is crucial to organizational growth. As the pool of skilled candidates grows, selecting the best fit becomes more challenging. Our recruitment module within the HR software reduces hiring time and costs while improving candidate quality. The system helps you:
             </CardDescription>
             <ul className="space-y-1 text-left w-full">
@@ -327,12 +94,12 @@ export default function Page() {
             <img
               src="api/fb/n/files/icon Improved Collaboration.svg"
               alt="Improved Collaboration"
-              width={48}
-              height={48}
+              width={80}
+              height={80}
               className="mb-2"
             />
-            <CardTitle className="text-lg font-bold mb-2">Employee and Attendance</CardTitle>
-            <CardDescription className="text-center mb-2">
+            <CardTitle className="text-2xl font-bold mb-2">Employee and Attendance</CardTitle>
+            <CardDescription className="text-justify text-lg mb-2">
               With flexible work hours becoming common, tracking attendance manually is no longer feasible. Our HR and payroll software includes biometric integration for accurate attendance tracking, helping businesses maintain discipline and transparency.
             </CardDescription>
           </Card>
@@ -342,12 +109,12 @@ export default function Page() {
             <img
               src="api/fb/n/files/icon Improved Collaboration.svg"
               alt="Improved Collaboration"
-              width={48}
-              height={48}
+              width={80}
+              height={80}
               className="mb-2"
             />
-            <CardTitle className="text-lg font-bold mb-2">Leave Management</CardTitle>
-            <CardDescription className="text-center mb-2">
+            <CardTitle className="text-2xl font-bold mb-2">Leave Management</CardTitle>
+            <CardDescription className="text-justify text-lg mb-2">
               While occasional leaves are important for employee well-being, excessive absence can impact productivity. Our HR software includes leave management tools that monitor leave balances, track patterns, and evaluate their impact on performance.
             </CardDescription>
           </Card>
@@ -357,12 +124,12 @@ export default function Page() {
             <img
               src="api/fb/n/files/icon Real-time information.svg"
               alt="Flawless UI with Real-time information"
-              width={48}
-              height={48}
+              width={80}
+              height={80}
               className="mb-2"
             />
-            <CardTitle className="text-lg font-bold mb-2">Appraisal</CardTitle>
-            <CardDescription className="text-center mb-2">
+            <CardTitle className="text-2xl font-bold mb-2">Appraisal</CardTitle>
+            <CardDescription className="text-justify text-lg mb-2">
               Appraisals are key to motivating employees. Manual performance reviews are time-consuming and error-prone. Our human resource software automates the appraisal process, making it consistent, objective, and data-driven. Benefits include:
             </CardDescription>
             <ul className="space-y-1 text-left w-full">
@@ -386,12 +153,12 @@ export default function Page() {
             <img
               src="api/fb/n/files/icon Real-time information.svg"
               alt="Flawless UI with Real-time information"
-              width={48}
-              height={48}
+              width={80}
+              height={80}
               className="mb-2"
             />
-            <CardTitle className="text-lg font-bold mb-2">Expense Claim</CardTitle>
-            <CardDescription className="text-center mb-2">
+            <CardTitle className="text-2xl font-bold mb-2">Expense Claim</CardTitle>
+            <CardDescription className="text-justify text-lg mb-2">
               Employee-incurred expenses such as travel and utilities need efficient tracking. Our HR and payroll software includes an expense claim system that:
             </CardDescription>
             <ul className="space-y-1 text-left w-full">
@@ -415,12 +182,12 @@ export default function Page() {
             <img
               src="api/fb/n/files/icon Improved Collaboration.svg"
               alt="Improved Collaboration"
-              width={48}
-              height={48}
+              width={80}
+              height={80}
               className="mb-2"
             />
-            <CardTitle className="text-lg font-bold mb-2">Payroll</CardTitle>
-            <CardDescription className="text-center mb-2">
+            <CardTitle className="text-2xl font-bold mb-2">Payroll</CardTitle>
+            <CardDescription className="text-justify text-lg mb-2">
               Timely and accurate compensation is critical to employee satisfaction. Our payroll module within the HR software ensures accurate calculations, tax compliance, and punctual salary disbursements. Automation in payroll management reduces errors, ensures compliance, and increases overall trust in the system.
             </CardDescription>
           </Card>
@@ -431,7 +198,7 @@ export default function Page() {
       <Section useGradient>
         <div className="container-custom py-8">
           <h2 className="text-2xl font-bold mb-4 text-center">Benefits of Human Resource Software for Your Business</h2>
-          <div className="text-gray-700 text-lg leading-relaxed mb-6">
+          <div className="text-gray-700 text-lg text-justify leading-relaxed mb-6">
             <p className="mb-2">
               In addition to core functionalities, a robust human resource software also streamlines activities such as time tracking, skill management, employee training, and detailed reporting with analytics.
             </p>
@@ -464,7 +231,7 @@ export default function Page() {
 
       {/* CTA Section */}
       <Section>
-        <div className="container-custom py-8">
+        <div className="py-8">
           <CTA
             data={{
               subheading: {

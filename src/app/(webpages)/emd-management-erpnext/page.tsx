@@ -108,7 +108,7 @@ export default function Page() {
       </Section>
 
       <Section>
-        <div className="container-custom py-8">
+        <div className="py-8">
           <CTA
             data={{
               subheading: {

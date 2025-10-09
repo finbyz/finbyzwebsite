@@ -7,6 +7,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 
+
 const ALL_CATEGORIES = ["Technology", "Business", "General"];
 
 interface BlogPost {
@@ -90,6 +91,7 @@ export default function BlogPostPage() {
   const [endDate, setEndDate] = useState<string>("");
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(false);
+ 
 
   const categories = useMemo(() => ["All Posts", ...ALL_CATEGORIES], []);
 
@@ -105,12 +107,12 @@ export default function BlogPostPage() {
         if (endDate) params.append('end_date', endDate);
 
         const url = `/api/blog-posts${params.toString() ? `?${params.toString()}` : ''}`;
-        console.log("Fetching URL:", url);
+        console.log("Fetching URL:---", url);
 
         const response = await fetch(url);
         
         if (!response.ok) {
-          throw new Error('Failed to fetch blog posts');
+          // throw new Error('Failed to fetch blog posts');
         }
 
         const result = await response.json();
@@ -194,6 +196,7 @@ export default function BlogPostPage() {
       </section>
 
       {/* Blog Grid */}
+   
       <main className="container mx-auto px-4 py-16">
         {loading ? (
           <p className="text-center text-muted-foreground">Loading...</p>
@@ -212,3 +215,5 @@ export default function BlogPostPage() {
     </div>
   );
 }
+
+// export  {posts};

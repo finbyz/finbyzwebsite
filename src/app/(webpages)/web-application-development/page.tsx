@@ -46,7 +46,7 @@ export default function Page() {
           <div className="pb-6">
             <QuoteBlock text="Creating robust, affordable and efficient web applications that are tailor-made for your business" isHeading={false} />
           </div>
-          <p className="text-muted-foreground text-base animate-fade-in-up">
+          <p className="text-muted-foreground text-justify text-base animate-fade-in-up">
             We at FinByz use best programming practices and structured framework programming to deliver the most efficient web application solutions for you. We are constantly updating ourselves with the advancements in technology and programming arena to stay on top of the growing technological requirements of our clients.
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function Page() {
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="flex-1 flex flex-col gap-4">
               <h2 className="text-2xl font-bold text-primary animate-fade-in-up text-center md:text-left">Technology expertise</h2>
-              <p className="text-base text-muted-foreground animate-fade-in-up">
+              <p className="text-base text-justify text-muted-foreground animate-fade-in-up">
                 Our adaptive web applications are built using the latest array of web technologies and practices to enable the clients to simplify complex business workflows. To make web applications not only powerful but also interactive, reliable and robust, we work with a wide range of technologies.
               </p>
             </div>
@@ -74,7 +74,7 @@ export default function Page() {
           </div>
           <div className="mt-10">
             <QuoteBlock text="We treat our clients like our partners" isHeading={false} />
-            <div className="mt-4 space-y-3 animate-fade-in-up">
+            <div className="mt-4 text-justify space-y-3 animate-fade-in-up">
               <p>
                 We are focused on successfully achieving the same target as our clients and do so by having a strong foundation based on respect, professionalism, and understanding of client’s business.
               </p>
@@ -90,7 +90,7 @@ export default function Page() {
       <Section>
         <div className="container-custom py-8">
           <h2 className="text-2xl font-bold text-primary mb-4 animate-fade-in-up">Scalable & Responsive Web Application Development</h2>
-          <p className="text-base text-muted-foreground mb-8 animate-fade-in-up">
+          <p className="text-base text-justify text-muted-foreground mb-8 animate-fade-in-up">
             We provide scalable & responsive web app development services that are focused on meeting the client's business requirements and strategies. We solve business problems by end-to-end web application development solutions using the latest technologies. The architect web applications keeping in mind your future growth, and build business software which can scale as your business grows.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -127,7 +127,7 @@ export default function Page() {
 
       {/* CTA Section */}
       <Section>
-        <div className="container-custom py-8">
+        <div className="py-8">
           <CTA
             data={{
               subheading: {

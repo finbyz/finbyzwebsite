@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Unveiling the Top 5 Benefits of ERP for the Chemical Industry",
   description: "Maintaining safety standards, Strict Governance, Managing regulations, Real-time information of Manufacturing, R & D.",
   keywords: "chemical industries,\nchemical manufacturing,\nchemical ERP System, \nERP for Chemical,\nsample managements,",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/top-5-benefits-of-erp-for-chemical-industry",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Unveiling the Top 5 Benefits of ERP for the Chemical Industry",
     description: "Maintaining safety standards, Strict Governance, Managing regulations, Real-time information of Manufacturing, R & D.",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -59,8 +56,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -69,7 +66,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       "articleBody": "<section>\n    <div class=\"container-fluid\">\n        <div class=\"row p-lr-50\">\n            <div class=\"col-md-12 rollover finbyz-fadeinup\"><img alt=\"Top 5 Benefits of ERP for Chemical Industry\"\n                    height=\"100%\" src=\"/files/chemical-banner.svg\" title=\"Top 5 Benefits of ERP for Chemical Industry\"\n                    width=\"100%\"></div>\n\n        </div>\n    </div>\n\n\n</section>\n<section class=\"mt-50\">\n    <div class=\" finbyz-fadeinup\">\n        <div class=\"row\">\n        ",
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

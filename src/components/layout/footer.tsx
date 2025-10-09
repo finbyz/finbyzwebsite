@@ -90,7 +90,7 @@ export default function Footer() {
   return (
     <footer className="bg-slate-900 text-white w-full">
       {/* Main Footer Content */}
-      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-20 py-16">
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-20 py-16 max-w-screen-xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-8">
           
           {/* Company Info - Spans 1 column */}
@@ -130,13 +130,13 @@ export default function Footer() {
                 About
               </h4>
               <ul className="space-y-3">
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Our Story</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Vision & Mission</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Leadership Team</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Core Values</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Life @ Finbyz</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Partners & Certifications</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">CSR / Sustainability</a></li>
+                <li><a href="/our-story" className="text-slate-300 hover:text-white transition-colors text-sm">Our Story</a></li>
+                <li><a href="/steer-your-vision" className="text-slate-300 hover:text-white transition-colors text-sm">Vision & Mission</a></li>
+                <li><a href="/leadership-team" className="text-slate-300 hover:text-white transition-colors text-sm">Leadership Team</a></li>
+                <li><a href="/core-value" className="text-slate-300 hover:text-white transition-colors text-sm">Core Values</a></li>
+                <li><a href="/life-at-finbyz" className="text-slate-300 hover:text-white transition-colors text-sm">Life @ Finbyz</a></li>
+                <li><a href="/erp-partner" className="text-slate-300 hover:text-white transition-colors text-sm">Partners & Certifications</a></li>
+                <li><a href="/csr-sustainability" className="text-slate-300 hover:text-white transition-colors text-sm">CSR / Sustainability</a></li>
               </ul>
             </div>
           </div>
@@ -149,14 +149,18 @@ export default function Footer() {
                 Industries
               </h4>
               <ul className="space-y-3">
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Manufacturing</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Textile</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Trading & Distribution</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Services</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Electronics</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Healthcare</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Education</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">View All →</a></li>
+                <li><a href="/erp-for-manufacturing-industry" className="text-slate-300 hover:text-white transition-colors text-sm">Manufacturing</a></li>
+                {/* <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Textile</a></li> */}
+                <li><a href="/erp-for-trading-industry" className="text-slate-300 hover:text-white transition-colors text-sm">Trading & Distribution</a></li>
+                {/* <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Services</a></li> */}
+                {/* <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Electronics</a></li> */}
+                {/* <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Healthcare</a></li> */}
+                 <li><a href="/erp-for-chemical-industry" className="text-slate-300 hover:text-white transition-colors text-sm">Chemicals </a></li>
+                  <li><a href="/erp-for-engineering-industry" className="text-slate-300 hover:text-white transition-colors text-sm">Engineering</a></li>
+                   <li><a href="/erp-for-logistics-industry" className="text-slate-300 hover:text-white transition-colors text-sm">Logistics</a></li>
+                <li><a href="/erp-for-agro-commodity" className="text-slate-300 hover:text-white transition-colors text-sm">Agriculture</a></li>
+                 <li><a href="/erp-for-education" className="text-slate-300 hover:text-white transition-colors text-sm">Education</a></li>
+                <li><a href="/erp-for-industry" className="text-slate-300 hover:text-white transition-colors text-sm">View All →</a></li>
               </ul>
             </div>
           </div>
@@ -169,12 +173,20 @@ export default function Footer() {
                 Services
               </h4>
               <ul className="space-y-3">
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">ERP Implementation</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">AI Automation</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Software Development</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Resource Augmentation</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Consulting</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">View All →</a></li>
+                <li><a href="/hire-erpnext-implementer" className="text-slate-300 hover:text-white transition-colors text-sm">ERP Implementation</a></li>
+                <li><a href="/ai-automation" className="text-slate-300 hover:text-white transition-colors text-sm">AI Automation</a></li>
+                <li><a href="/software-development" className="text-slate-300 hover:text-white transition-colors text-sm">Software Development</a></li>
+
+                 <li><a href="/data-analytics" className="text-slate-300 hover:text-white transition-colors text-sm"> Data Analytics</a></li>
+
+                 
+
+                <li><a href="/crm-software" className="text-slate-300 hover:text-white transition-colors text-sm">CRM Software</a></li>
+
+
+                <li><a href="/resource-augmentation" className="text-slate-300 hover:text-white transition-colors text-sm">Resource Augmentation</a></li>
+                <li><a href="/it-consulting" className="text-slate-300 hover:text-white transition-colors text-sm">Consulting</a></li>
+                {/* <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">View All →</a></li> */}
               </ul>
             </div>
           </div>
@@ -187,11 +199,11 @@ export default function Footer() {
                 Blog
               </h4>
               <ul className="space-y-3">
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">ERPNext</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">AI Automation</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Use Cases</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Success Stories</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">How-to Guides</a></li>
+                <li><a href="/erpnext-software" className="text-slate-300 hover:text-white transition-colors text-sm">ERPNext</a></li>
+                <li><a href="/ai-automation" className="text-slate-300 hover:text-white transition-colors text-sm">AI Automation</a></li>
+                <li><a href="/use-cases" className="text-slate-300 hover:text-white transition-colors text-sm">Use Cases</a></li>
+                <li><a href="/success-story" className="text-slate-300 hover:text-white transition-colors text-sm">Success Stories</a></li>
+                <li><a href="/guide" className="text-slate-300 hover:text-white transition-colors text-sm">How-to Guides</a></li>
               </ul>
             </div>
           </div>
@@ -204,11 +216,11 @@ export default function Footer() {
                 Career
               </h4>
               <ul className="space-y-3">
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Life at Finbyz</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Current Openings</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Internships</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Hiring Process</a></li>
-                <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Testimonials</a></li>
+                <li><a href="/life-at-finbyz" className="text-slate-300 hover:text-white transition-colors text-sm">Life at Finbyz</a></li>
+                <li><a href="/current-opening" className="text-slate-300 hover:text-white transition-colors text-sm">Current Openings</a></li>
+                <li><a href="/internship" className="text-slate-300 hover:text-white transition-colors text-sm">Internships</a></li>
+                <li><a href="/hiring-process" className="text-slate-300 hover:text-white transition-colors text-sm">Hiring Process</a></li>
+                <li><a href="/testimonial" className="text-slate-300 hover:text-white transition-colors text-sm">Testimonials</a></li>
               </ul>
             </div>
           </div>
@@ -237,11 +249,11 @@ export default function Footer() {
             <div className="flex items-center space-x-6">
               <span className="text-slate-400 text-sm">&copy; 2025 Finbyz tech Pvt Ltd All rights reserved.</span>
               <div className="flex items-center space-x-4">
-                <a href="#" className="text-slate-400 hover:text-white transition-colors text-sm">Privacy Policy</a>
+                <a href="/privacy-policy" className="text-slate-400 hover:text-white transition-colors text-sm">Privacy Policy</a>
                 <span className="text-slate-600">•</span>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors text-sm">Terms of Service</a>
+                <a href="/term-of-services" className="text-slate-400 hover:text-white transition-colors text-sm">Terms of Service</a>
                 <span className="text-slate-600">•</span>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors text-sm">Cookie Policy</a>
+                <a href="/cookie-policy" className="text-slate-400 hover:text-white transition-colors text-sm">Cookie Policy</a>
               </div>
             </div>
             

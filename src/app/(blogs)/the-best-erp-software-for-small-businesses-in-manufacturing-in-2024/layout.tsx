@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Top ERP Software for Small Manufacturing Businesses in 2025 | Finbyz Tech",
   description: "Find the best ERP system for small businesses. Explore top options and discover the ideal ERP solution for your small business needs.\n\n     ",
   keywords: "ERP for small business, best ERP for small business , manufacturing software for small business , ERP system for small businesses, ERP systems for small companies , best ERP for small manufacturing , business manufacturing ERP for small business,  best manufacturing software for small business , cloud ERP for small business\n",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/the-best-erp-software-for-small-businesses-in-manufacturing-in-2024",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Top ERP Software for Small Manufacturing Businesses in 2025 | Finbyz Tech",
     description: "Find the best ERP system for small businesses. Explore top options and discover the ideal ERP solution for your small business needs.\n\n     ",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -59,8 +56,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -69,7 +66,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       "articleBody": "<section>\n    <div class=\"container-fluid text-justify\">\n        <div class=\"row p-lr-50\">\n            <div class=\"col-md-12 rollover finbyz-fadeinup text-center\"><img alt=\"the-best-erp-software-for-small-businesses-in-manufacturing-in-2024\"\n                    height=\"100%\" src=\"/files/16-04-24.svg\" title=\"the-best-erp-software-for-small-businesses-in-manufacturing-in-2024\"\n                    width=\"80%\"></div>\n        </div>\n    </div>\n</section>\n<section class=\"mt-5\">\n    <div clas",
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Comprehensive ERP Solutions for the Chemical Industry | Finbyz Tech",
   description: "Discover Finbyz Tech\'s tailored ERP solutions for the chemical industry. Streamline operations, ensure compliance, and boost productivity with our specialized ERP software.",
   keywords: "chemical erp,\nerp software for chemicals,\nerpnext for chemical manufacturing,\ncrm software for chemical industry,\nerp software for chemical industry,\nerp for chemical manufacturing,",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/erp-for-chemical-industry",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Comprehensive ERP Solutions for the Chemical Industry | Finbyz Tech",
     description: "Discover Finbyz Tech\'s tailored ERP solutions for the chemical industry. Streamline operations, ensure compliance, and boost productivity with our specialized ERP software.",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     images: ["/files/chemical_new.svg"],
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -60,8 +57,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -70,7 +67,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

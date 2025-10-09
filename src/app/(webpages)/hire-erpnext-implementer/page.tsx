@@ -10,6 +10,7 @@ import ERPNextImplementationProcessGrid from '@/components/ai_components/ERPNext
 import ClientCountryGrid from '@/components/ai_components/ClientCountryGrid';
 import CTA from '@/components/sections/cta';
 import Grid from '@/components/layout/Grid';
+import { motion } from "framer-motion";
 
 const whyChooseList = [
   'Boost operational efficiency and reduce costs with expert ERPNext implementation by a trusted partner in Ahmedabad.',
@@ -255,7 +256,7 @@ export default function Page() {
         heroImage={{
           alt: 'ERPNext Implementation',
           src: '/api/fb/n/files/Hire-ERPNext-Implementor679475.svg',
-          
+
         }}
       />
 
@@ -290,18 +291,82 @@ export default function Page() {
         </div>
       </Section>
 
-      <Section>
-        <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4">Overcoming ERPNext Implementation Challenges: Our Proven Solutions</h2>
-          <Grid>
-            {challengeCards.map((card, idx) => (
-              <FeatureCard key={idx} {...card} />
-            ))}
-          </Grid>
-        </div>
-      </Section>
 
-      <Section useGradient>
+
+
+<Section className="bg-gradient-to-b from-gray-50 to-white py-20 relative">
+  <div className="container-custom">
+    {/* Heading */}
+    <div className="text-center max-w-3xl mx-auto mb-16">
+      <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight">
+        Overcoming{" "}
+        <span className="bg-gradient-to-r from-[#FF8C00] to-[#FFA500] bg-clip-text text-transparent">
+          ERPNext Challenges
+        </span>
+      </h2>
+      <p className="mt-4 text-lg text-gray-600">
+        Our proven solutions help you unlock ERPNext’s full potential while avoiding common pitfalls.
+      </p>
+    </div>
+
+    {/* Cards */}
+    <div className="space-y-10">
+      {challengeCards.map((card, idx) => (
+        <motion.div
+          key={idx}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: idx * 0.15 }}
+          className="w-full relative group bg-white rounded-3xl shadow-lg overflow-hidden transition-all duration-500"
+          style={{ height: "280px" }} // Reduced height
+        >
+          {/* Glow border effect */}
+          <div className="absolute inset-0 rounded-3xl p-[2px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></div>
+
+          {/* Horizontal Card */}
+          <div className="relative z-10 bg-white rounded-3xl h-full flex flex-col md:flex-row transform transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl">
+            
+            {/* Left Image */}
+            <div className="relative md:w-1/3 w-full h-full flex items-center justify-center bg-gray-50">
+              <img
+                src={card.image}
+                alt={card.alt}
+                className="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105"
+              />
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
+                <h3 className="text-white text-lg font-semibold">{card.alt}</h3>
+              </div>
+            </div>
+
+            {/* Right Content */}
+            <div className="p-6 flex flex-col justify-center md:w-2/3 w-full">
+              <p className="text-gray-700 text-sm md:text-base leading-snug text-center md:text-left">
+                {card.description}
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+
+    {/* CTA */}
+<div className="text-center mt-20">
+  <a
+    href="/contact"
+    className="ml-4 bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white 
+               hover:shadow-lg hover:shadow-orange-500/25 transition-all 
+               text-base py-3 px-8 font-semibold rounded-full"
+  >
+    Talk to Our Experts
+  </a>
+</div>
+
+  </div>
+</Section>
+
+
+      {/* <Section useGradient>
         <div className="container-custom py-8">
           <h2 className="text-2xl font-bold mb-4 text-center">Industries We Serve with Expert ERPNext Implementation Solutions</h2>
           <p className="mb-8 text-gray-700 text-center">As a trusted ERPNext Implementation Partner based in Ahmedabad, Gujarat, FinByz Tech serves diverse industries with custom ERPNext solutions. Our ERPNext service providers design systems that meet unique operational needs across sectors.</p>
@@ -326,7 +391,66 @@ export default function Page() {
             ))}
           </div>
         </div>
-      </Section>
+      </Section> */}
+
+
+<Section useGradient className="py-16">
+  <div className="container-custom">
+    {/* Heading */}
+    <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 text-center text-gray-900">
+      Industries We Serve with <span className="text-primary">Expert ERPNext Solutions</span>
+    </h2>
+
+    {/* Paragraph with scroll animation */}
+    <motion.p
+      className="mb-12 text-gray-700 text-center max-w-3xl mx-auto text-lg"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
+      As a trusted ERPNext Implementation Partner based in Ahmedabad, Gujarat, FinByz Tech serves diverse industries with custom ERPNext solutions. Our ERPNext service providers design systems that meet unique operational needs across sectors.
+    </motion.p>
+
+    {/* Industries Grid */}
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 justify-items-center">
+      {industries.map((industry, idx) => (
+        <a
+          key={idx}
+          href={industry.link || undefined}
+          className="group relative flex flex-col items-center justify-center 
+                     bg-gray-100 rounded-full shadow-md 
+                     transition-all duration-500 
+                     hover:scale-105 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] 
+                     w-40 h-40"
+        >
+          {/* Glow effect */}
+          <div className="absolute -inset-1 rounded-full bg-white opacity-20 group-hover:opacity-40 transition-opacity duration-500 blur-md"></div>
+
+          {/* Icon */}
+          <div className="w-20 h-20 mb-3 relative z-10 flex items-center justify-center">
+            <img
+              src={industry.image}
+              alt={industry.alt}
+              title={industry.alt}
+              className="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-110"
+            />
+          </div>
+
+          {/* Title */}
+          <span className="text-sm sm:text-base font-semibold text-gray-800 relative z-10 text-center leading-snug transition-colors duration-300 group-hover:text-primary px-2">
+            {industry.title}
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</Section>
+
+
+
+
+
 
       <Section>
         <div className="container-custom py-8">
@@ -334,6 +458,8 @@ export default function Page() {
           <ERPNextImplementationProcessGrid steps={processSteps} />
         </div>
       </Section>
+
+
 
       <Section useGradient>
         <div className="container-custom py-8">
@@ -343,8 +469,10 @@ export default function Page() {
         </div>
       </Section>
 
+
+
       <Section>
-        <div className="container-custom py-8">
+        <div className="py-8">
           <CTA
             data={{
               subheading: {

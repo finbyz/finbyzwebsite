@@ -38,14 +38,14 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8">
-          <p className="text-gray-700 text-base mb-4">
+          <p className="text-gray-700 text-justify text-base mb-4">
             With our IT expertise and in-depth understanding of the industry, we can help you develop or update your strategy, refine your goals and business objectives, and maximize your chances of success. This results in better, measurable goals from your IT investment. We work as an IT partner to our clients, where we not only guide them on current issues in hand but by understanding their current processes we also suggest possible solutions for increasing the productivity of the team.
           </p>
           <QuoteBlock text="Your business goals should drive your technology choices – not the other way around!" isHeading={false} />
-          <p className="text-gray-700 text-base mt-6 mb-4">
+          <p className="text-gray-700 text-justify text-base mt-6 mb-4">
             In ever-evolving technology, the businesses face challenge to identify new technologies to reduce cost, increase sales and improve productivity. This requires constant tracking of new opportunities presented by evolving technologies. Many times the cost of upgrading the old legacy system can run higher than buying next-generation solutions for the same problem. But lack of knowledge of new technology can lead to poor decision making. FinByz Tech’s consulting service is a way to bridge this gap.
           </p>
-          <p className="text-gray-700 text-base">
+          <p className="text-gray-700 text-justify text-base">
             Our experienced team will take time to understand you and your responsibilities. The processes you have in place, the technologies that are available to you, and how you like to work. We will then work with you to achieve your goals. As necessary we can redesign processes, re-define responsibilities, and help you select the most suitable technologies that drive user adoption and let you capitalize on your technology investments.
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function Page() {
       </Section>
 
       <Section>
-        <div className="container-custom py-8 flex flex-col items-center">
+        <div className="py-8 ">
           <CTA
             data={{
               subheading: {

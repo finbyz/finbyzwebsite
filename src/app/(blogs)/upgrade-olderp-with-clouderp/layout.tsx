@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Upgrade to Cloud ERP: Enhance Efficiency and Scalability",
   description: "Upgrade old ERP with cloud ERP systems has taken place because of various advantages of cloud ERP like cost, flexibility, functionality etc.",
   keywords: "ERP, ERP System, cloud ERP, clouderp,	tech cloud erp",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/upgrade-olderp-with-clouderp",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Upgrade to Cloud ERP: Enhance Efficiency and Scalability",
     description: "Upgrade old ERP with cloud ERP systems has taken place because of various advantages of cloud ERP like cost, flexibility, functionality etc.",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -59,8 +56,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -69,7 +66,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       "articleBody": "<section>\n    <div class=\"tech_update\">\n        <div class=\"row\">\n            <div class=\"col-md-12 rollover finbyz-fadeinup\"><img alt=\"ERP with CLoud\"\n                    title=\"Upgrade old ERP with cloud ERP\" height=\"100%\" src=\"/files/Cloud-ERP.svg\" width=\"100%\"></div>\n        </div>\n    </div>\n</section>\n<section>\n    <div class=\"mt-50\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <h2 class=\"title-font\">Upgrade old ERP with cloud ERP</h2>\n       ",
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

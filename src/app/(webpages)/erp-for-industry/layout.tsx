@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Customized ERP Software | ERP system customization",
   description: "Discover tailored solutions with customized ERP software and custom ERP system customization services. Optimize your business processes today.",
   keywords: "ERP Software for Industries, Customized ERP for Industries, ERP System for Industry, erp software for small scale industries, customized ERP software for industries, Industrial ERP, ERP for industry, customized ERP, erp software for industries in ahmedabad, customized erp software for industries in ahmedabad, industrial erp software in ahmedabad,customized erp software\ncustom erp,erp system customization",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/erp-for-industry",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Customized ERP Software | ERP system customization",
     description: "Discover tailored solutions with customized ERP software and custom ERP system customization services. Optimize your business processes today.",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     images: ["/files/INDUSTRY.svg"],
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -60,8 +57,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -70,7 +67,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Efficient EMD Management in ERPNext | Streamline Earnest Money Deposits",
   description: "Optimize your Earnest Money Deposit processes with ERPNext. Learn how to manage EMDs efficiently, automate accounting entries, and ensure compliance.",
   keywords: "earnest money deposits,\nerpnext emd accounting, \nerpnext security deposit,\nemd management,\nEMD Management ERPNext,\nearnest money,\nearnest money contract,",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/emd-management-erpnext",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Efficient EMD Management in ERPNext | Streamline Earnest Money Deposits",
     description: "Optimize your Earnest Money Deposit processes with ERPNext. Learn how to manage EMDs efficiently, automate accounting entries, and ensure compliance.",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     images: ["/files/EMD-PageDesign-for-Apps.svg"],
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -60,8 +57,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -70,7 +67,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

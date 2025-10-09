@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Top 10 ERP Software Vendors Transforming Business Operations",
   description: "Explore top 10 ERP software vendors like Finbyz, Oracle, Microsoft, SAP, and more for streamlined operations and increased productivity.",
   keywords: "ERP Software Companies,\nERP Software Solutions,\nERP Software Vendors",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/the-top-10-erp-software-companies-revolutionizing-business-operations",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Top 10 ERP Software Vendors Transforming Business Operations",
     description: "Explore top 10 ERP software vendors like Finbyz, Oracle, Microsoft, SAP, and more for streamlined operations and increased productivity.",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -59,8 +56,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -69,7 +66,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       "articleBody": "<section>\n   \n    <div class=\"container-fluid text-justify\">\n        <div class=\"row p-lr-50\">\n            <div class=\"col-md-12 rollover finbyz-fadeinup text-center\"><img alt=\"the-top-10-erp-software-companies-revolutionizing-business-operations\"\n                    height=\"80%\" src=\"/files/Benefits of ERP286bf5.svg\" title=\"the-top-10-erp-software-companies-revolutionizing-business-operations\"\n                    width=\"90%\"></div>\n        </div>\n    </div>\n</section>\n<section class=\"",
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),

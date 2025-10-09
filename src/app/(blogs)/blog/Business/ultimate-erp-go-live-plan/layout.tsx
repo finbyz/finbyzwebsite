@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Ultimate ERP Go Live Plan: Your Comprehensive Guide to Successful ERP Implementation",
   description: "\n",
   keywords: "Workflow Automation, ERP Implementation Guide, ERP System Optimization, ERP Adoption",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://web.finbyz.tech/blog/Business/ultimate-erp-go-live-plan",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ultimate ERP Go Live Plan: Your Comprehensive Guide to Successful ERP Implementation",
     description: "\n",
-    creator: "@yourhandle",
+    creator: "@finbyz",
     
   },
   robots: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  other: {
-    'article:content_tier': 'free',
-    'article:opinion': 'false',
-  },
+  
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -59,8 +56,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "isAccessibleForFree": true,
     "publisher": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "url": "https://yourdomain.com"
+      "name": "FinByz Tech Pvt Ltd",
+      "url": "https://finbyz.tech"
     },
     "mainEntity": {
       "@type": "Article",
@@ -69,7 +66,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       "articleBody": "<section>\n    <div class=\"container-fluid\">\n        <div class=\"row p-lr-50\">\n            <div class=\"col-md-12 rollover finbyz-fadeinup\"><img alt=\"The Ultimate ERP Go Live Plan\"\n                    height=\"100%\" src=\"/files/Line Banner-37.png\" title=\"The Ultimate ERP Go Live Plan\"\n                    width=\"100%\"></div>\n\n        </div>\n    </div>\n</section>\n<section class=\"mt-5\">\n        <div class=\"row\">\n            <!--<div class=\"col-md-12 py-4 finbyz-fadeinup text-center\">-->\n            <!",
       "author": {
         "@type": "Organization",
-        "name": "Your Company Name"
+        "name": "FinByz Tech Pvt Ltd"
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),
