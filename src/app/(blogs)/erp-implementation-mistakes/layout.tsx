@@ -4,27 +4,27 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Top ERP Implementation Challenges & Mistakes: Comprehensive Guide",
-  description: "Avoiding some common ERP implementation mistakes and following the right strategies will pave your path towards successful implementation.",
+  description: "Discover common challenges and mistakes in ERP implementation and learn how to avoid them with our comprehensive guide. Ensure a successful ERP rollout for your business.",
   keywords: "challenges in implementing erp system, ERP Implementation mistakes , ERP implementation guide",
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/erp-implementation-mistakes",
+    canonical: "https://finbyz.tech/erp-implementation-mistakes",
   },
   openGraph: {
     title: "Top ERP Implementation Challenges & Mistakes: Comprehensive Guide",
-    description: "Avoiding some common ERP implementation mistakes and following the right strategies will pave your path towards successful implementation.",
-    url: "https://web.finbyz.tech/erp-implementation-mistakes",
-    siteName: "Your Site Name",
-    type: "website",
+    description: "Discover common challenges and mistakes in ERP implementation and learn how to avoid them with our comprehensive guide. Ensure a successful ERP rollout for your business.",
+    url: "https://finbyz.tech/erp-implementation-mistakes",
+    siteName: "Finbyz Tech",
+    type: "article",
     locale: "en_US",
     
   },
   twitter: {
     card: "summary_large_image",
     title: "Top ERP Implementation Challenges & Mistakes: Comprehensive Guide",
-    description: "Avoiding some common ERP implementation mistakes and following the right strategies will pave your path towards successful implementation.",
+    description: "Discover common challenges and mistakes in ERP implementation and learn how to avoid them with our comprehensive guide. Ensure a successful ERP rollout for your business.",
     creator: "@finbyz",
     
   },
@@ -39,39 +39,65 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Top ERP Implementation Challenges & Mistakes: Comprehensive Guide",
-    "description": "Avoiding some common ERP implementation mistakes and following the right strategies will pave your path towards successful implementation.",
-    "url": "https://web.finbyz.tech/erp-implementation-mistakes",
-    
-    "keywords": "challenges in implementing erp system, ERP Implementation mistakes , ERP implementation guide",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
+  "@context": "https://schema.org/",
+  "@type": "BlogPosting",
+  "@id": "https://finbyz.tech/erp-implementation-mistakes#BlogPosting",
+  "mainEntityOfPage": "https://finbyz.tech/erp-implementation-mistakes",
+  "headline": "Top ERP Implementation Challenges & Mistakes: Comprehensive Guide",
+  "name": "Top ERP Implementation Challenges & Mistakes: Comprehensive Guide",
+  "description": "Discover common challenges and mistakes in ERP implementation and learn how to avoid them with our comprehensive guide. Ensure a successful ERP rollout for your business.",
+  "datePublished": "",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech/about-us",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "height": "96",
+      "width": "96"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "width": "600",
+      "height": "60"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://finbyz.tech/files/FinbyzLogo.png",
+    "width": "1200",
+    "height": "630"
+  },
+  "url": "https://finbyz.tech/erp-implementation-mistakes",
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://finbyz.tech/blog-post/",
+    "name": "FinByz Tech Blog",
     "publisher": {
       "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "Top ERP Implementation Challenges & Mistakes: Comprehensive Guide",
-      "description": "Avoiding some common ERP implementation mistakes and following the right strategies will pave your path towards successful implementation.",
-      "articleBody": "<section>\n    <div class=\"container-fluid\">\n        <div class=\"row p-lr-50\">\n            <div class=\"col-md-12 rollover finbyz-fadeinup\"><img alt=\"ERP implementation mistakes\" height=\"100%\"\n                    src=\"/files/erp-implementation-mistakes-how-to-avoid-failures.svg\"\n                    title=\"ERP implementation mistakes\" width=\"100%\"></div>\n        </div>\n    </div>\n</section>\n<section class=\"mt-50\">\n    <div class=\" finbyz-fadeinup\">\n        <div class=\"row\">\n            ",
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+      "@id": "https://finbyz.tech",
+      "name": "FinByz Tech Pvt Ltd"
     }
-  };
+  },
+  "keywords": [
+    "challenges in implementing erp system",
+    "ERP Implementation mistakes",
+    "ERP implementation guide"
+  ]
+};
 
   return (
     <>
@@ -80,13 +106,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Top ERP Implementation Challenges & Mistakes: Comprehensive Guide" />
-        <meta itemProp="description" content="Avoiding some common ERP implementation mistakes and following the right strategies will pave your path towards successful implementation." />
+
+      <article itemScope itemType="https://schema.org/BlogPosting">
+        <meta itemProp="headline" content="Top ERP Implementation Challenges & Mistakes: Comprehensive Guide" />
+        <meta itemProp="description" content="Discover common challenges and mistakes in ERP implementation and learn how to avoid them with our comprehensive guide. Ensure a successful ERP rollout for your business." />
       </article>
+
       {children}
-      
       <BusinessSlider />
     </>
   );

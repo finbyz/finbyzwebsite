@@ -52,7 +52,7 @@ export default function Page() {
   How to Use ERPNext Investment Portfolio
 </h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid  gap-8">
             <div className="flex flex-col gap-6">
               <InvestmentProcessStepCard
                 title="Add Investment Segment and Category"
@@ -60,12 +60,12 @@ export default function Page() {
                 image="api/fb/n/files/1.png"
                 alt="Investment Form"
               />
-              <InvestmentProcessStepCard
+              {/* <InvestmentProcessStepCard
                 title="Configure Investment Accounts"
                 description="Define default accounts under the Investment Portfolio Accounts section, including your bank, capital, charges, and income accounts. These settings streamline portfolio tracking and automate journal entries for investment transactions."
                 image="api/fb/n/files/portfolio management (1).svg"
                 alt="Configure Accounts"
-              />
+              /> */}
               <InvestmentProcessStepCard
                 title="Fill Portfolio Investment Form"
                 description="Enter key details such as Segment, Category, Script (investment name), and Investment Date in the Portfolio Investment Form. This lays the foundation for accurate ERPNext portfolio tracking."
@@ -92,7 +92,7 @@ export default function Page() {
   Exit Process of Investment Portfolio in ERPNext
 </h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid gap-8">
             <div className="flex flex-col gap-6">
               <InvestmentProcessStepCard
                 title="Provide Exit Details"
@@ -125,7 +125,7 @@ export default function Page() {
         </div>
       </Section>
 
-      <Section>
+      <Section className='container-custom py-8'>
         <List
           title="Key Benefits of ERPNext Investment Portfolio Management"
           items={[
@@ -140,8 +140,9 @@ export default function Page() {
       </Section>
 
       <Section>
-        <div className="container-custom py-8 flex flex-col items-center text-center gap-4">
-          <h3 className="text-xl font-semibold text-zinc-800 dark:text-zinc-100">Ready to optimize your investment management?</h3>
+        <div className="py-8 flex flex-col items-center text-center gap-4">
+        <h3 className="text-xl font-semibold text-black">
+  Ready to optimize your investment management?</h3>
           <CTA
             data={{
               subheading: {

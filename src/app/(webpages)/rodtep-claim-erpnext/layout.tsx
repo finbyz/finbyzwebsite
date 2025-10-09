@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/rodtep-claim-erpnext",
+    canonical: "https://finbyz.tech/rodtep-claim-erpnext",
   },
   openGraph: {
     title: "Efficient RODTEP Claim Management with ERPNext | Finbyz Tech",
     description: "Streamline your RODTEP and Duty Drawback claims using ERPNext. Finbyz Tech, a leading ERPNext Implementation Partner in Ahmedabad, offers tailored solutions for exporters.",
-    url: "https://web.finbyz.tech/rodtep-claim-erpnext",
-    siteName: "Your Site Name",
+    url: "https://finbyz.tech/rodtep-claim-erpnext",
+    siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
     images: [{ url: "/files/Rodtep-App-PageDesign-SVG.svg", width: 1200, height: 630, alt: "Efficient RODTEP Claim Management with ERPNext | Finbyz Tech" }],
@@ -39,40 +39,52 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  // Structured data for LLMs and search engines
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Efficient RODTEP Claim Management with ERPNext | Finbyz Tech",
-    "description": "Streamline your RODTEP and Duty Drawback claims using ERPNext. Finbyz Tech, a leading ERPNext Implementation Partner in Ahmedabad, offers tailored solutions for exporters.",
-    "url": "https://web.finbyz.tech/rodtep-claim-erpnext",
-    "image": "/files/Rodtep-App-PageDesign-SVG.svg",
-    "keywords": "rodtep erpnext, \nrodtep claim process erpnext, \nERPnext rodtep setup",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
-    "publisher": {
-      "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "Efficient RODTEP Claim Management with ERPNext | Finbyz Tech",
-      "description": "Streamline your RODTEP and Duty Drawback claims using ERPNext. Finbyz Tech, a leading ERPNext Implementation Partner in Ahmedabad, offers tailored solutions for exporters.",
-      
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+  "@context": "http://www.schema.org",
+  "@type": "ProfessionalService",
+  "name": "Efficient RODTEP Claim Management with ERPNext | Finbyz Tech",
+  "url": "https://finbyz.tech/rodtep-claim-erpnext",
+  "logo": "https://finbyz.tech/files/FinbyzLogo.png",
+  "image": "/files/Rodtep-App-PageDesign-SVG.svg",
+  "description": "Streamline your RODTEP and Duty Drawback claims using ERPNext. Finbyz Tech, a leading ERPNext Implementation Partner in Ahmedabad, offers tailored solutions for exporters.",
+  "priceRange": "INR",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
+    "addressLocality": "Ahmedabad",
+    "addressRegion": "Gujarat",
+    "addressCountry": "IN",
+    "postalCode": "380009"
+  },
+  "telephone": "+919925701446",
+  "openingHours": "Mo, Tu, We, Th, Fr, Sa 10.00:00-19:00",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+91 7948912428",
+      "contactType": "customer support",
+      "areaServed": [
+        "IN"
+      ],
+      "availableLanguage": [
+        "Hindi",
+        "Gujarati",
+        "English"
+      ]
     }
-  };
+  ],
+  "sameAs": [
+    "https://www.facebook.com/FinByz",
+    "https://twitter.com/FinByz",
+    "https://www.linkedin.com/company/finbyz",
+    "https://www.youtube.com/c/Finbyz",
+    "https://www.instagram.com/finbyz/"
+  ]
+};
 
   return (
     <>

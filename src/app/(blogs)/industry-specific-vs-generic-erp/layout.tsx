@@ -4,27 +4,27 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Industry-Specific vs. Generic ERP: Which ERP Software is Right for Your Business?",
-  description: "Industry-Specific vs. Generic ERP",
+  description: "Explore the key differences between industry-specific and generic ERP systems. Learn which ERP software aligns best with your business needs and industry requirements.",
   keywords: "industry specific erp,\ngeneric erp,\nindustry specific erp software\nIndustry Specific vs Generic ERP",
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/industry-specific-vs-generic-erp",
+    canonical: "https://finbyz.tech/industry-specific-vs-generic-erp",
   },
   openGraph: {
     title: "Industry-Specific vs. Generic ERP: Which ERP Software is Right for Your Business?",
-    description: "Industry-Specific vs. Generic ERP",
-    url: "https://web.finbyz.tech/industry-specific-vs-generic-erp",
-    siteName: "Your Site Name",
-    type: "website",
+    description: "Explore the key differences between industry-specific and generic ERP systems. Learn which ERP software aligns best with your business needs and industry requirements.",
+    url: "https://finbyz.tech/industry-specific-vs-generic-erp",
+    siteName: "Finbyz Tech",
+    type: "article",
     locale: "en_US",
     
   },
   twitter: {
     card: "summary_large_image",
     title: "Industry-Specific vs. Generic ERP: Which ERP Software is Right for Your Business?",
-    description: "Industry-Specific vs. Generic ERP",
+    description: "Explore the key differences between industry-specific and generic ERP systems. Learn which ERP software aligns best with your business needs and industry requirements.",
     creator: "@finbyz",
     
   },
@@ -39,39 +39,65 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Industry-Specific vs. Generic ERP: Which ERP Software is Right for Your Business?",
-    "description": "Industry-Specific vs. Generic ERP",
-    "url": "https://web.finbyz.tech/industry-specific-vs-generic-erp",
-    
-    "keywords": "industry specific erp,\ngeneric erp,\nindustry specific erp software\nIndustry Specific vs Generic ERP",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
+  "@context": "https://schema.org/",
+  "@type": "BlogPosting",
+  "@id": "https://finbyz.tech/industry-specific-vs-generic-erp#BlogPosting",
+  "mainEntityOfPage": "https://finbyz.tech/industry-specific-vs-generic-erp",
+  "headline": "Industry-Specific vs. Generic ERP: Which ERP Software is Right for Your Business?",
+  "name": "Industry-Specific vs. Generic ERP: Which ERP Software is Right for Your Business?",
+  "description": "Explore the key differences between industry-specific and generic ERP systems. Learn which ERP software aligns best with your business needs and industry requirements.",
+  "datePublished": "",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech/about-us",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "height": "96",
+      "width": "96"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "width": "600",
+      "height": "60"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://finbyz.tech/files/FinbyzLogo.png",
+    "width": "1200",
+    "height": "630"
+  },
+  "url": "https://finbyz.tech/industry-specific-vs-generic-erp",
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://finbyz.tech/blog-post/",
+    "name": "FinByz Tech Blog",
     "publisher": {
       "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "Industry-Specific vs. Generic ERP: Which ERP Software is Right for Your Business?",
-      "description": "Industry-Specific vs. Generic ERP",
-      "articleBody": "<section class=\"mt-4\">\n    <div class=\"container-fluid\">\n        <div class=\"row pt-20 pb-20 p-lr-50\">\n            <div class=\"col-12 col-sm-12 text-center\"> <img class=\"blog-main-img w-100\"\n                    src=\"/files/industry-specific-vs-generic-erp.svg\" alt=\"Industry-Specific vs. Generic ERP\"\n                    title=\"Industry-Specific vs. Generic ERP\"> </div>\n        </div>\n    </div>\n    <div class=\"row\">\n        <div class=\"col-md-12\">\n            <h2> Industry-Specific vs. ",
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+      "@id": "https://finbyz.tech",
+      "name": "FinByz Tech Pvt Ltd"
     }
-  };
+  },
+  "keywords": [
+    "industry specific erp",
+    "generic erp",
+    "industry specific erp software\nIndustry Specific vs Generic ERP"
+  ]
+};
 
   return (
     <>
@@ -80,13 +106,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Industry-Specific vs. Generic ERP: Which ERP Software is Right for Your Business?" />
-        <meta itemProp="description" content="Industry-Specific vs. Generic ERP" />
+
+      <article itemScope itemType="https://schema.org/BlogPosting">
+        <meta itemProp="headline" content="Industry-Specific vs. Generic ERP: Which ERP Software is Right for Your Business?" />
+        <meta itemProp="description" content="Explore the key differences between industry-specific and generic ERP systems. Learn which ERP software aligns best with your business needs and industry requirements." />
       </article>
+
       {children}
-      
       <BusinessSlider />
     </>
   );

@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/investment-portfolio-erpnext",
+    canonical: "https://finbyz.tech/investment-portfolio-erpnext",
   },
   openGraph: {
     title: "ERPNext Investment Portfolio Management | Finbyz Tech Solutions",
     description: "Discover how ERPNext\'s investment portfolio management features enable efficient tracking and optimization of your financial assets. Learn more today!",
-    url: "https://web.finbyz.tech/investment-portfolio-erpnext",
-    siteName: "Your Site Name",
+    url: "https://finbyz.tech/investment-portfolio-erpnext",
+    siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
     images: [{ url: "/files/portfolio management (1).svg", width: 1200, height: 630, alt: "ERPNext Investment Portfolio Management | Finbyz Tech Solutions" }],
@@ -39,40 +39,52 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  // Structured data for LLMs and search engines
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "ERPNext Investment Portfolio Management | Finbyz Tech Solutions",
-    "description": "Discover how ERPNext\'s investment portfolio management features enable efficient tracking and optimization of your financial assets. Learn more today!",
-    "url": "https://web.finbyz.tech/investment-portfolio-erpnext",
-    "image": "/files/portfolio management (1).svg",
-    "keywords": "ERPNext Investment Management, \nERPNext Portfolio Tracking,\nportfolio overview erpnext ",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
-    "publisher": {
-      "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "ERPNext Investment Portfolio Management | Finbyz Tech Solutions",
-      "description": "Discover how ERPNext\'s investment portfolio management features enable efficient tracking and optimization of your financial assets. Learn more today!",
-      
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+  "@context": "http://www.schema.org",
+  "@type": "ProfessionalService",
+  "name": "ERPNext Investment Portfolio Management | Finbyz Tech Solutions",
+  "url": "https://finbyz.tech/investment-portfolio-erpnext",
+  "logo": "https://finbyz.tech/files/FinbyzLogo.png",
+  "image": "/files/portfolio management (1).svg",
+  "description": "Discover how ERPNext\'s investment portfolio management features enable efficient tracking and optimization of your financial assets. Learn more today!",
+  "priceRange": "INR",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
+    "addressLocality": "Ahmedabad",
+    "addressRegion": "Gujarat",
+    "addressCountry": "IN",
+    "postalCode": "380009"
+  },
+  "telephone": "+919925701446",
+  "openingHours": "Mo, Tu, We, Th, Fr, Sa 10.00:00-19:00",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+91 7948912428",
+      "contactType": "customer support",
+      "areaServed": [
+        "IN"
+      ],
+      "availableLanguage": [
+        "Hindi",
+        "Gujarati",
+        "English"
+      ]
     }
-  };
+  ],
+  "sameAs": [
+    "https://www.facebook.com/FinByz",
+    "https://twitter.com/FinByz",
+    "https://www.linkedin.com/company/finbyz",
+    "https://www.youtube.com/c/Finbyz",
+    "https://www.instagram.com/finbyz/"
+  ]
+};
 
   return (
     <>

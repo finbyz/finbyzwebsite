@@ -4,27 +4,27 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Top Challenges in Digital Transformation and How to Overcome Them",
-  description: "Discover What\'s the biggest challenge for most businesses when going online. Learn strategies to stand out in the crowded digital space. Rea",
+  description: "Discover the primary obstacles businesses face during digital transformation and explore effective strategies to navigate these challenges successfully.",
   keywords: "What\'s the biggest challenge for most businesses when going online,\ndigital transformation challenges,\nonline business challenges",
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/whats-the-biggest-challenge-for-most-businesses-when-going-online",
+    canonical: "https://finbyz.tech/whats-the-biggest-challenge-for-most-businesses-when-going-online",
   },
   openGraph: {
     title: "Top Challenges in Digital Transformation and How to Overcome Them",
-    description: "Discover What\'s the biggest challenge for most businesses when going online. Learn strategies to stand out in the crowded digital space. Rea",
-    url: "https://web.finbyz.tech/whats-the-biggest-challenge-for-most-businesses-when-going-online",
-    siteName: "Your Site Name",
-    type: "website",
+    description: "Discover the primary obstacles businesses face during digital transformation and explore effective strategies to navigate these challenges successfully.",
+    url: "https://finbyz.tech/whats-the-biggest-challenge-for-most-businesses-when-going-online",
+    siteName: "Finbyz Tech",
+    type: "article",
     locale: "en_US",
     
   },
   twitter: {
     card: "summary_large_image",
     title: "Top Challenges in Digital Transformation and How to Overcome Them",
-    description: "Discover What\'s the biggest challenge for most businesses when going online. Learn strategies to stand out in the crowded digital space. Rea",
+    description: "Discover the primary obstacles businesses face during digital transformation and explore effective strategies to navigate these challenges successfully.",
     creator: "@finbyz",
     
   },
@@ -39,39 +39,65 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Top Challenges in Digital Transformation and How to Overcome Them",
-    "description": "Discover What\'s the biggest challenge for most businesses when going online. Learn strategies to stand out in the crowded digital space. Rea",
-    "url": "https://web.finbyz.tech/whats-the-biggest-challenge-for-most-businesses-when-going-online",
-    
-    "keywords": "What\'s the biggest challenge for most businesses when going online,\ndigital transformation challenges,\nonline business challenges",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
+  "@context": "https://schema.org/",
+  "@type": "BlogPosting",
+  "@id": "https://finbyz.tech/whats-the-biggest-challenge-for-most-businesses-when-going-online#BlogPosting",
+  "mainEntityOfPage": "https://finbyz.tech/whats-the-biggest-challenge-for-most-businesses-when-going-online",
+  "headline": "Top Challenges in Digital Transformation and How to Overcome Them",
+  "name": "Top Challenges in Digital Transformation and How to Overcome Them",
+  "description": "Discover the primary obstacles businesses face during digital transformation and explore effective strategies to navigate these challenges successfully.",
+  "datePublished": "",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech/about-us",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "height": "96",
+      "width": "96"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "width": "600",
+      "height": "60"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://finbyz.tech/files/FinbyzLogo.png",
+    "width": "1200",
+    "height": "630"
+  },
+  "url": "https://finbyz.tech/whats-the-biggest-challenge-for-most-businesses-when-going-online",
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://finbyz.tech/blog-post/",
+    "name": "FinByz Tech Blog",
     "publisher": {
       "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "Top Challenges in Digital Transformation and How to Overcome Them",
-      "description": "Discover What\'s the biggest challenge for most businesses when going online. Learn strategies to stand out in the crowded digital space. Rea",
-        "articleBody": "Biggest online challenges for businesses: visibility, trust, tech adoption, competition.",
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+      "@id": "https://finbyz.tech",
+      "name": "FinByz Tech Pvt Ltd"
     }
-  };
+  },
+  "keywords": [
+    "What's the biggest challenge for most businesses when going online",
+    "digital transformation challenges",
+    "online business challenges"
+  ]
+};
 
   return (
     <>
@@ -80,13 +106,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Top Challenges in Digital Transformation and How to Overcome Them" />
-        <meta itemProp="description" content="Discover What\'s the biggest challenge for most businesses when going online. Learn strategies to stand out in the crowded digital space. Rea" />
+
+      <article itemScope itemType="https://schema.org/BlogPosting">
+        <meta itemProp="headline" content="Top Challenges in Digital Transformation and How to Overcome Them" />
+        <meta itemProp="description" content="Discover the primary obstacles businesses face during digital transformation and explore effective strategies to navigate these challenges successfully." />
       </article>
+
       {children}
-      
       <BusinessSlider />
     </>
   );

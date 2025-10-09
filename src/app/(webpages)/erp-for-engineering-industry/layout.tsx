@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/erp-for-engineering-industry",
+    canonical: "https://finbyz.tech/erp-for-engineering-industry",
   },
   openGraph: {
     title: "Engineering ERP Software Solutions | FinByz Tech",
     description: "FinByz Tech delivers ERPNext-based engineering ERP software solutions. Streamline engineering and software engineering operations with integrated project, inventory, and financial management.",
-    url: "https://web.finbyz.tech/erp-for-engineering-industry",
-    siteName: "Your Site Name",
+    url: "https://finbyz.tech/erp-for-engineering-industry",
+    siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
     images: [{ url: "/files/Engineeringaced93.svg", width: 1200, height: 630, alt: "Engineering ERP Software Solutions | FinByz Tech" }],
@@ -39,40 +39,52 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  // Structured data for LLMs and search engines
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Engineering ERP Software Solutions | FinByz Tech",
-    "description": "FinByz Tech delivers ERPNext-based engineering ERP software solutions. Streamline engineering and software engineering operations with integrated project, inventory, and financial management.",
-    "url": "https://web.finbyz.tech/erp-for-engineering-industry",
-    "image": "/files/Engineeringaced93.svg",
-    "keywords": "erpnext for engineering,\nengineering erp software,\nerp in software engineering,\nerp system engineering,\nerp for engineering industry,\nengineering erp systems,\nerp in industrial engineering,\nerp mechanical engineering,\nerp for engineering companies,",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
-    "publisher": {
-      "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "Engineering ERP Software Solutions | FinByz Tech",
-      "description": "FinByz Tech delivers ERPNext-based engineering ERP software solutions. Streamline engineering and software engineering operations with integrated project, inventory, and financial management.",
-      
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+  "@context": "http://www.schema.org",
+  "@type": "ProfessionalService",
+  "name": "Engineering ERP Software Solutions | FinByz Tech",
+  "url": "https://finbyz.tech/erp-for-engineering-industry",
+  "logo": "https://finbyz.tech/files/FinbyzLogo.png",
+  "image": "/files/Engineeringaced93.svg",
+  "description": "FinByz Tech delivers ERPNext-based engineering ERP software solutions. Streamline engineering and software engineering operations with integrated project, inventory, and financial management.",
+  "priceRange": "INR",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
+    "addressLocality": "Ahmedabad",
+    "addressRegion": "Gujarat",
+    "addressCountry": "IN",
+    "postalCode": "380009"
+  },
+  "telephone": "+919925701446",
+  "openingHours": "Mo, Tu, We, Th, Fr, Sa 10.00:00-19:00",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+91 7948912428",
+      "contactType": "customer support",
+      "areaServed": [
+        "IN"
+      ],
+      "availableLanguage": [
+        "Hindi",
+        "Gujarati",
+        "English"
+      ]
     }
-  };
+  ],
+  "sameAs": [
+    "https://www.facebook.com/FinByz",
+    "https://twitter.com/FinByz",
+    "https://www.linkedin.com/company/finbyz",
+    "https://www.youtube.com/c/Finbyz",
+    "https://www.instagram.com/finbyz/"
+  ]
+};
 
   return (
     <>
@@ -87,8 +99,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <article itemScope itemType="https://schema.org/WebPage">
         <meta itemProp="name" content="Engineering ERP Software Solutions | FinByz Tech" />
         <meta itemProp="description" content="FinByz Tech delivers ERPNext-based engineering ERP software solutions. Streamline engineering and software engineering operations with integrated project, inventory, and financial management." />
-        {children}
       </article>
+      {children}
       
       <BusinessSlider />
     </>

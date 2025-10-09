@@ -4,27 +4,27 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Streamline Your Business with ERPNext: The Leading Open Source ERP System",
-  description: "Discover ERPNext: A powerful, open-source ERP software for streamlining business processes and boosting productivity. Try it now!",
+  description: "Discover how ERPNext, a comprehensive open-source ERP system, can transform your business operations. Learn about its features, benefits, and implementation strategies.",
   keywords: "ERPNext,\nOpen source erp,\nerpnext system",
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/Streamline-Your-Business-with-ERPNext-Solutions",
+    canonical: "https://finbyz.tech/Streamline-Your-Business-with-ERPNext-Solutions",
   },
   openGraph: {
     title: "Streamline Your Business with ERPNext: The Leading Open Source ERP System",
-    description: "Discover ERPNext: A powerful, open-source ERP software for streamlining business processes and boosting productivity. Try it now!",
-    url: "https://web.finbyz.tech/Streamline-Your-Business-with-ERPNext-Solutions",
-    siteName: "Your Site Name",
-    type: "website",
+    description: "Discover how ERPNext, a comprehensive open-source ERP system, can transform your business operations. Learn about its features, benefits, and implementation strategies.",
+    url: "https://finbyz.tech/Streamline-Your-Business-with-ERPNext-Solutions",
+    siteName: "Finbyz Tech",
+    type: "article",
     locale: "en_US",
     
   },
   twitter: {
     card: "summary_large_image",
     title: "Streamline Your Business with ERPNext: The Leading Open Source ERP System",
-    description: "Discover ERPNext: A powerful, open-source ERP software for streamlining business processes and boosting productivity. Try it now!",
+    description: "Discover how ERPNext, a comprehensive open-source ERP system, can transform your business operations. Learn about its features, benefits, and implementation strategies.",
     creator: "@finbyz",
     
   },
@@ -39,39 +39,65 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Streamline Your Business with ERPNext: The Leading Open Source ERP System",
-    "description": "Discover ERPNext: A powerful, open-source ERP software for streamlining business processes and boosting productivity. Try it now!",
-    "url": "https://web.finbyz.tech/Streamline-Your-Business-with-ERPNext-Solutions",
-    
-    "keywords": "ERPNext,\nOpen source erp,\nerpnext system",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
+  "@context": "https://schema.org/",
+  "@type": "BlogPosting",
+  "@id": "https://finbyz.tech/Streamline-Your-Business-with-ERPNext-Solutions#BlogPosting",
+  "mainEntityOfPage": "https://finbyz.tech/Streamline-Your-Business-with-ERPNext-Solutions",
+  "headline": "Streamline Your Business with ERPNext: The Leading Open Source ERP System",
+  "name": "Streamline Your Business with ERPNext: The Leading Open Source ERP System",
+  "description": "Discover how ERPNext, a comprehensive open-source ERP system, can transform your business operations. Learn about its features, benefits, and implementation strategies.",
+  "datePublished": "",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech/about-us",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "height": "96",
+      "width": "96"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "width": "600",
+      "height": "60"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://finbyz.tech/files/FinbyzLogo.png",
+    "width": "1200",
+    "height": "630"
+  },
+  "url": "https://finbyz.tech/Streamline-Your-Business-with-ERPNext-Solutions",
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://finbyz.tech/blog-post/",
+    "name": "FinByz Tech Blog",
     "publisher": {
       "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "Streamline Your Business with ERPNext: The Leading Open Source ERP System",
-      "description": "Discover ERPNext: A powerful, open-source ERP software for streamlining business processes and boosting productivity. Try it now!",
-      "articleBody": "<section>\n    <div class=\"container-fluid text-justify\">\n        <div class=\"row p-lr-50\">\n            <div class=\"col-md-12 mb-12 rollover finbyz-fadeinup\"><img alt=\"ERPNext\"\n                    height=\"80%\" src=\"/files/Evolution of ERP5b37d9.svg\" title=\"ERPNext\"\n                    width=\"80%\"></div>\n\n        </div>\n    </div>\n</section>\n<section class=\"mt-5\">\n    <div class=\" finbyz-fadeinup\">\n        <div class=\"row\">\n            <div class=\"col-md-12 mb-12 finbyz-fadeinup\">\n  ",
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+      "@id": "https://finbyz.tech",
+      "name": "FinByz Tech Pvt Ltd"
     }
-  };
+  },
+  "keywords": [
+    "ERPNext",
+    "Open source erp",
+    "erpnext system"
+  ]
+};
 
   return (
     <>
@@ -80,13 +106,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Streamline Your Business with ERPNext: The Leading Open Source ERP System" />
-        <meta itemProp="description" content="Discover ERPNext: A powerful, open-source ERP software for streamlining business processes and boosting productivity. Try it now!" />
+
+      <article itemScope itemType="https://schema.org/BlogPosting">
+        <meta itemProp="headline" content="Streamline Your Business with ERPNext: The Leading Open Source ERP System" />
+        <meta itemProp="description" content="Discover how ERPNext, a comprehensive open-source ERP system, can transform your business operations. Learn about its features, benefits, and implementation strategies." />
       </article>
+
       {children}
-      
       <BusinessSlider />
     </>
   );

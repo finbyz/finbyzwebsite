@@ -4,27 +4,27 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Ultimate ERP Go Live Plan: Your Comprehensive Guide to Successful ERP Implementation",
-  description: "\n",
+  description: "Discover a step-by-step ERP implementation guide, from planning to optimization. Learn how to automate workflows and enhance system performance for your business.",
   keywords: "Workflow Automation, ERP Implementation Guide, ERP System Optimization, ERP Adoption",
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/blog/Business/ultimate-erp-go-live-plan",
+    canonical: "https://finbyz.tech/blog/Business/ultimate-erp-go-live-plan",
   },
   openGraph: {
     title: "Ultimate ERP Go Live Plan: Your Comprehensive Guide to Successful ERP Implementation",
-    description: "\n",
-    url: "https://web.finbyz.tech/blog/Business/ultimate-erp-go-live-plan",
-    siteName: "Your Site Name",
-    type: "website",
+    description: "Discover a step-by-step ERP implementation guide, from planning to optimization. Learn how to automate workflows and enhance system performance for your business.",
+    url: "https://finbyz.tech/blog/Business/ultimate-erp-go-live-plan",
+    siteName: "Finbyz Tech",
+    type: "article",
     locale: "en_US",
     
   },
   twitter: {
     card: "summary_large_image",
     title: "Ultimate ERP Go Live Plan: Your Comprehensive Guide to Successful ERP Implementation",
-    description: "\n",
+    description: "Discover a step-by-step ERP implementation guide, from planning to optimization. Learn how to automate workflows and enhance system performance for your business.",
     creator: "@finbyz",
     
   },
@@ -39,39 +39,66 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Ultimate ERP Go Live Plan: Your Comprehensive Guide to Successful ERP Implementation",
-    "description": "\n",
-    "url": "https://web.finbyz.tech/blog/Business/ultimate-erp-go-live-plan",
-    
-    "keywords": "Workflow Automation, ERP Implementation Guide, ERP System Optimization, ERP Adoption",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
+  "@context": "https://schema.org/",
+  "@type": "BlogPosting",
+  "@id": "https://finbyz.tech/blog/Business/ultimate-erp-go-live-plan#BlogPosting",
+  "mainEntityOfPage": "https://finbyz.tech/blog/Business/ultimate-erp-go-live-plan",
+  "headline": "Ultimate ERP Go Live Plan: Your Comprehensive Guide to Successful ERP Implementation",
+  "name": "Ultimate ERP Go Live Plan: Your Comprehensive Guide to Successful ERP Implementation",
+  "description": "Discover a step-by-step ERP implementation guide, from planning to optimization. Learn how to automate workflows and enhance system performance for your business.",
+  "datePublished": "",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech/about-us",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "height": "96",
+      "width": "96"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "width": "600",
+      "height": "60"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://finbyz.tech/files/FinbyzLogo.png",
+    "width": "1200",
+    "height": "630"
+  },
+  "url": "https://finbyz.tech/blog/Business/ultimate-erp-go-live-plan",
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://finbyz.tech/blog-post/",
+    "name": "FinByz Tech Blog",
     "publisher": {
       "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "Ultimate ERP Go Live Plan: Your Comprehensive Guide to Successful ERP Implementation",
-      "description": "\n",
-      "articleBody": "<section>\n    <div class=\"container-fluid\">\n        <div class=\"row p-lr-50\">\n            <div class=\"col-md-12 rollover finbyz-fadeinup\"><img alt=\"The Ultimate ERP Go Live Plan\"\n                    height=\"100%\" src=\"/files/Line Banner-37.png\" title=\"The Ultimate ERP Go Live Plan\"\n                    width=\"100%\"></div>\n\n        </div>\n    </div>\n</section>\n<section class=\"mt-5\">\n        <div class=\"row\">\n            <!--<div class=\"col-md-12 py-4 finbyz-fadeinup text-center\">-->\n            <!",
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+      "@id": "https://finbyz.tech",
+      "name": "FinByz Tech Pvt Ltd"
     }
-  };
+  },
+  "keywords": [
+    "Workflow Automation",
+    "ERP Implementation Guide",
+    "ERP System Optimization",
+    "ERP Adoption"
+  ]
+};
 
   return (
     <>
@@ -80,13 +107,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Ultimate ERP Go Live Plan: Your Comprehensive Guide to Successful ERP Implementation" />
-        <meta itemProp="description" content="\n" />
+
+      <article itemScope itemType="https://schema.org/BlogPosting">
+        <meta itemProp="headline" content="Ultimate ERP Go Live Plan: Your Comprehensive Guide to Successful ERP Implementation" />
+        <meta itemProp="description" content="Discover a step-by-step ERP implementation guide, from planning to optimization. Learn how to automate workflows and enhance system performance for your business." />
       </article>
+
       {children}
-      
       <BusinessSlider />
     </>
   );

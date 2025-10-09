@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/erp-for-chemical-industry",
+    canonical: "https://finbyz.tech/erp-for-chemical-industry",
   },
   openGraph: {
     title: "Comprehensive ERP Solutions for the Chemical Industry | Finbyz Tech",
     description: "Discover Finbyz Tech\'s tailored ERP solutions for the chemical industry. Streamline operations, ensure compliance, and boost productivity with our specialized ERP software.",
-    url: "https://web.finbyz.tech/erp-for-chemical-industry",
-    siteName: "Your Site Name",
+    url: "https://finbyz.tech/erp-for-chemical-industry",
+    siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
     images: [{ url: "/files/chemical_new.svg", width: 1200, height: 630, alt: "Comprehensive ERP Solutions for the Chemical Industry | Finbyz Tech" }],
@@ -39,40 +39,52 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  // Structured data for LLMs and search engines
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Comprehensive ERP Solutions for the Chemical Industry | Finbyz Tech",
-    "description": "Discover Finbyz Tech\'s tailored ERP solutions for the chemical industry. Streamline operations, ensure compliance, and boost productivity with our specialized ERP software.",
-    "url": "https://web.finbyz.tech/erp-for-chemical-industry",
-    "image": "/files/chemical_new.svg",
-    "keywords": "chemical erp,\nerp software for chemicals,\nerpnext for chemical manufacturing,\ncrm software for chemical industry,\nerp software for chemical industry,\nerp for chemical manufacturing,",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
-    "publisher": {
-      "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "Comprehensive ERP Solutions for the Chemical Industry | Finbyz Tech",
-      "description": "Discover Finbyz Tech\'s tailored ERP solutions for the chemical industry. Streamline operations, ensure compliance, and boost productivity with our specialized ERP software.",
-      
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+  "@context": "http://www.schema.org",
+  "@type": "ProfessionalService",
+  "name": "Comprehensive ERP Solutions for the Chemical Industry | Finbyz Tech",
+  "url": "https://finbyz.tech/erp-for-chemical-industry",
+  "logo": "https://finbyz.tech/files/FinbyzLogo.png",
+  "image": "/files/chemical_new.svg",
+  "description": "Discover Finbyz Tech\'s tailored ERP solutions for the chemical industry. Streamline operations, ensure compliance, and boost productivity with our specialized ERP software.",
+  "priceRange": "INR",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
+    "addressLocality": "Ahmedabad",
+    "addressRegion": "Gujarat",
+    "addressCountry": "IN",
+    "postalCode": "380009"
+  },
+  "telephone": "+919925701446",
+  "openingHours": "Mo, Tu, We, Th, Fr, Sa 10.00:00-19:00",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+91 7948912428",
+      "contactType": "customer support",
+      "areaServed": [
+        "IN"
+      ],
+      "availableLanguage": [
+        "Hindi",
+        "Gujarati",
+        "English"
+      ]
     }
-  };
+  ],
+  "sameAs": [
+    "https://www.facebook.com/FinByz",
+    "https://twitter.com/FinByz",
+    "https://www.linkedin.com/company/finbyz",
+    "https://www.youtube.com/c/Finbyz",
+    "https://www.instagram.com/finbyz/"
+  ]
+};
 
   return (
     <>
@@ -87,8 +99,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <article itemScope itemType="https://schema.org/WebPage">
         <meta itemProp="name" content="Comprehensive ERP Solutions for the Chemical Industry | Finbyz Tech" />
         <meta itemProp="description" content="Discover Finbyz Tech\'s tailored ERP solutions for the chemical industry. Streamline operations, ensure compliance, and boost productivity with our specialized ERP software." />
-        {children}
       </article>
+      {children}
       
       <BusinessSlider />
     </>

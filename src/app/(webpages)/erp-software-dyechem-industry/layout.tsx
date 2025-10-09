@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/erp-software-dyechem-industry",
+    canonical: "https://finbyz.tech/erp-software-dyechem-industry",
   },
   openGraph: {
     title: "ERP for DyeChem Industry | Dyes & Intermediates ERP Software",
     description: "ERP Software for DyeChem industry solve problems of batch-wise Inventory management, Samples management, Manufacturing of dyes and Pigment with yield, concentration and purity.",
-    url: "https://web.finbyz.tech/erp-software-dyechem-industry",
-    siteName: "Your Site Name",
+    url: "https://finbyz.tech/erp-software-dyechem-industry",
+    siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
     images: [{ url: "/files/chemical_Module 2019-04-12 12_42_16.svg", width: 1200, height: 630, alt: "ERP for DyeChem Industry | Dyes & Intermediates ERP Software" }],
@@ -39,40 +39,52 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  // Structured data for LLMs and search engines
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "ERP for DyeChem Industry | Dyes & Intermediates ERP Software",
-    "description": "ERP Software for DyeChem industry solve problems of batch-wise Inventory management, Samples management, Manufacturing of dyes and Pigment with yield, concentration and purity.",
-    "url": "https://web.finbyz.tech/erp-software-dyechem-industry",
-    "image": "/files/chemical_Module 2019-04-12 12_42_16.svg",
-    "keywords": "ERP software for dye chem, dyes manufacturing software, DyeChem, Dye and Intermediate, erp chemical software,  erp software for Dyes manufacturing, Food Colour erp software, Acid Dyes erp software, Reactive Dyes ERP Software, accounting software for Dyes industry, CRM Software for Dyeschem industry",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
-    "publisher": {
-      "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "ERP for DyeChem Industry | Dyes & Intermediates ERP Software",
-      "description": "ERP Software for DyeChem industry solve problems of batch-wise Inventory management, Samples management, Manufacturing of dyes and Pigment with yield, concentration and purity.",
-      
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+  "@context": "http://www.schema.org",
+  "@type": "ProfessionalService",
+  "name": "ERP for DyeChem Industry | Dyes & Intermediates ERP Software",
+  "url": "https://finbyz.tech/erp-software-dyechem-industry",
+  "logo": "https://finbyz.tech/files/FinbyzLogo.png",
+  "image": "/files/chemical_Module 2019-04-12 12_42_16.svg",
+  "description": "ERP Software for DyeChem industry solve problems of batch-wise Inventory management, Samples management, Manufacturing of dyes and Pigment with yield, concentration and purity.",
+  "priceRange": "INR",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
+    "addressLocality": "Ahmedabad",
+    "addressRegion": "Gujarat",
+    "addressCountry": "IN",
+    "postalCode": "380009"
+  },
+  "telephone": "+919925701446",
+  "openingHours": "Mo, Tu, We, Th, Fr, Sa 10.00:00-19:00",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+91 7948912428",
+      "contactType": "customer support",
+      "areaServed": [
+        "IN"
+      ],
+      "availableLanguage": [
+        "Hindi",
+        "Gujarati",
+        "English"
+      ]
     }
-  };
+  ],
+  "sameAs": [
+    "https://www.facebook.com/FinByz",
+    "https://twitter.com/FinByz",
+    "https://www.linkedin.com/company/finbyz",
+    "https://www.youtube.com/c/Finbyz",
+    "https://www.instagram.com/finbyz/"
+  ]
+};
 
   return (
     <>
@@ -87,8 +99,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <article itemScope itemType="https://schema.org/WebPage">
         <meta itemProp="name" content="ERP for DyeChem Industry | Dyes & Intermediates ERP Software" />
         <meta itemProp="description" content="ERP Software for DyeChem industry solve problems of batch-wise Inventory management, Samples management, Manufacturing of dyes and Pigment with yield, concentration and purity." />
-        {children}
       </article>
+      {children}
       
       <BusinessSlider />
     </>

@@ -4,27 +4,27 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Master Production Schedule (MPS): Definition, Importance & Steps",
-  description: "Explore What is a Master Production Schedule? A crucial plan for aligning production with demand, optimizing resources, and boosting efficie",
+  description: "Discover what a Master Production Schedule (MPS) is, its role in the production planning process, and how to create an effective MPS to optimize manufacturing operations.\n\n",
   keywords: "master production schedule,\nWhat is a Master Production Schedule?,\nproduction planning process\n",
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/what-is-a-master-production-schedule",
+    canonical: "https://finbyz.tech/what-is-a-master-production-schedule",
   },
   openGraph: {
     title: "Master Production Schedule (MPS): Definition, Importance & Steps",
-    description: "Explore What is a Master Production Schedule? A crucial plan for aligning production with demand, optimizing resources, and boosting efficie",
-    url: "https://web.finbyz.tech/what-is-a-master-production-schedule",
-    siteName: "Your Site Name",
-    type: "website",
+    description: "Discover what a Master Production Schedule (MPS) is, its role in the production planning process, and how to create an effective MPS to optimize manufacturing operations.\n\n",
+    url: "https://finbyz.tech/what-is-a-master-production-schedule",
+    siteName: "Finbyz Tech",
+    type: "article",
     locale: "en_US",
     
   },
   twitter: {
     card: "summary_large_image",
     title: "Master Production Schedule (MPS): Definition, Importance & Steps",
-    description: "Explore What is a Master Production Schedule? A crucial plan for aligning production with demand, optimizing resources, and boosting efficie",
+    description: "Discover what a Master Production Schedule (MPS) is, its role in the production planning process, and how to create an effective MPS to optimize manufacturing operations.\n\n",
     creator: "@finbyz",
     
   },
@@ -39,39 +39,65 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Master Production Schedule (MPS): Definition, Importance & Steps",
-    "description": "Explore What is a Master Production Schedule? A crucial plan for aligning production with demand, optimizing resources, and boosting efficie",
-    "url": "https://web.finbyz.tech/what-is-a-master-production-schedule",
-    
-    "keywords": "master production schedule,\nWhat is a Master Production Schedule?,\nproduction planning process\n",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
+  "@context": "https://schema.org/",
+  "@type": "BlogPosting",
+  "@id": "https://finbyz.tech/what-is-a-master-production-schedule#BlogPosting",
+  "mainEntityOfPage": "https://finbyz.tech/what-is-a-master-production-schedule",
+  "headline": "Master Production Schedule (MPS): Definition, Importance & Steps",
+  "name": "Master Production Schedule (MPS): Definition, Importance & Steps",
+  "description": "Discover what a Master Production Schedule (MPS) is, its role in the production planning process, and how to create an effective MPS to optimize manufacturing operations.\\n\\n",
+  "datePublished": "",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech/about-us",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "height": "96",
+      "width": "96"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "width": "600",
+      "height": "60"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://finbyz.tech/files/FinbyzLogo.png",
+    "width": "1200",
+    "height": "630"
+  },
+  "url": "https://finbyz.tech/what-is-a-master-production-schedule",
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://finbyz.tech/blog-post/",
+    "name": "FinByz Tech Blog",
     "publisher": {
       "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "Master Production Schedule (MPS): Definition, Importance & Steps",
-      "description": "Explore What is a Master Production Schedule? A crucial plan for aligning production with demand, optimizing resources, and boosting efficie",
-      "articleBody": "<section>\n   \n    <div class=\"container-fluid text-justify\">\n        <div class=\"row p-lr-50\">\n            <div class=\"col-md-12 rollover finbyz-fadeinup text-center\"><img alt=\"master-production-schedule\"\n                    height=\"100%\" src=\"/files/19-04-2024.svg\" title=\"master-production-schedule\"\n                    width=\"90%\"></div>\n        </div>\n    </div>\n</section>\n<section class=\"mt-5\">\n    <div class=\" finbyz-fadeinup\">\n        <div class=\"row\">\n            <div class=\"c",
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+      "@id": "https://finbyz.tech",
+      "name": "FinByz Tech Pvt Ltd"
     }
-  };
+  },
+  "keywords": [
+    "master production schedule",
+    "What is a Master Production Schedule?",
+    "production planning process"
+  ]
+};
 
   return (
     <>
@@ -80,13 +106,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Master Production Schedule (MPS): Definition, Importance & Steps" />
-        <meta itemProp="description" content="Explore What is a Master Production Schedule? A crucial plan for aligning production with demand, optimizing resources, and boosting efficie" />
+
+      <article itemScope itemType="https://schema.org/BlogPosting">
+        <meta itemProp="headline" content="Master Production Schedule (MPS): Definition, Importance & Steps" />
+        <meta itemProp="description" content="Discover what a Master Production Schedule (MPS) is, its role in the production planning process, and how to create an effective MPS to optimize manufacturing operations.\n\n" />
       </article>
+
       {children}
-      
       <BusinessSlider />
     </>
   );

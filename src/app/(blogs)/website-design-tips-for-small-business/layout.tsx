@@ -4,27 +4,27 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Website Design Tips for Small Businesses | Finbyz Tech",
-  description: "Your small business website should be designed in a manner such that it is able to portray a clear picture of  your business. Here are some ",
+  description: "Discover essential website design tips to enhance your small business\'s online presence. Learn how to create a user-friendly, SEO-optimized business website with Finbyz Tech.",
   keywords: "website design , business website , small business website , website for small business , website design tips , website design tips for small business",
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/website-design-tips-for-small-business",
+    canonical: "https://finbyz.tech/website-design-tips-for-small-business",
   },
   openGraph: {
     title: "Website Design Tips for Small Businesses | Finbyz Tech",
-    description: "Your small business website should be designed in a manner such that it is able to portray a clear picture of  your business. Here are some ",
-    url: "https://web.finbyz.tech/website-design-tips-for-small-business",
-    siteName: "Your Site Name",
-    type: "website",
+    description: "Discover essential website design tips to enhance your small business\'s online presence. Learn how to create a user-friendly, SEO-optimized business website with Finbyz Tech.",
+    url: "https://finbyz.tech/website-design-tips-for-small-business",
+    siteName: "Finbyz Tech",
+    type: "article",
     locale: "en_US",
     
   },
   twitter: {
     card: "summary_large_image",
     title: "Website Design Tips for Small Businesses | Finbyz Tech",
-    description: "Your small business website should be designed in a manner such that it is able to portray a clear picture of  your business. Here are some ",
+    description: "Discover essential website design tips to enhance your small business\'s online presence. Learn how to create a user-friendly, SEO-optimized business website with Finbyz Tech.",
     creator: "@finbyz",
     
   },
@@ -39,39 +39,68 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Website Design Tips for Small Businesses | Finbyz Tech",
-    "description": "Your small business website should be designed in a manner such that it is able to portray a clear picture of  your business. Here are some ",
-    "url": "https://web.finbyz.tech/website-design-tips-for-small-business",
-    
-    "keywords": "website design , business website , small business website , website for small business , website design tips , website design tips for small business",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
+  "@context": "https://schema.org/",
+  "@type": "BlogPosting",
+  "@id": "https://finbyz.tech/website-design-tips-for-small-business#BlogPosting",
+  "mainEntityOfPage": "https://finbyz.tech/website-design-tips-for-small-business",
+  "headline": "Website Design Tips for Small Businesses | Finbyz Tech",
+  "name": "Website Design Tips for Small Businesses | Finbyz Tech",
+  "description": "Discover essential website design tips to enhance your small business\\'s online presence. Learn how to create a user-friendly, SEO-optimized business website with Finbyz Tech.",
+  "datePublished": "",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech/about-us",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "height": "96",
+      "width": "96"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "width": "600",
+      "height": "60"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://finbyz.tech/files/FinbyzLogo.png",
+    "width": "1200",
+    "height": "630"
+  },
+  "url": "https://finbyz.tech/website-design-tips-for-small-business",
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://finbyz.tech/blog-post/",
+    "name": "FinByz Tech Blog",
     "publisher": {
       "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "Website Design Tips for Small Businesses | Finbyz Tech",
-      "description": "Your small business website should be designed in a manner such that it is able to portray a clear picture of  your business. Here are some ",
-      "articleBody": "<section>\n    <div class=\"container-fluid\">\n        <div class=\"row p-lr-50\">\n            <div class=\"col-md-12 rollover finbyz-fadeinup\"><img alt=\"How ERP Improves Business Performance\"\n                    height=\"100%\" src=\"/files/website-design-tips-for-a-small-business.svg\"\n                    title=\"How ERP Improves Business Performance\" width=\"100%\"></div>\n        </div>\n    </div>\n</section>\n<section class=\"mt-50\">\n    <div class=\" finbyz-fadeinup\">\n        <div class=\"row\">\n ",
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+      "@id": "https://finbyz.tech",
+      "name": "FinByz Tech Pvt Ltd"
     }
-  };
+  },
+  "keywords": [
+    "website design",
+    "business website",
+    "small business website",
+    "website for small business",
+    "website design tips",
+    "website design tips for small business"
+  ]
+};
 
   return (
     <>
@@ -80,13 +109,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Website Design Tips for Small Businesses | Finbyz Tech" />
-        <meta itemProp="description" content="Your small business website should be designed in a manner such that it is able to portray a clear picture of  your business. Here are some " />
+
+      <article itemScope itemType="https://schema.org/BlogPosting">
+        <meta itemProp="headline" content="Website Design Tips for Small Businesses | Finbyz Tech" />
+        <meta itemProp="description" content="Discover essential website design tips to enhance your small business\'s online presence. Learn how to create a user-friendly, SEO-optimized business website with Finbyz Tech." />
       </article>
+
       {children}
-      
       <BusinessSlider />
     </>
   );

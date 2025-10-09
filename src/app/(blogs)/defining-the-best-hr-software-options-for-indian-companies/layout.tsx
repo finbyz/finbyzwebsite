@@ -4,27 +4,27 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Top HR Software Solutions in India | Optimize Your HR Systems",
-  description: "Explore top HR software solutions in India for efficient HR management. HR payroll software and management tools tailored to your needs. ",
+  description: "Discover the best HR Software in India. Streamline your HR Systems with top HR Payroll Software solutions tailored for Indian businesses.",
   keywords: "HR Systems,\nHR Software in India, \nHR Payroll Software,\nHR Management Software\'s",
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/defining-the-best-hr-software-options-for-indian-companies",
+    canonical: "https://finbyz.tech/defining-the-best-hr-software-options-for-indian-companies",
   },
   openGraph: {
     title: "Top HR Software Solutions in India | Optimize Your HR Systems",
-    description: "Explore top HR software solutions in India for efficient HR management. HR payroll software and management tools tailored to your needs. ",
-    url: "https://web.finbyz.tech/defining-the-best-hr-software-options-for-indian-companies",
-    siteName: "Your Site Name",
-    type: "website",
+    description: "Discover the best HR Software in India. Streamline your HR Systems with top HR Payroll Software solutions tailored for Indian businesses.",
+    url: "https://finbyz.tech/defining-the-best-hr-software-options-for-indian-companies",
+    siteName: "Finbyz Tech",
+    type: "article",
     locale: "en_US",
     
   },
   twitter: {
     card: "summary_large_image",
     title: "Top HR Software Solutions in India | Optimize Your HR Systems",
-    description: "Explore top HR software solutions in India for efficient HR management. HR payroll software and management tools tailored to your needs. ",
+    description: "Discover the best HR Software in India. Streamline your HR Systems with top HR Payroll Software solutions tailored for Indian businesses.",
     creator: "@finbyz",
     
   },
@@ -39,39 +39,66 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Top HR Software Solutions in India | Optimize Your HR Systems",
-    "description": "Explore top HR software solutions in India for efficient HR management. HR payroll software and management tools tailored to your needs. ",
-    "url": "https://web.finbyz.tech/defining-the-best-hr-software-options-for-indian-companies",
-    
-    "keywords": "HR Systems,\nHR Software in India, \nHR Payroll Software,\nHR Management Software\'s",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
+  "@context": "https://schema.org/",
+  "@type": "BlogPosting",
+  "@id": "https://finbyz.tech/defining-the-best-hr-software-options-for-indian-companies#BlogPosting",
+  "mainEntityOfPage": "https://finbyz.tech/defining-the-best-hr-software-options-for-indian-companies",
+  "headline": "Top HR Software Solutions in India | Optimize Your HR Systems",
+  "name": "Top HR Software Solutions in India | Optimize Your HR Systems",
+  "description": "Discover the best HR Software in India. Streamline your HR Systems with top HR Payroll Software solutions tailored for Indian businesses.",
+  "datePublished": "",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech/about-us",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "height": "96",
+      "width": "96"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "width": "600",
+      "height": "60"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://finbyz.tech/files/FinbyzLogo.png",
+    "width": "1200",
+    "height": "630"
+  },
+  "url": "https://finbyz.tech/defining-the-best-hr-software-options-for-indian-companies",
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://finbyz.tech/blog-post/",
+    "name": "FinByz Tech Blog",
     "publisher": {
       "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "Top HR Software Solutions in India | Optimize Your HR Systems",
-      "description": "Explore top HR software solutions in India for efficient HR management. HR payroll software and management tools tailored to your needs. ",
-      "articleBody": "<section>\n    <div class=\"container-fluid text-justify\">\n        <div class=\"row p-lr-50\">\n            <div class=\"col-md-12 mb-12 rollover finbyz-fadeinup\"><img alt=\"HR Services\"\n                    height=\"80%\" src=\"/files/ERP_Implement.svg\" title=\"HR Services\"\n                    width=\"80%\"></div>\n        </div>\n    </div>\n</section>\n<section class=\"mt-5\">\n    <div class=\" finbyz-fadeinup\">\n        <div class=\"row\">\n            <div class=\"col-md-12 mb-12 finbyz-fadeinup\">\n     ",
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+      "@id": "https://finbyz.tech",
+      "name": "FinByz Tech Pvt Ltd"
     }
-  };
+  },
+  "keywords": [
+    "HR Systems",
+    "HR Software in India",
+    "HR Payroll Software",
+    "HR Management Software's"
+  ]
+};
 
   return (
     <>
@@ -80,13 +107,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Top HR Software Solutions in India | Optimize Your HR Systems" />
-        <meta itemProp="description" content="Explore top HR software solutions in India for efficient HR management. HR payroll software and management tools tailored to your needs. " />
+
+      <article itemScope itemType="https://schema.org/BlogPosting">
+        <meta itemProp="headline" content="Top HR Software Solutions in India | Optimize Your HR Systems" />
+        <meta itemProp="description" content="Discover the best HR Software in India. Streamline your HR Systems with top HR Payroll Software solutions tailored for Indian businesses." />
       </article>
+
       {children}
-      
       <BusinessSlider />
     </>
   );

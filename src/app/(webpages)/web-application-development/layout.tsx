@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/web-application-development",
+    canonical: "https://finbyz.tech/web-application-development",
   },
   openGraph: {
     title: "Web Application Development Company in Ahmedabad, India",
     description: "Access premier web app development from our top web application development company. We\'re leaders in expert solutions among web development companies.",
-    url: "https://web.finbyz.tech/web-application-development",
-    siteName: "Your Site Name",
+    url: "https://finbyz.tech/web-application-development",
+    siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
     images: [{ url: "/files/web-app-development.svg", width: 1200, height: 630, alt: "Web Application Development Company in Ahmedabad, India" }],
@@ -39,40 +39,52 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  // Structured data for LLMs and search engines
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Web Application Development Company in Ahmedabad, India",
-    "description": "Access premier web app development from our top web application development company. We\'re leaders in expert solutions among web development companies.",
-    "url": "https://web.finbyz.tech/web-application-development",
-    "image": "/files/web-app-development.svg",
-    "keywords": "Web Application, Business Software, web application development, web app development, enterprise level web applications, structured application development, web application development, web based business software, application developer in ahmedabad, app maker",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
-    "publisher": {
-      "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "Web Application Development Company in Ahmedabad, India",
-      "description": "Access premier web app development from our top web application development company. We\'re leaders in expert solutions among web development companies.",
-      
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+  "@context": "http://www.schema.org",
+  "@type": "ProfessionalService",
+  "name": "Web Application Development Company in Ahmedabad, India",
+  "url": "https://finbyz.tech/web-application-development",
+  "logo": "https://finbyz.tech/files/FinbyzLogo.png",
+  "image": "/files/web-app-development.svg",
+  "description": "Access premier web app development from our top web application development company. We\'re leaders in expert solutions among web development companies.",
+  "priceRange": "INR",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
+    "addressLocality": "Ahmedabad",
+    "addressRegion": "Gujarat",
+    "addressCountry": "IN",
+    "postalCode": "380009"
+  },
+  "telephone": "+919925701446",
+  "openingHours": "Mo, Tu, We, Th, Fr, Sa 10.00:00-19:00",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+91 7948912428",
+      "contactType": "customer support",
+      "areaServed": [
+        "IN"
+      ],
+      "availableLanguage": [
+        "Hindi",
+        "Gujarati",
+        "English"
+      ]
     }
-  };
+  ],
+  "sameAs": [
+    "https://www.facebook.com/FinByz",
+    "https://twitter.com/FinByz",
+    "https://www.linkedin.com/company/finbyz",
+    "https://www.youtube.com/c/Finbyz",
+    "https://www.instagram.com/finbyz/"
+  ]
+};
 
   return (
     <>

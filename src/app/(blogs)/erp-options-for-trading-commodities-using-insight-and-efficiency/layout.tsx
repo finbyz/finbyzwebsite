@@ -4,27 +4,27 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Commodity Trading ERP Solutions: Streamlining Operations and Enhancing Profitability",
-  description: "Discover how ERP for commodity management enhances trading efficiency, risk management, and profitability in volatile markets.",
+  description: "Discover how specialized ERP systems for commodity trading can optimize operations, manage risks, and boost profitability in volatile markets.",
   keywords: "commodity trading erp, ERP for commodity, ERP for commodity management \n",
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/erp-options-for-trading-commodities-using-insight-and-efficiency",
+    canonical: "https://finbyz.tech/erp-options-for-trading-commodities-using-insight-and-efficiency",
   },
   openGraph: {
     title: "Commodity Trading ERP Solutions: Streamlining Operations and Enhancing Profitability",
-    description: "Discover how ERP for commodity management enhances trading efficiency, risk management, and profitability in volatile markets.",
-    url: "https://web.finbyz.tech/erp-options-for-trading-commodities-using-insight-and-efficiency",
-    siteName: "Your Site Name",
-    type: "website",
+    description: "Discover how specialized ERP systems for commodity trading can optimize operations, manage risks, and boost profitability in volatile markets.",
+    url: "https://finbyz.tech/erp-options-for-trading-commodities-using-insight-and-efficiency",
+    siteName: "Finbyz Tech",
+    type: "article",
     locale: "en_US",
     
   },
   twitter: {
     card: "summary_large_image",
     title: "Commodity Trading ERP Solutions: Streamlining Operations and Enhancing Profitability",
-    description: "Discover how ERP for commodity management enhances trading efficiency, risk management, and profitability in volatile markets.",
+    description: "Discover how specialized ERP systems for commodity trading can optimize operations, manage risks, and boost profitability in volatile markets.",
     creator: "@finbyz",
     
   },
@@ -39,39 +39,65 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Commodity Trading ERP Solutions: Streamlining Operations and Enhancing Profitability",
-    "description": "Discover how ERP for commodity management enhances trading efficiency, risk management, and profitability in volatile markets.",
-    "url": "https://web.finbyz.tech/erp-options-for-trading-commodities-using-insight-and-efficiency",
-    
-    "keywords": "commodity trading erp, ERP for commodity, ERP for commodity management \n",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
+  "@context": "https://schema.org/",
+  "@type": "BlogPosting",
+  "@id": "https://finbyz.tech/erp-options-for-trading-commodities-using-insight-and-efficiency#BlogPosting",
+  "mainEntityOfPage": "https://finbyz.tech/erp-options-for-trading-commodities-using-insight-and-efficiency",
+  "headline": "Commodity Trading ERP Solutions: Streamlining Operations and Enhancing Profitability",
+  "name": "Commodity Trading ERP Solutions: Streamlining Operations and Enhancing Profitability",
+  "description": "Discover how specialized ERP systems for commodity trading can optimize operations, manage risks, and boost profitability in volatile markets.",
+  "datePublished": "",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech/about-us",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "height": "96",
+      "width": "96"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "width": "600",
+      "height": "60"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://finbyz.tech/files/FinbyzLogo.png",
+    "width": "1200",
+    "height": "630"
+  },
+  "url": "https://finbyz.tech/erp-options-for-trading-commodities-using-insight-and-efficiency",
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://finbyz.tech/blog-post/",
+    "name": "FinByz Tech Blog",
     "publisher": {
       "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "Commodity Trading ERP Solutions: Streamlining Operations and Enhancing Profitability",
-      "description": "Discover how ERP for commodity management enhances trading efficiency, risk management, and profitability in volatile markets.",
-      "articleBody": "<section>\n    <div class=\"container-fluid text-justify\">\n        <div class=\"row p-lr-50\">\n            <div class=\"col-md-12 rollover finbyz-fadeinup text-center\"><img alt=\"erp-for-trading\"\n                    height=\"80%\" src=\"/files/drawing-1.svg\" title=\"erp-options-for-trading-commodities-using-insight-and-efficiency\"\n                    width=\"80%\"></div>\n        </div>\n    </div>\n</section>\n<section class=\"mt-5\">\n    <div class=\" finbyz-fadeinup\">\n        <div class=\"row\">\n     ",
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+      "@id": "https://finbyz.tech",
+      "name": "FinByz Tech Pvt Ltd"
     }
-  };
+  },
+  "keywords": [
+    "commodity trading erp",
+    "ERP for commodity",
+    "ERP for commodity management"
+  ]
+};
 
   return (
     <>
@@ -80,13 +106,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Commodity Trading ERP Solutions: Streamlining Operations and Enhancing Profitability" />
-        <meta itemProp="description" content="Discover how ERP for commodity management enhances trading efficiency, risk management, and profitability in volatile markets." />
+
+      <article itemScope itemType="https://schema.org/BlogPosting">
+        <meta itemProp="headline" content="Commodity Trading ERP Solutions: Streamlining Operations and Enhancing Profitability" />
+        <meta itemProp="description" content="Discover how specialized ERP systems for commodity trading can optimize operations, manage risks, and boost profitability in volatile markets." />
       </article>
+
       {children}
-      
       <BusinessSlider />
     </>
   );

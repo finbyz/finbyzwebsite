@@ -4,27 +4,27 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Top 10 ERP Software Vendors Transforming Business Operations",
-  description: "Explore top 10 ERP software vendors like Finbyz, Oracle, Microsoft, SAP, and more for streamlined operations and increased productivity.",
+  description: "Discover the leading ERP software vendors revolutionizing business operations. Explore comprehensive solutions tailored to various industries and business sizes.\n\n",
   keywords: "ERP Software Companies,\nERP Software Solutions,\nERP Software Vendors",
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/the-top-10-erp-software-companies-revolutionizing-business-operations",
+    canonical: "https://finbyz.tech/the-top-10-erp-software-companies-revolutionizing-business-operations",
   },
   openGraph: {
     title: "Top 10 ERP Software Vendors Transforming Business Operations",
-    description: "Explore top 10 ERP software vendors like Finbyz, Oracle, Microsoft, SAP, and more for streamlined operations and increased productivity.",
-    url: "https://web.finbyz.tech/the-top-10-erp-software-companies-revolutionizing-business-operations",
-    siteName: "Your Site Name",
-    type: "website",
+    description: "Discover the leading ERP software vendors revolutionizing business operations. Explore comprehensive solutions tailored to various industries and business sizes.\n\n",
+    url: "https://finbyz.tech/the-top-10-erp-software-companies-revolutionizing-business-operations",
+    siteName: "Finbyz Tech",
+    type: "article",
     locale: "en_US",
     
   },
   twitter: {
     card: "summary_large_image",
     title: "Top 10 ERP Software Vendors Transforming Business Operations",
-    description: "Explore top 10 ERP software vendors like Finbyz, Oracle, Microsoft, SAP, and more for streamlined operations and increased productivity.",
+    description: "Discover the leading ERP software vendors revolutionizing business operations. Explore comprehensive solutions tailored to various industries and business sizes.\n\n",
     creator: "@finbyz",
     
   },
@@ -39,39 +39,65 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Top 10 ERP Software Vendors Transforming Business Operations",
-    "description": "Explore top 10 ERP software vendors like Finbyz, Oracle, Microsoft, SAP, and more for streamlined operations and increased productivity.",
-    "url": "https://web.finbyz.tech/the-top-10-erp-software-companies-revolutionizing-business-operations",
-    
-    "keywords": "ERP Software Companies,\nERP Software Solutions,\nERP Software Vendors",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
+  "@context": "https://schema.org/",
+  "@type": "BlogPosting",
+  "@id": "https://finbyz.tech/the-top-10-erp-software-companies-revolutionizing-business-operations#BlogPosting",
+  "mainEntityOfPage": "https://finbyz.tech/the-top-10-erp-software-companies-revolutionizing-business-operations",
+  "headline": "Top 10 ERP Software Vendors Transforming Business Operations",
+  "name": "Top 10 ERP Software Vendors Transforming Business Operations",
+  "description": "Discover the leading ERP software vendors revolutionizing business operations. Explore comprehensive solutions tailored to various industries and business sizes.\\n\\n",
+  "datePublished": "",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech/about-us",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "height": "96",
+      "width": "96"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "width": "600",
+      "height": "60"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://finbyz.tech/files/FinbyzLogo.png",
+    "width": "1200",
+    "height": "630"
+  },
+  "url": "https://finbyz.tech/the-top-10-erp-software-companies-revolutionizing-business-operations",
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://finbyz.tech/blog-post/",
+    "name": "FinByz Tech Blog",
     "publisher": {
       "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "Top 10 ERP Software Vendors Transforming Business Operations",
-      "description": "Explore top 10 ERP software vendors like Finbyz, Oracle, Microsoft, SAP, and more for streamlined operations and increased productivity.",
-      "articleBody": "<section>\n   \n    <div class=\"container-fluid text-justify\">\n        <div class=\"row p-lr-50\">\n            <div class=\"col-md-12 rollover finbyz-fadeinup text-center\"><img alt=\"the-top-10-erp-software-companies-revolutionizing-business-operations\"\n                    height=\"80%\" src=\"/files/Benefits of ERP286bf5.svg\" title=\"the-top-10-erp-software-companies-revolutionizing-business-operations\"\n                    width=\"90%\"></div>\n        </div>\n    </div>\n</section>\n<section class=\"",
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+      "@id": "https://finbyz.tech",
+      "name": "FinByz Tech Pvt Ltd"
     }
-  };
+  },
+  "keywords": [
+    "ERP Software Companies",
+    "ERP Software Solutions",
+    "ERP Software Vendors"
+  ]
+};
 
   return (
     <>
@@ -80,13 +106,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Top 10 ERP Software Vendors Transforming Business Operations" />
-        <meta itemProp="description" content="Explore top 10 ERP software vendors like Finbyz, Oracle, Microsoft, SAP, and more for streamlined operations and increased productivity." />
+
+      <article itemScope itemType="https://schema.org/BlogPosting">
+        <meta itemProp="headline" content="Top 10 ERP Software Vendors Transforming Business Operations" />
+        <meta itemProp="description" content="Discover the leading ERP software vendors revolutionizing business operations. Explore comprehensive solutions tailored to various industries and business sizes.\n\n" />
       </article>
+
       {children}
-      
       <BusinessSlider />
     </>
   );

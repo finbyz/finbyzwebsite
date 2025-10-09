@@ -4,27 +4,27 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "What is ERP Software? | Understanding Enterprise Resource Planning Systems",
-  description: "Streamline operations & boost efficiency with ERP software. Manage resources, automate tasks & analyze data effectively. Explore solutions n",
+  description: "Discover what ERP software is and how Enterprise Resource Planning Systems streamline business operations. Learn about components, benefits, and deployment options.",
   keywords: "Enterprise Resource Planning Systems\nWhat is ERP software,\nenterprise erp",
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/What-is-ERP-software",
+    canonical: "https://finbyz.tech/What-is-ERP-software",
   },
   openGraph: {
     title: "What is ERP Software? | Understanding Enterprise Resource Planning Systems",
-    description: "Streamline operations & boost efficiency with ERP software. Manage resources, automate tasks & analyze data effectively. Explore solutions n",
-    url: "https://web.finbyz.tech/What-is-ERP-software",
-    siteName: "Your Site Name",
-    type: "website",
+    description: "Discover what ERP software is and how Enterprise Resource Planning Systems streamline business operations. Learn about components, benefits, and deployment options.",
+    url: "https://finbyz.tech/What-is-ERP-software",
+    siteName: "Finbyz Tech",
+    type: "article",
     locale: "en_US",
     
   },
   twitter: {
     card: "summary_large_image",
     title: "What is ERP Software? | Understanding Enterprise Resource Planning Systems",
-    description: "Streamline operations & boost efficiency with ERP software. Manage resources, automate tasks & analyze data effectively. Explore solutions n",
+    description: "Discover what ERP software is and how Enterprise Resource Planning Systems streamline business operations. Learn about components, benefits, and deployment options.",
     creator: "@finbyz",
     
   },
@@ -39,39 +39,64 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "What is ERP Software? | Understanding Enterprise Resource Planning Systems",
-    "description": "Streamline operations & boost efficiency with ERP software. Manage resources, automate tasks & analyze data effectively. Explore solutions n",
-    "url": "https://web.finbyz.tech/What-is-ERP-software",
-    
-    "keywords": "Enterprise Resource Planning Systems\nWhat is ERP software,\nenterprise erp",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
+  "@context": "https://schema.org/",
+  "@type": "BlogPosting",
+  "@id": "https://finbyz.tech/What-is-ERP-software#BlogPosting",
+  "mainEntityOfPage": "https://finbyz.tech/What-is-ERP-software",
+  "headline": "What is ERP Software? | Understanding Enterprise Resource Planning Systems",
+  "name": "What is ERP Software? | Understanding Enterprise Resource Planning Systems",
+  "description": "Discover what ERP software is and how Enterprise Resource Planning Systems streamline business operations. Learn about components, benefits, and deployment options.",
+  "datePublished": "",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech/about-us",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "height": "96",
+      "width": "96"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "width": "600",
+      "height": "60"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://finbyz.tech/files/FinbyzLogo.png",
+    "width": "1200",
+    "height": "630"
+  },
+  "url": "https://finbyz.tech/What-is-ERP-software",
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://finbyz.tech/blog-post/",
+    "name": "FinByz Tech Blog",
     "publisher": {
       "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "What is ERP Software? | Understanding Enterprise Resource Planning Systems",
-      "description": "Streamline operations & boost efficiency with ERP software. Manage resources, automate tasks & analyze data effectively. Explore solutions n",
-      "articleBody": "<section>\n   \n    <div class=\"container-fluid text-justify\">\n        <div class=\"row p-lr-50\">\n            <div class=\"col-md-12 rollover finbyz-fadeinup\"><img alt=\"ERP software\"\n                    height=\"100%\" src=\"/files/Benefits of ERP286bf5.svg\" title=\"ERP software\"\n                    width=\"80%\"></div>\n\n        </div>\n    </div>\n</section>\n<section class=\"mt-5\">\n    <div class=\" finbyz-fadeinup\">\n        <div class=\"row\">\n            <div class=\"col-md-12 finbyz-fadeinup\">",
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+      "@id": "https://finbyz.tech",
+      "name": "FinByz Tech Pvt Ltd"
     }
-  };
+  },
+  "keywords": [
+    "Enterprise Resource Planning Systems\nWhat is ERP software",
+    "enterprise erp"
+  ]
+};
 
   return (
     <>
@@ -80,13 +105,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="What is ERP Software? | Understanding Enterprise Resource Planning Systems" />
-        <meta itemProp="description" content="Streamline operations & boost efficiency with ERP software. Manage resources, automate tasks & analyze data effectively. Explore solutions n" />
+
+      <article itemScope itemType="https://schema.org/BlogPosting">
+        <meta itemProp="headline" content="What is ERP Software? | Understanding Enterprise Resource Planning Systems" />
+        <meta itemProp="description" content="Discover what ERP software is and how Enterprise Resource Planning Systems streamline business operations. Learn about components, benefits, and deployment options." />
       </article>
+
       {children}
-      
       <BusinessSlider />
     </>
   );

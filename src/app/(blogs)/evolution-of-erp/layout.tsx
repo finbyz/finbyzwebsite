@@ -4,27 +4,27 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Evolution of ERP Systems: From MRP to Intelligent Cloud-Based Solutions",
-  description: "Evolution of ERP systems has started for more than 2 decades now,  latest being the cloud ERP. ",
+  description: "Explore the comprehensive evolution of ERP systems, from early MRP tools to today\'s intelligent, cloud-based applications integrating AI, ML, and IoT technologies.",
   keywords: "ERP Application ,Evolution of ERP, ERP System evolution, Cloud ERP, ERP system, ERP System, ERP , ERP applications, ERP evolution, ERP web application, ERP system evolution, ERP systems are an evolution of, stage ERP, base ERP, development of ERP	\n",
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/evolution-of-erp",
+    canonical: "https://finbyz.tech/evolution-of-erp",
   },
   openGraph: {
     title: "Evolution of ERP Systems: From MRP to Intelligent Cloud-Based Solutions",
-    description: "Evolution of ERP systems has started for more than 2 decades now,  latest being the cloud ERP. ",
-    url: "https://web.finbyz.tech/evolution-of-erp",
-    siteName: "Your Site Name",
-    type: "website",
+    description: "Explore the comprehensive evolution of ERP systems, from early MRP tools to today\'s intelligent, cloud-based applications integrating AI, ML, and IoT technologies.",
+    url: "https://finbyz.tech/evolution-of-erp",
+    siteName: "Finbyz Tech",
+    type: "article",
     locale: "en_US",
     
   },
   twitter: {
     card: "summary_large_image",
     title: "Evolution of ERP Systems: From MRP to Intelligent Cloud-Based Solutions",
-    description: "Evolution of ERP systems has started for more than 2 decades now,  latest being the cloud ERP. ",
+    description: "Explore the comprehensive evolution of ERP systems, from early MRP tools to today\'s intelligent, cloud-based applications integrating AI, ML, and IoT technologies.",
     creator: "@finbyz",
     
   },
@@ -39,39 +39,77 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Evolution of ERP Systems: From MRP to Intelligent Cloud-Based Solutions",
-    "description": "Evolution of ERP systems has started for more than 2 decades now,  latest being the cloud ERP. ",
-    "url": "https://web.finbyz.tech/evolution-of-erp",
-    
-    "keywords": "ERP Application ,Evolution of ERP, ERP System evolution, Cloud ERP, ERP system, ERP System, ERP , ERP applications, ERP evolution, ERP web application, ERP system evolution, ERP systems are an evolution of, stage ERP, base ERP, development of ERP	\n",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
+  "@context": "https://schema.org/",
+  "@type": "BlogPosting",
+  "@id": "https://finbyz.tech/evolution-of-erp#BlogPosting",
+  "mainEntityOfPage": "https://finbyz.tech/evolution-of-erp",
+  "headline": "Evolution of ERP Systems: From MRP to Intelligent Cloud-Based Solutions",
+  "name": "Evolution of ERP Systems: From MRP to Intelligent Cloud-Based Solutions",
+  "description": "Explore the comprehensive evolution of ERP systems, from early MRP tools to today\\'s intelligent, cloud-based applications integrating AI, ML, and IoT technologies.",
+  "datePublished": "",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech/about-us",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "height": "96",
+      "width": "96"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "width": "600",
+      "height": "60"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://finbyz.tech/files/FinbyzLogo.png",
+    "width": "1200",
+    "height": "630"
+  },
+  "url": "https://finbyz.tech/evolution-of-erp",
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://finbyz.tech/blog-post/",
+    "name": "FinByz Tech Blog",
     "publisher": {
       "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "Evolution of ERP Systems: From MRP to Intelligent Cloud-Based Solutions",
-      "description": "Evolution of ERP systems has started for more than 2 decades now,  latest being the cloud ERP. ",
-      "articleBody": "    <div class=\"tech_update container-field\">\n    <div class=\"row p-lr-50\">\n        <div class=\"col-lg-12\"><img alt=\"ERP Evolution\" title=\"ERP Evolution\" height=\"100%\" src=\"/files/Evolution_of_ERP.svg\" width=\"100%\"> </div>\n    </div>\n</div>\n<br><br><br>\n<div class=\"container-field\">\n    <div class=\"row\">\n        <div class=\"col-lg-12\">\n            <h2 align=\"center\" class=\"title-font\">Evolution of ERP System</h2>\n            <!-- <svg class=\"title-underline1\">                  <use xli",
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+      "@id": "https://finbyz.tech",
+      "name": "FinByz Tech Pvt Ltd"
     }
-  };
+  },
+  "keywords": [
+    "ERP Application",
+    "Evolution of ERP",
+    "ERP System evolution",
+    "Cloud ERP",
+    "ERP system",
+    "ERP System",
+    "ERP",
+    "ERP applications",
+    "ERP evolution",
+    "ERP web application",
+    "ERP system evolution",
+    "ERP systems are an evolution of",
+    "stage ERP",
+    "base ERP",
+    "development of ERP"
+  ]
+};
 
   return (
     <>
@@ -80,13 +118,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Evolution of ERP Systems: From MRP to Intelligent Cloud-Based Solutions" />
-        <meta itemProp="description" content="Evolution of ERP systems has started for more than 2 decades now,  latest being the cloud ERP. " />
+
+      <article itemScope itemType="https://schema.org/BlogPosting">
+        <meta itemProp="headline" content="Evolution of ERP Systems: From MRP to Intelligent Cloud-Based Solutions" />
+        <meta itemProp="description" content="Explore the comprehensive evolution of ERP systems, from early MRP tools to today\'s intelligent, cloud-based applications integrating AI, ML, and IoT technologies." />
       </article>
+
       {children}
-      
       <BusinessSlider />
     </>
   );

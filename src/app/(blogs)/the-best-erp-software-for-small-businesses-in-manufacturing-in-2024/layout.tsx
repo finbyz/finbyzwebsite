@@ -4,27 +4,27 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Top ERP Software for Small Manufacturing Businesses in 2025 | Finbyz Tech",
-  description: "Find the best ERP system for small businesses. Explore top options and discover the ideal ERP solution for your small business needs.\n\n     ",
+  description: "Discover the best ERP solutions for small manufacturing businesses in 2025. Compare top systems like Microsoft Dynamics 365, NetSuite, and MRPeasy to streamline your operations.",
   keywords: "ERP for small business, best ERP for small business , manufacturing software for small business , ERP system for small businesses, ERP systems for small companies , best ERP for small manufacturing , business manufacturing ERP for small business,  best manufacturing software for small business , cloud ERP for small business\n",
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/the-best-erp-software-for-small-businesses-in-manufacturing-in-2024",
+    canonical: "https://finbyz.tech/the-best-erp-software-for-small-businesses-in-manufacturing-in-2024",
   },
   openGraph: {
     title: "Top ERP Software for Small Manufacturing Businesses in 2025 | Finbyz Tech",
-    description: "Find the best ERP system for small businesses. Explore top options and discover the ideal ERP solution for your small business needs.\n\n     ",
-    url: "https://web.finbyz.tech/the-best-erp-software-for-small-businesses-in-manufacturing-in-2024",
-    siteName: "Your Site Name",
-    type: "website",
+    description: "Discover the best ERP solutions for small manufacturing businesses in 2025. Compare top systems like Microsoft Dynamics 365, NetSuite, and MRPeasy to streamline your operations.",
+    url: "https://finbyz.tech/the-best-erp-software-for-small-businesses-in-manufacturing-in-2024",
+    siteName: "Finbyz Tech",
+    type: "article",
     locale: "en_US",
     
   },
   twitter: {
     card: "summary_large_image",
     title: "Top ERP Software for Small Manufacturing Businesses in 2025 | Finbyz Tech",
-    description: "Find the best ERP system for small businesses. Explore top options and discover the ideal ERP solution for your small business needs.\n\n     ",
+    description: "Discover the best ERP solutions for small manufacturing businesses in 2025. Compare top systems like Microsoft Dynamics 365, NetSuite, and MRPeasy to streamline your operations.",
     creator: "@finbyz",
     
   },
@@ -39,39 +39,71 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Top ERP Software for Small Manufacturing Businesses in 2025 | Finbyz Tech",
-    "description": "Find the best ERP system for small businesses. Explore top options and discover the ideal ERP solution for your small business needs.\n\n     ",
-    "url": "https://web.finbyz.tech/the-best-erp-software-for-small-businesses-in-manufacturing-in-2024",
-    
-    "keywords": "ERP for small business, best ERP for small business , manufacturing software for small business , ERP system for small businesses, ERP systems for small companies , best ERP for small manufacturing , business manufacturing ERP for small business,  best manufacturing software for small business , cloud ERP for small business\n",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
+  "@context": "https://schema.org/",
+  "@type": "BlogPosting",
+  "@id": "https://finbyz.tech/the-best-erp-software-for-small-businesses-in-manufacturing-in-2024#BlogPosting",
+  "mainEntityOfPage": "https://finbyz.tech/the-best-erp-software-for-small-businesses-in-manufacturing-in-2024",
+  "headline": "Top ERP Software for Small Manufacturing Businesses in 2025 | Finbyz Tech",
+  "name": "Top ERP Software for Small Manufacturing Businesses in 2025 | Finbyz Tech",
+  "description": "Discover the best ERP solutions for small manufacturing businesses in 2025. Compare top systems like Microsoft Dynamics 365, NetSuite, and MRPeasy to streamline your operations.",
+  "datePublished": "",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech/about-us",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "height": "96",
+      "width": "96"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "width": "600",
+      "height": "60"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://finbyz.tech/files/FinbyzLogo.png",
+    "width": "1200",
+    "height": "630"
+  },
+  "url": "https://finbyz.tech/the-best-erp-software-for-small-businesses-in-manufacturing-in-2024",
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://finbyz.tech/blog-post/",
+    "name": "FinByz Tech Blog",
     "publisher": {
       "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "Top ERP Software for Small Manufacturing Businesses in 2025 | Finbyz Tech",
-      "description": "Find the best ERP system for small businesses. Explore top options and discover the ideal ERP solution for your small business needs.\n\n     ",
-      "articleBody": "<section>\n    <div class=\"container-fluid text-justify\">\n        <div class=\"row p-lr-50\">\n            <div class=\"col-md-12 rollover finbyz-fadeinup text-center\"><img alt=\"the-best-erp-software-for-small-businesses-in-manufacturing-in-2024\"\n                    height=\"100%\" src=\"/files/16-04-24.svg\" title=\"the-best-erp-software-for-small-businesses-in-manufacturing-in-2024\"\n                    width=\"80%\"></div>\n        </div>\n    </div>\n</section>\n<section class=\"mt-5\">\n    <div clas",
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+      "@id": "https://finbyz.tech",
+      "name": "FinByz Tech Pvt Ltd"
     }
-  };
+  },
+  "keywords": [
+    "ERP for small business",
+    "best ERP for small business",
+    "manufacturing software for small business",
+    "ERP system for small businesses",
+    "ERP systems for small companies",
+    "best ERP for small manufacturing",
+    "business manufacturing ERP for small business",
+    "best manufacturing software for small business",
+    "cloud ERP for small business"
+  ]
+};
 
   return (
     <>
@@ -80,13 +112,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Top ERP Software for Small Manufacturing Businesses in 2025 | Finbyz Tech" />
-        <meta itemProp="description" content="Find the best ERP system for small businesses. Explore top options and discover the ideal ERP solution for your small business needs.\n\n     " />
+
+      <article itemScope itemType="https://schema.org/BlogPosting">
+        <meta itemProp="headline" content="Top ERP Software for Small Manufacturing Businesses in 2025 | Finbyz Tech" />
+        <meta itemProp="description" content="Discover the best ERP solutions for small manufacturing businesses in 2025. Compare top systems like Microsoft Dynamics 365, NetSuite, and MRPeasy to streamline your operations." />
       </article>
+
       {children}
-      
       <BusinessSlider />
     </>
   );

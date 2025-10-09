@@ -4,27 +4,27 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Top ERP Benefits & How Automation Enhances Business Performance",
-  description: "ERP provides a plethora of benefits to escalate your business potential and ensure you always remain in the forefront.",
+  description: "Discover how ERP systems improve business performance through automation, efficiency, and real-time insights. Learn the key benefits of ERP for your organization.",
   keywords: "erp benefits,\nHow ERP improves business performance,\nerp automation",
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/how-erp-improves-business-performance",
+    canonical: "https://finbyz.tech/how-erp-improves-business-performance",
   },
   openGraph: {
     title: "Top ERP Benefits & How Automation Enhances Business Performance",
-    description: "ERP provides a plethora of benefits to escalate your business potential and ensure you always remain in the forefront.",
-    url: "https://web.finbyz.tech/how-erp-improves-business-performance",
-    siteName: "Your Site Name",
-    type: "website",
+    description: "Discover how ERP systems improve business performance through automation, efficiency, and real-time insights. Learn the key benefits of ERP for your organization.",
+    url: "https://finbyz.tech/how-erp-improves-business-performance",
+    siteName: "Finbyz Tech",
+    type: "article",
     locale: "en_US",
     
   },
   twitter: {
     card: "summary_large_image",
     title: "Top ERP Benefits & How Automation Enhances Business Performance",
-    description: "ERP provides a plethora of benefits to escalate your business potential and ensure you always remain in the forefront.",
+    description: "Discover how ERP systems improve business performance through automation, efficiency, and real-time insights. Learn the key benefits of ERP for your organization.",
     creator: "@finbyz",
     
   },
@@ -39,39 +39,65 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Top ERP Benefits & How Automation Enhances Business Performance",
-    "description": "ERP provides a plethora of benefits to escalate your business potential and ensure you always remain in the forefront.",
-    "url": "https://web.finbyz.tech/how-erp-improves-business-performance",
-    
-    "keywords": "erp benefits,\nHow ERP improves business performance,\nerp automation",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
+  "@context": "https://schema.org/",
+  "@type": "BlogPosting",
+  "@id": "https://finbyz.tech/how-erp-improves-business-performance#BlogPosting",
+  "mainEntityOfPage": "https://finbyz.tech/how-erp-improves-business-performance",
+  "headline": "Top ERP Benefits & How Automation Enhances Business Performance",
+  "name": "Top ERP Benefits & How Automation Enhances Business Performance",
+  "description": "Discover how ERP systems improve business performance through automation, efficiency, and real-time insights. Learn the key benefits of ERP for your organization.",
+  "datePublished": "",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech/about-us",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "height": "96",
+      "width": "96"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "width": "600",
+      "height": "60"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://finbyz.tech/files/FinbyzLogo.png",
+    "width": "1200",
+    "height": "630"
+  },
+  "url": "https://finbyz.tech/how-erp-improves-business-performance",
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://finbyz.tech/blog-post/",
+    "name": "FinByz Tech Blog",
     "publisher": {
       "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "Top ERP Benefits & How Automation Enhances Business Performance",
-      "description": "ERP provides a plethora of benefits to escalate your business potential and ensure you always remain in the forefront.",
-      "articleBody": "<section>\n    <div class=\"container-fluid\">\n        <div class=\"row p-lr-50\">\n            <div class=\"col-md-12 rollover finbyz-fadeinup\"> <img alt=\"How ERP Improves Business Performance\"\n                    height=\"100%\" src=\"/files/how-erp-improves-business.svg\"\n                    title=\"How ERP Improves Business Performance\" width=\"100%\"> </div>\n        </div>\n    </div>\n</section>\n<section class=\"mt-50\">\n    <div class=\" finbyz-fadeinup\">\n        <div class=\"row\">\n            <d",
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+      "@id": "https://finbyz.tech",
+      "name": "FinByz Tech Pvt Ltd"
     }
-  };
+  },
+  "keywords": [
+    "erp benefits",
+    "How ERP improves business performance",
+    "erp automation"
+  ]
+};
 
   return (
     <>
@@ -80,13 +106,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Top ERP Benefits & How Automation Enhances Business Performance" />
-        <meta itemProp="description" content="ERP provides a plethora of benefits to escalate your business potential and ensure you always remain in the forefront." />
+
+      <article itemScope itemType="https://schema.org/BlogPosting">
+        <meta itemProp="headline" content="Top ERP Benefits & How Automation Enhances Business Performance" />
+        <meta itemProp="description" content="Discover how ERP systems improve business performance through automation, efficiency, and real-time insights. Learn the key benefits of ERP for your organization." />
       </article>
+
       {children}
-      
       <BusinessSlider />
     </>
   );

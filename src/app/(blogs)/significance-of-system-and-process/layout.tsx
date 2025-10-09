@@ -4,27 +4,27 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Enhancing Business Efficiency: The Importance of Systems, Processes, and SOPs",
-  description: "Various Significance of System and Process are uniformity, precision, scalablity, productivity and adaptability.",
+  description: "Discover how implementing standard operating procedures and structured processes can drive efficiency, consistency, and adaptability in your business operations.",
   keywords: "standard operating procedures,\nprocess improvement,\nSystem and process",
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/significance-of-system-and-process",
+    canonical: "https://finbyz.tech/significance-of-system-and-process",
   },
   openGraph: {
     title: "Enhancing Business Efficiency: The Importance of Systems, Processes, and SOPs",
-    description: "Various Significance of System and Process are uniformity, precision, scalablity, productivity and adaptability.",
-    url: "https://web.finbyz.tech/significance-of-system-and-process",
-    siteName: "Your Site Name",
-    type: "website",
+    description: "Discover how implementing standard operating procedures and structured processes can drive efficiency, consistency, and adaptability in your business operations.",
+    url: "https://finbyz.tech/significance-of-system-and-process",
+    siteName: "Finbyz Tech",
+    type: "article",
     locale: "en_US",
     
   },
   twitter: {
     card: "summary_large_image",
     title: "Enhancing Business Efficiency: The Importance of Systems, Processes, and SOPs",
-    description: "Various Significance of System and Process are uniformity, precision, scalablity, productivity and adaptability.",
+    description: "Discover how implementing standard operating procedures and structured processes can drive efficiency, consistency, and adaptability in your business operations.",
     creator: "@finbyz",
     
   },
@@ -39,39 +39,65 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Enhancing Business Efficiency: The Importance of Systems, Processes, and SOPs",
-    "description": "Various Significance of System and Process are uniformity, precision, scalablity, productivity and adaptability.",
-    "url": "https://web.finbyz.tech/significance-of-system-and-process",
-    
-    "keywords": "standard operating procedures,\nprocess improvement,\nSystem and process",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
+  "@context": "https://schema.org/",
+  "@type": "BlogPosting",
+  "@id": "https://finbyz.tech/significance-of-system-and-process#BlogPosting",
+  "mainEntityOfPage": "https://finbyz.tech/significance-of-system-and-process",
+  "headline": "Enhancing Business Efficiency: The Importance of Systems, Processes, and SOPs",
+  "name": "Enhancing Business Efficiency: The Importance of Systems, Processes, and SOPs",
+  "description": "Discover how implementing standard operating procedures and structured processes can drive efficiency, consistency, and adaptability in your business operations.",
+  "datePublished": "",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech/about-us",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "height": "96",
+      "width": "96"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "width": "600",
+      "height": "60"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://finbyz.tech/files/FinbyzLogo.png",
+    "width": "1200",
+    "height": "630"
+  },
+  "url": "https://finbyz.tech/significance-of-system-and-process",
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://finbyz.tech/blog-post/",
+    "name": "FinByz Tech Blog",
     "publisher": {
       "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "Enhancing Business Efficiency: The Importance of Systems, Processes, and SOPs",
-      "description": "Various Significance of System and Process are uniformity, precision, scalablity, productivity and adaptability.",
-      "articleBody": "<section class=\"mt-4\">\n    <div class=\"container-fluid\">\n        <div class=\"row pt-20 pb-20\">\n            <div class=\"col-12 col-sm-12 text-center\">\n                <img alt=\"Significance of System and Process\" class=\"blog-main-img\"\n                    src=\"/files/significance-of-system.svg\" title=\"Significance of System and Process\">\n            </div>\n            <div class=\"col-sm-12 text-center finbyz-fadeinup\" style=\"padding-top: 30px;\">\n                <h2>Significance of System a",
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+      "@id": "https://finbyz.tech",
+      "name": "FinByz Tech Pvt Ltd"
     }
-  };
+  },
+  "keywords": [
+    "standard operating procedures",
+    "process improvement",
+    "System and process"
+  ]
+};
 
   return (
     <>
@@ -80,13 +106,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Enhancing Business Efficiency: The Importance of Systems, Processes, and SOPs" />
-        <meta itemProp="description" content="Various Significance of System and Process are uniformity, precision, scalablity, productivity and adaptability." />
+
+      <article itemScope itemType="https://schema.org/BlogPosting">
+        <meta itemProp="headline" content="Enhancing Business Efficiency: The Importance of Systems, Processes, and SOPs" />
+        <meta itemProp="description" content="Discover how implementing standard operating procedures and structured processes can drive efficiency, consistency, and adaptability in your business operations." />
       </article>
+
       {children}
-      
       <BusinessSlider />
     </>
   );

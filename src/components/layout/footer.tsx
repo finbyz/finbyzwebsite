@@ -173,7 +173,7 @@ export default function Footer() {
                 Services
               </h4>
               <ul className="space-y-3">
-                <li><a href="/hire-erpnext-implementer" className="text-slate-300 hover:text-white transition-colors text-sm">ERP Implementation</a></li>
+                <li><a href="/erpnext-implementer" className="text-slate-300 hover:text-white transition-colors text-sm">ERP Implementation</a></li>
                 <li><a href="/ai-automation" className="text-slate-300 hover:text-white transition-colors text-sm">AI Automation</a></li>
                 <li><a href="/software-development" className="text-slate-300 hover:text-white transition-colors text-sm">Software Development</a></li>
 

@@ -4,27 +4,27 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Top 7 Benefits of ERP for Manufacturing | Best ERP Solutions for Small Manufacturers",
-  description: "ERP for manufacturing provides a vast array of benefits that simplify your operations and help you control your expenses.",
+  description: "Discover how ERP software enhances manufacturing efficiency. Explore top ERP solutions tailored for small manufacturers and unlock key operational benefits.",
   keywords: "best manufacturing erp software, manufacturing erp solutions, small manufacturing erp software, ERP for manufacturing , benefits of erp for manufacturing",
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/benefits-of-erp-for-manufacturing",
+    canonical: "https://finbyz.tech/benefits-of-erp-for-manufacturing",
   },
   openGraph: {
     title: "Top 7 Benefits of ERP for Manufacturing | Best ERP Solutions for Small Manufacturers",
-    description: "ERP for manufacturing provides a vast array of benefits that simplify your operations and help you control your expenses.",
-    url: "https://web.finbyz.tech/benefits-of-erp-for-manufacturing",
-    siteName: "Your Site Name",
-    type: "website",
+    description: "Discover how ERP software enhances manufacturing efficiency. Explore top ERP solutions tailored for small manufacturers and unlock key operational benefits.",
+    url: "https://finbyz.tech/benefits-of-erp-for-manufacturing",
+    siteName: "Finbyz Tech",
+    type: "article",
     locale: "en_US",
     
   },
   twitter: {
     card: "summary_large_image",
     title: "Top 7 Benefits of ERP for Manufacturing | Best ERP Solutions for Small Manufacturers",
-    description: "ERP for manufacturing provides a vast array of benefits that simplify your operations and help you control your expenses.",
+    description: "Discover how ERP software enhances manufacturing efficiency. Explore top ERP solutions tailored for small manufacturers and unlock key operational benefits.",
     creator: "@finbyz",
     
   },
@@ -39,39 +39,67 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Top 7 Benefits of ERP for Manufacturing | Best ERP Solutions for Small Manufacturers",
-    "description": "ERP for manufacturing provides a vast array of benefits that simplify your operations and help you control your expenses.",
-    "url": "https://web.finbyz.tech/benefits-of-erp-for-manufacturing",
-    
-    "keywords": "best manufacturing erp software, manufacturing erp solutions, small manufacturing erp software, ERP for manufacturing , benefits of erp for manufacturing",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
+  "@context": "https://schema.org/",
+  "@type": "BlogPosting",
+  "@id": "https://finbyz.tech/benefits-of-erp-for-manufacturing#BlogPosting",
+  "mainEntityOfPage": "https://finbyz.tech/benefits-of-erp-for-manufacturing",
+  "headline": "Top 7 Benefits of ERP for Manufacturing | Best ERP Solutions for Small Manufacturers",
+  "name": "Top 7 Benefits of ERP for Manufacturing | Best ERP Solutions for Small Manufacturers",
+  "description": "Discover how ERP software enhances manufacturing efficiency. Explore top ERP solutions tailored for small manufacturers and unlock key operational benefits.",
+  "datePublished": "",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech/about-us",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "height": "96",
+      "width": "96"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "width": "600",
+      "height": "60"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://finbyz.tech/files/FinbyzLogo.png",
+    "width": "1200",
+    "height": "630"
+  },
+  "url": "https://finbyz.tech/benefits-of-erp-for-manufacturing",
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://finbyz.tech/blog-post/",
+    "name": "FinByz Tech Blog",
     "publisher": {
       "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "Top 7 Benefits of ERP for Manufacturing | Best ERP Solutions for Small Manufacturers",
-      "description": "ERP for manufacturing provides a vast array of benefits that simplify your operations and help you control your expenses.",
-      "articleBody": "<section>\n    <div class=\"container-fluid\">\n        <div class=\"row p-lr-50\">\n            <div class=\"col-md-12 rollover finbyz-fadeinup\"><img alt=\"Benefits of ERP for Manufacturing\" height=\"100%\"\n                    src=\"/files/benefits-of-erp-for-manufacturing.svg\" title=\"Benefits of ERP for Manufacturing\"\n                    width=\"100%\"></div>\n        </div>\n    </div>\n</section>\n<section class=\"mt-50\">\n    <div class=\" finbyz-fadeinup\">\n        <div class=\"row\">\n            <div",
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+      "@id": "https://finbyz.tech",
+      "name": "FinByz Tech Pvt Ltd"
     }
-  };
+  },
+  "keywords": [
+    "best manufacturing erp software",
+    "manufacturing erp solutions",
+    "small manufacturing erp software",
+    "ERP for manufacturing",
+    "benefits of erp for manufacturing"
+  ]
+};
 
   return (
     <>
@@ -80,13 +108,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Top 7 Benefits of ERP for Manufacturing | Best ERP Solutions for Small Manufacturers" />
-        <meta itemProp="description" content="ERP for manufacturing provides a vast array of benefits that simplify your operations and help you control your expenses." />
+
+      <article itemScope itemType="https://schema.org/BlogPosting">
+        <meta itemProp="headline" content="Top 7 Benefits of ERP for Manufacturing | Best ERP Solutions for Small Manufacturers" />
+        <meta itemProp="description" content="Discover how ERP software enhances manufacturing efficiency. Explore top ERP solutions tailored for small manufacturers and unlock key operational benefits." />
       </article>
+
       {children}
-      
       <BusinessSlider />
     </>
   );

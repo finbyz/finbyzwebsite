@@ -4,27 +4,27 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Top Reasons to Invest in IT: Boost Business Efficiency with ERP Software & IT Tools",
-  description: "Investing in IT for business is an excellent idea for the current market. It can improve speed , optimize interface, and reduce complexities",
+  description: "Discover how investing in IT, ERP software, and essential IT tools can enhance your business operations, improve customer engagement, and drive growth.",
   keywords: "IT,\nERP Software, \nIT Tools, \nbusiness software ",
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/why-invest-in-it-for-business",
+    canonical: "https://finbyz.tech/why-invest-in-it-for-business",
   },
   openGraph: {
     title: "Top Reasons to Invest in IT: Boost Business Efficiency with ERP Software & IT Tools",
-    description: "Investing in IT for business is an excellent idea for the current market. It can improve speed , optimize interface, and reduce complexities",
-    url: "https://web.finbyz.tech/why-invest-in-it-for-business",
-    siteName: "Your Site Name",
-    type: "website",
+    description: "Discover how investing in IT, ERP software, and essential IT tools can enhance your business operations, improve customer engagement, and drive growth.",
+    url: "https://finbyz.tech/why-invest-in-it-for-business",
+    siteName: "Finbyz Tech",
+    type: "article",
     locale: "en_US",
     
   },
   twitter: {
     card: "summary_large_image",
     title: "Top Reasons to Invest in IT: Boost Business Efficiency with ERP Software & IT Tools",
-    description: "Investing in IT for business is an excellent idea for the current market. It can improve speed , optimize interface, and reduce complexities",
+    description: "Discover how investing in IT, ERP software, and essential IT tools can enhance your business operations, improve customer engagement, and drive growth.",
     creator: "@finbyz",
     
   },
@@ -39,39 +39,66 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Top Reasons to Invest in IT: Boost Business Efficiency with ERP Software & IT Tools",
-    "description": "Investing in IT for business is an excellent idea for the current market. It can improve speed , optimize interface, and reduce complexities",
-    "url": "https://web.finbyz.tech/why-invest-in-it-for-business",
-    
-    "keywords": "IT,\nERP Software, \nIT Tools, \nbusiness software ",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
+  "@context": "https://schema.org/",
+  "@type": "BlogPosting",
+  "@id": "https://finbyz.tech/why-invest-in-it-for-business#BlogPosting",
+  "mainEntityOfPage": "https://finbyz.tech/why-invest-in-it-for-business",
+  "headline": "Top Reasons to Invest in IT: Boost Business Efficiency with ERP Software & IT Tools",
+  "name": "Top Reasons to Invest in IT: Boost Business Efficiency with ERP Software & IT Tools",
+  "description": "Discover how investing in IT, ERP software, and essential IT tools can enhance your business operations, improve customer engagement, and drive growth.",
+  "datePublished": "",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech/about-us",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "height": "96",
+      "width": "96"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "width": "600",
+      "height": "60"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://finbyz.tech/files/FinbyzLogo.png",
+    "width": "1200",
+    "height": "630"
+  },
+  "url": "https://finbyz.tech/why-invest-in-it-for-business",
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://finbyz.tech/blog-post/",
+    "name": "FinByz Tech Blog",
     "publisher": {
       "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "Top Reasons to Invest in IT: Boost Business Efficiency with ERP Software & IT Tools",
-      "description": "Investing in IT for business is an excellent idea for the current market. It can improve speed , optimize interface, and reduce complexities",
-      "articleBody": "<div class=\"why-invest\">\n    <div class=\"row pd p-lr-50\">\n        <img height=\"100%\" src=\"/files/Startup.svg\" width=\"100%\" alt=\"Why Invest in IT for business\"\n            title=\"Why Invest in IT for business\">\n    </div>\n    <div class=\"row\">\n        <div class=\"col-lg-12\">\n            <p class=\"why-invest-txt text-justify pt-50\">\n                In today\'s digital-driven world, investing in IT infrastructure is a strategic move for any organization aiming for sustainable growth. Compani",
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+      "@id": "https://finbyz.tech",
+      "name": "FinByz Tech Pvt Ltd"
     }
-  };
+  },
+  "keywords": [
+    "IT",
+    "ERP Software",
+    "IT Tools",
+    "business software"
+  ]
+};
 
   return (
     <>
@@ -80,13 +107,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Top Reasons to Invest in IT: Boost Business Efficiency with ERP Software & IT Tools" />
-        <meta itemProp="description" content="Investing in IT for business is an excellent idea for the current market. It can improve speed , optimize interface, and reduce complexities" />
+
+      <article itemScope itemType="https://schema.org/BlogPosting">
+        <meta itemProp="headline" content="Top Reasons to Invest in IT: Boost Business Efficiency with ERP Software & IT Tools" />
+        <meta itemProp="description" content="Discover how investing in IT, ERP software, and essential IT tools can enhance your business operations, improve customer engagement, and drive growth." />
       </article>
+
       {children}
-      
       <BusinessSlider />
     </>
   );

@@ -4,27 +4,27 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "How to Choose the Best ERP Software: A Comprehensive Guide to Top ERP Solutions",
-  description: "Confused what’s the best ERP software for your business? Here’s a guide to help you choose best ERP solution for your company.",
+  description: "Discover how to select the best ERP software for your business. Explore top ERP solutions, compare leading systems, and make informed decisions to optimize your operations.",
   keywords: "Best ERP Software,\nerp solutions,\nbest erp system,\nERP Software,\nERP System\n",
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/how-to-choose-the-right-erp-software-for-your-company",
+    canonical: "https://finbyz.tech/how-to-choose-the-right-erp-software-for-your-company",
   },
   openGraph: {
     title: "How to Choose the Best ERP Software: A Comprehensive Guide to Top ERP Solutions",
-    description: "Confused what’s the best ERP software for your business? Here’s a guide to help you choose best ERP solution for your company.",
-    url: "https://web.finbyz.tech/how-to-choose-the-right-erp-software-for-your-company",
-    siteName: "Your Site Name",
-    type: "website",
+    description: "Discover how to select the best ERP software for your business. Explore top ERP solutions, compare leading systems, and make informed decisions to optimize your operations.",
+    url: "https://finbyz.tech/how-to-choose-the-right-erp-software-for-your-company",
+    siteName: "Finbyz Tech",
+    type: "article",
     locale: "en_US",
     
   },
   twitter: {
     card: "summary_large_image",
     title: "How to Choose the Best ERP Software: A Comprehensive Guide to Top ERP Solutions",
-    description: "Confused what’s the best ERP software for your business? Here’s a guide to help you choose best ERP solution for your company.",
+    description: "Discover how to select the best ERP software for your business. Explore top ERP solutions, compare leading systems, and make informed decisions to optimize your operations.",
     creator: "@finbyz",
     
   },
@@ -39,39 +39,67 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "How to Choose the Best ERP Software: A Comprehensive Guide to Top ERP Solutions",
-    "description": "Confused what’s the best ERP software for your business? Here’s a guide to help you choose best ERP solution for your company.",
-    "url": "https://web.finbyz.tech/how-to-choose-the-right-erp-software-for-your-company",
-    
-    "keywords": "Best ERP Software,\nerp solutions,\nbest erp system,\nERP Software,\nERP System\n",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
+  "@context": "https://schema.org/",
+  "@type": "BlogPosting",
+  "@id": "https://finbyz.tech/how-to-choose-the-right-erp-software-for-your-company#BlogPosting",
+  "mainEntityOfPage": "https://finbyz.tech/how-to-choose-the-right-erp-software-for-your-company",
+  "headline": "How to Choose the Best ERP Software: A Comprehensive Guide to Top ERP Solutions",
+  "name": "How to Choose the Best ERP Software: A Comprehensive Guide to Top ERP Solutions",
+  "description": "Discover how to select the best ERP software for your business. Explore top ERP solutions, compare leading systems, and make informed decisions to optimize your operations.",
+  "datePublished": "",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech/about-us",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "height": "96",
+      "width": "96"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "width": "600",
+      "height": "60"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://finbyz.tech/files/FinbyzLogo.png",
+    "width": "1200",
+    "height": "630"
+  },
+  "url": "https://finbyz.tech/how-to-choose-the-right-erp-software-for-your-company",
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://finbyz.tech/blog-post/",
+    "name": "FinByz Tech Blog",
     "publisher": {
       "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "How to Choose the Best ERP Software: A Comprehensive Guide to Top ERP Solutions",
-      "description": "Confused what’s the best ERP software for your business? Here’s a guide to help you choose best ERP solution for your company.",
-      "articleBody": "<section class=\"mt-4\">\n    <div class=\"container-fluid\">\n        <div class=\"row p-lr-50 pt-20 pb-20\">\n            <div class=\"col-12 col-sm-12 text-center\">\n                <img class=\"blog-main-img w-100\" src=\"/files/right-erp-software.svg\"\n                    alt=\"How to choose the right ERP Software for your company\"\n                    title=\"How to choose the right ERP Software for your company\">\n            </div>\n        </div>\n    </div>\n        <div class=\"row\">\n        <div",
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+      "@id": "https://finbyz.tech",
+      "name": "FinByz Tech Pvt Ltd"
     }
-  };
+  },
+  "keywords": [
+    "Best ERP Software",
+    "erp solutions",
+    "best erp system",
+    "ERP Software",
+    "ERP System"
+  ]
+};
 
   return (
     <>
@@ -80,13 +108,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="How to Choose the Best ERP Software: A Comprehensive Guide to Top ERP Solutions" />
-        <meta itemProp="description" content="Confused what’s the best ERP software for your business? Here’s a guide to help you choose best ERP solution for your company." />
+
+      <article itemScope itemType="https://schema.org/BlogPosting">
+        <meta itemProp="headline" content="How to Choose the Best ERP Software: A Comprehensive Guide to Top ERP Solutions" />
+        <meta itemProp="description" content="Discover how to select the best ERP software for your business. Explore top ERP solutions, compare leading systems, and make informed decisions to optimize your operations." />
       </article>
+
       {children}
-      
       <BusinessSlider />
     </>
   );

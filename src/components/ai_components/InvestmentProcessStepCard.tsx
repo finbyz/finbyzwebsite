@@ -31,6 +31,7 @@
 //     </Card>
 //   );
 // }
+
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 
@@ -48,49 +49,45 @@ export default function InvestmentProcessStepCard({
   alt,
 }: InvestmentProcessStepCardProps) {
   return (
-    <Card className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white rounded-xl">
-      <CardHeader className="flex flex-col items-center gap-4 pb-2">
-        <div className="flex-shrink-0">
-          <Image
-            src={image}
-            alt={alt}
-            width={180}      // bigger and clear
-            height={180}
-            className="object-contain rounded-lg transition-transform duration-300 hover:scale-105"
-            unoptimized
-          />
-        </div>
-        <CardTitle className="text-xl font-bold text-black text-center">
-          {title}
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="pt-2 text-base text-black leading-relaxed text-center min-h-[80px]">
-        {description}
-      </CardContent>
-    </Card>
-  );
-}
-
-// -----------------------------
-// Example Grid Layout for Multiple Cards
-// -----------------------------
-
-interface CardsGridProps {
-  cards: InvestmentProcessStepCardProps[];
-}
-
-export function CardsGrid({ cards }: CardsGridProps) {
-  return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
-      {cards.map((card) => (
-        <InvestmentProcessStepCard
-          key={card.title}
-          title={card.title}
-          description={card.description}
-          image={card.image}
-          alt={card.alt}
-        />
-      ))}
-    </div>
+    // <Card className="border-none shadow-none hover:shadow-lg transition-shadow duration-300 bg-transparent">
+    //   <CardHeader className="flex flex-row items-center gap-6 pb-2">
+    //     <div className="flex-shrink-0">
+    //       <Image
+    //         src={image}
+    //         alt={alt}
+    //         width={80} 
+    //         height={80}
+    //         className="rounded-xl object-contain p-2"
+    //         unoptimized
+    //       />
+    //     </div>
+    //     <CardTitle className="text-xl font-semibold text-black">
+    //       {title}
+    //     </CardTitle>
+    //   </CardHeader>
+    //   <CardContent className="pt-0 text-gray-700 text-base leading-relaxed">
+    //     {description}
+    //   </CardContent>
+    // </Card>
+ <Card className="border-none shadow-none hover:shadow-lg transition-shadow duration-300 bg-transparent overflow-hidden">
+  <div className="w-full bg-white">
+    <Image
+      src={image}
+      alt={alt}
+      width={400} 
+      height={300}
+      className="w-full h-auto object-contain p-2"
+      unoptimized
+    />
+  </div>
+  <CardHeader className="pb-2">
+    <CardTitle className="text-xl font-semibold text-black">
+      {title}
+    </CardTitle>
+  </CardHeader>
+  <CardContent className="pt-0 text-gray-700 text-base leading-relaxed">
+    {description}
+  </CardContent>
+</Card>
   );
 }

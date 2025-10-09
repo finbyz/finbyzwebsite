@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/hire-erpnext-implementer",
+    canonical: "https://finbyz.tech/hire-erpnext-implementer",
   },
   openGraph: {
     title: "ERPNext Implementation Partner in Ahmedabad | Finbyz Tech",
     description: "Looking for a trusted ERPNext Implementation Partner in Ahmedabad? Finbyz Tech offers expert ERPNext services tailored to your business needs. Contact us today!",
-    url: "https://web.finbyz.tech/hire-erpnext-implementer",
-    siteName: "Your Site Name",
+    url: "https://finbyz.tech/hire-erpnext-implementer",
+    siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
     images: [{ url: "/files/Hire-ERPNext-Implementor679475.svg", width: 1200, height: 630, alt: "ERPNext Implementation Partner in Ahmedabad | Finbyz Tech" }],
@@ -39,39 +39,52 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  // Structured data for LLMs and search engines
   const structuredData = {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech",
-      "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-      "image": "https://finbyz.tech/files/FD-Management-PageDesign.svg",
-      "description": "Leading ERPNext Implementation Partner in Ahmedabad, offering automation, ERP services, and business process consulting.",
-      "priceRange": "INR",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "504-Addor Ambition, Nr. Navrang Circle, Navrangpura",
-        "addressLocality": "Ahmedabad",
-        "addressRegion": "Gujarat",
-        "postalCode": "380009",
-        "addressCountry": "India"
-      },
-      "telephone": "+91 9925701446",
-      "openingHours": "Mo-Sa 10:00-19:00",
-      "sameAs": [
-        "https://www.facebook.com/FinByz",
-        "https://twitter.com/FinByz",
-        "https://www.linkedin.com/company/finbyz",
-        "https://www.youtube.com/c/Finbyz",
-        "https://www.instagram.com/finbyz/"
+  "@context": "http://www.schema.org",
+  "@type": "ProfessionalService",
+  "name": "ERPNext Implementation Partner in Ahmedabad | Finbyz Tech",
+  "url": "https://finbyz.tech/hire-erpnext-implementer",
+  "logo": "https://finbyz.tech/files/FinbyzLogo.png",
+  "image": "/files/Hire-ERPNext-Implementor679475.svg",
+  "description": "Looking for a trusted ERPNext Implementation Partner in Ahmedabad? Finbyz Tech offers expert ERPNext services tailored to your business needs. Contact us today!",
+  "priceRange": "INR",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
+    "addressLocality": "Ahmedabad",
+    "addressRegion": "Gujarat",
+    "addressCountry": "IN",
+    "postalCode": "380009"
+  },
+  "telephone": "+919925701446",
+  "openingHours": "Mo, Tu, We, Th, Fr, Sa 10.00:00-19:00",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+91 7948912428",
+      "contactType": "customer support",
+      "areaServed": [
+        "IN"
+      ],
+      "availableLanguage": [
+        "Hindi",
+        "Gujarati",
+        "English"
       ]
-    };
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/FinByz",
+    "https://twitter.com/FinByz",
+    "https://www.linkedin.com/company/finbyz",
+    "https://www.youtube.com/c/Finbyz",
+    "https://www.instagram.com/finbyz/"
+  ]
+};
 
   return (
     <>

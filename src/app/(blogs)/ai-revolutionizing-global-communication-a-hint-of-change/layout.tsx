@@ -4,27 +4,27 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "How Artificial Intelligence is Transforming Global Communication",
-  description: "Discover how AI Whisperers are transforming communication worldwide. Explore the impact of artificial intelligence on language, personalizat",
+  description: "Explore the impact of Artificial Intelligence on global communication, including enhanced accessibility, personalized interactions, and ethical considerations shaping the future of AI-driven communication.",
   keywords: "Artificial intelligence,\nCommunication,\nAI in communication",
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/ai-revolutionizing-global-communication-a-hint-of-change",
+    canonical: "https://finbyz.tech/ai-revolutionizing-global-communication-a-hint-of-change",
   },
   openGraph: {
     title: "How Artificial Intelligence is Transforming Global Communication",
-    description: "Discover how AI Whisperers are transforming communication worldwide. Explore the impact of artificial intelligence on language, personalizat",
-    url: "https://web.finbyz.tech/ai-revolutionizing-global-communication-a-hint-of-change",
-    siteName: "Your Site Name",
-    type: "website",
+    description: "Explore the impact of Artificial Intelligence on global communication, including enhanced accessibility, personalized interactions, and ethical considerations shaping the future of AI-driven communication.",
+    url: "https://finbyz.tech/ai-revolutionizing-global-communication-a-hint-of-change",
+    siteName: "Finbyz Tech",
+    type: "article",
     locale: "en_US",
     
   },
   twitter: {
     card: "summary_large_image",
     title: "How Artificial Intelligence is Transforming Global Communication",
-    description: "Discover how AI Whisperers are transforming communication worldwide. Explore the impact of artificial intelligence on language, personalizat",
+    description: "Explore the impact of Artificial Intelligence on global communication, including enhanced accessibility, personalized interactions, and ethical considerations shaping the future of AI-driven communication.",
     creator: "@finbyz",
     
   },
@@ -39,39 +39,65 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "How Artificial Intelligence is Transforming Global Communication",
-    "description": "Discover how AI Whisperers are transforming communication worldwide. Explore the impact of artificial intelligence on language, personalizat",
-    "url": "https://web.finbyz.tech/ai-revolutionizing-global-communication-a-hint-of-change",
-    
-    "keywords": "Artificial intelligence,\nCommunication,\nAI in communication",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
+  "@context": "https://schema.org/",
+  "@type": "BlogPosting",
+  "@id": "https://finbyz.tech/ai-revolutionizing-global-communication-a-hint-of-change#BlogPosting",
+  "mainEntityOfPage": "https://finbyz.tech/ai-revolutionizing-global-communication-a-hint-of-change",
+  "headline": "How Artificial Intelligence is Transforming Global Communication",
+  "name": "How Artificial Intelligence is Transforming Global Communication",
+  "description": "Explore the impact of Artificial Intelligence on global communication, including enhanced accessibility, personalized interactions, and ethical considerations shaping the future of AI-driven communication.",
+  "datePublished": "",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech/about-us",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "height": "96",
+      "width": "96"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FinByz Tech Pvt Ltd",
+    "url": "https://finbyz.tech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://finbyz.tech/files/FinbyzLogo.png",
+      "width": "600",
+      "height": "60"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://finbyz.tech/files/FinbyzLogo.png",
+    "width": "1200",
+    "height": "630"
+  },
+  "url": "https://finbyz.tech/ai-revolutionizing-global-communication-a-hint-of-change",
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://finbyz.tech/blog-post/",
+    "name": "FinByz Tech Blog",
     "publisher": {
       "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "How Artificial Intelligence is Transforming Global Communication",
-      "description": "Discover how AI Whisperers are transforming communication worldwide. Explore the impact of artificial intelligence on language, personalizat",
-      "articleBody": "<section>\n   \n    <div class=\"container-fluid text-justify\">\n        <div class=\"row p-lr-50\">\n            <div class=\"col-md-12 rollover finbyz-fadeinup\"><img alt=\"AI is Revolutionizing Global Communication\"\n                    height=\"80%\" src=\"/files/AI_ERP.jpg\" title=\"AI is Revolutionizing Global Communication\"\n                    width=\"70%\"></div>\n\n        </div>\n    </div>\n\n\n</section>\n<section class=\"mt-5\">\n    <div class=\" finbyz-fadeinup\">\n        <div class=\"row\">\n    ",
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+      "@id": "https://finbyz.tech",
+      "name": "FinByz Tech Pvt Ltd"
     }
-  };
+  },
+  "keywords": [
+    "Artificial intelligence",
+    "Communication",
+    "AI in communication"
+  ]
+};
 
   return (
     <>
@@ -80,13 +106,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="How Artificial Intelligence is Transforming Global Communication" />
-        <meta itemProp="description" content="Discover how AI Whisperers are transforming communication worldwide. Explore the impact of artificial intelligence on language, personalizat" />
+
+      <article itemScope itemType="https://schema.org/BlogPosting">
+        <meta itemProp="headline" content="How Artificial Intelligence is Transforming Global Communication" />
+        <meta itemProp="description" content="Explore the impact of Artificial Intelligence on global communication, including enhanced accessibility, personalized interactions, and ethical considerations shaping the future of AI-driven communication." />
       </article>
+
       {children}
-      
       <BusinessSlider />
     </>
   );

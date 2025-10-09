@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/website-development",
+    canonical: "https://finbyz.tech/website-development",
   },
   openGraph: {
     title: " Website Development Services & Design in Ahmedabad, India",
     description: "Boost your presence with our premier website development company. We offer expert web development services, specializing in web design & development.",
-    url: "https://web.finbyz.tech/website-development",
-    siteName: "Your Site Name",
+    url: "https://finbyz.tech/website-development",
+    siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
     images: [{ url: "/files/web-development.svg", width: 1200, height: 630, alt: " Website Development Services & Design in Ahmedabad, India" }],
@@ -39,40 +39,52 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  // Structured data for LLMs and search engines
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": " Website Development Services & Design in Ahmedabad, India",
-    "description": "Boost your presence with our premier website development company. We offer expert web development services, specializing in web design & development.",
-    "url": "https://web.finbyz.tech/website-development",
-    "image": "/files/web-development.svg",
-    "keywords": "website development,\nweb developer,\nwebsite development company,\nweb development company,\nweb development services,\nweb design and development,\nweb development agency,\nweb app development,\nwebsite development in india,\nwebsite development in uk,",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
-    "publisher": {
-      "@type": "Organization",
-      "name": "FinByz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": " Website Development Services & Design in Ahmedabad, India",
-      "description": "Boost your presence with our premier website development company. We offer expert web development services, specializing in web design & development.",
-      
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd"
-      },
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+  "@context": "http://www.schema.org",
+  "@type": "ProfessionalService",
+  "name": " Website Development Services & Design in Ahmedabad, India",
+  "url": "https://finbyz.tech/website-development",
+  "logo": "https://finbyz.tech/files/FinbyzLogo.png",
+  "image": "/files/web-development.svg",
+  "description": "Boost your presence with our premier website development company. We offer expert web development services, specializing in web design & development.",
+  "priceRange": "INR",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
+    "addressLocality": "Ahmedabad",
+    "addressRegion": "Gujarat",
+    "addressCountry": "IN",
+    "postalCode": "380009"
+  },
+  "telephone": "+919925701446",
+  "openingHours": "Mo, Tu, We, Th, Fr, Sa 10.00:00-19:00",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+91 7948912428",
+      "contactType": "customer support",
+      "areaServed": [
+        "IN"
+      ],
+      "availableLanguage": [
+        "Hindi",
+        "Gujarati",
+        "English"
+      ]
     }
-  };
+  ],
+  "sameAs": [
+    "https://www.facebook.com/FinByz",
+    "https://twitter.com/FinByz",
+    "https://www.linkedin.com/company/finbyz",
+    "https://www.youtube.com/c/Finbyz",
+    "https://www.instagram.com/finbyz/"
+  ]
+};
 
   return (
     <>
