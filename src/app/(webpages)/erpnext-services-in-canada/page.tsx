@@ -25,7 +25,7 @@ const flipCards = [
   {
     front: (
       <div className="flex flex-col items-center justify-center gap-3">
-        <img src="api/fb/n/files/icon-sales-automation.svg" alt="Customized ERPNext" width={56} height={56} />
+        <img src="/api/fb/n/files/icon-sales-automation.svg" alt="Customized ERPNext" width={56} height={56} />
         <h3 className="font-semibold text-lg">Customized ERPNext</h3>
       </div>
     ),
@@ -38,7 +38,7 @@ const flipCards = [
   {
     front: (
       <div className="flex flex-col items-center justify-center gap-3">
-        <img src="api/fb/n/files/icon-personalized-touch.svg" alt="ERPNext Implementation" width={56} height={56} />
+        <img src="/api/fb/n/files/icon-personalized-touch.svg" alt="ERPNext Implementation" width={56} height={56} />
         <h3 className="font-semibold text-lg">ERPNext Implementation</h3>
       </div>
     ),
@@ -51,7 +51,7 @@ const flipCards = [
   {
     front: (
       <div className="flex flex-col items-center justify-center gap-3">
-        <img src="api/fb/n/files/icon-shorter-sales-cycle.svg" alt="Integration Services" width={56} height={56} />
+        <img src="/api/fb/n/files/icon-shorter-sales-cycle.svg" alt="Integration Services" width={56} height={56} />
         <h3 className="font-semibold text-lg">Integration Services</h3>
       </div>
     ),
@@ -64,7 +64,7 @@ const flipCards = [
   {
     front: (
       <div className="flex flex-col items-center justify-center gap-3">
-        <img src="api/fb/n/files/icon-improved-service.svg" alt="Support and Maintenance" width={56} height={56} />
+        <img src="/api/fb/n/files/icon-improved-service.svg" alt="Support and Maintenance" width={56} height={56} />
         <h3 className="font-semibold text-lg">Support and Maintenance</h3>
       </div>
     ),
@@ -77,7 +77,7 @@ const flipCards = [
   {
     front: (
       <div className="flex flex-col items-center justify-center gap-3">
-        <img src="api/fb/n/files/icon-customer-loyalty.svg" alt="Training and Consultation" width={56} height={56} />
+        <img src="/api/fb/n/files/icon-customer-loyalty.svg" alt="Training and Consultation" width={56} height={56} />
         <h3 className="font-semibold text-lg">Training and Consultation</h3>
       </div>
     ),
@@ -90,7 +90,7 @@ const flipCards = [
   {
     front: (
       <div className="flex flex-col items-center justify-center gap-3">
-        <img src="api/fb/n/files/icon-resource-optimization.svg" alt="Data Migration" width={56} height={56} />
+        <img src="/api/fb/n/files/icon-resource-optimization.svg" alt="Data Migration" width={56} height={56} />
         <h3 className="font-semibold text-lg">Data Migration</h3>
       </div>
     ),
@@ -369,6 +369,7 @@ export default function Page() {
                 icon: 'rocket',
               },
               title: 'Get Started with ERPNext Services in Canada',
+              highlightText : "ERPNext Services in Canada",
               description: 'Contact our experts today to discuss your ERPNext implementation, customization, or support needs. Let us help you drive efficiency and growth in your business.',
               primaryButton: {
                 text: 'Contact Us',

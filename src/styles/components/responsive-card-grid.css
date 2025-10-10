@@ -67,7 +67,7 @@
   transform: translateY(0);
 }
 
-.responsive-card-grid-title {
+/* .responsive-card-grid-title {
   font-size: 2rem;
   font-weight: 800;
   margin-bottom: 0.75rem;
@@ -78,7 +78,17 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+} */
+
+.responsive-card-grid-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  color: #1A5276; /* solid color */
+  line-height: 1.1;
+  letter-spacing: -0.025em;
 }
+
 
 @media (min-width: 768px) {
   .responsive-card-grid-title {

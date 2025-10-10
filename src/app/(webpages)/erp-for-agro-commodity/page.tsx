@@ -39,7 +39,7 @@ export default function Page() {
       {/* Introduction Section */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4">ERPNext for Agriculture Industry</h2>
+          <h2 className="text-2xl text-[#1A5276] font-bold mb-4">ERPNext for Agriculture Industry</h2>
           <p className="text-gray-700 mb-6">
             Looking to integrate your agro-business with a modern ERP solution? Adopting ERPNext for agriculture is essential in today’s evolving landscape, as the sector is foundational to food security and national development. By organizing business data systematically, ERP agro solutions empower effective decision-making and enhance long-term operational efficiency. ERP systems deliver real-time visibility across processes and unify the agricultural workforce on a single digital platform.
           </p>
@@ -63,7 +63,7 @@ export default function Page() {
       {/* Features Grid Section */}
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold text-center mb-10">Features that ERP Offers in the Agricultural Sector</h2>
+          <h2 className="text-2xl text-[#1A5276] font-bold text-center mb-10">Features that ERP Offers in the Agricultural Sector</h2>
           <AgricultureFeatureGrid
             features={[
               {
@@ -115,11 +115,12 @@ export default function Page() {
           />
         </div>
       </Section>
+      {/* testimonial */}
 
       {/* Benefits List Section */}
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold text-center mb-6">Benefits of Implementing ERPNext in Agriculture</h2>
+          <h2 className="text-2xl text-[#1A5276] font-bold text-center mb-6">Benefits of Implementing ERPNext in Agriculture</h2>
           <p className="text-gray-700 text-center mb-6">
             Above the general <a href="https://finbyz.tech/benefits-of-erp" target="_blank" className="text-blue-600 underline">benefits of ERP Software</a>, there are various benefits, specific for Agro-Industry, some of them are as below
           </p>
@@ -148,7 +149,7 @@ export default function Page() {
 
       {/* CTA Section */}
       <Section>
-        <div className="container-custom py-8">
+        <div className="py-8">
           <CTA
             data={{
               subheading: {
@@ -156,6 +157,7 @@ export default function Page() {
                 icon: 'leaf',
               },
               title: 'Get Started with ERPNext for Agriculture',
+              highlightText:"ERPNext for Agriculture",
               description: 'Contact our experts to discuss your requirements and see how ERPNext can revolutionize your agricultural operations.',
               primaryButton: {
                 text: 'Request a Demo',

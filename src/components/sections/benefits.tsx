@@ -50,7 +50,7 @@ export default function Benefits({ data = {} }: BenefitsProps) {
       },
       { 
         number: 200, 
-        suffix: "%", 
+        suffix: "+", 
         label: "Efficiency Gains with Our Solutions",
         header: "Maximum Efficiency",
         description: "Transform your operations with intelligent automation",
@@ -184,16 +184,18 @@ export default function Benefits({ data = {} }: BenefitsProps) {
                     <div className="benefits-counter">
                       {benefit.number}{benefit.suffix}
                     </div>
+                    {/* Label */}
+                    <p className="benefits-card-label">
+                      {benefit.label}
+                    </p>
                     
                     {/* Description */}
                     <p className="benefits-card-description">
                       {benefit.description}
                     </p>
+                   
                     
-                    {/* Label */}
-                    <p className="benefits-card-label">
-                      {benefit.label}
-                    </p>
+                    
                   </CardContent>
                 </Card>
               </div>

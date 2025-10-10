@@ -59,6 +59,7 @@ async function getLinks(doctype: string, route: string): Promise<Links> {
         headers: {
             "Authorization": `token ${process.env.FRAPPE_API_KEY}:${process.env.FRAPPE_API_SECRET}`,
         },
+        cache: 'force-cache'
     });
     const jsonData = await response.json();
     if(!response.ok || jsonData?.data?.length == 0){

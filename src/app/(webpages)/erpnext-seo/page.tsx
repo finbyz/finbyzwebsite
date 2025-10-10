@@ -177,6 +177,7 @@ export default function Page() {
             icon: 'rocket',
           },
           title: 'Start Your SEO Journey with ERPNext',
+          highlightText:"SEO , ERPNext",
           description: 'Contact us to discover how we can help you optimize your ERPNext platform for maximum online visibility and growth.',
           primaryButton: {
             text: 'Get Started',

@@ -45,9 +45,11 @@ export default function Page() {
             ]}
             email={{ label: 'info@finbyz.com', href: 'mailto:info@finbyz.com' }}
             address={
-              '504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009'
+         '504-Addor Ambition,Nr. Navrang Circle,Navrangpura,Ahmedabad, Gujarat 380009'
             }
+            office={'Registered Office'}
           />
+               {/* '504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009' */}
           <div className="rounded-xl overflow-hidden shadow-lg animate-fade-in-up">
             <iframe
               title="Finbyz Location Map"
@@ -71,7 +73,7 @@ export default function Page() {
       </Section>
 
       <Section>
-        <div className="container-custom py-8 flex flex-col items-center">
+        <div className=" py-8 flex flex-col items-center">
           <CTA
             data={{
               subheading: {

@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { CalendarCheck, FileText, Rocket, Calendar } from "lucide-react";
 import "@/styles/components/cta.css";
+import React from "react";
 
 interface CTAProps {
   data?: {
@@ -12,6 +13,7 @@ interface CTAProps {
     };
     title?: string;
     description?: string;
+    highlightText?: string;
     primaryButton?: {
       text?: string;
       icon?: string;
@@ -33,6 +35,7 @@ export default function CTA({ data = {} }: CTAProps) {
   const {
     component_type = "Text",
     subheading = { text: "Talk to our Experts", icon: "CalendarCheck" },
+    highlightText = "", 
     title = "Ready to Scale with Smart Tech? Let's Talk.",
     description = "Transform your business processes with AI-powered automation and expert implementation.",
     primaryButton = { text: "Book Demo", icon: "CalendarCheck", action: undefined },
@@ -70,16 +73,31 @@ export default function CTA({ data = {} }: CTAProps) {
             <span>{subheading.text}</span>
           </div>
           
-          <h2 className="cta-title">
+          {/* <h2 className="cta-title">
             {title.split('Smart Tech').map((part, index) => 
               index === 0 ? (
-                <span key={index}>{part}<span className="cta-title-highlight">Smart Tech</span></span>
+                <span key={index}>{part}<span className="cta-title-highlight"></span></span>
               ) : (
                 <span key={index}>{part}</span>
               )
             )}
-          </h2>
-          
+          </h2> */}
+          <h2 className="cta-title">
+  {!highlightText || !title.includes(highlightText) ? (
+    title
+  ) : (
+    title.split(highlightText).map((part, index, array) => (
+      <React.Fragment key={index}>
+        {part}
+        {index < array.length - 1 && (
+          <span className="cta-title-highlight">{highlightText}</span>
+        )}
+      </React.Fragment>
+    ))
+  )}
+</h2>
+
+              
           <p className="cta-description">
             {description}
           </p>

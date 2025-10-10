@@ -1,3 +1,4 @@
+
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -5,8 +6,11 @@ import { Home, ArrowLeft, Search, FileText, Users, Building2, Wrench } from "luc
 import Link from "next/link";
 
 export default function NotFound() {
+  
   return (
-    <div className="min-h-screen">
+    <>
+    
+     <div className="min-h-screen">
       <Header />
       <main className="pt-4">
         {/* 404 Hero Section */}
@@ -172,5 +176,7 @@ export default function NotFound() {
       </main>
       <Footer />
     </div>
+    </>
+   
   );
 }

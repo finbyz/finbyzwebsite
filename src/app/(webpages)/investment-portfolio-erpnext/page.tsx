@@ -57,19 +57,19 @@ export default function Page() {
               <InvestmentProcessStepCard
                 title="Add Investment Segment and Category"
                 description="Begin your ERPNext portfolio setup by creating an Investment Segment and Investment Category to classify your investments effectively."
-                image="api/fb/n/files/1.png"
+                image="/api/fb/n/files/1.png"
                 alt="Investment Form"
               />
               {/* <InvestmentProcessStepCard
                 title="Configure Investment Accounts"
                 description="Define default accounts under the Investment Portfolio Accounts section, including your bank, capital, charges, and income accounts. These settings streamline portfolio tracking and automate journal entries for investment transactions."
-                image="api/fb/n/files/portfolio management (1).svg"
+                image="/api/fb/n/files/portfolio management (1).svg"
                 alt="Configure Accounts"
               /> */}
               <InvestmentProcessStepCard
                 title="Fill Portfolio Investment Form"
                 description="Enter key details such as Segment, Category, Script (investment name), and Investment Date in the Portfolio Investment Form. This lays the foundation for accurate ERPNext portfolio tracking."
-                image="api/fb/n/files/1.png"
+                image="/api/fb/n/files/1.png"
                 alt="Investment Form"
               />
             </div>
@@ -77,7 +77,7 @@ export default function Page() {
               <InvestmentProcessStepCard
                 title="Enter Investment Details"
                 description="Provide essential details like quantity, entry price, entry charges, and total cost of ownership. You can set entry charges manually or let the system calculate them. Default accounts are picked automatically but can be changed for specific transactions. After submission, a journal entry is created, and your portfolio entry status updates to 'Holding'. For existing portfolios, link the Journal Voucher and mark as 'Is Existing'."
-                image="api/fb/n/files/1.png"
+                image="/api/fb/n/files/1.png"
                 alt="Investment Entry"
               />
             </div>
@@ -97,19 +97,19 @@ export default function Page() {
               <InvestmentProcessStepCard
                 title="Provide Exit Details"
                 description="To sell or exit assets, enter details against the corresponding portfolio record—whether partial or full exit."
-                image="api/fb/n/files/2df25a0.png"
+                image="/api/fb/n/files/2df25a0.png"
                 alt="Exit Process"
               />
               <InvestmentProcessStepCard
                 title="Fill Exit Form"
                 description="In the Exit section, provide details like Exit Quantity, Exit Price, Exit Charges, and Net Exit Amount. You can set exit charges manually or let the system calculate them."
-                image="api/fb/n/files/2df25a0.png"
+                image="/api/fb/n/files/2df25a0.png"
                 alt="Exit Form"
               />
               <InvestmentProcessStepCard
                 title="Create Exit Journal Voucher"
                 description="Click 'Create Exit JV' to automatically generate a journal entry. ERPNext will debit the bank and investment charges accounts while crediting capital and income accounts, keeping your investment records in sync."
-                image="api/fb/n/files/2df25a0.png"
+                image="/api/fb/n/files/2df25a0.png"
                 alt="Exit JV"
               />
             </div>
@@ -117,7 +117,7 @@ export default function Page() {
               <InvestmentProcessStepCard
                 title="Update Investment Portfolio"
                 description="After submitting the journal entry, it will be added to the Investment Portfolio Segment table. The exit transaction appears in the table, and you can perform multiple partial exits as needed. The system updates the investment status as 'Exited' or 'Partially Exited' based on remaining quantity, ensuring end-to-end tracking with automatic financial journal entries."
-                image="api/fb/n/files/3.png"
+                image="/api/fb/n/files/3.png"
                 alt="Investment Portfolio Segment"
               />
             </div>

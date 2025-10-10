@@ -129,10 +129,10 @@ export default function AnimatedCareerPage() {
         
         <div className="w-full relative">
           <div className={`text-center mb-20 transition-all duration-1000 ${isVisible['why-join'] ? 'animate-fade-in-up' : ''}`}>
-            <Badge className="mb-6 bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white border-0 animate-fade-in-up-delayed">
+            <Badge className="mb-6 bg-gradient-to-r  from-orange-400 to-orange-500 border-0 animate-fade-in-up-delayed">
               Why Choose Us
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1A5276] mb-6 animate-fade-in-up-delayed-2">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#FF8C00] mb-6 animate-fade-in-up-delayed-2">
               Why Join Finbyz Tech?
             </h2>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-fade-in-up-delayed-3">
@@ -213,10 +213,10 @@ export default function AnimatedCareerPage() {
         
         <div className="w-full relative">
           <div className={`text-center mb-20 transition-all duration-1000 ${isVisible['who-thrives'] ? 'animate-fade-in-up' : ''}`}>
-            <Badge className="mb-6 bg-gradient-to-r from-green-500 to-blue-600 text-white border-0 animate-fade-in-up-delayed">
+            <Badge className="mb-6 bg-gradient-to-r from-orange-400 to-orange-500 text-white border-0 animate-fade-in-up-delayed">
               Perfect Match
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1A5276] mb-6 animate-fade-in-up-delayed-2">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#FF8C00] mb-6 animate-fade-in-up-delayed-2">
               Who Thrives Here?
             </h2>
             <div className="max-w-4xl mx-auto">
@@ -245,10 +245,10 @@ export default function AnimatedCareerPage() {
         
         <div className="w-full relative">
           <div className={`text-center mb-20 transition-all duration-1000 ${isVisible['work-culture'] ? 'animate-fade-in-up' : ''}`}>
-            <Badge className="mb-6 bg-gradient-to-r from-pink-500 to-purple-600 text-white border-0 animate-fade-in-up-delayed">
+            <Badge className="mb-6 bg-gradient-to-r from-orange-400 to-orange-500 text-white border-0 animate-fade-in-up-delayed">
               Our Culture
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1A5276] mb-6 animate-fade-in-up-delayed-2">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#FF8C00] mb-6 animate-fade-in-up-delayed-2">
               Our Work Culture
             </h2>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-fade-in-up-delayed-3">
@@ -305,10 +305,10 @@ export default function AnimatedCareerPage() {
         
         <div className="w-full relative">
           <div className={`text-center mb-20 transition-all duration-1000 ${isVisible['apply-section'] ? 'animate-fade-in-up' : ''}`}>
-            <Badge className="mb-6 bg-gradient-to-r from-blue-500 to-indigo-600 text-white border-0 animate-fade-in-up-delayed">
+            <Badge className="mb-6 bg-gradient-to-r from-orange-400 to-orange-500 text-white border-0 animate-fade-in-up-delayed">
               Apply Now
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1A5276] mb-6 animate-fade-in-up-delayed-2">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#FF8C00] mb-6 animate-fade-in-up-delayed-2">
               Come Flaunt Your Skills
             </h2>
             <div className="max-w-4xl mx-auto">
@@ -336,7 +336,7 @@ export default function AnimatedCareerPage() {
             <Button 
               size="lg"
               variant="outline"
-              className="rounded-full border-2 border-[#1A5276] text-[#1A5276] bg-transparent hover:bg-[#1A5276] hover:text-white text-lg px-8 py-4 h-auto font-semibold transition-all"
+              className="rounded-full border-2 border-[#1A5276] text-[#1A5276] bg-transparent hover:bg-[#1A5276] hover: text-lg px-8 py-4 h-auto font-semibold transition-all"
             >
               <Briefcase className="mr-2 w-5 h-5" />
               See Open Roles

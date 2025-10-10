@@ -120,7 +120,7 @@ export default function Page() {
             Once this licence is created, it can be linked to corresponding import and export consignments to ensure compliance and accuracy in Import Export Licence management.
           </p>
           <div className="flex justify-center mt-8 animate-fade-in delay-200">
-            <img src="api/fb/n/files/AA-34-to-44.gif" alt="How to Manage Advanced Authorisation Licence" className="rounded-lg shadow-lg w-full md:w-2/3" />
+            <img src="/api/fb/n/files/AA-34-to-44.gif" alt="How to Manage Advanced Authorisation Licence" className="rounded-lg shadow-lg w-full md:w-2/3" />
           </div>
         </div>
       </Section>
@@ -140,7 +140,7 @@ export default function Page() {
             This will ensure license is never overutilized by the user.
           </p>
           <div className="flex justify-center mt-8 animate-fade-in delay-200">
-            <img src="api/fb/n/files/AA-1.40-to-1.47.gif" alt="Import License Usage" className="rounded-lg shadow-lg w-full md:w-2/3" />
+            <img src="/api/fb/n/files/AA-1.40-to-1.47.gif" alt="Import License Usage" className="rounded-lg shadow-lg w-full md:w-2/3" />
           </div>
         </div>
       </Section>
@@ -160,7 +160,7 @@ export default function Page() {
             The system allows for permissible variation on the higher side for export quantity, ensuring the committed export target under the licence is achieved without forfeiting duty drawback benefits. This feature ensures better control over the Import Export Licence management process.
           </p>
           <div className="flex justify-center mt-8 animate-fade-in delay-200">
-            <img src="api/fb/n/files/AA-1.16-to-1.29.gif" alt="Export License Usage" className="rounded-lg shadow-lg w-full md:w-2/3" />
+            <img src="/api/fb/n/files/AA-1.16-to-1.29.gif" alt="Export License Usage" className="rounded-lg shadow-lg w-full md:w-2/3" />
           </div>
         </div>
       </Section>
@@ -194,6 +194,7 @@ export default function Page() {
                 icon: 'CheckCircle',
               },
               title: 'Get Advanced Authorisation Licence App for ERPNext',
+              highlightText:"Authorisation Licence App for ERPNext",
               description: 'Automate, track, and manage your licences with ease. Ensure compliance and maximize your export-import benefits today.',
               primaryButton: {
                 text: 'Get Started',

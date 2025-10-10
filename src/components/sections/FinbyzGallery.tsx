@@ -25,68 +25,13 @@ interface FinbyzGalleryProps {
 
 
 const FinbyzGallery = ({ galleryItems = [], relatedReads = [] }: FinbyzGalleryProps) => {
+  console.log(relatedReads)
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-
-        {/* Gallery Section */}
-        {galleryItems.length > 0 ?
-          <div className="mb-16">
-            <div className="text-center mb-10">
-              <h2 className="text-4xl font-bold text-gray-900 mb-3">Our Solutions</h2>
-              <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
-            </div>
-            <div className="overflow-hidden">
-              <div className="gallery-scroll-container">
-                <div className="gallery-scroll">
-                  {[...galleryItems, ...galleryItems].map((item, index) => (
-                    <div
-                      key={index}
-                      className="flex-shrink-0 w-80 hover:scale-110 hover:z-10"
-                    >
-                      <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer group">
-                        <a href={item.route}>
-                          <div className="h-48 flex items-center justify-center relative overflow-hidden">
-
-                            {/* Static image */}
-                            <img
-                              src={`api/fb/n${item.image}`}
-                              alt={item.title}
-                              className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
-                            />
-
-                            {/* Animated image */}
-                            <img
-                              src={`api/fb/n${item.animated_gif || item.image}`}
-                              alt={item.title}
-                              className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                            />
-
-                            <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
-                          </div>
-                        </a>
-
-                        <div className="p-6">
-                          <h3 className="text-xl font-bold text-gray-900 mb-2 max-h-10 min-h-10 overflow-hidden">{item.title}</h3>
-                          <a href={item.route} className="text-blue-600 text-sm hover:underline inline-flex items-center">
-                            Learn more
-                            <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                            </svg>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-          : null}
-
         {/* Related Reads Section */}
         {relatedReads.length > 0 ?
-          <div>
+          <div className='mb-16'>
             <div className="text-center mb-10">
               <h2 className="text-4xl font-bold text-gray-900 mb-3">Related Read</h2>
               <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
@@ -101,7 +46,7 @@ const FinbyzGallery = ({ galleryItems = [], relatedReads = [] }: FinbyzGalleryPr
                 >
                   <div className="h-40 bg-gray-100 flex items-center justify-center relative overflow-hidden">
                     <img
-                      src={`api/fb/n/${read.image}`}
+                      src={`/api/fb/n/${read.image}`}
                       alt={read.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
@@ -126,6 +71,54 @@ const FinbyzGallery = ({ galleryItems = [], relatedReads = [] }: FinbyzGalleryPr
                   </div>
                 </a>
               ))}
+            </div>
+          </div>
+          : null}
+        {/* Gallery Section */}
+        {galleryItems.length > 0 ?
+          <div>
+            <div className="text-center mb-10">
+              <h2 className="text-4xl font-bold text-gray-900 mb-3">Gallery</h2>
+              <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div className="overflow-hidden">
+              <div className="gallery-scroll-container">
+                <div className="gallery-scroll">
+                  {[...galleryItems, ...galleryItems].map((item, index) => (
+                    <div
+                      key={index}
+                      className="flex-shrink-0 w-80 hover:scale-110 hover:z-10"
+                    >
+                      <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer group flex flex-col h-[380px]">
+                        <a href={item.route}>
+                          <div className="h-48 flex items-center justify-center relative overflow-hidden">
+
+                            {/* Static image */}
+                            <img
+                              src={`/api/fb/n${item.image}`}
+                              alt={item.title}
+                              className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
+                            />
+
+                            {/* Animated image */}
+                            <img
+                              src={`/api/fb/n${item.animated_gif || item.image}`}
+                              alt={item.title}
+                              className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                            />
+
+                            <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+                          </div>
+                        </a>
+
+                        <div className="p-6 flex flex-col flex-1">
+                          <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
           : null}

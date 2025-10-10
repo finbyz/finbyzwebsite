@@ -48,7 +48,7 @@ export default function Page() {
           </div>
           <div className="flex-1 flex justify-center">
             <img
-              src="api/fb/n/files/FD-Management-PageDesign.svg"
+              src="/api/fb/n/files/FD-Management-PageDesign.svg"
               alt="FD Management In ERPNext"
               width={420}
               height={320}
@@ -127,6 +127,7 @@ export default function Page() {
                 icon: 'CheckCircle2'
               },
               title: 'Start Managing Fixed Deposits in ERPNext',
+              highlightText:"Fixed Deposits in ERPNext",
               description: 'Automate, track, and optimize your financial assets with ease. Download the FD Management App or get in touch for a personalized demo.',
               primaryButton: {
                 text: 'Download App',

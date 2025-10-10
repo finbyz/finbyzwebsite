@@ -125,6 +125,7 @@ export default function Page() {
                 icon: 'BarChart3'
               },
               title: 'Transform Your Business with Data Analytics',
+              highlightText:"Data Analytics",
               description: 'Contact Finbyz Tech to discover how our data analytics solutions can drive growth, efficiency, and smarter decisions for your organization.',
               primaryButton: {
                 text: 'Get Started',

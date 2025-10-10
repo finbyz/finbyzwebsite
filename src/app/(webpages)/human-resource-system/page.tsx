@@ -63,7 +63,7 @@ export default function Page() {
           {/* Recruitment Modern */}
           <Card className="border-none shadow-md flex flex-col items-center p-6 animate-fadeInUp">
             <img
-              src="api/fb/n/files/icon Real-time information.svg"
+              src="/api/fb/n/files/icon Real-time information.svg"
               alt="Flawless UI with Real-time information"
               width={80}
               height={80}
@@ -92,7 +92,7 @@ export default function Page() {
           {/* Employee and Attendance Modern */}
           <Card className="border-none shadow-md flex flex-col items-center p-6 animate-fadeInUp">
             <img
-              src="api/fb/n/files/icon Improved Collaboration.svg"
+              src="/api/fb/n/files/icon Improved Collaboration.svg"
               alt="Improved Collaboration"
               width={80}
               height={80}
@@ -107,7 +107,7 @@ export default function Page() {
           {/* Leave Management Modern */}
           <Card className="border-none shadow-md flex flex-col items-center p-6 animate-fadeInUp">
             <img
-              src="api/fb/n/files/icon Improved Collaboration.svg"
+              src="/api/fb/n/files/icon Improved Collaboration.svg"
               alt="Improved Collaboration"
               width={80}
               height={80}
@@ -122,7 +122,7 @@ export default function Page() {
           {/* Appraisal Modern */}
           <Card className="border-none shadow-md flex flex-col items-center p-6 animate-fadeInUp">
             <img
-              src="api/fb/n/files/icon Real-time information.svg"
+              src="/api/fb/n/files/icon Real-time information.svg"
               alt="Flawless UI with Real-time information"
               width={80}
               height={80}
@@ -151,7 +151,7 @@ export default function Page() {
           {/* Expense Claim Modern */}
           <Card className="border-none shadow-md flex flex-col items-center p-6 animate-fadeInUp">
             <img
-              src="api/fb/n/files/icon Real-time information.svg"
+              src="/api/fb/n/files/icon Real-time information.svg"
               alt="Flawless UI with Real-time information"
               width={80}
               height={80}
@@ -180,7 +180,7 @@ export default function Page() {
           {/* Payroll Modern */}
           <Card className="border-none shadow-md flex flex-col items-center p-6 animate-fadeInUp">
             <img
-              src="api/fb/n/files/icon Improved Collaboration.svg"
+              src="/api/fb/n/files/icon Improved Collaboration.svg"
               alt="Improved Collaboration"
               width={80}
               height={80}
@@ -239,6 +239,7 @@ export default function Page() {
                 icon: 'UserCheck',
               },
               title: 'Experience the Power of Advanced Human Resource Software',
+              highlightText:"Advanced Human Resource Software",
               description: 'Streamline your HR and payroll processes, empower your workforce, and drive business growth. Get started with Finbyz Tech today!',
               primaryButton: {
                 text: 'Request a Demo',

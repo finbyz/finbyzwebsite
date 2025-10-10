@@ -24,6 +24,7 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
   const defaultData = {
     component_type: "Form",
     title: "Book a Free Consultation",
+    highlightText: "", 
     description: "Get started with your free demo today and discover how our solutions can transform your business",
     fields: {
       name: "Name",
@@ -34,6 +35,7 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
     submitText: "SUBMIT",
     backgroundImage: undefined
   };
+
 
   // Support either raw data object or a manifest object with example.data
   const resolved: any = (data?.example?.data) || (data?.data) || (data);

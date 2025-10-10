@@ -79,7 +79,7 @@ export default function Page() {
               <div className="relative">
                 <div className="absolute inset-0 rounded-2xl bg-blue-100 blur-xl opacity-40" />
                 <img
-                  src="api/fb/n/files/manage-chemical-formulation.svg"
+                  src="/files/manage-chemical-formulation.svg"
                   alt="Manage chemical formulation"
                   width={320}
                   height={320}
@@ -105,7 +105,7 @@ export default function Page() {
               <div className="relative">
                 <div className="absolute inset-0 rounded-2xl bg-blue-100 blur-xl opacity-40" />
                 <img
-                  src="api/fb/n/files/sample-and-quotation.svg"
+                  src="/api/fb/n/files/sample-and-quotation.svg"
                   alt="Manage samples and quotation"
                   width={320}
                   height={320}
@@ -139,7 +139,7 @@ export default function Page() {
               <div className="relative">
                 <div className="absolute inset-0 rounded-2xl bg-blue-100 blur-xl opacity-40" />
                 <img
-                  src="api/fb/n/files/chemical-mfg-process.svg"
+                  src="/api/fb/n/files/chemical-mfg-process.svg"
                   alt="Chemical manufacturing ERP process"
                   width={320}
                   height={320}
@@ -199,7 +199,7 @@ export default function Page() {
               <div className="relative">
                 <div className="absolute inset-0 rounded-2xl bg-blue-100 blur-xl opacity-40" />
                 <img
-                  src="api/fb/n/files/inventory.svg"
+                  src="/api/fb/n/files/inventory.svg"
                   alt="Chemical Inventory saves dollars"
                   width={320}
                   height={320}
@@ -226,7 +226,7 @@ export default function Page() {
               <div className="relative">
                 <div className="absolute inset-0 rounded-2xl bg-blue-100 blur-xl opacity-40" />
                 <img
-                  src="api/fb/n/files/quality-assurance.svg"
+                  src="/api/fb/n/files/quality-assurance.svg"
                   alt="quality-assurance"
                   width={320}
                   height={320}
@@ -283,6 +283,7 @@ export default function Page() {
                 icon: 'flask-conical',
               },
               title: 'Get Started with ERPNext for Chemical Industry',
+              highlightText:"ERPNext for Chemical Industry",
               description: 'Streamline your operations, ensure compliance, and boost productivity. Book a free consultation with our experts today!',
               primaryButton: {
                 text: 'Book Free Consultation',

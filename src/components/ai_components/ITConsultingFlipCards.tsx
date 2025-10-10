@@ -6,7 +6,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 const cards = [
   {
     title: "Innovative Approach",
-    image: "api/fb/n/files/it-consulting-innovative-approach.svg",
+    image: "/api/fb/n/files/it-consulting-innovative-approach.svg",
     alt: "Innovative Approach",
     quote: "Innovation distinguishes between a leader and a follower. - Steve Jobs.",
     description:
@@ -14,7 +14,7 @@ const cards = [
   },
   {
     title: "Expert Support",
-    image: "api/fb/n/files/it-consulting-expert-support.svg",
+    image: "/api/fb/n/files/it-consulting-expert-support.svg",
     alt: "Expert Support",
     quote: "People expect good service but few are willing to give it. - Robert Gately.",
     description:
@@ -22,7 +22,7 @@ const cards = [
   },
   {
     title: "Value Analysis",
-    image: "api/fb/n/files/it-consulting-value-analysis.svg",
+    image: "/api/fb/n/files/it-consulting-value-analysis.svg",
     alt: "Value Analysis",
     quote: "Causal analysis provides absolutely no value judgment, and a value judgment is not a causal explanation. - Max Weber.",
     description:
@@ -30,7 +30,7 @@ const cards = [
   },
   {
     title: "Unbiased Recommendations",
-    image: "api/fb/n/files/it-consulting-unbiased-recommendations.svg",
+    image: "/api/fb/n/files/it-consulting-unbiased-recommendations.svg",
     alt: "Unbiased Recommendations",
     quote: "The guest will judge better of a feast than the cook - Aristotle.",
     description:

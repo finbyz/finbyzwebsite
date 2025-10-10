@@ -67,7 +67,7 @@ export default function Page() {
 
       <Section id="features-section" useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-3xl font-bold text-center mb-8 animate-fadeInUp">Features</h2>
+          <h2 className="text-3xl text-[#1A5276] font-bold text-center mb-8 animate-fadeInUp">Features</h2>
           <FeatureGrid
             features={[
               {
@@ -112,7 +112,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-semibold text-center mb-6 animate-fadeInUp">Activity Summary</h2>
+          <h2 className="text-2xl text-[#1A5276] font-semibold text-center mb-6 animate-fadeInUp">Activity Summary</h2>
           <ProductifyImageSection
             src="/api/fb/n/files/Productify%20Activity%20Summary.jpg"
             alt="Productify Activity Summary"
@@ -131,7 +131,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-semibold text-center mb-6 animate-fadeInUp">Activity Summary Report</h2>
+          <h2 className="text-2xl text-[#1A5276] font-semibold text-center mb-6 animate-fadeInUp">Activity Summary Report</h2>
           <ProductifyImageSection
             src="/api/fb/n/files/Productify%20Activity%20Summary%20Report.png"
             alt="Productify Activity Summary Report"
@@ -150,7 +150,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-semibold text-center mb-6 animate-fadeInUp">System Activity</h2>
+          <h2 className="text-2xl text-[#1A5276] font-semibold text-center mb-6 animate-fadeInUp">System Activity</h2>
           <ProductifyImageSection
             src="/api/fb/n/files/Productify%20Work%20Intensity.jpg"
             alt="Productify Work Intensity"
@@ -169,7 +169,7 @@ export default function Page() {
 
       <Section>
       <div className="container-custom py-8">
-        <h2 className="text-2xl font-semibold text-center mb-6 animate-fadeInUp">
+        <h2 className="text-2xl text-[#1A5276] font-semibold text-center mb-6 animate-fadeInUp">
           Applications and Web Browsing Insights
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -206,7 +206,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-semibold text-center mb-6 animate-fadeInUp">Domain Analysis Report</h2>
+          <h2 className="text-2xl text-[#1A5276] font-semibold text-center mb-6 animate-fadeInUp">Domain Analysis Report</h2>
           <ProductifyImageSection
             src="/api/fb/n/files/Report%20Domain%20Analysis.png"
             alt="Report Domain Analysis"
@@ -228,7 +228,7 @@ export default function Page() {
 
       <Section>
   <div className="container-custom py-8">
-    <h2 className="text-2xl font-semibold text-center mb-6 animate-fadeInUp">Top Phone Calls and Types of Calls</h2>
+    <h2 className="text-2xl text-[#1A5276] font-semibold text-center mb-6 animate-fadeInUp">Top Phone Calls and Types of Calls</h2>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
       {/* First Image */}
       <div className="flex flex-col items-center">
@@ -263,7 +263,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-semibold text-center mb-6 animate-fadeInUp">Hourly Calls Analysis</h2>
+          <h2 className="text-2xl text-[#1A5276] font-semibold text-center mb-6 animate-fadeInUp">Hourly Calls Analysis</h2>
           <ProductifyImageSection
             src="/api/fb/n/files/Productify%20Hourly%20Calls.jpg"
             alt="Productify Hourly Calls"
@@ -279,7 +279,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-semibold text-center mb-6 animate-fadeInUp">Consolidated Analysis</h2>
+          <h2 className="text-2xl text-[#1A5276] font-semibold text-center mb-6 animate-fadeInUp">Consolidated Analysis</h2>
           <ProductifyImageSection
             src="/api/fb/n/files/Consolidated%20table.png"
             alt="Productify Consolidated Analysis"
@@ -330,6 +330,7 @@ export default function Page() {
                 icon: 'rocket',
               },
               title: 'Start with Productify Today',
+              highlightText :"Productify",
               description: 'Empower your workforce with actionable insights and seamless monitoring. Try Productify and transform your productivity management.',
               primaryButton: {
                 text: 'Get Productify',

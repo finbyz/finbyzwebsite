@@ -174,7 +174,7 @@ export default function Page() {
       </Section>
 
       <Section>
-        <div className="container-custom py-8 flex flex-col items-center">
+        <div className="py-8 flex flex-col items-center">
           <CTA
             data={{
               subheading: {
@@ -182,6 +182,7 @@ export default function Page() {
                 icon: 'Rocket',
               },
               title: 'Let’s Build Your Next Website!',
+              highlightText:"Website",
               description: 'Contact us today for a free consultation and see how we can help you grow your business online.',
               primaryButton: {
                 text: 'Get Started',

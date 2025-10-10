@@ -117,37 +117,37 @@ export default function Page() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <FeatureCard
               title="Customer Management"
-              image="api/fb/n/files/icon-customer-management.svg"
+              image="/api/fb/n/files/icon-customer-management.svg"
               alt="Customer Management"
               description="Monitor and log all communication with customer contacts, including calls, emails, and meetings within the CRM system."
             />
             <FeatureCard
               title="Contact Management"
-              image="api/fb/n/files/icon-contact-management.svg"
+              image="/api/fb/n/files/icon-contact-management.svg"
               alt="Contact Management"
               description="Set reminders, schedule appointments, send bulk SMS/emails, and automate greetings for special occasions."
             />
             <FeatureCard
               title="Task Management"
-              image="api/fb/n/files/icon-task-management.svg"
+              image="/api/fb/n/files/icon-task-management.svg"
               alt="Task Management"
               description="Assign, manage, and track tasks effectively—complete with deadlines, notifications, and outcome tracking."
             />
             <FeatureCard
               title="Quotation Management"
-              image="api/fb/n/files/icon-quotation-management.svg"
+              image="/api/fb/n/files/icon-quotation-management.svg"
               alt="Quotation Management"
               description="Generate and manage quotes, convert them into invoices, and link them directly to relevant contacts or companies."
             />
             <FeatureCard
               title="Inquiry Management"
-              image="api/fb/n/files/icon-inquiry-management.svg"
+              image="/api/fb/n/files/icon-inquiry-management.svg"
               alt="Inquiry Management"
               description="Track the full lifecycle of inquiries, assign them in bulk, maintain communication records, and log customer requirements efficiently."
             />
             <FeatureCard
               title="Analytical Reports"
-              image="api/fb/n/files/payroll.svg"
+              image="/api/fb/n/files/payroll.svg"
               alt="Analytical Reports"
               description="Generate detailed reports including lead reports, call logs, appointment summaries, and inquiry status insights using the CRM software."
             />

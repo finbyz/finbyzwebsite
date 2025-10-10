@@ -66,57 +66,57 @@ export default function CompanyHistoryTimeline({ data }: CompanyHistoryTimelineP
           <p className="text-lg" style={{ color: 'var(--text-blue)', opacity: 0.7 }}>{subtitle}</p>
         </div>
 
-        {/* Horizontal Timeline */}
-        <div className="relative w-full overflow-x-auto pb-12">
-          <div className="flex items-center justify-between min-w-[700px] lg:min-w-[900px] xl:min-w-[1100px]" style={{ position: 'relative' }}>
-            {/* Central horizontal line */}
-            <div className="absolute left-0 right-0 top-1/2 h-1 z-0 rounded-full" style={{ background: 'linear-gradient(90deg, var(--primary-blue), var(--primary-purple))', transform: 'translateY(-50%)' }}></div>
-            {events.map((event, idx) => {
-              const isAbove = idx % 2 === 0;
-              return (
-                <div key={idx} className="timeline-item relative flex flex-col items-center flex-1 min-w-[180px]">
-                  {/* Dot on the line */}
-                  <div className="absolute left-1/2 top-1/2 z-10" style={{ transform: 'translate(-50%, -50%)' }}>
-                    <div className="w-5 h-5 rounded-full border-4 border-white shadow-lg" style={{ background: 'linear-gradient(135deg, var(--primary-blue), var(--primary-purple))' }}></div>
-                  </div>
-                  {/* Event Card */}
-                  <div className={`flex flex-col items-center ${isAbove ? 'mb-12' : 'mt-12'}`} style={{ minHeight: 120 }}>
-                    {isAbove && (
+      
+      {/* Vertical Timeline */}
+        <div className="relative max-w-5xl mx-auto">
+          {/* Central vertical line */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-1 z-0 rounded-full" style={{ background: 'linear-gradient(180deg, var(--primary-blue), var(--primary-purple))', transform: 'translateX(-50%)' }}></div>
+          
+          {events.map((event, idx) => {
+            const isLeft = idx % 2 === 0;
+            return (
+              <div key={idx} className="timeline-item relative mb-16 last:mb-0">
+                {/* Dot on the line */}
+                <div className="absolute left-1/2 top-8 z-10" style={{ transform: 'translate(-50%, 0)' }}>
+                  <div className="w-5 h-5 rounded-full border-4 border-white shadow-lg" style={{ background: 'linear-gradient(135deg, var(--primary-blue), var(--primary-purple))' }}></div>
+                </div>
+                
+                {/* Event Content */}
+                <div className={`flex items-start ${isLeft ? 'justify-end pr-[calc(50%+2rem)]' : 'justify-start pl-[calc(50%+2rem)]'}`}>
+                  <div className="flex items-start gap-4 max-w-md">
+                    {isLeft && (
                       <>
-                        <div className="flex flex-col items-center">
-                          <div className="w-16 h-16 rounded-full flex items-center justify-center mb-2 shadow-lg border-4 border-white" style={{ background: 'linear-gradient(135deg, var(--primary-blue), var(--primary-purple))' }}>
-                            <event.icon className="w-8 h-8 text-white" />
+                        <div className="flex-1">
+                          <div className="rounded-lg shadow-md p-6" style={{ background: 'var(--bg-blue-light)', color: 'var(--text-blue)', border: '1px solid var(--border-blue)' }}>
+                            <div className="font-bold text-xl mb-2" style={{ color: 'var(--primary-blue)' }}>{event.date}</div>
+                            <div className="font-semibold text-lg mb-2">{event.title}</div>
+                            <div className="text-sm" style={{ color: 'var(--text-blue)', opacity: 0.8 }}>{event.description}</div>
                           </div>
-                          <div className="bg-white rounded-lg shadow p-4 text-center min-w-[160px]" style={{ background: 'var(--bg-blue-light)', color: 'var(--text-blue)', border: '1px solid var(--border-blue)' }}>
-                            <div className="font-bold text-base mb-1">{event.title}</div>
-                            <div className="text-sm mb-1" style={{ color: 'var(--text-blue)', opacity: 0.7 }}>{event.description}</div>
-                          </div>
+                        </div>
+                        <div className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg border-4 border-white flex-shrink-0" style={{ background: 'linear-gradient(135deg, var(--primary-blue), var(--primary-purple))' }}>
+                          <event.icon className="w-8 h-8 text-white" />
                         </div>
                       </>
                     )}
-                  </div>
-                  {/* Spacer for below events */}
-                  <div className="flex-1"></div>
-                  {/* Event Card Below */}
-                  <div className={`flex flex-col items-center ${!isAbove ? 'mt-12' : ''}`} style={{ minHeight: 120 }}>
-                    {!isAbove && (
+                    {!isLeft && (
                       <>
-                        <div className="flex flex-col items-center">
-                          <div className="w-16 h-16 rounded-full flex items-center justify-center mb-2 shadow-lg border-4 border-white" style={{ background: 'linear-gradient(135deg, var(--primary-blue), var(--primary-purple))' }}>
-                            <event.icon className="w-8 h-8 text-white" />
-                          </div>
-                          <div className="bg-white rounded-lg shadow p-4 text-center min-w-[160px]" style={{ background: 'var(--bg-blue-light)', color: 'var(--text-blue)', border: '1px solid var(--border-blue)' }}>
-                            <div className="font-bold text-base mb-1">{event.title}</div>
-                            <div className="text-sm mb-1" style={{ color: 'var(--text-blue)', opacity: 0.7 }}>{event.description}</div>
+                        <div className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg border-4 border-white flex-shrink-0" style={{ background: 'linear-gradient(135deg, var(--primary-blue), var(--primary-purple))' }}>
+                          <event.icon className="w-8 h-8 text-white" />
+                        </div>
+                        <div className="flex-1">
+                          <div className=" rounded-lg shadow-md p-6" style={{ background: 'var(--bg-blue-light)', color: 'var(--text-blue)', border: '1px solid var(--border-blue)' }}>
+                            <div className="font-bold text-xl mb-2" style={{ color: 'var(--primary-blue)' }}>{event.date}</div>
+                            <div className="font-semibold text-lg mb-2">{event.title}</div>
+                            <div className="text-sm" style={{ color: 'var(--text-blue)', opacity: 0.8 }}>{event.description}</div>
                           </div>
                         </div>
                       </>
                     )}
                   </div>
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

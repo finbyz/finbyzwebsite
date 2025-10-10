@@ -9,99 +9,99 @@ import DownloadFormModal from "@/components/ai_components/DownloadFormModal";
 const brochureItems = [
   {
     title: "Company Profile",
-    image: "api/fb/n/files/blog-only-for-large-businesses.svg",
+    image: "/api/fb/n/files/blog-only-for-large-businesses.svg",
     alt: "Real-time information",
-    fileUrl: "api/fb/n/files/Company Profile_Finbyz Tech Pvt. Ltd..pdf"
+    fileUrl: "/api/fb/n/files/Company Profile_Finbyz Tech Pvt. Ltd..pdf"
   },
   {
     title: "Productify Brochure",
-    image: "api/fb/n/files/480.svg",
+    image: "/api/fb/n/files/480.svg",
     alt: "Goals & Higher Productivity",
-    fileUrl: "api/fb/n/files/Productify Product Info.pdf"
+    fileUrl: "/api/fb/n/files/Productify Product Info.pdf"
   },
   {
     title: "Outsourcing Service",
-    image: "api/fb/n/files/icon-supplier-management.svg",
+    image: "/api/fb/n/files/icon-supplier-management.svg",
     alt: "Improved TeamWork & Collaboration",
-    fileUrl: "api/fb/n/files/Dedicated Resource Plan.pdf"
+    fileUrl: "/api/fb/n/files/Dedicated Resource Plan.pdf"
   },
   {
     title: "Exim",
-    image: "api/fb/n/files/226.svg",
+    image: "/api/fb/n/files/226.svg",
     alt: "Exim",
-    fileUrl: "api/fb/n/files/EXIM1.pdf"
+    fileUrl: "/api/fb/n/files/EXIM1.pdf"
   },
   {
     title: "Chemical",
-    image: "api/fb/n/files/web development.svg",
+    image: "/api/fb/n/files/web development.svg",
     alt: "Chemical",
-    fileUrl: "api/fb/n/files/CHEMICAL1.pdf"
+    fileUrl: "/api/fb/n/files/CHEMICAL1.pdf"
   },
   {
     title: "Whatsapp Integration",
-    image: "api/fb/n/files/lack-of-communication.svg",
+    image: "/api/fb/n/files/lack-of-communication.svg",
     alt: "Whatsapp Integration",
-    fileUrl: "api/fb/n/files/Whatsapp Integration With ERPNext.pdf"
+    fileUrl: "/api/fb/n/files/Whatsapp Integration With ERPNext.pdf"
   }
 ];
 
 const aiCrmItems = [
   {
     title: "Content Spark",
-    image: "api/fb/n/files/335.svg",
+    image: "/api/fb/n/files/335.svg",
     alt: "Content Spark",
-    fileUrl: "api/fb/n/files/FinByz Tech - Content Spark.pdf"
+    fileUrl: "/api/fb/n/files/FinByz Tech - Content Spark.pdf"
   },
   {
     title: "Smart Card Scanner",
-    image: "api/fb/n/files/blog-icon-innovates-your-human-resource.svg",
+    image: "/api/fb/n/files/blog-icon-innovates-your-human-resource.svg",
     alt: "Smart Card Scanner",
-    fileUrl: "api/fb/n/files/smart_card_scanner.pdf"
+    fileUrl: "/api/fb/n/files/smart_card_scanner.pdf"
   },
   {
     title: "Lead Enrichment",
-    image: "api/fb/n/files/208.svg",
+    image: "/api/fb/n/files/208.svg",
     alt: "Lead Enrichment",
-    fileUrl: "api/fb/n/files/Email Classification.pdf"
+    fileUrl: "/api/fb/n/files/Email Classification.pdf"
   },
   {
     title: "Lead Intelligence",
-    image: "api/fb/n/files/18.svg",
+    image: "/api/fb/n/files/18.svg",
     alt: "Lead Intelligence",
-    fileUrl: "api/fb/n/files/Lead Intelligence.pdf"
+    fileUrl: "/api/fb/n/files/Lead Intelligence.pdf"
   },
   {
     title: "Quote Assistant",
-    image: "api/fb/n/files/lack-of-communication.svg",
+    image: "/api/fb/n/files/lack-of-communication.svg",
     alt: "Quote Assistant",
-    fileUrl: "api/fb/n/files/Quote_Assistant.pdf"
+    fileUrl: "/api/fb/n/files/Quote_Assistant.pdf"
   },
   {
     title: "Follow-Up Buddy",
-    image: "api/fb/n/files/go live.svg",
+    image: "/api/fb/n/files/go live.svg",
     alt: "Follow-Up Buddy",
-    fileUrl: "api/fb/n/files/Follow_up_Buddy.pdf"
+    fileUrl: "/api/fb/n/files/Follow_up_Buddy.pdf"
   }
 ];
 
 const aiAutomationItems = [
   {
     title: "Resume Ranker",
-    image: "api/fb/n/files/79.svg",
+    image: "/api/fb/n/files/79.svg",
     alt: "Resume Ranker",
-    fileUrl: "api/fb/n/files/AI_Powered_Resume_Ranker (1) 1 (1).pdf"
+    fileUrl: "/api/fb/n/files/AI_Powered_Resume_Ranker (1) 1 (1).pdf"
   },
   {
     title: "Call Feedback",
-    image: "api/fb/n/files/3939ac579.svg",
+    image: "/api/fb/n/files/3939ac579.svg",
     alt: "Call Feedback",
-    fileUrl: "api/fb/n/files/FinByz Tech - Voice Recording + AI Feedback.pdf"
+    fileUrl: "/api/fb/n/files/FinByz Tech - Voice Recording + AI Feedback.pdf"
   },
   {
     title: "AI Outreach",
-    image: "api/fb/n/files/380.svg",
+    image: "/api/fb/n/files/380.svg",
     alt: "AI Outreach",
-    fileUrl: "api/fb/n/files/FinByz Tech -  AI Outreach Lead Generation + Research.pdf"
+    fileUrl: "/api/fb/n/files/FinByz Tech -  AI Outreach Lead Generation + Research.pdf"
   }
 ];
 
@@ -155,7 +155,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: "Brochure",
-          src: "api/fb/n/files/brocure banner.svg",
+          src: "/api/fb/n/files/brocure banner.svg",
           
         }}
       />

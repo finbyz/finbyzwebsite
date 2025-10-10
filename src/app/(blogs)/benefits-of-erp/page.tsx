@@ -54,7 +54,7 @@ export default function Page() {
             title="Introduction"
             image={{
               alt:"Benefits of ERP",
-              src:"api/fb/n/files/Benefits-of-ERP.svg",
+              src:"/api/fb/n/files/Benefits-of-ERP.svg",
               cover:true,
             }}
           >

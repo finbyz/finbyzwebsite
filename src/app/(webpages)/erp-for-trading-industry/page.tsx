@@ -175,6 +175,7 @@ export default function Page() {
             icon: 'rocket',
           },
           title: 'Get Started with ERP for Trading',
+          highlightText:"ERP for Trading",
           description: 'Unlock efficiency, boost sales, and gain a competitive edge. Contact us today to see how our ERP can revolutionize your trading operations.',
           primaryButton: {
             text: 'Request a Demo',

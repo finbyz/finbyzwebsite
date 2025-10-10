@@ -3,11 +3,11 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const images = [
-  { src: "api/fb/n/files/Life at Finbyz_1.jpg", alt: "Fun-at-Finbyz-1" },
-  { src: "api/fb/n/files/Life-at-finbyz_2.jpg", alt: "Fun-at-Finbyz-2" },
-  { src: "api/fb/n/files/Life-At-Finbyz3.jpg", alt: "Fun-at-Finbyz-3" },
-  { src: "api/fb/n/files/Life-at-finbyz_6.jpg", alt: "Fun-at-Finbyz-4" },
-  { src: "api/fb/n/files/Life-at-finbyz_5.jpg", alt: "Fun-at-Finbyz-5" }
+  { src: "/api/fb/n/files/Life at Finbyz_1.jpg", alt: "Fun-at-Finbyz-1" },
+  { src: "/api/fb/n/files/Life-at-finbyz_2.jpg", alt: "Fun-at-Finbyz-2" },
+  { src: "/api/fb/n/files/Life-At-Finbyz3.jpg", alt: "Fun-at-Finbyz-3" },
+  { src: "/api/fb/n/files/Life-at-finbyz_6.jpg", alt: "Fun-at-Finbyz-4" },
+  { src: "/api/fb/n/files/Life-at-finbyz_5.jpg", alt: "Fun-at-Finbyz-5" }
 ];
 
 const FunGallery = () => {

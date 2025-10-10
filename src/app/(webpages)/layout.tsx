@@ -4,6 +4,15 @@ import { getPageData } from "@/lib/getPageData";
 import { headers } from "next/headers";
 import FinbyzGallery from "@/components/sections/FinbyzGallery";
 // This will be different for each page at build time
+// Map routes to page keys
+const ROUTE_MAP: Record<string, string> = {
+  "hire-python-developer": "hire-python-developer",
+};
+
+type LayoutProps = {
+  children: React.ReactNode;
+  params: { slug?: string[] }; // optional if not dynamic
+};
 
 export default async function MainLayout({
   children,

@@ -5,17 +5,17 @@ import Image from 'next/image';
 
 const cards = [
   {
-    icon: "api/fb/n/files/django%20devloper.svg",
+    icon: "/api/fb/n/files/django%20devloper.svg",
     title: "Comprehensive Lead Management",
     description: "Our CRM software, developed with our extensive software development expertise, goes beyond basic sales tracking by providing a complete system for managing leads from initial contact to final conversion streamlining the entire process."
   },
   {
-    icon: "api/fb/n/files/49.svg",
+    icon: "/api/fb/n/files/49.svg",
     title: "Customer Segmentation",
     description: "Leveraging our experience in ERP implementation, the CRM system enables detailed customer segmentation, helping businesses target marketing and sales efforts more effectively and enhance customer experiences."
   },
   {
-    icon: "api/fb/n/files/67.svg",
+    icon: "/api/fb/n/files/67.svg",
     title: "Sales Forecasting",
     description: "Using advanced algorithms a hallmark of our software development capabilities our CRM software delivers accurate sales forecasting, assisting strategic business planning."
   }

@@ -124,20 +124,6 @@ export default function Page() {
         </div>
       </Section>
 
-      {/* <Section>
-        <div className="container-custom py-8 flex flex-col items-center">
-          <a
-            href="https://frappecloud.com/marketplace/apps/rodtep_claim_management"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary font-semibold shadow-md hover:bg-primary/90 transition-colors text-lg"
-          >
-            <LucideDownload className="w-5 h-5" />
-            Download: RODTEP Claim
-          </a>
-        </div>
-      </Section> */}
-
       <Section useGradient>
         <div className="container-custom py-8">
           <CTA
@@ -147,6 +133,7 @@ export default function Page() {
                 icon: 'check-circle',
               },
               title: 'Get Started with RODTEP Claim Management in ERPNext',
+              highlightText:"RODTEP Claim Management in ERPNext",
               description: 'Simplify your export incentive process and automate your RODTEP and Duty Drawback claims. Download the app or contact us for a personalized demo.',
               primaryButton: {
                 text: 'Download App',

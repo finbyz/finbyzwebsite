@@ -173,6 +173,7 @@ export default function Page() {
                 icon: 'Mail',
               },
               title: 'Start Your ERPNext Journey with Finbyz',
+              highlightText: "ERPNext",
               description: 'Contact us today to discover how our ERPNext solutions can drive your business forward. Our team is ready to assist you at every step.',
               primaryButton: {
                 text: 'Request a Consultation',

@@ -216,7 +216,7 @@ export default function Page() {
           <h2 className="text-center text-2xl font-bold mb-8 relative inline-block after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-2">Software Development Stages</h2>
           <div className="relative w-full flex justify-center mb-8">
             <img
-              src="api/fb/n/files/dotted-wave.svg"
+              src="/api/fb/n/files/dotted-wave.svg"
               alt="bg-wave"
               width={800}
               height={60}

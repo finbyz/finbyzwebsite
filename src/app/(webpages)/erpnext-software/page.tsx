@@ -233,6 +233,7 @@ export default function Page() {
                 icon: 'rocket',
               },
               title: 'Get Started with ERPNext Today',
+              highlightText:"ERPNext",
               description: 'Experience the power of a unified, open-source ERP solution. Contact us for a free consultation or demo.',
               primaryButton: {
                 text: 'Request a Demo',

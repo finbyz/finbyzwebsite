@@ -73,7 +73,7 @@ export default function Page() {
             <li>Each scheduled meeting is automatically linked and visible in the history of the respective Lead, Opportunity, or Customer document.</li>
             <li>Quick video tutorial to understand the Meeting Schedule document process:</li>
           </ul>
-          <MeetingGifImage src="api/fb/n/files/1_AdobeExpress.gif" alt="Meeting Schedule Demo"  />
+          <MeetingGifImage src="/api/fb/n/files/1_AdobeExpress.gif" alt="Meeting Schedule Demo"  />
         </div>
       </Section>
 
@@ -88,7 +88,7 @@ export default function Page() {
             <li>Each meeting summary in ERPNext is stored in the document’s history for easy future reference.</li>
             <li>Quick Video to understand the Meeting Note (Create Meeting) Document Process:</li>
           </ul>
-          <MeetingGifImage src="api/fb/n/files/2_AdobeExpress.gif" alt="Meeting Notes Demo" />
+          <MeetingGifImage src="/api/fb/n/files/2_AdobeExpress.gif" alt="Meeting Notes Demo" />
         </div>
       </Section>
 
@@ -116,6 +116,7 @@ export default function Page() {
                 icon: 'calendar-check',
               },
               title: 'Get Started with ERPNext Meeting Management',
+              highlightText:"ERPNext Meeting Management",
               description: 'Download the app now and experience seamless meeting scheduling, note-taking, and action tracking—all within ERPNext.',
               primaryButton: {
                 text: 'Download Now',

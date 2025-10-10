@@ -66,6 +66,7 @@ export default function Page() {
                 icon: 'Zap'
               },
               title: 'Get Expert IT Consulting Today',
+              highlightText:"IT Consulting",
               description: 'Contact us for unbiased, innovative, and expert IT solutions tailored to your business goals.',
               primaryButton: {
                 text: 'Request Consultation',

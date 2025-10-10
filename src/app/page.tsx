@@ -8,16 +8,18 @@ import ClientLogos from "@/components/sections/client-logos";
 import ResponsiveCardGrid from "@/components/sections/responsive-card-grid";
 import BusinessSlider from "@/components/sections/business-slider";
 import InquiryForm from "@/components/ui/InquiryForm";
+import { Clock } from "lucide-react";
+
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="pt-4">
+      <main >
         <Hero />
 
         <Benefits />
-
+        <div className="[&_h2]:text-[#1A5276]">
         <ResponsiveCardGrid 
             data={{
               title: "Our Services",
@@ -31,15 +33,15 @@ export default function Home() {
               cards: [
                 {
                   id: 1,
-                  title: "Software Development",
+                  title: "ERPNext Implementation",
                   description: "Innovative Solutions to Automate your Business!",
-                  icon: "Award",
+                  icon: "Cpu",
                   iconBg: "#1A5276",
                   iconColor: "#ffffff"
                 },
                 {
                   id: 2,
-                  title: "Web Design",
+                  title: "AI Automations",
                   description: "Beautiful and functional websites that convert visitors into customers.",
                   icon: "TrendingUp",
                   iconBg: "#FF8C00",
@@ -47,7 +49,7 @@ export default function Home() {
                 },
                 {
                   id: 3,
-                  title: "Mobile Apps",
+                  title: "Resource Augmentation",
                   description: "Native and cross-platform mobile applications for iOS and Android.",
                   icon: "Globe",
                   iconBg: "#27AE60",
@@ -55,7 +57,7 @@ export default function Home() {
                 },
                 {
                   id: 4,
-                  title: "Cloud Solutions",
+                  title: "Hourly Support",
                   description: "Scalable cloud infrastructure and deployment solutions.",
                   icon: "Target",
                   iconBg: "#8E44AD",
@@ -71,15 +73,15 @@ export default function Home() {
                 },
                 {
                   id: 6,
-                  title: "AI & Machine Learning",
+                  title: "Software Development",
                   description: "Intelligent automation and predictive analytics solutions.",
-                  icon: "Cpu",
+                  icon: "Code",
                   iconBg: "#8E44AD",
                   iconColor: "#ffffff"
                 }
               ]
             }}
-          />
+          /></div>
 
         <BusinessSlider />
 
@@ -93,6 +95,7 @@ export default function Home() {
           data={{
             // component_type: "Form",  
             title: "Book a Free Consultation",
+            highlightText: "Book a Free Consultation",
             description: "Get started with your free demo today and discover how our solutions can transform your business",
             fields: {
               name: "Name",

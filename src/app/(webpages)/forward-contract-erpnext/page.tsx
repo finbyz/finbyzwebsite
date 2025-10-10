@@ -41,7 +41,7 @@ export default function Page() {
         <div className="container-custom py-8">
           <Card className="border-none bg-muted/40 shadow-none animate-fade-in-up">
             <CardHeader className="flex flex-row items-center gap-3">
-              <CheckCircle className="text-primary shrink-0" size={28} />
+              {/* <CheckCircle className="text-primary shrink-0" size={28} /> */}
               <CardTitle className="text-lg font-semibold">Overview</CardTitle>
             </CardHeader>
             <CardContent>
@@ -57,7 +57,7 @@ export default function Page() {
       <Section useGradient>
         <div className="container-custom py-8">
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 animate-fade-in-up">
-            <CheckCircle className="text-primary" size={24} />
+            {/* <CheckCircle className="text-primary" size={24} /> */}
             Introduction
           </h2>
           <List
@@ -105,7 +105,7 @@ export default function Page() {
             ]}
           />
           <ForwardContractGifImage
-            src="api/fb/n/files/fwd-cnt-14-to-23.gif"
+            src="/api/fb/n/files/fwd-cnt-14-to-23.gif"
             alt="How to create Forward Contracts"
           />
         </div>
@@ -137,7 +137,7 @@ export default function Page() {
             style={{ marginTop: 0 }}
           />
           <ForwardContractGifImage
-            src="api/fb/n/files/fwd-cnt-42-to-52.gif"
+            src="/api/fb/n/files/fwd-cnt-42-to-52.gif"
             alt="How to utilize Forward Contracts"
           />
         </div>
@@ -163,7 +163,7 @@ export default function Page() {
             style={{ marginTop: 0 }}
           />
           <ForwardContractGifImage
-            src="api/fb/n/files/fwd-cnt-1.21-to-1.32.gif"
+            src="/api/fb/n/files/fwd-cnt-1.21-to-1.32.gif"
             alt="How to Cancel Forward Contracts"
           />
         </div>
@@ -182,6 +182,7 @@ export default function Page() {
                 icon: 'TrendingUp'
               },
               title: 'Start Managing Forward Contracts in ERPNext',
+              highlightText:"Forward Contracts in ERPNext",
               description: 'Take control of your forex risk and automate your forward contract management. Download the app or get in touch for a personalized demo.',
               primaryButton: {
                 text: 'Download App',

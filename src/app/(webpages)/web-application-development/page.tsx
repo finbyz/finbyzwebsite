@@ -64,7 +64,7 @@ export default function Page() {
             </div>
             <div className="flex-1 flex justify-center animate-fade-in-up">
               <img
-                src="api/fb/n/files/technology-expertise.svg"
+                src="/api/fb/n/files/technology-expertise.svg"
                 alt="Technology expertise"
                 width={320}
                 height={250}
@@ -96,13 +96,13 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <FeatureCard
               title="Scalable Business Software"
-              image="api/fb/n/files/scalable-web-app.svg"
+              image="/api/fb/n/files/scalable-web-app.svg"
               alt="Scalable Business Software"
               description="We develop web applications that are highly scalable to handle your daily increasing business data without any downtime."
             />
             <FeatureCard
               title="Responsive Web Applications"
-              image="api/fb/n/files/responsive-web-app.svg"
+              image="/api/fb/n/files/responsive-web-app.svg"
               alt="Responsive Web Applications"
               description="We create optimized business software solutions that offer excellent user experience irrespective of the screen resolutions and size."
             />
@@ -135,6 +135,7 @@ export default function Page() {
                 icon: 'MonitorSmartphone',
               },
               title: 'Let’s Build Your Next Web App',
+              highlightText:"Web App",
               description: 'Finbyz is a leading provider of advanced web application development services customized for your specific needs. Our team of knowledgeable web app developers is committed to making your ideas a reality and giving your audience a perfect online experience.',
               primaryButton: {
                 text: 'Request a Consultation',

@@ -6,11 +6,12 @@ interface ContactInfoCardProps {
   phoneNumbers: Array<{ label: string; number: string; href: string }>;
   email: { label: string; href: string };
   address: string;
+  office: string;
 }
 
-const ContactInfoCard: React.FC<ContactInfoCardProps> = ({ phoneNumbers, email, address }) => {
+const ContactInfoCard: React.FC<ContactInfoCardProps> = ({ phoneNumbers, email, address,office }) => {
   return (
-    <div className="bg-primary/90 rounded-xl shadow-lg p-6 flex flex-col gap-6 animate-fade-in">
+    <div className="bg-black rounded-xl shadow-lg p-6 flex flex-col gap-6 animate-fade-in">
       <h2 className="text-2xl font-bold text-white mb-2">Contact Us</h2>
       <div className="flex flex-col gap-4">
         <div className="flex items-start gap-4">
@@ -43,7 +44,9 @@ const ContactInfoCard: React.FC<ContactInfoCardProps> = ({ phoneNumbers, email, 
           </Link>
         </div>
         <div className="flex items-center gap-4">
+          <span className="text-white">{office}</span><br />
           <MapPin className="text-white w-6 h-6" aria-label="Location" />
+          
           <span className="text-white">{address}</span>
         </div>
       </div>

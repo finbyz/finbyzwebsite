@@ -70,7 +70,7 @@ export default function Page() {
             </div>
             <div className="flex-1 flex justify-center">
               <img
-                src="api/fb/n/files/problem.svg"
+                src="/api/fb/n/files/problem.svg"
                 alt="Problems"
                 width={250}
                 height={220}
@@ -112,7 +112,7 @@ export default function Page() {
             </div>
             <div className="flex-1 flex justify-center">
               <img
-                src="api/fb/n/files/idea.svg"
+                src="/api/fb/n/files/idea.svg"
                 alt="Solution"
                 width={250}
                 height={220}

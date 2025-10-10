@@ -136,7 +136,8 @@ export default function Footer() {
                 <li><a href="/core-value" className="text-slate-300 hover:text-white transition-colors text-sm">Core Values</a></li>
                 <li><a href="/life-at-finbyz" className="text-slate-300 hover:text-white transition-colors text-sm">Life @ Finbyz</a></li>
                 <li><a href="/erp-partner" className="text-slate-300 hover:text-white transition-colors text-sm">Partners & Certifications</a></li>
-                <li><a href="/csr-sustainability" className="text-slate-300 hover:text-white transition-colors text-sm">CSR / Sustainability</a></li>
+                <li><a href="/testimonial" className="text-slate-300 hover:text-white transition-colors text-sm">Testimonials</a></li>
+                {/* <li><a href="/csr-sustainability" className="text-slate-300 hover:text-white transition-colors text-sm">CSR / Sustainability</a></li> */}
               </ul>
             </div>
           </div>
@@ -196,14 +197,15 @@ export default function Footer() {
             <div className="space-y-4">
               <h4 className="font-semibold text-white text-lg flex items-center">
                 <FileText className="w-5 h-5 mr-2" />
-                Blog
+                Tech Update
               </h4>
               <ul className="space-y-3">
                 <li><a href="/erpnext-software" className="text-slate-300 hover:text-white transition-colors text-sm">ERPNext</a></li>
                 <li><a href="/ai-automation" className="text-slate-300 hover:text-white transition-colors text-sm">AI Automation</a></li>
                 <li><a href="/use-cases" className="text-slate-300 hover:text-white transition-colors text-sm">Use Cases</a></li>
                 <li><a href="/success-story" className="text-slate-300 hover:text-white transition-colors text-sm">Success Stories</a></li>
-                <li><a href="/guide" className="text-slate-300 hover:text-white transition-colors text-sm">How-to Guides</a></li>
+                <li><a href="/gallery" className="text-slate-300 hover:text-white transition-colors text-sm">Gallery</a></li>
+                {/* <li><a href="/guide" className="text-slate-300 hover:text-white transition-colors text-sm">How-to Guides</a></li> */}
               </ul>
             </div>
           </div>
@@ -220,7 +222,7 @@ export default function Footer() {
                 <li><a href="/current-opening" className="text-slate-300 hover:text-white transition-colors text-sm">Current Openings</a></li>
                 <li><a href="/internship" className="text-slate-300 hover:text-white transition-colors text-sm">Internships</a></li>
                 <li><a href="/hiring-process" className="text-slate-300 hover:text-white transition-colors text-sm">Hiring Process</a></li>
-                <li><a href="/testimonial" className="text-slate-300 hover:text-white transition-colors text-sm">Testimonials</a></li>
+            
               </ul>
             </div>
           </div>

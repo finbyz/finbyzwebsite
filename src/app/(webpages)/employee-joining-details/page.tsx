@@ -49,7 +49,7 @@ export default function Page() {
       }}
         heroImage={{
           alt: "Employee Joining details",
-          src: "api/fb/n/files/employee-joining-hero.png",
+          src: "/api/fb/n/files/employee-joining-hero.png",
         }}
       />
       <Section>
@@ -70,7 +70,7 @@ export default function Page() {
           </div>
           <div className="flex-1 flex justify-center">
             <img
-              src="api/fb/n/files/employee-joining-form-illustration.png"
+              src="/api/fb/n/files/employee-joining-form-illustration.png"
               alt="Employee Joining Form Illustration"
               className="rounded-xl shadow-lg w-full md:w-96 h-auto object-contain animate-fade-in"
               loading="lazy"

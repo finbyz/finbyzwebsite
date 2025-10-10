@@ -116,6 +116,7 @@ export default function Page() {
                 icon: 'CheckCircle2',
               },
               title: 'Get Started with EMD Management in ERPNext',
+              highlightText:"EMD Management in ERPNext",
               description: 'Automate, track, and ensure compliance for all your Earnest Money Deposits. Download the app or contact us for a personalized demo.',
               primaryButton: {
                 text: 'Download Now',

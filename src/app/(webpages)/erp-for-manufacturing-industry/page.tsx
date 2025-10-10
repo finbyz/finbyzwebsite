@@ -24,7 +24,7 @@ export default function Page() {
     <>
       <HeroSection
         headline="ERPNext for Manufacturing"
-        highlightWords={["ERPNext", "Manufacturing"]}
+        highlightWords={["for", "Manufacturing"]}
         description="FinByz Tech’s ERPNext manufacturing ERP software streamlines production and inventory management, reducing costs and improving efficiency."
         primaryButton={{ text: 'Get Started', action: handlePrimary }}
         secondaryButton={{ text: 'Request Demo', action: handleSecondary }}
@@ -38,20 +38,20 @@ export default function Page() {
       {/* Introduction Section */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-6 text-center">ERP software for Manufacturing industry</h2>
+          <h2 className="text-2xl font-bold text-[#1A5276] mb-6 text-center">ERP software for Manufacturing industry</h2>
           <div className="flex flex-col md:flex-row md:items-center md:gap-8">
             <div className="md:w-1/12 flex justify-center mb-4 md:mb-0">
               {/* <img
-                src="api/fb/n/files/Quotation_marks.svg"
+                src="/api/fb/n/files/Quotation_marks.svg"
                 alt="Quotation marks"
                 width={40}
                 height={40}
                 className="opacity-80"
               /> */}
             </div>
-            <div className="md:w-11/12">
+            <div className="md:w-11/12 text-[#FF8C00]">
               <p>
-                <b>"The surest foundation of a Manufacturing concern is quality. After that, and a long way after, comes cost – Andrew Carnegie"</b>
+                "The surest foundation of a Manufacturing concern is quality. After that, and a long way after, comes cost – Andrew Carnegie"
               </p>
             </div>
           </div>
@@ -223,7 +223,7 @@ export default function Page() {
         </div>
       </Section>
 
-      {/* CTA Section */}
+      
       <Section>
         <div className="py-8">
           <CTA
@@ -233,6 +233,7 @@ export default function Page() {
                 icon: 'Factory',
               },
               title: 'Get Started with ERPNext for Manufacturing',
+              highlightText:"ERPNext for Manufacturing",
               description: 'Contact us today to schedule a personalized demo or consultation and see how ERPNext can streamline your production, inventory, and business processes.',
               primaryButton: {
                 text: 'Request a Demo',

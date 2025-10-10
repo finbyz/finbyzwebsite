@@ -11,7 +11,7 @@ const GrowthSection = () => (
       className="flex-1 flex justify-center"
     >
       <Image
-        src="api/fb/n/files/Professional-growth-and-development.png"
+        src="/api/fb/n/files/Professional-growth-and-development.png"
         alt="Professional Growth & Development"
         width={480}
         height={360}

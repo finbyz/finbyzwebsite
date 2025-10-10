@@ -178,6 +178,7 @@ export default function Page() {
                 icon: 'School',
               },
               title: 'Experience the Future of Education Management',
+              highlightText:"Education Management",
               description: 'Empower your school or institute with a modern, open-source ERP. Streamline operations, boost efficiency, and focus on what matters most — academics.',
               primaryButton: {
                 text: 'Get Started',

@@ -98,14 +98,16 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="pt-4">
+      <main className="">
         <Hero
           data={{
             title: "About Finbyz Tech",
             subtitle: "Where business challenges meet sharp solutions",
             description: "We're not just a tech company — we're your strategic partner in navigating complexity.",
             image: {
-              src: "/AboutUs.png",
+              // src: "/AboutUs.png",
+              src:"/AboutUs-removebg-preview.png",
+              
               alt: "Timeline and visual roadmap of Finbyz Tech as a business solution provider"
             }
           }}
@@ -152,7 +154,7 @@ export default function AboutPage() {
                   </div>
                   <CardTitle className="text-xl font-bold text-gray-800">Vision</CardTitle>
                 </CardHeader>
-                <CardContent className="text-center">
+                <CardContent className="text-justify">
                   <p className="text-gray-600 leading-relaxed">To shape a world where every great business idea has a technology partner ready to steer it to success.</p>
                 </CardContent>
               </Card>
@@ -164,7 +166,7 @@ export default function AboutPage() {
                   </div>
                   <CardTitle className="text-xl font-bold text-gray-800">Mission</CardTitle>
                 </CardHeader>
-                <CardContent className="text-center">
+                <CardContent className="text-justify">
                   <p className="text-gray-600 leading-relaxed">At Finbyz Tech, we partner with ambitious businesses to turn their vision into value. From planning to execution, we simplify complexity and bring clarity to digital transformation. Our team thrives on ownership, agility, and long-term relationships — because when our clients grow, we grow too.</p>
                 </CardContent>
               </Card>

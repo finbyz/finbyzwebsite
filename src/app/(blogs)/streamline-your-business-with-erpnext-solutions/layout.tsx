@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://finbyz.tech/Streamline-Your-Business-with-ERPNext-Solutions",
+    canonical: "https://finbyz.tech/streamline-your-business-with-erpnext-solutions",
   },
   openGraph: {
     title: "Streamline Your Business with ERPNext: The Leading Open Source ERP System",
     description: "Discover how ERPNext, a comprehensive open-source ERP system, can transform your business operations. Learn about its features, benefits, and implementation strategies.",
-    url: "https://finbyz.tech/Streamline-Your-Business-with-ERPNext-Solutions",
+    url: "https://finbyz.tech/streamline-your-business-with-erpnext-solutions",
     siteName: "Finbyz Tech",
     type: "article",
     locale: "en_US",
@@ -46,8 +46,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
   "@context": "https://schema.org/",
   "@type": "BlogPosting",
-  "@id": "https://finbyz.tech/Streamline-Your-Business-with-ERPNext-Solutions#BlogPosting",
-  "mainEntityOfPage": "https://finbyz.tech/Streamline-Your-Business-with-ERPNext-Solutions",
+  "@id": "https://finbyz.tech/streamline-your-business-with-erpnext-solutions#BlogPosting",
+  "mainEntityOfPage": "https://finbyz.tech/streamline-your-business-with-erpnext-solutions",
   "headline": "Streamline Your Business with ERPNext: The Leading Open Source ERP System",
   "name": "Streamline Your Business with ERPNext: The Leading Open Source ERP System",
   "description": "Discover how ERPNext, a comprehensive open-source ERP system, can transform your business operations. Learn about its features, benefits, and implementation strategies.",
@@ -81,7 +81,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "width": "1200",
     "height": "630"
   },
-  "url": "https://finbyz.tech/Streamline-Your-Business-with-ERPNext-Solutions",
+  "url": "https://finbyz.tech/streamline-your-business-with-erpnext-solutions",
   "isPartOf": {
     "@type": "Blog",
     "@id": "https://finbyz.tech/blog-post/",
@@ -117,3 +117,5 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     </>
   );
 }
+
+

@@ -171,6 +171,7 @@ export default function Page() {
                 icon: 'settings',
               },
               title: 'Get a Free ERP Consultation for Your Engineering Company',
+              highlightText:"Engineering Company",
               description: 'Discover how ERPNext can streamline your engineering business. Contact us for a free consultation and see how we can tailor a solution for your needs.',
               primaryButton: {
                 text: 'Book Consultation',

@@ -20,7 +20,7 @@ export default async function MainLayout({
   const currentRoute = paths[paths.length - 1]
   const data = await getPageData("Gallery",currentRoute || "home");
   return (
-    <main>
+    <main className="py-12 md:py-16">
         <Header />
         {children}
         {

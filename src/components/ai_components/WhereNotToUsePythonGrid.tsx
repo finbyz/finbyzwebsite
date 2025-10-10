@@ -4,28 +4,28 @@ import Image from "next/image";
 const data = [
   {
     title: "Low-level System Programming",
-    image: "api/fb/n/files/estimation-of-cost.svg",
+    image: "/api/fb/n/files/estimation-of-cost.svg",
     alt: "Estimation of cost and revenue",
     description:
       "Python is an interpreted language, which means that it is not suitable for low-level system programming tasks, such as writing an operating system or device drivers. For these types of tasks, languages such as C or Assembly are more suitable."
   },
   {
     title: "Mobile Development",
-    image: "api/fb/n/files/automation-increases.svg",
+    image: "/api/fb/n/files/automation-increases.svg",
     alt: "automation increases productivity",
     description:
       "While Python can be used for mobile development, it is not as widely used as other mobile development languages, such as Java or Swift. Additionally, the performance of Python on mobile devices may not be as good as other languages, making it a less suitable choice for mobile development."
   },
   {
     title: "Real-time Processing",
-    image: "api/fb/n/files/efficient-working-methods.svg",
+    image: "/api/fb/n/files/efficient-working-methods.svg",
     alt: "Efficient working methods",
     description:
       "Python is an interpreted language, which means that it is not well-suited to real-time processing tasks, where low-latency and high-performance are essential. For these types of tasks, languages such as C++ or Go may be more suitable."
   },
   {
     title: "Game Development",
-    image: "api/fb/n/files/return-on-investment.svg",
+    image: "/api/fb/n/files/return-on-investment.svg",
     alt: "Increase in the Return on Investment",
     description:
       "While Python can be used for mobile development and website development, it is not as widely used as other mobile development languages, such as Java or Swift. Additionally, the performance of Python on mobile devices and in website development may not be as good as other languages, making it a less suitable choice for mobile and website development."

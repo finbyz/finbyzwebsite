@@ -53,42 +53,42 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
               <div className="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center h-full">
-                <img src="api/fb/n/files/47 (1).svg" alt="Custom-ERPNext-solutions" width={80} height={80} className="mb-4 object-contain" />
+                <img src="/api/fb/n/files/47 (1).svg" alt="Custom-ERPNext-solutions" width={80} height={80} className="mb-4 object-contain" />
                 <h3 className="text-xl font-semibold mb-2 text-center">Custom ERPNext Solutions</h3>
                 <p className="text-gray-700 text-justify">Experience a world where each feature and function is designed to capture the unique character of your company. Our customised ERPNext development services lead the way in innovation, offering features and modules that meet the changing needs of the Saudi market and match with your company's goals.</p>
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}>
               <div className="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center h-full">
-                <img src="api/fb/n/files/376.svg" alt="ERPNext-Implementation" width={80} height={80} className="mb-4 object-contain" />
+                <img src="/api/fb/n/files/376.svg" alt="ERPNext-Implementation" width={80} height={80} className="mb-4 object-contain" />
                 <h3 className="text-xl font-semibold mb-2 text-center">ERPNext Implementation</h3>
                 <p className="text-gray-700 text-justify">Set out on an easy journey from start to finish. Our installation approach is set apart by careful planning, efficient execution, and continuous support, guaranteeing that your company is in the best possible position to take advantage of ERPNext's full potential.</p>
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }}>
               <div className="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center h-full">
-                <img src="api/fb/n/files/423.svg" alt="Integration-Services" width={80} height={80} className="mb-4 object-contain" />
+                <img src="/api/fb/n/files/423.svg" alt="Integration-Services" width={80} height={80} className="mb-4 object-contain" />
                 <h3 className="text-xl font-semibold mb-2 text-center">Integration Services</h3>
                 <p className="text-gray-700 text-justify">ERPNext's interface to many other apps and systems is improved by our smooth integration services, which fill in the gaps. Discover a seamless combination of integrated solutions that work in concert to improve business intelligence and operational efficiency.</p>
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.3 }}>
               <div className="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center h-full">
-                <img src="api/fb/n/files/1099.svg" alt="Increase in the Return on Investment" width={80} height={80} className="mb-4 object-contain" />
+                <img src="/api/fb/n/files/1099.svg" alt="Increase in the Return on Investment" width={80} height={80} className="mb-4 object-contain" />
                 <h3 className="text-xl font-semibold mb-2 text-center">Support and Servicing</h3>
                 <p className="text-gray-700 text-justify">Your company deserves ongoing achievement. Our committed staff guarantees the seamless operation of your ERPNext system by offering continuous support and maintenance services that serve as the foundation for dependability and confidence.</p>
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.4 }}>
               <div className="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center h-full">
-                <img src="api/fb/n/files/116 (1).svg" alt="Training-and-Consultation" width={80} height={80} className="mb-4 object-contain" />
+                <img src="/api/fb/n/files/116 (1).svg" alt="Training-and-Consultation" width={80} height={80} className="mb-4 object-contain" />
                 <h3 className="text-xl font-semibold mb-2 text-center">Training and Consultation</h3>
                 <p className="text-gray-700 text-justify">Business excellence is the result of providing your staff with knowledge. By means of our all-inclusive training and advisory services, we grow proficiency, enable your personnel, and unlock new possibilities for expertise and adaptability within the ERPNext architecture.</p>
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.5 }}>
               <div className="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center h-full">
-                <img src="api/fb/n/files/518.svg" alt="Data-action" width={80} height={80} className="mb-4 object-contain" />
+                <img src="/api/fb/n/files/518.svg" alt="Data-action" width={80} height={80} className="mb-4 object-contain" />
                 <h3 className="text-xl font-semibold mb-2 text-center">Data Action</h3>
                 <p className="text-gray-700 text-justify">Use our data movement services to go beyond typical limits. We ensure the accuracy, security, and integrity of your vital business data, enabling a seamless and meaningful transformation.</p>
               </div>
@@ -114,7 +114,7 @@ export default function Page() {
             style={{ marginBottom: 0 }}
           />
           <div className="flex items-center gap-4 mt-8">
-            {/* <img src="api/fb/n/files/Quotation_marks.svg" alt="Quotation_mark" width={40} height={40} /> */}
+            {/* <img src="/api/fb/n/files/Quotation_marks.svg" alt="Quotation_mark" width={40} height={40} /> */}
             <QuoteBlock text="ERPNext is flexible enough to meet the particular needs of any size business and is always adding new features and improvements to keep up with market expectations." isHeading={true} />
           </div>
         </div>
@@ -211,6 +211,7 @@ export default function Page() {
                 icon: 'Rocket',
               },
               title: 'Get Started with ERPNext in Saudi Arabia',
+              highlightText : "ERPNext in Saudi Arabia",
               description: 'Contact our experts today to discuss your requirements and discover how ERPNext can drive your business forward.',
               primaryButton: {
                 text: 'Request a Demo',

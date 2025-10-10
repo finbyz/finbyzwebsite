@@ -76,7 +76,7 @@ export default function Page() {
           </div>
           <div className="flex justify-center items-center">
             <img
-              src="api/fb/n/files/Line Banner-41 (2)_11zon.png"
+              src="/api/fb/n/files/Line Banner-41 (2)_11zon.png"
               alt="Custom Fields to Support Legal Compliance"
               width={400}
               height={260}
@@ -108,7 +108,7 @@ export default function Page() {
           </div>
           <div className="flex justify-center items-center">
             <img
-              src="api/fb/n/files/Line Banner-41 (2)_11zon.png"
+              src="/api/fb/n/files/Line Banner-41 (2)_11zon.png"
               alt="Enhanced Form Organization"
               width={400}
               height={260}
@@ -145,42 +145,42 @@ export default function Page() {
               step="1"
               title="Create and Save Sales Invoice"
               description="Enter customer, item, and payment details, ensuring accuracy before saving as a draft."
-              image="api/fb/n/files/Create and Save SI.png"
+              image="/api/fb/n/files/Create and Save SI.png"
               alt="Create and Save Sales Invoice"
             />
             <ProcessStepImageCard
               step="2"
               title="Final Edits and Save"
               description="Make necessary corrections and updates, then save the invoice for validation."
-              image="api/fb/n/files/Final Edits and Save.png"
+              image="/api/fb/n/files/Final Edits and Save.png"
               alt="Final Edits and Save"
             />
             <ProcessStepImageCard
               step="3"
               title="Generate Electronic-Invoice"
               description="Communicate with the tax authority for validation and authorization. Retrieve the CAE (Authorization Code) and expiration date."
-              image="api/fb/n/files/Generate E-Invoice.png"
+              image="/api/fb/n/files/Generate E-Invoice.png"
               alt="Generate Electronic-Invoice"
             />
             <ProcessStepImageCard
               step="3.1"
               title="Electronic-Invoice Details"
               description="View the generated CAE and expiration date for the invoice."
-              image="api/fb/n/files/Generate E-Invoice-1.png"
+              image="/api/fb/n/files/Generate E-Invoice-1.png"
               alt="Generate Electronic-Invoice Details"
             />
             <ProcessStepImageCard
               step="4"
               title="Submit Sales Invoice"
               description="Finalize and submit the invoice after successful Electronic-Invoice generation."
-              image="api/fb/n/files/Submit Sales Invoice.png"
+              image="/api/fb/n/files/Submit Sales Invoice.png"
               alt="Submit Sales Invoice"
             />
             <ProcessStepImageCard
               step="5"
               title="QR Code"
               description="Embed a QR code on the invoice, enabling instant verification by tax authorities and customers."
-              image="api/fb/n/files/QR Code.png"
+              image="/api/fb/n/files/QR Code.png"
               alt="QR Code"
             />
           </div>
@@ -208,7 +208,7 @@ export default function Page() {
           </div>
           <div className="flex justify-center items-center">
             <img
-              src="api/fb/n/files/Line Banner-41 (2)_11zon.png"
+              src="/api/fb/n/files/Line Banner-41 (2)_11zon.png"
               alt="Support for Various Business Scenarios"
               width={400}
               height={260}
@@ -287,6 +287,7 @@ export default function Page() {
                   icon: 'BsQrCode'
                 },
                 title: 'Get AFIP-Compliant Electronic Invoicing in ERPNext',
+                highlightText:"Electronic Invoicing in ERPNext",
                 description: 'Contact us to implement seamless, automated, and compliant invoicing for your business in Argentina.',
                 primaryButton: {
                   text: 'Request a Demo',

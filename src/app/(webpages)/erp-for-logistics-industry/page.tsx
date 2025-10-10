@@ -160,7 +160,7 @@ export default function Page() {
       {/* Features Section */}
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-8 text-center">Features of ERP Software for Logistics Industry</h2>
+          <h2 className="text-2xl font-bold mb-8 text-center" style={{color:" #1A5276;"}}>Features of ERP Software for Logistics Industry</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, idx) => (
               <FeatureCard
@@ -200,16 +200,17 @@ export default function Page() {
       {/* Process Section */}
       <Section useGradient>
         <div className="container-custom py-8 flex flex-col items-center">
-          <h2 className="text-2xl font-bold mb-4 text-center">ERP Software Process in the Logistics Industry</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center" style={{color:" #1A5276;"}}>ERP Software Process in the Logistics Industry</h2>
           <h3 className="text-lg font-semibold mb-8 text-center">The simplified process followed by ERP software is as below:</h3>
-          <div className="w-full max-w-2xl mb-8">
+          <div className="w-full text-center mb-8">
             <ProcessPhasesTabs phases={processPhases} />
           </div>
+          {/* max-w-2xl */}
           <QuoteBlock
             text="Eighty-five percent of the reasons for failure are deficiencies in the systems and process rather than the employee. The role of management is to change the process rather than badgering individuals to do better. ~ W. Edwards Deming"
             isHeading={false}
           />
-          <div className="mt-8 text-base text-muted-foreground text-center">
+          <div className="mt-8 text-base text-muted-foreground text-justify">
             <p>
               Finbyz is committed to transforming logistics operations with our specialized ERPNext for logistics industry. As a trusted ERP implementation partner, we deliver tailored ERP solutions designed specifically for the logistics sector. Our expertise ensures seamless integration and optimization of logistics workflows, empowering businesses with greater transparency, real-time data access, and operational efficiency.
             </p>
@@ -223,7 +224,7 @@ export default function Page() {
 
       {/* CTA Section */}
       <Section>
-        <div className="container-custom py-8">
+        <div className="py-8">
           <CTA
             data={{
               subheading: {
@@ -231,6 +232,7 @@ export default function Page() {
                 icon: 'Truck',
               },
               title: 'Get Started with ERPNext for Logistics Industry',
+              highlightText:"ERPNext for Logistics Industry",
               description: 'Contact us today to schedule a personalized demo and see how our ERP solutions can drive efficiency and growth for your logistics business.',
               primaryButton: {
                 text: 'Request a Demo',

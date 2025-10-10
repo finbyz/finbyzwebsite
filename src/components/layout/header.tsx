@@ -163,7 +163,7 @@ export default function Header() {
             name: "ERPNext Implementation",
             description: "Complete ERPNext setup and configuration",
             icon: Cpu,
-            href: "/erpnext-implementer"
+            href: "/hire-erpnext-implementer"
           },
           {
             name: "ERPNext Certified Partner",
@@ -250,6 +250,7 @@ export default function Header() {
             description: "Advanced authorization license management",
             icon: FileCheck,
             href: "/advanced-authorisation-licence-erpnext"
+            // advanced-authorisation-licence-erpnext
           },
            {
             name: "Workflow Transitions",
@@ -486,7 +487,7 @@ export default function Header() {
       icon: Factory,
       mainItems: [
         { name: "Manufacturing & Production", icon: Factory },
-        { name: "Operations & Services", icon: Wrench},
+        { name: "Operations and Service Management", icon: Wrench},
         { name: "Healthcare & Education", icon: Heart},
         { name: "E-Commerce & Logistics", icon: ShoppingCart},
       ],
@@ -534,7 +535,7 @@ export default function Header() {
             icon: Pill,
             href: "/erp-for-pharmaceuticals"
           }],
-          "Operations & Services": [
+          "Operations and Service Management": [
           {
             name: "Services",
             description: "",
@@ -687,7 +688,7 @@ export default function Header() {
             name: "Internships & Freshers",
             description: "Internship and fresher positions",
             icon: GraduationCap,
-            href: "/internships"
+            href: "/internship"
           },
           {
             name: "Why Join Finbyz",
@@ -709,7 +710,7 @@ export default function Header() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
           isScrolled
             ? "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 backdrop-blur-md shadow-lg"
             : "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 backdrop-blur-sm"
@@ -720,7 +721,8 @@ export default function Header() {
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center">
                 <Image
-                  src="/FinByz_2025_Rect-removebg-preview.png"
+                  // src="/FinByz_2025_Rect-removebg-preview.png"
+                  src="/FinByz Logo 2025 copy.png"
                   alt="Finbyz"
                   width={120}
                   height={32}
@@ -736,7 +738,7 @@ export default function Header() {
                     <div className="relative">
                       <Button
                         variant="ghost"
-                        className={`text-gray-300 hover:text-[#FF8C00] hover:bg-gray-700/50 transition-all font-medium flex items-center space-x-1 text-base py-6 px-3 rounded-lg relative group ${
+                        className={`text-gray-300 hover:text-[#FF8C00] hover:bg-gray-700/50 transition-all font-medium flex items-center space-x-1 text-base py-6 z-[110] px-3 rounded-lg relative group ${
                           hoveredDropdown === item.name ? 'text-[#FF8C00] bg-gray-700/50' : ''
                         }`}
                         onMouseEnter={() => {
@@ -907,9 +909,23 @@ export default function Header() {
                         ) : (
                           // Simple single-column layout when no detailedItems
                           <div className="w-80 p-6 max-w-[90vw] overflow-y-auto min-h-[500px] max-h-[85vh]">
-                            <h3 className="font-semibold text-[#1A5276] mb-6 text-lg">
+                            {/* <h3 className="font-semibold text-[#1A5276] mb-6 text-lg">
                               {item.name === "Services" ? "Our Services" : item.name === "Company" ? "Our Company" : "ERPNext Solutions"}
-                            </h3>
+                            </h3> */}
+                            <h3 className="font-semibold text-[#1A5276] mb-6 text-lg">
+                                {item.name === "Services"
+                                  ? "Our Services"
+                                  : item.name === "Company"
+                                  ? "Our Company"
+                                  : item.name === "Industries"
+                                  ? "Our Industries"
+                                  : item.name === "Insights"
+                                  ? "Insights"
+                                  : "ERPNext Solutions"}
+                              </h3>
+
+                              
+
                             <div className="space-y-2">
                               {item.mainItems?.map((mainItem) => (
                                 <Link

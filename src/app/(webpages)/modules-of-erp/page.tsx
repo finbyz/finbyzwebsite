@@ -201,6 +201,7 @@ export default function Page() {
                 icon: 'Rocket',
               },
               title: 'Get Started with ERP Software Modules',
+              highlightText:"ERP Software Modules",
               description: 'Unlock the full potential of your business with our comprehensive ERP modules. Contact us for a personalized demo or download our brochure to learn more.',
               primaryButton: {
                 text: 'Request Demo',

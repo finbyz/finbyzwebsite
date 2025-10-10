@@ -42,7 +42,7 @@
   ],
   "trustIndicators": [
     {
-      "text": "{{ trust_indicators.0.text | default('500+ Projects Delivered') }}",
+      "text": "{{ trust_indicators.0.text | default('100+ Projects Delivered') }}",
       "color": "{{ trust_indicators.0.color | default('#1A5276') }}"
     },
     {

@@ -192,6 +192,7 @@ export default function Page() {
                 icon: 'UserCheck',
               },
               title: 'Let’s Build Your Next Python Project Together',
+              highlightText:"Python",
               description: 'Contact us today to discuss your requirements and get a free consultation with our Python experts.',
               primaryButton: {
                 text: 'Hire Python Developer',

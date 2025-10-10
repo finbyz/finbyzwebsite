@@ -58,7 +58,7 @@ export default function Page() {
             <FlipCard
               front={
                 <div className="flex flex-col items-center justify-center h-full">
-                  <img src="api/fb/n/files/web development.svg" alt="web development" width={64} height={64} />
+                  <img src="/api/fb/n/files/web development.svg" alt="web development" width={64} height={64} />
                   <h3 className="mt-4 font-semibold text-lg">Django Web Development</h3>
                 </div>
               }
@@ -71,7 +71,7 @@ export default function Page() {
             <FlipCard
               front={
                 <div className="flex flex-col items-center justify-center h-full">
-                  <img src="api/fb/n/files/icon-shorter-sales-cycle.svg" alt="Django CMS Development" width={64} height={64} />
+                  <img src="/api/fb/n/files/icon-shorter-sales-cycle.svg" alt="Django CMS Development" width={64} height={64} />
                   <h3 className="mt-4 font-semibold text-lg">Django CMS Development</h3>
                 </div>
               }
@@ -84,7 +84,7 @@ export default function Page() {
             <FlipCard
               front={
                 <div className="flex flex-col items-center justify-center h-full">
-                  <img src="api/fb/n/files/api development.svg" alt="Django Rest API Development" width={64} height={64} />
+                  <img src="/api/fb/n/files/api development.svg" alt="Django Rest API Development" width={64} height={64} />
                   <h3 className="mt-4 font-semibold text-lg">Django Rest API Development</h3>
                 </div>
               }
@@ -97,7 +97,7 @@ export default function Page() {
             <FlipCard
               front={
                 <div className="flex flex-col items-center justify-center h-full">
-                  <img src="api/fb/n/files/migration.svg" alt="Django Migration Services" width={64} height={64} />
+                  <img src="/api/fb/n/files/migration.svg" alt="Django Migration Services" width={64} height={64} />
                   <h3 className="mt-4 font-semibold text-lg">Django Migration Services</h3>
                 </div>
               }
@@ -110,7 +110,7 @@ export default function Page() {
             <FlipCard
               front={
                 <div className="flex flex-col items-center justify-center h-full">
-                  <img src="api/fb/n/files/custom Django.svg" alt="Custom Django Development" width={64} height={64} />
+                  <img src="/api/fb/n/files/custom Django.svg" alt="Custom Django Development" width={64} height={64} />
                   <h3 className="mt-4 font-semibold text-lg">Custom Django Development</h3>
                 </div>
               }
@@ -123,7 +123,7 @@ export default function Page() {
             <FlipCard
               front={
                 <div className="flex flex-col items-center justify-center h-full">
-                  <img src="api/fb/n/files/Supoort.svg" alt="Support & Maintenance" width={64} height={64} />
+                  <img src="/api/fb/n/files/Supoort.svg" alt="Support & Maintenance" width={64} height={64} />
                   <h3 className="mt-4 font-semibold text-lg">Support & Maintenance</h3>
                 </div>
               }
@@ -141,7 +141,7 @@ export default function Page() {
         <div className="container-custom py-8 flex flex-col md:flex-row gap-8 items-center">
           <div className="flex-shrink-0 w-full md:w-1/3 flex justify-center">
             <img
-              src="api/fb/n/files/django-logo-negative.svg"
+              src="/api/fb/n/files/django-logo-negative.svg"
               alt="django-logo-negative"
               width={180}
               height={180}
