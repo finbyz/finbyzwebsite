@@ -120,6 +120,45 @@ const Tutorials = ({ data }: TutorialsProps) => {
 
   return (
     <div className="min-h-screen bg-background mx-auto w-full border-b max-w-screen-xl">
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "http://schema.org",
+            "@type": "BlogPosting",
+            "name": data.parent.seo_title || data.parent.gallery_title || data.parent.title || "Learning Hub",
+            "headline": data.parent.small_description || data.parent.description || "Explore our comprehensive collection of tutorials and resources",
+            "author": {
+              "@type": "Person",
+              "name": "FinByz Tech Pvt Ltd"
+            },
+            "datePublished": new Date().toISOString(),
+            "dateModified": new Date().toISOString(),
+            "image": data.parent.svg_image ? `/api/fb/n${data.parent.svg_image}` : "/files/FinbyzLogo.png",
+            "publisher": {
+              "@type": "Organization",
+              "name": "FinByz Tech Pvt Ltd",
+              "sameAs": "https://finbyz.tech",
+              "email": "info@finbyz.com",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "/files/FinbyzLogo.png",
+                "height": "300px",
+                "width": "300px"
+              }
+            },
+            "description": data.parent.description || data.parent.small_description || "Explore our comprehensive collection of tutorials and resources",
+            "keywords": data.parent.keywords || "",
+            "url": `https://finbyz.tech/${data.parent.route || ''}`,
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": `https://finbyz.tech/${data.parent.route || ''}`
+            }
+          })
+        }}
+      />
+      
       {/* Header */}
       <motion.header
         className="border-b border-border sticky top-12 z-40 bg-white"

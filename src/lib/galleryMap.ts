@@ -1,6 +1,6 @@
 import { MediaItem, MediaCategory } from '@/types/media';
 
-export function mapGallariesToMedia(data: Gallaries): { items: MediaItem[]; categories: MediaCategory[] } {
+export function mapGallariesToMedia(data: Galleries): { items: MediaItem[]; categories: MediaCategory[] } {
   const sidebar = data.gallery_sidebar || [];
 
   const categories: MediaCategory[] = sidebar.map((g) => ({

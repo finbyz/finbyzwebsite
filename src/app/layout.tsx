@@ -29,69 +29,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Script
-        id="org-structured-data"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "http://schema.org",
-            "@type": "Organization",
-            name: "Finbyz Tech Pvt Ltd",
-            image: "https://finbyz.tech/files/finbyz-tech.svg",
-            "@id": "https://finbyz.tech",
-            url: "https://finbyz.tech",
-            location: [
-              {
-                "@type": "LocalBusiness",
-                parentOrganization: { name: "Finbyz Tech Pvt Ltd" },
-                name: "Finbyz Tech Pvt Ltd - Ahmedabad",
-                image: "https://finbyz.tech/files/finbyz-tech.svg",
-                address: {
-                  "@type": "PostalAddress",
-                  addressLocality: "Ahmedabad",
-                  addressRegion: "Gujarat",
-                  addressCountry: "IN",
-                  postalCode: "380009",
-                  streetAddress:
-                    "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura",
-                },
-                geo: {
-                  "@type": "GeoCoordinates",
-                  latitude: 23.046477,
-                  longitude: 72.558351,
-                },
-                openingHoursSpecification: [
-                  {
-                    "@type": "OpeningHoursSpecification",
-                    dayOfWeek: [
-                      "Monday",
-                      "Tuesday",
-                      "Wednesday",
-                      "Thursday",
-                      "Friday",
-                      "Saturday",
-                    ],
-                    opens: "09:30",
-                    closes: "18:30",
-                  },
-                ],
-                telephone: "+91 07948912428",
-                sameAs: [
-                  "https://www.facebook.com/FinByz",
-                  "https://twitter.com/FinByz",
-                  "https://plus.google.com/s/finbyz",
-                  "https://www.linkedin.com/company/finbyz",
-                  "https://www.youtube.com/c/Finbyz",
-                ],
-                priceRange: "INR",
-              },
-            ],
-            description:
-              "Looking for Software developer company in Ahmadabad? Based in Gujarat, India we are one of the best ERP software development company. We also provide services of custom software development, mobile application, website development.",
-          }),
-        }}
-      />
       <body
         className={`${interSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning={true}

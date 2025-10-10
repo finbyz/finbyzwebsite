@@ -314,6 +314,45 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
   const [open, setOpen] = useState(false);
   const formRef = useRef<HTMLDivElement>(null);
 
+  // Function to set cookie for 1 hour
+  const setSliderCookie = () => {
+    const expires = new Date();
+    expires.setHours(expires.getHours() + 1); // Set cookie to expire in 1 hour
+    document.cookie = `business-slider-shown=true; expires=${expires.toUTCString()}; path=/`;
+  };
+
+  // Function to get and increment open count
+  const getOpenCount = () => {
+    const cookieName = 'business-slider-open-count';
+    const cookieValue = document.cookie
+      .split('; ')
+      .find(row => row.startsWith(`${cookieName}=`));
+    
+    if (!cookieValue) {
+      return 0;
+    }
+    
+    const count = parseInt(cookieValue.split('=')[1]) || 0;
+    return count;
+  };
+
+  // Function to increment open count
+  const incrementOpenCount = () => {
+    const currentCount = getOpenCount();
+    const newCount = currentCount + 1;
+    const expires = new Date();
+    expires.setHours(expires.getHours() + 1); // Set cookie to expire in 1 hour
+    document.cookie = `business-slider-open-count=${newCount}; expires=${expires.toUTCString()}; path=/`;
+    return newCount;
+  };
+
+  // Function to reset open count
+  const resetOpenCount = () => {
+    const expires = new Date();
+    expires.setHours(expires.getHours() + 1); // Set cookie to expire in 1 hour
+    document.cookie = `business-slider-open-count=0; expires=${expires.toUTCString()}; path=/`;
+  };
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -385,6 +424,8 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
       // Success
       alert('Thanks! Your inquiry has been submitted.');
       setFormData({ name: '', organization: '', email: '', mobile: '' });
+      setSliderCookie(); // Set cookie to prevent showing again for 1 hour
+      resetOpenCount(); // Reset the open count since user completed the form
       setOpen(false);
     } catch (error) {
       console.error('Inquiry submission failed:', error);
@@ -397,6 +438,8 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
     if (!open) return;
     function handleClick(e: MouseEvent) {
       if (formRef.current && !formRef.current.contains(e.target as Node)) {
+        setSliderCookie(); // Set cookie to prevent showing again for 1 hour
+        resetOpenCount(); // Reset the open count since user closed it
         setOpen(false);
       }
     }
@@ -405,9 +448,33 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
   }, [open]);
 
   // Auto open on initial page load with a slight delay for nicer animation
+  // Only open if cookie is not set (hasn't been shown in the last hour)
+  // Also check if it has been opened 3 times without being closed
   useEffect(() => {
-    const timer = setTimeout(() => setOpen(true), 400);
-    return () => clearTimeout(timer);
+    const checkCookieAndOpen = () => {
+      const cookieName = 'business-slider-shown';
+      const cookieValue = document.cookie
+        .split('; ')
+        .find(row => row.startsWith(`${cookieName}=`));
+      
+      if (!cookieValue) {
+        // Check open count
+        const openCount = getOpenCount();
+        
+        if (openCount >= 3) {
+          // Has been opened 3 times without being closed, set cookie to prevent showing
+          setSliderCookie();
+          return;
+        }
+        
+        // Increment open count and show the slider
+        incrementOpenCount();
+        const timer = setTimeout(() => setOpen(true), 400);
+        return () => clearTimeout(timer);
+      }
+    };
+
+    checkCookieAndOpen();
   }, []);
 
   return (
@@ -444,7 +511,11 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
             {/* Close Button */}
             <button
               className="close-button"
-              onClick={() => setOpen(false)}
+              onClick={() => {
+                setSliderCookie(); // Set cookie to prevent showing again for 1 hour
+                resetOpenCount(); // Reset the open count since user closed it
+                setOpen(false);
+              }}
               aria-label="Close Inquiry Form"
             >
               <X className="w-6 h-6" />
