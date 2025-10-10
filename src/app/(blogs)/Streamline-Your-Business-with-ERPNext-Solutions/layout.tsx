@@ -1,4 +1,6 @@
 import BusinessSlider from "@/components/sections/business-slider";
+import FinbyzGallery from "@/components/sections/FinbyzGallery";
+import { getPageData } from "@/lib/getPageData";
 import { Metadata } from "next";
 import Script from "next/script";
 
@@ -10,12 +12,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://finbyz.tech/streamline-your-business-with-erpnext-solutions",
+    canonical: "https://finbyz.tech/Streamline-Your-Business-with-ERPNext-Solutions",
   },
   openGraph: {
     title: "Streamline Your Business with ERPNext: The Leading Open Source ERP System",
     description: "Discover how ERPNext, a comprehensive open-source ERP system, can transform your business operations. Learn about its features, benefits, and implementation strategies.",
-    url: "https://finbyz.tech/streamline-your-business-with-erpnext-solutions",
+    url: "https://finbyz.tech/Streamline-Your-Business-with-ERPNext-Solutions",
     siteName: "Finbyz Tech",
     type: "article",
     locale: "en_US",
@@ -42,12 +44,12 @@ export const metadata: Metadata = {
   }
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default async function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
   "@context": "https://schema.org/",
   "@type": "BlogPosting",
-  "@id": "https://finbyz.tech/streamline-your-business-with-erpnext-solutions#BlogPosting",
-  "mainEntityOfPage": "https://finbyz.tech/streamline-your-business-with-erpnext-solutions",
+  "@id": "https://finbyz.tech/Streamline-Your-Business-with-ERPNext-Solutions#BlogPosting",
+  "mainEntityOfPage": "https://finbyz.tech/Streamline-Your-Business-with-ERPNext-Solutions",
   "headline": "Streamline Your Business with ERPNext: The Leading Open Source ERP System",
   "name": "Streamline Your Business with ERPNext: The Leading Open Source ERP System",
   "description": "Discover how ERPNext, a comprehensive open-source ERP system, can transform your business operations. Learn about its features, benefits, and implementation strategies.",
@@ -81,7 +83,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "width": "1200",
     "height": "630"
   },
-  "url": "https://finbyz.tech/streamline-your-business-with-erpnext-solutions",
+  "url": "https://finbyz.tech/Streamline-Your-Business-with-ERPNext-Solutions",
   "isPartOf": {
     "@type": "Blog",
     "@id": "https://finbyz.tech/blog-post/",
@@ -98,6 +100,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "erpnext system"
   ]
 };
+  const data = await getPageData("Blog Post","Streamline-Your-Business-with-ERPNext-Solutions");
 
   return (
     <>
@@ -113,9 +116,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </article>
 
       {children}
+      {
+        (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
+      }
       <BusinessSlider />
     </>
   );
 }
-
-

@@ -1,4 +1,6 @@
 import BusinessSlider from "@/components/sections/business-slider";
+import FinbyzGallery from "@/components/sections/FinbyzGallery";
+import { getPageData } from "@/lib/getPageData";
 import { Metadata } from "next";
 import Script from "next/script";
 
@@ -42,7 +44,7 @@ export const metadata: Metadata = {
   }
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default async function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
   "@context": "https://schema.org/",
   "@type": "BlogPosting",
@@ -104,6 +106,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "phases of erp implementation"
   ]
 };
+  const data = await getPageData("Blog Post","erp-implementation-phases");
 
   return (
     <>
@@ -119,6 +122,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </article>
 
       {children}
+      {
+        (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
+      }
       <BusinessSlider />
     </>
   );
