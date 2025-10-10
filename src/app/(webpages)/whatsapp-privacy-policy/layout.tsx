@@ -1,4 +1,7 @@
 import BusinessSlider from "@/components/sections/business-slider";
+import FinbyzGallery from "@/components/sections/FinbyzGallery";
+import { getPageData } from "@/lib/getPageData";
+
 import { Metadata } from "next";
 import Script from "next/script";
 
@@ -42,7 +45,7 @@ export const metadata: Metadata = {
   }
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default async function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
   "@context": "http://www.schema.org",
   "@type": "ProfessionalService",
@@ -51,7 +54,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
   "image": "None",
   "description": "We care about protecting the personal information of our customers and visitors who use our website www.finbyz.tech, our products or services (collectively, our Users).\nThis Privacy Policy governs the manner in which Finbyz Tech collects, uses, shares, maintains and discloses information collected from users (each, a User, you ) of the https://www.finbyz.tech/privacy-policy website (Site). This privacy policy applies to the Site and all products and services offered by Finbyz Tech. In this policy, we, us and our referred to Finbyz Tech and Finbyz Tech Corporate family\n",
-  "priceRaaddressRegionnge": "INR",
+  "priceRange": "INR",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
@@ -85,7 +88,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "https://www.instagram.com/finbyz/"
   ]
 };
-
+  const data = await getPageData("Web Page","whatsapp-privacy-policy");
   return (
     <>
       {/* JSON-LD structured data for LLMs */}
@@ -101,7 +104,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <meta itemProp="description" content="We care about protecting the personal information of our customers and visitors who use our website www.finbyz.tech, our products or services (collectively, our Users).\nThis Privacy Policy governs the manner in which Finbyz Tech collects, uses, shares, maintains and discloses information collected from users (each, a User, you ) of the https://www.finbyz.tech/privacy-policy website (Site). This privacy policy applies to the Site and all products and services offered by Finbyz Tech. In this policy, we, us and our referred to Finbyz Tech and Finbyz Tech Corporate family\n" />
       </article>
       {children}
-      
+      {
+        (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
+      }
       <BusinessSlider />
     </>
   );

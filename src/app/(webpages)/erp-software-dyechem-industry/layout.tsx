@@ -1,4 +1,7 @@
 import BusinessSlider from "@/components/sections/business-slider";
+import FinbyzGallery from "@/components/sections/FinbyzGallery";
+import { getPageData } from "@/lib/getPageData";
+
 import { Metadata } from "next";
 import Script from "next/script";
 
@@ -42,7 +45,7 @@ export const metadata: Metadata = {
   }
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default async function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
   "@context": "http://www.schema.org",
   "@type": "ProfessionalService",
@@ -85,7 +88,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "https://www.instagram.com/finbyz/"
   ]
 };
-
+  const data = await getPageData("Web Page","erp-software-dyechem-industry");
   return (
     <>
       {/* JSON-LD structured data for LLMs */}
@@ -101,7 +104,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <meta itemProp="description" content="ERP Software for DyeChem industry solve problems of batch-wise Inventory management, Samples management, Manufacturing of dyes and Pigment with yield, concentration and purity." />
       </article>
       {children}
-      
+      {
+        (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
+      }
       <BusinessSlider />
     </>
   );
