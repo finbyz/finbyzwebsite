@@ -42,14 +42,7 @@ export default function Page() {
             This document describes the workflow transition system that tracks document state changes, sends automated reminders, and generates reports on workflow performance.
           </p>
           <div className="flex justify-center animate-fade-in">
-            <img
-              src="/images/so.jpg"
-              alt="Workflow Example"
-              width={800}
-              height={400}
-              className="rounded-lg shadow-lg object-contain"
-              style={{ width: '65%', height: 'auto' }}
-            />
+            <Image src="/images/so.jpg" alt="Workflow Example" width={800} height={400} className="rounded-lg shadow-lg object-contain" style={{ width: '65%', height: 'auto' }} />
           </div>
         </div>
       </Section>
@@ -79,14 +72,7 @@ export default function Page() {
             These indicators appear in a checkbox section within any DocType that has workflow states enabled, providing immediate visual feedback on document status.
           </p>
           <div className="flex justify-center mt-8 animate-fade-in">
-            <img
-              src="/images/ws.jpg"
-              alt="Workflow State Tracking"
-              width={800}
-              height={400}
-              className="rounded-lg shadow-lg object-contain"
-              style={{ width: '65%', height: 'auto' }}
-            />
+            <Image src="/images/ws.jpg" alt="Workflow State Tracking" width={800} height={400} className="rounded-lg shadow-lg object-contain" style={{ width: '65%', height: 'auto' }} />
           </div>
         </div>
       </Section>
@@ -118,35 +104,14 @@ export default function Page() {
             ]}
           />
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-8 animate-fade-in">
-            <img
-              src="/images/so_1.jpg"
-              alt="Reminder Config 1"
-              width={400}
-              height={250}
-              className="rounded-lg shadow object-contain"
-              style={{ width: '65%', height: 'auto' }}
-            />
+            <Image src="/images/so_1.jpg" alt="Reminder Config 1" width={400} height={250} className="rounded-lg shadow object-contain" style={{ width: '65%', height: 'auto' }} />
            </div>
            <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-8 animate-fade-in">
-            <img
-              src="/images/ds.jpg"
-              alt="Reminder Config 2"
-              width={400}
-              height={250}
-              className="rounded-lg shadow object-contain"
-              style={{ width: '65%', height: 'auto' }}
-            />
+            <Image src="/images/ds.jpg" alt="Reminder Config 2" width={400} height={250} className="rounded-lg shadow object-contain" style={{ width: '65%', height: 'auto' }} />
             </div>
             <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-8 animate-fade-in">
 
-            <img
-              src="/images/so_2.jpg"
-              alt="Reminder Config 3"
-              width={400}
-              height={250}
-              className="rounded-lg shadow object-contain"
-              style={{ width: '65%', height: 'auto' }}
-            />
+            <Image src="/images/so_2.jpg" alt="Reminder Config 3" width={400} height={250} className="rounded-lg shadow object-contain" style={{ width: '65%', height: 'auto' }} />
             </div>
          
           <h4 className="text-md font-semibold mt-8 mb-2">Project-Based Permissions</h4>
@@ -162,24 +127,10 @@ export default function Page() {
             ]}
           />
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-8 animate-fade-in">
-            <img
-              src="/images/ps.jpg"
-              alt="Project Permission 1"
-              width={400}
-              height={250}
-              className="rounded-lg shadow object-contain"
-              style={{ width: '65%', height: 'auto' }}
-            />
+            <Image src="/images/ps.jpg" alt="Project Permission 1" width={400} height={250} className="rounded-lg shadow object-contain" style={{ width: '65%', height: 'auto' }} />
           </div>
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-8 animate-fade-in">
-            <img
-              src="/images/po.jpg"
-              alt="Project Permission 2"
-              width={400}
-              height={250}
-              className="rounded-lg shadow object-contain"
-              style={{ width: '65%', height: 'auto' }}
-            />
+            <Image src="/images/po.jpg" alt="Project Permission 2" width={400} height={250} className="rounded-lg shadow object-contain" style={{ width: '65%', height: 'auto' }} />
           </div>
         </div>
       </Section>
@@ -190,14 +141,7 @@ export default function Page() {
           <h2 className="text-2xl font-bold mb-4">3. Workflow Performance Reports</h2>
           <p className="text-gray-700 mb-6">The system provides three comprehensive reports to track workflow efficiency and user activity.</p>
           <div className="flex justify-center animate-fade-in mb-8">
-            <img
-              src="/images/state_change.jpg"
-              alt="State Change Overview"
-              width={800}
-              height={400}
-              className="rounded-lg shadow-lg object-contain"
-              style={{ width: '65%', height: 'auto' }}
-            />
+            <Image src="/images/state_change.jpg" alt="State Change Overview" width={800} height={400} className="rounded-lg shadow-lg object-contain" style={{ width: '65%', height: 'auto' }} />
           </div>
           {/* 3.1 State Transition Time Report */}
           <div className="mb-8">
@@ -216,14 +160,7 @@ export default function Page() {
               <strong>Use Case:</strong> <span className="text-gray-800">Determine if specific documents are taking unusually long to progress through certain states.</span>
             </div>
             <div className="flex justify-center animate-fade-in mb-8">
-              <img
-                src="/images/state_change-1.jpg"
-                alt="State Transition Time Report"
-                width={800}
-                height={400}
-                className="rounded-lg shadow object-contain"
-                style={{ width: '65%', height: 'auto' }}
-              />
+              <Image src="/images/state_change-1.jpg" alt="State Transition Time Report" width={800} height={400} className="rounded-lg shadow object-contain" style={{ width: '65%', height: 'auto' }} />
             </div>
           </div>
           {/* 3.2 Average State Transition Time Report */}
@@ -268,36 +205,15 @@ export default function Page() {
             </div>
           </div>
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center animate-fade-in">
-            <img
-              src="/images/state_change_report.jpg"
-              alt="State Change Report 1"
-              width={400}
-              height={250}
-              className="rounded-lg shadow object-contain"
-              style={{ width: '65%', height: 'auto' }}
-            />
+            <Image src="/images/state_change_report.jpg" alt="State Change Report 1" width={400} height={250} className="rounded-lg shadow object-contain" style={{ width: '65%', height: 'auto' }} />
             </div>
             <br></br>
             <div className="flex flex-col md:flex-row gap-6 justify-center items-center animate-fade-in">
-            <img
-              src="/images/state_change_report_1.jpg"
-              alt="State Change Report 2"
-              width={400}
-              height={250}
-              className="rounded-lg shadow object-contain"
-              style={{ width: '65%', height: 'auto' }}
-            />
+            <Image src="/images/state_change_report_1.jpg" alt="State Change Report 2" width={400} height={250} className="rounded-lg shadow object-contain" style={{ width: '65%', height: 'auto' }} />
             </div>
             <br></br>
             <div className="flex flex-col md:flex-row gap-6 justify-center items-center animate-fade-in">
-            <img
-              src="/images/expence_claim.jpg"
-              alt="Expense Claim Report"
-              width={400}
-              height={250}
-              className="rounded-lg shadow object-contain"
-              style={{ width: '65%', height: 'auto' }}
-            />
+            <Image src="/images/expence_claim.jpg" alt="Expense Claim Report" width={400} height={250} className="rounded-lg shadow object-contain" style={{ width: '65%', height: 'auto' }} />
           </div>
         </div>
       </Section>

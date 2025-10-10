@@ -84,13 +84,7 @@ export default function Page() {
                     <span className="text-xs font-semibold text-green-700">Verified</span>
                   </div>
 
-                  <img
-                    src="/images/Frappe-Partner-Certificate-Logo.svg"
-                    alt="ERPNext partner img"
-                    width={270}
-                    height={140}
-                    className="w-full h-auto"
-                  />
+                  <Image src="/images/Frappe-Partner-Certificate-Logo.svg" alt="ERPNext partner img" width={270} height={140} className="w-full h-auto" />
 
                   <div className="mt-4 pt-4 border-t border-gray-100">
                     <p className="text-center text-gray-800 text-sm font-bold">Official Frappe Partner</p>
@@ -125,13 +119,7 @@ export default function Page() {
           </p>
           <div className="flex flex-col md:flex-row gap-8 items-center mt-8">
             <div className="flex-1 flex justify-center">
-              <img
-                src="/images/image_2023_09_08T10_56_59_090Z.png"
-                alt="ERPNext_Partner"
-                width={480}
-                height={240}
-                className="rounded-lg shadow-md object-contain"
-              />
+              <Image src="/images/image_2023_09_08T10_56_59_090Z.png" alt="ERPNext_Partner" width={480} height={240} className="rounded-lg shadow-md object-contain" />
             </div>
             <div className="flex-1 mt-6 md:mt-0">
               <p className="text-gray-700 animate-fade-in-up">

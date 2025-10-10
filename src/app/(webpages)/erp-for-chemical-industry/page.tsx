@@ -78,13 +78,7 @@ export default function Page() {
             <div className="md:w-1/3 flex-shrink-0 flex justify-center">
               <div className="relative">
                 <div className="absolute inset-0 rounded-2xl bg-blue-100 blur-xl opacity-40" />
-                <img
-                  src="/images/manage-chemical-formulation.svg"
-                  alt="Manage chemical formulation"
-                  width={320}
-                  height={320}
-                  className="rounded-xl shadow-lg relative z-10 p-3 bg-white"
-                />
+                <Image src="/images/manage-chemical-formulation.svg" alt="Manage chemical formulation" width={320} height={320} className="rounded-xl shadow-lg relative z-10 p-3 bg-white" />
               </div>
             </div>
             <div className="md:w-2/3 bg-white rounded-xl shadow p-6">
@@ -104,13 +98,7 @@ export default function Page() {
             <div className="md:w-1/3 flex-shrink-0 flex justify-center">
               <div className="relative">
                 <div className="absolute inset-0 rounded-2xl bg-blue-100 blur-xl opacity-40" />
-                <img
-                  src="/images/sample-and-quotation.svg"
-                  alt="Manage samples and quotation"
-                  width={320}
-                  height={320}
-                  className="rounded-xl shadow-lg relative z-10 p-3 bg-white"
-                />
+                <Image src="/images/sample-and-quotation.svg" alt="Manage samples and quotation" width={320} height={320} className="rounded-xl shadow-lg relative z-10 p-3 bg-white" />
               </div>
             </div>
             <div className="md:w-2/3 bg-white rounded-xl shadow p-6">
@@ -138,13 +126,7 @@ export default function Page() {
             <div className="md:w-1/3 flex-shrink-0 flex justify-center">
               <div className="relative">
                 <div className="absolute inset-0 rounded-2xl bg-blue-100 blur-xl opacity-40" />
-                <img
-                  src="/images/chemical-mfg-process.svg"
-                  alt="Chemical manufacturing ERP process"
-                  width={320}
-                  height={320}
-                  className="rounded-xl shadow-lg relative z-10 p-3 bg-white"
-                />
+                <Image src="/images/chemical-mfg-process.svg" alt="Chemical manufacturing ERP process" width={320} height={320} className="rounded-xl shadow-lg relative z-10 p-3 bg-white" />
               </div>
             </div>
             <div className="md:w-2/3 bg-white rounded-xl shadow p-6">
@@ -198,13 +180,7 @@ export default function Page() {
             <div className="md:w-1/3 flex-shrink-0 flex justify-center">
               <div className="relative">
                 <div className="absolute inset-0 rounded-2xl bg-blue-100 blur-xl opacity-40" />
-                <img
-                  src="/images/inventory.svg"
-                  alt="Chemical Inventory saves dollars"
-                  width={320}
-                  height={320}
-                  className="rounded-xl shadow-lg relative z-10 p-3 bg-white"
-                />
+                <Image src="/images/inventory.svg" alt="Chemical Inventory saves dollars" width={320} height={320} className="rounded-xl shadow-lg relative z-10 p-3 bg-white" />
               </div>
             </div>
             <div className="md:w-2/3 bg-white rounded-xl shadow p-6">
@@ -225,13 +201,7 @@ export default function Page() {
             <div className="md:w-1/3 flex-shrink-0 flex justify-center">
               <div className="relative">
                 <div className="absolute inset-0 rounded-2xl bg-blue-100 blur-xl opacity-40" />
-                <img
-                  src="/images/quality-assurance.svg"
-                  alt="quality-assurance"
-                  width={320}
-                  height={320}
-                  className="rounded-xl shadow-lg relative z-10 p-3 bg-white"
-                />
+                <Image src="/images/quality-assurance.svg" alt="quality-assurance" width={320} height={320} className="rounded-xl shadow-lg relative z-10 p-3 bg-white" />
               </div>
             </div>
             <div className="md:w-2/3 bg-white rounded-xl shadow p-6">

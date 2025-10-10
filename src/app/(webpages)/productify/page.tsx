@@ -176,11 +176,7 @@ export default function Page() {
           {/* First Image */}
           <div className="flex flex-col items-center">
             <div className="w-full aspect-square overflow-hidden rounded-lg shadow-lg">
-              <img
-                src="/images/Productify%20Applications%20Used.jpg"
-                alt="Productify Applications Used"
-                className="w-full h-full object-cover"
-              />
+              <Image src="/images/Productify%20Applications%20Used.jpg" alt="Productify Applications Used" width={500} height={500} className="w-full h-full object-cover" />
             </div>
             <p className="mt-4 text-center text-muted-foreground text-sm">
               Our Doughnut Chart breaks down employee software usage, showcasing how much time is spent per application.
@@ -190,11 +186,7 @@ export default function Page() {
           {/* Second Image */}
           <div className="flex flex-col items-center">
             <div className="w-full aspect-square overflow-hidden rounded-lg shadow-lg">
-              <img
-                src="/images/Productify%20Web%20Browsing%20Time.jpg"
-                alt="Productify Web Browsing Time"
-                className="w-full h-full object-cover"
-              />
+              <Image src="/images/Productify%20Web%20Browsing%20Time.jpg" alt="Productify Web Browsing Time" width={500} height={500} className="w-full h-full object-cover" />
             </div>
             <p className="mt-4 text-center text-muted-foreground text-sm">
               Track all web activity with Productify's Pie Chart, categorizing browsing time by domain.
@@ -233,11 +225,7 @@ export default function Page() {
       {/* First Image */}
       <div className="flex flex-col items-center">
         <div className="w-full max-w-md overflow-hidden rounded-lg shadow-lg bg-white p-4">
-          <img
-            src="/images/Productify%20Top%20Phone%20Calls.jpg"
-            alt="Productify Top Phone Calls"
-            className="w-full h-auto object-contain"
-          />
+          <Image src="/images/Productify%20Top%20Phone%20Calls.jpg" alt="Productify Top Phone Calls" width={500} height={500} className="w-full h-auto object-contain" />
         </div>
         <p className="mt-4 text-center text-muted-foreground text-sm">
           Top Phone Calls in the Productify app, visualized using a Pie-in-a-Doughnut chart.
@@ -247,11 +235,7 @@ export default function Page() {
       {/* Second Image */}
       <div className="flex flex-col items-center">
         <div className="w-full max-w-sm overflow-hidden rounded-lg shadow-lg bg-white p-4">
-          <img
-            src="/images/Type%20of%20Calls.png"
-            alt="Type of Calls"
-            className="w-full h-auto object-contain"
-          />
+          <Image src="/images/Type%20of%20Calls.png" alt="Type of Calls" width={500} height={500} className="w-full h-auto object-contain" />
         </div>
         <p className="mt-4 text-center text-muted-foreground text-sm">
           Categorizes internal and external communications to enhance strategic decisions.

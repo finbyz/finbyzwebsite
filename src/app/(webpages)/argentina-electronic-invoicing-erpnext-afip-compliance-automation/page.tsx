@@ -75,13 +75,7 @@ export default function Page() {
             />
           </div>
           <div className="flex justify-center items-center">
-            <img
-              src="/images/Line Banner-41 (2)_11zon.png"
-              alt="Custom Fields to Support Legal Compliance"
-              width={400}
-              height={260}
-              className="rounded-xl shadow-lg object-contain animate-fadeinleft"
-            />
+            <Image src="/images/Line Banner-41 (2)_11zon.png" alt="Custom Fields to Support Legal Compliance" width={400} height={260} className="rounded-xl shadow-lg object-contain animate-fadeinleft" />
           </div>
         </div>
       </Section>
@@ -107,13 +101,7 @@ export default function Page() {
             />
           </div>
           <div className="flex justify-center items-center">
-            <img
-              src="/images/Line Banner-41 (2)_11zon.png"
-              alt="Enhanced Form Organization"
-              width={400}
-              height={260}
-              className="rounded-xl shadow-lg object-contain animate-fadeinleft"
-            />
+            <Image src="/images/Line Banner-41 (2)_11zon.png" alt="Enhanced Form Organization" width={400} height={260} className="rounded-xl shadow-lg object-contain animate-fadeinleft" />
           </div>
         </div>
       </Section>
@@ -207,13 +195,7 @@ export default function Page() {
             />
           </div>
           <div className="flex justify-center items-center">
-            <img
-              src="/images/Line Banner-41 (2)_11zon.png"
-              alt="Support for Various Business Scenarios"
-              width={400}
-              height={260}
-              className="rounded-xl shadow-lg object-contain animate-fadeinleft"
-            />
+            <Image src="/images/Line Banner-41 (2)_11zon.png" alt="Support for Various Business Scenarios" width={400} height={260} className="rounded-xl shadow-lg object-contain animate-fadeinleft" />
           </div>
         </div>
       </Section>

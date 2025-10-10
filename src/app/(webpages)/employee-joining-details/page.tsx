@@ -1,4 +1,5 @@
 'use client'
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
@@ -69,12 +70,7 @@ export default function Page() {
             </ul>
           </div>
           <div className="flex-1 flex justify-center">
-            <img
-              src="/images/employee-joining-form-illustration.png"
-              alt="Employee Joining Form Illustration"
-              className="rounded-xl shadow-lg w-full md:w-96 h-auto object-contain animate-fade-in"
-              loading="lazy"
-            />
+            <Image src="/images/employee-joining-form-illustration.png" alt="Employee Joining Form Illustration" width={500} height={500} className="rounded-xl shadow-lg w-full md:w-96 h-auto object-contain animate-fade-in" loading="lazy" />
           </div>
         </div>
       </Section>

@@ -7,70 +7,70 @@ import IndustryHexCard from "./IndustryHexCard";
 const industries = [
   {
     title: "Manufacturing",
-    icon: "/api/fb/n/files/nav-manufacturing.svg",
+    icon: "/images/nav-manufacturing.svg",
     number: "01",
     href: "/erp-for-manufacturing-industry",
     fade: 1
   },
   {
     title: "Chemical",
-    icon: "/api/fb/n/files/nav-chemical.svg",
+    icon: "/images/nav-chemical.svg",
     number: "02",
     href: "/erp-for-chemical-industry",
     fade: 2
   },
   {
     title: "Engineering",
-    icon: "/api/fb/n/files/nav-engineering.svg",
+    icon: "/images/nav-engineering.svg",
     number: "03",
     href: "/erp-for-engineering-industry",
     fade: 3
   },
   {
     title: "Logistics",
-    icon: "/api/fb/n/files/nav-logistics.svg",
+    icon: "/images/nav-logistics.svg",
     number: "04",
     href: "/erp-for-logistics-industry",
     fade: 4
   },
   {
     title: "Agro Industries",
-    icon: "/api/fb/n/files/nav-agro.svg",
+    icon: "/images/nav-agro.svg",
     number: "05",
     href: "/erp-for-agro-commodity",
     fade: 5
   },
   {
     title: "Fintech",
-    icon: "/api/fb/n/files/icon-brokerage-commission.svg",
+    icon: "/images/icon-brokerage-commission.svg",
     number: "06",
     href: undefined,
     fade: 1
   },
   {
     title: "Healthcare",
-    icon: "/api/fb/n/files/Healthcare.svg",
+    icon: "/images/Healthcare.svg",
     number: "07",
     href: undefined,
     fade: 2
   },
   {
     title: "Education",
-    icon: "/api/fb/n/files/icon-integrated_paperwork_.svg",
+    icon: "/images/icon-integrated_paperwork_.svg",
     number: "08",
     href: undefined,
     fade: 3
   },
   {
     title: "Travel & Hospitality",
-    icon: "/api/fb/n/files/icon-truck_allocation.svg",
+    icon: "/images/icon-truck_allocation.svg",
     number: "09",
     href: undefined,
     fade: 4
   },
   {
     title: "E-commerce ",
-    icon: "/api/fb/n/files/E-commerce.svg",
+    icon: "/images/E-commerce.svg",
     number: "010",
     href: undefined,
     fade: 5
@@ -91,7 +91,7 @@ const IndustryHexGrid: React.FC = () => {
       <div className="flex flex-wrap justify-center gap-6 relative">
         {/* Decorative background waves */}
         <div className="absolute left-0 top-0 w-full h-full pointer-events-none -z-10">
-          <Image src="/api/fb/n/files/dotted-wave.svg" alt="dotted-wave" width={1200} height={60} className="w-full h-auto opacity-30" />
+          <Image src="/images/dotted-wave.svg" alt="dotted-wave" width={1200} height={60} className="w-full h-auto opacity-30" />
         </div>
         {industries.map((industry, idx) => (
           <IndustryHexCard

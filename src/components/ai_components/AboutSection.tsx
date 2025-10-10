@@ -11,7 +11,7 @@ const AboutSection = () => (
       className="flex-1 flex justify-center"
     >
       <Image
-        src="/api/fb/n/files/Innovate-learn-create.jpg"
+        src="/images/Innovate-learn-create.jpg"
         alt="Innovate. Learn. Create."
         width={480}
         height={360}

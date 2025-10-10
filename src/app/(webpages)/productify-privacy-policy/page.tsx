@@ -44,13 +44,7 @@ export default function Page() {
               </p>
             </div>
             <div className="flex items-center gap-2">
-              <img
-                src="/images/productify/privacy-lock.svg"
-                alt="Privacy Lock Illustration"
-                width={56}
-                height={56}
-                className="rounded-lg bg-muted p-2 shadow-sm"
-              />
+              <Image src="/images/productify/privacy-lock.svg" alt="Privacy Lock Illustration" width={56} height={56} className="rounded-lg bg-muted p-2 shadow-sm" />
             </div>
           </div>
         </div>

@@ -11,7 +11,7 @@ export default function UpgradeCloudERPContent() {
         <div className="flex flex-col md:flex-row items-center gap-8 animate-fade-in">
           <div className="w-full md:w-1/2 flex justify-center">
             <Image
-              src="/api/fb/n/files/Cloud-ERP.svg"
+              src="/images/Cloud-ERP.svg"
               alt="ERP with Cloud"
               title="Upgrade old ERP with cloud ERP"
               width={320}
@@ -43,7 +43,7 @@ export default function UpgradeCloudERPContent() {
           </div>
           <div className="w-full md:w-1/3 flex justify-center">
             <Image
-              src="/api/fb/n/files/blog-flexlibility.svg"
+              src="/images/blog-flexlibility.svg"
               alt="ERP Flexible"
               title="Flexibility"
               width={220}
@@ -63,7 +63,7 @@ export default function UpgradeCloudERPContent() {
         <div className="flex flex-col md:flex-row items-center gap-8 animate-fade-in">
           <div className="w-full md:w-1/3 flex justify-center mb-4 md:mb-0">
             <Image
-              src="/api/fb/n/files/blog-functionality.svg"
+              src="/images/blog-functionality.svg"
               alt="ERP Multitasking"
               title="Functionality"
               width={220}
@@ -99,7 +99,7 @@ export default function UpgradeCloudERPContent() {
           </div>
           <div className="w-full md:w-1/3 flex justify-center">
             <Image
-              src="/api/fb/n/files/blog-cost-cutting.svg"
+              src="/images/blog-cost-cutting.svg"
               alt="ERP Cost Cutting"
               title="Cost Cutting"
               width={220}

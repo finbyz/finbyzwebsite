@@ -143,13 +143,7 @@ export default function Page() {
                 key={service.title}
                 front={
                   <div className="flex flex-col items-center justify-center h-full p-4">
-                    <img
-                      src={service.image}
-                      alt={service.alt}
-                      width={80}
-                      height={80}
-                      className="mb-4 object-contain"
-                    />
+                    <Image src={service.image} alt={service.alt} width={80} height={80} className="mb-4 object-contain" />
                     <h3 className="text-lg font-semibold text-center">{service.title}</h3>
                   </div>
                 }
