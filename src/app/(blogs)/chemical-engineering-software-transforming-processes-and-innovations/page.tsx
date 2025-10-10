@@ -46,7 +46,7 @@ export default function Page() {
             title="Introduction"
             imagePosition='top'
             image={{
-              src: '/api/fb/n/files/Key-Features-of-ERP-Software-for-Chemical-Industry%20(1).png',
+              src: '//files/Key-Features-of-ERP-Software-for-Chemical-Industry%20(1).png',
               alt: 'chemical-engineering-software-transforming-processes-and-innovations',
               title: 'chemical-engineering-software-transforming-processes-and-innovations',
               cover:true,
@@ -71,7 +71,7 @@ export default function Page() {
             id="modelling-and-simulation"
             title="Modelling and Simulation"
             image={{
-              src: '/api/fb/n/files/17.png',
+              src: '//files/17.png',
               alt: 'Modelling and Simulation',
               title: 'Modelling-and-Simulation',
               width: 150,
@@ -94,7 +94,7 @@ export default function Page() {
             id="development-and-improvement-of-processes"
             title="Development and Improvement of Processes"
             image={{
-              src: '/api/fb/n/files/development.png',
+              src: '//files/development.png',
               alt: 'Development and Improvement of Processes',
               title: 'Development-and-Improvement-of-Processes',
               width: 150,
@@ -117,7 +117,7 @@ export default function Page() {
             id="automation-and-process-control"
             title="Automation and Process Control"
             image={{
-              src: '/api/fb/n/files/automation.png',
+              src: '//files/automation.png',
               alt: 'Automation and Process Control',
               title: 'Automation-and-Process-Control',
               width: 150,
@@ -140,7 +140,7 @@ export default function Page() {
             id="innovations-and-upcoming-patterns"
             title="Innovations and Upcoming Patterns"
             image={{
-              src: '/api/fb/n/files/Innovations.png',
+              src: '//files/Innovations.png',
               alt: 'Innovations and Upcoming Patterns',
               title: 'Innovations-and-Upcoming-Patterns',
               width: 150,

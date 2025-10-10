@@ -35,7 +35,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'Web Application Development',
-          src: 'api/fb/n/files/web-app-development.svg',
+          src: '/images/web-app-development.svg',
           videoSrc: undefined
         }}
       />
@@ -64,7 +64,7 @@ export default function Page() {
             </div>
             <div className="flex-1 flex justify-center animate-fade-in-up">
               <img
-                src="/api/fb/n/files/technology-expertise.svg"
+                src="/images/technology-expertise.svg"
                 alt="Technology expertise"
                 width={320}
                 height={250}
@@ -96,13 +96,13 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <FeatureCard
               title="Scalable Business Software"
-              image="/api/fb/n/files/scalable-web-app.svg"
+              image="/images/scalable-web-app.svg"
               alt="Scalable Business Software"
               description="We develop web applications that are highly scalable to handle your daily increasing business data without any downtime."
             />
             <FeatureCard
               title="Responsive Web Applications"
-              image="/api/fb/n/files/responsive-web-app.svg"
+              image="/images/responsive-web-app.svg"
               alt="Responsive Web Applications"
               description="We create optimized business software solutions that offer excellent user experience irrespective of the screen resolutions and size."
             />

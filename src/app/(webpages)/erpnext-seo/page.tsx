@@ -9,42 +9,42 @@ import { CheckCircle } from 'lucide-react';
 const seoBenefits = [
   {
     title: 'More online visibility',
-    image: 'api/fb/n/files/pythondevloper.svg',
+    image: '/images/pythondevloper.svg',
     alt: 'More online visibility',
     description:
       'Optimizing your ERPNext platform for search engines can make your company easier to find online. This means more potential customers will see your products or services when searching for related terms.',
   },
   {
     title: 'More website visitors',
-    image: 'api/fb/n/files/3939ac579.svg',
+    image: '/images/3939ac579.svg',
     alt: 'More website visitors',
     description:
       'SEO brings in more organic (free) traffic to your website. With ERPNext, you can handle this extra traffic smoothly and ensure visitors have a good experience.',
   },
   {
     title: 'Cost effective',
-    image: 'api/fb/n/files/135.svg',
+    image: '/images/135.svg',
     alt: 'Cost effective',
     description:
       'Compared to regular advertising, investing in SEO gives long-term results at a lower cost. Integrating SEO with ERPNext helps streamline operations and use resources better, reducing overhead costs.',
   },
   {
     title: 'Target specific audiences',
-    image: 'api/fb/n/files/icon-supplier-management.svg',
+    image: '/images/icon-supplier-management.svg',
     alt: 'Target specific audiences',
     description:
       'SEO allows you to focus your marketing on particular groups of people. ERPNext can help identify your ideal customers and deliver personalized content to them.',
   },
   {
     title: 'Beat competitors',
-    image: 'api/fb/n/files/33.svg',
+    image: '/images/33.svg',
     alt: 'Beat competitors',
     description:
       'Making your ERPNext platform search engine optimized can help you outrank competitors in search results. With a well-executed SEO plan, you can position your brand as a leader in your industry.',
   },
   {
     title: 'Better control and analysis of data',
-    image: 'api/fb/n/files/Better control and analysis of data.svg',
+    image: '/images/Better control and analysis of data.svg',
     alt: 'Better control and analysis of data',
     description:
       "ERPNext has effective features for managing data and making reports. Businesses can learn a lot about how well their online marketing is working by adding SEO data (like keyword ranks, website traffic sources, and popular content) to ERPNext.",
@@ -54,21 +54,21 @@ const seoBenefits = [
 const improvementItems = [
   {
     title: 'Use the right keywords',
-    image: 'api/fb/n/files/49.svg',
+    image: '/images/49.svg',
     alt: 'Use the right keywords',
     description:
       'Research terms your target customers are searching for. Thoughtfully use these keywords in product descriptions, blog posts, and website tags on your ERPNext platform.',
   },
   {
     title: 'Create quality content',
-    image: 'api/fb/n/files/Customization.svg',
+    image: '/images/Customization.svg',
     alt: 'Create quality content',
     description:
       'Provide valuable, well-written information like how-to videos, blog articles, or product guides. Regularly adding new content improves SEO and attracts visitors.',
   },
   {
     title: 'Optimize for mobile',
-    image: 'api/fb/n/files/Optimize for mobile.svg',
+    image: '/images/Optimize for mobile.svg',
     alt: 'Optimize for mobile',
     description:
       'With more customers using mobile devices, ensure your ERPNext website is mobile-friendly and responsive across devices. This improves search rankings and user experience.',

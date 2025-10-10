@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/Hire-JS-Dev.svg", width: 1200, height: 630, alt: "Hire Dedicated JavaScript Developers | Expert JS Programmers" }],
+    images: [{ url: "/images/Hire-JS-Dev.svg", width: 1200, height: 630, alt: "Hire Dedicated JavaScript Developers | Expert JS Programmers" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Hire Dedicated JavaScript Developers | Expert JS Programmers",
     description: "Looking to hire JavaScript developers? Look no further than FinByz. Our expert JS programmers craft dynamic, interactive front-end apps tailored to your needs. ",
     creator: "@finbyz",
-    images: ["/files/Hire-JS-Dev.svg"],
+    images: ["/images/Hire-JS-Dev.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Hire Dedicated JavaScript Developers | Expert JS Programmers",
   "url": "https://finbyz.tech/hire-javascript-developer",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/Hire-JS-Dev.svg",
+  "image": "/images/Hire-JS-Dev.svg",
   "description": "Looking to hire JavaScript developers? Look no further than FinByz. Our expert JS programmers craft dynamic, interactive front-end apps tailored to your needs. ",
   "priceRange": "INR",
   "address": {

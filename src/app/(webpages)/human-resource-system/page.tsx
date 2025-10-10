@@ -34,7 +34,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'Advanced Human Resource Software',
-          src: 'api/fb/n/files/hr_system 2019-07-27 18_25_22.svg',
+          src: '/images/hr_system 2019-07-27 18_25_22.svg',
           videoSrc: undefined,
         }}
       />
@@ -63,7 +63,7 @@ export default function Page() {
           {/* Recruitment Modern */}
           <Card className="border-none shadow-md flex flex-col items-center p-6 animate-fadeInUp">
             <img
-              src="/api/fb/n/files/icon Real-time information.svg"
+              src="/images/icon Real-time information.svg"
               alt="Flawless UI with Real-time information"
               width={80}
               height={80}
@@ -92,7 +92,7 @@ export default function Page() {
           {/* Employee and Attendance Modern */}
           <Card className="border-none shadow-md flex flex-col items-center p-6 animate-fadeInUp">
             <img
-              src="/api/fb/n/files/icon Improved Collaboration.svg"
+              src="/images/icon Improved Collaboration.svg"
               alt="Improved Collaboration"
               width={80}
               height={80}
@@ -107,7 +107,7 @@ export default function Page() {
           {/* Leave Management Modern */}
           <Card className="border-none shadow-md flex flex-col items-center p-6 animate-fadeInUp">
             <img
-              src="/api/fb/n/files/icon Improved Collaboration.svg"
+              src="/images/icon Improved Collaboration.svg"
               alt="Improved Collaboration"
               width={80}
               height={80}
@@ -122,7 +122,7 @@ export default function Page() {
           {/* Appraisal Modern */}
           <Card className="border-none shadow-md flex flex-col items-center p-6 animate-fadeInUp">
             <img
-              src="/api/fb/n/files/icon Real-time information.svg"
+              src="/images/icon Real-time information.svg"
               alt="Flawless UI with Real-time information"
               width={80}
               height={80}
@@ -151,7 +151,7 @@ export default function Page() {
           {/* Expense Claim Modern */}
           <Card className="border-none shadow-md flex flex-col items-center p-6 animate-fadeInUp">
             <img
-              src="/api/fb/n/files/icon Real-time information.svg"
+              src="/images/icon Real-time information.svg"
               alt="Flawless UI with Real-time information"
               width={80}
               height={80}
@@ -180,7 +180,7 @@ export default function Page() {
           {/* Payroll Modern */}
           <Card className="border-none shadow-md flex flex-col items-center p-6 animate-fadeInUp">
             <img
-              src="/api/fb/n/files/icon Improved Collaboration.svg"
+              src="/images/icon Improved Collaboration.svg"
               alt="Improved Collaboration"
               width={80}
               height={80}

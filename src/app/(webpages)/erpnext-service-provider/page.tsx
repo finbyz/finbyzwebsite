@@ -50,14 +50,14 @@ export default function Page() {
             features={[
               {
                 title: 'Modified Solutions',
-                image: 'api/fb/n/files/92.svg',
+                image: '/images/92.svg',
                 alt: 'Modified Solutions for ERPNext',
                 description: "We recognize that every business is different. For this reason, we tailor ERPNext solutions specifically for your company's objectives and workflows. We make sure ERPNext Partners perfectly suits your demands, whether they are manufacturing, retail, or something else entirely.",
                 bg: 'gray',
               },
               {
                 title: 'Expert Team',
-                image: 'api/fb/n/files/96.svg',
+                image: '/images/96.svg',
                 alt: 'Expert Team for ERPNext',
                 description: "We have the best ERPNext specialists on staff. Our professionals have years of expertise with ERP systems and have the in-depth technical knowledge and industry insights necessary to completely change the way your firm operates.",
                 bg: 'lightgray',
@@ -71,7 +71,7 @@ export default function Page() {
               },
               {
                 title: 'Cost-effective Implementations',
-                image: 'api/fb/n/files/405.svg',
+                image: '/images/405.svg',
                 alt: 'Cost-effective Implementations for ERPNext',
                 description: "We think that value should be provided. Our ERPNext solutions are reasonably priced in addition to being scalable and reliable. By doing this, you can be confident that you're getting the most out of your investment without sacrificing functionality or quality.",
                 bg: 'gray',
@@ -88,25 +88,25 @@ export default function Page() {
             services={[
               {
                 title: 'Advice & Strategy Planning',
-                image: 'api/fb/n/files/1099.svg',
+                image: '/images/1099.svg',
                 alt: 'Flawless UI with Real-time information',
                 description: 'For best results, match your corporate strategy with ERPNext.',
               },
               {
                 title: 'Customization and Development',
-                image: 'api/fb/n/files/blog-icon-speed-and-accuracy-by-automation.svg',
+                image: '/images/blog-icon-speed-and-accuracy-by-automation.svg',
                 alt: 'Higher Productivity',
                 description: 'Adapting ERPNext functionalities to your own business needs',
               },
               {
                 title: 'Integration Services',
-                image: 'api/fb/n/files/185.svg',
+                image: '/images/185.svg',
                 alt: 'Improved Collaboration',
                 description: 'Integrating ERPNext with other programs and systems in your company without any problems.',
               },
               {
                 title: 'Training & Support',
-                image: 'api/fb/n/files/go live.svg',
+                image: '/images/go live.svg',
                 alt: 'support & maintenance',
                 description: 'Providing in-depth instruction and assistance to guarantee that your staff is prepared to make the most of ERPNext.',
               },
@@ -125,25 +125,25 @@ export default function Page() {
             features={[
               {
                 title: 'Scalability for Growth',
-                image: 'api/fb/n/files/export.svg',
+                image: '/images/export.svg',
                 alt: 'Scalability for Growth for ERPNext',
                 description: "Our ERPNext solutions expand together with your company. ERPNext's adaptable architecture makes sure that your ERP system grows with your company, regardless of whether you're adding more employees, expanding into new markets, or extending your product lines.",
               },
               {
                 title: 'Better Process of Choice',
-                image: 'api/fb/n/files/426 (2).svg',
+                image: '/images/426 (2).svg',
                 alt: 'Better Process of Choice for ERPNext',
                 description: "ERPNext provides your team with instant access to data and analytics, enabling them to make well-informed decisions quickly. A unified view of your operations, finances, and customer interactions can be achieved by bidding bye to data walls.",
               },
               {
                 title: 'Efficiency of Operations',
-                image: 'api/fb/n/files/185.svg',
+                image: '/images/185.svg',
                 alt: 'Efficiency of Operations for ERPNext',
                 description: "ERPNext helps you automate repetitive processes, optimize company processes, and get away of errors. Our goal is to streamline your business processes so you can free up important resources and focus on strategic development projects.",
               },
               {
                 title: 'Compliance and Risk Management',
-                image: 'api/fb/n/files/235.svg',
+                image: '/images/235.svg',
                 alt: 'Compliance and Risk Management for ERPNext',
                 description: "With ERPNext's compliance tools, you can efficiently manage risks and stay ahead of regulatory changes. By reducing risks and building trust, our solutions assist in making sure that your company complies with standards and processes.",
               },

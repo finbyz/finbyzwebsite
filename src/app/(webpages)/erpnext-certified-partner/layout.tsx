@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/Frappe-Certified-parnter-Page Design-SVG.svg", width: 1200, height: 630, alt: "Certified ERPNext & Frappe Partner in Ahmedabad, Gujarat | Finbyz Tech" }],
+    images: [{ url: "/images/Frappe-Certified-parnter-Page Design-SVG.svg", width: 1200, height: 630, alt: "Certified ERPNext & Frappe Partner in Ahmedabad, Gujarat | Finbyz Tech" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Certified ERPNext & Frappe Partner in Ahmedabad, Gujarat | Finbyz Tech",
     description: "Finbyz Tech, a certified ERPNext and Frappe Partner in Ahmedabad, offers expert ERP implementation, customization, and support services tailored to your business needs.",
     creator: "@finbyz",
-    images: ["/files/Frappe-Certified-parnter-Page Design-SVG.svg"],
+    images: ["/images/Frappe-Certified-parnter-Page Design-SVG.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Certified ERPNext & Frappe Partner in Ahmedabad, Gujarat | Finbyz Tech",
   "url": "https://finbyz.tech/erpnext-certified-partner",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/Frappe-Certified-parnter-Page Design-SVG.svg",
+  "image": "/images/Frappe-Certified-parnter-Page Design-SVG.svg",
   "description": "Finbyz Tech, a certified ERPNext and Frappe Partner in Ahmedabad, offers expert ERP implementation, customization, and support services tailored to your business needs.",
   "priceRange": "INR",
   "address": {

@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/Frappe-Certified-Erpnext-Partner.svg", width: 1200, height: 630, alt: "ERPNext Service Provider | Cloud ERP Software Company" }],
+    images: [{ url: "/images/Frappe-Certified-Erpnext-Partner.svg", width: 1200, height: 630, alt: "ERPNext Service Provider | Cloud ERP Software Company" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ERPNext Service Provider | Cloud ERP Software Company",
     description: "Discover leading ERPNext service providers for seamless business management solutions. Expert customization, support, and integration services.",
     creator: "@finbyz",
-    images: ["/files/Frappe-Certified-Erpnext-Partner.svg"],
+    images: ["/images/Frappe-Certified-Erpnext-Partner.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "ERPNext Service Provider | Cloud ERP Software Company",
   "url": "https://finbyz.tech/erpnext-service-provider",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/Frappe-Certified-Erpnext-Partner.svg",
+  "image": "/images/Frappe-Certified-Erpnext-Partner.svg",
   "description": "Discover leading ERPNext service providers for seamless business management solutions. Expert customization, support, and integration services.",
   "priceRange": "INR",
   "address": {

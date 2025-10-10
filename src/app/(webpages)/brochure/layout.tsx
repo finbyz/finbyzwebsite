@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/brocure banner.svg", width: 1200, height: 630, alt: "Download Finbyz Tech Brochure | ERPNext Services, Custom ERP Solutions & More" }],
+    images: [{ url: "/images/brocure banner.svg", width: 1200, height: 630, alt: "Download Finbyz Tech Brochure | ERPNext Services, Custom ERP Solutions & More" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Download Finbyz Tech Brochure | ERPNext Services, Custom ERP Solutions & More",
     description: "Brochure",
     creator: "@finbyz",
-    images: ["/files/brocure banner.svg"],
+    images: ["/images/brocure banner.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Download Finbyz Tech Brochure | ERPNext Services, Custom ERP Solutions & More",
   "url": "https://finbyz.tech/brochure",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/brocure banner.svg",
+  "image": "/images/brocure banner.svg",
   "description": "Brochure",
   "priceRange": "INR",
   "address": {

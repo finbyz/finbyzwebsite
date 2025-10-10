@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/Hire-ERPNext-Implementor679475.svg", width: 1200, height: 630, alt: "ERPNext Service Provider in Dubai | UAE-based ERP Experts" }],
+    images: [{ url: "/images/Hire-ERPNext-Implementor679475.svg", width: 1200, height: 630, alt: "ERPNext Service Provider in Dubai | UAE-based ERP Experts" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ERPNext Service Provider in Dubai | UAE-based ERP Experts",
     description: "ERPNext Service Provider in UAE: ERPNext Partner offers bespoke ERP solutions in manufacturing, agro, chemical, healthcare & pharmaceutical sectors.",
     creator: "@finbyz",
-    images: ["/files/Hire-ERPNext-Implementor679475.svg"],
+    images: ["/images/Hire-ERPNext-Implementor679475.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "ERPNext Service Provider in Dubai | UAE-based ERP Experts",
   "url": "https://finbyz.tech/erpnext-services-in-uae",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/Hire-ERPNext-Implementor679475.svg",
+  "image": "/images/Hire-ERPNext-Implementor679475.svg",
   "description": "ERPNext Service Provider in UAE: ERPNext Partner offers bespoke ERP solutions in manufacturing, agro, chemical, healthcare & pharmaceutical sectors.",
   "priceRange": "INR",
   "address": {

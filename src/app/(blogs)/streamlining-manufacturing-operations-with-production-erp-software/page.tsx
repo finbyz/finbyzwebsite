@@ -45,7 +45,7 @@ export default function Page() {
             id="introduction"
             title="Introduction"
             image={{
-              src: '/api/fb/n/files/benefits-of-erp-for-manufacturing.svg',
+              src: '//files/benefits-of-erp-for-manufacturing.svg',
               alt: 'Streamlining Manufacturing Operations with Production ERP Software',
               title: 'Streamlining Manufacturing Operations with Production ERP Software',
               cover:true
@@ -71,7 +71,7 @@ export default function Page() {
                 id="end-to-end-insight"
                 title="End-to-End Insight"
                 image={{
-                  src: '/api/fb/n/files/Trading.svg',
+                  src: '//files/Trading.svg',
                   alt: 'End-to-End Insight',
                   title: 'End-to-End Insight',
                   width: 150,
@@ -91,7 +91,7 @@ export default function Page() {
                 id="effective-resource-management"
                 title="Effective Resource Management"
                 image={{
-                  src: '/api/fb/n/files/Logistic.svg',
+                  src: '//files/Logistic.svg',
                   alt: 'Effective Resource Management',
                   title: 'Effective Resource Management',
                   width: 150,
@@ -111,7 +111,7 @@ export default function Page() {
                 id="simplified-production-scheduling"
                 title="Simplified Production Scheduling"
                 image={{
-                  src: '/api/fb/n/files/51.svg',
+                  src: '//files/51.svg',
                   alt: 'Simplified Production Scheduling',
                   title: 'Simplified Production Scheduling',
                   width: 150,
@@ -131,7 +131,7 @@ export default function Page() {
                 id="quality-control-compliance"
                 title="Quality Control and Compliance"
                 image={{
-                  src: '/api/fb/n/files/quality%20assurance.svg',
+                  src: '//files/quality%20assurance.svg',
                   alt: 'Quality Control and Compliance',
                   title: 'Quality Control and Compliance',
                   width: 150,
@@ -151,7 +151,7 @@ export default function Page() {
                 id="data-driven-decision-making"
                 title="Data-Driven Decision Making"
                 image={{
-                  src: '/api/fb/n/files/142.svg',
+                  src: '//files/142.svg',
                   alt: 'Data-Driven Decision Making',
                   title: 'Data-Driven Decision Making',
                   width: 150,
@@ -171,7 +171,7 @@ export default function Page() {
                 id="enhanced-cooperation"
                 title="Enhanced Co-operation"
                 image={{
-                  src: '/api/fb/n/files/Contractual%20Obligations.svg',
+                  src: '//files/Contractual%20Obligations.svg',
                   alt: 'Enhanced Co-operation',
                   title: 'Enhanced Co-operation',
                   width: 150,
@@ -191,7 +191,7 @@ export default function Page() {
                 id="scalability-flexibility"
                 title="Scalability and Flexibility"
                 image={{
-                  src: '/api/fb/n/files/speed.svg',
+                  src: '//files/speed.svg',
                   alt: 'Scalability and Flexibility',
                   title: 'Scalability and Flexibility',
                   width: 150,

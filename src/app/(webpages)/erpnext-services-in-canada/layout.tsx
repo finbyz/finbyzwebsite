@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/Hire-ERPNext-Implementor679475.svg", width: 1200, height: 630, alt: "ERPNext Service providers in Canada | ERP Implementation" }],
+    images: [{ url: "/images/Hire-ERPNext-Implementor679475.svg", width: 1200, height: 630, alt: "ERPNext Service providers in Canada | ERP Implementation" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ERPNext Service providers in Canada | ERP Implementation",
     description: "ERPNext Partners in Canada: ERPNext Service Providers offers bespoke ERP solutions in manufacturing, agro, chemical, healthcare & pharmaceutical sectors.",
     creator: "@finbyz",
-    images: ["/files/Hire-ERPNext-Implementor679475.svg"],
+    images: ["/images/Hire-ERPNext-Implementor679475.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "ERPNext Service providers in Canada | ERP Implementation",
   "url": "https://finbyz.tech/erpnext-services-in-canada",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/Hire-ERPNext-Implementor679475.svg",
+  "image": "/images/Hire-ERPNext-Implementor679475.svg",
   "description": "ERPNext Partners in Canada: ERPNext Service Providers offers bespoke ERP solutions in manufacturing, agro, chemical, healthcare & pharmaceutical sectors.",
   "priceRange": "INR",
   "address": {

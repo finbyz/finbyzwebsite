@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/banner-softwaredevelopment.svg", width: 1200, height: 630, alt: "Custom Software Development Company in Ahmedabad | FinByz Tech" }],
+    images: [{ url: "/images/banner-softwaredevelopment.svg", width: 1200, height: 630, alt: "Custom Software Development Company in Ahmedabad | FinByz Tech" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Custom Software Development Company in Ahmedabad | FinByz Tech",
     description: "Looking for a reliable software development company in Ahmedabad? FinByz Tech offers custom software solutions tailored to your business needs.",
     creator: "@finbyz",
-    images: ["/files/banner-softwaredevelopment.svg"],
+    images: ["/images/banner-softwaredevelopment.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Custom Software Development Company in Ahmedabad | FinByz Tech",
   "url": "https://finbyz.tech/software-development",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/banner-softwaredevelopment.svg",
+  "image": "/images/banner-softwaredevelopment.svg",
   "description": "Looking for a reliable software development company in Ahmedabad? FinByz Tech offers custom software solutions tailored to your business needs.",
   "priceRange": "INR",
   "address": {

@@ -33,7 +33,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'CRM Software',
-          src: 'api/fb/n/files/CRMWord.svg',
+          src: '/images/CRMWord.svg',
         }}
       />
 
@@ -70,7 +70,7 @@ export default function Page() {
       <Section>
         <div className="container-custom py-8 relative">
           <div className="absolute right-0 bottom-0 hidden sm:block opacity-30 pointer-events-none">
-            <img src="/files/three-hexagon.svg" alt="haxagon-image" width={120} height={120} />
+            <img src="/images/three-hexagon.svg" alt="haxagon-image" width={120} height={120} />
           </div>
           <h2 className="text-3xl font-bold text-center mb-4">Benefits that CRM software offers</h2>
           <p className="text-center mb-8">
@@ -117,37 +117,37 @@ export default function Page() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <FeatureCard
               title="Customer Management"
-              image="/api/fb/n/files/icon-customer-management.svg"
+              image="/images/icon-customer-management.svg"
               alt="Customer Management"
               description="Monitor and log all communication with customer contacts, including calls, emails, and meetings within the CRM system."
             />
             <FeatureCard
               title="Contact Management"
-              image="/api/fb/n/files/icon-contact-management.svg"
+              image="/images/icon-contact-management.svg"
               alt="Contact Management"
               description="Set reminders, schedule appointments, send bulk SMS/emails, and automate greetings for special occasions."
             />
             <FeatureCard
               title="Task Management"
-              image="/api/fb/n/files/icon-task-management.svg"
+              image="/images/icon-task-management.svg"
               alt="Task Management"
               description="Assign, manage, and track tasks effectively—complete with deadlines, notifications, and outcome tracking."
             />
             <FeatureCard
               title="Quotation Management"
-              image="/api/fb/n/files/icon-quotation-management.svg"
+              image="/images/icon-quotation-management.svg"
               alt="Quotation Management"
               description="Generate and manage quotes, convert them into invoices, and link them directly to relevant contacts or companies."
             />
             <FeatureCard
               title="Inquiry Management"
-              image="/api/fb/n/files/icon-inquiry-management.svg"
+              image="/images/icon-inquiry-management.svg"
               alt="Inquiry Management"
               description="Track the full lifecycle of inquiries, assign them in bulk, maintain communication records, and log customer requirements efficiently."
             />
             <FeatureCard
               title="Analytical Reports"
-              image="/api/fb/n/files/payroll.svg"
+              image="/images/payroll.svg"
               alt="Analytical Reports"
               description="Generate detailed reports including lead reports, call logs, appointment summaries, and inquiry status insights using the CRM software."
             />

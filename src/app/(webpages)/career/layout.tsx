@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/banner-career.svg", width: 1200, height: 630, alt: "Job Opening | Career Opportunity" }],
+    images: [{ url: "/images/banner-career.svg", width: 1200, height: 630, alt: "Job Opening | Career Opportunity" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Job Opening | Career Opportunity",
     description: "At FinByz, we believe the team builds company. Initiator or leader, Technical or Creative there is a space for each one.",
     creator: "@finbyz",
-    images: ["/files/banner-career.svg"],
+    images: ["/images/banner-career.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Job Opening | Career Opportunity",
   "url": "https://finbyz.tech/career",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/banner-career.svg",
+  "image": "/images/banner-career.svg",
   "description": "At FinByz, we believe the team builds company. Initiator or leader, Technical or Creative there is a space for each one.",
   "priceRange": "INR",
   "address": {

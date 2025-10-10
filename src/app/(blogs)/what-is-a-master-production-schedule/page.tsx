@@ -77,7 +77,7 @@ export default function Page() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
               <Card className="border-none shadow-md hover:shadow-lg transition-all duration-300 group">
                 <CardHeader className="flex flex-col items-center">
-                  <Image className="w-12 h-12 text-primary mb-2 group-hover:scale-110 transition-transform" src={"/files/Scalability%20.png"} width={100} height={100} alt='Scalability' />
+                  <Image className="w-12 h-12 text-primary mb-2 group-hover:scale-110 transition-transform" src={"/images/Scalability%20.png"} width={100} height={100} alt='Scalability' />
                   <CardTitle>Product identification</CardTitle>
                   <CardDescription>Unique ID &amp; specifications</CardDescription>
                 </CardHeader>
@@ -87,7 +87,7 @@ export default function Page() {
               </Card>
               <Card className="border-none shadow-md hover:shadow-lg transition-all duration-300 group">
                 <CardHeader className="flex flex-col items-center">
-                  <Image className="w-12 h-12 text-primary mb-2 group-hover:scale-110 transition-transform" src={"/files/Quantities%20%20.png"} width={100} height={100} alt='Quantities' />
+                  <Image className="w-12 h-12 text-primary mb-2 group-hover:scale-110 transition-transform" src={"/images/Quantities%20%20.png"} width={100} height={100} alt='Quantities' />
                   <CardTitle>Quantities</CardTitle>
                   <CardDescription>Exact production numbers</CardDescription>
                 </CardHeader>
@@ -97,7 +97,7 @@ export default function Page() {
               </Card>
               <Card className="border-none shadow-md hover:shadow-lg transition-all duration-300 group">
                 <CardHeader className="flex flex-col items-center">
-                  <Image className="w-12 h-12 text-primary mb-2 group-hover:scale-110 transition-transform" src={"/files/Streamlined%20Operations.png"} width={100} height={100} alt='Timing' />
+                  <Image className="w-12 h-12 text-primary mb-2 group-hover:scale-110 transition-transform" src={"/images/Streamlined%20Operations.png"} width={100} height={100} alt='Timing' />
                   <CardTitle>Timing</CardTitle>
                   <CardDescription>Start &amp; completion dates</CardDescription>
                 </CardHeader>
@@ -107,7 +107,7 @@ export default function Page() {
               </Card>
               <Card className="border-none shadow-md hover:shadow-lg transition-all duration-300 group">
                 <CardHeader className="flex flex-col items-center">
-                  <Image className="w-12 h-12 text-primary mb-2 group-hover:scale-110 transition-transform" src={"/files/Resources%20%20.png"} width={100} height={100} alt='Resources' />
+                  <Image className="w-12 h-12 text-primary mb-2 group-hover:scale-110 transition-transform" src={"/images/Resources%20%20.png"} width={100} height={100} alt='Resources' />
 
                   <CardTitle>Resources</CardTitle>
                   <CardDescription>Labor, equipment, materials</CardDescription>
@@ -127,7 +127,7 @@ export default function Page() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
               <Card className="border-none shadow-md hover:shadow-lg transition-all duration-300 group">
                 <CardHeader className="flex flex-col items-center">
-                  <Image className="w-12 h-12 text-primary mb-2 group-hover:scale-110 transition-transform" src={"/files/Demand%20Forecasting%20.png"} width={100} height={100} alt='Demand Forecasting' />
+                  <Image className="w-12 h-12 text-primary mb-2 group-hover:scale-110 transition-transform" src={"/images/Demand%20Forecasting%20.png"} width={100} height={100} alt='Demand Forecasting' />
 
                   <CardTitle>Demand Forecasting</CardTitle>
                   <CardDescription>Anticipating customer needs</CardDescription>
@@ -138,7 +138,7 @@ export default function Page() {
               </Card>
               <Card className="border-none shadow-md hover:shadow-lg transition-all duration-300 group">
                 <CardHeader className="flex flex-col items-center">
-                  <Image src={"/files/Resource%20Limitations%20.png"} className="w-12 h-12 text-primary mb-2 group-hover:scale-110 transition-transform" width={100} height={100} alt='Resource Limitations' />
+                  <Image src={"/images/Resource%20Limitations%20.png"} className="w-12 h-12 text-primary mb-2 group-hover:scale-110 transition-transform" width={100} height={100} alt='Resource Limitations' />
                   <CardTitle>Resource Limitations</CardTitle>
                   <CardDescription>Material, manpower, machine</CardDescription>
                 </CardHeader>
@@ -148,7 +148,7 @@ export default function Page() {
               </Card>
               <Card className="border-none shadow-md hover:shadow-lg transition-all duration-300 group">
                 <CardHeader className="flex flex-col items-center">
-                  <Image src={"/files/Data%20integrity%20%20.png"} className="w-12 h-12 text-primary mb-2 group-hover:scale-110 transition-transform" width={100} height={100} alt='Data integrity' />
+                  <Image src={"/images/Data%20integrity%20%20.png"} className="w-12 h-12 text-primary mb-2 group-hover:scale-110 transition-transform" width={100} height={100} alt='Data integrity' />
                   <CardTitle>Data integrity</CardTitle>
                   <CardDescription>Accurate &amp; timely data</CardDescription>
                 </CardHeader>
@@ -167,7 +167,7 @@ export default function Page() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
               <Card className="border-none shadow-md hover:shadow-lg transition-all duration-300 group">
                 <CardHeader className="flex flex-col items-center">
-                  <Image src={"/files/Process%20Optimisation.png"} className="w-12 h-12 text-primary mb-2 group-hover:scale-110 transition-transform" width={100} height={100} alt='Enhanced Forecast Accuracy' />
+                  <Image src={"/images/Process%20Optimisation.png"} className="w-12 h-12 text-primary mb-2 group-hover:scale-110 transition-transform" width={100} height={100} alt='Enhanced Forecast Accuracy' />
                   <CardTitle>Enhanced Forecast Accuracy</CardTitle>
                   <CardDescription>Aligning production with demand</CardDescription>
                 </CardHeader>
@@ -177,7 +177,7 @@ export default function Page() {
               </Card>
               <Card className="border-none shadow-md hover:shadow-lg transition-all duration-300 group">
                 <CardHeader className="flex flex-col items-center">
-                  <Image src={"/files/170%20(1).svg"} className="w-12 h-12 text-primary mb-2 group-hover:scale-110 transition-transform" width={100} height={100} alt='Effective Resource Allocation' />
+                  <Image src={"/images/170%20(1).svg"} className="w-12 h-12 text-primary mb-2 group-hover:scale-110 transition-transform" width={100} height={100} alt='Effective Resource Allocation' />
                   <CardTitle>Effective Resource Allocation</CardTitle>
                   <CardDescription>Optimizing labor &amp; materials</CardDescription>
                 </CardHeader>
@@ -187,7 +187,7 @@ export default function Page() {
               </Card>
               <Card className="border-none shadow-md hover:shadow-lg transition-all duration-300 group">
                 <CardHeader className="flex flex-col items-center">
-                  <Image src={"/files/Enhanced%20Communication.png"} className="w-12 h-12 text-primary mb-2 group-hover:scale-110 transition-transform" width={100} height={100} alt='Enhanced Communication' />
+                  <Image src={"/images/Enhanced%20Communication.png"} className="w-12 h-12 text-primary mb-2 group-hover:scale-110 transition-transform" width={100} height={100} alt='Enhanced Communication' />
                   
                   <CardTitle>Enhanced Communication</CardTitle>
                   <CardDescription>Centralized planning data</CardDescription>
@@ -198,7 +198,7 @@ export default function Page() {
               </Card>
               <Card className="border-none shadow-md hover:shadow-lg transition-all duration-300 group">
                 <CardHeader className="flex flex-col items-center">
-                  <Image src={"/files/Enhanced%20Flexibility%20.png"} className="w-12 h-12 text-primary mb-2 group-hover:scale-110 transition-transform" width={100} height={100} alt='Enhanced Flexibility' />
+                  <Image src={"/images/Enhanced%20Flexibility%20.png"} className="w-12 h-12 text-primary mb-2 group-hover:scale-110 transition-transform" width={100} height={100} alt='Enhanced Flexibility' />
                   <CardTitle>Enhanced Flexibility</CardTitle>
                   <CardDescription>Adaptive to changes</CardDescription>
                 </CardHeader>

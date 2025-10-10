@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/Final banner LAF.jpg", width: 1200, height: 630, alt: "Life at Finbyz | Work Culture, Innovation & Career Growth" }],
+    images: [{ url: "/images/Final banner LAF.jpg", width: 1200, height: 630, alt: "Life at Finbyz | Work Culture, Innovation & Career Growth" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Life at Finbyz | Work Culture, Innovation & Career Growth",
     description: "Discover life at Finbyz Tech – where innovation meets growth. Explore our vibrant work culture, values, and commitment to learning, collaboration, and work-life balance. Join a team that empowers creativity and professional development.",
     creator: "@finbyz",
-    images: ["/files/Final banner LAF.jpg"],
+    images: ["/images/Final banner LAF.jpg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Life at Finbyz | Work Culture, Innovation & Career Growth",
   "url": "https://finbyz.tech/life-at-finbyz",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/Final banner LAF.jpg",
+  "image": "/images/Final banner LAF.jpg",
   "description": "Discover life at Finbyz Tech – where innovation meets growth. Explore our vibrant work culture, values, and commitment to learning, collaboration, and work-life balance. Join a team that empowers creativity and professional development.",
   "priceRange": "INR",
   "address": {

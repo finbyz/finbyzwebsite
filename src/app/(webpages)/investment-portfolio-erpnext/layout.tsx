@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/portfolio management (1).svg", width: 1200, height: 630, alt: "ERPNext Investment Portfolio Management | Finbyz Tech Solutions" }],
+    images: [{ url: "/images/portfolio management (1).svg", width: 1200, height: 630, alt: "ERPNext Investment Portfolio Management | Finbyz Tech Solutions" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ERPNext Investment Portfolio Management | Finbyz Tech Solutions",
     description: "Discover how ERPNext\'s investment portfolio management features enable efficient tracking and optimization of your financial assets. Learn more today!",
     creator: "@finbyz",
-    images: ["/files/portfolio management (1).svg"],
+    images: ["/images/portfolio management (1).svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "ERPNext Investment Portfolio Management | Finbyz Tech Solutions",
   "url": "https://finbyz.tech/investment-portfolio-erpnext",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/portfolio management (1).svg",
+  "image": "/images/portfolio management (1).svg",
   "description": "Discover how ERPNext\'s investment portfolio management features enable efficient tracking and optimization of your financial assets. Learn more today!",
   "priceRange": "INR",
   "address": {

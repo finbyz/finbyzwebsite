@@ -48,7 +48,7 @@ export default function Page() {
             id="introduction"
             title="Introduction"
             image={{
-              src: '/api/fb/n/files/16-04-24.svg',
+              src: '//files/16-04-24.svg',
               alt: 'the-best-erp-software-for-small-businesses-in-manufacturing-in-2024',
               title: 'the-best-erp-software-for-small-businesses-in-manufacturing-in-2024',
               cover:true
@@ -122,7 +122,7 @@ export default function Page() {
               id="erpnext"
               title="1. ERPNext"
               image={{
-                src: '/api/fb/n/files/ERPNext-logo1.png',
+                src: '//files/ERPNext-logo1.png',
                 alt: 'ERPNext',
                 title: 'ERPNext',
                 width: 180,
@@ -140,7 +140,7 @@ export default function Page() {
               id="odoo"
               title="2. Odoo"
               image={{
-                src: '/api/fb/n/files/Odoo_logo_rgb.svg.png',
+                src: '//files/Odoo_logo_rgb.svg.png',
                 alt: 'Odoo',
                 title: 'Odoo',
                 width: 180,
@@ -255,7 +255,7 @@ export default function Page() {
               id="cost-savings"
               title="Cost Savings"
               image={{
-                src: '/api/fb/n/files/Savings on Costs.png',
+                src: '//files/Savings on Costs.png',
                 alt: 'Cost Savings',
                 title: 'Cost Savings',
                 width: 150,
@@ -291,7 +291,7 @@ export default function Page() {
               id="compliance-risk-management"
               title="Compliance and Risk Management"
               image={{
-                src: '/api/fb/n/files/Improved Risk Management and Compliance.png',
+                src: '//files/Improved Risk Management and Compliance.png',
                 alt: 'Compliance and Risk Management',
                 title: 'Compliance and Risk Management',
                 width: 150,

@@ -31,8 +31,8 @@ export default function Page() {
         secondaryButton={{ text: 'Learn More', action: handleLearnMore }}
         heroImage={{
           alt: 'ERPNext for Commodity',
-          src: 'api/fb/n/files/Web Portal Development.svg',
-          videoSrc: 'api/fb/n/files/Agro_Slide_for_Site.mp4',
+          src: '/images/Web Portal Development.svg',
+          videoSrc: '/images/Agro_Slide_for_Site.mp4',
         }}
       />
 
@@ -96,7 +96,7 @@ export default function Page() {
         <div className="container-custom py-8 relative">
           <div className="absolute right-0 bottom-0 hidden sm:block opacity-70 pointer-events-none">
             <img
-              src="/files/three-hexagon.svg"
+              src="/images/three-hexagon.svg"
               alt="hexagon background"
               width={120}
               height={120}

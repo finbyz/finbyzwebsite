@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/banner-consulting.svg", width: 1200, height: 630, alt: "IT Consulting Services in Ahmedabad, Gujarat - India" }],
+    images: [{ url: "/images/banner-consulting.svg", width: 1200, height: 630, alt: "IT Consulting Services in Ahmedabad, Gujarat - India" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "IT Consulting Services in Ahmedabad, Gujarat - India",
     description: "Elevate your business goals with our IT Consulting Services in Ahmedabad. Expert support, unbiased advice, and innovative solutions for optimal IT investment. ",
     creator: "@finbyz",
-    images: ["/files/banner-consulting.svg"],
+    images: ["/images/banner-consulting.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "IT Consulting Services in Ahmedabad, Gujarat - India",
   "url": "https://finbyz.tech/it-consulting",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/banner-consulting.svg",
+  "image": "/images/banner-consulting.svg",
   "description": "Elevate your business goals with our IT Consulting Services in Ahmedabad. Expert support, unbiased advice, and innovative solutions for optimal IT investment. ",
   "priceRange": "INR",
   "address": {

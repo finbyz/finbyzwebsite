@@ -25,7 +25,7 @@ const heroProps = {
   publishDate: '2024-04-10',
   readTime: '7 min read',
   image: {
-    src: "/api/fb/n/files/coa.PNG",
+    src: "//files/coa.PNG",
     alt: "Certificate of Analysis (CoA) Illustration",
     title: "certificate-of-analysis-in-2024-definition-key-requirements",
     width: 500,
@@ -56,7 +56,7 @@ export default function Page() {
           id="what-is-coa"
           title="Certificate of Analysis (CoA): What It Is and Why It Matters"
           image={{
-            src:"/files/coa.PNG",
+            src:"/images/coa.PNG",
             alt:"Certificate of Analysis (CoA): What It Is and Why It Matters",
             cover:true
           }}
@@ -209,7 +209,7 @@ export default function Page() {
               id="step-2"
               title="2. Define Product Specifications"
               image={{
-                src: "/files/Create the Product's Specifications.png",
+                src: "/images/Create the Product's Specifications.png",
                 alt: 'Create the Product Specifications',
                 title: "Create-the-Product's-Specifications",
                 width: 150,
@@ -266,7 +266,7 @@ export default function Page() {
               id="step-5"
               title="5. Collect Essential Documentation"
               image={{
-                src: "/files/Collect the Information That's Needed.png",
+                src: "/images/Collect the Information That's Needed.png",
                 alt: "Collect the Information That's Needed",
                 title: "Collect-the-Information-That's-Needed",
                 width: 150,

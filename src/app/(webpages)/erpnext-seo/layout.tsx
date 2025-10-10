@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/seo.png", width: 1200, height: 630, alt: "Boost Your Business with ERPNext Website SEO Services" }],
+    images: [{ url: "/images/seo.png", width: 1200, height: 630, alt: "Boost Your Business with ERPNext Website SEO Services" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Boost Your Business with ERPNext Website SEO Services",
     description: "Optimize your ERPNext platform with SEO to Increase visibility, attract more visitors, and drive growth. Start enhancing your online presence today!",
     creator: "@finbyz",
-    images: ["/files/seo.png"],
+    images: ["/images/seo.png"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Boost Your Business with ERPNext Website SEO Services",
   "url": "https://finbyz.tech/erpnext-seo",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/seo.png",
+  "image": "/images/seo.png",
   "description": "Optimize your ERPNext platform with SEO to Increase visibility, attract more visitors, and drive growth. Start enhancing your online presence today!",
   "priceRange": "INR",
   "address": {

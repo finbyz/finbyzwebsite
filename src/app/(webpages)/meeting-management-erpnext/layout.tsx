@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/Meeting-Management-PageDesign-SVG.avif", width: 1200, height: 630, alt: "ERPNext Meeting Management" }],
+    images: [{ url: "/images/Meeting-Management-PageDesign-SVG.avif", width: 1200, height: 630, alt: "ERPNext Meeting Management" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ERPNext Meeting Management",
     description: "Optimize your meeting processes with ERPNext\'s Meeting Management App. Schedule meetings, record summaries, and track action items seamlessly within your CRM.",
     creator: "@finbyz",
-    images: ["/files/Meeting-Management-PageDesign-SVG.avif"],
+    images: ["/images/Meeting-Management-PageDesign-SVG.avif"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "ERPNext Meeting Management",
   "url": "https://finbyz.tech/meeting-management-erpnext",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/Meeting-Management-PageDesign-SVG.avif",
+  "image": "/images/Meeting-Management-PageDesign-SVG.avif",
   "description": "Optimize your meeting processes with ERPNext\'s Meeting Management App. Schedule meetings, record summaries, and track action items seamlessly within your CRM.",
   "priceRange": "INR",
   "address": {

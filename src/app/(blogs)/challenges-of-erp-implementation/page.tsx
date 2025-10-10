@@ -67,7 +67,7 @@ export default function Page() {
             id="introduction"
             title="Introduction"
           image={{
-            src: '/api/fb/n/files/challenges.svg',
+            src: '//files/challenges.svg',
             alt: 'Challenges of ERP implementation',
             title: 'Challenges of ERP implementation',
             cover:true,

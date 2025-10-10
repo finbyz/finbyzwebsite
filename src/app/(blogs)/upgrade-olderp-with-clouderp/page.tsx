@@ -42,7 +42,7 @@ export default function Page() {
             id="introduction"
             title="Upgrade old ERP with cloud ERP"
             image={{
-              src: '/api/fb/n/files/Cloud-ERP.svg',
+              src: '//files/Cloud-ERP.svg',
               alt: 'ERP with Cloud',
               title: 'Upgrade old ERP with cloud ERP',
               width: 400,
@@ -68,7 +68,7 @@ export default function Page() {
             id="flexibility"
             title="Flexibility"
             image={{
-              src: '/api/fb/n/files/blog-flexlibility.svg',
+              src: '//files/blog-flexlibility.svg',
               alt: 'ERP Flexible',
               title: 'Flexibility',
               width: 300,
@@ -90,7 +90,7 @@ export default function Page() {
             id="functionality"
             title="Functionality"
             image={{
-              src: '/api/fb/n/files/blog-functionality.svg',
+              src: '//files/blog-functionality.svg',
               alt: 'ERP Multitasking',
               title: 'Functionality',
               width: 300,
@@ -115,7 +115,7 @@ export default function Page() {
             id="cost"
             title="Cost"
             image={{
-              src: '/api/fb/n/files/blog-cost-cutting.svg',
+              src: '//files/blog-cost-cutting.svg',
               alt: 'ERP Cost Cutting',
               title: 'Cost Cutting',
               width: 300,

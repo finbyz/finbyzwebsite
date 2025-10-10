@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Users, Code, Clock } from 'lucide-react';
+import Image from 'next/image';
 
 type ColorKey = 'orange' | 'blue' | 'green';
 
@@ -35,7 +36,7 @@ interface HeroSectionProps {
   accentColor?: ColorKey;
 }
 
-const HeroSection: React.FC<HeroSectionProps> = ({ 
+const HeroSection: React.FC<HeroSectionProps> = ({
   headline = "Empowering Businesses with ERPNext Solutions Worldwide",
   highlightWords = ["ERPNext Solutions"],
   description = "From implementation to custom development, we provide comprehensive ERPNext services that transform businesses across 25+ countries with 500+ successful deployments.",
@@ -109,7 +110,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     return highlightedText.split('|||').map((part: string, index: number) => {
       if (part === 'HIGHLIGHT_START') return null;
       if (part === 'HIGHLIGHT_END') return null;
-      
+
       const prevPart = highlightedText.split('|||')[index - 1];
       if (prevPart === 'HIGHLIGHT_START') {
         return <span key={index} className={colors.text}>{part}</span>;
@@ -138,15 +139,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <button 
+              <button
                 onClick={primaryButton.action}
                 className={`group ${colors.bg} ${colors.bgHover} text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 transform hover:scale-105`}
               >
                 <span>{primaryButton.text}</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              
-              <button 
+
+              <button
                 onClick={secondaryButton.action}
                 className={`group border-2 border-slate-600 hover:${colors.border} text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 hover:bg-slate-800`}
               >
@@ -170,15 +171,18 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                   preload="metadata"
                 />
               ) : (
-                <img 
-                  src={heroImage.poster || heroImage.src} 
-                  alt={heroImage.alt}
-                  className="w-[90%] max-w-[480px] h-auto max-h-[360px] rounded-2xl object-contain mx-auto"
+                <Image
+                  src={heroImage.poster || heroImage.src || ""}
+                  alt={heroImage.alt || "Hero image"}
+                  width={480}
+                  height={360}
+                  className="w-[90%] max-w-[480px] h-auto rounded-2xl object-contain mx-auto"
                   loading="lazy"
+                  priority={false}
                 />
               )}
               {/* "w-full h-auto max-h-[520px] rounded-2xl object-contain" */}
-              
+
               {/* Decorative floating elements */}
               <div className={`absolute -top-4 -right-4 w-8 h-8 ${colors.bg} rounded-full opacity-80 animate-pulse`}></div>
               <div className="absolute -bottom-6 -left-6 w-6 h-6 bg-blue-500 rounded-full opacity-60 animate-bounce"></div>

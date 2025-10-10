@@ -77,7 +77,7 @@ export default function Page() {
               {/* Analyze your need */}
               <div className="flex flex-col items-center bg-background rounded-xl shadow-sm p-6 transition-transform hover:scale-[1.03]">
                 <Image
-                  src="/files/blog-icon-analyze-your-need.svg"
+                  src="/images/blog-icon-analyze-your-need.svg"
                   alt="Analyze your need"
                   title="Analyze your need"
                   width={64}
@@ -92,7 +92,7 @@ export default function Page() {
               {/* Understanding the Budget */}
               <div className="flex flex-col items-center bg-background rounded-xl shadow-sm p-6 transition-transform hover:scale-[1.03]">
                 <Image
-                  src="/files/blog-icon-budget.svg"
+                  src="/images/blog-icon-budget.svg"
                   alt="Understanding the Budget"
                   title="Understanding the Budget"
                   width={64}
@@ -107,7 +107,7 @@ export default function Page() {
               {/* Customization */}
               <div className="flex flex-col items-center bg-background rounded-xl shadow-sm p-6 transition-transform hover:scale-[1.03]">
                 <Image
-                  src="/files/design.svg"
+                  src="/images/design.svg"
                   alt="Customization"
                   title="Customization"
                   width={64}
@@ -122,7 +122,7 @@ export default function Page() {
               {/* ERP vendors */}
               <div className="flex flex-col items-center bg-background rounded-xl shadow-sm p-6 transition-transform hover:scale-[1.03]">
                 <Image
-                  src="/files/blog-icon-erp-vendors.svg"
+                  src="/images/blog-icon-erp-vendors.svg"
                   alt="ERP vendors"
                   title="ERP vendors"
                   width={64}
@@ -137,7 +137,7 @@ export default function Page() {
               {/* Analyze the benefits */}
               <div className="flex flex-col items-center bg-background rounded-xl shadow-sm p-6 transition-transform hover:scale-[1.03]">
                 <Image
-                  src="/files/blog-icon-analyze-the-benefits.svg"
+                  src="/images/blog-icon-analyze-the-benefits.svg"
                   alt="Analyze the benefits"
                   title="Analyze the benefits"
                   width={64}
@@ -152,7 +152,7 @@ export default function Page() {
               {/* Company Goals & Vision */}
               <div className="flex flex-col items-center bg-background rounded-xl shadow-sm p-6 transition-transform hover:scale-[1.03]">
                 <Image
-                  src="/files/icon-tl-start.svg"
+                  src="/images/icon-tl-start.svg"
                   alt="Company Goals & Vision"
                   title="Company Goals & Vision"
                   width={64}

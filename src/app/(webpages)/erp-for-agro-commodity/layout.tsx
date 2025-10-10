@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/Web Portal Development.svg", width: 1200, height: 630, alt: "ERPNext for Agriculture | Streamline Agro Commodity Management with Finbyz Tech" }],
+    images: [{ url: "/images/Web Portal Development.svg", width: 1200, height: 630, alt: "ERPNext for Agriculture | Streamline Agro Commodity Management with Finbyz Tech" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ERPNext for Agriculture | Streamline Agro Commodity Management with Finbyz Tech",
     description: "Discover how Finbyz Tech\'s ERPNext solutions revolutionize agricultural operations. Enhance efficiency, ensure compliance, and drive growth in your agro commodity business.",
     creator: "@finbyz",
-    images: ["/files/Web Portal Development.svg"],
+    images: ["/images/Web Portal Development.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "ERPNext for Agriculture | Streamline Agro Commodity Management with Finbyz Tech",
   "url": "https://finbyz.tech/erp-for-agro-commodity",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/Web Portal Development.svg",
+  "image": "/images/Web Portal Development.svg",
   "description": "Discover how Finbyz Tech\'s ERPNext solutions revolutionize agricultural operations. Enhance efficiency, ensure compliance, and drive growth in your agro commodity business.",
   "priceRange": "INR",
   "address": {

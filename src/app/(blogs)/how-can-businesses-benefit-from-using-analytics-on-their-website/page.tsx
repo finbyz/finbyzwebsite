@@ -42,7 +42,7 @@ export default function Page() {
           id="introduction"
           title="Introduction"
           image={{
-            src:"/files/blog.svg",
+            src:"/images/blog.svg",
             alt:"How can businesses benefit from using website analytics",
             cover:true
           }}

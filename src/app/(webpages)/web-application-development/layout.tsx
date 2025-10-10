@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/web-app-development.svg", width: 1200, height: 630, alt: "Web Application Development Company in Ahmedabad, India" }],
+    images: [{ url: "/images/web-app-development.svg", width: 1200, height: 630, alt: "Web Application Development Company in Ahmedabad, India" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Web Application Development Company in Ahmedabad, India",
     description: "Access premier web app development from our top web application development company. We\'re leaders in expert solutions among web development companies.",
     creator: "@finbyz",
-    images: ["/files/web-app-development.svg"],
+    images: ["/images/web-app-development.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Web Application Development Company in Ahmedabad, India",
   "url": "https://finbyz.tech/web-application-development",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/web-app-development.svg",
+  "image": "/images/web-app-development.svg",
   "description": "Access premier web app development from our top web application development company. We\'re leaders in expert solutions among web development companies.",
   "priceRange": "INR",
   "address": {

@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/Frappe-Certified-Erpnext-Partner.svg", width: 1200, height: 630, alt: " ERPNext Partners in Saudi Arabia | ERP Implementation" }],
+    images: [{ url: "/images/Frappe-Certified-Erpnext-Partner.svg", width: 1200, height: 630, alt: " ERPNext Partners in Saudi Arabia | ERP Implementation" }],
   },
   twitter: {
     card: "summary_large_image",
     title: " ERPNext Partners in Saudi Arabia | ERP Implementation",
     description: "Discover leading ERPNext service providers and ERPNext Partners in Saudi Arabia. Trusted solutions tailored to optimize your business operations.",
     creator: "@finbyz",
-    images: ["/files/Frappe-Certified-Erpnext-Partner.svg"],
+    images: ["/images/Frappe-Certified-Erpnext-Partner.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": " ERPNext Partners in Saudi Arabia | ERP Implementation",
   "url": "https://finbyz.tech/erpnext-partner-in-saudi-arabia",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/Frappe-Certified-Erpnext-Partner.svg",
+  "image": "/images/Frappe-Certified-Erpnext-Partner.svg",
   "description": "Discover leading ERPNext service providers and ERPNext Partners in Saudi Arabia. Trusted solutions tailored to optimize your business operations.",
   "priceRange": "INR",
   "address": {

@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/Productify image (1).svg", width: 1200, height: 630, alt: "Productify: Advanced Employee Productivity Tracker & Sales Monitoring Software" }],
+    images: [{ url: "/images/Productify image (1).svg", width: 1200, height: 630, alt: "Productify: Advanced Employee Productivity Tracker & Sales Monitoring Software" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Productify: Advanced Employee Productivity Tracker & Sales Monitoring Software",
     description: "Boost your team\'s efficiency with Productify, the leading employee productivity tracker and sales person monitoring software. Gain insights, enhance accountability, and drive performance.",
     creator: "@finbyz",
-    images: ["/files/Productify image (1).svg"],
+    images: ["/images/Productify image (1).svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Productify: Advanced Employee Productivity Tracker & Sales Monitoring Software",
   "url": "https://finbyz.tech/productify",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/Productify image (1).svg",
+  "image": "/images/Productify image (1).svg",
   "description": "Boost your team\'s efficiency with Productify, the leading employee productivity tracker and sales person monitoring software. Gain insights, enhance accountability, and drive performance.",
   "priceRange": "INR",
   "address": {

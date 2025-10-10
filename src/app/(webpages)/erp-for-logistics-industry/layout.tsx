@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/Logistic90ec93.svg", width: 1200, height: 630, alt: "Logistics ERP System | ERP Software for Logistics Industry | Finbyz Tech" }],
+    images: [{ url: "/images/Logistic90ec93.svg", width: 1200, height: 630, alt: "Logistics ERP System | ERP Software for Logistics Industry | Finbyz Tech" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Logistics ERP System | ERP Software for Logistics Industry | Finbyz Tech",
     description: "Discover how Finbyz Tech\'s ERP solutions streamline logistics operations, enhance efficiency, and provide real-time analytics for the logistics industry.",
     creator: "@finbyz",
-    images: ["/files/Logistic90ec93.svg"],
+    images: ["/images/Logistic90ec93.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Logistics ERP System | ERP Software for Logistics Industry | Finbyz Tech",
   "url": "https://finbyz.tech/erp-for-logistics-industry",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/Logistic90ec93.svg",
+  "image": "/images/Logistic90ec93.svg",
   "description": "Discover how Finbyz Tech\'s ERP solutions streamline logistics operations, enhance efficiency, and provide real-time analytics for the logistics industry.",
   "priceRange": "INR",
   "address": {

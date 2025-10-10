@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/Advance-Authorization-License-PageDesign.svg", width: 1200, height: 630, alt: "Import Export Licence Management | Finbyz tech" }],
+    images: [{ url: "/images/Advance-Authorization-License-PageDesign.svg", width: 1200, height: 630, alt: "Import Export Licence Management | Finbyz tech" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Import Export Licence Management | Finbyz tech",
     description: "Optimize your import-export operations with ERPNext. Streamline Advanced Authorisation Licence management, ensure compliance, and enhance efficiency.\n\n",
     creator: "@finbyz",
-    images: ["/files/Advance-Authorization-License-PageDesign.svg"],
+    images: ["/images/Advance-Authorization-License-PageDesign.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Import Export Licence Management | Finbyz tech",
   "url": "https://finbyz.tech/advanced-authorisation-licence-erpnext",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/Advance-Authorization-License-PageDesign.svg",
+  "image": "/images/Advance-Authorization-License-PageDesign.svg",
   "description": "Optimize your import-export operations with ERPNext. Streamline Advanced Authorisation Licence management, ensure compliance, and enhance efficiency.\n\n",
   "priceRange": "INR",
   "address": {

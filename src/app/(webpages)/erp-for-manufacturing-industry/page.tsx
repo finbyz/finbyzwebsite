@@ -30,7 +30,7 @@ export default function Page() {
         secondaryButton={{ text: 'Request Demo', action: handleSecondary }}
         heroImage={{
           alt: 'ERPNext for Manufacturing',
-          src: 'api/fb/n/files/Manufacturingc334bc.svg',
+          src: '/images/Manufacturingc334bc.svg',
           videoSrc: '/api/fb/n/files/Manufacturing.mp4',
         }}
       />
@@ -42,7 +42,7 @@ export default function Page() {
           <div className="flex flex-col md:flex-row md:items-center md:gap-8">
             <div className="md:w-1/12 flex justify-center mb-4 md:mb-0">
               {/* <img
-                src="/api/fb/n/files/Quotation_marks.svg"
+                src="/images/Quotation_marks.svg"
                 alt="Quotation marks"
                 width={40}
                 height={40}

@@ -50,7 +50,7 @@ export default function Page() {
             id="why-invest"
             title="Firstly, why invest in a website for your small business?"
             image={{
-              src: '/api/fb/n/files/website-design-tips-for-a-small-business.svg',
+              src: '//files/website-design-tips-for-a-small-business.svg',
               alt: 'How ERP Improves Business Performance',
               title: 'How ERP Improves Business Performance',
               cover:true
@@ -94,7 +94,7 @@ export default function Page() {
             id="tip-1"
             title="1. Keep your website design simple yet elegant"
             image={{
-              src: '/api/fb/n/files/simple-yet-elegant.svg',
+              src: '//files/simple-yet-elegant.svg',
               alt: 'Simple yet elegant',
               title: 'Simple yet elegant',
               width: 200,
@@ -120,7 +120,7 @@ export default function Page() {
             id="tip-2"
             title="2. Make your business website contact-friendly"
             image={{
-              src: '/api/fb/n/files/provide-ways-to-reach-you.svg',
+              src: '//files/provide-ways-to-reach-you.svg',
               alt: 'Provides ways to reach you',
               title: 'Provides ways to reach you',
               width: 200,
@@ -140,7 +140,7 @@ export default function Page() {
             id="tip-3"
             title="3. Optimize your small business website for mobile"
             image={{
-              src: '/api/fb/n/files/dont-ignore-the-mobile-experience.svg.svg',
+              src: '//files/dont-ignore-the-mobile-experience.svg.svg',
               alt: 'Don’t ignore the mobile experience',
               title: 'Don’t ignore the mobile experience',
               width: 200,
@@ -166,7 +166,7 @@ export default function Page() {
             id="tip-4"
             title="4. Fast-loading website design leaves a strong impression"
             image={{
-              src: '/api/fb/n/files/speed-strikes-the-first-impression.svg',
+              src: '//files/speed-strikes-the-first-impression.svg',
               alt: 'Ensures customer satisfaction',
               title: 'Ensures customer satisfaction',
               width: 200,
@@ -192,7 +192,7 @@ export default function Page() {
             id="tip-5"
             title="5. Add a clear call-to-action (CTA)"
             image={{
-              src: '/api/fb/n/files/make-use-of-clear-call-to-action.svg',
+              src: '//files/make-use-of-clear-call-to-action.svg',
               alt: 'Make use of clear call to action',
               title: 'Make use of clear call to action',
               width: 200,

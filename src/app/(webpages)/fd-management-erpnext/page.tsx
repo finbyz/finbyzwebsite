@@ -30,7 +30,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'FD Management In ERPNext',
-          src: 'api/fb/n/files/FD-Management-PageDesign.svg',
+          src: '/images/FD-Management-PageDesign.svg',
           
         }}
       />
@@ -48,7 +48,7 @@ export default function Page() {
           </div>
           <div className="flex-1 flex justify-center">
             <img
-              src="/api/fb/n/files/FD-Management-PageDesign.svg"
+              src="/images/FD-Management-PageDesign.svg"
               alt="FD Management In ERPNext"
               width={420}
               height={320}

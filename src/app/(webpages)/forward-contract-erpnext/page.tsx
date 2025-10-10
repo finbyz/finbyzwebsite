@@ -31,7 +31,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'Forward Contract Management in ERPNext',
-          src: 'api/fb/n/files/Forward-Contract-PageDesign.svg',
+          src: '/images/Forward-Contract-PageDesign.svg',
           
         }}
       />
@@ -105,7 +105,7 @@ export default function Page() {
             ]}
           />
           <ForwardContractGifImage
-            src="/api/fb/n/files/fwd-cnt-14-to-23.gif"
+            src="/images/fwd-cnt-14-to-23.gif"
             alt="How to create Forward Contracts"
           />
         </div>
@@ -137,7 +137,7 @@ export default function Page() {
             style={{ marginTop: 0 }}
           />
           <ForwardContractGifImage
-            src="/api/fb/n/files/fwd-cnt-42-to-52.gif"
+            src="/images/fwd-cnt-42-to-52.gif"
             alt="How to utilize Forward Contracts"
           />
         </div>
@@ -163,7 +163,7 @@ export default function Page() {
             style={{ marginTop: 0 }}
           />
           <ForwardContractGifImage
-            src="/api/fb/n/files/fwd-cnt-1.21-to-1.32.gif"
+            src="/images/fwd-cnt-1.21-to-1.32.gif"
             alt="How to Cancel Forward Contracts"
           />
         </div>

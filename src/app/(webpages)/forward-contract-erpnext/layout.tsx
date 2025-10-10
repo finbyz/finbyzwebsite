@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/Forward-Contract-PageDesign.svg", width: 1200, height: 630, alt: "Forward Contract Management in ERPNext | Currency Hedging & Accounting Guide" }],
+    images: [{ url: "/images/Forward-Contract-PageDesign.svg", width: 1200, height: 630, alt: "Forward Contract Management in ERPNext | Currency Hedging & Accounting Guide" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Forward Contract Management in ERPNext | Currency Hedging & Accounting Guide",
     description: "Learn how to manage forward contracts in ERPNext effectively. Our guide covers setup, utilization, cancellation, and accounting integration for currency hedging.",
     creator: "@finbyz",
-    images: ["/files/Forward-Contract-PageDesign.svg"],
+    images: ["/images/Forward-Contract-PageDesign.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Forward Contract Management in ERPNext | Currency Hedging & Accounting Guide",
   "url": "https://finbyz.tech/forward-contract-erpnext",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/Forward-Contract-PageDesign.svg",
+  "image": "/images/Forward-Contract-PageDesign.svg",
   "description": "Learn how to manage forward contracts in ERPNext effectively. Our guide covers setup, utilization, cancellation, and accounting integration for currency hedging.",
   "priceRange": "INR",
   "address": {

@@ -77,7 +77,7 @@ export default function Page() {
         secondaryButton={{ text: 'Learn More', action: handleLearnMore }}
         heroImage={{
           alt: 'Data Analytics',
-          src: 'api/fb/n/files/banner-analysis.svg',
+          src: '/images/banner-analysis.svg',
           
         }}
       />

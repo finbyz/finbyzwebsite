@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/banner-analysis.svg", width: 1200, height: 630, alt: "Data Analytics Company | Finbyz Tech" }],
+    images: [{ url: "/images/banner-analysis.svg", width: 1200, height: 630, alt: "Data Analytics Company | Finbyz Tech" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Data Analytics Company | Finbyz Tech",
     description: "Unlock business intelligence with Finbyz Tech’s data analytics solutions. We deliver CRM analytics, real-time dashboards, and predictive insights to drive growth.\n\n",
     creator: "@finbyz",
-    images: ["/files/banner-analysis.svg"],
+    images: ["/images/banner-analysis.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Data Analytics Company | Finbyz Tech",
   "url": "https://finbyz.tech/data-analytics",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/banner-analysis.svg",
+  "image": "/images/banner-analysis.svg",
   "description": "Unlock business intelligence with Finbyz Tech’s data analytics solutions. We deliver CRM analytics, real-time dashboards, and predictive insights to drive growth.\n\n",
   "priceRange": "INR",
   "address": {

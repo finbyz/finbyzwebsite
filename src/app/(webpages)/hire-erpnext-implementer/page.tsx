@@ -85,42 +85,42 @@ const whyUsFeatures = [
 const challengeCards = [
   {
     title: "User Adoption",
-    image: "/api/fb/n/files/dedicated%20developer.svg",
+    image: "/images/dedicated%20developer.svg",
     alt: "dedicated developer",
     description:
       "Businesses often struggle to get employees fully onboard with ERPNext. As a trusted ERPNext Implementation Partner we help ensure ERP adoption is smooth and effective. As a leading ERPNext Implementation Company in Gujarat, we provide continuous support and video-based training to empower users. Our ERPNext service includes easily accessible resources to help teams become confident users. At our company, we understand that implementing a new system can be challenging for some users. That's why we provide ongoing support and training to ensure that our users are comfortable and confident in using the system. Our video training resources are designed to be user-friendly and accessible, allowing users to learn at their own pace and on their own schedule."
   },
   {
     title: "Data Importing",
-    image: "/api/fb/n/files/Data%20Importing.svg",
+    image: "/images/Data%20Importing.svg",
     alt: "Data Importing",
     description:
       "Migrating master data from legacy systems to ERPNext can be complex. Our ERPNext service providers from Ahmedabad ensure a precise and loss-free data transition. Our ERPNext Implementation Company follows a systematic data migration process. Located in Gujarat, we map fields to ERPNext formats and use a maker-checker system to ensure 100% data accuracy. We take data migration seriously and follow a structured process to ensure accuracy and reliability. Our process involves mapping data fields to the ERPNext Data importing format, which ensures that the data is formatted correctly for the system. We also follow the maker checker concept, which means that data is reviewed and verified by multiple team members to ensure 100% accuracy before it is imported into the system. By adhering to this process, we can minimize errors and ensure a smooth and seamless transition to the new system."
   },
   {
     title: "Complex Integration",
-    image: "/api/fb/n/files/Complex%20Integration.svg",
+    image: "/images/Complex%20Integration.svg",
     alt: "Complex Integration",
     description:
       "Integrating ERPNext with existing software and hardware can be difficult. Our expert ERPNext Implementation Partner team in Ahmedabad tackles complex integrations with ease. As one of the experienced ERPNext service providers in Gujarat, we handle integrations with IoT, SCADA, and third-party systems using custom development, APIs, and webhooks for seamless functionality. Addressing technical complexity in ERPNext integration projects requires expertise and experience. At our company, we work with experienced developers who have a deep understanding of both ERPNext and the systems being integrated. They can develop custom code or utilize the flexible API and webhooks provided by ERPNext to ensure a seamless integration. By utilizing the right tools and strategies, we ensure that our clients achieve a successful outcome with their ERPNext integration projects while also meeting their unique business requirements."
   },
   {
     title: "Customization",
-    image: "/api/fb/n/files/Customization.svg",
+    image: "/images/Customization.svg",
     alt: "Customization",
     description:
       "ERPNext may need customization to fit your business. Our ERPNext Implementation Company in Ahmedabad works closely with clients to deliver tailored solutions. We are a collaborative ERPNext Implementation Partner in Gujarat. Our customization services align ERPNext with your specific workflows, ensuring productivity and business success. We believe in a collaborative approach to customization in ERPNext. We involve our clients in the customization process to ensure that their unique business requirements are met. This approach enables us to create customized ERPNext solutions that are tailored to our clients' specific needs and workflows, leading to increased productivity and efficiency in their business processes. Our clients remain involved throughout the customization process, ensuring that they are fully satisfied with the final outcome."
   },
   {
     title: "Scalability",
-    image: "/api/fb/n/files/Scalability(1).svg",
+    image: "/images/Scalability(1).svg",
     alt: "Scalability",
     description:
       "Rapid business growth can challenge ERP systems. Our ERPNext Implementation Company in Ahmedabad builds scalable ERPNext architecture ready for the future. We design cloud-based ERPNext systems with scalability in mind. As top ERPNext service providers we ensure your system can handle higher volumes and business expansion. We design ERPNext system architecture with scalability in mind. Our team ensures that the system can handle future growth and expansion by leveraging industry-standard cloud infrastructure. We use the latest cloud technologies to ensure that the system can handle increased traffic and data volume, providing our clients with the ability to scale their business processes seamlessly without worrying about system limitations. By designing ERPNext systems with scalability in mind, we enable our clients to grow their business processes without any interruptions."
   },
   {
     title: "Security",
-    image: "/api/fb/n/files/Security3b8a73.svg",
+    image: "/images/Security3b8a73.svg",
     alt: "Security",
     description:
       "Protecting sensitive data is critical. As a secure ERPNext Implementation Partner in Ahmedabad, we enforce strict access controls and data security policies. Our ERPNext Implementation Company in Gujarat sets up role-based user access controls to protect data. We prevent breaches by ensuring only authorized users can access sensitive ERPNext modules. We recognize the importance of data security in ERPNext systems. To prevent data breaches caused by unauthorized access, we implement a user access control system. This system ensures that only authorized users can access sensitive data, thereby reducing the risk of data theft or data loss. We provide role-based access control and implement security policies that restrict access to sensitive data, ensuring that only the right people have access to the right data. By implementing a user access control system, we provide our clients with a secure ERPNext system that protects their sensitive data from unauthorized access."

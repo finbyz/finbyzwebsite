@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/Hire-ERPNext-Implementor679475.svg", width: 1200, height: 630, alt: "ERPNext: Free and Open Source Cloud ERP Software\n" }],
+    images: [{ url: "/images/Hire-ERPNext-Implementor679475.svg", width: 1200, height: 630, alt: "ERPNext: Free and Open Source Cloud ERP Software\n" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ERPNext: Free and Open Source Cloud ERP Software\n",
     description: "Discover ERPNext System - your ultimate ERP solution. Explore the ERP system to streamline operations and enhance efficiency. Join now!",
     creator: "@finbyz",
-    images: ["/files/Hire-ERPNext-Implementor679475.svg"],
+    images: ["/images/Hire-ERPNext-Implementor679475.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "ERPNext: Free and Open Source Cloud ERP Software\n",
   "url": "https://finbyz.tech/erpnext-software",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/Hire-ERPNext-Implementor679475.svg",
+  "image": "/images/Hire-ERPNext-Implementor679475.svg",
   "description": "Discover ERPNext System - your ultimate ERP solution. Explore the ERP system to streamline operations and enhance efficiency. Join now!",
   "priceRange": "INR",
   "address": {

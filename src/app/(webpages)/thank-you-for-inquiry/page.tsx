@@ -25,7 +25,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'Thank you for Inquiry',
-          src: 'api/fb/n/files/Thank-you.svg',
+          src: '/images/Thank-you.svg',
         }}
       />
       <Section>

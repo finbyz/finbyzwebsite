@@ -45,7 +45,7 @@ export default function Page() {
             id="introduction"
             title="AI's Impact on Communication"
             image={{
-              src: "/files/AI_ERP.jpg",
+              src: "/images/AI_ERP.jpg",
               alt: "AI ERP",
               cover: true
             }}

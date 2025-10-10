@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/erp for trading.svg", width: 1200, height: 630, alt: "ERP for Trading & Distribution Industry | Trading Software" }],
+    images: [{ url: "/images/erp for trading.svg", width: 1200, height: 630, alt: "ERP for Trading & Distribution Industry | Trading Software" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ERP for Trading & Distribution Industry | Trading Software",
     description: "Unlock premium ERP for trading sector: Optimize processes, boost efficiency, and fuel business expansion. Transform your enterprise now!",
     creator: "@finbyz",
-    images: ["/files/erp for trading.svg"],
+    images: ["/images/erp for trading.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "ERP for Trading & Distribution Industry | Trading Software",
   "url": "https://finbyz.tech/erp-for-trading-industry",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/erp for trading.svg",
+  "image": "/images/erp for trading.svg",
   "description": "Unlock premium ERP for trading sector: Optimize processes, boost efficiency, and fuel business expansion. Transform your enterprise now!",
   "priceRange": "INR",
   "address": {

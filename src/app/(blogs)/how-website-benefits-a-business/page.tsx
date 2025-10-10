@@ -74,7 +74,7 @@ export default function Page() {
           id="introduction"
           title="Introduction"
           image={{
-            src:"/files/how-website-benefits-business.svg",
+            src:"/images/how-website-benefits-business.svg",
             cover:true,
             alt:"How a Website Benefits a Business"
           }}
@@ -104,7 +104,7 @@ export default function Page() {
             <div className="flex flex-col gap-6 mt-6">
               {/* Fosters authenticity */}
               <div className="flex items-start gap-4 animate-fadeInUp">
-                <Image src="/files/fosters-authenticity.svg" alt="Fosters authenticity" width={64} height={64} className="rounded-lg bg-white shadow-md" />
+                <Image src="/images/fosters-authenticity.svg" alt="Fosters authenticity" width={64} height={64} className="rounded-lg bg-white shadow-md" />
                 <div>
                   <h5 className="font-semibold mb-1">Fosters authenticity</h5>
                   <p>Your website can include case studies, testimonials, and client logos—clear proof that you operate transparently and effectively. This is one of the underrated benefits of a business website.</p>
@@ -112,7 +112,7 @@ export default function Page() {
               </div>
               {/* Gives a personal touch */}
               <div className="flex items-start gap-4 animate-fadeInUp">
-                <Image src="/files/gives-a-personal-touch.svg" alt="Gives a personal touch" width={64} height={64} className="rounded-lg bg-white shadow-md" />
+                <Image src="/images/gives-a-personal-touch.svg" alt="Gives a personal touch" width={64} height={64} className="rounded-lg bg-white shadow-md" />
                 <div>
                   <h5 className="font-semibold mb-1">Gives a personal touch</h5>
                   <p>Showcasing your team with photos and bios helps create a connection with your audience and makes your business more relatable.</p>
@@ -120,7 +120,7 @@ export default function Page() {
               </div>
               {/* Uplifts your brand image */}
               <div className="flex items-start gap-4 animate-fadeInUp">
-                <Image src="/files/uplifts-your-brand-image.svg" alt="Uplifts your brand image" width={64} height={64} className="rounded-lg bg-white shadow-md" />
+                <Image src="/images/uplifts-your-brand-image.svg" alt="Uplifts your brand image" width={64} height={64} className="rounded-lg bg-white shadow-md" />
                 <div>
                   <h5 className="font-semibold mb-1">Uplifts your brand image</h5>
                   <p>An elegant website can help you establish your brand image and identity. An “about us” section and what clients say about you give a strong reason to trust your services.</p>
@@ -128,7 +128,7 @@ export default function Page() {
               </div>
               {/* Reflects your working style */}
               <div className="flex items-start gap-4 animate-fadeInUp">
-                <Image src="/files/Reflects-your-working-style.svg" alt="Reflects your working style" width={64} height={64} className="rounded-lg bg-white shadow-md" />
+                <Image src="/images/Reflects-your-working-style.svg" alt="Reflects your working style" width={64} height={64} className="rounded-lg bg-white shadow-md" />
                 <div>
                   <h5 className="font-semibold mb-1">Reflects your working style</h5>
                   <p>By making use of beautifully designed elements, you can represent your unique working style to website visitors, assuring them they are in the right place and won't be let down!</p>
@@ -136,7 +136,7 @@ export default function Page() {
               </div>
               {/* Makes you approachable */}
               <div className="flex items-start gap-4 animate-fadeInUp">
-                <Image src="/files/makes-you-approachable.svg" alt="Makes you approachable" width={64} height={64} className="rounded-lg bg-white shadow-md" />
+                <Image src="/images/makes-you-approachable.svg" alt="Makes you approachable" width={64} height={64} className="rounded-lg bg-white shadow-md" />
                 <div>
                   <h5 className="font-semibold mb-1">Makes you approachable</h5>
                   <p>A prominent phone number, address and “contact us” form gives visitors an assurance that they can feasibly approach you. Making use of live chat can be a big plus.</p>
@@ -144,7 +144,7 @@ export default function Page() {
               </div>
               {/* Content sets you apart */}
               <div className="flex items-start gap-4 animate-fadeInUp">
-                <Image src="/files/content-sets-you-apart.svg" alt="Content sets you apart" width={64} height={64} className="rounded-lg bg-white shadow-md" />
+                <Image src="/images/content-sets-you-apart.svg" alt="Content sets you apart" width={64} height={64} className="rounded-lg bg-white shadow-md" />
                 <div>
                   <h5 className="font-semibold mb-1">Content sets you apart</h5>
                   <p>Sharing helpful, SEO-optimized content not only improves your Google rankings but also supports your reputation. Remember, great content is a credibility booster and one of the major benefits of a business website.</p>
@@ -196,7 +196,7 @@ export default function Page() {
             <div className="flex flex-col gap-6 mt-6">
               {/* Design elements */}
               <div className="flex items-start gap-4 animate-fadeInUp">
-                <Image src="/files/design-elements.svg" alt="Design elements" width={64} height={64} className="rounded-lg bg-white shadow-md" />
+                <Image src="/images/design-elements.svg" alt="Design elements" width={64} height={64} className="rounded-lg bg-white shadow-md" />
                 <div>
                   <h5 className="font-semibold mb-1">Design elements</h5>
                   <p>The design of your business website is the first impression visitors get. Beautiful and brand-aligned aesthetics appeal immediately, influencing user perception positively. A thoughtful design can effectively communicate your brand’s values and professionalism.</p>
@@ -204,7 +204,7 @@ export default function Page() {
               </div>
               {/* Content */}
               <div className="flex items-start gap-4 animate-fadeInUp">
-                <Image src="/files/content9d9e0c.svg" alt="Content" width={64} height={64} className="rounded-lg bg-white shadow-md" />
+                <Image src="/images/content9d9e0c.svg" alt="Content" width={64} height={64} className="rounded-lg bg-white shadow-md" />
                 <div>
                   <h5 className="font-semibold mb-1">Content</h5>
                   <p>High-quality content is one of the biggest benefits of a business website. Regularly updating your site with informative blogs and relevant details helps establish authority and builds trust with your visitors, showing your expertise in the products or services offered.</p>
@@ -212,7 +212,7 @@ export default function Page() {
               </div>
               {/* Social media */}
               <div className="flex items-start gap-4 animate-fadeInUp">
-                <Image src="/files/social-media.svg" alt="Social media" width={64} height={64} className="rounded-lg bg-white shadow-md" />
+                <Image src="/images/social-media.svg" alt="Social media" width={64} height={64} className="rounded-lg bg-white shadow-md" />
                 <div>
                   <h5 className="font-semibold mb-1">Social media</h5>
                   <p>Linking your website for small business with your social media profiles expands your brand’s reach. Social sharing drives traffic to your site and increases visibility, enhancing brand awareness and engagement across multiple platforms.</p>
@@ -220,7 +220,7 @@ export default function Page() {
               </div>
               {/* Emails */}
               <div className="flex items-start gap-4 animate-fadeInUp">
-                <Image src="/files/emails.svg" alt="Emails" width={64} height={64} className="rounded-lg bg-white shadow-md" />
+                <Image src="/images/emails.svg" alt="Emails" width={64} height={64} className="rounded-lg bg-white shadow-md" />
                 <div>
                   <h5 className="font-semibold mb-1">Emails</h5>
                   <p>Collecting visitor emails through your business website lets you stay connected with your audience. Sending newsletters, updates about new launches, offers, or sharing blog posts helps remind customers of your presence and enhances customer loyalty.</p>

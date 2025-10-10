@@ -183,7 +183,7 @@ export default function Page() {
             id="introduction"
             title="Introduction"
             image={{
-              src: '/api/fb/n/files/Evolution_of_ERP.svg',
+              src: '//files/Evolution_of_ERP.svg',
               alt: 'ERP Evolution',
               title: 'ERP Evolution',
               cover: true

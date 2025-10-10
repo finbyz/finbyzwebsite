@@ -46,7 +46,7 @@ export default function Page() {
 
           <BlogSectionWithImage id="erp-implementation-methodology" title="ERP Implementation Methodology"
             image={{
-              src: '/api/fb/n/files/ERP_Implement_Methodology.svg',
+              src: '//files/ERP_Implement_Methodology.svg',
               alt: 'ERP Implementation Methodology',
               title: 'ERP Implementation Methodology',
               height:640,

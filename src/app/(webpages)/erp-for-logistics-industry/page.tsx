@@ -15,37 +15,37 @@ const heroHighlightWords = ["ERPNext", "Logistics", "Industry"];
 const features = [
   {
     title: 'Customer Indent',
-    image: 'api/fb/n/files/icon-customer_indent.svg',
+    image: '/images/icon-customer_indent.svg',
     alt: 'Customer Indent',
     description: 'Seamlessly manage customer requirements by creating indents with item details, source/destination, and delivery dates. All orders are centrally accessible for improved tracking and planning.'
   },
   {
     title: 'Truck Allocation',
-    image: 'api/fb/n/files/icon-truck_allocation.svg',
+    image: '/images/icon-truck_allocation.svg',
     alt: 'Truck Allocation',
     description: 'Assign vehicles based on indent requirements and delivery timelines. Track truck availability, driver assignment, and hire third-party trucks for optimal fleet utilization.'
   },
   {
     title: 'Trip Management',
-    image: 'api/fb/n/files/icon-trip_management.svg',
+    image: '/images/icon-trip_management.svg',
     alt: 'Trip Management',
     description: 'Comprehensive trip planning, fuel management, and expense tracking. Supports direct payments to drivers, monitors truck status, and maximizes resource utilization.'
   },
   {
     title: 'Integrated Paper-work',
-    image: 'api/fb/n/files/icon-integrated_paperwork_.svg',
+    image: '/images/icon-integrated_paperwork_.svg',
     alt: 'Integrated Paper-work',
     description: 'Automate generation of transport documents like Lorry Receipts and freight challans. Teams collaborate with real-time access to delivery, cost, and transit documentation.'
   },
   {
     title: 'Truck Documents Management',
-    image: 'api/fb/n/files/icon-truck_document_management.svg',
+    image: '/images/icon-truck_document_management.svg',
     alt: 'Truck Documents Management',
     description: 'Track truck-related documents including insurance, permits, and driver licenses. Get renewal alerts to avoid penalties and stay compliant.'
   },
   {
     title: 'Truck Maintenance Management',
-    image: 'api/fb/n/files/icon-truck_maintenance.svg',
+    image: '/images/icon-truck_maintenance.svg',
     alt: 'Truck Maintenance Management',
     description: 'Detailed truck maintenance scheduling, including oil/filter changes, repairs, and spare parts tracking. Manage costs and avoid downtime.'
   }
@@ -54,31 +54,31 @@ const features = [
 const benefits = [
   {
     title: 'Vendor Management',
-    image: 'api/fb/n/files/icon-vendor_management.svg',
+    image: '/images/icon-vendor_management.svg',
     alt: 'Vendor management',
     description: 'Maintain a comprehensive supply chain process with standardized modules and procedures for each vendor.'
   },
   {
     title: 'Cost Efficiency',
-    image: 'api/fb/n/files/icon-efficient_cost.svg',
+    image: '/images/icon-efficient_cost.svg',
     alt: 'Efficient costs',
     description: 'Simplify tasks, reduce redundancies, and save time, leading to significant cost reductions.'
   },
   {
     title: 'Failure Reduction',
-    image: 'api/fb/n/files/icon-reduction_in_cost.svg',
+    image: '/images/icon-reduction_in_cost.svg',
     alt: 'Reduction in failure',
     description: 'Eliminate common issues such as vehicle damages, delivery delays, and tracking errors through integrated monitoring and management tools.'
   },
   {
     title: 'Billing and Accounting',
-    image: 'api/fb/n/files/icon-billing_and_accounting.svg',
+    image: '/images/icon-billing_and_accounting.svg',
     alt: 'Billing and accounting',
     description: 'Manage order billing seamlessly by integrating accounting systems with service delivery, providing clear insights into expenses and profit margins.'
   },
   {
     title: 'Multi-Location Coordination',
-    image: 'api/fb/n/files/icon-multiple_locations.svg',
+    image: '/images/icon-multiple_locations.svg',
     alt: 'Multiple locations',
     description: 'Facilitate strong collaboration among teams across various locations, ensuring timely order deliveries and reducing communication gaps.'
   }
@@ -132,8 +132,8 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'ERPNext for Logistics Industry',
-          src: 'api/fb/n/files/Logistic90ec93.svg',
-          videoSrc: 'api/fb/n/files/phases_.mp4',
+          src: '/images/Logistic90ec93.svg',
+          videoSrc: '/images/phases_.mp4',
         }}
       />
 

@@ -30,7 +30,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'Advanced Authorisation Licence In ERPNext',
-          src: 'api/fb/n/files/Advance-Authorization-License-PageDesign.svg',
+          src: '/images/Advance-Authorization-License-PageDesign.svg',
         }}
       />
 
@@ -69,14 +69,14 @@ export default function Page() {
           <ImportExportInfoCards
             importCard={{
               title: 'For Imports',
-              image: 'api/fb/n/files/import.svg',
+              image: '/images/import.svg',
               alt: 'Import',
               description:
                 'You cannot import declared items duty-free beyond the approved quantity or value under the advanced authorisation licence. Over-utilizing the licence during import may lead to non-compliance, attracting penalties. Our ERPNext app helps in monitoring and preventing such overuse in real time.',
             }}
             exportCard={{
               title: 'For Exports',
-              image: 'api/fb/n/files/export.svg',
+              image: '/images/export.svg',
               alt: 'Export',
               description:
                 'Exporting under the Advanced Authorisation Licence forfeits your eligibility for duty drawback on that shipment. If the export quantity exceeds the declared value under the licence, the excess will not qualify for any export incentive, causing a financial loss. ERPNext for Advanced Authorisation Licence keeps track of this to avoid such issues.',
@@ -120,7 +120,7 @@ export default function Page() {
             Once this licence is created, it can be linked to corresponding import and export consignments to ensure compliance and accuracy in Import Export Licence management.
           </p>
           <div className="flex justify-center mt-8 animate-fade-in delay-200">
-            <img src="/api/fb/n/files/AA-34-to-44.gif" alt="How to Manage Advanced Authorisation Licence" className="rounded-lg shadow-lg w-full md:w-2/3" />
+            <img src="/images/AA-34-to-44.gif" alt="How to Manage Advanced Authorisation Licence" className="rounded-lg shadow-lg w-full md:w-2/3" />
           </div>
         </div>
       </Section>
@@ -140,7 +140,7 @@ export default function Page() {
             This will ensure license is never overutilized by the user.
           </p>
           <div className="flex justify-center mt-8 animate-fade-in delay-200">
-            <img src="/api/fb/n/files/AA-1.40-to-1.47.gif" alt="Import License Usage" className="rounded-lg shadow-lg w-full md:w-2/3" />
+            <img src="/images/AA-1.40-to-1.47.gif" alt="Import License Usage" className="rounded-lg shadow-lg w-full md:w-2/3" />
           </div>
         </div>
       </Section>
@@ -160,7 +160,7 @@ export default function Page() {
             The system allows for permissible variation on the higher side for export quantity, ensuring the committed export target under the licence is achieved without forfeiting duty drawback benefits. This feature ensures better control over the Import Export Licence management process.
           </p>
           <div className="flex justify-center mt-8 animate-fade-in delay-200">
-            <img src="/api/fb/n/files/AA-1.16-to-1.29.gif" alt="Export License Usage" className="rounded-lg shadow-lg w-full md:w-2/3" />
+            <img src="/images/AA-1.16-to-1.29.gif" alt="Export License Usage" className="rounded-lg shadow-lg w-full md:w-2/3" />
           </div>
         </div>
       </Section>

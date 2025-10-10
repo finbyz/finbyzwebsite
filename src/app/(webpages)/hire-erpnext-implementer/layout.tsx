@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/Hire-ERPNext-Implementor679475.svg", width: 1200, height: 630, alt: "ERPNext Implementation Partner in Ahmedabad | Finbyz Tech" }],
+    images: [{ url: "/images/Hire-ERPNext-Implementor679475.svg", width: 1200, height: 630, alt: "ERPNext Implementation Partner in Ahmedabad | Finbyz Tech" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ERPNext Implementation Partner in Ahmedabad | Finbyz Tech",
     description: "Looking for a trusted ERPNext Implementation Partner in Ahmedabad? Finbyz Tech offers expert ERPNext services tailored to your business needs. Contact us today!",
     creator: "@finbyz",
-    images: ["/files/Hire-ERPNext-Implementor679475.svg"],
+    images: ["/images/Hire-ERPNext-Implementor679475.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "ERPNext Implementation Partner in Ahmedabad | Finbyz Tech",
   "url": "https://finbyz.tech/hire-erpnext-implementer",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/Hire-ERPNext-Implementor679475.svg",
+  "image": "/images/Hire-ERPNext-Implementor679475.svg",
   "description": "Looking for a trusted ERPNext Implementation Partner in Ahmedabad? Finbyz Tech offers expert ERPNext services tailored to your business needs. Contact us today!",
   "priceRange": "INR",
   "address": {

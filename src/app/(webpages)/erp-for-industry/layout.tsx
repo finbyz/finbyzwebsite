@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/INDUSTRY.svg", width: 1200, height: 630, alt: "Customized ERP Software | ERP system customization" }],
+    images: [{ url: "/images/INDUSTRY.svg", width: 1200, height: 630, alt: "Customized ERP Software | ERP system customization" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Customized ERP Software | ERP system customization",
     description: "Discover tailored solutions with customized ERP software and custom ERP system customization services. Optimize your business processes today.",
     creator: "@finbyz",
-    images: ["/files/INDUSTRY.svg"],
+    images: ["/images/INDUSTRY.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Customized ERP Software | ERP system customization",
   "url": "https://finbyz.tech/erp-for-industry",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/INDUSTRY.svg",
+  "image": "/images/INDUSTRY.svg",
   "description": "Discover tailored solutions with customized ERP software and custom ERP system customization services. Optimize your business processes today.",
   "priceRange": "INR",
   "address": {

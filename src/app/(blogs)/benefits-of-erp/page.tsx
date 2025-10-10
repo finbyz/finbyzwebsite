@@ -54,7 +54,7 @@ export default function Page() {
             title="Introduction"
             image={{
               alt:"Benefits of ERP",
-              src:"/api/fb/n/files/Benefits-of-ERP.svg",
+              src:"//files/Benefits-of-ERP.svg",
               cover:true,
             }}
           >
@@ -74,7 +74,7 @@ export default function Page() {
             id="real-time-information"
             title="Real-time Information"
             image={{
-              src: '/api/fb/n/files/Realtime-Information.svg',
+              src: '//files/Realtime-Information.svg',
               alt: 'Realtime Information',
               title: 'Realtime Information',
               width: 400,
@@ -102,7 +102,7 @@ export default function Page() {
             id="higher-productivity"
             title="Higher Productivity"
             image={{
-              src: '/api/fb/n/files/Higher-Productivity.svg',
+              src: '//files/Higher-Productivity.svg',
               alt: 'Higher Productivity',
               title: 'Higher Productivity',
               width: 400,
@@ -147,7 +147,7 @@ export default function Page() {
             id="better-analytics"
             title="Better Analytics"
             image={{
-              src: '/api/fb/n/files/Better-Analytics.svg',
+              src: '//files/Better-Analytics.svg',
               alt: 'Better Analytics',
               title: 'Better Analytics',
               width: 400,
@@ -175,7 +175,7 @@ export default function Page() {
             id="improved-collaboration"
             title="Improved Collaboration"
             image={{
-              src: '/api/fb/n/files/Collaboration.svg',
+              src: '//files/Collaboration.svg',
               alt: 'Improved Collaboration',
               title: 'Improved Collaboration',
               width: 400,
@@ -196,7 +196,7 @@ export default function Page() {
             id="regulatory-compliances"
             title="Regulatory Compliances"
             image={{
-              src: '/api/fb/n/files/Regulatory-Compliances.svg',
+              src: '//files/Regulatory-Compliances.svg',
               alt: 'Regulatory Compliances',
               title: 'Regulatory Compliances',
               width: 400,
@@ -217,7 +217,7 @@ export default function Page() {
             id="security"
             title="Security"
             image={{
-              src: '/api/fb/n/files/Security.svg',
+              src: '//files/Security.svg',
               alt: 'Security',
               title: 'Security',
               width: 400,

@@ -12,49 +12,49 @@ import Link from 'next/link';
 const features = [
   {
     title: 'Design',
-    image: 'api/fb/n/files/design.svg',
+    image: '/images/design.svg',
     alt: 'Design',
     description:
       "We offer you a comprehensive design for your website with impressive layouts. Unlike many other website development companies, we don’t use themes, but we create a website from scratch to ensure uniqueness of design aesthetics. By following the client’s requirements and ongoing market trends, we give you a user-friendly solution that depicts your brand."
   },
   {
     title: 'Content',
-    image: 'api/fb/n/files/content.svg',
+    image: '/images/content.svg',
     alt: 'Content',
     description:
       "Content is the key element that attracts the attention of the customers, we provide you with a relevant and strong creative content that speaks aloud for your operations and expertise. Giving attention to details we structure the content to highlight key pointers to readers."
   },
   {
     title: 'Graphics',
-    image: 'api/fb/n/files/graphics.svg',
+    image: '/images/graphics.svg',
     alt: 'Graphics',
     description:
       "Instead of images and icons we prefer to use premium vector graphics for a website wherever it’s possible. These are robust and scalable light-weight image types, which remain crystal clear irrespective of screen size. We combine these advanced technologies with the user-friendly interface to create robust, scalable and multifunctional websites."
   },
   {
     title: 'On page SEO',
-    image: 'api/fb/n/files/on-page-seo.svg',
+    image: '/images/on-page-seo.svg',
     alt: 'On page SEO',
     description:
       "We provide structure for on-page SEO for all pages which includes SEO Title, keyword, and meta-description. We build website that ensure structural elements like Structure and structured Data schema as per Google Requirements are optimized for SEO ranking."
   },
   {
     title: 'Speed',
-    image: 'api/fb/n/files/speed.svg',
+    image: '/images/speed.svg',
     alt: 'Speed',
     description:
       "Slow speed can kill your page traffic and disappoint the visitor. Do you know the page loading speed is not only dependent on your server performance but also on the code written for it? We optimize website performance by using advanced techniques to ensure GT Matrix Page speed test score is above 90."
   },
   {
     title: 'Animations',
-    image: 'api/fb/n/files/animation.svg',
+    image: '/images/animation.svg',
     alt: 'Animations',
     description:
       "Animated websites are one of the hot website design trends of recent times. Animations make the website come alive and it has become an indispensable part of user experience. We use the latest animation techniques to ensure smooth transitions with optimum speeds giving the website a premium feel."
   },
   {
     title: 'Maintenance',
-    image: 'api/fb/n/files/maintain.svg',
+    image: '/images/maintain.svg',
     alt: 'Maintenance',
     description:
       "We also provide website maintenance service which ensures the regular updating of content as well as the technology. Periodic backups and performance enhancements are also included in the website development service offered by us."
@@ -64,31 +64,31 @@ const features = [
 const processSteps = [
   {
     title: 'Planning',
-    image: 'api/fb/n/files/step-1.svg',
+    image: '/images/step-1.svg',
     alt: 'Planning',
     description: 'Understand the requirements and market study.'
   },
   {
     title: 'Design',
-    image: 'api/fb/n/files/step-2.svg',
+    image: '/images/step-2.svg',
     alt: 'Design',
     description: 'Develop blueprint, layouts, and prototypes.'
   },
   {
     title: 'Development',
-    image: 'api/fb/n/files/step-3.svg',
+    image: '/images/step-3.svg',
     alt: 'Development',
     description: 'Content, coding, and implementation.'
   },
   {
     title: 'Launch',
-    image: 'api/fb/n/files/step-4.svg',
+    image: '/images/step-4.svg',
     alt: 'Launch',
     description: 'Quality checks, testing, and acceptance.'
   },
   {
     title: 'Support',
-    image: 'api/fb/n/files/step-5.svg',
+    image: '/images/step-5.svg',
     alt: 'Support',
     description: 'Feedbacks, updates, and support.'
   }
@@ -119,7 +119,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'Website Development',
-          src: 'api/fb/n/files/web-development.svg',
+          src: '/images/web-development.svg',
           
         }}
       />

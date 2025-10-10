@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/erp-modules.svg", width: 1200, height: 630, alt: "Various Modules of ERP Software" }],
+    images: [{ url: "/images/erp-modules.svg", width: 1200, height: 630, alt: "Various Modules of ERP Software" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Various Modules of ERP Software",
     description: "From Customer Relationship Management (CRM) to Supply Chain Management (SCM), from Accounts to HR we cover it all. Our ERP Software is highly developed which helps any business to get a control on management of almost all the major functions of the business. ",
     creator: "@finbyz",
-    images: ["/files/erp-modules.svg"],
+    images: ["/images/erp-modules.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Various Modules of ERP Software",
   "url": "https://finbyz.tech/modules-of-erp",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/erp-modules.svg",
+  "image": "/images/erp-modules.svg",
   "description": "From Customer Relationship Management (CRM) to Supply Chain Management (SCM), from Accounts to HR we cover it all. Our ERP Software is highly developed which helps any business to get a control on management of almost all the major functions of the business. ",
   "priceRange": "INR",
   "address": {

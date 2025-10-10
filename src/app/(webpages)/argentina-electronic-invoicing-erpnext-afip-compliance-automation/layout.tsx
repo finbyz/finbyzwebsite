@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/Line Banner-41 (2)_11zon.png", width: 1200, height: 630, alt: "Argentina Electronic Invoicing in ERPNext: AFIP Compliance & Automation" }],
+    images: [{ url: "/images/Line Banner-41 (2)_11zon.png", width: 1200, height: 630, alt: "Argentina Electronic Invoicing in ERPNext: AFIP Compliance & Automation" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Argentina Electronic Invoicing in ERPNext: AFIP Compliance & Automation",
     description: "Implement AFIP-compliant electronic invoicing in ERP Next for Argentina. Automate invoice validation, ensure tax compliance, and streamline financial operations with custom fields, API integration, and optimized workflows.",
     creator: "@finbyz",
-    images: ["/files/Line Banner-41 (2)_11zon.png"],
+    images: ["/images/Line Banner-41 (2)_11zon.png"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Argentina Electronic Invoicing in ERPNext: AFIP Compliance & Automation",
   "url": "https://finbyz.tech/argentina-electronic-invoicing-erpnext-afip-compliance-automation",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/Line Banner-41 (2)_11zon.png",
+  "image": "/images/Line Banner-41 (2)_11zon.png",
   "description": "Implement AFIP-compliant electronic invoicing in ERP Next for Argentina. Automate invoice validation, ensure tax compliance, and streamline financial operations with custom fields, API integration, and optimized workflows.",
   "priceRange": "INR",
   "address": {

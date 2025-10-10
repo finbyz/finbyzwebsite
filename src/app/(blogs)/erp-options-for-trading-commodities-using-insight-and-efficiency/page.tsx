@@ -44,7 +44,7 @@ export default function Page() {
           {/* Introduction */}
           <BlogSectionWithImage id="intro" title="Using ERP in Trading Commodities"
             image={{
-              src: '/api/fb/n/files/drawing-1.svg',
+              src: '//files/drawing-1.svg',
               alt: 'ERP for Trading',
               title: 'erp-options-for-trading-commodities-using-insight-and-efficiency',
               cover: true

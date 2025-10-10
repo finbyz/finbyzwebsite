@@ -49,7 +49,7 @@ export default function Page() {
             id="introduction"
             title="Introduction"
             image={{
-              src: "/files/engggpng.PNG",
+              src: "/images/engggpng.PNG",
               alt: "How to Become a Software Engineer: The Path to Success",
               cover: true
             }}
@@ -244,7 +244,7 @@ export default function Page() {
               id="faq-languages"
               title="3. What are the programming languages that I should study to work as a software engineer?"
               image={{
-                src: '/api/fb/n/files/go%20live.svg',
+                src: '//files/go%20live.svg',
                 alt: 'What are the programming languages that I should study to work as a software engineer?',
                 title: 'What are the programming languages that I should study to work as a software engineer?',
                 width: 200,

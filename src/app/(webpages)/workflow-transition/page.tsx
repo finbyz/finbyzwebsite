@@ -30,7 +30,7 @@ export default function Page() {
         secondaryButton={{ text: 'Contact Us', action: handleContact }}
         heroImage={{
           alt: 'Workflow Transition',
-          src: 'api/fb/n/files/workflow-transition.png'
+          src: '/images/workflow-transition.png'
         }}
       />
 
@@ -43,7 +43,7 @@ export default function Page() {
           </p>
           <div className="flex justify-center animate-fade-in">
             <img
-              src="/api/fb/n/files/so.jpg"
+              src="/images/so.jpg"
               alt="Workflow Example"
               width={800}
               height={400}
@@ -80,7 +80,7 @@ export default function Page() {
           </p>
           <div className="flex justify-center mt-8 animate-fade-in">
             <img
-              src="/api/fb/n/files/ws.jpg"
+              src="/images/ws.jpg"
               alt="Workflow State Tracking"
               width={800}
               height={400}
@@ -119,7 +119,7 @@ export default function Page() {
           />
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-8 animate-fade-in">
             <img
-              src="/api/fb/n/files/so_1.jpg"
+              src="/images/so_1.jpg"
               alt="Reminder Config 1"
               width={400}
               height={250}
@@ -129,7 +129,7 @@ export default function Page() {
            </div>
            <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-8 animate-fade-in">
             <img
-              src="/api/fb/n/files/ds.jpg"
+              src="/images/ds.jpg"
               alt="Reminder Config 2"
               width={400}
               height={250}
@@ -140,7 +140,7 @@ export default function Page() {
             <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-8 animate-fade-in">
 
             <img
-              src="/api/fb/n/files/so_2.jpg"
+              src="/images/so_2.jpg"
               alt="Reminder Config 3"
               width={400}
               height={250}
@@ -163,7 +163,7 @@ export default function Page() {
           />
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-8 animate-fade-in">
             <img
-              src="/api/fb/n/files/ps.jpg"
+              src="/images/ps.jpg"
               alt="Project Permission 1"
               width={400}
               height={250}
@@ -173,7 +173,7 @@ export default function Page() {
           </div>
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-8 animate-fade-in">
             <img
-              src="/api/fb/n/files/po.jpg"
+              src="/images/po.jpg"
               alt="Project Permission 2"
               width={400}
               height={250}
@@ -191,7 +191,7 @@ export default function Page() {
           <p className="text-gray-700 mb-6">The system provides three comprehensive reports to track workflow efficiency and user activity.</p>
           <div className="flex justify-center animate-fade-in mb-8">
             <img
-              src="/api/fb/n/files/state_change.jpg"
+              src="/images/state_change.jpg"
               alt="State Change Overview"
               width={800}
               height={400}
@@ -217,7 +217,7 @@ export default function Page() {
             </div>
             <div className="flex justify-center animate-fade-in mb-8">
               <img
-                src="/api/fb/n/files/state_change-1.jpg"
+                src="/images/state_change-1.jpg"
                 alt="State Transition Time Report"
                 width={800}
                 height={400}
@@ -269,7 +269,7 @@ export default function Page() {
           </div>
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center animate-fade-in">
             <img
-              src="/api/fb/n/files/state_change_report.jpg"
+              src="/images/state_change_report.jpg"
               alt="State Change Report 1"
               width={400}
               height={250}
@@ -280,7 +280,7 @@ export default function Page() {
             <br></br>
             <div className="flex flex-col md:flex-row gap-6 justify-center items-center animate-fade-in">
             <img
-              src="/api/fb/n/files/state_change_report_1.jpg"
+              src="/images/state_change_report_1.jpg"
               alt="State Change Report 2"
               width={400}
               height={250}
@@ -291,7 +291,7 @@ export default function Page() {
             <br></br>
             <div className="flex flex-col md:flex-row gap-6 justify-center items-center animate-fade-in">
             <img
-              src="/api/fb/n/files/expence_claim.jpg"
+              src="/images/expence_claim.jpg"
               alt="Expense Claim Report"
               width={400}
               height={250}

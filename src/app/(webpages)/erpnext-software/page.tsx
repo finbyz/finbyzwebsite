@@ -32,7 +32,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'ERPNext',
-          src: 'api/fb/n/files/Hire-ERPNext-Implementor679475.svg',
+          src: '/images/Hire-ERPNext-Implementor679475.svg',
         }}
       />
 
@@ -68,28 +68,28 @@ export default function Page() {
             features={[
               {
                 title: 'Customization at Its Core',
-                image: 'api/fb/n/files/icon%20Real-time%20information.svg',
+                image: '/images/icon%20Real-time%20information.svg',
                 alt: 'Customization-at-its-core',
                 description:
                   'Unlike one-size-fits-all solutions, ERPNext Software is built with flexibility in mind. It caters to a wide range of industries including manufacturing, retail, education, and healthcare, ensuring that every aspect of your business is covered. From sales to HR, inventory, and beyond, ERPNext streamlines disparate processes into a cohesive, efficient workflow.',
               },
               {
                 title: 'User-Friendly Interface',
-                image: 'api/fb/n/files/387.svg',
+                image: '/images/387.svg',
                 alt: 'User-Friendly-Interface',
                 description:
                   'Navigate the complexities of your enterprise with an intuitive interface that simplifies operations without sacrificing depth or functionality. ERPNext is designed for users of all skill levels, ensuring that your team can leverage its full potential from day one.',
               },
               {
                 title: 'Real-Time Insights',
-                image: 'api/fb/n/files/304.svg',
+                image: '/images/304.svg',
                 alt: 'Real-Time-Insights',
                 description:
                   'Armed with powerful analytics and reporting tools, ERPNext Software gives you a 360-degree view of your business. Make informed decisions with real-time data on your financials, sales, customer engagements, and inventory levels, all at your fingertips.',
               },
               {
                 title: 'Seamless Integration',
-                image: 'api/fb/n/files/4111.svg',
+                image: '/images/4111.svg',
                 alt: 'Seamless-Integration',
                 description:
                   'In the digital age, integration is crucial. ERPNext effortlessly connects with a plethora of platforms and applications, enhancing your operational flexibility. Whether it\'s e-commerce, payment gateways, or email services, ERPNext Partners ensures your business is interconnected and primed for growth.',
@@ -106,28 +106,28 @@ export default function Page() {
             features={[
               {
                 title: 'Project Management Made Easy',
-                image: 'api/fb/n/files/147.svg',
+                image: '/images/147.svg',
                 alt: 'Project-Management-Made-Easy',
                 description:
                   "Keep your projects on track with ERPNext's robust project management tools. Assign tasks, track progress, and manage resources efficiently to ensure timely delivery and high-quality outcomes.",
               },
               {
                 title: 'Empower Your Sales Team',
-                image: 'api/fb/n/files/1099.svg',
+                image: '/images/1099.svg',
                 alt: 'Empower-Your-Sales-Team',
                 description:
                   "With ERPNext's integrated CRM, your sales team can nurture leads, manage customer interactions, and close deals faster. The seamless flow of information ensures that every customer touchpoint is personalized and impactful.",
               },
               {
                 title: 'Optimize Your Supply Chain',
-                image: 'api/fb/n/files/4 (1).svg',
+                image: '/images/4 (1).svg',
                 alt: 'Optimize-Your-Supply-Chain',
                 description:
                   "Gain complete control over your supply chain with ERPNext's inventory management features. From procurement to sales, you have the visibility and tools needed to optimize stock levels, reduce costs, and meet customer demands with precision.",
               },
               {
                 title: 'Financial Management and Compliance',
-                image: 'api/fb/n/files/59b82606.svg',
+                image: '/images/59b82606.svg',
                 alt: 'Financial-Management-and-Compliance',
                 description:
                   "ERPNext simplifies complex financial processes, ensuring that your accounting, tax, and compliance requirements are met with ease. With comprehensive financial reporting, you can stay ahead of regulations and make strategic decisions based on accurate financial data.",
@@ -170,42 +170,42 @@ export default function Page() {
             features={[
               {
                 title: 'Integrated Functionality',
-                image: 'api/fb/n/files/179.svg',
+                image: '/images/179.svg',
                 alt: 'Integrated Functionality',
                 description:
                   'ERPNext consolidates all your core business functions into one cohesive system, reducing complexity and improving collaboration across departments.',
               },
               {
                 title: 'Customization',
-                image: 'api/fb/n/files/45.svg',
+                image: '/images/45.svg',
                 alt: 'Customization',
                 description:
                   'Tailor ERPNext to your unique business needs with customizable fields, forms, and workflows—no coding required.',
               },
               {
                 title: 'Scalability',
-                image: 'api/fb/n/files/88.svg',
+                image: '/images/88.svg',
                 alt: 'Scalability',
                 description:
                   'Grow your business with confidence, knowing that ERPNext can scale alongside your operations, from startup to enterprise level.',
               },
               {
                 title: 'User-Friendly Interface',
-                image: 'api/fb/n/files/UI (1).svg',
+                image: '/images/UI (1).svg',
                 alt: 'User-Friendly Interface',
                 description:
                   'With an intuitive design and easy navigation, ERPNext ensures quick adoption by your team, accelerating ROI.',
               },
               {
                 title: 'Seamless Integration',
-                image: 'api/fb/n/files/96.svg',
+                image: '/images/96.svg',
                 alt: 'Seamless Integration',
                 description:
                   'Connect ERPNext with your favorite tools and services through its robust REST API, enabling a truly connected ecosystem.',
               },
               {
                 title: 'Cost-Effective',
-                image: 'api/fb/n/files/59.svg',
+                image: '/images/59.svg',
                 alt: 'Cost-Effective',
                 description:
                   'Say goodbye to expensive licensing fees—ERPNext is open-source, making it a cost-effective choice for businesses of all sizes.',

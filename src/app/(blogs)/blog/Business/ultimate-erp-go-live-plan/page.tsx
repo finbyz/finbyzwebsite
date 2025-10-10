@@ -51,7 +51,7 @@ export default function Page() {
             id="introduction"
             title="Introduction"
             image={{
-              src: '/api/fb/n/files/Line Banner-37.png',
+              src: '//files/Line Banner-37.png',
               alt: 'The Ultimate ERP Go Live Plan',
               title: 'The Ultimate ERP Go Live Plan',
               cover: true,
@@ -66,7 +66,7 @@ export default function Page() {
             id="step-1"
             title="Step 1: Implement All Relevant Modules"
             image={{
-              src: '/api/fb/n/files/256.png',
+              src: '//files/256.png',
               alt: 'Implement All Relevant Modules',
               title: 'Implement All Relevant Modules',
               width: 200,
@@ -96,7 +96,7 @@ export default function Page() {
             id="step-2-details"
             title="Step 2: Final Preparations Before Go Live"
             image={{
-              src: '/api/fb/n/files/68.png',
+              src: '//files/68.png',
               alt: 'Final Preparations Before Go Live',
               title: 'Final Preparations Before Go Live',
               width: 200,
@@ -124,7 +124,7 @@ export default function Page() {
             id="step-3-details"
             title="Step 3: Transaction Reset & Data Import"
             image={{
-              src: '/api/fb/n/files/377.png',
+              src: '//files/377.png',
               alt: 'Transaction Reset & Data Import',
               title: 'Transaction Reset & Data Import',
               width: 200,
@@ -149,7 +149,7 @@ export default function Page() {
             id="step-4-details"
             title="Step 4: Go Live – The Big Day"
             image={{
-              src: '/api/fb/n/files/380.png',
+              src: '//files/380.png',
               alt: 'Go Live – The Big Day',
               title: 'Go Live – The Big Day',
               width: 200,
@@ -175,7 +175,7 @@ export default function Page() {
             id="step-5-details"
             title="Step 5: Post Go Live – Monitor, Audit, and Optimize"
             image={{
-              src: '/api/fb/n/files/381.png',
+              src: '//files/381.png',
               alt: 'Post Go Live – Monitor, Audit, and Optimize',
               title: 'Post Go Live – Monitor, Audit, and Optimize',
               width: 200,
@@ -199,7 +199,7 @@ export default function Page() {
             id="step-6-details"
             title="Step 6: Increase ERP Adoption"
             image={{
-              src: '/api/fb/n/files/142.png',
+              src: '//files/142.png',
               alt: 'Increase ERP Adoption',
               title: 'Increase ERP Adoption',
               width: 320,

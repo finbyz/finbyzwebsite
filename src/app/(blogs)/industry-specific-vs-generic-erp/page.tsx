@@ -47,7 +47,7 @@ export default function Page() {
             id="introduction"
             title="Introduction"
             image={{
-              src:"/files/industry-specific-vs-generic-erp.svg",
+              src:"/images/industry-specific-vs-generic-erp.svg",
               alt:"Industry specific vs Generic-erp",
               cover:true
             }}

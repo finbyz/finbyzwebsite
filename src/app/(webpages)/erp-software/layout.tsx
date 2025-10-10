@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/banner-implementation.svg", width: 1200, height: 630, alt: "ERP Software Development & ERPNext Solutions | Finbyz Tech" }],
+    images: [{ url: "/images/banner-implementation.svg", width: 1200, height: 630, alt: "ERP Software Development & ERPNext Solutions | Finbyz Tech" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ERP Software Development & ERPNext Solutions | Finbyz Tech",
     description: "Discover expert ERP software development services and ERPNext solutions tailored to your business needs. Partner with Finbyz Tech for scalable and efficient ERP systems.",
     creator: "@finbyz",
-    images: ["/files/banner-implementation.svg"],
+    images: ["/images/banner-implementation.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "ERP Software Development & ERPNext Solutions | Finbyz Tech",
   "url": "https://finbyz.tech/erp-software",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/banner-implementation.svg",
+  "image": "/images/banner-implementation.svg",
   "description": "Discover expert ERP software development services and ERPNext solutions tailored to your business needs. Partner with Finbyz Tech for scalable and efficient ERP systems.",
   "priceRange": "INR",
   "address": {

@@ -48,7 +48,7 @@ export default function Page() {
             id="getting-started"
             title="How to get started with the implementation of ERP?"
             image={{
-              src: '/api/fb/n/files/ERP_Implement.svg',
+              src: '//files/ERP_Implement.svg',
               alt: 'ERP with Cloud',
               title: 'Upgrade old ERP with cloud ERP',
               width: 480,

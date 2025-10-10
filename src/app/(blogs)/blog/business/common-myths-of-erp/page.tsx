@@ -51,7 +51,7 @@ export default function Page() {
           id="introduction"
           title="Common myths of ERP Software"
           image={{
-            src:"/files/common-myths-of-erp.svg",
+            src:"/images/common-myths-of-erp.svg",
             alt:"Common myths of ERP Software",
             cover:true
           }}

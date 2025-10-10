@@ -31,7 +31,7 @@ export default function Page() {
         secondaryButton={{ text: 'Learn More', action: handleLearnMore }}
         heroImage={{
           alt: 'Hire Web Application Developers',
-          src: 'api/fb/n/files/Hire-Web-App-Developer.svg',
+          src: '/images/Hire-Web-App-Developer.svg',
           videoSrc: undefined,
         }}
       />
@@ -64,37 +64,37 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FeatureCard
               title="Custom Web Development"
-              image="/api/fb/n/files/Custom web development(3).svg"
+              image="/images/Custom web development(3).svg"
               alt="Custom web development"
               description="Transform your digital presence with custom web apps tailored to your business goals. Our skilled team is proficient in PHP, Python, Ruby, React, and more. We work closely with you to develop a custom solution that aligns with your business goals."
             />
             <FeatureCard
               title="Technology Consulting"
-              image="/api/fb/n/files/Technology Consulting.svg"
+              image="/images/Technology Consulting.svg"
               alt="Technology Consulting"
               description="Partner with us for custom web apps that drive ROI. Our technology consulting services help you leverage the latest innovations and stay ahead of the curve. We provide guidance on technology adoption, best practices, and trends."
             />
             <FeatureCard
               title="Web Portal Development"
-              image="/api/fb/n/files/Web Portal Development.svg"
+              image="/images/Web Portal Development.svg"
               alt="Web Portal Development"
               description="Transform your B2B or B2C business with a custom web portal. Our services provide a user-friendly, feature-rich platform tailored to your needs, from design to deployment."
             />
             <FeatureCard
               title="Enterprise Web Development"
-              image="/api/fb/n/files/Enterprise Web Development.svg"
+              image="/images/Enterprise Web Development.svg"
               alt="Enterprise Web Development"
               description="Secure, high-performance web apps for enterprise-level businesses. We design and develop scalable, reliable, and secure web solutions that drive ROI."
             />
             <FeatureCard
               title="CMS Web Development"
-              image="/api/fb/n/files/CMS Web Development.svg"
+              image="/images/CMS Web Development.svg"
               alt="CMS Web Development"
               description="Get a powerful, SEO-optimized website with our CMS development. We deliver custom web solutions that are optimized for search engines, user-friendly, and high-performing."
             />
             <FeatureCard
               title="Support & Maintenance"
-              image="/api/fb/n/files/Support & Maintenance.svg"
+              image="/images/Support & Maintenance.svg"
               alt="Support & Maintenance"
               description="Keep your website running smoothly with our expert support and maintenance services. We offer comprehensive support to ensure your website stays in top shape."
             />
@@ -109,25 +109,25 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <FeatureCard
               title="Front-End Development"
-              image="/api/fb/n/files/Fronted.svg"
+              image="/images/Fronted.svg"
               alt="Front-End"
               description="Our web developers use front-end technologies like HTML, CSS, and JavaScript along with Python frameworks like Django and Flask including templating engines for generating dynamic HTML."
             />
             <FeatureCard
               title="Back-End Development"
-              image="/api/fb/n/files/Backend.svg"
+              image="/images/Backend.svg"
               alt="Backend"
               description="We utilize the latest server-side technologies and frameworks, including PHP, ASP.NET, NodeJS, and Django, to bring your vision to life."
             />
             <FeatureCard
               title="Full-Stack Development"
-              image="/api/fb/n/files/Full Stack.svg"
+              image="/images/Full Stack.svg"
               alt="Full Stack"
               description="Python can be used for full-stack web development using front-end and back-end technologies. Frameworks like Django and Flask are popular choices for creating full-stack web applications."
             />
             <FeatureCard
               title="Dev-Oops Consulting"
-              image="/api/fb/n/files/Devopps.svg"
+              image="/images/Devopps.svg"
               alt="Devopps"
               description="Looking to enhance the operational efficiency and quality of your cloud infrastructure? Our certified DevOps experts provide top-notch automation services to standardize your infrastructure deployment process."
             />
@@ -172,49 +172,49 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ProcessStepCard
               title="Planning and Analysis"
-              image="/api/fb/n/files/lack-of-adequate-planning.svg"
+              image="/images/lack-of-adequate-planning.svg"
               alt="Planning and Analysis"
               description="We work closely with you to identify your business requirements and create a project plan that outlines the scope, timeline, and budget for the project."
             />
             <ProcessStepCard
               title="Design"
-              image="/api/fb/n/files/design-elements.svg"
+              image="/images/design-elements.svg"
               alt="Design"
               description="We create wireframes, mockups, and design concepts that align with your branding and user experience goals."
             />
             <ProcessStepCard
               title="Prototype Demo"
-              image="/api/fb/n/files/graphics.svg"
+              image="/images/graphics.svg"
               alt="Prototype Demo"
               description="After finalizing and approving the designs, we freeze the scope and provide a prototype or demo of the app, web or platform."
             />
             <ProcessStepCard
               title="Development"
-              image="/api/fb/n/files/on-page-seo.svg"
+              image="/images/on-page-seo.svg"
               alt="Development"
               description="Our development team uses the latest technologies and frameworks to build the web application, ensuring that it is secure, scalable, and optimized for performance."
             />
             <ProcessStepCard
               title="Testing"
-              image="/api/fb/n/files/Testing.svg"
+              image="/images/Testing.svg"
               alt="Testing"
               description="Once development is complete, we rigorously test the web application to ensure that it functions as intended and is free of bugs and errors."
             />
             <ProcessStepCard
               title="Deployment"
-              image="/api/fb/n/files/deploy-finbyz.svg"
+              image="/images/deploy-finbyz.svg"
               alt="Deployment"
               description="After testing is complete and your final approval, we deploy it to the production environment."
             />
             <ProcessStepCard
               title="Maintenance and Support"
-              image="/api/fb/n/files/support-finbyz.svg"
+              image="/images/support-finbyz.svg"
               alt="Maintenance and Support"
               description="After deployment, we provide ongoing maintenance and support to ensure that the web application continues to function optimally and is up to date with the latest security and performance standards."
             />
             <ProcessStepCard
               title="SEO"
-              image="/api/fb/n/files/design.svg"
+              image="/images/design.svg"
               alt="SEO"
               description="SEO is key. We build your web applications which are SEO friendly and help market your products or services to reach a wider audience."
             />

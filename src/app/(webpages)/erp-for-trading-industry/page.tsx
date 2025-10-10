@@ -11,37 +11,37 @@ import { LucideArrowRight } from 'lucide-react';
 const features = [
   {
     title: 'Customer Management',
-    image: 'api/fb/n/files/icon-customer-management.svg',
+    image: '/images/icon-customer-management.svg',
     alt: 'Customer Management',
     description: 'Data of all customers, their buying patterns, potential customers.'
   },
   {
     title: 'Quotation Management',
-    image: 'api/fb/n/files/icon-quotation-management.svg',
+    image: '/images/icon-quotation-management.svg',
     alt: 'Quotation Management',
     description: 'Issue of quotes, conversion, and management of quotation workflow.'
   },
   {
     title: 'Order Management',
-    image: 'api/fb/n/files/icon-order-management.svg',
+    image: '/images/icon-order-management.svg',
     alt: 'Order Management',
     description: 'Ensure timely delivery, billing and payment against the sales and purchase orders.'
   },
   {
     title: 'Inventory Management',
-    image: 'api/fb/n/files/icon-blog-inventory-control-packages.svg',
+    image: '/images/icon-blog-inventory-control-packages.svg',
     alt: 'Inventory Management',
     description: 'Get batch-wise current stock as well as projected stock for all the items.'
   },
   {
     title: 'Supplier Management',
-    image: 'api/fb/n/files/icon-supplier-management.svg',
+    image: '/images/icon-supplier-management.svg',
     alt: 'Supplier Management',
     description: 'Suppliers information, feedback to suppliers and quality controls.'
   },
   {
     title: 'Brokerage Commissions',
-    image: 'api/fb/n/files/icon-brokerage-commission.svg',
+    image: '/images/icon-brokerage-commission.svg',
     alt: 'Brokerage Commissions',
     description: 'Calculate and track item-wise brokerage against the sales/ purchase orders.'
   }
@@ -95,8 +95,8 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'ERP for Trading',
-          src: 'api/fb/n/files/erp for trading.svg',
-          videoSrc: 'api/fb/n/files/for_website.mp4',
+          src: '/images/erp for trading.svg',
+          videoSrc: '/images/for_website.mp4',
         }}
       />
 

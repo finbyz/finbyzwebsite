@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/FD-Management-PageDesign.svg", width: 1200, height: 630, alt: "Efficient Fixed Deposit Management in ERPNext | Streamline Your Financial Assets" }],
+    images: [{ url: "/images/FD-Management-PageDesign.svg", width: 1200, height: 630, alt: "Efficient Fixed Deposit Management in ERPNext | Streamline Your Financial Assets" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Efficient Fixed Deposit Management in ERPNext | Streamline Your Financial Assets",
     description: "Discover how ERPNext simplifies fixed deposit management with automated tracking, interest accrual, and seamless integration into your financial asset portfolio.",
     creator: "@finbyz",
-    images: ["/files/FD-Management-PageDesign.svg"],
+    images: ["/images/FD-Management-PageDesign.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Efficient Fixed Deposit Management in ERPNext | Streamline Your Financial Assets",
   "url": "https://finbyz.tech/fd-management-erpnext",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/FD-Management-PageDesign.svg",
+  "image": "/images/FD-Management-PageDesign.svg",
   "description": "Discover how ERPNext simplifies fixed deposit management with automated tracking, interest accrual, and seamless integration into your financial asset portfolio.",
   "priceRange": "INR",
   "address": {

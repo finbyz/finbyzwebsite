@@ -42,7 +42,7 @@ export default function Page() {
         <BlogContent>
           <BlogSectionWithImage id="introduction" title="Introduction"
             image={{
-              src: '/api/fb/n/files/benefits-of-erp-and-crm-integration.svg',
+              src: '//files/benefits-of-erp-and-crm-integration.svg',
               alt: 'Benefits of ERP and CRM integration',
               title: 'Benefits of ERP and CRM integration',
               width: 480,

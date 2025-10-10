@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/hr_system 2019-07-27 18_25_22.svg", width: 1200, height: 630, alt: "Comprehensive Human Resource & Payroll Software Solutions | Finbyz Tech" }],
+    images: [{ url: "/images/hr_system 2019-07-27 18_25_22.svg", width: 1200, height: 630, alt: "Comprehensive Human Resource & Payroll Software Solutions | Finbyz Tech" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Comprehensive Human Resource & Payroll Software Solutions | Finbyz Tech",
     description: "Discover Finbyz Tech\'s human resource software designed to streamline HR and payroll processes. Enhance efficiency, ensure compliance, and empower your workforce.",
     creator: "@finbyz",
-    images: ["/files/hr_system 2019-07-27 18_25_22.svg"],
+    images: ["/images/hr_system 2019-07-27 18_25_22.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Comprehensive Human Resource & Payroll Software Solutions | Finbyz Tech",
   "url": "https://finbyz.tech/human-resource-system",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/hr_system 2019-07-27 18_25_22.svg",
+  "image": "/images/hr_system 2019-07-27 18_25_22.svg",
   "description": "Discover Finbyz Tech\'s human resource software designed to streamline HR and payroll processes. Enhance efficiency, ensure compliance, and empower your workforce.",
   "priceRange": "INR",
   "address": {

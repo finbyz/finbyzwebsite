@@ -33,7 +33,7 @@ export default function Page() {
     },
     heroImage: {
       alt: 'Software Development',
-      src: 'api/fb/n/files/banner-softwaredevelopment.svg',
+      src: '/images/banner-softwaredevelopment.svg',
     },
   };
 
@@ -69,27 +69,27 @@ export default function Page() {
   const processSteps = [
     {
       title: 'Consult',
-      image: 'api/fb/n/files/consult-finbyz.svg',
+      image: '/images/consult-finbyz.svg',
       alt: 'Consult us',
     },
     {
       title: 'Design',
-      image: 'api/fb/n/files/design-finbyz.svg',
+      image: '/images/design-finbyz.svg',
       alt: 'Design Process',
     },
     {
       title: 'Develop',
-      image: 'api/fb/n/files/develop-finbyz.svg',
+      image: '/images/develop-finbyz.svg',
       alt: 'Develop',
     },
     {
       title: 'Deploy',
-      image: 'api/fb/n/files/deploy-finbyz.svg',
+      image: '/images/deploy-finbyz.svg',
       alt: 'Deploy',
     },
     {
       title: 'Support',
-      image: 'api/fb/n/files/support-finbyz.svg',
+      image: '/images/support-finbyz.svg',
       alt: 'Support',
     },
   ];
@@ -98,28 +98,28 @@ export default function Page() {
   const methodologyFeatures = [
     {
       title: 'Flawless UX',
-      image: 'api/fb/n/files/icon%20Real-time%20information.svg',
+      image: '/images/icon%20Real-time%20information.svg',
       alt: 'Flawless UX',
       description:
         'As a trusted software development company, we prioritize easy adoption, uniquely branded designs, and intuitive interfaces to enhance user experience and encourage seamless use of your custom software development solution.',
     },
     {
       title: 'Seamless integration',
-      image: 'api/fb/n/files/icon%20Higher%20Productivity.svg',
+      image: '/images/icon%20Higher%20Productivity.svg',
       alt: 'Seamless integration',
       description:
         'Our software development experts ensure that your newly built solution integrates effortlessly with existing systems, creating a unified digital environment for your business operations.',
     },
     {
       title: 'Total information security',
-      image: 'api/fb/n/files/icon%20Improved%20Collaboration.svg',
+      image: '/images/icon%20Improved%20Collaboration.svg',
       alt: 'Total information security',
       description:
         'We develop custom software with robust security protocols embedded at every phase of the software development lifecycle, protecting your data and ensuring compliance with industry standards.',
     },
     {
       title: 'Reliable Support & Maintenance',
-      image: 'api/fb/n/files/icon%20Better%20Analytics.svg',
+      image: '/images/icon%20Better%20Analytics.svg',
       alt: 'Reliable Support & Maintenance',
       description:
         'We offer ongoing support and maintenance services to ensure that your custom software remains up-to-date, relevant, and aligned with changing business environments and technological advancements.',
@@ -130,21 +130,21 @@ export default function Page() {
   const approachFeatures = [
     {
       title: 'Understanding Your Vision',
-      image: 'api/fb/n/files/understanding_your_vision.svg',
+      image: '/images/understanding_your_vision.svg',
       alt: 'Understanding Your Vision',
       description:
         'Our software development process starts by thoroughly understanding your goals, industry, and unique challenges to deliver a tailor-made solution through expert custom software development practices.',
     },
     {
       title: 'Continuous Collaboration',
-      image: 'api/fb/n/files/asynchnorus.svg',
+      image: '/images/asynchnorus.svg',
       alt: 'Continuous Collaboration',
       description:
         'As a collaborative software development company, we work closely with you throughout the project, ensuring your insights shape the outcome and align with your evolving business needs.',
     },
     {
       title: 'Exceeding Expectations',
-      image: 'api/fb/n/files/speed-strikes-the-first-impression.svg',
+      image: '/images/speed-strikes-the-first-impression.svg',
       alt: 'Exceeding Expectations',
       description:
         'We don’t just build software; we deliver solutions that go beyond expectations. Our software development services are designed to maximize value and performance for your business operations.',
@@ -216,7 +216,7 @@ export default function Page() {
           <h2 className="text-center text-2xl font-bold mb-8 relative inline-block after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-2">Software Development Stages</h2>
           <div className="relative w-full flex justify-center mb-8">
             <img
-              src="/api/fb/n/files/dotted-wave.svg"
+              src="/images/dotted-wave.svg"
               alt="bg-wave"
               width={800}
               height={60}

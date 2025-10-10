@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/Hire-Web-App-Developer.svg", width: 1200, height: 630, alt: "Hire Web Application Developers & Programming Services" }],
+    images: [{ url: "/images/Hire-Web-App-Developer.svg", width: 1200, height: 630, alt: "Hire Web Application Developers & Programming Services" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Hire Web Application Developers & Programming Services",
     description: "Looking for top-notch web application development services? Hire skilled web app developers for website and app development, expert in web programming.",
     creator: "@finbyz",
-    images: ["/files/Hire-Web-App-Developer.svg"],
+    images: ["/images/Hire-Web-App-Developer.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Hire Web Application Developers & Programming Services",
   "url": "https://finbyz.tech/hire-web-application-developers",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/Hire-Web-App-Developer.svg",
+  "image": "/images/Hire-Web-App-Developer.svg",
   "description": "Looking for top-notch web application development services? Hire skilled web app developers for website and app development, expert in web programming.",
   "priceRange": "INR",
   "address": {

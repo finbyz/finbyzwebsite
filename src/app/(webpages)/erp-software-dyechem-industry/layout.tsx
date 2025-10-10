@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/chemical_Module 2019-04-12 12_42_16.svg", width: 1200, height: 630, alt: "ERP for DyeChem Industry | Dyes & Intermediates ERP Software" }],
+    images: [{ url: "/images/chemical_Module 2019-04-12 12_42_16.svg", width: 1200, height: 630, alt: "ERP for DyeChem Industry | Dyes & Intermediates ERP Software" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ERP for DyeChem Industry | Dyes & Intermediates ERP Software",
     description: "ERP Software for DyeChem industry solve problems of batch-wise Inventory management, Samples management, Manufacturing of dyes and Pigment with yield, concentration and purity.",
     creator: "@finbyz",
-    images: ["/files/chemical_Module 2019-04-12 12_42_16.svg"],
+    images: ["/images/chemical_Module 2019-04-12 12_42_16.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "ERP for DyeChem Industry | Dyes & Intermediates ERP Software",
   "url": "https://finbyz.tech/erp-software-dyechem-industry",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/chemical_Module 2019-04-12 12_42_16.svg",
+  "image": "/images/chemical_Module 2019-04-12 12_42_16.svg",
   "description": "ERP Software for DyeChem industry solve problems of batch-wise Inventory management, Samples management, Manufacturing of dyes and Pigment with yield, concentration and purity.",
   "priceRange": "INR",
   "address": {

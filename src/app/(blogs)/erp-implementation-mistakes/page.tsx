@@ -50,7 +50,7 @@ export default function Page() {
             id="introduction"
             title="Introduction"
             image={{
-              src: '/api/fb/n/files/erp-implementation-mistakes-how-to-avoid-failures.svg',
+              src: '//files/erp-implementation-mistakes-how-to-avoid-failures.svg',
               alt: 'ERP implementation mistakes',
               title: 'ERP implementation mistakes',
               cover:true
@@ -65,7 +65,7 @@ export default function Page() {
             id="mistake-1"
             title="1. Lack of Adequate Planning"
             image={{
-              src: '/api/fb/n/files/lack-of-adequate-planning.svg',
+              src: '//files/lack-of-adequate-planning.svg',
               alt: 'Lack of adequate planning',
               title: 'Lack of adequate planning',
               width: 200,
@@ -85,7 +85,7 @@ export default function Page() {
             id="mistake-2"
             title="2. Insufficient Training"
             image={{
-              src: '/api/fb/n/files/insufficient-training.svg',
+              src: '//files/insufficient-training.svg',
               alt: 'Insufficient training',
               title: 'Insufficient training',
               width: 200,
@@ -105,7 +105,7 @@ export default function Page() {
             id="mistake-3"
             title="3. Lack of Participation"
             image={{
-              src: '/api/fb/n/files/lack-of-participation.svg',
+              src: '//files/lack-of-participation.svg',
               alt: 'Lack of participation',
               title: 'Lack of participation',
               width: 200,
@@ -125,7 +125,7 @@ export default function Page() {
             id="mistake-4"
             title="4. Failure in Change Management"
             image={{
-              src: '/api/fb/n/files/failure-in-change-management.svg',
+              src: '//files/failure-in-change-management.svg',
               alt: 'Failure in change management',
               title: 'Failure in change management',
               width: 200,
@@ -145,7 +145,7 @@ export default function Page() {
             id="mistake-5"
             title="5. Unbounded Expectations"
             image={{
-              src: '/api/fb/n/files/icon-order-management.svg',
+              src: '//files/icon-order-management.svg',
               alt: 'Unbounded expectations',
               title: 'Unbounded expectations',
               width: 200,
@@ -165,7 +165,7 @@ export default function Page() {
             id="mistake-6"
             title="6. Improper Maintenance"
             image={{
-              src: '/api/fb/n/files/improper-maintenance.svg',
+              src: '//files/improper-maintenance.svg',
               alt: 'Improper maintenance',
               title: 'Improper maintenance',
               width: 200,
@@ -185,7 +185,7 @@ export default function Page() {
             id="mistake-7"
             title="7. Lack of Communication"
             image={{
-              src: '/api/fb/n/files/lack-of-communication.svg',
+              src: '//files/lack-of-communication.svg',
               alt: 'Lack of communication',
               title: 'Lack of communication',
               width: 200,
@@ -205,7 +205,7 @@ export default function Page() {
             id="mistake-8"
             title="8. Resistance within the Team"
             image={{
-              src: '/api/fb/n/files/blog-icon-erp-vendors.svg',
+              src: '//files/blog-icon-erp-vendors.svg',
               alt: 'Resistance within the team',
               title: 'Resistance within the team',
               width: 200,

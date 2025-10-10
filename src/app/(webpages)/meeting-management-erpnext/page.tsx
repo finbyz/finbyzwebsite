@@ -28,7 +28,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'Meeting Management In ERPNext',
-          src: 'api/fb/n/files/Meeting-Management-PageDesign-SVG.avif',
+          src: '/images/Meeting-Management-PageDesign-SVG.avif',
         }}
       />
 
@@ -73,7 +73,7 @@ export default function Page() {
             <li>Each scheduled meeting is automatically linked and visible in the history of the respective Lead, Opportunity, or Customer document.</li>
             <li>Quick video tutorial to understand the Meeting Schedule document process:</li>
           </ul>
-          <MeetingGifImage src="/api/fb/n/files/1_AdobeExpress.gif" alt="Meeting Schedule Demo"  />
+          <MeetingGifImage src="/images/1_AdobeExpress.gif" alt="Meeting Schedule Demo"  />
         </div>
       </Section>
 
@@ -88,7 +88,7 @@ export default function Page() {
             <li>Each meeting summary in ERPNext is stored in the document’s history for easy future reference.</li>
             <li>Quick Video to understand the Meeting Note (Create Meeting) Document Process:</li>
           </ul>
-          <MeetingGifImage src="/api/fb/n/files/2_AdobeExpress.gif" alt="Meeting Notes Demo" />
+          <MeetingGifImage src="/images/2_AdobeExpress.gif" alt="Meeting Notes Demo" />
         </div>
       </Section>
 

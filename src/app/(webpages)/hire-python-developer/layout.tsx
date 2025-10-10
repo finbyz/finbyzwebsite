@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/Hire-Python-Dev.svg", width: 1200, height: 630, alt: "Hire Dedicated Python Developers\n\n" }],
+    images: [{ url: "/images/Hire-Python-Dev.svg", width: 1200, height: 630, alt: "Hire Dedicated Python Developers\n\n" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Hire Dedicated Python Developers\n\n",
     description: "Looking for top Python development companies? Hire Python developer with expertise. Find skilled Python coders for your projects. Python developer hire.",
     creator: "@finbyz",
-    images: ["/files/Hire-Python-Dev.svg"],
+    images: ["/images/Hire-Python-Dev.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Hire Dedicated Python Developers\n\n",
   "url": "https://finbyz.tech/hire-python-developer",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/Hire-Python-Dev.svg",
+  "image": "/images/Hire-Python-Dev.svg",
   "description": "Looking for top Python development companies? Hire Python developer with expertise. Find skilled Python coders for your projects. Python developer hire.",
   "priceRange": "INR",
   "address": {

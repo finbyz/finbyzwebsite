@@ -24,37 +24,37 @@ const handleSecondary = () => {
 const flipCards = [
   {
     title: "Customized ERPNext",
-    image: "/api/fb/n/files/icon-sales-automation.svg",
+    image: "/images/icon-sales-automation.svg",
     alt: "Customized ERPNext",
     description: "Dive into a world where each feature and functionality is meticulously crafted to echo the uniqueness of your business. Our customized ERPNext development services are the pinnacle of innovation, offering modules and features that are in perfect harmony with your business goals and the dynamic UAE market requirements."
   },
   {
     title: "ERPNext Implementation",
-    image: "/api/fb/n/files/icon-personalized-touch.svg",
+    image: "/images/icon-personalized-touch.svg",
     alt: "ERPNext Implementation",
     description: "Experience a seamless journey from initiation to completion. Our implementation services are characterized by strategic planning, robust execution, and continuous support, ensuring your business is perfectly positioned to harness the full power of ERPNext Partner capabilities."
   },
   {
     title: "Integration Services",
-    image: "/api/fb/n/files/icon-shorter-sales-cycle.svg",
+    image: "/images/icon-shorter-sales-cycle.svg",
     alt: "Integration Services",
     description: "Bridging gaps with seamless integration services, we optimize connectivity between ERPNext and various third-party applications and systems. Experience a symphony of integrated solutions working seamlessly to elevate operational efficiency and business intelligence."
   },
   {
     title: "Support and Maintenance",
-    image: "/api/fb/n/files/icon-improved-service.svg",
+    image: "/images/icon-improved-service.svg",
     alt: "Support and Maintenance",
     description: "Your business deserves uninterrupted excellence. Our dedicated team ensures that your ERPNext system runs with clockwork precision, offering unwavering support and maintenance services that stand as a pillar of reliability and assurance."
   },
   {
     title: "Training and Consultation",
-    image: "/api/fb/n/files/icon-customer-loyalty.svg",
+    image: "/images/icon-customer-loyalty.svg",
     alt: "Training and Consultation",
     description: "Knowledge is the beacon of business excellence. Through our extensive training and consultation services, we cultivate expertise, empower your team, and unlock new horizons of capability and adaptability within the ERPNext ecosystem."
   },
   {
     title: "Data Migration",
-    image: "/api/fb/n/files/icon-resource-optimization.svg",
+    image: "/images/icon-resource-optimization.svg",
     alt: "Data Migration",
     description: "Transcend traditional boundaries with our data migration services. Ensuring the integrity, accuracy, and security of your valuable business data, we pave the way for a transformation that is as profound as it is seamless."
   }
@@ -74,42 +74,42 @@ const erpFeatures = [
 const industryData = [
   {
     title: "ERP for Manufacturing",
-    image: "/api/fb/n/files/identifying objectives.svg",
+    image: "/images/identifying objectives.svg",
     alt: "identifying objectives",
     description: "In the manufacturing sector of the UAE, our manufacturing ERP plays a pivotal role in enabling efficient management of production processes, inventory control, quality assurance, and supply chain logistics. This empowers manufacturers to optimize production schedules, minimize lead times, and uphold efficient production operations. The manufacturing industry encompasses various subcategories, all of which our ERP system can adapt to, making it an ideal choice for ERP software for manufacturing industry in the UAE.",
     bg: "bg-gray"
   },
   {
     title: "ERP for Agro Commodity",
-    image: "/api/fb/n/files/make-use-of-clear-call-to-action.svg",
+    image: "/images/make-use-of-clear-call-to-action.svg",
     alt: "make-use-of-clear-call-to-action",
     description: "If you're in the UAE and looking for ERP solutions tailored to agribusiness, our ERP Agro system in the UAE is designed to automate agro-related processes efficiently. Agriculture, being a fundamental sector, requires specialized software. Our ERP system organizes data into a structured format, enabling businesses to make informed decisions that yield long-term benefits. It offers real-time data and seamless connectivity across all organizational processes and personnel, making it the best ERP for Agro Commodity in the UAE.",
     bg: "bg-lightgray"
   },
   {
     title: "ERP for Healthcare",
-    image: "/api/fb/n/files/customer onboarding.svg",
+    image: "/images/customer onboarding.svg",
     alt: "customer onboarding",
     description: "Designed specifically for healthcare organizations in the UAE, ERP for Healthcare is a specialized enterprise resource planning (ERP) software. It streamlines core business functions, including accounting, finance, manufacturing, sales, and customer service. This tailored ERP system extends beyond conventional ERP solutions, incorporating features unique to the healthcare sector, such as patient management, clinical coordination, and medical billing.",
     bg: "bg-lightgray"
   },
   {
     title: "ERP for Chemical",
-    image: "/api/fb/n/files/icon-integrated_paperwork_.svg",
+    image: "/images/icon-integrated_paperwork_.svg",
     alt: "icon-integrated_paperwor",
     description: "Tailored for chemical companies in the UAE, ERP for Chemical is a specialized enterprise resource planning (ERP) software designed to meet the unique needs of the chemical industry. It integrates and automates essential business processes like accounting, finance, manufacturing, sales, and customer service. Distinguished by its comprehensive nature, this ERP system includes features specifically crafted for the chemical industry. Explore the best chemical ERP software in the UAE, offering a robust solution for chemical manufacturing and CRM software tailored to the chemical industry's requirements.",
     bg: "bg-gray"
   },
   {
     title: "ERP for Pharmaceutical",
-    image: "/api/fb/n/files/training and development.svg",
+    image: "/images/training and development.svg",
     alt: "training and developmentt",
     description: "Developed for pharmaceutical firms in the UAE, ERP for Pharmaceutical is a specialized enterprise resource planning (ERP) software meticulously designed to cater to the unique requirements of the pharmaceutical industry. It seamlessly integrates and automates core business functions, including accounting, finance, manufacturing, sales, and customer service. This ERP system goes beyond standard solutions, incorporating industry-specific features necessary for the pharmaceutical sector in the UAE.",
     bg: "bg-gray"
   },
   {
     title: "ERP for Paper and Packaging",
-    image: "/api/fb/n/files/Customization.svg",
+    image: "/images/Customization.svg",
     alt: "Customization",
     description: "Tailored to meet the needs of the paper and packaging industry in the UAE, our ERP software seamlessly integrates and automates fundamental business processes such as accounting, finance, manufacturing, sales, and customer service. This ERP system encompasses a comprehensive range of features specifically designed to enhance operations within the paper and packaging industry in the UAE.",
     bg: "bg-lightgray"
@@ -117,24 +117,24 @@ const industryData = [
 ];
 
 const clientCountries = [
-  { name: "Vietnam", image: "/api/fb/n/files/vnm.svg", alt: "erpnext_partner_vietnam" },
-  { name: "USA", image: "/api/fb/n/files/US.svg", alt: "erpnext_partner_usa" },
-  { name: "UAE", image: "/api/fb/n/files/AE.svg", alt: "erpnext_partner_uae" },
-  { name: "Singapore", image: "/api/fb/n/files/sgp.svg", alt: "erpnext_partner_singapore" },
-  { name: "Saudi Arabia", image: "/api/fb/n/files/sau.svg", alt: "erpnext_partner_saudi_arabia" },
-  { name: "Norway", image: "/api/fb/n/files/NO.svg", alt: "erpnext_partner_norway" },
-  { name: "Malaysia", image: "/api/fb/n/files/MY.svg", alt: "erpnext_partner_malaysia" },
-  { name: "Mauritius", image: "/api/fb/n/files/MU.svg", alt: "erpnext_partner_mauritius" },
-  { name: "India", image: "/api/fb/n/files/ind.svg", alt: "erpnext_partner_india" },
-  { name: "Hungary", image: "/api/fb/n/files/HU.svg", alt: "erpnext_partner_hungary" },
-  { name: "HongKong", image: "/api/fb/n/files/HK.svg", alt: "erpnext_partner_hongkong" },
-  { name: "Germany", image: "/api/fb/n/files/ger.svg", alt: "erpnext_partner_germany" },
-  { name: "France", image: "/api/fb/n/files/FR.svg", alt: "erpnext_partner_france" },
-  { name: "China", image: "/api/fb/n/files/chn.svg", alt: "erpnext_partner_china" },
-  { name: "Canada", image: "/api/fb/n/files/CA.svg", alt: "erpnext_partner_canada" },
-  { name: "Brunei", image: "/api/fb/n/files/BN.svg", alt: "erpnext_partner_brunei" },
-  { name: "Belgium", image: "/api/fb/n/files/BE.svg", alt: "erpnext_partner_belgium" },
-  { name: "Australia", image: "/api/fb/n/files/AU.svg", alt: "erpnext_partner_australia" }
+  { name: "Vietnam", image: "/images/vnm.svg", alt: "erpnext_partner_vietnam" },
+  { name: "USA", image: "/images/US.svg", alt: "erpnext_partner_usa" },
+  { name: "UAE", image: "/images/AE.svg", alt: "erpnext_partner_uae" },
+  { name: "Singapore", image: "/images/sgp.svg", alt: "erpnext_partner_singapore" },
+  { name: "Saudi Arabia", image: "/images/sau.svg", alt: "erpnext_partner_saudi_arabia" },
+  { name: "Norway", image: "/images/NO.svg", alt: "erpnext_partner_norway" },
+  { name: "Malaysia", image: "/images/MY.svg", alt: "erpnext_partner_malaysia" },
+  { name: "Mauritius", image: "/images/MU.svg", alt: "erpnext_partner_mauritius" },
+  { name: "India", image: "/images/ind.svg", alt: "erpnext_partner_india" },
+  { name: "Hungary", image: "/images/HU.svg", alt: "erpnext_partner_hungary" },
+  { name: "HongKong", image: "/images/HK.svg", alt: "erpnext_partner_hongkong" },
+  { name: "Germany", image: "/images/ger.svg", alt: "erpnext_partner_germany" },
+  { name: "France", image: "/images/FR.svg", alt: "erpnext_partner_france" },
+  { name: "China", image: "/images/chn.svg", alt: "erpnext_partner_china" },
+  { name: "Canada", image: "/images/CA.svg", alt: "erpnext_partner_canada" },
+  { name: "Brunei", image: "/images/BN.svg", alt: "erpnext_partner_brunei" },
+  { name: "Belgium", image: "/images/BE.svg", alt: "erpnext_partner_belgium" },
+  { name: "Australia", image: "/images/AU.svg", alt: "erpnext_partner_australia" }
 ];
 
 export default function Page() {
@@ -148,7 +148,7 @@ export default function Page() {
         secondaryButton={{ text: "Our Partnership", action: handleSecondary }}
         heroImage={{
           alt: "ERPNext Service Provider in UAE ",
-          src: "/api/fb/n/files/Hire-ERPNext-Implementor679475.svg",
+          src: "/images/Hire-ERPNext-Implementor679475.svg",
         }}
       />
       <Section>
@@ -209,25 +209,25 @@ export default function Page() {
           <div className="grid md:grid-cols-2 gap-8 mt-10">
             <FeatureCard
               title="Improved efficiency"
-              image="/files/three-hexagon.svg"
+              image="/images/three-hexagon.svg"
               alt="Improved efficiency"
               description="ERPNext can help businesses in the UAE to improve their efficiency by automating many of their manual tasks. This can free up time for employees to focus on more important tasks, such as sales and customer service."
             />
             <FeatureCard
               title="Reduced costs"
-              image="/api/fb/n/files/js knowledge.svg"
+              image="/images/js knowledge.svg"
               alt="Reduced costs"
               description="ERPNext can help businesses in the UAE to reduce costs by eliminating the need to purchase and maintain multiple software solutions. ERPNext is a one-stop-shop for all of a business's ERP needs."
             />
             <FeatureCard
               title="Increased visibility"
-              image="/api/fb/n/files/icon-Real-time-information.svg"
+              image="/images/icon-Real-time-information.svg"
               alt="Increased visibility"
               description="ERPNext provides businesses in the UAE with a real-time view of their operations. This visibility can help businesses to identify and address problems quickly, and to make better decisions about their future."
             />
             <FeatureCard
               title="Improved compliance"
-              image="/api/fb/n/files/icon-Higher-Productivity.svg"
+              image="/images/icon-Higher-Productivity.svg"
               alt="Improved compliance"
               description="ERPNext can help businesses in the UAE to comply with local regulations. ERPNext is regularly updated to comply with the latest changes in UAE laws and regulations."
             />
@@ -250,19 +250,19 @@ export default function Page() {
           <div className="grid md:grid-cols-3 gap-8 mt-6">
             <FeatureCard
               title="Experience"
-              image="/api/fb/n/files/js knowledge.svg"
+              image="/images/js knowledge.svg"
               alt="Experience"
               description="Choose a company with experience in implementing and customizing ERPNext."
             />
             <FeatureCard
               title="Expertise"
-              image="/api/fb/n/files/icon-Real-time-information.svg"
+              image="/images/icon-Real-time-information.svg"
               alt="Expertise"
               description="Choose a company with expertise in the industry in which your business operates."
             />
             <FeatureCard
               title="Support"
-              image="/api/fb/n/files/icon-Higher-Productivity.svg"
+              image="/images/icon-Higher-Productivity.svg"
               alt="Support"
               description="Select a company that provides extensive support and maintenance services."
             />

@@ -37,7 +37,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'Career',
-          src: 'api/fb/n/files/banner-career.svg',
+          src: '/images/banner-career.svg',
           videoSrc: undefined,
         }}
       />
@@ -56,7 +56,7 @@ export default function Page() {
             </div>
             <div className="flex-shrink-0 flex flex-col items-center gap-2">
               <img
-                src="/api/fb/n/files/Quotation_marks.svg"
+                src="/images/Quotation_marks.svg"
                 alt="Quotation marks"
                 width={64}
                 height={64}
@@ -81,19 +81,19 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in-up">
             <FeatureCard
               title="INDIVIDUAL TALENT"
-              image="/api/fb/n/files/icon-individual-talent.svg"
+              image="/images/icon-individual-talent.svg"
               alt="Individual Talent"
               description="Focus on your special talents and interests."
             />
             <FeatureCard
               title="TEAM SPIRIT"
-              image="/api/fb/n/files/icon-team-spirit.svg"
+              image="/images/icon-team-spirit.svg"
               alt="Team Spirit"
               description="Inspire and be inspired by your coworkers!"
             />
             <FeatureCard
               title="FREEDOM OF IDEAS"
-              image="/api/fb/n/files/icon-freedom-of-ideas.svg"
+              image="/images/icon-freedom-of-ideas.svg"
               alt="Freedom of Ideas"
               description="We listen to you and support your innovative ideas."
             />

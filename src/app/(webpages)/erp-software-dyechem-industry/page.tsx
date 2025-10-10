@@ -33,8 +33,8 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'DyeChem Industry',
-          src: 'api/fb/n/files/chemical_Module 2019-04-12 12_42_16.svg',
-          videoSrc: 'api/fb/n/files/Chemical_without_watermark.mp4',
+          src: '/images/chemical_Module 2019-04-12 12_42_16.svg',
+          videoSrc: '/images/Chemical_without_watermark.mp4',
         }}
       />
 
@@ -70,7 +70,7 @@ export default function Page() {
             </div>
             <div className="flex-1 flex justify-center">
               <img
-                src="/api/fb/n/files/problem.svg"
+                src="/images/problem.svg"
                 alt="Problems"
                 width={250}
                 height={220}
@@ -112,7 +112,7 @@ export default function Page() {
             </div>
             <div className="flex-1 flex justify-center">
               <img
-                src="/api/fb/n/files/idea.svg"
+                src="/images/idea.svg"
                 alt="Solution"
                 width={250}
                 height={220}

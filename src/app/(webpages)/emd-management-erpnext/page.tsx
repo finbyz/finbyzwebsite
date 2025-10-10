@@ -28,7 +28,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'EMD Management in ERPNext',
-          src: 'api/fb/n/files/EMD-PageDesign-for-Apps.svg',
+          src: '/images/EMD-PageDesign-for-Apps.svg',
         }}
       />
 
@@ -81,25 +81,25 @@ export default function Page() {
               {
                 title: 'At Time of Giving EMD',
                 description: 'Fill out the EMD form by entering Customer, Due Date, Deposit Account, Bank Account, Tender Name/No, Amount, Charges, and Payment Details. On submission, a Journal Entry will be created reflecting charges and receivables under ERPNext EMD accounting. Status will update as “Paid.”',
-                image: 'api/fb/n/files/EMD Paid-26-36.gif',
+                image: '/files/EMD Paid-26-36.gif',
                 alt: 'EMD Paid',
               },
               {
                 title: 'When EMD is Due',
                 description: 'For overdue EMDs, the system flags the status as “Due.” You can choose to enable “Send Weekly Reminder,” and the app will automate reminder emails using templates and recipient details pulled from the system. This helps in timely follow-ups for earnest money deposit returns.',
-                image: 'api/fb/n/files/EMD Due-52-62.gif',
+                image: '/files/EMD Due-52-62.gif',
                 alt: 'EMD Due',
               },
               {
                 title: 'When EMD is Returned',
                 description: 'Open the returned EMD, mark it as “Returned,” enter the interest amount and receiving bank details. The app will automatically create a journal entry reflecting the interest income and mark the ERPNext security deposit as refunded.',
-                image: 'api/fb/n/files/EMD Returned-90-100.gif',
+                image: '/files/EMD Returned-90-100.gif',
                 alt: 'EMD Returned',
               },
               {
                 title: 'If EMD Forfeited',
                 description: 'In case of forfeiture, mark the EMD as “Forfeited,” select the write-off account, and the system will generate the appropriate Journal Entry to remove the balance from books, aligning with proper ERPNext EMD accounting practices.',
-                image: 'api/fb/n/files/EMD Forfieted-115-125.gif',
+                image: '/files/EMD Forfieted-115-125.gif',
                 alt: 'EMD Forfeited',
               },
             ]}

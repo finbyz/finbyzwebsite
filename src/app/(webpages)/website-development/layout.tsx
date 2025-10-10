@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/web-development.svg", width: 1200, height: 630, alt: " Website Development Services & Design in Ahmedabad, India" }],
+    images: [{ url: "/images/web-development.svg", width: 1200, height: 630, alt: " Website Development Services & Design in Ahmedabad, India" }],
   },
   twitter: {
     card: "summary_large_image",
     title: " Website Development Services & Design in Ahmedabad, India",
     description: "Boost your presence with our premier website development company. We offer expert web development services, specializing in web design & development.",
     creator: "@finbyz",
-    images: ["/files/web-development.svg"],
+    images: ["/images/web-development.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": " Website Development Services & Design in Ahmedabad, India",
   "url": "https://finbyz.tech/website-development",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/web-development.svg",
+  "image": "/images/web-development.svg",
   "description": "Boost your presence with our premier website development company. We offer expert web development services, specializing in web design & development.",
   "priceRange": "INR",
   "address": {

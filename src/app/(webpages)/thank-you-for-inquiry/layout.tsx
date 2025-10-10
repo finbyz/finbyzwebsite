@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/Thank-you.svg", width: 1200, height: 630, alt: "Thank You for Your Inquiry | Finbyz Tech" }],
+    images: [{ url: "/images/Thank-you.svg", width: 1200, height: 630, alt: "Thank You for Your Inquiry | Finbyz Tech" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Thank You for Your Inquiry | Finbyz Tech",
     description: "Thank You Page Inquiry",
     creator: "@finbyz",
-    images: ["/files/Thank-you.svg"],
+    images: ["/images/Thank-you.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Thank You for Your Inquiry | Finbyz Tech",
   "url": "https://finbyz.tech/thank-you-for-inquiry",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/Thank-you.svg",
+  "image": "/images/Thank-you.svg",
   "description": "Thank You Page Inquiry",
   "priceRange": "INR",
   "address": {

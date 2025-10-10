@@ -27,8 +27,8 @@ export default function Page() {
         secondaryButton={{ text: 'Learn More', action: handleSecondaryCTA }}
         heroImage={{
           alt: 'ERPNext for the Engineering Industry',
-          src: 'api/fb/n/files/Engineeringaced93.svg',
-          videoSrc: 'api/fb/n/files/Benefiys_for_ERP_software_for_engineering.mp4',
+          src: '/images/Engineeringaced93.svg',
+          videoSrc: '/images/Benefiys_for_ERP_software_for_engineering.mp4',
         }}
       />
 
@@ -78,28 +78,28 @@ export default function Page() {
             benefits={[
               {
                 title: 'Accurate Cost & Revenue Estimation',
-                image: 'api/fb/n/files/estimation-of-cost.svg',
+                image: '/images/estimation-of-cost.svg',
                 alt: 'Estimation of cost and revenue',
                 description: 'ERP systems automate calculations for project costs and revenue. This accuracy saves time and reduces errors in budgeting complex engineering projects.',
                 bg: 'gray',
               },
               {
                 title: 'Increased Productivity',
-                image: 'api/fb/n/files/automation-increases.svg',
+                image: '/images/automation-increases.svg',
                 alt: 'Automation increases productivity',
                 description: 'By automating routine tasks, ERP software frees engineers from paperwork. This efficiency boost accelerates project completion and overall productivity.',
                 bg: 'lightgray',
               },
               {
                 title: 'Efficient Workflows',
-                image: 'api/fb/n/files/efficient-working-methods.svg',
+                image: '/images/efficient-working-methods.svg',
                 alt: 'Efficient working methods',
                 description: 'Digital workflows replace manual processes, improving data organization and collaboration. All engineering data and documentation are stored systematically, enabling faster responses and better decisions.',
                 bg: 'lightgray',
               },
               {
                 title: 'Higher Return on Investment',
-                image: 'api/fb/n/files/return-on-investment.svg',
+                image: '/images/return-on-investment.svg',
                 alt: 'Increase in the Return on Investment',
                 description: 'Engineering ERP reduces waste and labor costs. With real-time data at every step, managers can spot and fix issues early. Improved accuracy and efficiency lead to faster returns on investment and greater profitability.',
                 bg: 'gray',
@@ -135,14 +135,14 @@ export default function Page() {
             types={[
               {
                 title: 'ERP for Project Engineering',
-                image: 'api/fb/n/files/project-engineering.svg',
+                image: '/images/project-engineering.svg',
                 alt: 'ERP for Project engineering',
                 description: 'Project engineering involves designing or manufacturing projects (such as structures or devices). This category includes planning, scheduling, resource forecasting, and vendor management. ERPNext manages these activities by coordinating tasks and tracking resources across the project lifecycle.',
                 bg: 'gray',
               },
               {
                 title: 'ERP for System Engineering',
-                image: 'api/fb/n/files/system-engineering.svg',
+                image: '/images/system-engineering.svg',
                 alt: 'ERP for System Engineering',
                 description: 'System engineering focuses on creating complex systems from multiple components. ERPNext supports this by linking the entire development process – from design to implementation – so all parts work together seamlessly. It manages system designs, documentation, and processes over the project’s life cycle.',
                 bg: 'lightgray',

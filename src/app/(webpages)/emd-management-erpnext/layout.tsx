@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/EMD-PageDesign-for-Apps.svg", width: 1200, height: 630, alt: "Efficient EMD Management in ERPNext | Streamline Earnest Money Deposits" }],
+    images: [{ url: "/images/EMD-PageDesign-for-Apps.svg", width: 1200, height: 630, alt: "Efficient EMD Management in ERPNext | Streamline Earnest Money Deposits" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Efficient EMD Management in ERPNext | Streamline Earnest Money Deposits",
     description: "Optimize your Earnest Money Deposit processes with ERPNext. Learn how to manage EMDs efficiently, automate accounting entries, and ensure compliance.",
     creator: "@finbyz",
-    images: ["/files/EMD-PageDesign-for-Apps.svg"],
+    images: ["/images/EMD-PageDesign-for-Apps.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Efficient EMD Management in ERPNext | Streamline Earnest Money Deposits",
   "url": "https://finbyz.tech/emd-management-erpnext",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/EMD-PageDesign-for-Apps.svg",
+  "image": "/images/EMD-PageDesign-for-Apps.svg",
   "description": "Optimize your Earnest Money Deposit processes with ERPNext. Learn how to manage EMDs efficiently, automate accounting entries, and ensure compliance.",
   "priceRange": "INR",
   "address": {

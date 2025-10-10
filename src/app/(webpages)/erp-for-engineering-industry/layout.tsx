@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/Engineeringaced93.svg", width: 1200, height: 630, alt: "Engineering ERP Software Solutions | FinByz Tech" }],
+    images: [{ url: "/images/Engineeringaced93.svg", width: 1200, height: 630, alt: "Engineering ERP Software Solutions | FinByz Tech" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Engineering ERP Software Solutions | FinByz Tech",
     description: "FinByz Tech delivers ERPNext-based engineering ERP software solutions. Streamline engineering and software engineering operations with integrated project, inventory, and financial management.",
     creator: "@finbyz",
-    images: ["/files/Engineeringaced93.svg"],
+    images: ["/images/Engineeringaced93.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Engineering ERP Software Solutions | FinByz Tech",
   "url": "https://finbyz.tech/erp-for-engineering-industry",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/Engineeringaced93.svg",
+  "image": "/images/Engineeringaced93.svg",
   "description": "FinByz Tech delivers ERPNext-based engineering ERP software solutions. Streamline engineering and software engineering operations with integrated project, inventory, and financial management.",
   "priceRange": "INR",
   "address": {

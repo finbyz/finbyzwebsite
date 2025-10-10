@@ -50,7 +50,7 @@ export default function Page() {
             Productify is a powerful Staff Monitoring Software, available both as a desktop app and a browser extension. Supporting Google Chrome, Microsoft Edge, and Brave, it ensures effective employee supervision regardless of location. Whether your workforce is remote or office-based, this time tracking software delivers actionable insights and secure activity monitoring to maximize productivity while maintaining data integrity.
           </p>
           <ProductifyImageSection
-            src="/api/fb/n/files/Productify%20Activity%20Analysis%20Overall.jpg"
+            src="/images/Productify%20Activity%20Analysis%20Overall.jpg"
             alt="Productify Activity Analysis Overall"
             caption="Productify Activity Analysis Overall"
           />
@@ -114,7 +114,7 @@ export default function Page() {
         <div className="container-custom py-8">
           <h2 className="text-2xl text-[#1A5276] font-semibold text-center mb-6 animate-fadeInUp">Activity Summary</h2>
           <ProductifyImageSection
-            src="/api/fb/n/files/Productify%20Activity%20Summary.jpg"
+            src="/images/Productify%20Activity%20Summary.jpg"
             alt="Productify Activity Summary"
             caption="Visual breakdown of employee actions through a Gantt chart."
           />
@@ -133,7 +133,7 @@ export default function Page() {
         <div className="container-custom py-8">
           <h2 className="text-2xl text-[#1A5276] font-semibold text-center mb-6 animate-fadeInUp">Activity Summary Report</h2>
           <ProductifyImageSection
-            src="/api/fb/n/files/Productify%20Activity%20Summary%20Report.png"
+            src="/images/Productify%20Activity%20Summary%20Report.png"
             alt="Productify Activity Summary Report"
             caption="Line Chart tracking Total Hours, Active Hours, Call Hours, and Meeting Hours."
           />
@@ -152,7 +152,7 @@ export default function Page() {
         <div className="container-custom py-8">
           <h2 className="text-2xl text-[#1A5276] font-semibold text-center mb-6 animate-fadeInUp">System Activity</h2>
           <ProductifyImageSection
-            src="/api/fb/n/files/Productify%20Work%20Intensity.jpg"
+            src="/images/Productify%20Work%20Intensity.jpg"
             alt="Productify Work Intensity"
             caption="Work Intensity Heatmap for keystrokes and mouse clicks."
           />
@@ -177,7 +177,7 @@ export default function Page() {
           <div className="flex flex-col items-center">
             <div className="w-full aspect-square overflow-hidden rounded-lg shadow-lg">
               <img
-                src="/api/fb/n/files/Productify%20Applications%20Used.jpg"
+                src="/images/Productify%20Applications%20Used.jpg"
                 alt="Productify Applications Used"
                 className="w-full h-full object-cover"
               />
@@ -191,7 +191,7 @@ export default function Page() {
           <div className="flex flex-col items-center">
             <div className="w-full aspect-square overflow-hidden rounded-lg shadow-lg">
               <img
-                src="/api/fb/n/files/Productify%20Web%20Browsing%20Time.jpg"
+                src="/images/Productify%20Web%20Browsing%20Time.jpg"
                 alt="Productify Web Browsing Time"
                 className="w-full h-full object-cover"
               />
@@ -208,7 +208,7 @@ export default function Page() {
         <div className="container-custom py-8">
           <h2 className="text-2xl text-[#1A5276] font-semibold text-center mb-6 animate-fadeInUp">Domain Analysis Report</h2>
           <ProductifyImageSection
-            src="/api/fb/n/files/Report%20Domain%20Analysis.png"
+            src="/images/Report%20Domain%20Analysis.png"
             alt="Report Domain Analysis"
             caption="Browser usage by user and date for complete transparency."
           />
@@ -234,7 +234,7 @@ export default function Page() {
       <div className="flex flex-col items-center">
         <div className="w-full max-w-md overflow-hidden rounded-lg shadow-lg bg-white p-4">
           <img
-            src="/api/fb/n/files/Productify%20Top%20Phone%20Calls.jpg"
+            src="/images/Productify%20Top%20Phone%20Calls.jpg"
             alt="Productify Top Phone Calls"
             className="w-full h-auto object-contain"
           />
@@ -248,7 +248,7 @@ export default function Page() {
       <div className="flex flex-col items-center">
         <div className="w-full max-w-sm overflow-hidden rounded-lg shadow-lg bg-white p-4">
           <img
-            src="/api/fb/n/files/Type%20of%20Calls.png"
+            src="/images/Type%20of%20Calls.png"
             alt="Type of Calls"
             className="w-full h-auto object-contain"
           />
@@ -265,7 +265,7 @@ export default function Page() {
         <div className="container-custom py-8">
           <h2 className="text-2xl text-[#1A5276] font-semibold text-center mb-6 animate-fadeInUp">Hourly Calls Analysis</h2>
           <ProductifyImageSection
-            src="/api/fb/n/files/Productify%20Hourly%20Calls.jpg"
+            src="/images/Productify%20Hourly%20Calls.jpg"
             alt="Productify Hourly Calls"
             caption="Hourly Calls help organizations optimize team schedules by revealing detailed call patterns."
           />
@@ -281,7 +281,7 @@ export default function Page() {
         <div className="container-custom py-8">
           <h2 className="text-2xl text-[#1A5276] font-semibold text-center mb-6 animate-fadeInUp">Consolidated Analysis</h2>
           <ProductifyImageSection
-            src="/api/fb/n/files/Consolidated%20table.png"
+            src="/images/Consolidated%20table.png"
             alt="Productify Consolidated Analysis"
             caption="The User Analysis dashboard consolidates all core productivity metrics."
           />

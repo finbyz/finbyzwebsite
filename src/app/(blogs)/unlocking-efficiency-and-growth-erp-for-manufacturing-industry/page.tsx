@@ -63,7 +63,7 @@ export default function Page() {
             id="what-is-erp"
             title="What is ERP?"
             image={{
-              src: '/api/fb/n/files/ERPNext-logo1.png',
+              src: '//files/ERPNext-logo1.png',
               alt: 'ERP',
               title: 'ERP',
               width: 180,
@@ -84,7 +84,7 @@ export default function Page() {
             id="understanding-erp-for-manufacturing"
             title="Understanding ERP for Manufacturing"
             image={{
-              src: '/api/fb/n/files/asynchnorus.svg',
+              src: '//files/asynchnorus.svg',
               alt: 'ERP for Manufacturing',
               title: 'ERP-for-Manufacturing',
               width: 150,
@@ -105,7 +105,7 @@ export default function Page() {
                 id="enhanced-efficiency"
                 title="Enhanced Efficiency"
                 image={{
-                  src: '/api/fb/n/files/system%20setup.svg',
+                  src: '//files/system%20setup.svg',
                   alt: 'Enhanced Efficiency',
                   title: 'Enhanced-Efficiency',
                   width: 150,
@@ -127,7 +127,7 @@ export default function Page() {
                 id="improved-visibility"
                 title="Improved Visibility"
                 image={{
-                  src: '/api/fb/n/files/15.svg',
+                  src: '//files/15.svg',
                   alt: 'Improved Visibility',
                   title: 'Improved-Visibility',
                   width: 150,
@@ -165,7 +165,7 @@ export default function Page() {
                 id="improved-quality-control"
                 title="Improved Quality Control"
                 image={{
-                  src: '/api/fb/n/files/animation.svg',
+                  src: '//files/animation.svg',
                   alt: 'Improved Quality Control',
                   title: 'Improved-Quality-Control',
                   width: 150,
@@ -184,7 +184,7 @@ export default function Page() {
                 id="simplified-supply-chain-management"
                 title="Simplified Supply Chain Management"
                 image={{
-                  src: '/api/fb/n/files/automation-increases.svg',
+                  src: '//files/automation-increases.svg',
                   alt: 'Simplified Supply Chain Management',
                   title: 'Simplified-Supply-Chain-Management',
                 }}
@@ -201,7 +201,7 @@ export default function Page() {
                 id="cost-savings"
                 title="Cost Savings"
                 image={{
-                  src: '/api/fb/n/files/cost-effective%20solutions.svg',
+                  src: '//files/cost-effective%20solutions.svg',
                   alt: 'Cost Savings',
                   title: 'Cost-Savings',
                   width: 150,
@@ -222,7 +222,7 @@ export default function Page() {
               {/* Bill of Materials (BOM) Management */}
               <Card className="border-none shadow-md hover:shadow-lg transition-shadow duration-300">
                 <CardHeader className="flex flex-col items-center">
-                  <Image src="/files/bom-cover-image-full-resolution.png" alt="Bill of Materials (BOM) Management" title="Bill-of-Materials-(BOM)-Management" width={80} height={80} className="mb-2" />
+                  <Image src="/images/bom-cover-image-full-resolution.png" alt="Bill of Materials (BOM) Management" title="Bill-of-Materials-(BOM)-Management" width={80} height={80} className="mb-2" />
                   <CardTitle className="text-lg font-semibold">Bill of Materials (BOM) Management</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -246,7 +246,7 @@ export default function Page() {
               {/* Material Requirement Planning (MRP) */}
               <Card className="border-none shadow-md hover:shadow-lg transition-shadow duration-300">
                 <CardHeader className="flex flex-col items-center">
-                  <Image src="/files/icon-order-management.svg" alt="Material Requirement Planning (MRP)" title="Material-Requirement-Planning (MRP)" width={80} height={80} className="mb-2" />
+                  <Image src="/images/icon-order-management.svg" alt="Material Requirement Planning (MRP)" title="Material-Requirement-Planning (MRP)" width={80} height={80} className="mb-2" />
                   <CardTitle className="text-lg font-semibold">Material Requirement Planning (MRP)</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -258,7 +258,7 @@ export default function Page() {
               {/* Shop Floor Control */}
               <Card className="border-none shadow-md hover:shadow-lg transition-shadow duration-300">
                 <CardHeader className="flex flex-col items-center">
-                  <Image src="/files/shopfloor.webp" alt="Shop Floor Control" title="Shop-Floor -Control" width={80} height={80} className="mb-2" />
+                  <Image src="/images/shopfloor.webp" alt="Shop Floor Control" title="Shop-Floor -Control" width={80} height={80} className="mb-2" />
                   <CardTitle className="text-lg font-semibold">Shop Floor Control</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -270,7 +270,7 @@ export default function Page() {
               {/* Quality Management */}
               <Card className="border-none shadow-md hover:shadow-lg transition-shadow duration-300">
                 <CardHeader className="flex flex-col items-center">
-                  <Image src="/files/quality%20assurance.svg" alt="Quality Management" title="Quality- Management" width={80} height={80} className="mb-2" />
+                  <Image src="/images/quality%20assurance.svg" alt="Quality Management" title="Quality- Management" width={80} height={80} className="mb-2" />
                   <CardTitle className="text-lg font-semibold">Quality Management</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -282,7 +282,7 @@ export default function Page() {
               {/* Supply Chain Integration */}
               <Card className="border-none shadow-md hover:shadow-lg transition-shadow duration-300">
                 <CardHeader className="flex flex-col items-center">
-                  <Image src="/files/24.svg" alt="Supply Chain Integration" title="Supply-Chain-Integration" width={80} height={80} className="mb-2" />
+                  <Image src="/images/24.svg" alt="Supply Chain Integration" title="Supply-Chain-Integration" width={80} height={80} className="mb-2" />
                   <CardTitle className="text-lg font-semibold">Supply Chain Integration</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -294,7 +294,7 @@ export default function Page() {
               {/* Inventory Optimization */}
               <Card className="border-none shadow-md hover:shadow-lg transition-shadow duration-300">
                 <CardHeader className="flex flex-col items-center">
-                  <Image src="/files/124.svg" alt="Inventory Optimization" title="Inventory -Optimization" width={80} height={80} className="mb-2" />
+                  <Image src="/images/124.svg" alt="Inventory Optimization" title="Inventory -Optimization" width={80} height={80} className="mb-2" />
                   <CardTitle className="text-lg font-semibold">Inventory Optimization</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -306,7 +306,7 @@ export default function Page() {
               {/* Financial Management */}
               <Card className="border-none shadow-md hover:shadow-lg transition-shadow duration-300">
                 <CardHeader className="flex flex-col items-center">
-                  <Image src="/files/246.svg" alt="Financial Management" title="Financial- Management" width={80} height={80} className="mb-2" />
+                  <Image src="/images/246.svg" alt="Financial Management" title="Financial- Management" width={80} height={80} className="mb-2" />
                   <CardTitle className="text-lg font-semibold">Financial Management</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -326,7 +326,7 @@ export default function Page() {
               {/* Pick the Correct ERP Solution */}
               <Card className="border-none shadow-md hover:shadow-lg transition-shadow duration-300">
                 <CardHeader className="flex flex-col items-center">
-                  <Image src="/files/8.svg" alt="Pick the Correct ERP Solution" title="Pick-the- correct-ERP-Solution" width={80} height={80} className="mb-2" />
+                  <Image src="/images/8.svg" alt="Pick the Correct ERP Solution" title="Pick-the- correct-ERP-Solution" width={80} height={80} className="mb-2" />
                   <CardTitle className="text-lg font-semibold">Pick the Correct ERP Solution</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -338,7 +338,7 @@ export default function Page() {
               {/* Involve Customers */}
               <Card className="border-none shadow-md hover:shadow-lg transition-shadow duration-300">
                 <CardHeader className="flex flex-col items-center">
-                  <Image src="/files/provide-ways-to-reach-you.svg" alt="Involve Customers" title="Involve-Customers" width={80} height={80} className="mb-2" />
+                  <Image src="/images/provide-ways-to-reach-you.svg" alt="Involve Customers" title="Involve-Customers" width={80} height={80} className="mb-2" />
                   <CardTitle className="text-lg font-semibold">Involve Customers</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -350,7 +350,7 @@ export default function Page() {
               {/* Provide Training and Support */}
               <Card className="border-none shadow-md hover:shadow-lg transition-shadow duration-300">
                 <CardHeader className="flex flex-col items-center">
-                  <Image src="/files/training%20and%20development.svg" alt="Provide Training and Support" title="Provide-Training-and-Support" width={80} height={80} className="mb-2" />
+                  <Image src="/images/training%20and%20development.svg" alt="Provide Training and Support" title="Provide-Training-and-Support" width={80} height={80} className="mb-2" />
                   <CardTitle className="text-lg font-semibold">Provide Training and Support</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -362,7 +362,7 @@ export default function Page() {
               {/* Phased Implementation */}
               <Card className="border-none shadow-md hover:shadow-lg transition-shadow duration-300">
                 <CardHeader className="flex flex-col items-center">
-                  <Image src="/files/193.svg" alt="Phased Implementation" title="Phased-Implementation" width={80} height={80} className="mb-2" />
+                  <Image src="/images/193.svg" alt="Phased Implementation" title="Phased-Implementation" width={80} height={80} className="mb-2" />
                   <CardTitle className="text-lg font-semibold">Phased Implementation</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -374,7 +374,7 @@ export default function Page() {
               {/* Data Migration and Integration */}
               <Card className="border-none shadow-md hover:shadow-lg transition-shadow duration-300">
                 <CardHeader className="flex flex-col items-center">
-                  <Image src="/files/dont-ignore-the-mobile-experience.svg.svg" alt="Data Migration and Integration" title="Data-Migration-and-Integration" width={80} height={80} className="mb-2" />
+                  <Image src="/images/dont-ignore-the-mobile-experience.svg.svg" alt="Data Migration and Integration" title="Data-Migration-and-Integration" width={80} height={80} className="mb-2" />
                   <CardTitle className="text-lg font-semibold">Data Migration and Integration</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -386,7 +386,7 @@ export default function Page() {
               {/* Track and Assess Performance */}
               <Card className="border-none shadow-md hover:shadow-lg transition-shadow duration-300">
                 <CardHeader className="flex flex-col items-center">
-                  <Image src="/files/5182a3c68.svg" alt="Track and Assess Performance" title="Track-and-Assess-Performance" width={80} height={80} className="mb-2" />
+                  <Image src="/images/5182a3c68.svg" alt="Track and Assess Performance" title="Track-and-Assess-Performance" width={80} height={80} className="mb-2" />
                   <CardTitle className="text-lg font-semibold">Track and Assess Performance</CardTitle>
                 </CardHeader>
                 <CardContent>

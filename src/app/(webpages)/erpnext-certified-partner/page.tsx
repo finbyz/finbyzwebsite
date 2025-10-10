@@ -31,7 +31,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'ERPNext Certified Partner',
-          src: 'api/fb/n/files/Frappe-Certified-parnter-Page Design-SVG.svg',
+          src: '/images/Frappe-Certified-parnter-Page Design-SVG.svg',
           
         }}
       />
@@ -85,7 +85,7 @@ export default function Page() {
                   </div>
 
                   <img
-                    src="/api/fb/n/files/Frappe-Partner-Certificate-Logo.svg"
+                    src="/images/Frappe-Partner-Certificate-Logo.svg"
                     alt="ERPNext partner img"
                     width={270}
                     height={140}
@@ -126,7 +126,7 @@ export default function Page() {
           <div className="flex flex-col md:flex-row gap-8 items-center mt-8">
             <div className="flex-1 flex justify-center">
               <img
-                src="/api/fb/n/files/image_2023_09_08T10_56_59_090Z.png"
+                src="/images/image_2023_09_08T10_56_59_090Z.png"
                 alt="ERPNext_Partner"
                 width={480}
                 height={240}

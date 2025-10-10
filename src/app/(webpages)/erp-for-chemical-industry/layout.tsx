@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/chemical_new.svg", width: 1200, height: 630, alt: "Comprehensive ERP Solutions for the Chemical Industry | Finbyz Tech" }],
+    images: [{ url: "/images/chemical_new.svg", width: 1200, height: 630, alt: "Comprehensive ERP Solutions for the Chemical Industry | Finbyz Tech" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Comprehensive ERP Solutions for the Chemical Industry | Finbyz Tech",
     description: "Discover Finbyz Tech\'s tailored ERP solutions for the chemical industry. Streamline operations, ensure compliance, and boost productivity with our specialized ERP software.",
     creator: "@finbyz",
-    images: ["/files/chemical_new.svg"],
+    images: ["/images/chemical_new.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Comprehensive ERP Solutions for the Chemical Industry | Finbyz Tech",
   "url": "https://finbyz.tech/erp-for-chemical-industry",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/chemical_new.svg",
+  "image": "/images/chemical_new.svg",
   "description": "Discover Finbyz Tech\'s tailored ERP solutions for the chemical industry. Streamline operations, ensure compliance, and boost productivity with our specialized ERP software.",
   "priceRange": "INR",
   "address": {

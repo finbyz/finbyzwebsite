@@ -44,7 +44,7 @@ export default function Page() {
             id="introduction"
             title="Introduction"
             image={{
-              src: '/api/fb/n/files/benefits-of-erp-for-manufacturing.svg',
+              src: '//files/benefits-of-erp-for-manufacturing.svg',
               alt: 'Benefits of ERP for Manufacturing',
               title: 'Benefits of ERP for Manufacturing',
               width: 400,

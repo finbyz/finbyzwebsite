@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/CRMWord.svg", width: 1200, height: 630, alt: "Best CRM Software & Open Source CRM System | Finbyz Tech" }],
+    images: [{ url: "/images/CRMWord.svg", width: 1200, height: 630, alt: "Best CRM Software & Open Source CRM System | Finbyz Tech" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Best CRM Software & Open Source CRM System | Finbyz Tech",
     description: "Streamline your sales, marketing, and support with Finbyz CRM Software. Discover our powerful CRM system and flexible open source CRM solutions designed for growth.",
     creator: "@finbyz",
-    images: ["/files/CRMWord.svg"],
+    images: ["/images/CRMWord.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Best CRM Software & Open Source CRM System | Finbyz Tech",
   "url": "https://finbyz.tech/crm-software",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/CRMWord.svg",
+  "image": "/images/CRMWord.svg",
   "description": "Streamline your sales, marketing, and support with Finbyz CRM Software. Discover our powerful CRM system and flexible open source CRM solutions designed for growth.",
   "priceRange": "INR",
   "address": {

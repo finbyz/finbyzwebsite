@@ -47,7 +47,7 @@ export default function Page() {
             id="introduction"
             title="Introduction"
             image={{
-              src: '/api/fb/n/files/46cb2df.svg',
+              src: '//files/46cb2df.svg',
               alt: 'Manufacturing-Software',
               title: 'Manufacturing-Software',
               cover: true
@@ -119,7 +119,7 @@ export default function Page() {
             id="tip-4"
             title="Tip 4: Consider Deployment Options"
             image={{
-              src: '/api/fb/n/files/Consider%20Deployment%20Options.png',
+              src: '//files/Consider%20Deployment%20Options.png',
               alt: 'Consider-Deployment-Options',
               title: 'Consider-Deployment-Options',
               width: 150,
