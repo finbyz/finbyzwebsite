@@ -24,7 +24,9 @@ const GALLERY_FIELDS = [
     "youtube_link",
     "svg_image",
     "doctype",
-    "gallery_sidebar"
+    "gallery_sidebar",
+    "animated_image",
+    "quote"
 ];
 
 /**
@@ -135,7 +137,9 @@ async function getGalleriesByRoutes(routes: string[]): Promise<Gallery[]> {
                 description: gallery.description,
                 youtube_link: gallery.youtube_link,
                 svg_image: gallery.svg_image,
-                gallery_sidebar: gallery.gallery_sidebar
+                gallery_sidebar: gallery.gallery_sidebar,
+                animated_image: gallery.animated_image,
+                quote: gallery.quote
             }
         });
 

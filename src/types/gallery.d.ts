@@ -19,6 +19,8 @@ interface Gallery {
     description: string;
     youtube_link: string;
     svg_image: string;
+    animated_image?: string;
+    quote?:string;
     gallery_sidebar?: GallerySidebarItem[];
 }
 

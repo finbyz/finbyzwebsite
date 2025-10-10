@@ -237,33 +237,33 @@ export default function Page() {
           <p>
             Partner with Finbyz Tech to unlock the full potential of your business with innovative, scalable, and secure web applications. Our expert team is ready to help you achieve your digital goals.
           </p>
-          <CTA
-            data={{
-              subheading: {
-                text: 'Let’s Get Started',
-                icon: 'Rocket',
-              },
-              title: 'Hire Expert Web Application Developers',
-              highlightText:"Web Application Developers",
-              description: 'Contact us today to discuss your project and see how we can help you grow.',
-              primaryButton: {
-                text: 'Contact Us',
-                icon: 'ArrowRight',
-                action: handleContact,
-              },
-              secondaryButton: {
-                text: 'Learn More',
-                icon: 'Info',
-                action: handleLearnMore,
-              },
-              trustIndicator: {
-                text: 'Trusted by 100+ businesses',
-                icon: 'ShieldCheck',
-              },
-            }}
-          />
         </div>
       </Section>
+      <CTA
+        data={{
+          subheading: {
+            text: 'Let’s Get Started',
+            icon: 'Rocket',
+          },
+          title: 'Hire Expert Web Application Developers',
+          highlightText: "Web Application Developers",
+          description: 'Contact us today to discuss your project and see how we can help you grow.',
+          primaryButton: {
+            text: 'Contact Us',
+            icon: 'ArrowRight',
+            action: handleContact,
+          },
+          secondaryButton: {
+            text: 'Learn More',
+            icon: 'Info',
+            action: handleLearnMore,
+          },
+          trustIndicator: {
+            text: 'Trusted by 100+ businesses',
+            icon: 'ShieldCheck',
+          },
+        }}
+      />
     </>
   );
 }

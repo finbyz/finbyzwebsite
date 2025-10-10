@@ -34,7 +34,7 @@ export default function Home() {
                 {
                   id: 1,
                   title: "ERPNext Implementation",
-                  description: "Innovative Solutions to Automate your Business!",
+                  description: "End to End ERPNext Deployment!",
                   icon: "Cpu",
                   iconBg: "#1A5276",
                   iconColor: "#ffffff"
@@ -42,7 +42,7 @@ export default function Home() {
                 {
                   id: 2,
                   title: "AI Automations",
-                  description: "Beautiful and functional websites that convert visitors into customers.",
+                  description: "Smarter Workflows , better efficiency.",
                   icon: "TrendingUp",
                   iconBg: "#FF8C00",
                   iconColor: "#ffffff"
@@ -50,7 +50,7 @@ export default function Home() {
                 {
                   id: 3,
                   title: "Resource Augmentation",
-                  description: "Native and cross-platform mobile applications for iOS and Android.",
+                  description: "Skilled Professionals for your Team.",
                   icon: "Globe",
                   iconBg: "#27AE60",
                   iconColor: "#ffffff"
@@ -58,7 +58,7 @@ export default function Home() {
                 {
                   id: 4,
                   title: "Hourly Support",
-                  description: "Scalable cloud infrastructure and deployment solutions.",
+                  description: "Flexible support on Demand .",
                   icon: "Target",
                   iconBg: "#8E44AD",
                   iconColor: "#ffffff"
@@ -66,7 +66,7 @@ export default function Home() {
                 {
                   id: 5,
                   title: "Data Analytics",
-                  description: "Transform your data into actionable insights and reports.",
+                  description: "Intelligent automation and predictive analytics solutions.",
                   icon: "BarChart3",
                   iconBg: "#1A5276",
                   iconColor: "#ffffff"
@@ -74,8 +74,8 @@ export default function Home() {
                 {
                   id: 6,
                   title: "Software Development",
-                  description: "Intelligent automation and predictive analytics solutions.",
-                  icon: "Code",
+                  description: "End-to-end software development services",
+                  icon: "Cpu",
                   iconBg: "#8E44AD",
                   iconColor: "#ffffff"
                 }

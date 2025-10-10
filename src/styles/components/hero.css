@@ -97,11 +97,11 @@
 }
 
 .hero-primary-button {
-  @apply rounded-full bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white text-base lg:text-lg px-6 lg:px-10 py-3 lg:py-4 h-auto font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition-all w-full sm:w-auto;
+  @apply rounded-lg bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white text-base lg:text-lg px-6 lg:px-10 py-3 lg:py-4 h-auto font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition-all w-full sm:w-auto;
 }
 
 .hero-secondary-button {
-  @apply rounded-full border-2 border-gray-300 text-gray-300 bg-transparent hover:bg-gray-300 hover:text-gray-900 text-base lg:text-lg px-6 lg:px-10 py-3 lg:py-4 h-auto font-semibold transition-all w-full sm:w-auto;
+  @apply rounded-lg border-2 border-gray-300 text-gray-300 bg-transparent hover:bg-gray-300 hover:text-gray-900 text-base lg:text-lg px-6 lg:px-10 py-3 lg:py-4 h-auto font-semibold transition-all w-full sm:w-auto;
 }
 
 .hero-image-container {

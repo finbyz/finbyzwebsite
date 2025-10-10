@@ -19,6 +19,7 @@ export default async function MainLayout({
   // So we’ll handle static routes separately below.
   const currentRoute = paths[paths.length - 1]
   const data = await getPageData("Gallery",currentRoute || "home");
+  console.log(data)
   return (
     <main className="py-12 md:py-16">
         <Header />
