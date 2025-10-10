@@ -169,13 +169,7 @@ export default function Page() {
               key={card.title}
               front={
                 <div className="flex flex-col items-center justify-center h-full p-6 text-center">
-                  <img
-                    src={card.image}
-                    alt={card.alt}
-                    width={64}
-                    height={64}
-                    className="object-contain"
-                  />
+                  <Image fill  alt="" />
                   <h3 className="font-semibold text-lg mt-4">{card.title}</h3>
                 </div>
               }

@@ -47,13 +47,7 @@ export default function Page() {
             </p>
           </div>
           <div className="flex-1 flex justify-center">
-            <img
-              src="/images/FD-Management-PageDesign.svg"
-              alt="FD Management In ERPNext"
-              width={420}
-              height={320}
-              className="rounded-xl shadow-lg object-contain bg-white"
-            />
+            <Image fill  src="/images/FD-Management-PageDesign.svg" alt="FD Management In ERPNext" />
           </div>
         </div>
       </Section>

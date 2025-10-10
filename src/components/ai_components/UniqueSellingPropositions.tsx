@@ -6,37 +6,37 @@ import Image from 'next/image';
 const features = [
   {
     title: 'Customizable Sales CRM',
-    image: 'api/fb/n/files/50.svg',
+    image: '/images/50.svg',
     alt: 'Customizable Sales CRM',
     description: 'Our sales CRM software, a product of our extensive software development expertise, is designed to be highly adaptable, catering to the unique needs and workflows of different businesses. It offers various customization options to perfectly align with your specific requirements.'
   },
   {
     title: 'User-Friendly CRM System',
-    image: 'api/fb/n/files/Contractual Obligations.svg',
+    image: '/images/Contractual Obligations.svg',
     alt: 'User-Friendly CRM System',
     description: 'The user interface of our CRM system, enhanced by our ERP implementation skills, is intuitive and easy to navigate, making it accessible for users of all levels. This simplicity ensures your team can effectively utilize the CRM software without a steep learning curve.'
   },
   {
     title: 'Data-Driven Insights',
-    image: 'api/fb/n/files/171.svg',
+    image: '/images/171.svg',
     alt: 'Data-Driven Insight',
     description: 'In line with our IT Consulting services, our CRM software provides advanced analytics and data-driven insights, empowering companies to make well-informed decisions based on up-to-date customer data.'
   },
   {
     title: 'Seamless Integration',
-    image: 'api/fb/n/files/webapplicationdevloper.svg',
+    image: '/images/webapplicationdevloper.svg',
     alt: 'Seamless Integration',
     description: 'Our CRM system integrates seamlessly with your existing business applications, reflecting our software development expertise, ensuring a unified and efficient workflow that minimizes disruption and maximizes productivity.'
   },
   {
     title: 'Dedicated Support',
-    image: 'api/fb/n/files/system setup.svg',
+    image: '/images/system setup.svg',
     alt: 'Dedicated Support',
     description: 'As a leading IT Consulting and CRM software provider, we offer comprehensive support throughout your CRM system journey from setup to ongoing maintenance.'
   },
   {
     title: 'Offline Functionality',
-    image: 'api/fb/n/files/170 (1).svg',
+    image: '/images/170 (1).svg',
     alt: 'Offline Functionality',
     description: 'Recognizing dynamic business needs, your Sales CRM software offers offline functionality. Users can continue working seamlessly even in low or no internet connectivity areas.'
   }

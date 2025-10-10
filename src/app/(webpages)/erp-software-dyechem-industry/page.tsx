@@ -69,13 +69,7 @@ export default function Page() {
               />
             </div>
             <div className="flex-1 flex justify-center">
-              <img
-                src="/images/problem.svg"
-                alt="Problems"
-                width={250}
-                height={220}
-                className="rounded-xl shadow-lg animate-fade-in"
-              />
+              <Image fill  src="/images/problem.svg" alt="Problems" />
             </div>
             <div className="flex-1">
               <ProblemList
@@ -111,13 +105,7 @@ export default function Page() {
               />
             </div>
             <div className="flex-1 flex justify-center">
-              <img
-                src="/images/idea.svg"
-                alt="Solution"
-                width={250}
-                height={220}
-                className="rounded-xl shadow-lg animate-fade-in"
-              />
+              <Image fill  src="/images/idea.svg" alt="Solution" />
             </div>
             <div className="flex-1">
               <SolutionList

@@ -41,13 +41,7 @@ export default function Page() {
           <h2 className="text-2xl font-bold text-[#1A5276] mb-6 text-center">ERP software for Manufacturing industry</h2>
           <div className="flex flex-col md:flex-row md:items-center md:gap-8">
             <div className="md:w-1/12 flex justify-center mb-4 md:mb-0">
-              {/* <img
-                src="/images/Quotation_marks.svg"
-                alt="Quotation marks"
-                width={40}
-                height={40}
-                className="opacity-80"
-              /> */}
+              {/* <Image fill  src="/images/Quotation_marks.svg" alt="Quotation marks" /> */}
             </div>
             <div className="md:w-11/12 text-[#FF8C00]">
               <p>

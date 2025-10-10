@@ -41,7 +41,7 @@ export default function Page() {
   const serviceCards = [
     {
       title: 'Custom Software Development',
-      image: 'api/fb/n/svg/icon-custom-software-developement.svg',
+      image: '/images/icon-custom-software-developement.svg',
       alt: 'Custom Software Development',
       description:
         'Empower your business infrastructure with robust software development that enhances automation, collaboration, and decision-making. Our custom software development services are designed to meet specific business goals through scalable, secure, and high-performing enterprise solutions.',
@@ -49,7 +49,7 @@ export default function Page() {
     },
     {
       title: 'Software Solution Integration',
-      image: 'api/fb/n/svg/icon-software-integration.svg',
+      image: '/images/icon-software-integration.svg',
       alt: 'Software Solution Integration',
       description:
         'As a full-service software development company, we help businesses integrate cloud-based SaaS and on-premise systems seamlessly. Our services include API development, microservices architecture, and enterprise application integration to ensure unified data flow and optimized performance across platforms.',
@@ -57,7 +57,7 @@ export default function Page() {
     },
     {
       title: 'Legacy Application Modernization',
-      image: 'api/fb/n/svg/icon-legecy-application-modernization.svg',
+      image: '/images/icon-legecy-application-modernization.svg',
       alt: 'Legacy Application Modernization',
       description:
         'Legacy systems can hinder growth and efficiency. Our software development experts evaluate and upgrade outdated enterprise applications using the latest technologies. Through our modernization services, we transform legacy systems into agile, future-ready platforms that enhance user satisfaction and productivity.',
@@ -215,13 +215,7 @@ export default function Page() {
         <div className="container-custom py-8">
           <h2 className="text-center text-2xl font-bold mb-8 relative inline-block after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-2">Software Development Stages</h2>
           <div className="relative w-full flex justify-center mb-8">
-            <img
-              src="/images/dotted-wave.svg"
-              alt="bg-wave"
-              width={800}
-              height={60}
-              className="w-full h-12 object-contain opacity-60"
-            />
+            <Image fill  src="/images/dotted-wave.svg" alt="bg-wave" />
           </div>
           <HexProcessGrid steps={processSteps} />
         </div>

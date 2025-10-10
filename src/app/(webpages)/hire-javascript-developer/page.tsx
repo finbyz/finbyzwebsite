@@ -98,7 +98,7 @@ const jsFrameworkCards = [
   {
     front: (
       <div className="flex flex-col items-center justify-center py-6">
-        <img src="/images/angular.svg" alt="angular" width={80} height={80} />
+        <Image fill  src="/images/angular.svg" alt="angular" />
         <h3 className="mt-4 font-semibold text-lg">Angular</h3>
       </div>
     ),
@@ -112,7 +112,7 @@ const jsFrameworkCards = [
   {
     front: (
       <div className="flex flex-col items-center justify-center py-6">
-        <img src="/images/vuejs.svg" alt="vuejs" width={80} height={80} />
+        <Image fill  src="/images/vuejs.svg" alt="vuejs" />
         <h3 className="mt-4 font-semibold text-lg">Vue.js</h3>
       </div>
     ),
@@ -126,7 +126,7 @@ const jsFrameworkCards = [
   {
     front: (
       <div className="flex flex-col items-center justify-center py-6">
-        <img src="/images/express-js.svg" alt="express-js" width={80} height={80} />
+        <Image fill  src="/images/express-js.svg" alt="express-js" />
         <h3 className="mt-4 font-semibold text-lg">Express</h3>
       </div>
     ),
@@ -140,7 +140,7 @@ const jsFrameworkCards = [
   {
     front: (
       <div className="flex flex-col items-center justify-center py-6">
-        <img src="/images/react.svg" alt="react" width={80} height={80} />
+        <Image fill  src="/images/react.svg" alt="react" />
         <h3 className="mt-4 font-semibold text-lg">React</h3>
       </div>
     ),

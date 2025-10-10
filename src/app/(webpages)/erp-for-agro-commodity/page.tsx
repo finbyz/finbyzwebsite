@@ -95,13 +95,7 @@ export default function Page() {
       <Section>
         <div className="container-custom py-8 relative">
           <div className="absolute right-0 bottom-0 hidden sm:block opacity-70 pointer-events-none">
-            <img
-              src="/images/three-hexagon.svg"
-              alt="hexagon background"
-              width={120}
-              height={120}
-              className="animate-pulse"
-            />
+            <Image fill  src="/images/three-hexagon.svg" alt="hexagon background" />
           </div>
           <List
             title="Other additional features of Our Agricultural ERP Solution:"

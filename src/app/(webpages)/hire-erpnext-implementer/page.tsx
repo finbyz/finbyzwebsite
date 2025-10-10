@@ -1,4 +1,5 @@
 'use client';
+import Image from "next/image";
 import React from 'react';
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
@@ -328,11 +329,7 @@ export default function Page() {
             
             {/* Left Image */}
             <div className="relative md:w-1/3 w-full h-full flex items-center justify-center bg-gray-50">
-              <img
-                src={card.image}
-                alt={card.alt}
-                className="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105"
-              />
+              <Image fill  alt="" />
               {/* Overlay */}
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
                 <h3 className="text-white text-lg font-semibold">{card.alt}</h3>
@@ -401,12 +398,7 @@ export default function Page() {
 
           {/* Icon */}
           <div className="w-20 h-20 mb-3 relative z-10 flex items-center justify-center">
-            <img
-              src={industry.image}
-              alt={industry.alt}
-              title={industry.alt}
-              className="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-110"
-            />
+            <Image fill  alt="" />
           </div>
 
           {/* Title */}
