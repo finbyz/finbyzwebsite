@@ -76,7 +76,7 @@ export default function Benefits({ data = {} }: BenefitsProps) {
         palette: { iconBg: "#8E44AD", iconColor: "#fff" }
       }
     ],
-    ctaButton = { text: "Let's Build That Efficiency →", action: "efficiency" }
+    ctaButton = { text: "Let's Build That Efficiency →", action: "efficiency"}
   } = data;
 
   // Ensure distinct icons across benefits (fallback rotates through pool)
@@ -204,7 +204,7 @@ export default function Benefits({ data = {} }: BenefitsProps) {
         </div>
         
         {/* Bottom CTA */}
-        <div className={`benefits-cta benefits-delay-4`}>
+        {/*<div className={`benefits-cta benefits-delay-4`}>
           <Button 
             size="lg"
             className="benefits-cta-button"
@@ -212,6 +212,7 @@ export default function Benefits({ data = {} }: BenefitsProps) {
             {ctaButton?.text}
           </Button>
         </div>
+        */}
       </div>
     </section>
   );

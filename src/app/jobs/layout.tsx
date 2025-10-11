@@ -22,6 +22,8 @@ interface Job {
   salary_unit_text?: string;
   salary_min?: number;
   salary_max?: number;
+  small_description?:string;
+  route?:string;
 }
 
 const cleanHtmlContent = (html: string): string => {

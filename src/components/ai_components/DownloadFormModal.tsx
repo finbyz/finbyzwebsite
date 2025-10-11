@@ -91,7 +91,7 @@ const DownloadFormModal: React.FC<DownloadFormModalProps> = ({ open, onClose, fi
             <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4">
               <Download className="text-white" size={28} />
             </div>
-            <h2 className="text-2xl font-bold text-white mb-1">Download Resource</h2>
+            <h2 className="text-2xl font-bold text-black mb-1">Download Resource</h2>
             <p className="text-blue-100 text-sm">Fill in your details to access the file</p>
           </div>
         </div>

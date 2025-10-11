@@ -135,19 +135,19 @@ const erpnextBenefits = [
 const erpServiceFactors = [
   {
     title: 'Experience',
-    image: '/api/fb/n/files/js%20knowledge.svg',
+    image: '/images/js%20knowledge.svg',
     alt: 'Experience',
     description: 'Opt for a company with a proven track record in successfully implementing and customizing ERPNext.'
   },
   {
     title: 'Industry Expertise',
-    image: '/api/fb/n/files/icon-Real-time-information.svg',
+    image: '/images/icon-Real-time-information.svg',
     alt: 'Industry Expertise',
     description: 'Choose a provider with deep knowledge and expertise in your specific industry.'
   },
   {
     title: 'Support and Maintenance',
-    image: '/api/fb/n/files/icon-Higher-Productivity.svg',
+    image: '/images/icon-Higher-Productivity.svg',
     alt: 'Support and Maintenance',
     description: 'Ensure the company offers comprehensive support and maintenance services for ongoing operational efficiency.'
   }
@@ -156,61 +156,61 @@ const erpServiceFactors = [
 const industryServices = [
   {
     title: 'ERP for Manufacturing',
-    image: '/api/fb/n/files/identifying%20objectives.svg',
+    image: '/images/identifying%20objectives.svg',
     alt: 'ERP-for-Manufacturing',
     description: "In Canada's manufacturing sector, our ERP software plays a crucial role in streamlining production processes, inventory management, quality assurance, and supply chain logistics, enabling manufacturers to optimize schedules, reduce lead times, and maintain efficient operations across various subsectors."
   },
   {
     title: 'ERP for Agro Commodity',
-    image: '/api/fb/n/files/make-use-of-clear-call-to-action.svg',
+    image: '/images/make-use-of-clear-call-to-action.svg',
     alt: 'ERP-for-Agro-Commodity',
     description: 'Tailored for the Canadian agribusiness sector, our ERP Agro system automates agricultural processes effectively. It structures data for strategic decision-making, providing real-time insights and connectivity across organizational functions, making it an ideal choice for the agriculture industry in Canada.'
   },
   {
     title: 'ERP for Healthcare',
-    image: '/api/fb/n/files/customer%20onboarding.svg',
+    image: '/images/customer%20onboarding.svg',
     alt: 'ERP-for-Healthcare',
     description: 'Specifically designed for Canadian healthcare organizations, our ERP for Healthcare software enhances core operations while including specialized features like patient management, clinical coordination, and medical billing, addressing the unique needs of the healthcare sector.'
   },
   {
     title: 'ERP for Chemical',
-    image: '/api/fb/n/files/icon-integrated_paperwork_.svg',
+    image: '/images/icon-integrated_paperwork_.svg',
     alt: 'ERP-for-Chemical',
     description: 'Custom-built for the chemical industry in Canada, our ERP for Chemical software automates and integrates key business processes, with industry-specific features for chemical manufacturing and CRM, offering a comprehensive solution to streamline chemical industry operations.'
   },
   {
     title: 'ERP for Pharmaceutical',
-    image: '/api/fb/n/files/training%20and%20development.svg',
+    image: '/images/training%20and%20development.svg',
     alt: 'ERP-for-Pharmaceutical',
     description: 'Our ERP for Pharmaceutical software, developed for the pharmaceutical sector in Canada, integrates core business functions while incorporating specific features essential for pharmaceutical operations, supporting the unique requirements of the industry.'
   },
   {
     title: 'ERP for Paper and Packaging',
-    image: '/api/fb/n/files/Customization.svg',
+    image: '/images/Customization.svg',
     alt: 'ERP-for-Paper-and-Packaging',
     description: 'Designed for the paper and packaging industry in Canada, our ERP software automates essential business processes and includes features tailored to enhance operations within this sector, supporting the unique needs of paper and packaging businesses.'
   }
 ];
 
 const clientCountries = [
-  { name: 'Vietnam', image: '/api/fb/n/files/vnm.svg', alt: 'erpnext_partner_vietnam' },
-  { name: 'USA', image: '/api/fb/n/files/US.svg', alt: 'erpnext_partner_usa' },
-  { name: 'UAE', image: '/api/fb/n/files/AE.svg', alt: 'erpnext_partner_uae' },
-  { name: 'Singapore', image: '/api/fb/n/files/sgp.svg', alt: 'erpnext_partner_singapore' },
-  { name: 'Saudi Arabia', image: '/api/fb/n/files/sau.svg', alt: 'erpnext_partner_saudi_arabia' },
-  { name: 'Norway', image: '/api/fb/n/files/NO.svg', alt: 'erpnext_partner_norway' },
-  { name: 'Malaysia', image: '/api/fb/n/files/MY.svg', alt: 'erpnext_partner_malaysia' },
-  { name: 'Mauritius', image: '/api/fb/n/files/MU.svg', alt: 'erpnext_partner_mauritius' },
-  { name: 'India', image: '/api/fb/n/files/ind.svg', alt: 'erpnext_partner_india' },
-  { name: 'Hungary', image: '/api/fb/n/files/HU.svg', alt: 'erpnext_partner_hungary' },
-  { name: 'HongKong', image: '/api/fb/n/files/HK.svg', alt: 'erpnext_partner_hongkong' },
-  { name: 'Germany', image: '/api/fb/n/files/ger.svg', alt: 'erpnext_partner_germany' },
-  { name: 'France', image: '/api/fb/n/files/FR.svg', alt: 'erpnext_partner_france' },
-  { name: 'China', image: '/api/fb/n/files/chn.svg', alt: 'erpnext_partner_china' },
-  { name: 'Canada', image: '/api/fb/n/files/CA.svg', alt: 'erpnext_partner_canada' },
-  { name: 'Brunei', image: '/api/fb/n/files/BN.svg', alt: 'erpnext_partner_brunei' },
-  { name: 'Belgium', image: '/api/fb/n/files/BE.svg', alt: 'erpnext_partner_belgium' },
-  { name: 'Australia', image: '/api/fb/n/files/AU.svg', alt: 'erpnext_partner_australia' }
+  { name: 'Vietnam', image: '/images/vnm.svg', alt: 'erpnext_partner_vietnam' },
+  { name: 'USA', image: '/images/US.svg', alt: 'erpnext_partner_usa' },
+  { name: 'UAE', image: '/images/AE.svg', alt: 'erpnext_partner_uae' },
+  { name: 'Singapore', image: '/images/sgp.svg', alt: 'erpnext_partner_singapore' },
+  { name: 'Saudi Arabia', image: '/images/sau.svg', alt: 'erpnext_partner_saudi_arabia' },
+  { name: 'Norway', image: '/images/NO.svg', alt: 'erpnext_partner_norway' },
+  { name: 'Malaysia', image: '/images/MY.svg', alt: 'erpnext_partner_malaysia' },
+  { name: 'Mauritius', image: '/images/MU.svg', alt: 'erpnext_partner_mauritius' },
+  { name: 'India', image: '/images/ind.svg', alt: 'erpnext_partner_india' },
+  { name: 'Hungary', image: '/images/HU.svg', alt: 'erpnext_partner_hungary' },
+  { name: 'HongKong', image: '/images/HK.svg', alt: 'erpnext_partner_hongkong' },
+  { name: 'Germany', image: '/images/ger.svg', alt: 'erpnext_partner_germany' },
+  { name: 'France', image: '/images/FR.svg', alt: 'erpnext_partner_france' },
+  { name: 'China', image: '/images/chn.svg', alt: 'erpnext_partner_china' },
+  { name: 'Canada', image: '/images/CA.svg', alt: 'erpnext_partner_canada' },
+  { name: 'Brunei', image: '/images/BN.svg', alt: 'erpnext_partner_brunei' },
+  { name: 'Belgium', image: '/images/BE.svg', alt: 'erpnext_partner_belgium' },
+  { name: 'Australia', image: '/images/AU.svg', alt: 'erpnext_partner_australia' }
 ];
 
 export default function Page() {
@@ -224,7 +224,7 @@ export default function Page() {
         secondaryButton={{ text: 'Our ERPNext Partners', action: handleSecondary }}
         heroImage={{
           alt: 'ERPNext Services in Canada',
-          src: '/api/fb/n/files/Hire-ERPNext-Implementor679475.svg',
+          src: '/images/Hire-ERPNext-Implementor679475.svg',
           
         }}
       />

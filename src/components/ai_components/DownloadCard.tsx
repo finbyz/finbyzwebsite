@@ -22,7 +22,7 @@ const DownloadCard: React.FC<DownloadCardProps> = ({ title, image, alt, fileUrl,
       </CardHeader>
       <CardContent className="flex flex-col items-center pb-6">
         <button
-          className="flex items-center gap-2 px-4 py-2 rounded-md bg-primary text-white font-medium shadow hover:bg-primary/90 transition-colors"
+          className="flex items-center gap-2 px-4 py-2 rounded-md bg-primary text-black font-medium shadow hover:bg-primary/90 transition-colors"
           type="button"
         >
           <Download size={18} /> Download

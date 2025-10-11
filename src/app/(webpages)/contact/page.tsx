@@ -30,7 +30,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'contact',
-          src: '/api/fb/n/files/icon-phone.svg',
+          src: '/images/icon-phone.svg',
           
         }}
       />

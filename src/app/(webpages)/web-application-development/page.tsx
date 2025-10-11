@@ -15,7 +15,8 @@ export default function Page() {
     <>
       <HeroSection
         headline="Web Application Development"
-        highlightWords={["Web", "Application", "Development"]}
+        // highlightWords={["Web", "Application", "Development"]}
+        highlightWords={["Web"]}
         description="Access premier web app development from our top web application development company. We're leaders in expert solutions among web development companies."
         primaryButton={{
           text: 'Get Started',
@@ -57,7 +58,7 @@ export default function Page() {
         <div className="container-custom py-8">
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="flex-1 flex flex-col gap-4">
-              <h2 className="text-2xl font-bold text-primary animate-fade-in-up text-center md:text-left">Technology expertise</h2>
+              <h2 className="text-2xl font-bold text-[#1A5276] animate-fade-in-up text-center md:text-left">Technology expertise</h2>
               <p className="text-base text-justify text-muted-foreground animate-fade-in-up">
                 Our adaptive web applications are built using the latest array of web technologies and practices to enable the clients to simplify complex business workflows. To make web applications not only powerful but also interactive, reliable and robust, we work with a wide range of technologies.
               </p>
@@ -83,7 +84,7 @@ export default function Page() {
       {/* Scalable & Responsive Web Application Development Section */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold text-primary mb-4 animate-fade-in-up">Scalable & Responsive Web Application Development</h2>
+          <h2 className="text-2xl font-bold text-[#1A5276] mb-4 animate-fade-in-up">Scalable & Responsive Web Application Development</h2>
           <p className="text-base text-justify text-muted-foreground mb-8 animate-fade-in-up">
             We provide scalable & responsive web app development services that are focused on meeting the client's business requirements and strategies. We solve business problems by end-to-end web application development solutions using the latest technologies. The architect web applications keeping in mind your future growth, and build business software which can scale as your business grows.
           </p>
@@ -107,7 +108,7 @@ export default function Page() {
       {/* Advantages Section */}
       <Section useGradient>
         <div className="container-custom py-8">
-          <h3 className="text-xl font-semibold text-primary mb-6 animate-fade-in-up">Advantages of working with us</h3>
+          <h3 className="text-xl font-semibold text-[#1A5276] mb-6 animate-fade-in-up">Advantages of working with us</h3>
           <AdvantageList
             items={[
               { description: 'We have a Highly Talented and Experienced in-house Team' },
@@ -129,7 +130,7 @@ export default function Page() {
                 icon: 'MonitorSmartphone',
               },
               title: 'Let’s Build Your Next Web App',
-              highlightText:"Web App",
+              highlightText:"Let’s Build Your Next Web App",
               description: 'Finbyz is a leading provider of advanced web application development services customized for your specific needs. Our team of knowledgeable web app developers is committed to making your ideas a reality and giving your audience a perfect online experience.',
               primaryButton: {
                 text: 'Request a Consultation',

@@ -9,7 +9,7 @@ import { FaArrowRight } from 'react-icons/fa6';
 
 const heroImage = {
   alt: 'ERP For Education',
-  src: '/api/fb/n/files/icon-order-management.svg',
+  src: '/images/icon-order-management.svg',
   videoSrc: undefined,
 };
 
@@ -23,70 +23,70 @@ const handleSecondary = () => {
 const featureList = [
   {
     title: 'Student Applicants',
-    image: '/api/fb/n/files/icon-order-management.svg',
+    image: '/images/icon-order-management.svg',
     alt: 'Student Applicants',
     description:
       'Manage applications for all your programs in one place. Create Student Applicant records, approve them, and start communication directly from ERP.'
   },
   {
     title: 'Student Information',
-    image: '/api/fb/n/files/documentation.svg',
+    image: '/images/documentation.svg',
     alt: 'Student Information',
     description:
       "Maintain student details like personal info, photo, date of birth, address, guardians, siblings, and attach documents such as certificates and photos."
   },
   {
     title: 'Document Storage',
-    image: '/api/fb/n/files/Document Storage.svg',
+    image: '/images/Document Storage.svg',
     alt: 'Document Storage',
     description:
       "Upload and share multimedia files (images, videos, documents) for each student. Choose to upload directly or use a web link for easy access."
   },
   {
     title: 'Instructors',
-    image: '/api/fb/n/files/Instructors.svg',
+    image: '/images/Instructors.svg',
     alt: 'Instructors',
     description:
       "Define course schedules, link instructors and students, and assign examiners or supervisors for assessments."
   },
   {
     title: 'Program Enrollment',
-    image: '/api/fb/n/files/lack-of-participation.svg',
+    image: '/images/lack-of-participation.svg',
     alt: 'Program Enrollment',
     description:
       "Track student enrollment and chosen courses for each academic year and term. Mandatory courses are auto-filled, electives can be selected manually."
   },
   {
     title: 'Programs & Courses',
-    image: '/api/fb/n/files/training and development.svg',
+    image: '/images/training and development.svg',
     alt: 'Programs & Courses',
     description:
       "Easily set up educational programs, include courses or electives, set mandatory courses, and link programs to departments."
   },
   {
     title: 'Student Attendance',
-    image: '/api/fb/n/files/Student Attendance.svg',
+    image: '/images/Student Attendance.svg',
     alt: 'Student Attendance',
     description:
       "Track and manage student attendance daily. Teachers can mark attendance with simple checkboxes, and records are created automatically."
   },
   {
     title: 'Student Fees',
-    image: '/api/fb/n/files/Student fees.svg',
+    image: '/images/Student fees.svg',
     alt: 'Student Fees',
     description:
       "Maintain records of fees collected, including categories like tutorials, visits, and accommodation. View paid and outstanding amounts easily."
   },
   {
     title: 'Assessment Plan',
-    image: '/api/fb/n/files/lack-of-adequate-planning.svg',
+    image: '/images/lack-of-adequate-planning.svg',
     alt: 'Assessment Plan',
     description:
       "Schedule assessments for student groups, capture details like group, grade scale, criteria, examiner, and supervisor. Generate results easily."
   },
   {
     title: 'Learning Management System (LMS)',
-    image: '/api/fb/n/files/Learning management system.svg',
+    image: '/images/Learning management system.svg',
     alt: 'Learning Management System (LMS)',
     description:
       "Publish programs on your website with articles, videos, and quizzes. Track student progress through the desk and portal. LMS is easily enabled."

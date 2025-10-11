@@ -31,32 +31,32 @@ const heroProps = {
   },
   heroImage: {
     alt: 'Hire Python Developer',
-    src: '/api/fb/n/files/Hire-Python-Dev.svg',
+    src: '/images/Hire-Python-Dev.svg',
   }
 };
 
 const pythonServices = [
   {
     title: 'Web Development',
-    image: '/api/fb/n/files/web development.svg',
+    image: '/images/web development.svg',
     alt: 'web_app_python',
     description: 'Python is often used for server-side web development, where it can be used to build and maintain websites, web applications, and RESTful APIs. Some popular web frameworks for Python include Django, Flask, and Pyramid.'
   },
   {
     title: 'API Development',
-    image: '/api/fb/n/files/api development.svg',
+    image: '/images/api development.svg',
     alt: 'python_api_development',
     description: 'We specialize in API development, leveraging the power of Python to build fast, reliable, and secure APIs for your applications. Our developers have extensive experience integrating APIs with various third-party platforms and services.'
   },
   {
     title: 'Machine Learning and Artificial Intelligence',
-    image: '/api/fb/n/files/artificial intelligent.svg',
+    image: '/images/artificial intelligent.svg',
     alt: 'machine_learning_ai',
     description: 'Our developers have extensive experience in machine learning and artificial intelligence, using Python to develop predictive models, natural language processing systems, and image recognition algorithms.'
   },
   {
     title: 'Data Analysis and Visualization',
-    image: '/api/fb/n/files/data analysis.svg',
+    image: '/images/data analysis.svg',
     alt: 'data_analysis_visualization',
     description: 'Python is a popular language for data science and machine learning due to its libraries and frameworks, such as NumPy, Pandas, and Matplotlib. These libraries provide a comprehensive suite of tools for data analysis, manipulation, and visualization.'
   }
@@ -65,49 +65,49 @@ const pythonServices = [
 const whyChooseFinbyzFeatures = [
   {
     title: 'Dedicated Developers',
-    image: '/api/fb/n/files/dedicated developer.svg',
+    image: '/images/dedicated developer.svg',
     alt: 'python_developer',
     description: 'We offer dedicated developers who work exclusively for you on an hourly basis, ensuring that you have the resources you need to meet your development needs.'
   },
   {
     title: 'Cost-Effective Solutions',
-    image: '/api/fb/n/files/cost-effective solutions.svg',
+    image: '/images/cost-effective solutions.svg',
     alt: 'cost_effective_solutions',
     description: 'We provide cost-effective solutions, offering competitive rates for our services and providing flexible payment options to meet your budget requirements.'
   },
   {
     title: 'Value driven',
-    image: '/api/fb/n/files/value driven.svg',
+    image: '/images/value driven.svg',
     alt: 'driven',
     description: 'We are committed to delivering high-quality work, using the latest technologies and best practices to ensure that your applications are highly performant and user-friendly.'
   },
   {
     title: 'Experienced Developers',
-    image: '/api/fb/n/files/experienced developer.svg',
+    image: '/images/experienced developer.svg',
     alt: 'developer',
     description: 'Our developers are highly skilled and experienced, with a proven track record of delivering top-notch Python development services to clients across a range of industries.'
   },
   {
     title: 'Flexible Engagement Model',
-    image: '/api/fb/n/files/flexible engagement model.svg',
+    image: '/images/flexible engagement model.svg',
     alt: 'model',
     description: 'We offer flexible engagement options so you only pay for what you need. Our developers will work with you on an hourly basis, daily basis, weekly basis, fortnightly basis and monthly basis as per your tailor needs.'
   },
   {
     title: 'Ongoing Maintenance and Support',
-    image: '/api/fb/n/files/ongoing matainance and support.svg',
+    image: '/images/ongoing matainance and support.svg',
     alt: 'support',
     description: 'We provide ongoing maintenance and support services to ensure that your applications remain secure, efficient, and up-to-date.'
   },
   {
     title: 'Professionalism',
-    image: '/api/fb/n/files/Professionalism.svg',
+    image: '/images/Professionalism.svg',
     alt: 'Professionalism',
     description: 'We believe in a strong work ethic and a commitment to delivering high-quality work. Our team is passionate about meeting deadlines and delivering on their promises.'
   },
   {
     title: 'Access to Talent',
-    image: '/api/fb/n/files/access to talent.svg',
+    image: '/images/access to talent.svg',
     alt: 'talent',
     description: 'Hiring a dedicated developer or team provides access to top talent, allowing companies to tap into a pool of skilled professionals, regardless of their location.'
   }

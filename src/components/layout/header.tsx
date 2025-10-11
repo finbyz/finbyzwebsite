@@ -682,13 +682,7 @@ export default function Header() {
             name: "Career Opportunities",
             description: "Explore job opportunities",
             icon: Briefcase,
-            href: "/career"
-          },
-          {
-            name: "Internships & Freshers",
-            description: "Internship and fresher positions",
-            icon: GraduationCap,
-            href: "/internship"
+            href: "/jobs"
           },
           {
             name: "Why Join Finbyz",
@@ -700,7 +694,7 @@ export default function Header() {
             name: "Apply Now",
             description: "Submit your application",
             icon: Send,
-            href: "/apply-now"
+            href: "/job-application"
           }
         ]
       }

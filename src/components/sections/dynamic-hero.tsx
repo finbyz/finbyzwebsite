@@ -40,14 +40,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   headline = "Empowering Businesses with ERPNext Solutions Worldwide",
   highlightWords = ["ERPNext Solutions"],
   description = "From implementation to custom development, we provide comprehensive ERPNext services that transform businesses across 25+ countries with 500+ successful deployments.",
-  primaryButton = {
-    text: "Start Your ERPNext Journey",
-    action: () => console.log("Primary button clicked")
-  },
-  secondaryButton = {
-    text: "View Success Stories",
-    action: () => console.log("Secondary button clicked")
-  },
+  primaryButton = undefined,
+  secondaryButton = undefined,
   heroImage = {
     alt: "Dashboard interfaces on multiple devices",
     src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23001122'/%3E%3Crect x='50' y='50' width='200' height='150' rx='10' fill='%23003366' stroke='%23FF6B35' stroke-width='2'/%3E%3Crect x='200' y='80' width='250' height='180' rx='10' fill='%23002244' stroke='%23FF6B35' stroke-width='2'/%3E%3Crect x='350' y='120' width='180' height='140' rx='10' fill='%23003366' stroke='%23FF6B35' stroke-width='2'/%3E%3Ccircle cx='100' cy='200' r='15' fill='%23FF6B35'/%3E%3Ccircle cx='450' cy='150' r='12' fill='%23FF6B35'/%3E%3Ccircle cx='300' cy='100' r='10' fill='%23FF6B35'/%3E%3Ctext x='300' y='350' text-anchor='middle' fill='%23FFFFFF' font-family='Arial' font-size='16'%3EReplace with your hero image%3C/text%3E%3C/svg%3E",
@@ -139,6 +133,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
+              {primaryButton && (
               <button
                 onClick={primaryButton.action}
                 className={`group ${colors.bg} ${colors.bgHover} text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 transform hover:scale-105`}
@@ -146,13 +141,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 <span>{primaryButton.text}</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-
+            )}
+            {secondaryButton && (
               <button
                 onClick={secondaryButton.action}
                 className={`group border-2 border-slate-600 hover:${colors.border} text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 hover:bg-slate-800`}
               >
                 <span>{secondaryButton.text}</span>
               </button>
+            )}
             </div>
           </div>
 

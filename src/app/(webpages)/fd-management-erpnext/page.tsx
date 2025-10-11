@@ -31,7 +31,7 @@ export default function Page() {
         heroImage={{
           alt: 'FD Management In ERPNext',
           src: '/images/FD-Management-PageDesign.svg',
-          
+
         }}
       />
 
@@ -121,7 +121,7 @@ export default function Page() {
                 icon: 'CheckCircle2'
               },
               title: 'Start Managing Fixed Deposits in ERPNext',
-              highlightText:"Fixed Deposits in ERPNext",
+              highlightText: "Fixed Deposits in ERPNext",
               description: 'Automate, track, and optimize your financial assets with ease. Download the FD Management App or get in touch for a personalized demo.',
               primaryButton: {
                 text: 'Download App',

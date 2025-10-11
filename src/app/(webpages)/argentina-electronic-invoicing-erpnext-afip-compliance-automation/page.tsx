@@ -75,7 +75,10 @@ export default function Page() {
             />
           </div>
           <div className="flex justify-center items-center">
-            <Image src="/images/Line Banner-41 (2)_11zon.png" alt="Custom Fields to Support Legal Compliance" width={400} height={260} className="rounded-xl shadow-lg object-contain animate-fadeinleft" />
+            <Image src="/images/Line Banner-41 (2)_11zon.png" alt="Custom Fields to Support Legal Compliance"
+              width={400}
+              height={260}
+              className="rounded-xl shadow-lg object-contain animate-fadeinleft" />
           </div>
         </div>
       </Section>
@@ -101,7 +104,7 @@ export default function Page() {
             />
           </div>
           <div className="flex justify-center items-center">
-            <Image src="/images/Line Banner-41 (2)_11zon.png" alt="Enhanced Form Organization" width={400} height={260} className="rounded-xl shadow-lg object-contain animate-fadeinleft" />
+            <Image fill src="/images/Line Banner-41 (2)_11zon.png" alt="Enhanced Form Organization" />
           </div>
         </div>
       </Section>
@@ -195,7 +198,7 @@ export default function Page() {
             />
           </div>
           <div className="flex justify-center items-center">
-            <Image src="/images/Line Banner-41 (2)_11zon.png" alt="Support for Various Business Scenarios" width={400} height={260} className="rounded-xl shadow-lg object-contain animate-fadeinleft" />
+            <Image fill src="/images/Line Banner-41 (2)_11zon.png" alt="Support for Various Business Scenarios" />
           </div>
         </div>
       </Section>
@@ -269,7 +272,7 @@ export default function Page() {
                   icon: 'BsQrCode'
                 },
                 title: 'Get AFIP-Compliant Electronic Invoicing in ERPNext',
-                highlightText:"Electronic Invoicing in ERPNext",
+                highlightText: "Electronic Invoicing in ERPNext",
                 description: 'Contact us to implement seamless, automated, and compliant invoicing for your business in Argentina.',
                 primaryButton: {
                   text: 'Request a Demo',

@@ -203,7 +203,7 @@ export default function Page() {
           <div className="grid md:grid-cols-2 gap-8 mt-10">
             <FeatureCard
               title="Improved efficiency"
-              image="/images/three-hexagon.svg"
+              image="/images/improve-effieciency-removebg-preview.png"
               alt="Improved efficiency"
               description="ERPNext can help businesses in the UAE to improve their efficiency by automating many of their manual tasks. This can free up time for employees to focus on more important tasks, such as sales and customer service."
             />
@@ -285,7 +285,7 @@ export default function Page() {
                 icon: "Rocket"
               },
               title: "Get Started with ERPNext in UAE",
-              highlightText : "ERPNext in UAE",
+              highlightText : "Get Started with ERPNext in UAE",
               description: "Contact Finbyz Tech today to discuss your ERP requirements and discover how we can help your business grow.",
               primaryButton: {
                 text: "Contact Us",

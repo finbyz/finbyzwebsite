@@ -235,6 +235,7 @@ export default function Testimonials({ data = {} }: { data?: Record<string, any>
         </div>
         
         {/* Bottom CTA */}
+        {renderedData.ctaButton && renderedData.ctaButton.trim() !== "" && (
         <div className={`testimonials-cta`}>
           <Button 
             size="lg"
@@ -259,6 +260,7 @@ export default function Testimonials({ data = {} }: { data?: Record<string, any>
             ))}
           </div>
         </div>
+        )}
       </div>
     </section>
   );

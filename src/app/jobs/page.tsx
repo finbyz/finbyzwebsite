@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
+import HeroSection from '@/components/sections/dynamic-hero';
 
 interface Job {
   id: number;
@@ -15,12 +16,14 @@ interface Job {
   location?: string;
   employment_type?: string;
   job_title?: string;
+  route: string;
+  small_description: string;
 }
 
 // Helper function to clean HTML content
 const cleanHtmlContent = (html: string): string => {
   if (!html) return 'No description available';
-  
+
   // Remove any script tags and other potentially dangerous content
   return html
     .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
@@ -97,32 +100,15 @@ export default function JobsPage() {
       <Header />
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-[#111827] via-blue-800 to-indigo-900 text-white">
-          <div className="absolute inset-0 pointer-events-none" aria-hidden>
-            <div className="absolute inset-0 bg-[radial-gradient(1200px_600px_at_50%_-100px,_rgba(59,130,246,0.25),transparent_60%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(1000px_500px_at_80%_10%,_rgba(168,85,247,0.12),transparent_60%)]" />
-          </div>
-          
-          <div className="container mx-auto px-4 py-16 lg:py-24 relative">
-            <nav className="text-sm text-blue-200 mb-4">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Jobs</span>
-            </nav>
-            
-            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
-              <span>Empower Your Career with </span>
-              <span className="bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text text-transparent">
-                AI & ERP
-              </span>
-            </h1>
-            <p className="mt-6 max-w-3xl text-lg md:text-xl text-gray-300 leading-relaxed">
-              Unlock efficiency, automation, and growth with next-gen technology and expert talent. Join our mission to deliver cutting-edge solutions to businesses worldwide.
-            </p>
-          </div>
-          
-        </section>
-
+        <HeroSection
+          headline="Jobs"
+          highlightWords={["Jobs", "AI", "ERPNext"]}
+          description="Unlock efficiency, automation, and growth with next-gen technology and expert talent. Join our mission to deliver cutting-edge solutions to businesses worldwide."
+          heroImage={{
+            alt: 'Jobs',
+            src: '/images/Advance-Authorization-License-PageDesign.svg',
+          }}
+        />
         {/* Search and Filters Section */}
         <section className="container mx-auto px-4 py-16">
           <div className="max-w-6xl mx-auto">
@@ -157,11 +143,10 @@ export default function JobsPage() {
                 <button
                   key={department}
                   onClick={() => setSelectedCategory(department)}
-                  className={`rounded-full px-6 py-3 text-sm font-medium transition-all duration-200 border shadow-sm ${
-                    selectedCategory === department
+                  className={`rounded-full px-6 py-3 text-sm font-medium transition-all duration-200 border shadow-sm ${selectedCategory === department
                       ? 'bg-orange-500 text-white border-orange-500 shadow-lg transform scale-105'
                       : 'bg-white text-gray-700 border-gray-300 hover:bg-orange-50 hover:border-[#1A5276] hover:shadow-md'
-                  }`}
+                    }`}
                 >
                   {department}
                 </button>
@@ -200,7 +185,7 @@ export default function JobsPage() {
                     {/* Job Header */}
                     <div className="flex items-start justify-between mb-6">
                       <div className="flex-1">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-2 group-hover:text-[#1A5276] transition-colors">
+                        <h2 className="text-3xl font-bold text-[#1A5276] mb-2 group-hover:text-[#1A5276] transition-colors">
                           {job.job_title || job.title}
                         </h2>
                         <div className="flex flex-wrap gap-4 text-sm text-gray-600">
@@ -227,68 +212,32 @@ export default function JobsPage() {
                     </div>
 
                     {/* Job Description */}
-                    <div className="mb-8">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                        <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
-                        Job Description
-                      </h3>
-                      <div 
-                        className="text-gray-700 leading-relaxed prose max-w-none
-                          [&_p]:mb-4 [&_p]:text-gray-700
-                          [&_ol]:list-decimal [&_ol]:ml-6 [&_ol]:space-y-2
-                          [&_ul]:list-disc [&_ul]:ml-6 [&_ul]:space-y-2
-                          [&_li]:text-gray-700 [&_li]:leading-relaxed
-                          [&_strong]:font-semibold [&_strong]:text-gray-900
-                          [&_em]:italic
-                          [&_br]:block [&_br]:h-2"
-                        dangerouslySetInnerHTML={{ __html: cleanHtmlContent(job.description || '') }}
-                      />
-                    </div>
+                    {/* Job Description */}
+                      <div className="mb-8">
+                        <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                          <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                          Job Description
+                        </h3>
+                        <div className="text-gray-700 leading-relaxed prose max-w-none">
+                          {job.small_description || ''}
+                        </div>
+                      </div>   {/* ✅ THIS CLOSING TAG WAS MISSING */}
 
-                    {/* Key Responsibilities */}
-                    <div className="mb-8">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                        Key Responsibilities
-                      </h3>
-                      <ul className="list-disc ml-6 space-y-2 text-gray-700">
-                        {job.responsibilities?.length ? (
-                          job.responsibilities.map((item, index) => (
-                            <li key={index} className="text-base leading-relaxed">{item}</li>
-                          ))
-                        ) : (
-                          <li className="text-gray-500 italic">Responsibilities will be discussed during the interview.</li>
-                        )}
-                      </ul>
-                    </div>
-
-                    {/* Key Skills */}
-                    <div className="mb-8">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                        <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
-                        Key Skills
-                      </h3>
-                      <ul className="list-disc ml-6 space-y-2 text-gray-700">
-                        {job.skills?.length ? (
-                          job.skills.map((skill, index) => (
-                            <li key={index} className="text-base leading-relaxed">{skill}</li>
-                          ))
-                        ) : (
-                          <li className="text-gray-500 italic">Skills requirements will be discussed during the interview.</li>
-                        )}
-                      </ul>
-                    </div>
-
-                    {/* Action Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-gray-200">
-                     
-                      <Link
-                        href={`/job-application?job_title=${encodeURIComponent(job.job_title || job.title)}`}
-                        className="flex-1 px-6 py-3 bg-orange-500 text-white hover:bg-orange-600 rounded-xl text-sm font-semibold transition-all duration-200 text-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                      >
-                        Apply Now
-                      </Link>
-                    </div>
+                      {/* Action Buttons */}
+                      <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-gray-200">
+                        <Link
+                          href={`/jobs/${job.route}`}
+                          className="flex-1 px-6 py-3 bg-orange-500 text-white hover:bg-orange-600 rounded-xl text-sm font-semibold transition-all duration-200 text-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                        >
+                          View More
+                        </Link>
+                        <Link
+                          href={`/job-application?job_title=${encodeURIComponent(job.job_title || job.title)}`}
+                          className="flex-1 px-6 py-3 bg-orange-500 text-white hover:bg-orange-600 rounded-xl text-sm font-semibold transition-all duration-200 text-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                        >
+                          Apply Now
+                        </Link>
+                      </div>
                   </div>
                 ))}
               </div>

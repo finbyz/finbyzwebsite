@@ -63,18 +63,30 @@
 }
 
 /* Carousel Container */
-.client-logos-carousel-container,
-.client-logos-track,
-.client-logos-slides,
-.client-logos-slide,
-.client-logos-nav-button,
-.client-logos-nav-icon,
-.client-logos-indicators,
-.client-logos-indicator { display: none; }
+.client-logos-carousel-container {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
 
-.client-logos-grid-container { max-width: 1400px; margin: 0 auto; }
+.client-logos-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
 
-/* Navigation Arrows */
+.client-logos-slides {
+  display: flex;
+  width: 100%;
+}
+
+.client-logos-slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
 .client-logos-nav-button {
   position: absolute;
   top: 50%;
@@ -86,7 +98,46 @@
   border-radius: 9999px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
+  border: none;
+  cursor: pointer;
 }
+
+.client-logos-nav-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.client-logos-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 0.5rem;
+}
+
+.client-logos-indicator {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+.client-logos-indicator.active {
+  background: #2563eb;
+  transform: scale(1.25);
+}
+
+.client-logos-indicator.inactive {
+  background: #d1d5db;
+}
+
+.client-logos-indicator.inactive:hover {
+  background: #9ca3af;
+}
+
+.client-logos-grid-container { max-width: 1400px; margin: 0 auto; }
 
 .client-logos-nav-button:hover {
   background: white;
@@ -101,12 +152,6 @@
   right: 1rem;
 }
 
-.client-logos-nav-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  transition: transform 0.3s;
-}
-
 .client-logos-nav-button:hover .client-logos-nav-icon {
   transform: scale(1.1);
 }
@@ -119,6 +164,9 @@
   grid-template-columns: repeat(6, 1fr);
   gap: 2rem;
   align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Logo Items */
@@ -356,6 +404,13 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .client-logos-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .client-logos-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -380,5 +435,11 @@
 @media (max-width: 480px) {
   .client-logos-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  
+  .client-logo-container {
+    width: 3rem;
+    height: 3rem;
   }
 }

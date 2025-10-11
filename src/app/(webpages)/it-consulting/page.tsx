@@ -31,7 +31,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'IT Consulting',
-          src: '/api/fb/n/files/banner-consulting.svg',
+          src: '/images/banner-consulting.svg',
           videoSrc: undefined
         }}
       />

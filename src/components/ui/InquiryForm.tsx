@@ -89,7 +89,7 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
       // https://website.finbyz.com/api/method/finbyzweb.api.set_form_data
 
       // Use the same API as business slider
-      const res = await fetch('https://website.finbyz.com/api/method/finbyzweb.api.set_form_data', {
+      const res = await fetch('https://finbyz.tech/api/method/finbyzweb.api.set_form_data', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
@@ -165,7 +165,7 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
                 {/* Feature Icons */}
                 <div className="inquiry-form__feature-grid">
                   <div className="inquiry-form__feature-card">
-                    <div className="inquiry-form__icon-circle">
+                    <div className="inquiry-form__icon-circle" style={{ backgroundColor: "#1A5276" }}>
                       <Mail className="w-5 h-5 text-white" />
                     </div>
                     <span className="inquiry-form__feature-text">Quick Response</span>

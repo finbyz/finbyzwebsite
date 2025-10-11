@@ -196,7 +196,13 @@ export default function Home() {
         <Testimonials />
 
         <ClientLogos />
-        <CTA />
+        <CTA
+         data={{
+          title: "Ready to Scale with Smart Tech? Let's Talk",
+          highlightText:"Ready to Scale with Smart Tech? Let's Talk",
+        }} 
+        />
+       
 
         {/* Inquiry Form */}
         <InquiryForm 

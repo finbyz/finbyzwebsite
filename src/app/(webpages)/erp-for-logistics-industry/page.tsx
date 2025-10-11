@@ -126,9 +126,12 @@ export default function Page() {
           text: 'Download Brochure',
           action: () => {
             if (typeof window !== 'undefined') {
-              window.open('/api/fb/n/files/Logistic90ec93.svg', '_blank');
+              const element = document.getElementById('benefits-section');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
             }
-          }
+          },
         }}
         heroImage={{
           alt: 'ERPNext for Logistics Industry',
@@ -177,7 +180,7 @@ export default function Page() {
 
       {/* Benefits Section */}
       <Section>
-        <div className="container-custom py-8">
+        <div id="benefits-section" className="container-custom py-8">
           <h2 className="text-2xl font-bold mb-8 text-center">What Benefits Does ERP Software Offer in the Logistics Industry?</h2>
           <p className="text-base text-muted-foreground mb-6 text-center">
             ERP software revolutionizes logistics by streamlining operations from planning to quality control. It replaces manual processes with automation, enhancing efficiency and accuracy.
@@ -224,7 +227,7 @@ export default function Page() {
 
       {/* CTA Section */}
       <Section>
-        <div className="py-8">
+        <div className="py-8 custom-cta">
           <CTA
             data={{
               subheading: {
@@ -244,11 +247,14 @@ export default function Page() {
                 },
               },
               secondaryButton: {
-                text: 'Download Brochure',
+                text: 'Learn More',
                 icon: 'Download',
                 action: () => {
                   if (typeof window !== 'undefined') {
-                    window.open('/api/fb/n/files/Logistic90ec93.svg', '_blank');
+                    const element = document.getElementById('benefits-section');
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
                   }
                 },
               },
@@ -259,6 +265,11 @@ export default function Page() {
             }}
           />
         </div>
+        <style jsx>{`
+          .custom-cta h2 {
+            color: #1A5276 !important;
+          }
+        `}</style>
       </Section>
     </>
   );

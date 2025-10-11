@@ -23,61 +23,61 @@ const whyChooseList = [
 const whyUsFeatures = [
   {
     title: 'ERPNext Implementation Experience',
-    image: '/api/fb/n/files/experience.svg',
+    image: '/images/experience.svg',
     alt: 'experience',
     description: 'With over a decade of ERPNext implementation experience in Gujarat, we craft scalable solutions that meet your unique business requirements.'
   },
   {
     title: 'Implemented Projects',
-    image: '/api/fb/n/files/icon-order-management.svg',
+    image: '/images/icon-order-management.svg',
     alt: 'Implemented Projects',
     description: 'We have successfully delivered 140+ ERPNext implementations across industries, positioning us as one of the top ERPNext service providers in Ahmedabad.'
   },
   {
     title: 'Excellent Support Service',
-    image: '/api/fb/n/files/Supoort.svg',
+    image: '/images/Supoort.svg',
     alt: 'Support',
     description: 'Our expert support team ensures smooth ERPNext operations through SLA-driven ticket resolution and post-implementation support, setting us apart as a reliable ERPNext Implementation Partner.'
   },
   {
     title: 'Customer Retention',
-    image: '/api/fb/n/files/insufficient-training.svg',
+    image: '/images/insufficient-training.svg',
     alt: 'Customer Retention',
     description: 'We have an 85% customer retention rate, which indicates that our clients are satisfied with our services and choose to continue working with us.'
   },
   {
     title: 'Signing Off Procedures',
-    image: '/api/fb/n/files/signing1.svg',
+    image: '/images/signing1.svg',
     alt: 'Signing Off Procedures',
     description: 'Our robust sign-off checklist ensures all ERPNext implementation requirements are met. We guide your team thoroughly to ensure readiness before project closure.'
   },
   {
     title: 'ERPNext Documentation',
-    image: '/api/fb/n/files/documentation.svg',
+    image: '/images/documentation.svg',
     alt: 'ERPNext Documentation',
     description: 'As a responsible ERPNext Implementation Partner, we offer video tutorials and written documentation through our YouTube channel to ensure your team is always equipped.'
   },
   {
     title: 'Established System & Processes',
-    image: '/api/fb/n/files/system%20setup.svg',
+    image: '/images/system%20setup.svg',
     alt: 'Established System & Processes',
     description: 'We follow industry best practices from 140+ implementations, making us a structured and process-driven ERPNext Implementation Company in Gujarat.'
   },
   {
     title: 'ISO 27001-2013 Certified Company',
-    image: '/api/fb/n/files/quality%20assurance.svg',
+    image: '/images/quality%20assurance.svg',
     alt: 'ISO Certified',
     description: 'Our ISO certification ensures data security and process quality, making Finbyz Tech a trusted ERPNext partner in Ahmedabad.'
   },
   {
     title: 'Open-Source ERPNext Expertise',
-    image: '/api/fb/n/files/Open%20Source%20Solutions.svg',
+    image: '/images/Open%20Source%20Solutions.svg',
     alt: 'Open Source Solutions',
     description: 'With 100+ years of combined experience in open-source technologies, we bring the right mix of flexibility and innovation to ERPNext implementation.'
   },
   {
     title: 'Certified ERPNext Implementation Partner',
-    image: '/api/fb/n/files/blog-icon-ensures-customer-satisfaction.svg',
+    image: '/images/blog-icon-ensures-customer-satisfaction.svg',
     alt: 'Certified ERPNext Implementation Partner',
     description: 'We are an Official Certified ERPNext Partner with the expertise and credibility you need from your ERPNext Implementation Company in Ahmedabad.'
   }
@@ -129,85 +129,85 @@ const challengeCards = [
 ];
 
 const industries = [
-  { title: 'Chemical', image: '/api/fb/n/files/nav-chemical.svg', alt: 'Chemical', description: '', link: '/erp-for-chemical-industry' },
-  { title: 'Engineering', image: '/api/fb/n/files/nav-engineering.svg', alt: 'Engineering', description: '', link: '/erp-for-engineering-industry' },
-  { title: 'Logistics', image: '/api/fb/n/files/nav-logistics.svg', alt: 'Logistics', description: '', link: '/erp-for-logistics-industry' },
-  { title: 'Manufacturing', image: '/api/fb/n/files/nav-manufacturing.svg', alt: 'Manufacturing', description: '', link: '/erp-for-manufacturing-industry' },
-  { title: 'Agro Commodity', image: '/api/fb/n/files/nav-agro.svg', alt: 'Agro Commodity', description: '', link: '/erp-for-agro-commodity' },
-  { title: 'Trading', image: '/api/fb/n/files/nav-trading.svg', alt: 'Trading', description: '', link: '/erp-for-trading-industry' },
-  { title: 'Textile', image: '/api/fb/n/files/yarn.svg', alt: 'Textile', description: '', link: '' },
-  { title: 'Services', image: '/api/fb/n/files/nav-services.svg', alt: 'Services', description: '', link: '' },
-  { title: 'Real Estate', image: '/api/fb/n/files/icon-business-app.svg', alt: 'Real Estate', description: '', link: '' },
-  { title: 'Ceramics', image: '/api/fb/n/files/Ceramics.svg', alt: 'Ceramics', description: '', link: '' }
+  { title: 'Chemical', image: '/images/nav-chemical.svg', alt: 'Chemical', description: '', link: '/erp-for-chemical-industry' },
+  { title: 'Engineering', image: '/images/nav-engineering.svg', alt: 'Engineering', description: '', link: '/erp-for-engineering-industry' },
+  { title: 'Logistics', image: '/images/nav-logistics.svg', alt: 'Logistics', description: '', link: '/erp-for-logistics-industry' },
+  { title: 'Manufacturing', image: '/images/nav-manufacturing.svg', alt: 'Manufacturing', description: '', link: '/erp-for-manufacturing-industry' },
+  { title: 'Agro Commodity', image: '/images/nav-agro.svg', alt: 'Agro Commodity', description: '', link: '/erp-for-agro-commodity' },
+  { title: 'Trading', image: '/images/nav-trading.svg', alt: 'Trading', description: '', link: '/erp-for-trading-industry' },
+  { title: 'Textile', image: '/images/yarn.svg', alt: 'Textile', description: '', link: '' },
+  { title: 'Services', image: '/images/nav-services.svg', alt: 'Services', description: '', link: '' },
+  { title: 'Real Estate', image: '/images/icon-business-app.svg', alt: 'Real Estate', description: '', link: '' },
+  { title: 'Ceramics', image: '/images/Ceramics.svg', alt: 'Ceramics', description: '', link: '' }
 ];
 
 const processSteps = [
   {
     title: 'Identify Objectives and Goals',
-    image: '/api/fb/n/files/identifying%20objectives.svg',
+    image: '/images/identifying%20objectives.svg',
     alt: 'identifying objectives',
     description: 'We begin by understanding your unique business goals and KPIs. Our strategy ensures that the ERPNext solution is aligned with your long-term growth. By identifying objectives, we create customized ERPNext implementations that drive success.',
     bg: 'gray'
   },
   {
     title: 'Demonstration of ERPNext Product',
-    image: '/api/fb/n/files/make-use-of-clear-call-to-action.svg',
+    image: '/images/make-use-of-clear-call-to-action.svg',
     alt: 'make-use-of-clear-call-to-action',
     description: 'Our expert consultants offer a comprehensive demo to showcase how ERPNext can fulfill your business requirements. Clients can experience features tailored to their industry, ask questions, and better understand the ERPNext system’s capabilities.',
     bg: 'lightgray'
   },
   {
     title: 'Customer Onboarding and Service Agreement',
-    image: '/api/fb/n/files/customer%20onboarding.svg',
+    image: '/images/customer%20onboarding.svg',
     alt: 'customer onboarding',
     description: 'We initiate client onboarding after finalizing the scope. Our detailed service agreement outlines responsibilities, deliverables, and project timelines, ensuring transparency and alignment throughout the ERPNext implementation journey.',
     bg: 'lightgray'
   },
   {
     title: 'System Set Up',
-    image: '/api/fb/n/files/icon-integrated_paperwork_.svg',
+    image: '/images/icon-integrated_paperwork_.svg',
     alt: 'icon-integrated_paperwor',
     description: 'Our ERPNext experts configure and set up your ERPNext system to match your customized business needs. We ensure smooth integration of all modules and a flawless transition from your existing software to the new ERPNext platform.',
     bg: 'gray'
   },
   {
     title: 'Data Migration',
-    image: '/api/fb/n/files/migration.svg',
+    image: '/images/migration.svg',
     alt: 'data migration',
     description: 'We ensure a secure and seamless migration of your data into the new ERPNext system. We maintain data accuracy, integrity, and consistency throughout the process to support uninterrupted business operations.',
     bg: 'gray'
   },
   {
     title: 'Training & development',
-    image: '/api/fb/n/files/training%20and%20development.svg',
+    image: '/images/training%20and%20development.svg',
     alt: 'training and development',
     description: 'We offer expert training sessions to empower your team. We make sure your staff is well-versed in the ERPNext system, enabling them to handle operations effectively and utilize all features to the fullest.',
     bg: 'lightgray'
   },
   {
     title: 'Customize the ERPNext',
-    image: '/api/fb/n/files/Customization.svg',
+    image: '/images/Customization.svg',
     alt: 'Customization',
     description: 'Our team provides complete ERPNext customization services to fit your industry-specific requirements. We deliver ongoing configuration support post-implementation to meet any additional needs.',
     bg: 'lightgray'
   },
   {
     title: 'Testing and Validation',
-    image: '/api/fb/n/files/paper.svg',
+    image: '/images/paper.svg',
     alt: 'testing and validation',
     description: 'Our team conducts thorough testing of all modules. We validate every function to ensure that the ERP system delivers seamless performance and meets the highest standards for businesses, especially in manufacturing and production domains.',
     bg: 'gray'
   },
   {
     title: 'Go Live',
-    image: '/api/fb/n/files/go%20live.svg',
+    image: '/images/go%20live.svg',
     alt: 'go live',
     description: 'After successful testing and training, we ensure a smooth go-live process. We coordinate every detail to transition your operations to the new ERPNext system without disruptions.',
     bg: 'gray'
   },
   {
     title: 'Support and Maintenance',
-    image: '/api/fb/n/files/Improved-Operations-&%20Team-Collaborations.svg',
+    image: '/images/Improved-Operations-&%20Team-Collaborations.svg',
     alt: 'team support',
     description: 'We offer continuous support and system maintenance. Our team is dedicated to helping you keep your ERPNext implementation running smoothly and ensuring long-term success for your business.',
     bg: 'lightgray'
@@ -215,24 +215,24 @@ const processSteps = [
 ];
 
 const countries = [
-  { name: 'Vietnam', image: '/api/fb/n/files/vnm.svg', alt: 'erpnext_service_provider_vietnam' },
-  { name: 'USA', image: '/api/fb/n/files/US.svg', alt: 'erpnext_service_provider_usa' },
-  { name: 'UAE', image: '/api/fb/n/files/AE.svg', alt: 'erpnext_service_provider_uae' },
-  { name: 'Singapore', image: '/api/fb/n/files/sgp.svg', alt: 'erpnext_service_provider_singapore' },
-  { name: 'Saudi Arabia', image: '/api/fb/n/files/sau.svg', alt: 'erpnext_service_provider_saudi_arabia' },
-  { name: 'Norway', image: '/api/fb/n/files/NO.svg', alt: 'erpnext_service_provider_norway' },
-  { name: 'Malaysia', image: '/api/fb/n/files/MY.svg', alt: 'erpnext_service_provider_malaysia' },
-  { name: 'Mauritius', image: '/api/fb/n/files/MU.svg', alt: 'erpnext_service_provider_mauritius' },
-  { name: 'India', image: '/api/fb/n/files/ind.svg', alt: 'erpnext_service_provider_india' },
-  { name: 'Hungary', image: '/api/fb/n/files/HU.svg', alt: 'erpnext_service_provider_hungary' },
-  { name: 'HongKong', image: '/api/fb/n/files/HK.svg', alt: 'erpnext_service_provider_hongkong' },
-  { name: 'Germany', image: '/api/fb/n/files/ger.svg', alt: 'erpnext_service_provider_germany' },
-  { name: 'France', image: '/api/fb/n/files/FR.svg', alt: 'erpnext_service_provider_france' },
-  { name: 'China', image: '/api/fb/n/files/chn.svg', alt: 'erpnext_service_provider_china' },
-  { name: 'Canada', image: '/api/fb/n/files/CA.svg', alt: 'erpnext_service_provider_canada' },
-  { name: 'Brunei', image: '/api/fb/n/files/BN.svg', alt: 'erpnext_service_provider_brunei' },
-  { name: 'Belgium', image: '/api/fb/n/files/BE.svg', alt: 'erpnext_service_provider_belgium' },
-  { name: 'Australia', image: '/api/fb/n/files/AU.svg', alt: 'erpnext_service_provider_australia' }
+  { name: 'Vietnam', image: '/images/vnm.svg', alt: 'erpnext_service_provider_vietnam' },
+  { name: 'USA', image: '/images/US.svg', alt: 'erpnext_service_provider_usa' },
+  { name: 'UAE', image: '/images/AE.svg', alt: 'erpnext_service_provider_uae' },
+  { name: 'Singapore', image: '/images/sgp.svg', alt: 'erpnext_service_provider_singapore' },
+  { name: 'Saudi Arabia', image: '/images/sau.svg', alt: 'erpnext_service_provider_saudi_arabia' },
+  { name: 'Norway', image: '/images/NO.svg', alt: 'erpnext_service_provider_norway' },
+  { name: 'Malaysia', image: '/images/MY.svg', alt: 'erpnext_service_provider_malaysia' },
+  { name: 'Mauritius', image: '/images/MU.svg', alt: 'erpnext_service_provider_mauritius' },
+  { name: 'India', image: '/images/ind.svg', alt: 'erpnext_service_provider_india' },
+  { name: 'Hungary', image: '/images/HU.svg', alt: 'erpnext_service_provider_hungary' },
+  { name: 'HongKong', image: '/images/HK.svg', alt: 'erpnext_service_provider_hongkong' },
+  { name: 'Germany', image: '/images/ger.svg', alt: 'erpnext_service_provider_germany' },
+  { name: 'France', image: '/images/FR.svg', alt: 'erpnext_service_provider_france' },
+  { name: 'China', image: '/images/chn.svg', alt: 'erpnext_service_provider_china' },
+  { name: 'Canada', image: '/images/CA.svg', alt: 'erpnext_service_provider_canada' },
+  { name: 'Brunei', image: '/images/BN.svg', alt: 'erpnext_service_provider_brunei' },
+  { name: 'Belgium', image: '/images/BE.svg', alt: 'erpnext_service_provider_belgium' },
+  { name: 'Australia', image: '/images/AU.svg', alt: 'erpnext_service_provider_australia' }
 ];
 
 export default function Page() {
@@ -256,7 +256,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'ERPNext Implementation',
-          src: '/api/fb/n/files/Hire-ERPNext-Implementor679475.svg',
+          src: '/images/Hire-ERPNext-Implementor679475.svg',
 
         }}
       />

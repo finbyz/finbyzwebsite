@@ -21,7 +21,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'Life at Finbyz',
-          src: '/api/fb/n/files/Final banner LAF.jpg',
+          src: '/images/Final banner LAF.jpg',
         }}
       />
 
@@ -38,25 +38,25 @@ export default function Page() {
             items={[
               {
                 title: 'Innovation',
-                image: '/api/fb/n/files/264.png',
+                image: '/images/264.png',
                 alt: 'Innovation',
                 description: 'We encourage fresh ideas and creative solutions.'
               },
               {
                 title: 'Learning & Growth',
-                image: '/api/fb/n/files/127.png',
+                image: '/images/127.png',
                 alt: 'Learning & Growth',
                 description: 'Continuous learning is part of our DNA.'
               },
               {
                 title: 'Collaboration',
-                image: '/api/fb/n/files/240.png',
+                image: '/images/240.png',
                 alt: 'Collaboration',
                 description: 'Teamwork makes the dream work.'
               },
               {
                 title: 'Work-Life Balance',
-                image: '/api/fb/n/files/Resource Limitations .png',
+                image: '/images/Resource Limitations .png',
                 alt: 'Work-Life Balance',
                 description: 'We support a healthy, balanced life.'
               }

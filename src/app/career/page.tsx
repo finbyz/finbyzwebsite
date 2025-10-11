@@ -21,7 +21,7 @@ export default function CareerPage() {
             subtitle: "Join a team where innovation meets opportunity. Shape the future of technology and grow with us.",
             description: "Join our innovative team and shape the future of technology.",
             image: {
-              src: "/Career.png",
+              src: "/careers_5.png",
               alt: "Career opportunities at Finbyz Tech - Join our innovative team"
             }
           }}

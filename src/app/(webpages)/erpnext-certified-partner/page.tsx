@@ -182,24 +182,24 @@ export default function Page() {
           </p>
           <ClientCountryGrid
             countries={[
-              { name: 'Vietnam', image: '/api/fb/n/files/vnm.svg', alt: 'erpnext_partner_vietnam' },
-              { name: 'USA', image: '/api/fb/n/files/US.svg', alt: 'erpnext_partner_usa' },
-              { name: 'UAE', image: '/api/fb/n/files/AE.svg', alt: 'erpnext_partner_uae' },
-              { name: 'Singapore', image: '/api/fb/n/files/sgp.svg', alt: 'erpnext_partner_singapore' },
-              { name: 'Saudi Arabia', image: '/api/fb/n/files/sau.svg', alt: 'erpnext_partner_saudi_arabia' },
-              { name: 'Norway', image: '/api/fb/n/files/NO.svg', alt: 'erpnext_partner_norway' },
-              { name: 'Malaysia', image: '/api/fb/n/files/MY.svg', alt: 'erpnext_partner_malaysia' },
-              { name: 'Mauritius', image: '/api/fb/n/files/MU.svg', alt: 'erpnext_partner_mauritius' },
-              { name: 'India', image: '/api/fb/n/files/ind.svg', alt: 'erpnext_partner_india' },
-              { name: 'Hungary', image: '/api/fb/n/files/HU.svg', alt: 'erpnext_partner_hungary' },
-              { name: 'HongKong', image: '/api/fb/n/files/HK.svg', alt: 'erpnext_partner_hongkong' },
-              { name: 'Germany', image: '/api/fb/n/files/ger.svg', alt: 'erpnext_partner_germany' },
-              { name: 'France', image: '/api/fb/n/files/FR.svg', alt: 'erpnext_partner_france' },
-              { name: 'China', image: '/api/fb/n/files/chn.svg', alt: 'erpnext_partner_china' },
-              { name: 'Canada', image: '/api/fb/n/files/CA.svg', alt: 'erpnext_partner_canada' },
-              { name: 'Brunei', image: '/api/fb/n/files/BN.svg', alt: 'erpnext_partner_brunei' },
-              { name: 'Belgium', image: '/api/fb/n/files/BE.svg', alt: 'erpnext_partner_belgium' },
-              { name: 'Australia', image: '/api/fb/n/files/AU.svg', alt: 'erpnext_partner_australia' }
+              { name: 'Vietnam', image: '/images/vnm.svg', alt: 'erpnext_partner_vietnam' },
+              { name: 'USA', image: '/images/US.svg', alt: 'erpnext_partner_usa' },
+              { name: 'UAE', image: '/images/AE.svg', alt: 'erpnext_partner_uae' },
+              { name: 'Singapore', image: '/images/sgp.svg', alt: 'erpnext_partner_singapore' },
+              { name: 'Saudi Arabia', image: '/images/sau.svg', alt: 'erpnext_partner_saudi_arabia' },
+              { name: 'Norway', image: '/images/NO.svg', alt: 'erpnext_partner_norway' },
+              { name: 'Malaysia', image: '/images/MY.svg', alt: 'erpnext_partner_malaysia' },
+              { name: 'Mauritius', image: '/images/MU.svg', alt: 'erpnext_partner_mauritius' },
+              { name: 'India', image: '/images/ind.svg', alt: 'erpnext_partner_india' },
+              { name: 'Hungary', image: '/images/HU.svg', alt: 'erpnext_partner_hungary' },
+              { name: 'HongKong', image: '/images/HK.svg', alt: 'erpnext_partner_hongkong' },
+              { name: 'Germany', image: '/images/ger.svg', alt: 'erpnext_partner_germany' },
+              { name: 'France', image: '/images/FR.svg', alt: 'erpnext_partner_france' },
+              { name: 'China', image: '/images/chn.svg', alt: 'erpnext_partner_china' },
+              { name: 'Canada', image: '/images/CA.svg', alt: 'erpnext_partner_canada' },
+              { name: 'Brunei', image: '/images/BN.svg', alt: 'erpnext_partner_brunei' },
+              { name: 'Belgium', image: '/images/BE.svg', alt: 'erpnext_partner_belgium' },
+              { name: 'Australia', image: '/images/AU.svg', alt: 'erpnext_partner_australia' }
             ]}
           />
         </div>

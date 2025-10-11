@@ -10,6 +10,7 @@ export interface JobOpening {
   experience_required?: string;
   posted_date: string;
   route?: string;
+  small_description?:string;
 }
 
 interface JobOpeningData {
@@ -22,6 +23,8 @@ interface JobOpeningData {
   experience_required?: string;
   posted_on?: string;
   route?: string;
+  small_description?:string;
+
 }
 
 // Removed getJobOpenings function - now using custom Frappe function directly
@@ -120,9 +123,12 @@ export async function GET(request: NextRequest) {
       'creation',
       'modified',
       'status',
-      'company'
+      'company',
+      'route',
+      "small_description"
     ];
     filters.push(['publish', 'is', 'set']);  
+    filters.push(['status','in',["Open"]])
     const frappeApiUrl = `${process.env.FRAPPE_URL}/api/resource/Job Opening?filters=${encodeURIComponent(
       JSON.stringify(filters)
     )}&fields=${encodeURIComponent(JSON.stringify(fields))}&limit_page_length=100`;
@@ -158,6 +164,7 @@ export async function GET(request: NextRequest) {
       experience_required: 'Not specified', // Default value since field is not accessible
       posted_date: job.creation || job.modified || '',
       route: job.route,
+      small_description:job.small_description
     }));
     
     

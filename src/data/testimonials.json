@@ -1,7 +1,7 @@
 {
   "title": "{{ title | default('Trusted by Clients Globally') }}",
   "subtitle": "{{ subtitle | default('See what our partners say about working with us') }}",
-  "ctaButton": "{{ cta_button | default('See How We Helped Businesses Like Yours →') }}",
+  "_ctaButton": "{{ cta_button | default('See How We Helped Businesses Like Yours →') }}",
   "testimonials": [
     {
       "quote": "{{ testimonials.0.quote | default('We\\'ve had an excellent experience working with this software service provider. Their innovative approach to solving complex technical challenges has significantly improved our product. The addition of a dedicated developer to our team ensured seamless communication and consistent progress. They consistently deliver high-quality solutions, demonstrating both technical expertise and a strong commitment to client success. We highly recommend them to anyone seeking reliable, forward-thinking development support.') }}",
@@ -50,7 +50,7 @@
       "color": "{{ trust_indicators.1.color | default('#FF8C00') }}"
     },
     {
-      "text": "{{ trust_indicators.2.text | default('15+ Countries Served') }}",
+      "text": "{{ trust_indicators.2.text | default('12+ Countries Served') }}",
       "color": "{{ trust_indicators.2.color | default('#8E44AD') }}"
     }
   ],

@@ -31,7 +31,7 @@ export default function Page() {
         heroImage={{
           alt: 'ERPNext for Manufacturing',
           src: '/images/Manufacturingc334bc.svg',
-          videoSrc: '/api/fb/n/files/Manufacturing.mp4',
+          videoSrc: '/images/Manufacturing.mp4',
         }}
       />
 
@@ -99,19 +99,19 @@ export default function Page() {
             types={[
               {
                 title: 'ERP for Discrete Manufacturing',
-                image: '/api/fb/n/files/2544444.svg',
+                image: '/images/2544444.svg',
                 alt: 'Discrete Manufacturing',
                 description: 'Discrete manufacturers assemble components into finished products (e.g., electronics or automotive). An ERP for discrete manufacturing manages demand forecasting, serialized production, supplier information, and order tracking to ensure smooth assembly operations.'
               },
               {
                 title: 'ERP for Process Manufacturing',
-                image: '/api/fb/n/files/2544 (1).svg',
+                image: '/images/2544 (1).svg',
                 alt: 'Process Manufacturing',
                 description: 'Process manufacturers combine formulas or raw materials to produce goods (e.g., chemicals, food & beverage). ERP for process manufacturing handles complex recipes and formulas, quality control, waste tracking, and product life cycles to maintain consistent output.'
               },
               {
                 title: 'ERP for Mixed Manufacturing',
-                image: '/api/fb/n/files/25424.svg',
+                image: '/images/25424.svg',
                 alt: 'Mixed Manufacturing',
                 description: 'Mixed manufacturing companies perform both discrete and process production. An ERP for mixed manufacturing supports both assembly and formula-based processes in one system, giving flexibility to businesses dealing with varied production models.'
               }
@@ -140,19 +140,19 @@ export default function Page() {
               benefits={[
                 {
                   title: 'Cost Reduction',
-                  image: '/api/fb/n/files/blog-cost-cutting.svg',
+                  image: '/images/blog-cost-cutting.svg',
                   alt: 'Reduce costs and save dollars',
                   description: 'ERP systems automate repetitive tasks, reduce paperwork, and optimize resource utilization. By minimizing manual errors and streamlining procurement, production, and inventory processes, companies save both time and money.'
                 },
                 {
                   title: 'Real-Time Visibility',
-                  image: '/api/fb/n/files/icon-Real-time-information.svg',
+                  image: '/images/icon-Real-time-information.svg',
                   alt: 'Real-time information',
                   description: 'Get up-to-date information on stock levels, production status, pending orders, and delivery timelines. Real-time dashboards help supervisors monitor the shop floor, identify bottlenecks, and respond quickly.'
                 },
                 {
                   title: 'Flexibility and Competitive Edge',
-                  image: '/api/fb/n/files/icon-Higher-Productivity.svg',
+                  image: '/images/icon-Higher-Productivity.svg',
                   alt: 'Flexibility and competitive edge',
                   description: 'ERP systems are highly customizable. Whether you\'re producing seasonal goods, managing job orders, or dealing with varying customer specs, ERP adapts to your workflow giving your business a competitive edge.'
                 }

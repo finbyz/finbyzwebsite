@@ -72,35 +72,35 @@ export default function Page() {
             features={[
               {
                 title: 'Activity Summary',
-                image: '/api/fb/n/files/295.svg',
+                image: '/images/295.svg',
                 alt: 'Activity Summary',
                 description:
                   'The Activity Summary module presents employee engagement using a Gantt chart, reflecting active and idle periods across applications, websites, and meetings. This time tracking software empowers teams to improve time utilization and overall performance.',
               },
               {
                 title: 'System Activity',
-                image: '/api/fb/n/files/49.svg',
+                image: '/images/49.svg',
                 alt: 'System Activity',
                 description:
                   'System Activity offers real-time insights into keystrokes and mouse movements, forming a heatmap that pinpoints periods of intense activity. This feature of our Staff Monitoring Software is ideal for analyzing employee engagement and improving time planning and mentoring.',
               },
               {
                 title: 'Web Browsing',
-                image: '/api/fb/n/files/Devopps.svg',
+                image: '/images/Devopps.svg',
                 alt: 'Web Browsing',
                 description:
                   'Monitor web activity with domain-level Pie Chart analytics. Daily, weekly, and monthly summaries assist managers in refining digital focus and ensuring productive use of time with our Employee Monitoring Software.',
               },
               {
                 title: 'Phone Calls Analysis',
-                image: '/api/fb/n/files/Supoort.svg',
+                image: '/images/Supoort.svg',
                 alt: 'Phone Calls Analysis',
                 description:
                   'Productify’s mobile tracking component enhances the functionality of time tracking software by logging calls and connecting them with ERP records. Track details like call type, contacts, and duration to assess communication efficiency effectively.',
               },
               {
                 title: 'Meeting Analysis',
-                image: '/api/fb/n/files/lack-of-participation.svg',
+                image: '/images/lack-of-participation.svg',
                 alt: 'Meeting Analysis',
                 description:
                   'Optimize meeting schedules with detailed logs of all internal and external discussions. This feature of our Staff Monitoring Software helps your team evaluate time invested in meetings and ensures they contribute to measurable outcomes.',
@@ -168,33 +168,47 @@ export default function Page() {
       </Section>
 
       <Section>
-      <div className="container-custom py-8">
-        <h2 className="text-2xl text-[#1A5276] font-semibold text-center mb-6 animate-fadeInUp">
-          Applications and Web Browsing Insights
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* First Image */}
-          <div className="flex flex-col items-center">
-            <div className="w-full aspect-square overflow-hidden rounded-lg shadow-lg">
-              <Image src="/images/Productify%20Applications%20Used.jpg" alt="Productify Applications Used" width={500} height={500} className="w-full h-full object-cover" />
-            </div>
-            <p className="mt-4 text-center text-muted-foreground text-sm">
-              Our Doughnut Chart breaks down employee software usage, showcasing how much time is spent per application.
-            </p>
-          </div>
+  <div className="container-custom py-10">
+    <h2 className="text-2xl text-[#1A5276] font-semibold text-center mb-8 animate-fadeInUp">
+      Applications and Web Browsing Insights
+    </h2>
 
-          {/* Second Image */}
-          <div className="flex flex-col items-center">
-            <div className="w-full aspect-square overflow-hidden rounded-lg shadow-lg">
-              <Image src="/images/Productify%20Web%20Browsing%20Time.jpg" alt="Productify Web Browsing Time" width={500} height={500} className="w-full h-full object-cover" />
-            </div>
-            <p className="mt-4 text-center text-muted-foreground text-sm">
-              Track all web activity with Productify's Pie Chart, categorizing browsing time by domain.
-            </p>
-          </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+      {/* First Image */}
+      <div className="flex flex-col items-center">
+        <div className="w-full max-w-lg overflow-hidden rounded-xl shadow-lg bg-white p-6 flex justify-center">
+          <Image
+            src="/images/Productify%20Applications%20Used.jpg"
+            alt="Productify Applications Used"
+            width={500}
+            height={500}
+            className="w-auto h-[400px] object-contain"
+          />
         </div>
+        <p className="mt-4 text-center text-muted-foreground text-base leading-relaxed max-w-lg">
+          Our Doughnut Chart breaks down employee software usage, showcasing how much time is spent per application for better productivity insights.
+        </p>
       </div>
-    </Section>
+
+      {/* Second Image */}
+      <div className="flex flex-col items-center">
+        <div className="w-full max-w-lg overflow-hidden rounded-xl shadow-lg bg-white p-6 flex justify-center">
+          <Image
+            src="/images/Productify%20Web%20Browsing%20Time.jpg"
+            alt="Productify Web Browsing Time"
+            width={500}
+            height={500}
+            className="w-auto h-[400px] object-contain"
+          />
+        </div>
+        <p className="mt-4 text-center text-muted-foreground text-base leading-relaxed max-w-lg">
+          Track all web activity with Productify's Pie Chart, categorizing browsing time by domain to identify key usage patterns.
+        </p>
+      </div>
+    </div>
+  </div>
+</Section>
+
 
       <Section useGradient>
         <div className="container-custom py-8">
@@ -219,31 +233,47 @@ export default function Page() {
       </Section>
 
       <Section>
-  <div className="container-custom py-8">
-    <h2 className="text-2xl text-[#1A5276] font-semibold text-center mb-6 animate-fadeInUp">Top Phone Calls and Types of Calls</h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-      {/* First Image */}
-      <div className="flex flex-col items-center">
-        <div className="w-full max-w-md overflow-hidden rounded-lg shadow-lg bg-white p-4">
-          <Image src="/images/Productify%20Top%20Phone%20Calls.jpg" alt="Productify Top Phone Calls" width={500} height={500} className="w-full h-auto object-contain" />
-        </div>
-        <p className="mt-4 text-center text-muted-foreground text-sm">
-          Top Phone Calls in the Productify app, visualized using a Pie-in-a-Doughnut chart.
-        </p>
-      </div>
+      <div className="container-custom py-8">
+        <h2 className="text-2xl text-[#1A5276] font-semibold text-center mb-6 animate-fadeInUp">
+          Top Phone Calls and Types of Calls
+        </h2>
 
-      {/* Second Image */}
-      <div className="flex flex-col items-center">
-        <div className="w-full max-w-sm overflow-hidden rounded-lg shadow-lg bg-white p-4">
-          <Image src="/images/Type%20of%20Calls.png" alt="Type of Calls" width={500} height={500} className="w-full h-auto object-contain" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          {/* First Image */}
+          <div className="flex flex-col items-center">
+            <div className="w-full max-w-md overflow-hidden rounded-lg shadow-lg bg-white p-4">
+              <Image
+                src="/images/Productify%20Top%20Phone%20Calls.jpg"
+                alt="Productify Top Phone Calls"
+                width={500}
+                height={500}
+                className="w-full h-[320px] object-contain"
+              />
+            </div>
+            <p className="mt-4 text-center text-muted-foreground text-base leading-relaxed max-w-md">
+              Top Phone Calls in the Productify app, visualized using a Pie-in-a-Doughnut chart that helps identify the most frequently contacted segments for better call management.
+            </p>
+          </div>
+
+          {/* Second Image */}
+          <div className="flex flex-col items-center">
+            <div className="w-full max-w-md overflow-hidden rounded-lg shadow-lg bg-white p-4">
+              <Image
+                src="/images/Type%20of%20Calls.png"
+                alt="Type of Calls"
+                width={500}
+                height={500}
+                className="w-full h-[320px] object-contain"
+              />
+            </div>
+            <p className="mt-4 text-center text-muted-foreground text-base leading-relaxed max-w-md">
+              Categorizes internal and external communications to enhance strategic decisions and monitor call distribution across departments more efficiently.
+            </p>
+          </div>
         </div>
-        <p className="mt-4 text-center text-muted-foreground text-sm">
-          Categorizes internal and external communications to enhance strategic decisions.
-        </p>
       </div>
-    </div>
-  </div>
-</Section>
+    </Section>
+
 
       <Section useGradient>
         <div className="container-custom py-8">

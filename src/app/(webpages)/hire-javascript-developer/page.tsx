@@ -15,49 +15,49 @@ const heroHighlightWords = ["JavaScript", "Developer", "Hire"];
 const whyChooseFeatures = [
   {
     title: 'Familiarity with HTML and CSS',
-    image: '/api/fb/n/files/html_css.svg',
+    image: '/images/html_css.svg',
     alt: 'HTML CSS',
     description: 'We have an in-house team of JavaScript developers who have an advanced understanding of HTML and CSS.'
   },
   {
     title: 'Knowledge of JavaScript Frameworks',
-    image: '/api/fb/n/files/js%20knowledge.svg',
+    image: '/images/js%20knowledge.svg',
     alt: 'JS Knowledge',
     description: 'Familiarity with JavaScript frameworks, such as Nord, React, Angular, Express and Vue.js'
   },
   {
     title: 'Understanding of Asynchronous Programming',
-    image: '/api/fb/n/files/asynchnorus.svg',
+    image: '/images/asynchnorus.svg',
     alt: 'Asynchronous',
     description: 'We know how to use asynchronous programming concepts, such as callbacks and promises, to write efficient and scalable code.'
   },
   {
     title: 'Experience with Libraries and Tools',
-    image: '/api/fb/n/files/icon%20Higher%20Productivity.svg',
+    image: '/images/icon%20Higher%20Productivity.svg',
     alt: 'Higher Productivity',
     description: 'We use JS libraries such as jQuery, Lodash, and Babel to enhance the functionality of their code..'
   },
   {
     title: 'Familiarity with ES6',
-    image: '/api/fb/n/files/icon%20Real-time%20information.svg',
+    image: '/images/icon%20Real-time%20information.svg',
     alt: 'Real-time information',
     description: 'We work with the latest version of ES6, the latest version of JavaScript, and understand how to use its new features, such as destructuring, arrow functions, and template literals.'
   },
   {
     title: 'Knowledge of Single-Page Applications (SPAs)',
-    image: '/api/fb/n/files/lack-of-adequate-planning.svg',
+    image: '/images/lack-of-adequate-planning.svg',
     alt: 'SPA',
     description: 'Many modern web applications are built as single-page applications, and we have experience building SPAs and understanding the concepts behind them'
   },
   {
     title: 'Understanding of RESTful API Design',
-    image: '/api/fb/n/files/api%20development.svg',
+    image: '/images/api%20development.svg',
     alt: 'API Development',
     description: 'A good JavaScript developer should have experience consuming and working with RESTful APIs and understand the principles of good API design.'
   },
   {
     title: 'Attention to Details',
-    image: '/api/fb/n/files/icon%20Better%20Analytics.svg',
+    image: '/images/icon%20Better%20Analytics.svg',
     alt: 'Better Analytics',
     description: 'Our developers take pride in their work and are meticulous in their attention to detail. They are committed to delivering code that is clean, well-documented, and easy to maintain. Familiarity with Source Control.'
   }
@@ -66,28 +66,28 @@ const whyChooseFeatures = [
 const serviceCards = [
   {
     title: 'Web Development',
-    image: '/api/fb/n/files/Hire-JS-Dev.svg',
+    image: '/images/Hire-JS-Dev.svg',
     alt: 'Web Development',
     description: `We develop custom web applications using JavaScript. Although JS is primarily used for front-end web development, where it's used to create dynamic, interactive user interfaces and add functionality to websites. However, we can also enable you to use JS for the server side using Node.js. We offer all sorts of JS web development`,
     link: 'https://finbyz.tech/web-application-development'
   },
   {
     title: 'Web-Based Application Development',
-    image: '/api/fb/n/files/Hire-JS-Dev.svg',
+    image: '/images/Hire-JS-Dev.svg',
     alt: 'Web-Based Application',
     description: 'We can help you build custom web-based applications to automate business processes, manage data, and improve productivity. Our team has extensive experience in developing applications using JavaScript, React, Node.js, and other related technologies',
     link: ''
   },
   {
     title: 'Desktop Applications',
-    image: '/api/fb/n/files/Hire-JS-Dev.svg',
+    image: '/images/Hire-JS-Dev.svg',
     alt: 'Desktop Applications',
     description: 'JavaScript can be used to create desktop applications through the use of technologies like Electron, which allows developers to build cross-platform desktop apps using web technologies like JavaScript, HTML, and CSS.',
     link: ''
   },
   {
     title: 'Mobile Application',
-    image: '/api/fb/n/files/Hire-JS-Dev.svg',
+    image: '/images/Hire-JS-Dev.svg',
     alt: 'Mobile Application',
     description: 'JavaScript can be used for mobile app development through hybrid mobile apps, Progressive Web Apps (PWAs), or frameworks specifically designed for mobile app development. Hybrid apps run within a native container and provide access to native device features. Frameworks like React Native, NativeScript, and Titanium SDK provide tools for building native-like mobile apps using JavaScript.',
     link: ''
@@ -267,7 +267,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'Hire JavaScript Developer',
-          src: '/api/fb/n/files/Hire-JS-Dev.svg',
+          src: '/images/Hire-JS-Dev.svg',
           
         }}
       />
