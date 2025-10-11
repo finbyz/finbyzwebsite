@@ -28,7 +28,7 @@ useEffect(() => {
     try {
      
       const res = await fetch(
-       "https://website.finbyz.com/api/method/finbyzweb.api.get_all_job_openings"
+       "https://finbyz.tech/api/method/finbyzweb.api.get_all_job_openings"
       );
       const data = await res.json();
       console.log("Job Openings API response:", data);
@@ -53,7 +53,7 @@ useEffect(() => {
   //   const fetchJobOpenings = async () => {
   //     try {
   //       const res = await fetch(
-  //         "https://website.finbyz.com/api/method/finbyzweb.api.get_all_job_openings"
+  //         "https://finbyz.tech/api/method/finbyzweb.api.get_all_job_openings"
   //       );
   //       const data = await res.json();
   //       console.log("Job Openings API response:", data.message.data);
@@ -86,7 +86,7 @@ useEffect(() => {
 //   async function fetchApplicantTypes() {
 //     try {
 //       const res = await fetch(
-//         "https://website.finbyz.com/api/method/finbyzweb.api.get_applicant_types"
+//         "https://finbyz.tech/api/method/finbyzweb.api.get_applicant_types"
 //       );
 //       const data = await res.json();
 //       console.log("Applicant types API response: dhanvant---", data);
@@ -116,7 +116,7 @@ useEffect(() => {
     try {
       
       const response = await fetch(
-       "https://website.finbyz.com/api/method/finbyzweb.api.get_applicant_types"
+       "https://finbyz.tech/api/method/finbyzweb.api.get_applicant_types"
       );
 
       if (!response.ok) {
@@ -215,7 +215,7 @@ useEffect(() => {
 
       // Send request to Frappe web form API
       // https://finbyz.tech//api/method/finbyz.api.set_form_job_applicant
-      const res = await fetch("https://website.finbyz.com/api/method/finbyzweb.api.set_form_job_applicant", {
+      const res = await fetch("https://finbyz.tech/api/method/finbyzweb.api.set_form_job_applicant", {
         method: "POST",
         body: formData,
       });

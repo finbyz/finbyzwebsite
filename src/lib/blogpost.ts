@@ -55,7 +55,7 @@ export async function getBlogPosts({
   //   params.append("end_date", end_date);
   // }
 
-  // const url = `https://website.finbyz.com/api/method/finbyz.api.get_blog_posts?${params.toString()}`;
+  // const url = `https://finbyz.tech/api/method/finbyz.api.get_blog_posts?${params.toString()}`;
 
   // const res = await fetch(url, {
   //   headers: {

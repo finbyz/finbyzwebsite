@@ -51,7 +51,7 @@ async function handleRequest(
   method: string
 ) {
   try {
-    const frappeUrl = process.env.FRAPPE_URL || 'https://website.finbyz.com';
+    const frappeUrl = process.env.FRAPPE_URL || 'https://finbyz.tech';
 
     const [first, ...rest] = pathSegments;
     const frappePath = first === 'n' ? rest.join('/') : pathSegments.join('/');

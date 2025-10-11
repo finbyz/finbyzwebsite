@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 
-const UPSTREAM = 'https://website.finbyz.com/api/method/finbyzweb.api.set_form_data'
+const UPSTREAM = 'https://finbyz.tech/api/method/finbyzweb.api.set_form_data'
 
 export async function POST(request: Request) {
  

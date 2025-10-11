@@ -87,7 +87,7 @@ const LeadPage = () => {
 
     try {
       // Make API request to Frappe endpoint
-      const response = await fetch("https://website.finbyz.com/api/method/finbyzweb.api.create_lead", {
+      const response = await fetch("https://finbyz.tech/api/method/finbyzweb.api.create_lead", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

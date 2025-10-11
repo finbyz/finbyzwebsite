@@ -38,7 +38,7 @@
 //     return [
 //       {
 //         source: '/api/frappe/:path*',
-//         destination: 'https://website.finbyz.com/api/method/:path*',
+//         destination: 'https://finbyz.tech/api/method/:path*',
 //       },
 //     ];
 //   },
@@ -87,13 +87,13 @@ const nextConfig = {
     return [
       {
         source: "/api/fb/n/:path*",
-        destination: "https://website.finbyz.com/:path*",
+        destination: "https://finbyz.tech/:path*",
 
         
       },
       {
         source: "/api/fb/:path*",
-        destination: "https://website.finbyz.com/api/method/:path*",
+        destination: "https://finbyz.tech/api/method/:path*",
 
         
       },

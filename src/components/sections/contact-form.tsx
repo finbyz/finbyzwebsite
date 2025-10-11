@@ -44,7 +44,7 @@ export default function ContactFormSection(props: ContactFormProps = {}) {
 
     try {
       const res = await fetch(
-        "https://website.finbyz.com/api/method/finbyzweb.api.set_form_contact_data",
+        "https://finbyz.tech/api/method/finbyzweb.api.set_form_contact_data",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

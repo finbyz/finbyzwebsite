@@ -123,7 +123,7 @@ export default function Page() {
           }
         }}
         secondaryButton={{
-          text: 'Download Brochure',
+          text: 'Learn More',
           action: () => {
             if (typeof window !== 'undefined') {
               const element = document.getElementById('benefits-section');
