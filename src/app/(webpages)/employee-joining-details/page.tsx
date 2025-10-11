@@ -70,7 +70,7 @@ export default function Page() {
             </ul>
           </div>
           <div className="flex-1 flex justify-center">
-            <Image fill  src="/images/employee-joining-form-illustration.png" alt="Employee Joining Form Illustration" loading="lazy" />
+            <Image src="/images/employee-joining-form-illustration.png" alt="Employee Joining Form Illustration" width={500} height={500} className="rounded-xl shadow-lg w-full md:w-96 h-auto object-contain animate-fade-in" loading="lazy" />
           </div>
         </div>
       </Section>

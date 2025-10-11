@@ -55,7 +55,7 @@ export default function Page() {
               </p>
             </div>
             <div className="flex-shrink-0 flex flex-col items-center gap-2">
-              <Image fill  src="/images/Quotation_marks.svg" alt="Quotation marks" />
+              <Image src="/images/Quotation_marks.svg" alt="Quotation marks" width={64} height={64} className="opacity-70 animate-fade-in-up" />
             </div>
           </div>
         </div>

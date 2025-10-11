@@ -62,7 +62,7 @@ export default function Page() {
         <div className="container-custom py-8 grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Recruitment Modern */}
           <Card className="border-none shadow-md flex flex-col items-center p-6 animate-fadeInUp">
-            <Image fill  src="/images/icon Real-time information.svg" alt="Flawless UI with Real-time information" />
+            <Image src="/images/icon Real-time information.svg" alt="Flawless UI with Real-time information" width={80} height={80} className="mb-2 " />
             <CardTitle className="text-2xl font-bold mb-2">Recruitment</CardTitle>
             <CardDescription className="text-justify text-lg mb-2">
               Finding and hiring the right talent is crucial to organizational growth. As the pool of skilled candidates grows, selecting the best fit becomes more challenging. Our recruitment module within the HR software reduces hiring time and costs while improving candidate quality. The system helps you:
@@ -85,7 +85,7 @@ export default function Page() {
 
           {/* Employee and Attendance Modern */}
           <Card className="border-none shadow-md flex flex-col items-center p-6 animate-fadeInUp">
-            <Image fill  src="/images/icon Improved Collaboration.svg" alt="Improved Collaboration" />
+            <Image src="/images/icon Improved Collaboration.svg" alt="Improved Collaboration" width={80} height={80} className="mb-2" />
             <CardTitle className="text-2xl font-bold mb-2">Employee and Attendance</CardTitle>
             <CardDescription className="text-justify text-lg mb-2">
               With flexible work hours becoming common, tracking attendance manually is no longer feasible. Our HR and payroll software includes biometric integration for accurate attendance tracking, helping businesses maintain discipline and transparency.
@@ -94,7 +94,7 @@ export default function Page() {
 
           {/* Leave Management Modern */}
           <Card className="border-none shadow-md flex flex-col items-center p-6 animate-fadeInUp">
-            <Image fill  src="/images/icon Improved Collaboration.svg" alt="Improved Collaboration" />
+            <Image src="/images/icon Improved Collaboration.svg" alt="Improved Collaboration" width={80} height={80} className="mb-2" />
             <CardTitle className="text-2xl font-bold mb-2">Leave Management</CardTitle>
             <CardDescription className="text-justify text-lg mb-2">
               While occasional leaves are important for employee well-being, excessive absence can impact productivity. Our HR software includes leave management tools that monitor leave balances, track patterns, and evaluate their impact on performance.
@@ -103,7 +103,7 @@ export default function Page() {
 
           {/* Appraisal Modern */}
           <Card className="border-none shadow-md flex flex-col items-center p-6 animate-fadeInUp">
-            <Image fill  src="/images/icon Real-time information.svg" alt="Flawless UI with Real-time information" />
+            <Image src="/images/icon Real-time information.svg" alt="Flawless UI with Real-time information" width={80} height={80} className="mb-2" />
             <CardTitle className="text-2xl font-bold mb-2">Appraisal</CardTitle>
             <CardDescription className="text-justify text-lg mb-2">
               Appraisals are key to motivating employees. Manual performance reviews are time-consuming and error-prone. Our human resource software automates the appraisal process, making it consistent, objective, and data-driven. Benefits include:
@@ -126,7 +126,7 @@ export default function Page() {
 
           {/* Expense Claim Modern */}
           <Card className="border-none shadow-md flex flex-col items-center p-6 animate-fadeInUp">
-            <Image fill  src="/images/icon Real-time information.svg" alt="Flawless UI with Real-time information" />
+            <Image src="/images/icon Real-time information.svg" alt="Flawless UI with Real-time information" width={80} height={80} className="mb-2" />
             <CardTitle className="text-2xl font-bold mb-2">Expense Claim</CardTitle>
             <CardDescription className="text-justify text-lg mb-2">
               Employee-incurred expenses such as travel and utilities need efficient tracking. Our HR and payroll software includes an expense claim system that:
@@ -149,7 +149,7 @@ export default function Page() {
 
           {/* Payroll Modern */}
           <Card className="border-none shadow-md flex flex-col items-center p-6 animate-fadeInUp">
-            <Image fill  src="/images/icon Improved Collaboration.svg" alt="Improved Collaboration" />
+            <Image src="/images/icon Improved Collaboration.svg" alt="Improved Collaboration" width={80} height={80} className="mb-2" />
             <CardTitle className="text-2xl font-bold mb-2">Payroll</CardTitle>
             <CardDescription className="text-justify text-lg mb-2">
               Timely and accurate compensation is critical to employee satisfaction. Our payroll module within the HR software ensures accurate calculations, tax compliance, and punctual salary disbursements. Automation in payroll management reduces errors, ensures compliance, and increases overall trust in the system.

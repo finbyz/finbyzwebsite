@@ -63,7 +63,7 @@ export default function Page() {
               </p>
             </div>
             <div className="flex-1 flex justify-center animate-fade-in-up">
-              <Image fill  src="/images/technology-expertise.svg" alt="Technology expertise" />
+              <Image src="/images/technology-expertise.svg" alt="Technology expertise" width={320} height={250} className="object-contain" />
             </div>
           </div>
           <div className="mt-10">

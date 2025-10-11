@@ -25,7 +25,7 @@ const flipCards = [
   {
     front: (
       <div className="flex flex-col items-center justify-center gap-3">
-        <Image fill  src="/images/icon-sales-automation.svg" alt="Customized ERPNext" />
+        <Image src="/images/icon-sales-automation.svg" alt="Customized ERPNext" width={56} height={56} />
         <h3 className="font-semibold text-lg">Customized ERPNext</h3>
       </div>
     ),
@@ -38,7 +38,7 @@ const flipCards = [
   {
     front: (
       <div className="flex flex-col items-center justify-center gap-3">
-        <Image fill  src="/images/icon-personalized-touch.svg" alt="ERPNext Implementation" />
+        <Image src="/images/icon-personalized-touch.svg" alt="ERPNext Implementation" width={56} height={56} />
         <h3 className="font-semibold text-lg">ERPNext Implementation</h3>
       </div>
     ),
@@ -51,7 +51,7 @@ const flipCards = [
   {
     front: (
       <div className="flex flex-col items-center justify-center gap-3">
-        <Image fill  src="/images/icon-shorter-sales-cycle.svg" alt="Integration Services" />
+        <Image src="/images/icon-shorter-sales-cycle.svg" alt="Integration Services" width={56} height={56} />
         <h3 className="font-semibold text-lg">Integration Services</h3>
       </div>
     ),
@@ -64,7 +64,7 @@ const flipCards = [
   {
     front: (
       <div className="flex flex-col items-center justify-center gap-3">
-        <Image fill  src="/images/icon-improved-service.svg" alt="Support and Maintenance" />
+        <Image src="/images/icon-improved-service.svg" alt="Support and Maintenance" width={56} height={56} />
         <h3 className="font-semibold text-lg">Support and Maintenance</h3>
       </div>
     ),
@@ -77,7 +77,7 @@ const flipCards = [
   {
     front: (
       <div className="flex flex-col items-center justify-center gap-3">
-        <Image fill  src="/images/icon-customer-loyalty.svg" alt="Training and Consultation" />
+        <Image src="/images/icon-customer-loyalty.svg" alt="Training and Consultation" width={56} height={56} />
         <h3 className="font-semibold text-lg">Training and Consultation</h3>
       </div>
     ),
@@ -90,7 +90,7 @@ const flipCards = [
   {
     front: (
       <div className="flex flex-col items-center justify-center gap-3">
-        <Image fill  src="/images/icon-resource-optimization.svg" alt="Data Migration" />
+        <Image src="/images/icon-resource-optimization.svg" alt="Data Migration" width={56} height={56} />
         <h3 className="font-semibold text-lg">Data Migration</h3>
       </div>
     ),

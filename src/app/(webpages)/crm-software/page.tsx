@@ -71,7 +71,7 @@ export default function Page() {
       <Section>
         <div className="container-custom py-8 relative">
           <div className="absolute right-0 bottom-0 hidden sm:block opacity-30 pointer-events-none">
-            <Image fill  src="/images/three-hexagon.svg" alt="haxagon-image" />
+            <Image src="/images/three-hexagon.svg" alt="haxagon-image" width={120} height={120} />
           </div>
           <h2 className="text-3xl font-bold text-center mb-4">Benefits that CRM software offers</h2>
           <p className="text-center mb-8">
