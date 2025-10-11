@@ -22,7 +22,7 @@ export default function PageBuilder() {
   const loadSampleData = useCallback(async () => {
     try {
       setIsLoading(true);
-      const response = await fetch('/api/sample-page-data');
+      const response = await fetch('/web-api/sample-page-data');
       const data = await response.json();
       setPageData(data);
       setJsonInput(JSON.stringify(data, null, 2));

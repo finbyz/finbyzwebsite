@@ -327,7 +327,7 @@ type TimeSpan = 'today' | 'last7' | 'last30' | 'thisMonth' | 'custom'
         // Load project options for current user
         const currentUser = (typeof window !== 'undefined' && (window as any).erpnext_user) || ''
         const q = currentUser ? `?user=${encodeURIComponent(currentUser)}` : ''
-        const url = `/api/user-activity/projects${q}${q ? '&' : '?'}debug=1`
+        const url = `/web-api/user-activity/projects${q}${q ? '&' : '?'}debug=1`
         fetch(url, { cache: 'no-store', credentials: 'include' })
             .then(async (r) => (r.ok ? r.json() : r.json().catch(() => ({})).then((j)=>Promise.reject(j))))
             .then((json) => {
@@ -542,7 +542,7 @@ function OverviewInner() {
         if (filters.project && filters.project !== 'all') params.append('project', filters.project)
         setLoading(true)
         setError(null)
-        const url = `/api/user-activity/matrix?${params.toString()}`
+        const url = `/web-api/user-activity/matrix?${params.toString()}`
         console.log('[Overview] fetching', url, { project: filters.project })
         const controller = new AbortController()
         // Increase timeout to accommodate slower upstream (~16s observed)
@@ -638,7 +638,7 @@ function OverviewInner() {
                 qp.append('from_date', filters.start.toISOString().slice(0, 10))
                 qp.append('to_date', filters.end.toISOString().slice(0, 10))
                 qp.append('project', filters.project && filters.project !== 'all' ? filters.project : '')
-                const url = `/api/fb/method/productivity_next.api.get_task_list?${qp.toString()}`
+                const url = `/web-api/fb/method/productivity_next.api.get_task_list?${qp.toString()}`
                 const res = await fetch(url, { cache: 'no-store' })
                 if (!res.ok) {
                     const raw = await res.text().catch(() => '')

@@ -59,8 +59,8 @@ FRAPPE_URL=https://finbyz.tech
   ```
 
 ### 4. Authenticated Frappe API Forwarding
-- **Base Endpoint**: `/api/fb/*`
-- **Description**: All requests to `/api/fb/` are automatically forwarded to the Frappe backend with authentication
+- **Base Endpoint**: `/web-api/fb/*`
+- **Description**: All requests to `/web-api/fb/` are automatically forwarded to the Frappe backend with authentication
 - **Authentication**: Automatically includes session cookies from login
 - **Methods**: Supports GET, POST, PUT, DELETE, PATCH
 
@@ -127,7 +127,7 @@ const customersResponse = await frappeGet(frappeEndpoints.documents('Customer'))
 ## How It Works
 
 1. **Login Flow**:
-   - User calls `/api/auth/login` with credentials
+   - User calls `/web-api/auth/login` with credentials
    - Frontend receives Frappe session cookies
    - Session is now established
    - User is redirected to home page
@@ -138,7 +138,7 @@ const customersResponse = await frappeGet(frappeEndpoints.documents('Customer'))
    - Displays authentication status
 
 3. **Authenticated API Calls**:
-   - All calls to `/api/fb/*` automatically include session cookies
+   - All calls to `/web-api/fb/*` automatically include session cookies
    - Requests are forwarded to Frappe backend with authentication
    - Responses are returned to frontend with proper status codes
 
@@ -154,7 +154,7 @@ const customersResponse = await frappeGet(frappeEndpoints.documents('Customer'))
 - **Type Safety**: Full TypeScript support with proper interfaces
 - **Cookie Forwarding**: Properly forwards session cookies between frontend and Frappe backend
 - **Security**: Uses HttpOnly cookies for session management
-- **Automatic Authentication**: All `/api/fb/*` calls are automatically authenticated
+- **Automatic Authentication**: All `/web-api/fb/*` calls are automatically authenticated
 - **Flexible API**: Supports all HTTP methods and custom endpoints
 
 ## Security Notes
@@ -163,14 +163,14 @@ const customersResponse = await frappeGet(frappeEndpoints.documents('Customer'))
 - Passwords are never stored in the frontend
 - All authentication requests go through the secure API endpoints
 - Uses proper HTTP status codes for different error scenarios
-- `/api/fb/*` endpoints require valid session cookies
+- `/web-api/fb/*` endpoints require valid session cookies
 
 ## Troubleshooting
 
 1. **"Frappe backend URL not configured"**: Check your `.env.local` file has `FRAPPE_URL` set
 2. **"Authentication failed"**: Verify your Frappe backend is running and accessible
 3. **"No session cookies found"**: Ensure you're logged in before calling protected endpoints
-4. **"Authentication required"**: Make sure you're calling `/api/fb/*` after successful login
+4. **"Authentication required"**: Make sure you're calling `/web-api/fb/*` after successful login
 5. **CORS issues**: Make sure your Frappe backend allows requests from your frontend domain
 
 ## Example Workflow

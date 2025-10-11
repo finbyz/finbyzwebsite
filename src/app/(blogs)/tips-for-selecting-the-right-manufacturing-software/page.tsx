@@ -62,7 +62,7 @@ export default function Page() {
             id="tip-1"
             title="Tip 1: Identify Your Key Requirements"
             image={{
-              src: '/files/Scalability%20.png',
+              src: '/images/Scalability%20.png',
               alt: 'Identify-Your-Key-Requirements',
               title: 'Identify-Your-Key-Requirements',
               width: 150,
@@ -81,7 +81,7 @@ export default function Page() {
             id="tip-2"
             title="Tip 2: Research Industry-Specific Solutions"
             image={{
-              src: '/files/Research%20Industry-Specific%20Solutions.png',
+              src: '/images/Research%20Industry-Specific%20Solutions.png',
               alt: 'Research-Industry-Specific-Solutions',
               title: 'Research-Industry-Specific-Solutions',
               width: 150,
@@ -100,7 +100,7 @@ export default function Page() {
             id="tip-3"
             title="Tip 3: Evaluate Integration Capabilities"
             image={{
-              src: '/files/Evaluate%20Integration%20Capabilities.png',
+              src: '/images/Evaluate%20Integration%20Capabilities.png',
               alt: 'Evaluate-Integration-Capabilities',
               title: 'Evaluate-Integration-Capabilities',
               width: 150,
@@ -138,7 +138,7 @@ export default function Page() {
             id="tip-5"
             title="Tip 5: Prioritize User-Friendliness"
             image={{
-              src: '/files/User-Friendly%20Interface.png',
+              src: '/images/User-Friendly%20Interface.png',
               alt: 'Prioritize-User-Friendliness',
               title: 'Prioritize-User-Friendliness',
               width: 150,
@@ -157,7 +157,7 @@ export default function Page() {
             id="tip-6"
             title="Tip 6: Evaluate Vendor Support and Reputation"
             image={{
-              src: '/files/Evaluate%20Vendor%20Support%20and%20Reputation.png',
+              src: '/images/Evaluate%20Vendor%20Support%20and%20Reputation.png',
               alt: 'Evaluate-Vendor-Support-and-Reputation',
               title: 'Evaluate-Vendor-Support-and-Reputation',
               width: 150,

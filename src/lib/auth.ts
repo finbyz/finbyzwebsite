@@ -29,7 +29,7 @@ export interface LogoutResponse {
  */
 export async function login(credentials: LoginCredentials): Promise<LoginResponse> {
   try {
-    const response = await fetch('/api/auth/login', {
+    const response = await fetch('/web-api/auth/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ export async function login(credentials: LoginCredentials): Promise<LoginRespons
  */
 export async function logout(): Promise<LogoutResponse> {
   try {
-    const response = await fetch('/api/auth/logout', {
+    const response = await fetch('/web-api/auth/logout', {
       method: 'POST',
       credentials: 'include', // Include cookies
     });
@@ -96,7 +96,7 @@ export async function logout(): Promise<LogoutResponse> {
  */
 export async function getUserInfo(): Promise<UserInfo> {
   try {
-    const response = await fetch('/api/auth/user', {
+    const response = await fetch('/web-api/auth/user', {
       method: 'GET',
       credentials: 'include', // Include cookies
     });

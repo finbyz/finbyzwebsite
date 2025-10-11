@@ -25,7 +25,7 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch('/api/fb/n/set_form_contact_data', {
+      const res = await fetch('/web-api/fb/n/set_form_contact_data', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

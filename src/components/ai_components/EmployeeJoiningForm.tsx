@@ -77,7 +77,7 @@ const EmployeeJoiningForm: React.FC<EmployeeJoiningFormProps> = ({ fields, exclu
           submitData.append(key, value);
         }
       });
-      const response = await fetch("/api/method/finbyzweb.finbyzweb.doctype.employee_joining_detail.employee_joining_detail.update_employee_data", {
+      const response = await fetch("/web-api/method/finbyzweb.finbyzweb.doctype.employee_joining_detail.employee_joining_detail.update_employee_data", {
         method: "POST",
         body: submitData,
         credentials: "omit"

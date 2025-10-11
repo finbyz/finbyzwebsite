@@ -50,7 +50,7 @@ const RecentActivity: React.FC<RecentActivityProps> = ({ employee, startDate, en
 
             for (const attempt of attempts) {
                 const qs = new URLSearchParams(attempt.params)
-                const url = `/api/fb/method/finbyz.finbyz.page.productify_activity_analysis_finbyz.productify_activity_analysis_finbyz.user_activity_images?${qs.toString()}`
+                const url = `/web-api/fb/method/finbyz.finbyz.page.productify_activity_analysis_finbyz.productify_activity_analysis_finbyz.user_activity_images?${qs.toString()}`
                 console.log('[RecentActivity] try', attempt.params)
                 const res = await fetch(url, { credentials: 'include', cache: 'no-store' })
                 lastStatus = res.status
@@ -212,7 +212,7 @@ const RecentActivity: React.FC<RecentActivityProps> = ({ employee, startDate, en
                                                     {image ? (
                                                         <div style={{ cursor: 'pointer', height: '160px' }} onClick={() => showImageDialog(image.screenshot, image.active_application)}>
                                                             <FrappeImage
-                                                                fileUrl={'/api/fb/n'+image.screenshot}
+                                                                fileUrl={'/web-api/fb/n'+image.screenshot}
                                                                 alt='Screenshot'
                                                                 className='img-fluid clickable-image'
                                                                 id={image.screenshot}
@@ -259,7 +259,7 @@ const RecentActivity: React.FC<RecentActivityProps> = ({ employee, startDate, en
                     <div style={{ textAlign: 'center', color: '#ffffff' }}>
                         <h5 style={{ color: '#ffffff' }}>Active Application: {modalActiveApp}</h5>
                         {modalImage && (
-                            <FrappeImage fileUrl={'/api/fb/n'+modalImage} alt='Activity Detail' defaultImage={modalImage} className='img-fluid' id={modalImage} />
+                            <FrappeImage fileUrl={'/web-api/fb/n'+modalImage} alt='Activity Detail' defaultImage={modalImage} className='img-fluid' id={modalImage} />
                         )}
                     </div>
                 </ModalBody>

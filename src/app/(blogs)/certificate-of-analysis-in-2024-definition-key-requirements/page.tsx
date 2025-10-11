@@ -190,7 +190,7 @@ export default function Page() {
               id="step-1"
               title="1. Recognize Regulatory Requirements"
               image={{
-                src: '/files/Recognise the requirements of the regulations.png',
+                src: '/images/Recognise the requirements of the regulations.png',
                 alt: 'Recognize Regulatory Requirements',
                 title: 'Recognise-the-requirements-of-the-regulation',
                 width: 150,
@@ -228,7 +228,7 @@ export default function Page() {
               id="step-3"
               title="3. Conduct Quality Assurance Testing"
               image={{
-                src: '/files/Put Quality Assurance Testing Into Action.png',
+                src: '/images/Put Quality Assurance Testing Into Action.png',
                 alt: 'Put Quality Assurance Testing Into Action',
                 title: 'Put-Quality-Assurance-Testing-Into-Action',
                 width: 150,
@@ -247,7 +247,7 @@ export default function Page() {
               id="step-4"
               title="4. Analyze and Verify Test Results"
               image={{
-                src: '/files/Collect and Analyse Test Data.png',
+                src: '/images/Collect and Analyse Test Data.png',
                 alt: 'Collect and Analyse Test Data',
                 title: 'Collect-and-Analyse-Test-Data',
                 width: 150,
@@ -298,7 +298,7 @@ export default function Page() {
               id="step-6"
               title="6. Create the Certificate"
               image={{
-                src: '/files/Create the Certificate.png',
+                src: '/images/Create the Certificate.png',
                 alt: 'Create the Certificate',
                 title: 'Create-the-Certificate',
                 width: 150,
@@ -317,7 +317,7 @@ export default function Page() {
               id="step-7"
               title="7. Review and Approve"
               image={{
-                src: '/files/Examine and Give Your OK.png',
+                src: '/images/Examine and Give Your OK.png',
                 alt: 'Examine and Give Your OK',
                 title: 'Examine-and-Give-Your-OK',
                 width: 150,
@@ -336,7 +336,7 @@ export default function Page() {
               id="step-8"
               title="8. Distribute the Certificate"
               image={{
-                src: '/files/Give out the Certificate.png',
+                src: '/images/Give out the Certificate.png',
                 alt: 'Give out the Certificate',
                 title: 'Give-out-the-Certificate',
                 width: 150,
@@ -355,7 +355,7 @@ export default function Page() {
               id="step-9"
               title="9. Maintain and Update Records"
               image={{
-                src: '/files/Keep Documents Up to Date.png',
+                src: '/images/Keep Documents Up to Date.png',
                 alt: 'Keep Documents Up to Date',
                 title: 'Keep-Documents-Up-to-Date',
                 width: 150,
@@ -374,7 +374,7 @@ export default function Page() {
               id="step-10"
               title="10. Ongoing Enhancement"
               image={{
-                src: '/files/Ongoing Enhancement.png',
+                src: '/images/Ongoing Enhancement.png',
                 alt: 'Ongoing Enhancement',
                 title: 'Ongoing-Enhancement',
                 width: 150,

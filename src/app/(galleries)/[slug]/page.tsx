@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const title = parent.seo_title || parent.gallery_title || parent.title || 'Learning Hub';
     const description = parent.small_description || parent.description || 'Explore our comprehensive collection of tutorials and resources';
     const keywords = parent.keywords || '';
-    const image = parent.svg_image ? `/api/fb/n${parent.svg_image}` : '/files/FinbyzLogo.png';
+    const image = parent.svg_image ? `/web-api/fb/n${parent.svg_image}` : '/images/FinbyzLogo.png';
 
     return {
       title,

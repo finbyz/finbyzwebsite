@@ -45,7 +45,7 @@ export default function Page() {
             id="google-search-development"
             title="Google Search's Development"
             image={{
-              src: '/files/Untitled%20design%20(1).svg',
+              src: '/images/Untitled%20design%20(1).svg',
               alt: "Google Search's Development",
               title: "Google Search's Development",
               cover:true,
@@ -65,7 +65,7 @@ export default function Page() {
             id="ai-powered-search"
             title="AI-Powered Search: A New Era of Intelligence"
             image={{
-              src: '/files/70.svg',
+              src: '/images/70.svg',
               alt: 'AI-Powered Lookup: A Potential Revolution in Search',
               title: 'AI-Powered Lookup: A Potential Revolution in Search',
               width: 150,
@@ -83,7 +83,7 @@ export default function Page() {
             id="paywall-problem"
             title="The Paywall Problem: Balancing Access and Income"
             image={{
-              src: '/files/219.svg',
+              src: '/images/219.svg',
               alt: 'The Paywall Problem: Balancing Access and Income',
               title: 'The Paywall Problem: Balancing Access and Income',
               width: 150,
@@ -101,7 +101,7 @@ export default function Page() {
             id="user-reactions"
             title="User Reactions and Industry Implications"
             image={{
-              src: '/files/396.svg',
+              src: '/images/396.svg',
               alt: 'User Responses and Industry Impacts',
               title: 'User Responses and Industry Impacts',
               width: 150,
@@ -119,7 +119,7 @@ export default function Page() {
             id="long-term-plan"
             title="Google's Long-Term Plan: Creating in a Changing World"
             image={{
-              src: '/files/395.svg',
+              src: '/images/395.svg',
               alt: "Google's Long-Term Plan: Creating in a Changing World",
               title: "Google's Long-Term Plan: Creating in a Changing World",
               width: 150,
@@ -137,7 +137,7 @@ export default function Page() {
             id="issues-difficulties"
             title="Resolving Issues and Difficulties"
             image={{
-              src: '/files/464.svg',
+              src: '/images/464.svg',
               alt: 'Resolving Issues and Difficulties',
               title: 'Resolving Issues and Difficulties',
               width: 150,
@@ -158,7 +158,7 @@ export default function Page() {
             id="advantages"
             title="Possible Advantages for Publishers and Users"
             image={{
-              src: '/files/icon-supplier-management.svg',
+              src: '/images/icon-supplier-management.svg',
               alt: 'Possible Advantages for Publishers and Users',
               title: 'Possible Advantages for Publishers and Users',
               width: 150,

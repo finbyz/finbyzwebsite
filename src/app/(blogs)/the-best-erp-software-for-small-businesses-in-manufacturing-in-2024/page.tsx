@@ -158,7 +158,7 @@ export default function Page() {
               id="sap-business-one"
               title="3. SAP Business One"
               image={{
-                src: '/files/png-clipart-sap-business-one-sap-se-sap-hana-sap-business-bydesign-enterprise-resource-planning-business-blue-text (1).png',
+                src: '/images/png-clipart-sap-business-one-sap-se-sap-hana-sap-business-bydesign-enterprise-resource-planning-business-blue-text (1).png',
                 alt: 'SAP Business One',
                 title: 'SAP Business One',
                 width: 150,
@@ -176,7 +176,7 @@ export default function Page() {
               id="netsuite"
               title="4. NetSuite"
               image={{
-                src: '/files/NetSuite-Logo.jpg',
+                src: '/images/NetSuite-Logo.jpg',
                 alt: 'NetSuite',
                 title: 'NetSuite',
                 width: 200,
@@ -201,7 +201,7 @@ export default function Page() {
               id="streamlined-operations"
               title="Streamlined Operations"
               image={{
-                src: '/files/Streamlined Operations.png',
+                src: '/images/Streamlined Operations.png',
                 alt: 'Streamlined Operations',
                 title: 'Streamlined Operations',
                 width: 150,
@@ -219,7 +219,7 @@ export default function Page() {
               id="better-decision-making"
               title="Better Decision-Making"
               image={{
-                src: '/files/Better Decision-Making.png',
+                src: '/images/Better Decision-Making.png',
                 alt: 'Better Decision-Making',
                 title: 'Better Decision-Making',
                 width: 150,
@@ -237,7 +237,7 @@ export default function Page() {
               id="enhanced-customer-satisfaction"
               title="Enhanced Customer Satisfaction"
               image={{
-                src: '/files/286.svg',
+                src: '/images/286.svg',
                 alt: 'Enhanced Customer Satisfaction',
                 title: 'Enhanced Customer Satisfaction',
                 width: 150,
@@ -273,7 +273,7 @@ export default function Page() {
               id="scalability"
               title="Scalability"
               image={{
-                src: '/files/Flexibility-and-Scalability.png',
+                src: '/images/Flexibility-and-Scalability.png',
                 alt: 'Scalability',
                 title: 'Scalability',
                 width: 150,
@@ -309,7 +309,7 @@ export default function Page() {
               id="competitive-advantage"
               title="Competitive Advantage"
               image={{
-                src: '/files/A benefit over competitors.png',
+                src: '/images/A benefit over competitors.png',
                 alt: 'Competitive Advantage',
                 title: 'Competitive Advantage',
                 width: 150,

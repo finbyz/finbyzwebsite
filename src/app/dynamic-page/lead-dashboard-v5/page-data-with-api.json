@@ -20,7 +20,7 @@
         "title": "Trusted by Leading Companies Worldwide",
         "subtitle": "Our solutions power businesses across industries and continents",
         "useAPI": true,
-        "apiEndpoint": "/api/client-logos",
+        "apiEndpoint": "/web-api/client-logos",
         "carousel": {
           "autoPlay": true,
           "interval": 3000,

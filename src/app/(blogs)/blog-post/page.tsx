@@ -106,7 +106,7 @@ export default function BlogPostPage() {
         if (startDate) params.append('start_date', startDate);
         if (endDate) params.append('end_date', endDate);
 
-        const url = `/api/blog-posts${params.toString() ? `?${params.toString()}` : ''}`;
+        const url = `/web-api/blog-posts${params.toString() ? `?${params.toString()}` : ''}`;
         console.log("Fetching URL:---", url);
 
         const response = await fetch(url);

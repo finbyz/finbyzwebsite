@@ -135,7 +135,7 @@ const Tutorials = ({ data }: TutorialsProps) => {
             },
             "datePublished": new Date().toISOString(),
             "dateModified": new Date().toISOString(),
-            "image": data.parent.svg_image ? `/api/fb/n${data.parent.svg_image}` : "/files/FinbyzLogo.png",
+            "image": data.parent.svg_image ? `/web-api/fb/n${data.parent.svg_image}` : "/images/FinbyzLogo.png",
             "publisher": {
               "@type": "Organization",
               "name": "FinByz Tech Pvt Ltd",
@@ -143,7 +143,7 @@ const Tutorials = ({ data }: TutorialsProps) => {
               "email": "info@finbyz.com",
               "logo": {
                 "@type": "ImageObject",
-                "url": "/files/FinbyzLogo.png",
+                "url": "/images/FinbyzLogo.png",
                 "height": "300px",
                 "width": "300px"
               }
@@ -343,8 +343,8 @@ const Tutorials = ({ data }: TutorialsProps) => {
                       >
                         <img
                           src={isHovering && data.parent.animated_image
-                            ? `/api/fb/n${data.parent.animated_image}`
-                            : `/api/fb/n${data.parent.svg_image}`}
+                            ? `/web-api/fb/n${data.parent.animated_image}`
+                            : `/web-api/fb/n${data.parent.svg_image}`}
                           alt={data.parent.title || 'SVG Image'}
                           className="max-w-full max-h-96 object-contain transition-all duration-300"
                         />
@@ -357,7 +357,7 @@ const Tutorials = ({ data }: TutorialsProps) => {
                     <div className="space-y-4">
                       <div className="bg-muted/30 rounded-lg p-4 flex items-center justify-center">
                         <img
-                          src={`/api/fb/n${data.parent.animated_image}`}
+                          src={`/web-api/fb/n${data.parent.animated_image}`}
                           alt={data.parent.title || 'Animated Image'}
                           className="max-w-full max-h-96 object-contain"
                         />

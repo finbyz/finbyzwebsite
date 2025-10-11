@@ -65,7 +65,7 @@ export default function Page() {
             id="generic-erp"
             title="Generic ERP"
             image={{
-              src: '/files/expence-claim.svg',
+              src: '/images/expence-claim.svg',
               alt: 'Generic ERP',
               title: 'Generic ERP',
               width: 180,
@@ -89,7 +89,7 @@ export default function Page() {
             id="industry-specific-erp"
             title="Industry-Specific ERP"
             image={{
-              src: '/files/problem-solving.svg',
+              src: '/images/problem-solving.svg',
               alt: 'Industry-Specific ERP',
               title: 'Industry-Specific ERP',
               width: 180,

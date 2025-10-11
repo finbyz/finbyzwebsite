@@ -64,7 +64,7 @@ export default function Page() {
             id="foundation"
             title="1. Build a Strong Foundation in Computer Science"
             image={{
-              src: '/files/395.svg',
+              src: '/images/395.svg',
               alt: 'Develop a computer science-based corporation',
               title: 'Develop a computer science-based corporation',
               width: 200,
@@ -84,7 +84,7 @@ export default function Page() {
             id="education"
             title="2. Pursue Formal Education or Certification"
             image={{
-              src: '/files/icon-order-management.svg',
+              src: '/images/icon-order-management.svg',
               alt: 'Go After Official Training or Education',
               title: 'Go After Official Training or Education',
             }}
@@ -102,7 +102,7 @@ export default function Page() {
             id="portfolio"
             title="3. Build an Impressive Portfolio"
             image={{
-              src: '/files/113.svg',
+              src: '/images/113.svg',
               alt: 'Create a Powerful Portfolio',
               title: 'Create a Powerful Portfolio',
               width: 200,
@@ -122,7 +122,7 @@ export default function Page() {
             id="experience"
             title="4. Gain Practical Experience with Internships or Junior Roles"
             image={{
-              src: '/files/customer%20onboarding.svg',
+              src: '/images/customer%20onboarding.svg',
               alt: 'Acquire Practical Experience Through Entry-Level Positions or Internships',
               title: 'Acquire Practical Experience Through Entry-Level Positions or Internships',
               width: 200,
@@ -142,7 +142,7 @@ export default function Page() {
             id="continuous-learning"
             title="5. Embrace Continuous Learning"
             image={{
-              src: '/files/provide-ways-to-reach-you.svg',
+              src: '/images/provide-ways-to-reach-you.svg',
               alt: 'Always Learn and Adjust',
               title: 'Always Learn and Adjust',
               width: 200,
@@ -162,7 +162,7 @@ export default function Page() {
             id="soft-skills"
             title="6. Strengthen Your Soft Skills"
             image={{
-              src: '/files/145.svg',
+              src: '/images/145.svg',
               alt: 'Develop Your Soft Skills',
               title: 'Develop Your Soft Skills',
               width: 200,
@@ -182,7 +182,7 @@ export default function Page() {
             id="resilience"
             title="7. Stay Alert and Strong"
             image={{
-              src: '/files/66.svg',
+              src: '/images/66.svg',
               alt: 'Stay Alert and Strong',
               title: 'Stay Alert and Strong',
               width: 200,
@@ -204,7 +204,7 @@ export default function Page() {
               id="faq-qualifications"
               title="1. What qualifications are required to work as a software engineer?"
               image={{
-                src: '/files/53.svg',
+                src: '/images/53.svg',
                 alt: 'qualifications are required to work as a software engineer',
                 title: 'qualifications are required to work as a software engineer',
                 width: 200,
@@ -224,7 +224,7 @@ export default function Page() {
               id="faq-no-degree"
               title="2. Can I become a software engineer without a formal degree?"
               image={{
-                src: '/files/81.svg',
+                src: '/images/81.svg',
                 alt: 'Can I become a software engineer without a formal degree?',
                 title: 'Can I become a software engineer without a formal degree?',
                 width: 200,
@@ -264,7 +264,7 @@ export default function Page() {
               id="faq-portfolio"
               title="4. How can a software engineer like myself develop a solid portfolio?"
               image={{
-                src: '/files/icon-order-management.svg',
+                src: '/images/icon-order-management.svg',
                 alt: 'How can a software engineer like myself develop a solid portfolio?',
                 title: 'How can a software engineer like myself develop a solid portfolio?',
                 width: 200,
@@ -284,7 +284,7 @@ export default function Page() {
               id="faq-soft-skills"
               title="5. What soft skills are important for software engineers?"
               image={{
-                src: '/files/301.svg',
+                src: '/images/301.svg',
                 alt: 'What soft skills are important for software engineers?',
                 title: 'What soft skills are important for software engineers?',
                 width: 200,

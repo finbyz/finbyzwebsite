@@ -24,7 +24,7 @@ export function SidebarMediaItem({ item, onClick, isActive }: SidebarMediaItemPr
         {/* Thumbnail */}
         <div className="relative w-40 flex-shrink-0 aspect-video rounded overflow-hidden bg-secondary">
           <img
-            src={`/api/fb/n${item.thumbnail}`}
+            src={`/web-api/fb/n${item.thumbnail}`}
             alt={item.title}
             className="w-full h-full object-cover"
           />

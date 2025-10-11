@@ -64,7 +64,7 @@ export default function EmployeeActivityPage() {
 			setTaskLoading(true)
 			setTaskDetail(null)
 			setTaskModalOpen(true)
-			const url = `/api/fb/api/resource/Task/${encodeURIComponent(taskId)}`
+			const url = `/web-api/fb/api/resource/Task/${encodeURIComponent(taskId)}`
 			const res = await fetch(url, { cache: 'no-store' })
 			if (!res.ok) throw new Error(`Task ${res.status}`)
 			const j = await res.json()
@@ -95,7 +95,7 @@ export default function EmployeeActivityPage() {
 				params.append('from_date', startDate.toISOString().slice(0, 10))
 				params.append('to_date', endDate.toISOString().slice(0, 10))
 				if (project && project !== 'all') params.append('project', project)
-				const url = `/api/user-activity/matrix?${params.toString()}`
+				const url = `/web-api/user-activity/matrix?${params.toString()}`
 				const res = await fetch(url, { cache: 'no-store', signal: controller.signal })
 				if (!res.ok) throw new Error(`Matrix ${res.status}`)
 				const j = await res.json()
@@ -164,7 +164,7 @@ React.useEffect(() => {
 				// Pass the selected employee id as assignee for filtering (fallback to name if id missing)
 				if (employee_id) qp.append('assignee', employee_id)
 				else if (employee) qp.append('assignee', employee)
-				const url = `/api/fb/method/productivity_next.api.get_task_list?${qp.toString()}`
+				const url = `/web-api/fb/method/productivity_next.api.get_task_list?${qp.toString()}`
 				const res = await fetch(url, { cache: 'no-store', signal: controller.signal })
 				if (!res.ok) throw new Error(`Tasks ${res.status}`)
 				const j = await res.json()

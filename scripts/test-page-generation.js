@@ -12,7 +12,7 @@ const path = require('path');
 
 // Configuration
 const API_BASE_URL = 'http://localhost:3000';
-const API_ENDPOINT = '/api/generate-page';
+const API_ENDPOINT = '/web-api/generate-page';
 
 // Test data for different page types
 const testPages = [

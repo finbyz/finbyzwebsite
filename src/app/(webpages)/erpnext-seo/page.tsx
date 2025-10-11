@@ -114,7 +114,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'ERPNext SEO',
-          src: '/files/seo.png',
+          src: '/images/seo.png',
         }}
       />
 

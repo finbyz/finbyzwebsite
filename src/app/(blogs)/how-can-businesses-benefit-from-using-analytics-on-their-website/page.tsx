@@ -69,7 +69,7 @@ export default function Page() {
             id="improved-user-experience"
             title="1. Improved User Experience"
             image={{
-              src: '/files/271.svg',
+              src: '/images/271.svg',
               alt: 'Improved User Experience',
               title: 'Improved User Experience',
               width: 200,
@@ -92,7 +92,7 @@ export default function Page() {
             id="data-driven-decision-making"
             title="2. Data-Driven Decision Making"
             image={{
-              src: '/files/154.svg',
+              src: '/images/154.svg',
               alt: 'Making Decisions Based on Data',
               title: 'Making Decisions Based on Data',
               width: 200,
@@ -115,7 +115,7 @@ export default function Page() {
             id="improved-marketing-efficiency"
             title="3. Improved Marketing Efficiency"
             image={{
-              src: '/files/Testing.svg',
+              src: '/images/Testing.svg',
               alt: 'Enhanced Marketing Efficiency',
               title: 'Enhanced Marketing Efficiency',
               width: 200,
@@ -138,7 +138,7 @@ export default function Page() {
             id="improvement-of-conversion-channel"
             title="4. Improvement of the Conversion Channel"
             image={{
-              src: '/files/162.svg',
+              src: '/images/162.svg',
               alt: 'Improvement of the Conversion Channel',
               title: 'Improvement of the Conversion Channel',
               width: 200,
@@ -161,7 +161,7 @@ export default function Page() {
             id="benefit-over-competitors"
             title="5. A Benefit Over Competitors"
             image={{
-              src: '/files/177 (1).svg',
+              src: '/images/177 (1).svg',
               alt: 'A benefit over competitors',
               title: 'A benefit over competitors',
               width: 200,
@@ -190,7 +190,7 @@ export default function Page() {
             id="establish-goals"
             title="1. Establish Goals"
             image={{
-              src: '/files/customer onboarding.svg',
+              src: '/images/customer onboarding.svg',
               alt: 'Establish Goals',
               title: 'Establish Goals',
               width: 200,
@@ -210,7 +210,7 @@ export default function Page() {
             id="pick-the-right-tools"
             title="2. Pick the Right Tools"
             image={{
-              src: '/files/ongoing matainance and support.svg',
+              src: '/images/ongoing matainance and support.svg',
               alt: 'Pick the Right Tools',
               title: 'Pick the Right Tools',
               width: 200,
@@ -230,7 +230,7 @@ export default function Page() {
             id="set-up-tracking"
             title="3. Set Up Tracking"
             image={{
-              src: '/files/172.svg',
+              src: '/images/172.svg',
               alt: 'Set Up Tracking',
               title: 'Set Up Tracking',
               width: 200,
@@ -250,7 +250,7 @@ export default function Page() {
             id="analyse-and-interpret-data"
             title="4. Analyse and Interpret Data"
             image={{
-              src: '/files/187.svg',
+              src: '/images/187.svg',
               alt: 'Analyse and Interpret Data',
               title: 'Analyse and Interpret Data',
               width: 200,
@@ -270,7 +270,7 @@ export default function Page() {
             id="test-and-repeat"
             title="5. Test and Repeat"
             image={{
-              src: '/files/73.svg',
+              src: '/images/73.svg',
               alt: 'Test and Repeat',
               title: 'Test and Repeat',
               width: 200,
@@ -290,7 +290,7 @@ export default function Page() {
             id="exchange-knowledge-between-teams"
             title="6. Exchange Knowledge Between Teams"
             image={{
-              src: '/files/109 (3).svg',
+              src: '/images/109 (3).svg',
               alt: 'Exchange Knowledge Between Teams',
               title: 'Exchange Knowledge Between Teams',
               width: 200,
@@ -310,7 +310,7 @@ export default function Page() {
             id="remain-flexible-and-adaptable"
             title="7. Remain Flexible and Adaptable"
             image={{
-              src: '/files/33.svg',
+              src: '/images/33.svg',
               alt: 'Remain flexible and adaptable',
               title: 'Remain flexible and adaptable',
               width: 200,

@@ -51,7 +51,7 @@ export default function JobsLayout({
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const res = await fetch("/api/jobs");
+        const res = await fetch("/web-api/jobs");
         if (!res.ok) return;
         const data = await res.json();
         if (data?.success && Array.isArray(data.data)) {

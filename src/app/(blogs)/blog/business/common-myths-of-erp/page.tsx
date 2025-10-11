@@ -84,7 +84,7 @@ export default function Page() {
               id="myth-1"
               title="1. It’s Expensive!"
               image={{
-                src: '/files/blog-its-expensive.svg',
+                src: '/images/blog-its-expensive.svg',
                 alt: 'It’s Expensive!',
                 title: 'It’s Expensive!',
                 width: 240,
@@ -103,7 +103,7 @@ export default function Page() {
               id="myth-2"
               title="2. It's the same as CRM or SCM"
               image={{
-                src: '/files/blog-icon-crm.svg',
+                src: '/images/blog-icon-crm.svg',
                 alt: 'It’s the same as CRM or SCM',
                 title: 'It’s the same as CRM or SCM',
                 width: 240,
@@ -122,7 +122,7 @@ export default function Page() {
               id="myth-3"
               title="3. One fits all"
               image={{
-                src: '/files/blog-one-fits-all.svg',
+                src: '/images/blog-one-fits-all.svg',
                 alt: 'One fits all',
                 title: 'One fits all',
                 width: 240,
@@ -141,7 +141,7 @@ export default function Page() {
               id="myth-4"
               title="4. Only Large businesses need them"
               image={{
-                src: '/files/blog-only-for-large-businesses.svg',
+                src: '/images/blog-only-for-large-businesses.svg',
                 alt: 'Only Large businesses need them',
                 title: 'Only Large businesses need them',
                 width: 240,
@@ -160,7 +160,7 @@ export default function Page() {
               id="myth-5"
               title="5. Only exclusive for Top Level"
               image={{
-                src: '/files/blog-only-exclusive-for-top.svg',
+                src: '/images/blog-only-exclusive-for-top.svg',
                 alt: 'Only exclusive for Top Level',
                 title: 'Only exclusive for Top Level',
                 width: 240,
@@ -179,7 +179,7 @@ export default function Page() {
               id="myth-6"
               title="6. The sole purpose is to impress customers"
               image={{
-                src: '/files/blog-sole-purpose.svg',
+                src: '/images/blog-sole-purpose.svg',
                 alt: 'The sole purpose is to impress customers',
                 title: 'The sole purpose is to impress customers',
                 width: 240,
@@ -198,7 +198,7 @@ export default function Page() {
               id="myth-7"
               title="7. Takes too long to implement"
               image={{
-                src: '/files/blog-takes-too-long.svg',
+                src: '/images/blog-takes-too-long.svg',
                 alt: 'Takes too long to implement',
                 title: 'Takes too long to implement',
                 width: 240,
@@ -217,7 +217,7 @@ export default function Page() {
               id="myth-8"
               title="8. Can only be understood by professionals"
               image={{
-                src: '/files/blog-understood-by-professionals.svg',
+                src: '/images/blog-understood-by-professionals.svg',
                 alt: 'Can only be understood by professionals',
                 title: 'Can only be understood by professionals',
                 width: 240,

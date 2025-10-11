@@ -48,7 +48,7 @@ export default function Page() {
             id="introduction"
             title="Introduction"
             image={{
-              src: '/files/Benefits%20of%20ERP286bf5.svg',
+              src: '/images/Benefits%20of%20ERP286bf5.svg',
               alt: 'the-top-10-erp-software-companies-revolutionizing-business-operations',
               title: 'the-top-10-erp-software-companies-revolutionizing-business-operations',
               cover:true
@@ -62,7 +62,7 @@ export default function Page() {
             id="finbyz-erp"
             title="Finbyz ERP"
             image={{
-              src: '/files/FinByzERP.png',
+              src: '/images/FinByzERP.png',
               alt: 'Finbyz ERP',
               title: 'Finbyz ERP',
               width: 150,
@@ -81,7 +81,7 @@ export default function Page() {
             id="oracle-corporation"
             title="Oracle Corporation"
             image={{
-              src: '/files/265.svg',
+              src: '/images/265.svg',
               alt: 'Oracle Corporation',
               title: 'Oracle Corporation',
               width: 150,
@@ -100,7 +100,7 @@ export default function Page() {
             id="microsoft-corporation"
             title="Microsoft Corporation"
             image={{
-              src: '/files/347.svg',
+              src: '/images/347.svg',
               alt: 'Microsoft Corporation',
               title: 'Microsoft Corporation',
               width: 150,
@@ -119,7 +119,7 @@ export default function Page() {
             id="sap"
             title="SAP"
             image={{
-              src: '/files/icon-shorter-sales-cycle.svg',
+              src: '/images/icon-shorter-sales-cycle.svg',
               alt: 'SAP',
               title: 'SAP',
               width: 150,
@@ -138,7 +138,7 @@ export default function Page() {
             id="epicor"
             title="Software Corporation Epicor"
             image={{
-              src: '/files/231.svg',
+              src: '/images/231.svg',
               alt: 'Software Corporation Epicor',
               title: 'Software Corporation Epicor',
               width: 150,
@@ -157,7 +157,7 @@ export default function Page() {
             id="ifs"
             title="IFS"
             image={{
-              src: '/files/IFSD.png',
+              src: '/images/IFSD.png',
               alt: 'IFS',
               title: 'IFS',
               width: 150,
@@ -176,7 +176,7 @@ export default function Page() {
             id="sage"
             title="Sage Group plc"
             image={{
-              src: '/files/Sage-group-plc.png',
+              src: '/images/Sage-group-plc.png',
               alt: 'Sage Group plc',
               title: 'Sage Group plc',
               width: 150,
@@ -195,7 +195,7 @@ export default function Page() {
             id="plex"
             title="Plex Systems, Inc."
             image={{
-              src: '/files/plex.png',
+              src: '/images/plex.png',
               alt: 'Plex Systems, Inc.',
               title: 'Plex Systems, Inc.',
               width: 150,
@@ -214,7 +214,7 @@ export default function Page() {
             id="unit4"
             title="Unit4"
             image={{
-              src: '/files/unit4.png',
+              src: '/images/unit4.png',
               alt: 'Unit4',
               title: 'Unit4',
               width: 150,
@@ -233,7 +233,7 @@ export default function Page() {
             id="workday"
             title="Workday, Inc."
             image={{
-              src: '/files/Complex%20Integration.svg',
+              src: '/images/Complex%20Integration.svg',
               alt: 'Workday, Inc.',
               title: 'Workday, Inc.',
               width: 150,

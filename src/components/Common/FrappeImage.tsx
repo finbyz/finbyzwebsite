@@ -14,7 +14,7 @@ interface FrappeImageProps {
     defaultImage?: string
 }
 
-const FRAPPE_BASE = "/api/fb/n"
+const FRAPPE_BASE = "/web-api/fb/n"
 
 const FrappeImage: React.FC<FrappeImageProps> = ({
     fileUrl,
@@ -40,7 +40,7 @@ const FrappeImage: React.FC<FrappeImageProps> = ({
         }
 
         // Public files served directly
-        if (fileUrl.startsWith('/files/')) {
+        if (fileUrl.startsWith('/images/')) {
             const base = FRAPPE_BASE?.replace(/\/$/, '')
             return base ? `${base}${fileUrl}` : fileUrl
         }
@@ -48,7 +48,7 @@ const FrappeImage: React.FC<FrappeImageProps> = ({
         // Private files must go via proxy (requires auth)
         if (fileUrl.startsWith('/private/')) {
             const encoded = encodeURIComponent(fileUrl)
-            return `/api/fb/method/frappe.utils.file_manager.get_file?file_url=${encoded}`
+            return `/web-api/fb/method/frappe.utils.file_manager.get_file?file_url=${encoded}`
         }
 
         // Fallback: treat as public path under base

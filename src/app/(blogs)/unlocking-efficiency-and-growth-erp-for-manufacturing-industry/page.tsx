@@ -45,7 +45,7 @@ export default function Page() {
         <BlogContent>
           <BlogSectionWithImage
             image={{
-              src: '/files/17-04-24.svg',
+              src: '/images/17-04-24.svg',
               alt: 'Unlocking Efficiency and Growth with ERP for the Manufacturing Industry',
               title: 'unlocking-efficiency-and-growth-erp-for-manufacturing-industry',
               cover: true
@@ -146,7 +146,7 @@ export default function Page() {
                 id="optimized-inventory-management"
                 title="Optimized Inventory Management"
                 image={{
-                  src: '/files/373b1a7fe.svg',
+                  src: '/images/373b1a7fe.svg',
                   alt: 'Optimized Inventory Management',
                   title: 'Optimized-Inventory-Management',
                   width: 150,

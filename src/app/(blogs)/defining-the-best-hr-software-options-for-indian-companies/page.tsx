@@ -116,7 +116,7 @@ export default function Page() {
             id="value-of-hrms"
             title="Using HR Management Software's Value"
             image={{
-              src: '/files/softwarevalue.png',
+              src: '/images/softwarevalue.png',
               alt: "Using HR Management Software's Value",
               title: "Using HR Management Software's Value",
               width: 200,

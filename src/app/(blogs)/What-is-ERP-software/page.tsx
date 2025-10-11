@@ -45,7 +45,7 @@ export default function Page() {
             id="introduction"
             title="Introduction"
             image={{
-              src: '/files/Benefits%20of%20ERP286bf5.svg',
+              src: '/images/Benefits%20of%20ERP286bf5.svg',
               alt: 'ERP software',
               title: 'ERP software',
               width: 480,
@@ -79,7 +79,7 @@ export default function Page() {
             id="integration-capacity"
             title="1. Integration Capacity"
             image={{
-              src: '/files/4.svg',
+              src: '/images/4.svg',
               alt: 'Integration Capacity',
               title: 'Integration Capacity',
             }}
@@ -96,7 +96,7 @@ export default function Page() {
             id="automation"
             title="2. Automation"
             image={{
-              src: '/files/asynchnorus.svg',
+              src: '/images/asynchnorus.svg',
               alt: 'Automation',
               title: 'Automation',
             }}
@@ -113,7 +113,7 @@ export default function Page() {
             id="real-time-data"
             title="3. Real-time Data"
             image={{
-              src: '/files/15.svg',
+              src: '/images/15.svg',
               alt: 'Real-time Data',
               title: 'Real-time Data',
             }}
@@ -130,7 +130,7 @@ export default function Page() {
             id="scalability"
             title="4. Scalability"
             image={{
-              src: '/files/blog-icon-speed-and-accuracy-by-automation.svg',
+              src: '/images/blog-icon-speed-and-accuracy-by-automation.svg',
               alt: 'Scalability',
               title: 'Scalability',
             }}
@@ -147,7 +147,7 @@ export default function Page() {
             id="customization"
             title="5. Customization"
             image={{
-              src: '/files/47.svg',
+              src: '/images/47.svg',
               alt: 'Customization',
               title: 'Customization',
             }}
@@ -171,7 +171,7 @@ export default function Page() {
             id="increased-efficiency"
             title="Increased Efficiency"
             image={{
-              src: '/files/speed-strikes-the-first-impression.svg',
+              src: '/images/speed-strikes-the-first-impression.svg',
               alt: 'Increased Efficiency',
               title: 'Increased Efficiency',
             }}
@@ -188,7 +188,7 @@ export default function Page() {
             id="increased-visibility"
             title="Increased Visibility"
             image={{
-              src: '/files/blog-icon-innovates-your-human-resource.svg',
+              src: '/images/blog-icon-innovates-your-human-resource.svg',
               alt: 'Increased Visibility',
               title: 'Increased Visibility',
             }}
@@ -205,7 +205,7 @@ export default function Page() {
             id="cost-reduction"
             title="Cost Reduction"
             image={{
-              src: '/files/cost-effective%20solutions.svg',
+              src: '/images/cost-effective%20solutions.svg',
               alt: 'Cost Reduction',
               title: 'Cost Reduction',
             }}
@@ -222,7 +222,7 @@ export default function Page() {
             id="security-compliance"
             title="Security and Compliance"
             image={{
-              src: '/files/Security3b8a73.svg',
+              src: '/images/Security3b8a73.svg',
               alt: 'Security and Compliance',
               title: 'Security and Compliance',
             }}
@@ -256,7 +256,7 @@ export default function Page() {
             id="assess-requirements"
             title="Assess Your Requirements"
             image={{
-              src: '/files/36.svg',
+              src: '/images/36.svg',
               alt: 'Assess Your Requirements',
               title: 'Assess Your Requirements',
             }}
@@ -273,7 +273,7 @@ export default function Page() {
             id="flexibility-scalability"
             title="Flexibility and Scalability"
             image={{
-              src: '/files/icon-tl-expansion.svg',
+              src: '/images/icon-tl-expansion.svg',
               alt: 'Flexibility and Scalability',
               title: 'Flexibility and Scalability',
             }}
@@ -290,7 +290,7 @@ export default function Page() {
             id="user-friendly-interface"
             title="User-friendly Interface"
             image={{
-              src: '/files/2719b1fd2.svg',
+              src: '/images/2719b1fd2.svg',
               alt: 'User-Friendly Interface',
               title: 'User-Friendly Interface',
             }}
@@ -307,7 +307,7 @@ export default function Page() {
             id="vendor-support"
             title="Vendor Support and Reputation"
             image={{
-              src: '/files/Improved-Operations-&%20Team-Collaborations.svg',
+              src: '/images/Improved-Operations-&%20Team-Collaborations.svg',
               alt: 'Vendor Support and Reputation',
               title: 'Vendor Support and Reputation',
             }}
@@ -324,7 +324,7 @@ export default function Page() {
             id="cost-considerations"
             title="Cost considerations"
             image={{
-              src: '/files/135.svg',
+              src: '/images/135.svg',
               alt: 'Cost considerations',
               title: 'Cost considerations',
             }}
@@ -348,7 +348,7 @@ export default function Page() {
             id="create-project-plan"
             title="1. Create a Project Plan"
             image={{
-              src: '/files/lack-of-adequate-planning.svg',
+              src: '/images/lack-of-adequate-planning.svg',
               alt: 'Create a Project Plan',
               title: 'Create a Project Plan',
             }}
@@ -365,7 +365,7 @@ export default function Page() {
             id="involve-consumers"
             title="2. Involve Consumers"
             image={{
-              src: '/files/provide-ways-to-reach-you.svg',
+              src: '/images/provide-ways-to-reach-you.svg',
               alt: 'Involve Consumers',
               title: 'Involve Consumers',
             }}
@@ -382,7 +382,7 @@ export default function Page() {
             id="invest-training"
             title="3. Invest in Training"
             image={{
-              src: '/files/training%20and%20development.svg',
+              src: '/images/training%20and%20development.svg',
               alt: 'Invest in Training',
               title: 'Invest in Training',
             }}
@@ -399,7 +399,7 @@ export default function Page() {
             id="monitor-improve"
             title="4. Monitor and Improve"
             image={{
-              src: '/files/231.svg',
+              src: '/images/231.svg',
               alt: 'Monitor and Improve',
               title: 'Monitor and Improve',
             }}

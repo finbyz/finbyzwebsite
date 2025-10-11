@@ -162,7 +162,7 @@ export default function ClientLogos({ data }: ClientLogosProps) {
     subtitle = "Trusted by leading companies worldwide",
     carousel = { autoPlay: true, interval: 3000, showArrows: true, showIndicators: true },
     useAPI = false, // New prop to enable API fetching
-    apiEndpoint = '/api/client-logos' // New prop for custom API endpoint
+    apiEndpoint = '/web-api/client-logos' // New prop for custom API endpoint
   } = data || {};
 
   // Fetch data from API if useAPI is true and no clients provided

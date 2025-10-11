@@ -46,7 +46,7 @@ export default function Page() {
             id="introduction"
             title="How to Choose the Best ERP Software for Your Company"
             image={{
-              src: '/files/right-erp-software.svg',
+              src: '/images/right-erp-software.svg',
               alt: 'How to choose the right ERP Software for your company',
               title: 'How to choose the right ERP Software for your company',
               width: 480,

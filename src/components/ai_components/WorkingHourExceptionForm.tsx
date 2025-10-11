@@ -18,7 +18,7 @@ interface ExceptionData {
 
 const fetchExceptionDetails = async (docId: string): Promise<ExceptionData | null> => {
   try {
-    const response = await fetch(`/api/method/productivity_next.api.working_hour_exception_details?doc_id=${docId}`);
+    const response = await fetch(`/web-api/method/productivity_next.api.working_hour_exception_details?doc_id=${docId}`);
     const result = await response.json();
     if (result.message) {
       return {
@@ -36,7 +36,7 @@ const fetchExceptionDetails = async (docId: string): Promise<ExceptionData | nul
 
 const submitExceptionReason = async (doc_id: string, reason: string): Promise<"success" | "error"> => {
   try {
-    const response = await fetch("/api/method/productivity_next.api.submit_working_hour_exception_reason", {
+    const response = await fetch("/web-api/method/productivity_next.api.submit_working_hour_exception_reason", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

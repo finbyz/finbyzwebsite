@@ -67,7 +67,7 @@ export default function Page() {
             id="initial-expenses"
             title="Understanding the Cost of ERP Investments: Initial Expenses"
             image={{
-              src: '/files/Increased Efficiency and Cost Savings  .png',
+              src: '/images/Increased Efficiency and Cost Savings  .png',
               alt: 'Being-aware-the-Cost-of ERP-Investments-Original-Cost',
               title: 'Being-aware-the-Cost-of ERP-Investments-Original-Cost',
               width: 150,

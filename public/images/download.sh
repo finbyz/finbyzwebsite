@@ -26,7 +26,7 @@ while true; do
             continue
         fi
 
-        # Remove prefix "api/fb/n" or "/api/fb/n" if present
+        # Remove prefix "api/fb/n" or "/web-api/fb/n" if present
         path=$(echo "$path" | sed -E 's#^/?api/fb/n/?##')
 
         # Remove leading slash if present

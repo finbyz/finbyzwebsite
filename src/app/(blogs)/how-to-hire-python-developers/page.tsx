@@ -49,7 +49,7 @@ export default function Page() {
             id="introduction"
             title="Introduction"
             image={{
-              src: '/files/Banner-Python-Developer.png',
+              src: '/images/Banner-Python-Developer.png',
               alt: 'How to Hire Python Developers',
               title: 'How to Hire Python Developers',
               width: 540,
@@ -70,7 +70,7 @@ export default function Page() {
             id="identify-requirements"
             title="Identify Your Requirements"
             image={{
-              src: '/files/Identify%20Your%20Requirements.png',
+              src: '/images/Identify%20Your%20Requirements.png',
               alt: 'Identify Your Requirements',
               title: 'Identify Your Requirements',
               width: 150,
@@ -89,7 +89,7 @@ export default function Page() {
             id="write-job-descriptions"
             title="Write Strong Job Descriptions"
             image={{
-              src: '/files/Create%20the%20Certificate.png',
+              src: '/images/Create%20the%20Certificate.png',
               alt: 'Write Strong Job Descriptions',
               title: 'Write Strong Job Descriptions',
               width: 150,
@@ -108,7 +108,7 @@ export default function Page() {
             id="recruitment-channels"
             title="Use a Variety of Recruitment Channels"
             image={{
-              src: '/files/Use%20a%20Variety%20of%20Recruitment%20Channels.png',
+              src: '/images/Use%20a%20Variety%20of%20Recruitment%20Channels.png',
               alt: 'Use a Variety of Recruitment Channels',
               title: 'Use a Variety of Recruitment Channels',
               width: 150,
@@ -127,7 +127,7 @@ export default function Page() {
             id="screen-candidates"
             title="Screen Python Developers Effectively"
             image={{
-              src: '/files/Screen%20Candidates%20Effectively.png',
+              src: '/images/Screen%20Candidates%20Effectively.png',
               alt: 'Screen Python Developers Effectively',
               title: 'Screen Python Developers Effectively',
               width: 150,
@@ -146,7 +146,7 @@ export default function Page() {
             id="evaluate-technical-skills"
             title="Evaluate Technical Skills and Experience"
             image={{
-              src: '/files/Examine%20Technical%20Abilities%20and%20Experience.png',
+              src: '/images/Examine%20Technical%20Abilities%20and%20Experience.png',
               alt: 'Evaluate Technical Skills and Experience',
               title: 'Evaluate Technical Skills and Experience',
               width: 150,
@@ -165,7 +165,7 @@ export default function Page() {
             id="assess-soft-skills"
             title="Assess Soft Skills and Team Compatibility"
             image={{
-              src: '/files/Assess%20Soft%20Skills%20and%20Team%20Fit.png',
+              src: '/images/Assess%20Soft%20Skills%20and%20Team%20Fit.png',
               alt: 'Assess Soft Skills and Team Compatibility',
               title: 'Assess Soft Skills and Team Compatibility',
               width: 150,
@@ -184,7 +184,7 @@ export default function Page() {
             id="remote-freelance"
             title="Consider Remote and Freelance Python Developers"
             image={{
-              src: '/files/Explore%20Remote%20and%20Freelance%20Options.png',
+              src: '/images/Explore%20Remote%20and%20Freelance%20Options.png',
               alt: 'Consider Remote and Freelance Python Developers',
               title: 'Consider Remote and Freelance Python Developers',
               width: 150,
@@ -203,7 +203,7 @@ export default function Page() {
             id="continuous-learning"
             title="Encourage Continuous Learning for Python Developers"
             image={{
-              src: '/files/Invest%20in%20Ongoing%20Education%20and%20Researchs.png',
+              src: '/images/Invest%20in%20Ongoing%20Education%20and%20Researchs.png',
               alt: 'Encourage Continuous Learning for Python Developers',
               title: 'Encourage Continuous Learning for Python Developers',
               width: 150,

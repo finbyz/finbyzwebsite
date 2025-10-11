@@ -277,7 +277,7 @@
     }
   },
   "api_usage": {
-    "endpoint": "/api/generate-page",
+    "endpoint": "/web-api/generate-page",
     "method": "POST",
     "headers": {
       "Content-Type": "application/json"
@@ -304,7 +304,7 @@
     "minimal_page": "curl -X POST http://localhost:3000/api/generate-page -H 'Content-Type: application/json' -d @minimal-page.json"
   },
   "javascript_examples": {
-    "fetch_api": "const response = await fetch('/api/generate-page', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ pageName: 'my-page', content: pageData }) });",
-    "axios": "const response = await axios.post('/api/generate-page', { pageName: 'my-page', content: pageData });"
+    "fetch_api": "const response = await fetch('/web-api/generate-page', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ pageName: 'my-page', content: pageData }) });",
+    "axios": "const response = await axios.post('/web-api/generate-page', { pageName: 'my-page', content: pageData });"
   }
 }

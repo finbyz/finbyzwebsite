@@ -36,7 +36,7 @@ export async function frappeApi<T = any>(
       requestOptions.body = JSON.stringify(body);
     }
 
-    const response = await fetch(`/api/fb/${endpoint}`, requestOptions);
+    const response = await fetch(`/web-api/fb/${endpoint}`, requestOptions);
     const responseData = await response.json();
 
     if (!response.ok) {

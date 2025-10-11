@@ -15,7 +15,7 @@ FRAPPE_API_SECRET=your_api_secret
 
 ### 2. API Endpoint Details
 
-- **Endpoint**: `/api/method/finbyzweb.api.get_customer_details`
+- **Endpoint**: `/web-api/method/finbyzweb.api.get_customer_details`
 - **Method**: POST
 - **Authentication**: Token-based (API Key + Secret)
 
@@ -47,7 +47,7 @@ Your Frappe API should return data in this format:
   "data": {
     "title": "Our Clients",
     "useAPI": true,
-    "apiEndpoint": "/api/client-logos"
+    "apiEndpoint": "/web-api/client-logos"
   }
 }
 ```
@@ -58,7 +58,7 @@ Your Frappe API should return data in this format:
   data={{
     title: "Our Clients",
     useAPI: true,
-    apiEndpoint: "/api/client-logos"
+    apiEndpoint: "/web-api/client-logos"
   }}
 />
 ```
@@ -66,7 +66,7 @@ Your Frappe API should return data in this format:
 ### 5. Testing
 
 1. **Test Page**: Visit `/test-client-logos` to see both API and fallback data
-2. **Direct API Test**: Visit `/api/client-logos?limit=6&page=1` to test API directly
+2. **Direct API Test**: Visit `/web-api/client-logos?limit=6&page=1` to test API directly
 3. **Console Logs**: Check browser console for API responses and errors
 
 ### 6. API Parameters

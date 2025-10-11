@@ -70,7 +70,7 @@ export default function Header() {
     const shouldFetch = hoveredDropdown === "Insights" && hoveredService === "Blogs" && !blogsLoading && blogPosts.length === 0;
     if (!shouldFetch) return;
     setBlogsLoading(true);
-    fetch("/api/blog-posts")
+    fetch("/web-api/blog-posts")
       .then(r => r.json())
       .then(j => setBlogPosts(Array.isArray(j?.data) ? j.data : []))
       .catch(() => setBlogPosts([]))
@@ -401,7 +401,7 @@ export default function Header() {
             name: "API Development",
             description: "API and middleware services",
             icon: CodeSquare,
-            href: "/api-development"
+            href: "/web-api-development"
           },
            {
             name: "CRM Software",

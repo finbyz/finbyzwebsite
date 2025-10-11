@@ -46,7 +46,7 @@ export default function Page() {
             id="introduction"
             title="Introduction"
             image={{
-              src: '/files/19-04-2024.svg',
+              src: '/images/19-04-2024.svg',
               alt: 'Master Production Schedule Illustration',
               title: 'master-production-schedule',
               width: 600,

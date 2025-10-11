@@ -78,7 +78,7 @@ export default function Page() {
             id="integration-operations"
             title="1. Integration Across Operations"
             image={{
-              src: '/files/Integration%20Across%20Operations.png',
+              src: '/images/Integration%20Across%20Operations.png',
               alt: 'Integration Across Operations',
               title: 'Integration-Across-Operations',
               width: 150,
@@ -98,7 +98,7 @@ export default function Page() {
             id="risk-management"
             title="2. Risk Management"
             image={{
-              src: '/files/Risk%20management%20%20.png',
+              src: '/images/Risk%20management%20%20.png',
               alt: 'Risk Management',
               title: 'Risk-management',
               width: 150,
@@ -118,7 +118,7 @@ export default function Page() {
             id="regulatory-compliance"
             title="3. Regulatory Compliance"
             image={{
-              src: '/files/Regulatory Compliance.png',
+              src: '/images/Regulatory Compliance.png',
               alt: 'Regulatory Compliance',
               title: 'Regulatory-Compliance',
               width: 150,
@@ -138,7 +138,7 @@ export default function Page() {
             id="advanced-reporting"
             title="4. Advanced Reporting and Analytics"
             image={{
-              src: '/files/Advanced%20Reporting%20and%20Analytics%20.png',
+              src: '/images/Advanced%20Reporting%20and%20Analytics%20.png',
               alt: 'Advanced Reporting and Analytics',
               title: 'Advanced-Reporting-and-Analytics',
               width: 150,
@@ -158,7 +158,7 @@ export default function Page() {
             id="increased-efficiency"
             title="5. Increased Efficiency and Cost Savings"
             image={{
-              src: '/files/Increased%20Efficiency%20and%20Cost%20Savings%20%20.png',
+              src: '/images/Increased%20Efficiency%20and%20Cost%20Savings%20%20.png',
               alt: 'Increased Efficiency and Cost Savings',
               title: 'Increased-Efficiency-and-Cost-Savings',
               width: 150,

@@ -31,7 +31,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'ERPNext Service Provider',
-          src: '/files/Frappe-Certified-Erpnext-Partner.svg',
+          src: '/images/Frappe-Certified-Erpnext-Partner.svg',
         }}
       />
 
@@ -64,7 +64,7 @@ export default function Page() {
               },
               {
                 title: 'Complete Facilities',
-                image: '/files/178 (1).svg',
+                image: '/images/178 (1).svg',
                 alt: 'Complete Facilities for ERPNext',
                 description: "We cover all the bases as a full-service ERPNext solution provider, from system customization and early consultation to implementation, training, and continuous maintenance. Our goal is to provide your team with a stress-free and seamless ERP integration.",
                 bg: 'lightgray',

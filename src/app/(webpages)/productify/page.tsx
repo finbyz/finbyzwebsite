@@ -30,7 +30,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'Productify',
-          src: '/files/Productify%20image%20(1).svg',
+          src: '/images/Productify%20image%20(1).svg',
           videoSrc: undefined,
         }}
       />

@@ -94,8 +94,10 @@ const nextConfig = {
       {
         source: "/api/fb/:path*",
         destination: "https://finbyz.tech/api/method/:path*",
-
-        
+      },
+      {
+        source: "/web-apo/:path*",
+        destination: "/api/:path*",
       },
     ];
   },

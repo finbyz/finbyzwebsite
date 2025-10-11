@@ -87,7 +87,7 @@ export default function Page() {
             id="gives-speed-and-accuracy"
             title="1. Gives speed and accuracy by automation"
             image={{
-              src: '/files/blog-icon-speed-and-accuracy-by-automation.svg',
+              src: '/images/blog-icon-speed-and-accuracy-by-automation.svg',
               alt: 'Gives speed and accuracy by automation',
               title: 'Gives speed and accuracy by automation',
               width: 200,
@@ -117,7 +117,7 @@ export default function Page() {
             id="ensures-customer"
             title="2. Ensures customer satisfaction"
             image={{
-              src: '/files/blog-icon-ensures-customer-satisfaction.svg',
+              src: '/images/blog-icon-ensures-customer-satisfaction.svg',
               alt: 'Ensures customer satisfaction',
               title: 'Ensures customer satisfaction',
               width: 200,
@@ -204,7 +204,7 @@ export default function Page() {
             id="helps-ensure-the-right-purchase"
             title="4. Helps ensure the right purchase"
             image={{
-              src: '/files/icon-order-management.svg',
+              src: '/images/icon-order-management.svg',
               alt: 'Helps ensure the right purchase',
               title: 'Helps ensure the right purchase',
               width: 200,
@@ -229,7 +229,7 @@ export default function Page() {
             id="efficient-inventory-management"
             title="5. Efficient inventory management and supply chain visibility"
             image={{
-              src: '/files/Trading.svg',
+              src: '/images/Trading.svg',
               alt: 'Efficient inventory management and supply chain visibility',
               title: 'Efficient inventory management and supply chain visibility',
               width: 200,

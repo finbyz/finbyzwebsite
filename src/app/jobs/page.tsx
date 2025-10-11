@@ -44,7 +44,7 @@ export default function JobsPage() {
   useEffect(() => {
     const fetchAllDepartments = async () => {
       try {
-        const response = await fetch(`/api/jobs`);
+        const response = await fetch(`/web-api/jobs`);
         if (!response.ok) throw new Error(await response.text());
         const data = await response.json();
         if (data.success) {
@@ -68,7 +68,7 @@ export default function JobsPage() {
         if (searchQuery) params.append('search', searchQuery);
         if (selectedCategory !== 'All Departments') params.append('department', selectedCategory);
 
-        const response = await fetch(`/api/jobs?${params.toString()}`);
+        const response = await fetch(`/web-api/jobs?${params.toString()}`);
         if (!response.ok) throw new Error(await response.text());
         const data = await response.json();
 

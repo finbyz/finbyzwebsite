@@ -78,7 +78,7 @@ export default function Page() {
             id="language-translation"
             title="1. Language Translation and Interpretation"
             image={{
-              src: '/files/298.svg',
+              src: '/images/298.svg',
               alt: 'Language Translation and Interpretation',
               title: 'Language Translation and Interpretation',
               width: 150,
@@ -97,7 +97,7 @@ export default function Page() {
             id="customized-recommendations"
             title="2. Customized Recommendations"
             image={{
-              src: '/files/icon-tl-revamp.svg',
+              src: '/images/icon-tl-revamp.svg',
               alt: 'Customized Recommendations',
               title: 'Customized Recommendations',
               width: 150,
@@ -116,7 +116,7 @@ export default function Page() {
             id="emotional-intelligence"
             title="3. Emotional Intelligence"
             image={{
-              src: '/files/459.svg',
+              src: '/images/459.svg',
               alt: 'Emotional Intelligence',
               title: 'Emotional Intelligence',
               width: 150,
@@ -135,7 +135,7 @@ export default function Page() {
             id="predictive-communication"
             title="4. Predictive Communication"
             image={{
-              src: '/files/provide-ways-to-reach-you.svg',
+              src: '/images/provide-ways-to-reach-you.svg',
               alt: 'Predictive Communication',
               title: 'Predictive Communication',
               width: 150,
@@ -161,7 +161,7 @@ export default function Page() {
             id="improved-accessibility"
             title="Improved Accessibility"
             image={{
-              src: '/files/316.svg',
+              src: '/images/316.svg',
               alt: 'Improved Accessibility',
               title: 'Improved Accessibility',
               width: 150,
@@ -180,7 +180,7 @@ export default function Page() {
             id="enhanced-efficiency"
             title="Enhanced Efficiency"
             image={{
-              src: '/files/231.svg',
+              src: '/images/231.svg',
               alt: 'Enhanced Efficiency',
               title: 'Enhanced Efficiency',
               width: 150,
@@ -199,7 +199,7 @@ export default function Page() {
             id="enhanced-collaboration"
             title="Enhanced Collaboration"
             image={{
-              src: '/files/Contractual%20Obligations.svg',
+              src: '/images/Contractual%20Obligations.svg',
               alt: 'Enhanced Collaboration',
               title: 'Enhanced Collaboration',
               width: 150,
@@ -218,7 +218,7 @@ export default function Page() {
             id="ethical-issues"
             title="Ethical Issues"
             image={{
-              src: '/files/515.svg',
+              src: '/images/515.svg',
               alt: 'Ethical Issues',
               title: 'Ethical Issues',
               width: 150,

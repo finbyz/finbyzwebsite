@@ -46,7 +46,7 @@ const FinbyzGallery = ({ galleryItems = [], relatedReads = [] }: FinbyzGalleryPr
                 >
                   <div className="h-40 bg-gray-100 flex items-center justify-center relative overflow-hidden">
                     <img
-                      src={`/api/fb/n/${read.image}`}
+                      src={`/web-api/fb/n/${read.image}`}
                       alt={read.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
@@ -95,14 +95,14 @@ const FinbyzGallery = ({ galleryItems = [], relatedReads = [] }: FinbyzGalleryPr
 
                             {/* Static image */}
                             <img
-                              src={`/api/fb/n${item.image}`}
+                              src={`/web-api/fb/n${item.image}`}
                               alt={item.title}
                               className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
                             />
 
                             {/* Animated image */}
                             <img
-                              src={`/api/fb/n${item.animated_gif || item.image}`}
+                              src={`/web-api/fb/n${item.animated_gif || item.image}`}
                               alt={item.title}
                               className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                             />
