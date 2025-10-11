@@ -96,7 +96,7 @@ const nextConfig = {
         destination: "https://finbyz.tech/api/method/:path*",
       },
       {
-        source: "/web-apo/:path*",
+        source: "/web-api/:path*",
         destination: "/api/:path*",
       },
     ];

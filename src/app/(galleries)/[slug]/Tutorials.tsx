@@ -133,8 +133,8 @@ const Tutorials = ({ data }: TutorialsProps) => {
               "@type": "Person",
               "name": "FinByz Tech Pvt Ltd"
             },
-            "datePublished": new Date().toISOString(),
-            "dateModified": new Date().toISOString(),
+            "datePublished": data.parent.creation,
+            "dateModified": data.parent.modified,
             "image": data.parent.svg_image ? `/web-api/fb/n${data.parent.svg_image}` : "/images/FinbyzLogo.png",
             "publisher": {
               "@type": "Organization",

@@ -21,6 +21,8 @@ interface Gallery {
     svg_image: string;
     animated_image?: string;
     quote?:string;
+    modified?:string;
+    creation?:string;
     gallery_sidebar?: GallerySidebarItem[];
 }
 

@@ -26,7 +26,9 @@ const GALLERY_FIELDS = [
     "doctype",
     "gallery_sidebar",
     "animated_image",
-    "quote"
+    "quote",
+    "creation",
+    "modified"
 ];
 
 /**
