@@ -3,7 +3,7 @@ services:
     build:
       context: ..
       dockerfile: ./docker/Dockerfile
-    image: finbyzwebsite-nextjs:latest 
+    image: ghcr.io/finbyz/finbyzwebsite-nextjs 
     container_name: nextjs_app
     ports:
       - "3000:3000"
