@@ -88,13 +88,6 @@ while [[ $# -gt 0 ]]; do
             echo "  --push-tag       Create and push Git tag"
             echo "  --all            Build, tag, and push everything"
             echo "  -h, --help       Show this help message"
-            echo ""
-            echo "Examples:"
-            echo "  $0                    # Build only"
-            echo "  $0 --push             # Build and push image"
-            echo "  $0 --push-tag         # Build and create+push git tag"
-            echo "  $0 --all              # Build, push image, create and push git tag"
-            echo "  $0 --minor --all      # Increment minor version and do everything"
             exit 0
             ;;
         *)
@@ -135,35 +128,40 @@ if [[ -n $(git status -s) ]]; then
 fi
 
 export APP_VERSION=$VERSION
-IMAGE_NAME="finbyzwebsite-nextjs:$VERSION"
+IMAGE_NAME="ghcr.io/finbyz/finbyzwebsite-nextjs"
+IMAGE_TAG="$IMAGE_NAME:$VERSION"
 
 echo ""
 echo -e "${BLUE}🐳 Building Docker image...${NC}"
 echo -e "   Version: ${GREEN}$VERSION${NC}"
-echo -e "   Image: ${GREEN}$IMAGE_NAME${NC}"
+echo -e "   Image: ${GREEN}$IMAGE_TAG${NC}"
 echo ""
 
-# Build the image
-docker compose -f docker/docker-compose.yml build
+# Build the image with version tag
+docker build \
+    -f ./docker/Dockerfile \
+    -t "$IMAGE_TAG" \
+    -t "$IMAGE_NAME:latest" \
+    --build-arg APP_VERSION="$VERSION" \
+    .
 
 echo ""
 echo -e "${GREEN}✅ Build complete!${NC}"
+echo -e "   Tagged as: ${GREEN}$IMAGE_TAG${NC}"
+echo -e "   Tagged as: ${GREEN}$IMAGE_NAME:latest${NC}"
 
 # Push Docker image if requested
 if [ "$PUSH_IMAGE" = true ]; then
     echo ""
     echo -e "${BLUE}📤 Pushing Docker image...${NC}"
     
-    # Tag as latest as well
-    docker tag $IMAGE_NAME finbyzwebsite-nextjs:latest
-    
     # Push versioned image
-    docker push $IMAGE_NAME
-    echo -e "${GREEN}✓ Pushed: $IMAGE_NAME${NC}"
+    docker push "$IMAGE_TAG"
+    echo -e "${GREEN}✓ Pushed: $IMAGE_TAG${NC}"
     
     # Push latest tag
-    docker push finbyzwebsite-nextjs:latest
-    echo -e "${GREEN}✓ Pushed: finbyzwebsite-nextjs:latest${NC}"
+    docker push "$IMAGE_NAME:latest"
+    echo -e "${GREEN}✓ Pushed: $IMAGE_NAME:latest${NC}"
 fi
 
 # Create Git tag if requested
@@ -195,7 +193,8 @@ echo -e "${BLUE}================================${NC}"
 echo ""
 echo "Summary:"
 echo -e "  Version: ${GREEN}$VERSION${NC}"
-echo -e "  Image: ${GREEN}$IMAGE_NAME${NC}"
+echo -e "  Images: ${GREEN}$IMAGE_TAG${NC}"
+echo -e "          ${GREEN}$IMAGE_NAME:latest${NC}"
 
 if [ "$PUSH_IMAGE" = true ]; then
     echo -e "  Docker push: ${GREEN}✓ Done${NC}"
@@ -219,7 +218,8 @@ echo ""
 # Show next steps if things weren't done
 if [ "$PUSH_IMAGE" = false ]; then
     echo "💡 To push the Docker image:"
-    echo "   docker push $IMAGE_NAME"
+    echo "   docker push $IMAGE_TAG"
+    echo "   docker push $IMAGE_NAME:latest"
     echo ""
 fi
 
@@ -229,3 +229,9 @@ if [ "$CREATE_GIT_TAG" = false ]; then
     echo "   git push origin $VERSION"
     echo ""
 fi
+
+echo "💡 To run the container:"
+echo "   docker run -p 3000:3000 -e NODE_ENV=production $IMAGE_TAG"
+echo ""
+echo "💡 To see all images:"
+echo "   docker images | grep finbyzwebsite-nextjs"
