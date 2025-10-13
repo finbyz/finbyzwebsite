@@ -1,8 +1,9 @@
 services:
-  nextjs:
+  nextjs-finbyz:
     build:
       context: ..
       dockerfile: ./docker/Dockerfile
+    image: finbyzwebsite-nextjs:latest 
     container_name: nextjs_app
     ports:
       - "3000:3000"
