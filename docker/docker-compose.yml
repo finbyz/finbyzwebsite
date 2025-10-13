@@ -3,12 +3,12 @@ services:
     build:
       context: ..
       dockerfile: ./docker/Dockerfile
-    image: ghcr.io/finbyz/finbyzwebsite-nextjs 
+    image: ghcr.io/finbyz/finbyzwebsite-nextjs:latest
     container_name: nextjs_app
+    pull_policy: always  # Always pull the latest image
     ports:
       - "3000:3000"
     environment:
       - NODE_ENV=production
       - NEXT_TELEMETRY_DISABLED=1
     restart: unless-stopped
-    
