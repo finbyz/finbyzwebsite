@@ -1,7 +1,9 @@
 Dockerfile
 .dockerignore
 node_modules
+nginx
 npm-debug.log
 README.md
+ai_agent
 .next
 .git
