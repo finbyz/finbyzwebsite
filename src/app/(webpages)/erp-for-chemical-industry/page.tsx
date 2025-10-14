@@ -256,7 +256,7 @@ export default function Page() {
                 icon: 'flask-conical',
               },
               title: 'Get Started with ERPNext for Chemical Industry',
-              highlightText:"Get Started with ERPNext for Chemical Industry",
+              highlightText:"ERPNext for Chemical Industry",
               description: 'Streamline your operations, ensure compliance, and boost productivity. Book a free consultation with our experts today!',
               primaryButton: {
                 text: 'Book Free Consultation',

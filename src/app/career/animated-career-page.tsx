@@ -326,21 +326,25 @@ export default function AnimatedCareerPage() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg"
-              className="rounded-full bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white text-lg px-8 py-4 h-auto font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition-all"
-            >
-              <Mail className="mr-2 w-5 h-5" />
-              Send Your Resume
-            </Button>
-            <Button 
-              size="lg"
-              variant="outline"
-              className="rounded-full border-2 border-[#1A5276] text-[#1A5276] bg-transparent hover:bg-[#1A5276] hover: text-lg px-8 py-4 h-auto font-semibold transition-all"
-            >
-              <Briefcase className="mr-2 w-5 h-5" />
-              See Open Roles
-            </Button>
+            <Link href="/job-application">
+              <Button 
+                size="lg"
+                className="rounded-full bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white text-lg px-8 py-4 h-auto font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition-all"
+              >
+                <Mail className="mr-2 w-5 h-5" />
+                Send Your Resume
+              </Button>
+            </Link>
+            <Link href="/jobs">
+              <Button 
+                size="lg"
+                variant="outline"
+                className="rounded-full border-2 border-[#1A5276] text-[#1A5276] bg-transparent hover:bg-[#1A5276] hover: text-lg px-8 py-4 h-auto font-semibold transition-all"
+              >
+                <Briefcase className="mr-2 w-5 h-5" />
+                See Open Roles
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -408,21 +412,25 @@ export default function AnimatedCareerPage() {
               Let's build something meaningful together.
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <Button 
-                size="lg" 
-                className="rounded-full bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white text-lg px-8 py-4 h-auto font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition-all"
-              >
-                <Mail className="mr-2 w-5 h-5" />
-                Send Your Resume
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="rounded-full border-2 border-gray-300 text-gray-300 bg-transparent hover:bg-gray-300 hover:text-gray-900 text-lg px-8 py-4 h-auto font-semibold transition-all"
-              >
-                <Briefcase className="mr-2 w-5 h-5" />
-                See Open Roles
-              </Button>
+              <Link href="/job-application">
+                <Button 
+                  size="lg" 
+                  className="rounded-full bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white text-lg px-8 py-4 h-auto font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition-all"
+                >
+                  <Mail className="mr-2 w-5 h-5" />
+                  Send Your Resume
+                </Button>
+              </Link>
+              <Link href="/jobs">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="rounded-full border-2 border-gray-300 text-gray-300 bg-transparent hover:bg-gray-300 hover:text-gray-900 text-lg px-8 py-4 h-auto font-semibold transition-all"
+                >
+                  <Briefcase className="mr-2 w-5 h-5" />
+                  See Open Roles
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

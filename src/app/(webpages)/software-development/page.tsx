@@ -193,7 +193,7 @@ export default function Page() {
           />
           <div className="mt-6 space-y-4 text-base text-muted-foreground">
             <p>
-              We provide tailored <a href="/erpnext-services-in-uae" className="text-primary underline hover:text-primary/80" target="_blank" rel="noopener noreferrer">custom software development</a> and enterprise software implementation services designed to meet your unique business needs. As a trusted software development company, we deliver scalable solutions that support critical operations, integrate with mobile apps and third-party software, adopt advanced technologies, and align with your long-term business objectives.
+              We provide tailored <a href="/erpnext-services-in-uae" className="text-primary hover:text-primary/80" target="_blank" rel="noopener noreferrer">custom software development</a> and enterprise software implementation services designed to meet your unique business needs. As a trusted software development company, we deliver scalable solutions that support critical operations, integrate with mobile apps and third-party software, adopt advanced technologies, and align with your long-term business objectives.
             </p>
             <p>
               Our custom software development approach ensures your solution is crafted to solve specific challenges. We align with your business processes to deliver software that streamlines workflow, improves productivity, and enhances overall efficiency.

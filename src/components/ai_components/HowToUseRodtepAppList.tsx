@@ -17,9 +17,9 @@ const HowToUseRodtepAppList: React.FC<HowToUseRodtepAppListProps> = ({ steps }) 
     <div className="space-y-8">
       {steps.map((step, idx) => (
         <Card key={idx} className="border-none bg-muted/40 shadow-sm transition-transform duration-300 hover:scale-[1.02]">
-          <CardHeader className="flex flex-row items-center gap-3 pb-2">
-            <span className="rounded-full bg-primary/10 p-2">
-              <LucideListChecks className="h-5 w-5 text-primary" />
+          <CardHeader className="flex flex-row items-center gap-3 pb-2 ">
+            <span className="rounded-full bg-primary/10 p-2 h-5 w-5 text-primary" >
+              {/* <LucideListChecks className="h-5 w-5 text-primary" /> */}
             </span>
             <CardTitle className="text-lg font-semibold">{step.title}</CardTitle>
           </CardHeader>

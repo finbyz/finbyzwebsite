@@ -36,7 +36,7 @@ export default function Page() {
         <div className="container-custom py-8" id="introduction">
           <div className="space-y-6">
             <h2 className="text-2xl font-bold flex items-center gap-2">
-              <CheckCircle2 className="text-primary" size={28} />
+              {/* <CheckCircle2 className="text-primary" size={28} /> */}
               Introduction
             </h2>
             <p className="text-base md:text-lg text-muted-foreground">

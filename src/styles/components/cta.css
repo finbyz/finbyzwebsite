@@ -122,7 +122,8 @@
 
 .cta-primary-button:hover {
   background-color: #154360;
-  transform: scale(1.05);
+  color: white;
+  transform: scale(1);
 }
 
 .cta-primary-button:focus-visible {
@@ -131,9 +132,9 @@
 
 /* Secondary Button */
 .cta-secondary-button {
-  background-color: #FF8C00;
-  border: 2px solid #FF8C00;
-  color: white;
+  background-color: #FF8C00 !important;
+  border: 2px solid #FF8C00 !important;
+  color: white !important;
   font-size: 1.125rem;
   padding: 1rem 2rem;
   height: auto;
@@ -141,9 +142,10 @@
 }
 
 .cta-secondary-button:hover {
-  background-color: #FF8C00;
-  color: white;
-  transform: scale(1.05);
+  background-color: #E67E00 !important;
+  border-color: #E67E00 !important;
+  color: white !important;
+  transform: scale(1) !important;
 }
 
 .cta-secondary-button:focus-visible {
@@ -179,3 +181,107 @@
   margin-right: 0.25rem;
   color: #FF8C00;
 }
+
+/* Override scaling effects for all buttons to prevent zooming */
+.cta-primary-button,
+.cta-secondary-button,
+.hero-primary-button,
+.hero-secondary-button,
+button[class*="hover:scale"] {
+  transform: scale(1) !important;
+}
+
+.cta-primary-button:hover,
+.cta-secondary-button:hover,
+.hero-primary-button:hover,
+.hero-secondary-button:hover,
+button[class*="hover:scale"]:hover {
+  transform: scale(1) !important;
+}
+
+/* Fix color inversion issues on button hover */
+.cta-primary-button:hover {
+  background-color: #154360 !important;
+  color: white !important;
+  border-color: #154360 !important;
+}
+
+.cta-secondary-button:hover {
+  background-color: #E67E00 !important;
+  color: white !important;
+  border-color: #E67E00 !important;
+}
+
+/* Ensure proper hover colors for hero buttons */
+.hero-primary-button:hover {
+  background: linear-gradient(to right, #E67E00, #FF8C00) !important;
+  color: white !important;
+}
+
+.hero-secondary-button:hover {
+  background-color: #374151 !important;
+  color: white !important;
+  border-color: #374151 !important;
+}
+
+/* Fix Learn More button (secondary button in hero) hover effects */
+button[class*="border-slate-600"]:hover {
+  background-color: #374151 !important;
+  color: white !important;
+  border-color: #374151 !important;
+}
+
+/* Override any dynamic border color classes */
+button[class*="hover:border-orange-500"]:hover,
+button[class*="hover:border-blue-500"]:hover,
+button[class*="hover:border-green-500"]:hover {
+  border-color: #374151 !important;
+  background-color: #374151 !important;
+  color: white !important;
+}
+
+/* Specific overrides for CTA secondary button to ensure hover effects work */
+.cta-secondary-button[data-slot="button"]:hover,
+button.cta-secondary-button:hover,
+.cta-secondary-button:hover {
+  background-color: #E67E00 !important;
+  border-color: #E67E00 !important;
+  color: white !important;
+  transform: scale(1) !important;
+}
+
+/* Override any Tailwind classes that might interfere */
+.cta-secondary-button.hover\:bg-accent:hover,
+.cta-secondary-button.hover\:text-accent-foreground:hover {
+  background-color: #E67E00 !important;
+  color: white !important;
+}
+
+/* Hard overrides to guarantee no zooming on Request Demo even with utility classes */
+.cta-secondary-button,
+.cta-secondary-button:hover,
+.cta-button-group .cta-secondary-button,
+.cta-button-group .cta-secondary-button:hover {
+  transform: none !important;
+  scale: 1 !important;
+}
+
+/* Neutralize any scale utilities applied via Tailwind or group hovers within CTA */
+.cta-section button[class*="hover:scale"],
+.cta-section button[class*="group-hover:scale"],
+.cta-section .cta-secondary-button[class*="hover:scale"],
+.cta-section .cta-secondary-button[class*="group-hover:scale"],
+.cta-section .cta-secondary-button:hover[class*="hover:scale"],
+.cta-section .cta-secondary-button:hover[class*="group-hover:scale"] {
+  transform: none !important;
+  scale: 1 !important;
+}
+
+/* Ensure outline variant hover utilities can't invert colors in CTA area */
+.cta-section .cta-secondary-button:hover,
+.cta-button-group .cta-secondary-button:hover {
+  background-color: #E67E00 !important;
+  color: white !important;
+  border-color: #E67E00 !important;
+}
+

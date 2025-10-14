@@ -104,10 +104,8 @@ export default function Page() {
         primaryButton={{
           text: 'Get a Free Consultation',
           action: () => {
-            if (typeof window !== 'undefined') {
-              window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-            }
-          }
+            window.location.href = '/contact';
+          },
         }}
         secondaryButton={{
           text: 'View Our Clients',
@@ -126,7 +124,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8 flex flex-col items-center">
-          <QuoteBlock text="Your website deserves the best; after all, it is the internet advertising billboard for you and your company" isHeading={false} />
+          {/* <QuoteBlock text="Your website deserves the best; after all, it is the internet advertising billboard for you and your company" isHeading={false} /> */}
         </div>
       </Section>
 

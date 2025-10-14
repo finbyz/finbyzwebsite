@@ -11,7 +11,7 @@ const AboutSection = () => (
       className="flex-1 flex justify-center"
     >
       <Image
-        src="/images/Innovate-learn-create.jpg"
+        src="/Innovate-learn-create.jpg"
         alt="Innovate. Learn. Create."
         width={480}
         height={360}

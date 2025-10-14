@@ -34,7 +34,7 @@ export default function Page() {
         secondaryButton={{ text: 'Contact Us', action: heroSecondaryAction }}
         heroImage={{
           alt: 'Hire Django Developer',
-          src: '/images/Hire-dJango-Dev - New.svg',
+          src: '/custom Django.svg',
           
         }}
       />
@@ -110,7 +110,7 @@ export default function Page() {
             <FlipCard
               front={
                 <div className="flex flex-col items-center justify-center h-full">
-                  <Image src="/images/custom Django.svg" alt="Custom Django Development" width={64} height={64} />
+                  <Image src="/custom Django.svg" alt="Custom Django Development" width={64} height={64} />
                   <h3 className="mt-4 font-semibold text-lg">Custom Django Development</h3>
                 </div>
               }
@@ -250,7 +250,7 @@ export default function Page() {
               },
               {
                 title: 'Time Savings',
-                image: '/images/time saving.svg',
+                image: '/time saving.svg',
                 alt: 'time saving',
                 description: 'Your clients can focus on their core business functions and leave the Django Python development work to Finbyz Tech. This can save time and resources, allowing clients to focus on what they do best.'
               },
@@ -268,7 +268,7 @@ export default function Page() {
               },
               {
                 title: 'Timely Delivery',
-                image: '/images/timely deliverd.svg',
+                image: '/timely deliverd.svg',
                 alt: 'timely deliverd',
                 description: 'Your clients can benefit from the timely delivery of their projects, as Finbyz Tech can provide dedicated resources to ensure on-time delivery.'
               }

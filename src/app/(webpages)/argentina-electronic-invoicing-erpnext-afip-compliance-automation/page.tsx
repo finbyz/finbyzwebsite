@@ -21,7 +21,7 @@ export default function Page() {
     <>
       <HeroSection
         headline="Argentina Electronic Invoicing in ERPNext: AFIP Compliance & Automation"
-        highlightWords={["Electronic Invoicing", "AFIP Compliance", "Automation", "ERPNext", "Argentina"]}
+        highlightWords={["Electronic Invoicing", "Argentina"]}
         description="Implement AFIP-compliant electronic invoicing in ERPNext for Argentina. Automate invoice validation, ensure tax compliance, and streamline financial operations."
         primaryButton={{
           text: 'Get Started',
@@ -38,14 +38,14 @@ export default function Page() {
         heroImage={{
           alt: 'Argentina Electronic Invoicing in ERPNext: AFIP Compliance & Automation',
           src: '/images/Line Banner-41 (2)_11zon.png',
-          videoSrc: ''
+          // videoSrc: ''
         }}
       />
 
       {/* Introduction & Compliance Overview */}
       <Section>
         <div className="container-custom py-8 flex flex-col gap-8">
-          <div className="text-center animate-fadeinup">
+          <div className="text-justify animate-fadeinup">
             <p className="text-lg text-gray-700">
               ERPNext is a versatile open-source ERP system that allows businesses to manage various operations efficiently. Implementing electronic-invoicing compliance in ERPNext ensures seamless integration with government tax regulations. It automates invoice generation, validation, and real-time reporting to tax authorities. This customization reduces manual errors, enhances accuracy, and streamlines financial operations. Businesses benefit from improved efficiency and compliance with legal standards.
             </p>
@@ -58,8 +58,8 @@ export default function Page() {
         <div className="container-custom py-8 grid md:grid-cols-2 gap-8 items-center">
           <div>
             <h3 className="text-2xl font-semibold mb-2 flex items-center gap-2">
-              <HiOutlineDocumentText className="text-blue-500" size={28} />
-              Custom Fields to Support Legal Compliance
+              {/* <HiOutlineDocumentText className="text-blue-500" size={28} /> */}
+            <span className='text-[#1A5276]'>Custom Fields to Support Legal Compliance</span>
             </h3>
             <p className="text-gray-700 mb-4">
               To ensure seamless electronic-invoicing compliance within ERPNext, custom fields are introduced to meet regulatory requirements and facilitate tax reporting.
@@ -88,8 +88,8 @@ export default function Page() {
         <div className="container-custom py-8 grid md:grid-cols-2 gap-8 items-center">
           <div>
             <h3 className="text-2xl font-semibold mb-2 flex items-center gap-2">
-              <MdOutlinePayment className="text-green-500" size={28} />
-              Enhanced Form Organization
+              {/* <MdOutlinePayment className="text-green-500" size={28} /> */}
+              <span className='text-[#1A5276]'>Enhanced Form Organization</span>
             </h3>
             <p className="text-gray-700 mb-4">
               To improve user experience and ensure a structured layout, form enhancements are implemented in ERPNext:
@@ -114,8 +114,10 @@ export default function Page() {
         <div className="container-custom py-8">
           <div className="mb-8">
             <h3 className="text-2xl font-semibold flex items-center gap-2 mb-2">
-              <TbApi className="text-purple-500" size={28} />
-              Process Flow for Sales Invoice with Electronic-Invoice Generation
+              {/* <TbApi className="text-purple-500" size={28} /> */}
+              <span className='text-[#1A5276]'>
+                Process Flow for Sales Invoice with Electronic-Invoice Generation
+              </span>
             </h3>
             <p className="text-gray-700">
               A streamlined process flow is established to integrate electronic-invoicing into the sales invoice workflow:
@@ -130,8 +132,8 @@ export default function Page() {
               className="rounded-xl shadow-lg w-full h-[320px] md:h-[420px]"
             />
           </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
+         {/* md:grid-cols-2 */}
+          <div className="grid  gap-8">
             <ProcessStepImageCard
               step="1"
               title="Create and Save Sales Invoice"
@@ -183,8 +185,8 @@ export default function Page() {
         <div className="container-custom py-8 grid md:grid-cols-2 gap-8 items-center">
           <div>
             <h3 className="text-2xl font-semibold mb-2 flex items-center gap-2">
-              <LuBanknote className="text-yellow-500" size={28} />
-              Support for Various Business Scenarios
+              {/* <LuBanknote className="text-yellow-500" size={28} /> */}
+            <span className='text-[#1A5276]'>  Support for Various Business Scenarios</span>
             </h3>
             <p className="text-gray-700 mb-4">
               ERPNext customizations cater to different business models and regulatory requirements:
@@ -207,7 +209,7 @@ export default function Page() {
       <Section useGradient>
         <div className="container-custom py-8 flex flex-col gap-8">
           <div className="text-center">
-            <h3 className="text-2xl font-semibold mb-2">How We Can Help Companies in Argentina</h3>
+            <h3 className="text-2xl font-semibold mb-2 text-[#1A5276] ">How We Can Help Companies in Argentina</h3>
             <p className="text-gray-700 mb-4">
               Our tailored ERPNext localization solution ensures businesses can seamlessly comply with Argentina's electronic-invoicing regulations while enhancing operational efficiency. Here's how we assist:
             </p>
@@ -257,7 +259,7 @@ export default function Page() {
       <Section>
         <div className="container-custom py-8 flex flex-col gap-6">
           <div className="text-center">
-            <h2 className="text-2xl font-bold mb-2">Conclusion</h2>
+            <h2 className="text-2xl font-bold mb-2 text-[#1A5276]">Conclusion</h2>
           </div>
           <div className="text-gray-700 text-lg">
             <p>

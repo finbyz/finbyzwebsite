@@ -16,7 +16,7 @@ export default function TestClientLogosPage() {
               title: "Our Clients (API Data)",
               subtitle: "Fetched from finbyzweb.api.get_customer_details",
               useAPI: true,
-              apiEndpoint: '/web-api/client-logos',
+              apiEndpoint: '/api/client-logos',
               carousel: {
                 autoPlay: true,
                 interval: 4000,
@@ -50,7 +50,7 @@ export default function TestClientLogosPage() {
           <button 
             onClick={async () => {
               try {
-                const response = await fetch('/web-api/client-logos?limit=6&page=1');
+                const response = await fetch('/api/client-logos?limit=6&page=1');
                 const data = await response.json();
                 console.log('API Response:', data);
                 alert('Check console for API response');

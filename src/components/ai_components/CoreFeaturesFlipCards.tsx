@@ -15,7 +15,7 @@ const cards = [
     description: "Leveraging our experience in ERP implementation, the CRM system enables detailed customer segmentation, helping businesses target marketing and sales efforts more effectively and enhance customer experiences."
   },
   {
-    icon: "/images/67.svg",
+    icon: "/sales forecasting.svg",
     title: "Sales Forecasting",
     description: "Using advanced algorithms a hallmark of our software development capabilities our CRM software delivers accurate sales forecasting, assisting strategic business planning."
   }

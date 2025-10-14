@@ -21,6 +21,7 @@ import { CodeSquare } from "lucide-react";
 import { Database } from "lucide-react";
 import { Cog } from "lucide-react";
 import { Laptop } from "lucide-react";
+import { Lock } from "lucide-react";
 
 
 
@@ -53,6 +54,10 @@ export default function Header() {
   const [blogPosts, setBlogPosts] = useState<Array<{ name: string; title: string; route?: string; image?: string }>>([]);
   const [blogsLoading, setBlogsLoading] = useState(false);
   const [showAllBlogs, setShowAllBlogs] = useState(false);
+  const [galleryItems, setGalleryItems] = useState<Array<{ name: string; title: string; route?: string; animated_image?: string; svg_image?: string }>>([]);
+const [galleryLoading, setGalleryLoading] = useState(false);
+const [showAllGallery, setShowAllGallery] = useState(false);
+  
  
  
 
@@ -77,6 +82,19 @@ export default function Header() {
       .finally(() => setBlogsLoading(false));
   }, [hoveredDropdown, hoveredService, blogsLoading, blogPosts.length]);
 
+
+  // Load gallery when hovering Insights → Gallery
+useEffect(() => {
+  const shouldFetch = hoveredDropdown === "Insights" && hoveredService === "Gallery" && !galleryLoading && galleryItems.length === 0;
+  if (!shouldFetch) return;
+  setGalleryLoading(true);
+  fetch("/web-api/gallery")
+    .then(r => r.json())
+    .then(j => setGalleryItems(Array.isArray(j?.data) ? j.data : []))
+    .catch(() => setGalleryItems([]))
+    .finally(() => setGalleryLoading(false));
+}, [hoveredDropdown, hoveredService, galleryLoading, galleryItems.length]);
+
   const toggleMobileItem = (itemName: string) => {
     setExpandedMobileItems(prev => 
       prev.includes(itemName) 
@@ -84,6 +102,10 @@ export default function Header() {
         : [...prev, itemName]
     );
   };
+
+
+  
+
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -132,11 +154,7 @@ export default function Header() {
     // console.log("Inquiry form element:", inquiryForm);
     if (inquiryForm) {
       inquiryForm.scrollIntoView({ behavior: 'smooth' });
-    }
-   
-      
-    
-    
+    } 
   }
 
 
@@ -218,7 +236,7 @@ export default function Header() {
           {
             name: "FD Management",
             description: "Fixed deposit management system",
-            icon: DollarSign,
+            icon: Lock,
             href: "/fd-management-erpnext"
           },
           {
@@ -599,7 +617,7 @@ export default function Header() {
       mainItems: [
         { name: "Blogs", icon: Wrench ,href:"/blog-post"},
         { name: "Gallery", icon: Handshake, href:"/gallery" },
-        { name: "Tech Update", icon: Briefcase, href:"/tech-update" },
+        // { name: "Tech Update", icon: Briefcase, href:"/tech-update" },
       ],
 
       detailedItems: {
@@ -865,7 +883,66 @@ export default function Header() {
                                         </div>
                                       )}
                                     </div>
-                                  ) : (
+                                  )
+                                   : item.name === "Insights" && hoveredService === "Gallery" ? (
+        <div className="space-y-2">
+          {galleryLoading ? (
+            <div className="text-sm text-gray-500 px-3 py-2">Loading gallery...</div>
+          ) : galleryItems.length === 0 ? (
+            <div className="text-sm text-gray-500 px-3 py-2">No gallery items found.</div>
+          ) : (
+            (showAllGallery ? galleryItems : galleryItems.slice(0, 5)).map((item) => (
+              <Link
+                key={item.name}
+                href={item.route || "/gallery"}
+                className="flex items-center space-x-3 px-3 py-2 text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5 cursor-pointer transition-all rounded-lg text-sm"
+                onClick={() => {
+                  setHoveredDropdown(null);
+                  setHoveredService(null);
+                  setShowAllGallery(false);
+                }}
+              >
+                {/* {item.animated_image || item.svg_image ? (
+                  <Image 
+                    src={item.animated_image || item.svg_image || ''} 
+                    alt={item.title} 
+                    width={32} 
+                    height={32} 
+                    className="rounded object-cover" 
+                  />
+                ) : (
+                  <div className="w-8 h-8 rounded bg-gray-100" />
+                )} */}
+                <span className="font-medium line-clamp-1">{item.title}</span>
+              </Link>
+            ))
+          )}
+          {galleryItems.length > 5 && (
+            <div className="pt-2 flex items-center gap-3">
+              <button
+                className="text-sm px-3 py-2 rounded-lg text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5"
+                onClick={() => setShowAllGallery(v => !v)}
+              >
+                {showAllGallery ? "Show less" : "View more"}
+              </button>
+              <Link
+                href="/gallery"
+                className="text-sm px-3 py-2 rounded-lg text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5"
+                onClick={() => {
+                  setHoveredDropdown(null);
+                  setHoveredService(null);
+                  setShowAllGallery(false);
+                }}
+              >
+                View all
+              </Link>
+            </div>
+          )}
+        </div>
+      ) 
+      :
+                                  
+                                  (
                                     <div className="space-y-2">
                                       {(item.detailedItems as any)?.[hoveredService]?.map((subItem: any) => (
                                         <Link

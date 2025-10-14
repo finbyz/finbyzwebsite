@@ -17,7 +17,7 @@ const features = [
   },
   {
     title: 'Customizable Reporting',
-    image: '/images/61.svg',
+    image: '/Customizable Reporting.svg',
     alt: 'Customizable Reporting',
     description: 'With our CRM system, you can generate customizable reports tailored to your business objectives. This feature reflects our strong software development capabilities, delivering actionable insights with precision.'
   }

@@ -59,7 +59,7 @@ export default function Page() {
       {/* Why ERP is Crucial Section */}
       <Section useGradient>
   <div className="container-custom py-12">
-    <h2 className="text-2xl font-bold mb-6 text-center">Why ERP is Crucial for Modern Manufacturing ?</h2>
+    <h2 className="text-2xl font-bold mb-6 text-center text-[#1A5276]">Why ERP is Crucial for Modern Manufacturing ?</h2>
 
     {/* Bold Intro Line with larger font, centered */}
     <p className="text-center text-lg sm:text-xl font-semibold text-gray-900 mb-6">
@@ -93,7 +93,7 @@ export default function Page() {
       {/* Types of ERP in Manufacturing */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-6 text-center">Types of ERP in Manufacturing</h2>
+          <h2 className="text-2xl font-bold mb-6 text-center text-[#1A5276]">Types of ERP in Manufacturing</h2>
           <p className="text-gray-700 mb-8 text-center">Manufacturing spans many sectors (engineering, chemicals, retail, etc.), so ERP solutions are classified accordingly. Below are common types of ERP systems in manufacturing:</p>
           <ManufacturingTypesGrid
             types={[
@@ -105,7 +105,7 @@ export default function Page() {
               },
               {
                 title: 'ERP for Process Manufacturing',
-                image: '/images/2544 (1).svg',
+                image: '/erp-process-manufacturing.svg',
                 alt: 'Process Manufacturing',
                 description: 'Process manufacturers combine formulas or raw materials to produce goods (e.g., chemicals, food & beverage). ERP for process manufacturing handles complex recipes and formulas, quality control, waste tracking, and product life cycles to maintain consistent output.'
               },
@@ -123,7 +123,7 @@ export default function Page() {
       {/* Benefits of ERP for Manufacturing */}
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-6 text-center">Benefits of ERP for Manufacturing</h2>
+          <h2 className="text-2xl font-bold mb-6 text-center text-[#1A5276]">Benefits of ERP for Manufacturing</h2>
           <div className="flex flex-col md:flex-row md:items-center md:gap-8">
             <div className="md:w-1/12 flex justify-center mb-4 md:mb-0">
             </div>
@@ -165,7 +165,7 @@ export default function Page() {
       {/* Key Benefits List Section */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-6 text-center">Key Benefits of ERP in Manufacturing</h2>
+          <h2 className="text-2xl font-bold mb-6 text-center text-[#1A5276]">Key Benefits of ERP in Manufacturing</h2>
           <div className="flex flex-col md:flex-row md:items-center md:gap-8">
             <div className="md:w-1/12 flex justify-center mb-4 md:mb-0">
             </div>
@@ -199,7 +199,7 @@ export default function Page() {
       {/* Conclusion Section */}
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-6 text-center">Conclusion</h2>
+          <h2 className="text-2xl font-bold mb-6 text-center text-[#1A5276]">Conclusion</h2>
           <div className="text-gray-700 mb-6">
             <p>ERP for Manufacturing provides end-to-end solutions to every kind of industry by increasing the efficiency of the business and helping in its growth in the market. Given the complexity of operations, ERP plays an important role in the manufacturing industry by keeping track of orders and delivery dates, production planning and scheduling, optimizing delivery time, and management of waste and other activities related to manufacturing. Doing everything manually makes it very difficult in the growing dynamic environment and brings a vast possibility of errors and failures. It centralizes and integrates all the operations and departments in a standardized way. It also helps in facing major challenges faced by manufacturers. Management and security of data become advantageous in the long run to achieve the objectives of organizations and increase profits and productivity.</p>
           </div>

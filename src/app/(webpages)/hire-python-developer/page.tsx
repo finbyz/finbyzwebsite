@@ -153,7 +153,7 @@ export default function Page() {
                   </div>
                 }
                 className="border-none shadow-md bg-white hover:shadow-lg transition-shadow duration-300"
-                flipOnClick
+                // flipOnClick
               />
             ))}
           </div>

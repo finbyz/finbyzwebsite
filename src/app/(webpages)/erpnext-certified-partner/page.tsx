@@ -43,11 +43,33 @@ export default function Page() {
         <div className="container-custom py-12 md:py-16 relative z-10 flex flex-col gap-12">
           
           {/* Full-width Paragraph */}
-          <div className="animate-fade-up">
+          {/* <div className="animate-fade-up">
             <p className="mb-6 text-gray-700 leading-relaxed text-lg text-justify">
               As a trusted ERPNext Partner in Ahmedabad, Gujarat, <span className="font-semibold text-gray-900">Finbyz Tech</span> empowers businesses with scalable, robust, and intuitive ERP solutions. ERPNext is a comprehensive and user-friendly Enterprise Resource Planning (ERP) platform, designed specifically for small to medium-sized businesses. It is trusted by users in <span className="font-semibold text-primary">over 100 countries</span>, available in more than <span className="font-semibold text-primary">30 languages</span>, and is known for its flexibility with both cloud and on-premise deployments. Whether you're transitioning from SAP, Oracle, Odoo, Microsoft Dynamics, Tally, or Zoho, <Link href="/erpnext-software" className="text-primary font-semibold underline decoration-2 underline-offset-4 hover:text-primary/80 transition-colors">ERPNext</Link> provides a seamless shift with lower costs and enhanced control. Learn more about how to <a href="https://finbyz.tech/how-to-choose-the-right-erp-software-for-your-company" target="_blank" className="text-primary font-semibold underline decoration-2 underline-offset-4 hover:text-primary/80 transition-colors">choose the right ERP</a> for your company.
             </p>
+             
           </div>
+           */}
+
+           <div className="animate-fade-up flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-8">
+  {/* Text Content - Left Side */}
+  <div className="flex-1">
+    <p className="mb-0 text-gray-700 leading-relaxed text-lg text-justify">
+      As a trusted ERPNext Partner in Ahmedabad, Gujarat, <span className="font-semibold text-gray-900">Finbyz Tech</span> empowers businesses with scalable, robust, and intuitive ERP solutions. ERPNext is a comprehensive and user-friendly Enterprise Resource Planning (ERP) platform, designed specifically for small to medium-sized businesses. It is trusted by users in <span className="font-semibold text-primary">over 100 countries</span>, available in more than <span className="font-semibold text-primary">30 languages</span>, and is known for its flexibility with both cloud and on-premise deployments. Whether you're transitioning from SAP, Oracle, Odoo, Microsoft Dynamics, Tally, or Zoho, <Link href="/erpnext-software" className="text-primary font-semibold underline decoration-2 underline-offset-4 hover:text-primary/80 transition-colors">ERPNext</Link> provides a seamless shift with lower costs and enhanced control. Learn more about how to <a href="https://finbyz.tech/how-to-choose-the-right-erp-software-for-your-company" target="_blank" className="text-primary font-semibold underline decoration-2 underline-offset-4 hover:text-primary/80 transition-colors">choose the right ERP</a> for your company.
+    </p>
+  </div>
+  
+  {/* Image - Right Side */}
+  <div className="flex-shrink-0 w-full md:w-auto">
+    <Image 
+      src="/images/Frappe-Partner-Certificate-Logo.svg" 
+      alt="ERPNext partner img" 
+      width={270} 
+      height={140} 
+      className="w-full md:w-[270px] h-auto" 
+    />
+  </div>
+</div>
 
           {/* Two-column Layout */}
           <div className="flex flex-col gap-12">
@@ -79,22 +101,22 @@ export default function Page() {
                 <div className="bg-white rounded-xl p-6 shadow-xl border border-gray-200 hover:border-primary/40 hover:shadow-2xl group hover:scale-[1.03] transition-all duration-500">
                   
                   {/* Verified Badge */}
-                  <div className="absolute top-4 right-4 flex items-center gap-1.5 bg-green-50 px-2.5 py-1 rounded-full border border-green-200">
+                  {/* <div className="absolute top-4 right-4 flex items-center gap-1.5 bg-green-50 px-2.5 py-1 rounded-full border border-green-200">
                     <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
                     <span className="text-xs font-semibold text-green-700">Verified</span>
-                  </div>
+                  </div> */}
 
-                  <Image src="/images/Frappe-Partner-Certificate-Logo.svg" alt="ERPNext partner img" width={270} height={140} className="w-full h-auto" />
+                  {/* <Image src="/images/Frappe-Partner-Certificate-Logo.svg" alt="ERPNext partner img" width={270} height={140} className="w-full h-auto" /> */}
 
-                  <div className="mt-4 pt-4 border-t border-gray-100">
+                  {/* <div className="mt-4 pt-4 border-t border-gray-100">
                     <p className="text-center text-gray-800 text-sm font-bold">Official Frappe Partner</p>
                     <p className="text-center text-gray-500 text-xs mt-1">Certified Implementation Expert</p>
-                  </div>
+                  </div> */}
                 </div>
               </a>
 
               {/* Stats */}
-              <div className="flex gap-3">
+              {/* <div className="flex gap-3">
                 <div className="bg-white rounded-lg px-4 py-2 shadow-md border border-gray-200 hover:border-primary/40 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer">
                   <div className="text-xl font-bold text-primary">100+</div>
                   <div className="text-xs text-gray-600 font-medium">Countries</div>
@@ -103,7 +125,7 @@ export default function Page() {
                   <div className="text-xl font-bold text-primary">30+</div>
                   <div className="text-xs text-gray-600 font-medium">Languages</div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
       </div>

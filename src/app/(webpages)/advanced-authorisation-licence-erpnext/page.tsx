@@ -101,15 +101,15 @@ export default function Page() {
             <li>
               <span className="font-semibold">Enter License details:</span>
               <ol className="list-[lower-alpha] pl-6 mt-2 space-y-2">
-                <li><span className="font-medium">License Number</span></li>
-                <li><span className="font-medium">Export Item: Select item Which can you use import material to produce</span></li>
-                <li><span className="font-medium">Application File No.</span></li>
-                <li><span className="font-medium">Export Approved Qty and Export Approved Amount</span></li>
-                <li><span className="font-medium">License Amount</span></li>
-                <li><span className="font-medium">Currency</span></li>
-                <li><span className="font-medium">Date: License Date</span></li>
-                <li><span className="font-medium">Due Date: License End Date</span></li>
-                <li><span className="font-medium">Application File Date</span></li>
+                <li><span>License Number</span></li>
+                <li><span >Export Item: Select item Which can you use import material to produce</span></li>
+                <li><span >Application File No.</span></li>
+                <li><span >Export Approved Qty and Export Approved Amount</span></li>
+                <li><span >License Amount</span></li>
+                <li><span >Currency</span></li>
+                <li><span >Date: License Date</span></li>
+                <li><span >Due Date: License End Date</span></li>
+                <li><span >Application File Date</span></li>
               </ol>
             </li>
             <li>
@@ -129,12 +129,12 @@ export default function Page() {
         <div className="container-custom py-8">
           <h2 className="text-2xl font-bold mb-4 animate-fade-in">How to use Advance Authorisation licence for Import in ERPNext</h2>
           <ol className="list-decimal pl-6 space-y-3 animate-fade-in">
-            <li><span className="font-semibold">Create import purchase invoice with all the details.</span></li>
-            <li><span className="font-semibold">In Items table you will see fields to select Advance Authorization license.</span></li>
-            <li><span className="font-semibold">Enter CIF Value and FOB value for imported product.</span></li>
-            <li><span className="font-semibold">On submit of this purchase invoice these import details will be updated against the license.</span></li>
-            <li><span className="font-semibold">System will automatically calculate remaining quantities and amount for each declared import item.</span></li>
-            <li><span className="font-semibold">If sufficient quantity or amount is not available to utilize in any license, system will not allow you to submit this purchase invoice, throwing exact error of maximum available quantity of license.</span></li>
+            <li><span>Create import purchase invoice with all the details.</span></li>
+            <li><span >In Items table you will see fields to select Advance Authorization license.</span></li>
+            <li><span >Enter CIF Value and FOB value for imported product.</span></li>
+            <li><span >On submit of this purchase invoice these import details will be updated against the license.</span></li>
+            <li><span >System will automatically calculate remaining quantities and amount for each declared import item.</span></li>
+            <li><span >If sufficient quantity or amount is not available to utilize in any license, system will not allow you to submit this purchase invoice, throwing exact error of maximum available quantity of license.</span></li>
           </ol>
           <p className="mt-4 text-muted-foreground animate-fade-in delay-100">
             This will ensure license is never overutilized by the user.
@@ -149,12 +149,12 @@ export default function Page() {
         <div className="container-custom py-8">
           <h2 className="text-2xl font-bold mb-4 animate-fade-in">How to use Advance Authorisation licence at the time of Export in ERPNext</h2>
           <ol className="list-decimal pl-6 space-y-3 animate-fade-in">
-            <li><span className="font-semibold">Create Export Sales Invoice with all the details.</span></li>
-            <li><span className="font-semibold">Select the applicable Advanced Authorisation Licence in the Items table.</span></li>
-            <li><span className="font-semibold">Enter Freight and Insurance amount in invoice currency to get FOB Value.</span></li>
-            <li><span className="font-semibold">On submit of this Sales Invoice these export details will be updated against the license.</span></li>
-            <li><span className="font-semibold">System will automatically calculate remaining export quantity and amount.</span></li>
-            <li><span className="font-semibold">If sufficient quantity or amount is not available to utilize in any license, system will not allow you to submit this purchase invoice, throwing exact error of maximum available quantity of license.</span></li>
+            <li><span >Create Export Sales Invoice with all the details.</span></li>
+            <li><span >Select the applicable Advanced Authorisation Licence in the Items table.</span></li>
+            <li><span >Enter Freight and Insurance amount in invoice currency to get FOB Value.</span></li>
+            <li><span >On submit of this Sales Invoice these export details will be updated against the license.</span></li>
+            <li><span >System will automatically calculate remaining export quantity and amount.</span></li>
+            <li><span >If sufficient quantity or amount is not available to utilize in any license, system will not allow you to submit this purchase invoice, throwing exact error of maximum available quantity of license.</span></li>
           </ol>
           <p className="mt-4 text-muted-foreground animate-fade-in delay-100">
             The system allows for permissible variation on the higher side for export quantity, ensuring the committed export target under the licence is achieved without forfeiting duty drawback benefits. This feature ensures better control over the Import Export Licence management process.

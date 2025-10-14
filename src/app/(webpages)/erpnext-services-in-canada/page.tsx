@@ -220,7 +220,12 @@ export default function Page() {
         headline="ERPNext Services in Canada"
         highlightWords={heroHighlightWords}
         description="ERPNext Partners in Canada: ERPNext Service Providers offers bespoke ERP solutions in manufacturing, agro, chemical, healthcare & pharmaceutical sectors."
-        primaryButton={{ text: 'Get Started', action: handlePrimary }}
+        primaryButton={{ text: 'Get Started', 
+          action: () => {
+            const el = document.getElementById('erpnext-canada');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }
+         }}
         secondaryButton={{ text: 'Our ERPNext Partners', action: handleSecondary }}
         heroImage={{
           alt: 'ERPNext Services in Canada',
@@ -230,7 +235,7 @@ export default function Page() {
       />
       <Section>
         <div className="container-custom py-8 flex flex-col gap-6">
-          <div className="flex flex-col gap-4 animate-fadeInUp">
+          <div className="flex flex-col gap-4 animate-fadeInUp" id="erpnext-canada">
             <p>
               Welcome to Finbyz Tech, your go-to <a href="/erpnext-certified-partner" className="text-primary underline hover:text-primary/80 transition">ERPNext partner</a> for top-tier ERPNext services in Canada. Specializing in advanced ERP solutions, we enable Canadian businesses to excel in a market that's both challenging and ripe with opportunity. Step into the future with ERPNext's robust features, customized by our experts to align with your distinct business needs.
             </p>
@@ -254,7 +259,7 @@ export default function Page() {
                 </div>
                 }
                 className="h-full min-h-[300px] lg:w-72 w-64 bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
-                flipOnClick
+                // flipOnClick
               />
             ))}
           </div>
@@ -265,7 +270,7 @@ export default function Page() {
       </Section>
       <Section useGradient>
         <div className="container-custom py-8 flex flex-col gap-8">
-          <h2 className="text-2xl font-bold mb-2">ERPNext offers a wide range of functionalities including:</h2>
+          {/* <h2 className="text-2xl font-bold mb-2">ERPNext offers a wide range of functionalities including:</h2> */}
           <List
             title="ERPNext offers a wide range of functionalities including:"
             items={erpnextFunctionalityList}

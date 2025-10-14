@@ -9,7 +9,8 @@ const InventiveCRMSection: React.FC = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="flex flex-col items-center text-center">
           <h3 className="text-xl font-semibold mb-2">Innovative CRM Software Solutions</h3>
-          <Image src="/images/61.svg" alt="Custom-Software-Solution" width={150} height={50} className="mb-4" />
+          {/* <Image src="/images/61.svg" alt="Custom-Software-Solution" width={150} height={50} className="mb-4" /> */}
+           <Image src="/Innovative CRM Software Solutions.svg" alt="Custom-Software-Solution" width={150} height={50} className="mb-4" />
           <p>
             At Finbyz, we specialize in <a href="/software-development" className="text-primary underline">software development</a>, crafting advanced CRM systems designed to enhance customer-business interactions. Our solutions use the latest technology to streamline customer relationship management, ensuring businesses can efficiently track, analyze, and respond to customer needs.
           </p>

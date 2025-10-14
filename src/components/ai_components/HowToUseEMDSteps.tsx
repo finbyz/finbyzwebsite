@@ -28,7 +28,7 @@ const HowToUseEMDSteps: FC<HowToUseEMDStepsProps> = ({ steps }) => {
             <CardHeader>
               <CardTitle className="text-lg md:text-xl font-semibold mb-2">{step.title}</CardTitle>
             </CardHeader>
-            <CardContent className="flex flex-col md:flex-row items-center gap-6">
+            <CardContent className="flex flex-col md:flex-col-reverse items-center gap-6">
               <div className="flex-1 text-base text-muted-foreground mb-4 md:mb-0">
                 {step.description}
               </div>
@@ -37,7 +37,7 @@ const HowToUseEMDSteps: FC<HowToUseEMDStepsProps> = ({ steps }) => {
                   src={step.image}
                   alt={step.alt}
                   className="rounded-lg shadow-md w-full md:w-2/3 object-contain border border-muted/30 bg-white"
-                  style={{ maxWidth: '420px' }}
+                  style={{ height:"100%",width:"100%"}} 
                 />
               </div>
             </CardContent>

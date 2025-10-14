@@ -148,7 +148,7 @@ export default function Page() {
       {/* Our Professional Web Design Services Include */}
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4 text-primary">Our Professional Web Design Services Include</h2>
+          {/* <h2 className="text-2xl font-bold mb-4 text-primary">Our Professional Web Design Services Include</h2> */}
           <List
             title="Our Professional Web Design Services Include"
             items={[

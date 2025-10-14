@@ -84,7 +84,8 @@ export default function Page() {
         primaryButton={{
           text: 'Get Started',
           action: () => {
-            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            const el = document.getElementById('erp-trading');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
           }
         }}
         secondaryButton={{
@@ -101,7 +102,7 @@ export default function Page() {
       />
 
       <Section>
-        <div className="container-custom py-8">
+        <div className="container-custom py-8" id="erp-trading">
           <div className="flex flex-col items-center gap-4 animate-fade-in-up">
             <h2 className="text-2xl font-bold text-center">ERP Software for Trading Business</h2>
             <QuoteBlock
@@ -110,14 +111,12 @@ export default function Page() {
             />
             <div className="mt-4 space-y-4 text-muted-foreground text-center">
               <p>
-                In this new age information is the key to success. ERP for a Trading business not only helps collect this information, but it converts in knowledge which can convert your quotations to successful sales orders.
-              </p>
-              <p>
-                Trading businesses are said to be the link between the manufacturers or suppliers and the end customers. They deal in one specific good or a few categories of goods that render benefit to them. The main function in the trading business is the management of logistics and distribution of the goods and products. Traditional ways of managing the sales of these goods are very hectic and tedious. The automation of these processes through ERP software can lead to more efficiency and growth in sales and distribution.
-              </p>
-              <p>
+              In today's digital era, information is the cornerstone of success. ERP software, particularly for trading businesses, stands out not only for its capability to aggregate critical data but also for its exceptional ability to transform this data into actionable insights. This conversion of quotations into successful sales orders is facilitated by ERP, making it an indispensable tool for forward-thinking enterprises. As a premier ERP service provider, we specialize in customizing solutions that harness the power of ERP to drive your trading business towards unparalleled efficiency and profitability.</p>
+
+          <p>Trading businesses are said to be the link between the manufacturers or suppliers and the end customers. They deal in one specific good or a few categories of goods that render benefit to them. The main function in the trading business is the management of logistics and distribution of the goods and products. Traditional ways of managing the sales of these goods are very hectic and tedious. The automation of these processes through ERP Software can lead to more efficiency and growth in sales and distribution.
+
                 Every piece of information and knowledge is important for every type of business.
-              </p>
+          </p>
             </div>
           </div>
         </div>
@@ -158,7 +157,7 @@ export default function Page() {
         <div className="container-custom py-8">
           <div className="flex flex-col items-center gap-4 animate-fade-in-up">
             <p>
-              ERP for trading business has proved to be quite a boon for the traders as well as customers. It helps the traders to procure new suppliers and reach out to new and untapped markets of customers due to the automated services. Management of all the functions such as procurement, supply chain, distribution and sales become easier and result-oriented. Handling of all the real-time information about stocks prevents loss and theft issues. Advantage of costs and time is the basis of every ERP solution regardless of the industry it is integrated into. Traders take advantage of this time and cost-effectiveness to grow their profits and business.
+            Best ERP for trading business, including ERP For Chemical Industry, manufacturing ERP software, engineering ERP Software, and transport ERP, has proved to be quite a boon for the traders as well as customers. It helps the traders to procure new suppliers and reach out to new and untapped markets of customers due to the automated services. Management of all the functions such as procurement, supply chain, distribution, and sales become easier and result-oriented. Handling of all the real-time information about stocks prevents loss and theft issues.
             </p>
             <QuoteBlock
               text="Optimizing a business function is futile and non-value-added if it is not part of a revenue/competitive business process. - Worster, Weirick, Andera."

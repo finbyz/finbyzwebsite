@@ -39,7 +39,7 @@ export default function Page() {
         <div className="container-custom py-8">
           <div className="space-y-4 text-justify">
             <p>
-              Welcome FinByz Tech, your trusted <a href="https://nexinews.com/boost-your-business-join-the-erpnext-partners-network" className="text-primary underline hover:text-primary/80 transition-colors">ERPNext partner</a> providing the best ERPNext services specifically designed for Saudi Arabian companies. By focusing on providing innovative ERP systems, we enable Saudi businesses to prosper in a market that is dynamic and full of both opportunities and difficulties. With ERPNext's powerful capabilities, which have been expertly customised to match the particular requirements of Saudi Arabian businesses, you can confidently move into the future.
+              Welcome FinByz Tech, your trusted <a href="https://web.finbyz.tech/erpnext-certified-partner" className="text-primary underline hover:text-primary/80 transition-colors">ERPNext partner</a> providing the best ERPNext services specifically designed for Saudi Arabian companies. By focusing on providing innovative ERP systems, we enable Saudi businesses to prosper in a market that is dynamic and full of both opportunities and difficulties. With ERPNext's powerful capabilities, which have been expertly customised to match the particular requirements of Saudi Arabian businesses, you can confidently move into the future.
             </p>
             <p>
               A wide range of industries, including manufacturing, distribution, retail, trading, services, education, non-profits, and healthcare, are served by the adaptable open-source ERP software ERPNext. For companies of all sizes in Saudi Arabia, its cost-effectiveness, user-friendliness, and cloud-based architecture make it a desirable choice.
@@ -53,7 +53,7 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
               <div className="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center h-full">
-                <Image src="/images/47 (1).svg" alt="Custom-ERPNext-solutions" width={80} height={80} className="mb-4 object-contain" />
+                <Image src="/custom-erp-solution.svg" alt="Custom-ERPNext-solutions" width={80} height={80} className="mb-4 object-contain" />
                 <h3 className="text-xl font-semibold mb-2 text-center">Custom ERPNext Solutions</h3>
                 <p className="text-gray-700 text-justify">Experience a world where each feature and function is designed to capture the unique character of your company. Our customised ERPNext development services lead the way in innovation, offering features and modules that meet the changing needs of the Saudi market and match with your company's goals.</p>
               </div>
@@ -81,7 +81,7 @@ export default function Page() {
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.4 }}>
               <div className="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center h-full">
-                <Image src="/images/116 (1).svg" alt="Training-and-Consultation" width={80} height={80} className="mb-4 object-contain" />
+                <Image src="/training-consultation.svg" alt="Training-and-Consultation" width={80} height={80} className="mb-4 object-contain" />
                 <h3 className="text-xl font-semibold mb-2 text-center">Training and Consultation</h3>
                 <p className="text-gray-700 text-justify">Business excellence is the result of providing your staff with knowledge. By means of our all-inclusive training and advisory services, we grow proficiency, enable your personnel, and unlock new possibilities for expertise and adaptability within the ERPNext architecture.</p>
               </div>
@@ -164,7 +164,7 @@ export default function Page() {
               },
               {
                 title: 'ERP in the Medical Field',
-                image: '/images/304 (2).svg',
+                image: '/erp-in-medical-field.svg',
                 alt: 'Higher Productivity',
                 description: 'Our ERP for Healthcare software, which is specifically made for Saudi healthcare organisations, addresses the particular requirements of the healthcare industry by improving core operations and adding specialised features like patient management, clinical coordination, and medical billing.'
               },

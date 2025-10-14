@@ -50,7 +50,7 @@ export default function Page() {
       }}
         heroImage={{
           alt: "Employee Joining details",
-          src: "/images/employee-joining-hero.png",
+          src: "/emp-details.jpg",
         }}
       />
       <Section>

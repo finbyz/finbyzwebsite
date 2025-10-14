@@ -20,7 +20,8 @@ export default function Page() {
         primaryButton={{
           text: 'Get Started',
           action: () => {
-            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            const el = document.getElementById('about-erpnext');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
           },
         }}
         secondaryButton={{
@@ -139,7 +140,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-6 animate-fadeInUp">Benefits of ERPNext</h2>
+          {/* <h2 className="text-2xl font-bold mb-6 animate-fadeInUp">Benefits of ERPNext</h2> */}
           <List
             title="Benefits of ERPNext"
             items={[

@@ -6,7 +6,7 @@ import Image from 'next/image';
 const features = [
   {
     title: 'Customizable Sales CRM',
-    image: '/images/50.svg',
+    image: '/Customizable Sales CRM.svg',
     alt: 'Customizable Sales CRM',
     description: 'Our sales CRM software, a product of our extensive software development expertise, is designed to be highly adaptable, catering to the unique needs and workflows of different businesses. It offers various customization options to perfectly align with your specific requirements.'
   },

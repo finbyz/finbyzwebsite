@@ -44,35 +44,35 @@ const industries = [
     title: "Fintech",
     icon: "/images/icon-brokerage-commission.svg",
     number: "06",
-    href: undefined,
+    href: "/fintech",
     fade: 1
   },
   {
     title: "Healthcare",
     icon: "/images/Healthcare.svg",
     number: "07",
-    href: undefined,
+    href: "/erp-for-healthcare",
     fade: 2
   },
   {
     title: "Education",
     icon: "/images/icon-integrated_paperwork_.svg",
     number: "08",
-    href: undefined,
+    href: '/erp-for-education',
     fade: 3
   },
   {
     title: "Travel & Hospitality",
     icon: "/images/icon-truck_allocation.svg",
     number: "09",
-    href: undefined,
+    href: "/erp-for-travel-hospitality",
     fade: 4
   },
   {
     title: "E-commerce ",
     icon: "/images/E-commerce.svg",
     number: "010",
-    href: undefined,
+    href: "/erp-for-retailer",
     fade: 5
   }
 ];

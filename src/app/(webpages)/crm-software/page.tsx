@@ -42,6 +42,10 @@ export default function Page() {
       <Section>
         <div className="container-custom py-8">
           <div className="space-y-4">
+            <QuoteBlock
+            text="Looking for a Trusted CRM Software Development Company?"
+            isHeading={true}
+          />
             <p>
               Optimum customer relationship management is the key to achieving happy customers. Every business nowadays leverages CRM software to improve its productivity and efficiency. The technology of CRM systems allows organizations of all sizes to automate and synchronize the phases of customer interaction. The dynamic business environment has openly embraced this technology. Finbyz offers customized CRM software solutions in Ahmedabad for various industries, helping you increase sales and customer engagement.
             </p>
@@ -159,10 +163,7 @@ export default function Page() {
       {/* Conclusion/CTA Section */}
       <Section>
         <div className="py-8">
-          <QuoteBlock
-            text="Looking for a Trusted CRM Software Development Company?"
-            isHeading={true}
-          />
+          
           <CTA
             data={{
               subheading: {

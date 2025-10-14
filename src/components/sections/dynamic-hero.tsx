@@ -143,12 +143,18 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               </button>
             )}
             {secondaryButton && (
-              <button
-                onClick={secondaryButton.action}
-                className={`group border-2 border-slate-600 hover:${colors.border} text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 hover:bg-slate-800`}
-              >
-                <span>{secondaryButton.text}</span>
-              </button>
+              secondaryButton.action ? (
+                <button
+                  onClick={secondaryButton.action}
+                  className={`group border-2 border-slate-600 hover:${colors.border} text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 hover:bg-slate-800`}
+                >
+                  <span>{secondaryButton.text}</span>
+                </button>
+              ) : (
+                <span className="text-slate-300 px-2 py-1 font-medium">
+                  {secondaryButton.text}
+                </span>
+              )
             )}
             </div>
           </div>

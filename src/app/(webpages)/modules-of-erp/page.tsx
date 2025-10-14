@@ -110,7 +110,7 @@ const modules = [
   },
   {
     title: 'Project',
-    image: '/images/Project Management.svg',
+    image: '/Project Management.svg',
     alt: 'Project Management',
     quote: 'A goal without a plan is just a wish. - Antoine de Saint-Exupéry',
     description: 'ERPNext project management assists in the planning, organization, and administration of the various tasks and activities involved in managing a project, ensuring that they are documented and tracked.',
@@ -169,14 +169,14 @@ export default function Page() {
             }
           }
         }}
-        secondaryButton={{
-          text: 'Download Brochure',
-          action: () => {
-            if (typeof window !== 'undefined') {
-              window.open('/images/erp-modules.svg', '_blank');
-            }
-          }
-        }}
+        // secondaryButton={{
+        //   text: 'Download Brochure',
+        //   action: () => {
+        //     if (typeof window !== 'undefined') {
+        //       window.open('/', '_blank');
+        //     }
+        //   }
+        // }}
         heroImage={{
           alt: 'Modules of ERP Software',
           src: '/images/erp-modules.svg',
@@ -217,7 +217,7 @@ export default function Page() {
                 icon: 'Download',
                 action: () => {
                   if (typeof window !== 'undefined') {
-                    window.open('/images/erp-modules.svg', '_blank');
+                    window.location.href = '/brochure#brochure-section';
                   }
                 }
               },

@@ -33,10 +33,9 @@ export default function ProcessStepImageCard({ step, title, description, image, 
             <img
               src={image}
               alt={alt}
-              width={480}
-              height={320}
+              
               className="rounded-lg border shadow-md object-contain"
-              style={{ maxHeight: 260, background: '#f8fafc' }}
+              style={{  background: '#f8fafc',height: '100%', width: '100%' }}
             />
           </div>
         </CardContent>

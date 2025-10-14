@@ -131,7 +131,7 @@ export default function Page() {
               },
               {
                 title: 'Better Process of Choice',
-                image: '/images/426 (2).svg',
+                image: '/Better Process of Choice.svg',
                 alt: 'Better Process of Choice for ERPNext',
                 description: "ERPNext provides your team with instant access to data and analytics, enabling them to make well-informed decisions quickly. A unified view of your operations, finances, and customer interactions can be achieved by bidding bye to data walls.",
               },

@@ -55,7 +55,7 @@ export default function Page() {
       <Section>
         <div className="container-custom py-8">
           <YouTubeEmbed
-            url="https://www.youtube.com/embed/oArobHyygSQ"
+            url="https://www.youtube.com/watch?v=hZTaBWUbmf0"
             title="FD Management In ERPNext Demo"
             className="rounded-xl shadow-lg w-full aspect-video"
           />

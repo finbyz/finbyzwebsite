@@ -21,7 +21,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'Life at Finbyz',
-          src: '/images/Final banner LAF.jpg',
+          src: '/life-at-finbyz.jpg',
         }}
       />
 
@@ -80,7 +80,7 @@ export default function Page() {
       </Section>
 
       <Section>
-        <div className="container-custom py-8 flex flex-col items-center">
+        <div className="py-8 ">
           <p className="text-center text-lg text-gray-700 leading-relaxed mb-8 animate-fadeInUp">
             At Finbyz, we take things forward with a mindset that blends creativity and a futuristic approach. We believe that a happy team is a productive team, so we make sure to keep our workplace lively and engaging. Brainstorming sessions are often paired with coffee and laughter, and celebrating successes is a team sport. We embrace challenges with enthusiasm, always looking for innovative solutions and encouraging each other to think outside the box. At Finbyz, your ideas matter, your growth is our priority, and every day is an opportunity to create something amazing together.
           </p>

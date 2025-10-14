@@ -29,7 +29,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'Investment Portfolio Management in ERPNext',
-          src: '/images/portfolio management (1).svg',
+          src: 'portfolio management1.svg',
           
         }}
       />
@@ -60,12 +60,12 @@ export default function Page() {
                 image="/images/1.png"
                 alt="Investment Form"
               />
-              {/* <InvestmentProcessStepCard
+              <InvestmentProcessStepCard
                 title="Configure Investment Accounts"
                 description="Define default accounts under the Investment Portfolio Accounts section, including your bank, capital, charges, and income accounts. These settings streamline portfolio tracking and automate journal entries for investment transactions."
-                image="/images/portfolio management (1).svg"
+                image="/images/1.png"
                 alt="Configure Accounts"
-              /> */}
+              />
               <InvestmentProcessStepCard
                 title="Fill Portfolio Investment Form"
                 description="Enter key details such as Segment, Category, Script (investment name), and Investment Date in the Portfolio Investment Form. This lays the foundation for accurate ERPNext portfolio tracking."
@@ -140,9 +140,9 @@ export default function Page() {
       </Section>
 
       <Section>
-        <div className="py-8 flex flex-col items-center text-center gap-4">
-        <h3 className="text-xl font-semibold text-black">
-  Ready to optimize your investment management?</h3>
+        <div className="py-8 flex flex-col items-center text-center ">
+        {/* <h3 className="text-xl font-semibold text-black"> */}
+  {/* Ready to optimize your investment management?</h3> */}
           <CTA
             data={{
               subheading: {

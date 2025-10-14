@@ -321,7 +321,7 @@ export default function Page() {
         </div>
       </Section> */}
 
-    <Section>
+    {/* <Section>
     <div className="container-custom py-12 flex flex-col items-center gap-6 animate-fadeInUp">
       <h2 className="text-2xl font-semibold text-center">Download:</h2>
       <a
@@ -333,7 +333,7 @@ export default function Page() {
         <FaDownload className="w-5 h-5" /> Productivity Next
       </a>
     </div>
-  </Section>
+  </Section> */}
 
       <Section useGradient>
         <div className="container-custom py-8">
