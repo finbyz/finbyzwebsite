@@ -14,7 +14,7 @@ import { FaArrowRight } from 'react-icons/fa';
 export default function Page() {
   // Button actions
   const handleContact = () => {
-    window.location.href = '/contact-us';
+    window.location.href = '/contact';
   };
   const handleLearnMore = () => {
     window.location.href = '/web-application-development';

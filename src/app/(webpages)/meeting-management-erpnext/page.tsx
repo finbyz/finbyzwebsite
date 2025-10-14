@@ -28,7 +28,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'Meeting Management In ERPNext',
-          src: '/images/Meeting-Management-PageDesign-SVG.avif',
+          src: '/images/Meeting-Management-PageDesign-SVG.png',
         }}
       />
 
@@ -65,7 +65,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8 animate-fade-in-up">
-          <h2 className="text-2xl font-bold mb-4">How to use ERPNext Meeting Scheduling</h2>
+          <h2 className="text-2xl font-bold mb-4 text-[#1A5276] ">How to use ERPNext Meeting Scheduling</h2>
           <ul className="list-disc text-justify pl-6 space-y-2 text-base">
             <li>Previously, you might have relied on external calendars like Email or Google Calendar to schedule meetings with Leads, Opportunities, or Customers.</li>
             <li>Drafting emails manually often led to inconsistent formats and missed details for meeting invites.</li>
@@ -79,7 +79,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8 animate-fade-in-up">
-          <h2 className="text-2xl font-bold mb-4">How to use Meeting Notes</h2>
+          <h2 className="text-2xl font-bold mb-4 text-[#1A5276] ">How to use Meeting Notes</h2>
           <ul className="list-disc pl-6 text-justify space-y-2 text-base">
             <li>Traditionally, meeting notes were maintained in Word or Excel, which lacked standardization and tracking.</li>
             <li>This outdated method often made it hard to maintain consistency or trace action items later.</li>
