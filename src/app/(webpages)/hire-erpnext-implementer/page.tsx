@@ -262,7 +262,7 @@ export default function Page() {
       />
 
       <Section>
-        <div className="container-custom py-8">
+        <div className="container-custom py-8  text-black">
           <QuoteBlock
             text="Looking to digitally transform your business? Choose Finbyz Tech – a leading ERPNext Implementation Company in Ahmedabad, Gujarat. Here's why"
             isHeading={true}
@@ -276,7 +276,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4">Why Consider Us As Your ERPNext Implementation Partner in Gujarat?</h2>
+          <h2 className="text-2xl font-bold mb-4 text-[#1A5276]">Why Consider Us As Your ERPNext Implementation Partner in Gujarat?</h2>
           <p className="mb-8 text-gray-700">We are a trusted <a href="/erpnext-services-in-uae" className="text-primary underline">ERPNext Implementation Company</a> based in Ahmedabad, known for our comprehensive and client-focused ERPNext services. Here's what makes us stand out as preferred ERPNext service providers.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {whyUsFeatures.map((feature, idx) => (
@@ -299,7 +299,7 @@ export default function Page() {
   <div className="container-custom">
     {/* Heading */}
     <div className="text-center max-w-3xl mx-auto mb-16">
-      <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight">
+      <h2 className="text-4xl sm:text-5xl font-extrabold text-[#1A5276] leading-tight">
         Overcoming{" "}
         <span className="bg-gradient-to-r from-[#FF8C00] to-[#FFA500] bg-clip-text text-transparent">
           ERPNext Challenges
@@ -366,7 +366,7 @@ export default function Page() {
 <Section useGradient className="py-16">
   <div className="container-custom">
     {/* Heading */}
-    <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 text-center text-gray-900">
+    <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 text-center text-[#1A5276]">
       Industries We Serve with <span className="text-primary">Expert ERPNext Solutions</span>
     </h2>
 
@@ -418,7 +418,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4">Our ERPNext Implementation Strategy</h2>
+          <h2 className="text-2xl font-bold mb-4 text-[#1A5276]">Our ERPNext Implementation Strategy</h2>
           <ERPNextImplementationProcessGrid steps={processSteps} />
         </div>
       </Section>
@@ -427,7 +427,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4 text-center">We Serve Businesses Across the Globe</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center  text-[#1A5276]">We Serve Businesses Across the Globe</h2>
           <p className="mb-8 text-gray-700 text-center">FinByz is a leading <a href="/erpnext-services-in-uae" className="text-primary underline">ERPNext service provider in UAE</a>, India, Canada, USA, Saudi Arabia, UK, and beyond. As a renowned global <a href="/erp-software" className="text-primary underline">ERP implementation</a> partner, we proudly offer our expertise to businesses spanning these regions. Our committed team stands ready to address all your ERP implementation challenges, from consultations to hands-on assistance. Should you have any questions or need guidance, please don't hesitate to contact us.</p>
           <ClientCountryGrid countries={countries} />
         </div>

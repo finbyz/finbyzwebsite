@@ -13,7 +13,7 @@ export default function Page() {
     <>
       <HeroSection
         headline="Meeting Management In ERPNext"
-        highlightWords={["Meeting", "ERPNext"]}
+        highlightWords={["Meeting","Management"]}
         description="Optimize your meeting processes with ERPNext's Meeting Management App. Schedule meetings, record summaries, and track action items seamlessly within your CRM."
         primaryButton={{
           text: 'Download App',
@@ -41,9 +41,9 @@ export default function Page() {
       </Section>
 
       <Section useGradient>
-        <div className="container-custom py-8 animate-fade-in-up">
+        <div className="container-custom py-8 animate-fade-in-up ">
           <List
-            title="What does the App do"
+            title="What does the App do?"
             items={[
               'This app simplifies ERPNext meeting scheduling by allowing you to plan meetings and directly add notes within Lead, Opportunity, and Customer DocTypes in ERPNext.',
               'It integrates seamlessly into ERPNext without requiring external tools or complicated setups.',
@@ -91,21 +91,6 @@ export default function Page() {
           <MeetingGifImage src="/images/2_AdobeExpress.gif" alt="Meeting Notes Demo" />
         </div>
       </Section>
-
-      {/* <Section useGradient>
-        <div className="container-custom py-8 flex flex-col items-center animate-fade-in-up">
-          <h4 className="text-lg font-semibold mb-2">Download:</h4>
-          <a
-            href="https://frappecloud.com/marketplace/apps/meeting_management"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-md bg-primary text-black hover:bg-primary/90 transition-colors shadow-lg"
-          >
-            <FaDownload className="w-5 h-5 text-black" />
-            Meeting Management
-          </a>
-        </div>
-      </Section> */}
 
       <Section>
         <div className=" py-8 animate-fade-in-up">

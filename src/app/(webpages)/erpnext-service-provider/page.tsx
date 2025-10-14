@@ -16,10 +16,9 @@ export default function Page() {
         primaryButton={{
           text: 'Get Started',
           action: () => {
-            if (typeof window !== 'undefined') {
-              window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-            }
-          },
+            const el = document.getElementById('erp-service');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }
         }}
         secondaryButton={{
           text: 'Contact Us',
@@ -36,7 +35,7 @@ export default function Page() {
       />
 
       <Section>
-        <div className="container-custom py-8">
+        <div className="container-custom py-8" id="erp-service">
           <p className="text-lg text-gray-700 animate-fadeInUp">
             Welcome to Finbyz, your premier ERPNext service provider. Our specialty is providing complete ERP solutions that address the complex requirements of companies seeking expansion and efficiency. Our expertise with ERPNext, an open-source enterprise resource planning tool, establishes us as a top choice for businesses seeking to optimize their processes.
           </p>
@@ -188,10 +187,9 @@ export default function Page() {
                 text: 'Learn More',
                 icon: 'Info',
                 action: () => {
-                  if (typeof window !== 'undefined') {
-                    window.location.href = '/erpnext';
-                  }
-                },
+                  const el = document.getElementById('erp-service');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }
               },
               trustIndicator: {
                 text: 'Trusted by leading businesses',

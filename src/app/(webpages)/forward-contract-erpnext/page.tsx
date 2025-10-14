@@ -15,7 +15,7 @@ export default function Page() {
     <>
       <HeroSection
         headline="Forward Contract Management in ERPNext"
-        highlightWords={["Forward Contract", "ERPNext", "Management"]}
+        highlightWords={["Forward Contract",  "Management"]}
         description="Master forward contract management in ERPNext. Learn setup, utilization, cancellation, and seamless accounting integration for effective currency hedging."
         primaryButton={{
           text: 'Get Started',
@@ -42,7 +42,7 @@ export default function Page() {
           <Card className="border-none bg-muted/40 shadow-none animate-fade-in-up">
             <CardHeader className="flex flex-row items-center gap-3">
               {/* <CheckCircle className="text-primary shrink-0" size={28} /> */}
-              <CardTitle className="text-lg font-semibold">Overview</CardTitle>
+              <h2><CardTitle className="text-lg font-semibold text-[#1A5276]">Overview</CardTitle></h2>
             </CardHeader>
             <CardContent>
               <p className="text-base text-muted-foreground">
@@ -56,7 +56,7 @@ export default function Page() {
       {/* Introduction Section */}
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 animate-fade-in-up">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 animate-fade-in-up text-[#1A5276]">
             {/* <CheckCircle className="text-primary" size={24} /> */}
             Introduction
           </h2>
@@ -88,7 +88,7 @@ export default function Page() {
       {/* How to create Forward Contracts Section */}
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4 animate-fade-in-up">How to create Forward Contracts</h2>
+          <h2 className="text-2xl font-bold mb-4 animate-fade-in-up text-[#1A5276]">How to create Forward Contracts</h2>
           <List
             title=''
             items={[
@@ -114,7 +114,7 @@ export default function Page() {
       {/* How to utilize Forward Contracts Section */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4 animate-fade-in-up">How to utilize Forward Contracts</h2>
+          <h2 className="text-2xl font-bold mb-4 animate-fade-in-up text-[#1A5276]">How to utilize Forward Contracts</h2>
           <List
             title=''
             items={[
@@ -146,7 +146,7 @@ export default function Page() {
       {/* How to Cancel Forward Contracts Section */}
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4 animate-fade-in-up">How to Cancel Forward Contracts</h2>
+          <h2 className="text-2xl font-bold mb-4 animate-fade-in-up text-[#1A5276]">How to Cancel Forward Contracts</h2>
           <List
             title=''
             items={[

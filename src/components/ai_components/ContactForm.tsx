@@ -99,7 +99,7 @@ const ContactForm: React.FC = () => {
           />
         </CardContent>
         <CardFooter className="flex justify-center pt-2">
-          <Button type="submit" disabled={loading} className="w-full">
+          <Button type="submit" disabled={loading} className="w-full bg-blue-500 hover:bg-blue-600 text-white">
             {loading ? 'Submitting...' : 'Submit'}
           </Button>
         </CardFooter>

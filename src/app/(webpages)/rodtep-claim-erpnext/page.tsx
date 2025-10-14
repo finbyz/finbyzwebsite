@@ -13,7 +13,7 @@ export default function Page() {
     <>
       <HeroSection
         headline="RODTEP Claim Management in ERPNext"
-        highlightWords={["RODTEP", "ERPNext"]}
+        highlightWords={["RODTEP", "Claim" , "Management"]}
         description="Streamline your RODTEP and Duty Drawback claims using ERPNext. Finbyz Tech, a leading ERPNext Implementation Partner in Ahmedabad, offers tailored solutions for exporters."
         primaryButton={{
           text: 'Download App',
@@ -32,9 +32,9 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <span className="inline-block text-primary">
-              <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-badge-check"><path d="M7.5 4.21a2 2 0 0 1 3-2.42 2 2 0 0 1 3 0 2 2 0 0 1 3 2.42 2 2 0 0 1 1.16 2.63 2 2 0 0 1 0 3.32 2 2 0 0 1-1.16 2.63 2 2 0 0 1-3 2.42 2 2 0 0 1-3 0 2 2 0 0 1-3-2.42 2 2 0 0 1-1.16-2.63 2 2 0 0 1 0-3.32A2 2 0 0 1 7.5 4.21Z"/><path d="m9 12 2 2 4-4"/></svg>
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-[#1A5276]">
+            <span className="inline-block ">
+              {/* <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-badge-check"><path d="M7.5 4.21a2 2 0 0 1 3-2.42 2 2 0 0 1 3 0 2 2 0 0 1 3 2.42 2 2 0 0 1 1.16 2.63 2 2 0 0 1 0 3.32 2 2 0 0 1-1.16 2.63 2 2 0 0 1-3 2.42 2 2 0 0 1-3 0 2 2 0 0 1-3-2.42 2 2 0 0 1-1.16-2.63 2 2 0 0 1 0-3.32A2 2 0 0 1 7.5 4.21Z"/><path d="m9 12 2 2 4-4"/></svg> */}
             </span>
             Introduction
           </h2>
@@ -56,7 +56,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-6">How to use the App</h2>
+          <h2 className="text-2xl font-bold mb-6 text-[#1A5276]">How to use the App</h2>
           <HowToUseRodtepAppList
             steps={[
               {
@@ -143,7 +143,7 @@ export default function Page() {
               secondaryButton: {
                 text: 'Contact Us',
                 icon: 'mail',
-                action: () => window.open('https://finbyz.tech/contact', '_blank'),
+                action: () => window.open('https://web.finbyz.tech/contact', '_blank'),
               },
               trustIndicator: {
                 text: 'Trusted ERPNext Partner',

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Home, Users, Building2, Wrench, FileText, Briefcase, Phone, BookOpen, Target, Factory, ShoppingCart, Heart, GraduationCap, Truck, Leaf, TestTube, Hammer, Pill, Eye, Zap, Code, UserPlus, Lightbulb, Calendar, Star, Mail, ChevronLeft, ChevronRight, Handshake, Rocket, Send, Sparkles, BarChart3, Package, DollarSign, TrendingUp, Search, Video, Newspaper, Smartphone, Brain, CheckCircle, MapPin, LogIn, Globe } from "lucide-react";
+import { Menu, X, ChevronDown, Home, Users, Building2, Wrench, FileText, Briefcase, Phone, BookOpen, Target, Factory, ShoppingCart, Heart, GraduationCap, Truck, Leaf, TestTube, Hammer, Pill, Eye, Zap, Code, UserPlus, Lightbulb, Calendar, Star, Mail, ChevronLeft, ChevronRight, Handshake, Rocket, Send, Sparkles, BarChart3, Package, DollarSign, TrendingUp, Search, Video, Newspaper, Smartphone, Brain, CheckCircle, MapPin, LogIn, Globe, FileSearch, PhoneCall, CreditCard, MessageSquare } from "lucide-react";
 import { useMobileMenu } from "@/contexts/MobileMenuContext";
 import {
   DropdownMenu,
@@ -32,7 +32,7 @@ interface NavigationItem {
   hasDropdown: boolean;
   icon: React.ComponentType<{ className?: string }>;
   href?: string;
-  mainItems?: Array<{ name: string; icon: React.ComponentType<{ className?: string }> ,href?:string }>;
+  mainItems?: Array<{ name: string; icon: React.ComponentType<{ className?: string }>, href?: string }>;
   detailedItems?: Record<string, Array<{ name: string; description: string; icon: React.ComponentType<{ className?: string }>; href: string }>>;
 }
 
@@ -55,11 +55,11 @@ export default function Header() {
   const [blogsLoading, setBlogsLoading] = useState(false);
   const [showAllBlogs, setShowAllBlogs] = useState(false);
   const [galleryItems, setGalleryItems] = useState<Array<{ name: string; title: string; route?: string; animated_image?: string; svg_image?: string }>>([]);
-const [galleryLoading, setGalleryLoading] = useState(false);
-const [showAllGallery, setShowAllGallery] = useState(false);
-  
- 
- 
+  const [galleryLoading, setGalleryLoading] = useState(false);
+  const [showAllGallery, setShowAllGallery] = useState(false);
+
+
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -84,27 +84,27 @@ const [showAllGallery, setShowAllGallery] = useState(false);
 
 
   // Load gallery when hovering Insights → Gallery
-useEffect(() => {
-  const shouldFetch = hoveredDropdown === "Insights" && hoveredService === "Gallery" && !galleryLoading && galleryItems.length === 0;
-  if (!shouldFetch) return;
-  setGalleryLoading(true);
-  fetch("/web-api/gallery")
-    .then(r => r.json())
-    .then(j => setGalleryItems(Array.isArray(j?.data) ? j.data : []))
-    .catch(() => setGalleryItems([]))
-    .finally(() => setGalleryLoading(false));
-}, [hoveredDropdown, hoveredService, galleryLoading, galleryItems.length]);
+  useEffect(() => {
+    const shouldFetch = hoveredDropdown === "Insights" && hoveredService === "Gallery" && !galleryLoading && galleryItems.length === 0;
+    if (!shouldFetch) return;
+    setGalleryLoading(true);
+    fetch("/web-api/gallery")
+      .then(r => r.json())
+      .then(j => setGalleryItems(Array.isArray(j?.data) ? j.data : []))
+      .catch(() => setGalleryItems([]))
+      .finally(() => setGalleryLoading(false));
+  }, [hoveredDropdown, hoveredService, galleryLoading, galleryItems.length]);
 
   const toggleMobileItem = (itemName: string) => {
-    setExpandedMobileItems(prev => 
-      prev.includes(itemName) 
+    setExpandedMobileItems(prev =>
+      prev.includes(itemName)
         ? prev.filter(name => name !== itemName)
         : [...prev, itemName]
     );
   };
 
 
-  
+
 
 
   const scrollToSection = (sectionId: string) => {
@@ -154,7 +154,7 @@ useEffect(() => {
     // console.log("Inquiry form element:", inquiryForm);
     if (inquiryForm) {
       inquiryForm.scrollIntoView({ behavior: 'smooth' });
-    } 
+    }
   }
 
 
@@ -270,7 +270,7 @@ useEffect(() => {
             href: "/advanced-authorisation-licence-erpnext"
             // advanced-authorisation-licence-erpnext
           },
-           {
+          {
             name: "Workflow Transitions",
             description: "Workflow Transitions management",
             icon: Repeat,
@@ -359,7 +359,7 @@ useEffect(() => {
         { name: "Software Development", icon: Code },
         { name: "Consulting", icon: Lightbulb },
         { name: "Support & Maintenance", icon: Phone },
-        {name:"Resource Augmentation", icon: Globe}
+        { name: "Resource Augmentation", icon: Globe }
       ],
       detailedItems: {
         "ERP Implementation": [
@@ -384,23 +384,59 @@ useEffect(() => {
         ],
         "AI Automation": [
           {
-            name: "Process Automation",
-            description: "Automate business processes",
-            icon: Zap,
-            href: "/process-automation"
+            name: "Quote Assistant Overview",
+            description: "Streamline quotation creation and management.",
+            icon: MessageSquare,
+            href: "/quote-assistant-overview",
           },
           {
-            name: "AI Integration",
-            description: "AI-powered solutions",
-            icon: Sparkles,
-            href: "/ai-integration"
+            name: "Follow Up Buddy",
+            description: "Automated follow-up reminders and tracking.",
+            icon: Users,
+            href: "/follow-up-buddy",
           },
           {
-            name: "Machine Learning",
-            description: "ML-based automation",
+            name: "Lead Intelligence",
+            description: "Gain insights and prioritize your leads with AI.",
             icon: Brain,
-            href: "/machine-learning"
-          }
+            href: "/lead-intelligence",
+          },
+          {
+            name: "Email Classification",
+            description: "Classify and route emails automatically using AI.",
+            icon: Mail,
+            href: "/email-classification",
+          },
+          {
+            name: "AI Outreach & Lead Generation Research",
+            description: "Discover and connect with potential leads intelligently.",
+            icon: Rocket,
+            href: "/ai-outreach-lead-generation-research",
+          },
+          {
+            name: "Smart Card Scanner",
+            description: "Scan and extract business card details instantly.",
+            icon: CreditCard,
+            href: "/smart-card-scanner",
+          },
+          {
+            name: "AI Sales Call Analysis for ERPNext",
+            description: "Analyze and summarize sales calls automatically.",
+            icon: PhoneCall,
+            href: "/ai-sales-call-analysis-erpnext",
+          },
+          {
+            name: "AI Powered Resume Ranker",
+            description: "Rank resumes and find the best candidates instantly.",
+            icon: FileSearch,
+            href: "/ai-powered-resume-ranker",
+          },
+          {
+            name: "Content Spark Marketing Automation",
+            description: "Automate and personalize your marketing campaigns.",
+            icon: Sparkles,
+            href: "/content-spark-marketing-automation",
+          },
         ],
         "Software Development": [
           {
@@ -421,13 +457,13 @@ useEffect(() => {
             icon: CodeSquare,
             href: "/web-api-development"
           },
-           {
+          {
             name: "CRM Software",
             description: "Customer Relationship Management",
             icon: Lightbulb,
             href: "/crm-software"
           },
-           {
+          {
             name: "Human Resource System",
             description: "Comprehensive HR management system",
             icon: UserPlus,
@@ -459,7 +495,7 @@ useEffect(() => {
             icon: Cog,
             href: "/technology-consulting"
           },
-           {
+          {
             name: "IT Consulting",
             description: "Expert guidance on technology strategy and IT solutions to drive business growth.",
             icon: Laptop,
@@ -486,17 +522,17 @@ useEffect(() => {
             href: "/performance-optimization"
           }
         ],
-        
-      "Resource Augmentation":[
-           { name: "Hire Python Developer", description:"Hire Python Developer", icon: Wrench ,href:"/hire-python-developer"},
-        { name: "Hire Web Application Developers", icon: Handshake, description:"Hire Web Application Developers" ,href:"/hire-web-application-developers" },
-        { name: "Hire Javascript Developer", icon: Briefcase, description:"Hire Javascript Developer", href:"/hire-javascript-developer" },
-        { name: "Hire Django developer", icon: Globe,description:"Hire Django developer", href:"/hire-django-developer" },
-        { name: "Hire ERPNext Implementer", icon: Laptop,description:"Hire Django developer", href:"/hire-erpnext-implementer" }
-      ]
-      
-      
-  
+
+        "Resource Augmentation": [
+          { name: "Hire Python Developer", description: "Hire Python Developer", icon: Wrench, href: "/hire-python-developer" },
+          { name: "Hire Web Application Developers", icon: Handshake, description: "Hire Web Application Developers", href: "/hire-web-application-developers" },
+          { name: "Hire Javascript Developer", icon: Briefcase, description: "Hire Javascript Developer", href: "/hire-javascript-developer" },
+          { name: "Hire Django developer", icon: Globe, description: "Hire Django developer", href: "/hire-django-developer" },
+          { name: "Hire ERPNext Implementer", icon: Laptop, description: "Hire Django developer", href: "/hire-erpnext-implementer" }
+        ]
+
+
+
       }
     },
     {
@@ -505,9 +541,9 @@ useEffect(() => {
       icon: Factory,
       mainItems: [
         { name: "Manufacturing & Production", icon: Factory },
-        { name: "Operations and Service Management", icon: Wrench},
-        { name: "Healthcare & Education", icon: Heart},
-        { name: "E-Commerce & Logistics", icon: ShoppingCart},
+        { name: "Operations and Service Management", icon: Wrench },
+        { name: "Healthcare & Education", icon: Heart },
+        { name: "E-Commerce & Logistics", icon: ShoppingCart },
       ],
       detailedItems: {
         "Manufacturing & Production": [
@@ -546,14 +582,14 @@ useEffect(() => {
             description: "",
             icon: Leaf,
             href: "/erp-for-agro-commodity"
-          },  
+          },
           {
             name: "Pharmaceuticals",
             description: "",
             icon: Pill,
             href: "/erp-for-pharmaceuticals"
           }],
-          "Operations and Service Management": [
+        "Operations and Service Management": [
           {
             name: "Services",
             description: "",
@@ -572,7 +608,7 @@ useEffect(() => {
             icon: GraduationCap,
             href: "/erp-for-engineering-industry"
           }],
-          "Healthcare & Education": [
+        "Healthcare & Education": [
           {
             name: "Healthcare",
             description: "",
@@ -585,38 +621,39 @@ useEffect(() => {
             icon: GraduationCap,
             href: "/erp-for-education"
           }],
-          "E-Commerce & Logistics": [
-            {
-              name: "Trading & Distribution",
-              description: "",
-              icon: Truck,
-              href: "/erp-for-trading-industry"
-            },
-            {
-              name: "Retail & eCommerce",
-              description: "",
-              icon: ShoppingCart,
-              href: "erp-for-retailer"
-            },
-            {
-              name: "Logistics",
-              description: "",
-              icon: Truck,
-              href: "/erp-for-logistics-industry"
-            },
-              
-  ]},
-  
-},
-    
-    
+        "E-Commerce & Logistics": [
+          {
+            name: "Trading & Distribution",
+            description: "",
+            icon: Truck,
+            href: "/erp-for-trading-industry"
+          },
+          {
+            name: "Retail & eCommerce",
+            description: "",
+            icon: ShoppingCart,
+            href: "erp-for-retailer"
+          },
+          {
+            name: "Logistics",
+            description: "",
+            icon: Truck,
+            href: "/erp-for-logistics-industry"
+          },
+
+        ]
+      },
+
+    },
+
+
     {
-      name: "Insights",   
+      name: "Insights",
       hasDropdown: true,
       icon: BarChart3,
       mainItems: [
-        { name: "Blogs", icon: Wrench ,href:"/blog-post"},
-        { name: "Gallery", icon: Handshake, href:"/gallery" },
+        { name: "Blogs", icon: Wrench, href: "/blog-post" },
+        { name: "Gallery", icon: Handshake, href: "/gallery" },
         // { name: "Tech Update", icon: Briefcase, href:"/tech-update" },
       ],
 
@@ -630,9 +667,9 @@ useEffect(() => {
           },
         ]
       }
-  },
-  
-    
+    },
+
+
     {
       name: "Company",
       hasDropdown: true,
@@ -722,11 +759,10 @@ useEffect(() => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
-          isScrolled
+        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${isScrolled
             ? "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 backdrop-blur-md shadow-lg"
             : "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 backdrop-blur-sm"
-        }`}
+          }`}
       >
         <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-18">
           <div className="flex justify-between items-center h-12 lg:h-14 w-full">
@@ -744,15 +780,14 @@ useEffect(() => {
             </div>
 
             <div className="hidden lg:flex items-center space-x-3 ml-auto">
-              {navigationItems.map((item,index) => (
+              {navigationItems.map((item, index) => (
                 <div key={item.name} className="relative">
                   {item.hasDropdown ? (
                     <div className="relative">
                       <Button
                         variant="ghost"
-                        className={`text-gray-300 hover:text-[#FF8C00] hover:bg-gray-700/50 transition-all font-medium flex items-center space-x-1 text-base py-6 z-[110] px-3 rounded-lg relative group ${
-                          hoveredDropdown === item.name ? 'text-[#FF8C00] bg-gray-700/50' : ''
-                        }`}
+                        className={`text-gray-300 hover:text-[#FF8C00] hover:bg-gray-700/50 transition-all font-medium flex items-center space-x-1 text-base py-6 z-[110] px-3 rounded-lg relative group ${hoveredDropdown === item.name ? 'text-[#FF8C00] bg-gray-700/50' : ''
+                          }`}
                         onMouseEnter={() => {
                           setHoveredDropdown(item.name);
                           setHoveredService(null);
@@ -764,17 +799,15 @@ useEffect(() => {
                       >
                         <item.icon className="w-4 h-4" />
                         <span>{item.name}</span>
-                        <ChevronDown className={`w-3 h-3 transition-transform ${
-                          hoveredDropdown === item.name ? 'rotate-180' : ''
-                        }`} />
+                        <ChevronDown className={`w-3 h-3 transition-transform ${hoveredDropdown === item.name ? 'rotate-180' : ''
+                          }`} />
                         <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FF8C00] transition-all duration-300 group-hover:w-full"></div>
                       </Button>
-                      <div 
-                        className={`absolute top-full bg-white border border-gray-200 shadow-2xl rounded-xl transition-all duration-300 z-50 ${
-                          hoveredDropdown === item.name 
-                            ? 'opacity-100 visible translate-y-0' 
+                      <div
+                        className={`absolute top-full bg-white border border-gray-200 shadow-2xl rounded-xl transition-all duration-300 z-50 ${hoveredDropdown === item.name
+                            ? 'opacity-100 visible translate-y-0'
                             : 'opacity-0 invisible translate-y-2'
-                        }`}
+                          }`}
                         style={{
                           maxWidth: '90vw',
                           maxHeight: '85vh',
@@ -786,7 +819,7 @@ useEffect(() => {
                             left: '50%',
                             transform: 'translateX(-50%)'
                           }),
-              
+
                           minWidth: '300px',
                           overflow: 'hidden',
                           right: 'auto'
@@ -811,9 +844,8 @@ useEffect(() => {
                                 {item.mainItems?.map((mainItem) => (
                                   <div
                                     key={mainItem.name}
-                                    className={`group/main flex items-center space-x-3 px-4 py-3 text-[#1A5276] hover:text-[#FF8C00] hover:bg-white cursor-pointer transition-all rounded-lg border border-transparent hover:border-gray-200 hover:shadow-sm ${
-                                      hoveredService === mainItem.name ? 'bg-white border-gray-200 shadow-sm text-[#FF8C00]' : ''
-                                    }`}
+                                    className={`group/main flex items-center space-x-3 px-4 py-3 text-[#1A5276] hover:text-[#FF8C00] hover:bg-white cursor-pointer transition-all rounded-lg border border-transparent hover:border-gray-200 hover:shadow-sm ${hoveredService === mainItem.name ? 'bg-white border-gray-200 shadow-sm text-[#FF8C00]' : ''
+                                      }`}
                                     onMouseEnter={() => setHoveredService(mainItem.name)}
                                     onMouseLeave={() => {
                                       setTimeout(() => {
@@ -829,7 +861,7 @@ useEffect(() => {
                                 ))}
                               </div>
                             </div>
-                            
+
                             <div className="w-1/2 p-6 overflow-y-auto">
                               {hoveredService ? (
                                 <div>
@@ -884,25 +916,25 @@ useEffect(() => {
                                       )}
                                     </div>
                                   )
-                                   : item.name === "Insights" && hoveredService === "Gallery" ? (
-        <div className="space-y-2">
-          {galleryLoading ? (
-            <div className="text-sm text-gray-500 px-3 py-2">Loading gallery...</div>
-          ) : galleryItems.length === 0 ? (
-            <div className="text-sm text-gray-500 px-3 py-2">No gallery items found.</div>
-          ) : (
-            (showAllGallery ? galleryItems : galleryItems.slice(0, 5)).map((item) => (
-              <Link
-                key={item.name}
-                href={item.route || "/gallery"}
-                className="flex items-center space-x-3 px-3 py-2 text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5 cursor-pointer transition-all rounded-lg text-sm"
-                onClick={() => {
-                  setHoveredDropdown(null);
-                  setHoveredService(null);
-                  setShowAllGallery(false);
-                }}
-              >
-                {/* {item.animated_image || item.svg_image ? (
+                                    : item.name === "Insights" && hoveredService === "Gallery" ? (
+                                      <div className="space-y-2">
+                                        {galleryLoading ? (
+                                          <div className="text-sm text-gray-500 px-3 py-2">Loading gallery...</div>
+                                        ) : galleryItems.length === 0 ? (
+                                          <div className="text-sm text-gray-500 px-3 py-2">No gallery items found.</div>
+                                        ) : (
+                                          (showAllGallery ? galleryItems : galleryItems.slice(0, 5)).map((item) => (
+                                            <Link
+                                              key={item.name}
+                                              href={item.route || "/gallery"}
+                                              className="flex items-center space-x-3 px-3 py-2 text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5 cursor-pointer transition-all rounded-lg text-sm"
+                                              onClick={() => {
+                                                setHoveredDropdown(null);
+                                                setHoveredService(null);
+                                                setShowAllGallery(false);
+                                              }}
+                                            >
+                                              {/* {item.animated_image || item.svg_image ? (
                   <Image 
                     src={item.animated_image || item.svg_image || ''} 
                     alt={item.title} 
@@ -913,53 +945,53 @@ useEffect(() => {
                 ) : (
                   <div className="w-8 h-8 rounded bg-gray-100" />
                 )} */}
-                <span className="font-medium line-clamp-1">{item.title}</span>
-              </Link>
-            ))
-          )}
-          {galleryItems.length > 5 && (
-            <div className="pt-2 flex items-center gap-3">
-              <button
-                className="text-sm px-3 py-2 rounded-lg text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5"
-                onClick={() => setShowAllGallery(v => !v)}
-              >
-                {showAllGallery ? "Show less" : "View more"}
-              </button>
-              <Link
-                href="/gallery"
-                className="text-sm px-3 py-2 rounded-lg text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5"
-                onClick={() => {
-                  setHoveredDropdown(null);
-                  setHoveredService(null);
-                  setShowAllGallery(false);
-                }}
-              >
-                View all
-              </Link>
-            </div>
-          )}
-        </div>
-      ) 
-      :
-                                  
-                                  (
-                                    <div className="space-y-2">
-                                      {(item.detailedItems as any)?.[hoveredService]?.map((subItem: any) => (
-                                        <Link
-                                          key={subItem.name}
-                                          href={subItem.href || "#"}
-                                          className="flex items-center space-x-3 px-3 py-2 text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5 cursor-pointer transition-all rounded-lg text-sm"
-                                          onClick={() => {
-                                            setHoveredDropdown(null);
-                                            setHoveredService(null);
-                                          }}
-                                        >
-                                          <subItem.icon className="w-4 h-4 flex-shrink-0" />
-                                          <span className="font-medium">{subItem.name}</span>
-                                        </Link>
-                                      ))}
-                                    </div>
-                                  )}
+                                              <span className="font-medium line-clamp-1">{item.title}</span>
+                                            </Link>
+                                          ))
+                                        )}
+                                        {galleryItems.length > 5 && (
+                                          <div className="pt-2 flex items-center gap-3">
+                                            <button
+                                              className="text-sm px-3 py-2 rounded-lg text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5"
+                                              onClick={() => setShowAllGallery(v => !v)}
+                                            >
+                                              {showAllGallery ? "Show less" : "View more"}
+                                            </button>
+                                            <Link
+                                              href="/gallery"
+                                              className="text-sm px-3 py-2 rounded-lg text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5"
+                                              onClick={() => {
+                                                setHoveredDropdown(null);
+                                                setHoveredService(null);
+                                                setShowAllGallery(false);
+                                              }}
+                                            >
+                                              View all
+                                            </Link>
+                                          </div>
+                                        )}
+                                      </div>
+                                    )
+                                      :
+
+                                      (
+                                        <div className="space-y-2">
+                                          {(item.detailedItems as any)?.[hoveredService]?.map((subItem: any) => (
+                                            <Link
+                                              key={subItem.name}
+                                              href={subItem.href || "#"}
+                                              className="flex items-center space-x-3 px-3 py-2 text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5 cursor-pointer transition-all rounded-lg text-sm"
+                                              onClick={() => {
+                                                setHoveredDropdown(null);
+                                                setHoveredService(null);
+                                              }}
+                                            >
+                                              <subItem.icon className="w-4 h-4 flex-shrink-0" />
+                                              <span className="font-medium">{subItem.name}</span>
+                                            </Link>
+                                          ))}
+                                        </div>
+                                      )}
                                 </div>
                               ) : (
                                 <div className="flex items-center justify-center h-full">
@@ -984,18 +1016,18 @@ useEffect(() => {
                               {item.name === "Services" ? "Our Services" : item.name === "Company" ? "Our Company" : "ERPNext Solutions"}
                             </h3> */}
                             <h3 className="font-semibold text-[#1A5276] mb-6 text-lg">
-                                {item.name === "Services"
-                                  ? "Our Services"
-                                  : item.name === "Company"
+                              {item.name === "Services"
+                                ? "Our Services"
+                                : item.name === "Company"
                                   ? "Our Company"
                                   : item.name === "Industries"
-                                  ? "Our Industries"
-                                  : item.name === "Insights"
-                                  ? "Insights"
-                                  : "ERPNext Solutions"}
-                              </h3>
+                                    ? "Our Industries"
+                                    : item.name === "Insights"
+                                      ? "Insights"
+                                      : "ERPNext Solutions"}
+                            </h3>
 
-                              
+
 
                             <div className="space-y-2">
                               {item.mainItems?.map((mainItem) => (
@@ -1028,16 +1060,16 @@ useEffect(() => {
                   )}
                 </div>
               ))}
-              
-              <Button 
+
+              <Button
                 className="ml-4 bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white hover:shadow-lg hover:shadow-orange-500/25 transition-all text-sm py-2 px-6 font-medium rounded-full"
-             onClick={GotoInquiryForm}
-             >
+                onClick={GotoInquiryForm}
+              >
                 Book Consultation
               </Button>
 
               <Link href="/login" className="ml-2">
-                <Button 
+                <Button
                   variant="ghost"
                   className="text-gray-300 hover:text-[#FF8C00] hover:bg-gray-700/50 transition-all font-medium flex items-center space-x-2 text-sm py-2 px-4 rounded-full"
                 >
@@ -1046,7 +1078,7 @@ useEffect(() => {
                 </Button>
               </Link>
             </div>
-            
+
             <div className="lg:hidden ml-auto">
               <Button
                 variant="ghost"
@@ -1064,7 +1096,7 @@ useEffect(() => {
           </div>
         </div>
       </nav>
-      
+
       {isOpen && (
         <>
           <div className="fixed inset-0 bg-black/30 z-[9998] animate-fade-in" onClick={resetMobileMenu}></div>
@@ -1077,26 +1109,25 @@ useEffect(() => {
                   </button>
                 )}
                 <span className="font-semibold text-[#1A5276] text-lg truncate">
-                  {mobileNavStack.length > 0 ? mobileNavStack[mobileNavStack.length-1].title : "Menu"}
+                  {mobileNavStack.length > 0 ? mobileNavStack[mobileNavStack.length - 1].title : "Menu"}
                 </span>
               </div>
               <button onClick={resetMobileMenu} className="ml-2 p-1 rounded hover:bg-gray-100">
                 <X className="w-5 h-5 text-[#1A5276]" />
               </button>
             </div>
-            <div className={`py-2 flex-1 ${
-              navAnimation === 'slide-in' 
+            <div className={`py-2 flex-1 ${navAnimation === 'slide-in'
                 ? (isGoingBack ? 'animate-slide-in-left' : 'animate-slide-in-right')
-                : navAnimation === 'slide-out' 
-                ? 'animate-slide-out-left' 
-                : ''
-            }`}>
+                : navAnimation === 'slide-out'
+                  ? 'animate-slide-out-left'
+                  : ''
+              }`}>
               <div className="py-2">
-                {(mobileNavStack.length === 0 ? navigationItems : mobileNavStack[mobileNavStack.length-1].items).map((item: any) => (
+                {(mobileNavStack.length === 0 ? navigationItems : mobileNavStack[mobileNavStack.length - 1].items).map((item: any) => (
                   <div key={item.name}>
                     {(() => {
-                      if (mobileNavStack.length > 0 && (mobileNavStack[mobileNavStack.length-1].title === "Services" || mobileNavStack[mobileNavStack.length-1].title === "Company" || mobileNavStack[mobileNavStack.length-1].title === "ERPNext")) {
-                        const parentItem = navigationItems.find(i => i.name === mobileNavStack[mobileNavStack.length-1].title);
+                      if (mobileNavStack.length > 0 && (mobileNavStack[mobileNavStack.length - 1].title === "Services" || mobileNavStack[mobileNavStack.length - 1].title === "Company" || mobileNavStack[mobileNavStack.length - 1].title === "ERPNext")) {
+                        const parentItem = navigationItems.find(i => i.name === mobileNavStack[mobileNavStack.length - 1].title);
                         const detailedItems = (parentItem && (parentItem as any).detailedItems) || {};
                         return detailedItems[item.name] ? true : false;
                       }
@@ -1105,8 +1136,8 @@ useEffect(() => {
                       <button
                         className="flex items-center w-full px-6 py-3 text-left hover:bg-gray-50 transition-colors rounded-lg"
                         onClick={() => {
-                          if (mobileNavStack.length > 0 && (mobileNavStack[mobileNavStack.length-1].title === "Services" || mobileNavStack[mobileNavStack.length-1].title === "Company" || mobileNavStack[mobileNavStack.length-1].title === "ERPNext")) {
-                            const parentItem = navigationItems.find(i => i.name === mobileNavStack[mobileNavStack.length-1].title);
+                          if (mobileNavStack.length > 0 && (mobileNavStack[mobileNavStack.length - 1].title === "Services" || mobileNavStack[mobileNavStack.length - 1].title === "Company" || mobileNavStack[mobileNavStack.length - 1].title === "ERPNext")) {
+                            const parentItem = navigationItems.find(i => i.name === mobileNavStack[mobileNavStack.length - 1].title);
                             const detailedItems = (parentItem && (parentItem as any).detailedItems) || {};
                             if (detailedItems[item.name]) {
                               openMobileSubmenu(item.name, detailedItems[item.name]);
@@ -1148,10 +1179,10 @@ useEffect(() => {
                 </Button>
               </Link>
               <Button className="w-full rounded-full bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white hover:shadow-lg transition-all text-sm py-3 font-medium"
-              onClick={()=>{
-                GotoInquiryForm();
-                toggleMenu();
-              }}
+                onClick={() => {
+                  GotoInquiryForm();
+                  toggleMenu();
+                }}
               >
                 Book Consultation
               </Button>

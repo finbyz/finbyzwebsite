@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, Users, Code, Clock } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 type ColorKey = 'orange' | 'blue' | 'green';
 
@@ -8,7 +9,7 @@ type IconComponentType = React.ComponentType<{ className?: string }>
 
 interface ButtonConfig {
   text: string;
-  action?: () => void;
+  action?: string | (() => void);
 }
 
 interface HeroMedia {
@@ -134,28 +135,47 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               {primaryButton && (
-              <button
-                onClick={primaryButton.action}
-                className={`group ${colors.bg} ${colors.bgHover} text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 transform hover:scale-105`}
-              >
-                <span>{primaryButton.text}</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-            )}
-            {secondaryButton && (
-              secondaryButton.action ? (
-                <button
-                  onClick={secondaryButton.action}
-                  className={`group border-2 border-slate-600 hover:${colors.border} text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 hover:bg-slate-800`}
-                >
-                  <span>{secondaryButton.text}</span>
-                </button>
-              ) : (
-                <span className="text-slate-300 px-2 py-1 font-medium">
-                  {secondaryButton.text}
-                </span>
-              )
-            )}
+                primaryButton.action && typeof primaryButton.action === 'string' ? (
+                  <Link
+                    href={primaryButton.action}
+                    className={`group ${colors.bg} ${colors.bgHover} text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 transform hover:scale-105`}
+                  >
+                    <span>{primaryButton.text}</span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                ) : primaryButton.action && typeof primaryButton.action === 'function' && (
+                  <button
+                    onClick={primaryButton.action}
+                    className={`group ${colors.bg} ${colors.bgHover} text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 transform hover:scale-105`}
+                  >
+                    <span>{primaryButton.text}</span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                )
+              )}
+              {secondaryButton && (
+                secondaryButton.action ? (
+                  typeof secondaryButton.action === 'string' ? (
+                    <Link
+                      href={secondaryButton.action}
+                      className={`group border-2 border-slate-600 hover:${colors.border} text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 hover:bg-slate-800`}
+                    >
+                      <span>{secondaryButton.text}</span>
+                    </Link>
+                  ) : (
+                    <button
+                      onClick={secondaryButton.action}
+                      className={`group border-2 border-slate-600 hover:${colors.border} text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 hover:bg-slate-800`}
+                    >
+                      <span>{secondaryButton.text}</span>
+                    </button>
+                  )
+                ) : (
+                  <span className="text-slate-300 px-2 py-1 font-medium">
+                    {secondaryButton.text}
+                  </span>
+                )
+              )}
             </div>
           </div>
 

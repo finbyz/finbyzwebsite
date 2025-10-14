@@ -32,17 +32,17 @@ export default function TextSection({
       ];
 
   return (
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto px-12 sm:px-8 lg:px-16 xl:px-20 2xl:px-24">
         {content.title && (
           <h2 className="text-2xl text-bold md:text-3xl font-semibold text-[#1A5276] mb-4 ">
             {content.title}
           </h2>
         )}
-        <div className="max-w-[1040px] mx-auto">
+        <div>
           {paragraphs.map((paragraph, idx) => (
             <p
               key={idx}
-              className="text-slate-700 text-base md:text-lg leading-8 md:leading-9 mb-6 md:mb-7"
+              className="text-slate-700 text-base md:text-lg mb-6 md:mb-7"
               style={{ hyphens: 'auto' as const }}
             >
               {paragraph}

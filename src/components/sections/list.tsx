@@ -27,7 +27,7 @@ export const List = ({
     <section className="" style={style}>
       <div className="border-none">
         <div>
-          <h2 className={`text-3xl font-semibold text-[#1A5276] underline decoration-${accentColor}-500 decoration-2 underline-offset-4 mb-6`}>
+          <h2 className={`text-3xl font-semibold text-[#1A5276] decoration-${accentColor}-500 decoration-2 underline-offset-4 mb-6`}>
             {title}
           </h2>
         </div>

@@ -1,8 +1,9 @@
- 
+
 import { Button } from "@/components/ui/button";
 import { CalendarCheck, FileText, Rocket, Calendar } from "lucide-react";
 import "@/styles/components/cta.css";
 import React from "react";
+import Link from "next/link";
 
 interface CTAProps {
   data?: {
@@ -17,12 +18,12 @@ interface CTAProps {
     primaryButton?: {
       text?: string;
       icon?: string;
-      action?: ()=>void;
+      action?: string | (() => void) ;
     };
     secondaryButton?: {
       text?: string;
       icon?: string;
-      action?: ()=>void;
+      action?: string | (() => void);
     };
     trustIndicator?: {
       text?: string;
@@ -35,7 +36,7 @@ export default function CTA({ data = {} }: CTAProps) {
   const {
     component_type = "Text",
     subheading = { text: "Talk to our Experts", icon: "CalendarCheck" },
-    highlightText = "", 
+    highlightText = "",
     title = "Ready to Scale with Smart Tech? Let's Talk.",
     description = "Transform your business processes with AI-powered automation and expert implementation.",
     primaryButton = { text: "Book Demo", icon: "CalendarCheck", action: undefined },
@@ -72,7 +73,7 @@ export default function CTA({ data = {} }: CTAProps) {
             <SubheadingIcon className="cta-subheading-icon" />
             <span>{subheading.text}</span>
           </div>
-          
+
           {/* <h2 className="cta-title">
             {title.split('Smart Tech').map((part, index) => 
               index === 0 ? (
@@ -83,49 +84,84 @@ export default function CTA({ data = {} }: CTAProps) {
             )}
           </h2> */}
           <h2 className="cta-title">
-  {!highlightText || !title.includes(highlightText) ? (
-    title
-  ) : (
-    title.split(highlightText).map((part, index, array) => (
-      <React.Fragment key={index}>
-        {part}
-        {index < array.length - 1 && (
-          <span className="cta-title-highlight">{highlightText}</span>
-        )}
-      </React.Fragment>
-    ))
-  )}
-</h2>
+            {!highlightText || !title.includes(highlightText) ? (
+              title
+            ) : (
+              title.split(highlightText).map((part, index, array) => (
+                <React.Fragment key={index}>
+                  {part}
+                  {index < array.length - 1 && (
+                    <span className="cta-title-highlight">{highlightText}</span>
+                  )}
+                </React.Fragment>
+              ))
+            )}
+          </h2>
 
-              
+
           <p className="cta-description">
             {description}
           </p>
-          
-          <div className="cta-button-group">
-            <Button 
-              size="lg"
-              className="cta-primary-button"
-              aria-label={`${primaryButton.text} with our experts`}
-              onClick={typeof primaryButton?.action === "function" ? primaryButton.action : undefined}
-            >
-              <PrimaryIcon className="cta-button-icon" aria-hidden="true" />
-              {primaryButton.text}
-            </Button>
-            
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="cta-secondary-button"
-              aria-label={`${secondaryButton.text}`}
-              onClick={typeof secondaryButton?.action === "function" ? secondaryButton.action : undefined}
 
-            >
-              <SecondaryIcon className="cta-button-icon" aria-hidden="true" />
-              {secondaryButton.text}
-            </Button>
+          <div className="cta-button-group">
+            {typeof primaryButton?.action === "string" ? (
+              <Link href={primaryButton.action} passHref>
+                <Button
+                  size="lg"
+                  className="cta-primary-button"
+                  aria-label={`${primaryButton.text} with our experts`}
+                >
+                  <PrimaryIcon className="cta-button-icon" aria-hidden="true" />
+                  {primaryButton.text}
+                </Button>
+              </Link>
+            ) : (
+              <Button
+                size="lg"
+                className="cta-primary-button"
+                aria-label={`${primaryButton.text} with our experts`}
+                onClick={
+                  typeof primaryButton?.action === "function"
+                    ? primaryButton.action
+                    : undefined
+                }
+              >
+                <PrimaryIcon className="cta-button-icon" aria-hidden="true" />
+                {primaryButton.text}
+              </Button>
+            )}
+
+
+            {typeof secondaryButton?.action === "string" ? (
+              <Link href={secondaryButton.action} passHref>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="cta-secondary-button"
+                  aria-label={secondaryButton.text}
+                >
+                  <SecondaryIcon className="cta-button-icon" aria-hidden="true" />
+                  {secondaryButton.text}
+                </Button>
+              </Link>
+            ) : (
+              <Button
+                variant="outline"
+                size="lg"
+                className="cta-secondary-button"
+                aria-label={secondaryButton.text}
+                onClick={
+                  typeof secondaryButton?.action === "function"
+                    ? secondaryButton.action
+                    : undefined
+                }
+              >
+                <SecondaryIcon className="cta-button-icon" aria-hidden="true" />
+                {secondaryButton.text}
+              </Button>
+            )}
           </div>
-          
+
           {/* Trust Indicator */}
           <div className="cta-trust-indicator">
             <span className="cta-trust-text">

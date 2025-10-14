@@ -30,7 +30,8 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'contact',
-          src: '/images/icon-phone.svg',
+          // src: '/images/icon-phone.svg',
+          src:"/contact-hero.webp",
           
         }}
       />

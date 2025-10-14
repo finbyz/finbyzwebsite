@@ -14,7 +14,7 @@ export default function Page() {
     <>
       <HeroSection
         headline="Advanced Authorisation Licence In ERPNext"
-        highlightWords={["Advanced", "Authorisation", "ERPNext"]}
+        highlightWords={["Advanced", "Authorisation", "Licence"]}
         description="Optimize your import-export operations with ERPNext. Streamline Advanced Authorisation Licence management, ensure compliance, and enhance efficiency."
         primaryButton={{
           text: 'Get Started',
@@ -46,7 +46,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 animate-fade-in">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 animate-fade-in text-[#1A5276]">
             Introduction
           </h2>
           <p className="text-muted-foreground mb-6 animate-fade-in delay-100">
@@ -93,7 +93,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4 animate-fade-in">How to Manage or Create an Advanced Authorisation Licence in ERPNext</h2>
+          <h2 className="text-2xl font-bold mb-4 animate-fade-in text-[#1A5276]">How to Manage or Create an Advanced Authorisation Licence in ERPNext</h2>
           <ol className="list-decimal pl-6 space-y-3 animate-fade-in">
             <li>
               <span className="font-semibold">Go to the Advance Authorisation Licence list in ERPNext and click on add Advance Authorisation Licence.</span>
@@ -127,7 +127,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4 animate-fade-in">How to use Advance Authorisation licence for Import in ERPNext</h2>
+          <h2 className="text-2xl font-bold mb-4 animate-fade-in text-[#1A5276]">How to use Advance Authorisation licence for Import in ERPNext</h2>
           <ol className="list-decimal pl-6 space-y-3 animate-fade-in">
             <li><span>Create import purchase invoice with all the details.</span></li>
             <li><span >In Items table you will see fields to select Advance Authorization license.</span></li>
@@ -147,7 +147,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4 animate-fade-in">How to use Advance Authorisation licence at the time of Export in ERPNext</h2>
+          <h2 className="text-2xl font-bold mb-4 animate-fade-in text-[#1A5276]">How to use Advance Authorisation licence at the time of Export in ERPNext</h2>
           <ol className="list-decimal pl-6 space-y-3 animate-fade-in">
             <li><span >Create Export Sales Invoice with all the details.</span></li>
             <li><span >Select the applicable Advanced Authorisation Licence in the Items table.</span></li>
@@ -165,7 +165,7 @@ export default function Page() {
         </div>
       </Section>
 
-      <Section>
+      {/* <Section>
         <div className="container-custom py-8 flex flex-col items-center">
           <Card className="border-none shadow-none bg-transparent flex flex-col items-center">
             <CardHeader className="flex flex-col items-center">
@@ -183,7 +183,7 @@ export default function Page() {
             </CardContent>
           </Card>
         </div>
-      </Section>
+      </Section> */}
 
       <Section useGradient>
         <div className="container-custom py-8">

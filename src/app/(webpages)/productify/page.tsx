@@ -15,7 +15,7 @@ export default function Page() {
     <>
       <HeroSection
         headline="Productify"
-        highlightWords={["Productivity", "Monitoring", "Insights"]}
+        highlightWords={["Productify"]}
         description="Boost your team's efficiency with Productify, the leading employee productivity tracker and sales person monitoring software. Gain insights, enhance accountability, and drive performance."
         primaryButton={{
           text: 'Get Productify',
@@ -180,14 +180,14 @@ export default function Page() {
           <Image
             src="/images/Productify%20Applications%20Used.jpg"
             alt="Productify Applications Used"
-            width={500}
-            height={500}
-            className="w-auto h-[400px] object-contain"
+            width={1000}
+            height={1000}
+            className="w-auto h-[500px] object-contain"
           />
         </div>
         <p className="mt-4 text-center text-muted-foreground text-base leading-relaxed max-w-lg">
-          Our Doughnut Chart breaks down employee software usage, showcasing how much time is spent per application for better productivity insights.
-        </p>
+       Our Doughnut Chart, a feature of our time tracking software, breaks down employee software usage, showcasing how much time 
+       is spent per application. This visual aids decision-makers in identifying high-usage apps and eliminating inefficiencies.</p>
       </div>
 
       {/* Second Image */}
@@ -196,14 +196,14 @@ export default function Page() {
           <Image
             src="/images/Productify%20Web%20Browsing%20Time.jpg"
             alt="Productify Web Browsing Time"
-            width={500}
-            height={500}
-            className="w-auto h-[400px] object-contain"
+            width={1000}
+            height={1000}
+            className="w-auto h-[500px] object-contain"
           />
         </div>
         <p className="mt-4 text-center text-muted-foreground text-base leading-relaxed max-w-lg">
-          Track all web activity with Productify's Pie Chart, categorizing browsing time by domain to identify key usage patterns.
-        </p>
+       Track all web activity with Productify’s Pie Chart, part of our Employee Monitoring Software. It categorizes browsing time 
+       by domain, enabling better control over online habits and boosting efficiency through daily, weekly, and monthly summaries. </p>
       </div>
     </div>
   </div>
@@ -233,46 +233,48 @@ export default function Page() {
       </Section>
 
       <Section>
-      <div className="container-custom py-8">
-        <h2 className="text-2xl text-[#1A5276] font-semibold text-center mb-6 animate-fadeInUp">
-          Top Phone Calls and Types of Calls
-        </h2>
+  <div className="container-custom py-8">
+    <h2 className="text-2xl text-[#1A5276] font-semibold text-center mb-6 animate-fadeInUp">
+      Top Phone Calls and Types of Calls
+    </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-          {/* First Image */}
-          <div className="flex flex-col items-center">
-            <div className="w-full max-w-md overflow-hidden rounded-lg shadow-lg bg-white p-4">
-              <Image
-                src="/images/Productify%20Top%20Phone%20Calls.jpg"
-                alt="Productify Top Phone Calls"
-                width={500}
-                height={500}
-                className="w-full h-[320px] object-contain"
-              />
-            </div>
-            <p className="mt-4 text-center text-muted-foreground text-base leading-relaxed max-w-md">
-              Top Phone Calls in the Productify app, visualized using a Pie-in-a-Doughnut chart that helps identify the most frequently contacted segments for better call management.
-            </p>
-          </div>
-
-          {/* Second Image */}
-          <div className="flex flex-col items-center">
-            <div className="w-full max-w-md overflow-hidden rounded-lg shadow-lg bg-white p-4">
-              <Image
-                src="/images/Type%20of%20Calls.png"
-                alt="Type of Calls"
-                width={500}
-                height={500}
-                className="w-full h-[320px] object-contain"
-              />
-            </div>
-            <p className="mt-4 text-center text-muted-foreground text-base leading-relaxed max-w-md">
-              Categorizes internal and external communications to enhance strategic decisions and monitor call distribution across departments more efficiently.
-            </p>
-          </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+      {/* First Image */}
+      <div className="flex flex-col items-center">
+        <div className="w-full max-w-xl overflow-hidden rounded-lg shadow-lg bg-white p-4">
+          <Image
+            src="/images/Productify%20Top%20Phone%20Calls.jpg"
+            alt="Productify Top Phone Calls"
+            width={1000}
+            height={600}
+            className="w-full h-[450px] object-contain"
+          />
         </div>
+        <p className="mt-4 text-center text-muted-foreground text-base leading-relaxed max-w-md">
+          Top Phone Calls in the Productify app, part of our time tracking software, captures essential call details and visualizes 
+          them using a Pie-in-a-Doughnut chart, allowing instant analysis by contact type and call duration.
+        </p>
       </div>
-    </Section>
+
+      {/* Second Image */}
+      <div className="flex flex-col items-center">
+        <div className="w-full max-w-md overflow-hidden rounded-lg shadow-lg bg-white p-4">
+          <Image
+            src="/images/Type%20of%20Calls.png"
+            alt="Type of Calls"
+            width={500}
+            height={500}
+            className="w-full h-[420px] object-contain"
+          />
+        </div>
+        <p className="mt-4 text-center text-muted-foreground text-base leading-relaxed max-w-md">
+          This module categorizes internal and external communications to enhance strategic decisions. As a Staff Monitoring 
+          Software feature, it promotes informed communication management for better productivity outcomes.
+        </p>
+      </div>
+    </div>
+  </div>
+</Section>
 
 
       <Section useGradient>

@@ -30,7 +30,8 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'Productify Privacy Policy',
-          src: '/images/productify/privacy-hero.png',
+          // src: '/images/productify/privacy-hero.png',
+          src:"/productify-privacy.jpg",
           videoSrc: undefined,
         }}
       />
@@ -44,7 +45,7 @@ export default function Page() {
               </p>
             </div>
             <div className="flex items-center gap-2">
-              <Image src="/images/productify/privacy-lock.svg" alt="Privacy Lock Illustration" width={56} height={56} className="rounded-lg bg-muted p-2 shadow-sm" />
+              {/* <Image src="/images/productify/privacy-lock.svg" alt="Privacy Lock Illustration" width={56} height={56} className="rounded-lg bg-muted p-2 shadow-sm" /> */}
             </div>
           </div>
         </div>
@@ -80,23 +81,6 @@ export default function Page() {
           <p className="ml-8 text-muted-foreground">
             Productify tracks specific user activities to support productivity analysis and time management improvement. Data collected may include:
           </p>
-          {/* <List
-            title="Activity Data Collected"
-            items={[
-              'Desktop, Mobile App, and Browser Extension Activities: Productify monitors time and user engagement metrics, including login sessions, task completions, meetings, and similar productivity metrics. This data helps clients understand work patterns and optimize time management for operational improvement.'
-            ]}
-          /> */}
-          {/* <p className="ml-8 text-muted-foreground mt-4">
-            <span className="font-semibold">Location Data (Field Personnel):</span> For users engaging in fieldwork, Productify may collect location data via the mobile app. This data is collected only with user consent and serves to:
-          </p>
-          <List
-            title=''
-            items={[
-              'Provide accurate time tracking for travel and customer meetings.',
-              'Allow organizations to manage field resources effectively by optimizing visit schedules.',
-              'Enable users to view nearby customer locations for better travel planning.'
-            ]} */}
-          {/* /> */}
           <PrivacySubsectionHeading>2.2 Tracking Mechanism</PrivacySubsectionHeading>
           <p className="ml-8 text-muted-foreground">
             Location tracking is activated based on user instruction (e.g., start/stop tracking) or for a defined time period.<br />

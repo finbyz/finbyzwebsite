@@ -32,7 +32,7 @@ export default function Points({ data }: { data?: PointsData }) {
 
   return (
     <section className="py-10 md:py-14 bg-white">
-      <div className="container mx-auto px-6 lg:px-8 max-w-5xl">
+      <div className="mx-auto">
         {content.title && (
           <h2 className="text-2xl md:text-3xl font-semibold text-[#1A5276] mb-5">
             {content.title}

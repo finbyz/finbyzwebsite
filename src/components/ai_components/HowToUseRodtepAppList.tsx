@@ -21,7 +21,7 @@ const HowToUseRodtepAppList: React.FC<HowToUseRodtepAppListProps> = ({ steps }) 
             <span className="rounded-full bg-primary/10 p-2 h-5 w-5 text-primary" >
               {/* <LucideListChecks className="h-5 w-5 text-primary" /> */}
             </span>
-            <CardTitle className="text-lg font-semibold">{step.title}</CardTitle>
+            <CardTitle className="text-lg font-semibold text-[#1A5276]">{step.title}</CardTitle>
           </CardHeader>
           {step.items && step.items.length > 0 && (
             <CardContent className="pl-12 pt-0">

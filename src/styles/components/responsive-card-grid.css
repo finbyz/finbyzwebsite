@@ -10,7 +10,7 @@
 /* Full viewport height on md+ so the section fills the screen */
 @media (min-width: 768px) {
   .responsive-card-grid-section {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     align-items: center;
   }
