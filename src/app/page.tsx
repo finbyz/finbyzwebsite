@@ -128,7 +128,7 @@ export default function Home() {
 
         <Benefits />
         <div className="[&_h2]:text-[#1A5276]">
-        <ResponsiveCardGrid 
+          <ResponsiveCardGrid
             data={{
               title: "Our Services",
               subtitle: "Discover our comprehensive range of services designed to help your business grow and succeed in the digital world.",
@@ -195,17 +195,17 @@ export default function Home() {
 
         <Testimonials />
 
-        <ClientLogos />
+        <ClientLogos data={{ useAPI: true, apiEndpoint: '/api/client-logos' }} />
         <CTA
-         data={{
-          title: "Ready to Scale with Smart Tech? Let's Talk",
-          highlightText:"Ready to Scale with Smart Tech? Let's Talk",
-        }} 
+          data={{
+            title: "Ready to Scale with Smart Tech? Let's Talk",
+            highlightText: "Ready to Scale with Smart Tech? Let's Talk",
+          }}
         />
-       
+
 
         {/* Inquiry Form */}
-        <InquiryForm 
+        <InquiryForm
           data={{
             // component_type: "Form",  
             title: "Book a Free Consultation",

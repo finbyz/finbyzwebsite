@@ -1,353 +1,225 @@
- 
- 
 "use client";
 
-import "@/styles/components/client-logos.css";
-import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 
-// Intersection Observer Hook
-// Server-side render: static grid; no intersection observer
-
-// Default client logos data
-const defaultClientLogos = [
-  {
-    name: "South India Trading Co.",
-    location: "DELHI, INDIA",
-    logo: "SJC",
-    colors: {
-      primary: "#FFD700", // Yellow
-      secondary: "#FF6B35", // Orange
-      accent: "#4CAF50" // Green
-    },
-    description: "Multi-colored map of India with bold yellow text"
-  },
-  {
-    name: "Elkins Trade Link Ltd.",
-    location: "TRADE LINK LTD.",
-    logo: "elkins",
-    colors: {
-      primary: "#87CEEB", // Light blue
-      secondary: "#808080" // Gray
-    },
-    description: "Light blue text with stylized 'k' as shopping bag"
-  },
-  {
-    name: "G.M.'s Tulsi Tea",
-    location: "TEA",
-    logo: "Tulsi",
-    colors: {
-      primary: "#8A2BE2", // Purple
-      secondary: "#FFD700", // Yellow
-      text: "#FFFFFF" // White
-    },
-    description: "Purple background with yellow banner and white text"
-  },
-  {
-    name: "Farmindia Impex Pvt. Ltd.",
-    location: "IMPEX PVT. LTD.",
-    logo: "FARMINDIA",
-    colors: {
-      primary: "#228B22", // Dark green
-      secondary: "#808080" // Gray
-    },
-    description: "Dark green leaf with bold company name"
-  },
-  {
-    name: "Raymond",
-    location: "",
-    logo: "R",
-    colors: {
-      primary: "#DC143C", // Red
-      secondary: "#DC143C" // Red
-    },
-    description: "Mirrored red 'R's with script text"
-  },
-  {
-    name: "Aditya Birla Tanfac",
-    location: "TANFAC",
-    logo: "ABT",
-    colors: {
-      primary: "#FF4500", // Orange-red
-      secondary: "#FFD700", // Yellow
-      accent: "#008080" // Teal
-    },
-    description: "Geometric sunburst pattern with teal band"
-  },
-  {
-    name: "TechCorp Solutions",
-    location: "BANGALORE, INDIA",
-    logo: "TCS",
-    colors: {
-      primary: "#1E40AF", // Blue
-      secondary: "#3B82F6" // Light blue
-    },
-    description: "Modern tech company with blue branding"
-  },
-  {
-    name: "Global Industries Ltd.",
-    location: "MUMBAI, INDIA",
-    logo: "GIL",
-    colors: {
-      primary: "#059669", // Green
-      secondary: "#10B981" // Light green
-    },
-    description: "Green industrial company logo"
-  },
-  {
-    name: "Digital Innovations",
-    location: "HYDERABAD, INDIA",
-    logo: "DI",
-    colors: {
-      primary: "#7C3AED", // Purple
-      secondary: "#A78BFA" // Light purple
-    },
-    description: "Purple digital innovation logo"
-  },
-  {
-    name: "Future Enterprises",
-    location: "CHENNAI, INDIA",
-    logo: "FE",
-    colors: {
-      primary: "#DC2626", // Red
-      secondary: "#F87171" // Light red
-    },
-    description: "Red future enterprise logo"
-  },
-  {
-    name: "Smart Systems Inc.",
-    location: "PUNE, INDIA",
-    logo: "SSI",
-    colors: {
-      primary: "#EA580C", // Orange
-      secondary: "#FB923C" // Light orange
-    },
-    description: "Orange smart systems logo"
-  }
-];
-
-// No carousel settings in server-only mode
-
-
+interface ClientLogo {
+  name: string;
+  location?: string;
+  logo?: string;
+  image?: string;
+  colors?: {
+    primary?: string;
+    secondary?: string;
+    accent?: string;
+    text?: string;
+  };
+  description?: string;
+}
 
 interface ClientLogosProps {
   data?: {
     component_type?: "Carousal";
     title?: string;
     subtitle?: string;
-    clients?: any[];
+    clients?: ClientLogo[];
     carousel?: {
       autoPlay?: boolean;
       interval?: number;
       showArrows?: boolean;
       showIndicators?: boolean;
     };
-    useAPI?: boolean; // Enable API fetching
-    apiEndpoint?: string; // Custom API endpoint
+    useAPI?: boolean;
+    apiEndpoint?: string;
+    logosPerSlide?: number;
   };
 }
 
 export default function ClientLogos({ data }: ClientLogosProps) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [clientLogos, setClientLogos] = useState(defaultClientLogos);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  // Use provided data or defaults
   const {
-    component_type = "Carousal",
-    clients: providedClients,
-    title = "Some of The Loyal Clients of FinByz",
+    title = "Our Trusted Clients",
     subtitle = "Trusted by leading companies worldwide",
-    carousel = { autoPlay: true, interval: 3000, showArrows: true, showIndicators: true },
-    useAPI = false, // New prop to enable API fetching
-    apiEndpoint = '/web-api/client-logos' // New prop for custom API endpoint
+    clients: providedClients,
+    carousel = { autoPlay: true, interval: 3000, showArrows: false, showIndicators: true },
+    useAPI = false,
+    apiEndpoint = '/web-api/client-logos',
+    logosPerSlide = 8
   } = data || {};
 
-  // Fetch data from API if useAPI is true and no clients provided
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(carousel.autoPlay ?? true);
+  const [clientLogos, setClientLogos] = useState<ClientLogo[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Fetch client logos from API
   useEffect(() => {
     const fetchClientLogos = async () => {
+      // Use provided clients first
       if (providedClients && providedClients.length > 0) {
-        // Use provided data if available
         setClientLogos(providedClients);
         return;
       }
 
-      if (useAPI) {
-        setLoading(true);
-        setError(null);
+      // Fetch from API if enabled
+      if (!useAPI) {
+        setClientLogos([]);
+        return;
+      }
+
+      setLoading(true);
+      setError(null);
+      
+      try {
+        const response = await fetch(`${apiEndpoint}?limit=36&page=1`);
         
-        try {
-          const response = await fetch(`${apiEndpoint}?limit=12&page=1`);
-          if (!response.ok) {
-            throw new Error(`API error: ${response.status}`);
-          }
-          
-          const result = await response.json();
-          if (result.success && result.data.clients) {
-            setClientLogos(result.data.clients);
-          } else {
-            throw new Error('Invalid API response format');
-          }
-        } catch (err) {
-          console.error('Error fetching client logos:', err);
-          setError(err instanceof Error ? err.message : 'Failed to fetch client logos');
-          // Fallback to default data
-          setClientLogos(defaultClientLogos);
-        } finally {
-          setLoading(false);
+        if (!response.ok) {
+          throw new Error(`API error: ${response.status}`);
         }
-      } else {
-        // Use default data
-        setClientLogos(defaultClientLogos);
+        
+        const result = await response.json();
+        
+        if (result.success && Array.isArray(result.data?.clients)) {
+          setClientLogos(result.data.clients);
+        } else {
+          throw new Error('Invalid API response format');
+        }
+      } catch (err) {
+        console.error('Error fetching client logos:', err);
+        setError(err instanceof Error ? err.message : 'Failed to fetch client logos');
+        setClientLogos([]);
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchClientLogos();
   }, [useAPI, apiEndpoint, providedClients]);
 
-  // Calculate how many slides we need (6 logos per slide)
-  const logosPerSlide = 6;
-  const totalSlides = Math.ceil(clientLogos.length / logosPerSlide);
+  // Calculate total slides
+  const totalSlides = useMemo(() => 
+    Math.ceil(clientLogos.length / logosPerSlide),
+    [clientLogos.length, logosPerSlide]
+  );
 
   // Auto-play functionality
   useEffect(() => {
-    if (!carousel.autoPlay || !isAutoPlaying) return;
+    if (!carousel.autoPlay || !isAutoPlaying || totalSlides <= 1) {
+      return;
+    }
     
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
-        prevIndex === totalSlides - 1 ? 0 : prevIndex + 1
-      );
+    intervalRef.current = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % totalSlides);
     }, carousel.interval || 3000);
 
-    return () => clearInterval(interval);
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
   }, [isAutoPlaying, carousel.autoPlay, carousel.interval, totalSlides]);
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === totalSlides - 1 ? 0 : prevIndex + 1
-    );
+  // Navigation handlers
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % totalSlides);
     setIsAutoPlaying(false);
-  };
+  }, [totalSlides]);
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === 0 ? totalSlides - 1 : prevIndex - 1
-    );
+  const prevSlide = useCallback(() => {
+    setCurrentIndex((prev) => (prev - 1 + totalSlides) % totalSlides);
     setIsAutoPlaying(false);
-  };
+  }, [totalSlides]);
 
-  const goToSlide = (index: number) => {
+  const goToSlide = useCallback((index: number) => {
     setCurrentIndex(index);
     setIsAutoPlaying(false);
-  };
+  }, []);
 
-  // Get logos for current slide
-  const getCurrentSlideLogos = () => {
-    const startIndex = currentIndex * logosPerSlide;
-    const endIndex = startIndex + logosPerSlide;
-    return clientLogos.slice(startIndex, endIndex);
-  };
+  // Touch gesture handlers
+  const minSwipeDistance = 50;
 
-  const renderLogo = (clientItem: any) => {
-    switch (clientItem.name) {
-      case "South India Trading Co.":
-        return (
-          <div className="text-center">
-            <div className="client-logo-india-map">
-              <div className="client-logo-india-map-bg"></div>
-              <div className="client-logo-india-map-inner">
-                <span className="text-lg font-bold text-gray-800">SJC</span>
-              </div>
-            </div>
-            <div className="client-logo-india-text">SOUTH INDIA TRADING CO.</div>
-            <div className="client-logo-location">DELHI, INDIA</div>
-          </div>
-        );
-      case "Elkins Trade Link Ltd.":
-        return (
-          <div className="text-center">
-            <div className="client-logo-elkins">elkins</div>
-            <div className="client-logo-location">TRADE LINK LTD.</div>
-          </div>
-        );
-      case "G.M.'s Tulsi Tea":
-        return (
-          <div className="client-logo-tulsi-container">
-            <div className="client-logo-tulsi-bg">
-              <div className="client-logo-tulsi-banner">
-                <span className="client-logo-tulsi-banner-text">G.M.'s</span>
-              </div>
-              <div className="client-logo-tulsi-main">
-                <span className="client-logo-tulsi-text">Tulsi</span>
-              </div>
-              <span className="client-logo-tulsi-tm">TM</span>
-            </div>
-            <div className="client-logo-tulsi-tea">TEA</div>
-          </div>
-        );
-      case "Farmindia Impex Pvt. Ltd.":
-        return (
-          <div className="text-center">
-            <div className="client-logo-farmindia-leaf">
-              <div className="client-logo-farmindia-inner"></div>
-            </div>
-            <div className="client-logo-farmindia-text">
-              <span className="client-logo-farmindia-farm">FARM</span>
-              <span className="client-logo-farmindia-india">INDIA</span>
-            </div>
-            <div className="client-logo-location">IMPEX PVT. LTD.</div>
-          </div>
-        );
-      case "Raymond":
-        return (
-          <div className="text-center">
-            <div className="client-logo-raymond-r">R</div>
-            <div className="client-logo-raymond-text">raymond</div>
-          </div>
-        );
-      case "Aditya Birla Tanfac":
-        return (
-          <div className="text-center">
-            <div className="client-logo-abt-title">ADITYA BIRLA</div>
-            <div className="client-logo-abt-sunburst"></div>
-            <div className="client-logo-abt-band">
-              <span className="client-logo-abt-tanfac">TANFAC</span>
-            </div>
-          </div>
-        );
-      default:
-        return (
-          <div className="text-center">
-            <div className="client-logo-container">
-              <div 
-                className="w-16 h-16 rounded-lg flex items-center justify-center text-white font-bold text-lg"
-                style={{ 
-                  backgroundColor: clientItem.colors?.primary || '#6B7280',
-                  color: clientItem.colors?.text || 'white'
-                }}
-              >
-                {clientItem.logo}
-              </div>
-            </div>
-            <div className="text-xs font-semibold text-gray-700 mt-1">{clientItem.name}</div>
-            {clientItem.location && (
-              <div className="text-xs text-gray-500">{clientItem.location}</div>
-            )}
-          </div>
-        );
+  const onTouchStart = useCallback((e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  }, []);
+
+  const onTouchMove = useCallback((e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  }, []);
+
+  const onTouchEnd = useCallback(() => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      nextSlide();
+    } else if (isRightSwipe) {
+      prevSlide();
     }
-  };
+  }, [touchStart, touchEnd, nextSlide, prevSlide]);
 
-  // Show loading state
+  // Render individual logo
+  const renderLogo = useCallback((clientItem: ClientLogo) => {
+    // Render image if available
+    if (clientItem.image) {
+      const imageUrl = clientItem.image.startsWith("/files/")
+        ? `https://finbyz.tech${clientItem.image}`
+        : clientItem.image;
+
+      return (
+        <div className="text-center">
+          <img
+            src={imageUrl}
+            alt={clientItem.name}
+            title={clientItem.name}
+            className="h-16 w-auto object-contain mx-auto transition-transform duration-300 group-hover:scale-105"
+            loading="lazy"
+          />
+          {clientItem.name && (
+            <div className="text-xs font-semibold text-gray-700 mt-2">{clientItem.name}</div>
+          )}
+          {clientItem.location && (
+            <div className="text-xs text-gray-500">{clientItem.location}</div>
+          )}
+        </div>
+      );
+    }
+
+    // Fallback to logo text/initials
+    return (
+      <div className="text-center">
+        <div
+          className="w-16 h-16 rounded-lg flex items-center justify-center text-white font-bold text-lg mx-auto transition-transform duration-300 group-hover:scale-105"
+          style={{
+            backgroundColor: clientItem.colors?.primary || "#6B7280",
+            color: clientItem.colors?.text || "white",
+          }}
+        >
+          {clientItem.logo || clientItem.name.substring(0, 2).toUpperCase()}
+        </div>
+        <div className="text-xs font-semibold text-gray-700 mt-2">{clientItem.name}</div>
+        {clientItem.location && (
+          <div className="text-xs text-gray-500">{clientItem.location}</div>
+        )}
+      </div>
+    );
+  }, []);
+
+  // Loading state
   if (loading) {
     return (
-      <section className="client-logos-section">
-        <div className="client-logos-container">
-          <div className="client-logos-header">
-            <h2 className="client-logos-title">{title}</h2>
-            {subtitle && <p className="client-logos-subtitle">{subtitle}</p>}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900">{title}</h2>
+            {subtitle && <p className="mt-2 text-gray-600">{subtitle}</p>}
           </div>
           <div className="flex justify-center items-center py-12">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500"></div>
@@ -358,22 +230,22 @@ export default function ClientLogos({ data }: ClientLogosProps) {
     );
   }
 
-  // Show error state
+  // Error state
   if (error) {
     return (
-      <section className="client-logos-section">
-        <div className="client-logos-container">
-          <div className="client-logos-header">
-            <h2 className="client-logos-title">{title}</h2>
-            {subtitle && <p className="client-logos-subtitle">{subtitle}</p>}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900">{title}</h2>
+            {subtitle && <p className="mt-2 text-gray-600">{subtitle}</p>}
           </div>
           <div className="flex justify-center items-center py-12">
             <div className="text-center">
-              <div className="text-red-500 mb-2">⚠️ Error loading client logos</div>
-              <div className="text-sm text-gray-600">{error}</div>
+              <div className="text-red-500 mb-2 text-xl">⚠️ Error loading client logos</div>
+              <div className="text-sm text-gray-600 mb-4">{error}</div>
               <button 
                 onClick={() => window.location.reload()} 
-                className="mt-2 px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600"
+                className="px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors"
               >
                 Retry
               </button>
@@ -384,69 +256,105 @@ export default function ClientLogos({ data }: ClientLogosProps) {
     );
   }
 
+  // Empty state
+  if (clientLogos.length === 0) {
+    return (
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900">{title}</h2>
+            {subtitle && <p className="mt-2 text-gray-600">{subtitle}</p>}
+          </div>
+          <div className="text-center py-12 text-gray-500">
+            No client logos available
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
-    <section className="client-logos-section">
-      <div className="client-logos-container">
-        {/* Banner Title */}
-        <div className="client-logos-header">
-          <h2 className="client-logos-title">
-            {title}
-          </h2>
-          {subtitle && (
-            <p className="client-logos-subtitle">{subtitle}</p>
-          )}
+    <section className="py-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900">{title}</h2>
+          {subtitle && <p className="mt-2 text-gray-600">{subtitle}</p>}
         </div>
 
         {/* Carousel Container */}
-        <div className="client-logos-carousel-container">
+        <div className="relative">
           <div 
-            className="client-logos-track"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            className="overflow-hidden"
+            ref={carouselRef}
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
           >
-            {Array.from({ length: totalSlides }, (_, slideIndex) => (
-              <div key={slideIndex} className="client-logos-slide">
-                <div className="client-logos-grid">
-                  {getCurrentSlideLogos().map((clientItem, logoIndex) => (
-                    <div key={logoIndex} className="client-logo-item group">
-                      <div className="client-logo-container">
-                        {renderLogo(clientItem)}
-                      </div>
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ 
+                transform: `translateX(-${currentIndex * 100}%)`,
+              }}
+            >
+              {Array.from({ length: totalSlides }, (_, slideIndex) => {
+                const slideLogos = clientLogos.slice(
+                  slideIndex * logosPerSlide, 
+                  (slideIndex + 1) * logosPerSlide
+                );
+                
+                return (
+                  <div 
+                    key={slideIndex} 
+                    className="w-full flex-shrink-0"
+                  >
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-8 p-4">
+                      {slideLogos.map((clientItem, logoIndex) => (
+                        <div 
+                          key={`${slideIndex}-${logoIndex}`} 
+                          className="flex items-center justify-center group"
+                        >
+                          {renderLogo(clientItem)}
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
-              </div>
-            ))}
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
           {/* Navigation Arrows */}
-          {carousel.showArrows && (
+          {carousel.showArrows && totalSlides > 1 && (
             <>
               <button
-                className="client-logos-nav-button prev"
                 onClick={prevSlide}
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg transition-all z-10"
                 aria-label="Previous slide"
               >
-                <ChevronLeft className="client-logos-nav-icon" />
+                ←
               </button>
               <button
-                className="client-logos-nav-button next"
                 onClick={nextSlide}
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg transition-all z-10"
                 aria-label="Next slide"
               >
-                <ChevronRight className="client-logos-nav-icon" />
+                →
               </button>
             </>
           )}
         </div>
 
         {/* Indicators */}
-        {carousel.showIndicators && (
-          <div className="client-logos-indicators">
+        {carousel.showIndicators && totalSlides > 1 && (
+          <div className="flex justify-center gap-2 mt-8">
             {Array.from({ length: totalSlides }, (_, index) => (
               <button
                 key={index}
-                className={`client-logos-indicator ${
-                  index === currentIndex ? 'active' : 'inactive'
+                className={`h-2 rounded-full transition-all ${
+                  index === currentIndex 
+                    ? 'w-8 bg-orange-500' 
+                    : 'w-2 bg-gray-300 hover:bg-gray-400'
                 }`}
                 onClick={() => goToSlide(index)}
                 aria-label={`Go to slide ${index + 1}`}
