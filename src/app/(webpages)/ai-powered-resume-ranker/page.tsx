@@ -4,7 +4,7 @@ import HeroSection from '@/components/sections/dynamic-hero'
 import Section from '@/components/sections/Section'
 import ProcessWorkflow from '@/components/sections/process-workflow'
 import Benefits from '@/components/sections/benefits'
-import Points from '@/components/sections/points'
+import Points, { PointsData } from '@/components/sections/points'
 import CTA from '@/components/sections/cta'
 
 export default function Page() {
@@ -109,7 +109,7 @@ export default function Page() {
   }
 
   const benefitsData = {
-    component_type: 'Card',
+    component_type: 'Card' as const,
     title: 'Benefits',
     subtitle: 'Speed up hiring with accurate, unbiased AI ranking',
     benefits: [
@@ -161,7 +161,7 @@ export default function Page() {
     ]
   }
 
-  const outputsPoints = {
+  const outputsPoints: PointsData = {
     component_type: 'Text',
     title: 'What You Get',
     points: [

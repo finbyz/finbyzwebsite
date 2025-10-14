@@ -10,7 +10,7 @@ export default function Page() {
   const seoDescription = 'Lead Intelligence automates the capture and classification of inquiry emails using AI, transforming unstructured data into actionable CRM records.';
 
   const workflowData = {
-    component_type: 'Timeline',
+    component_type: 'Timeline' as const,
     title: 'Workflow Steps',
     subtitle: 'From inbox to qualified lead in minutes—fully automated and deduplicated.',
     processSteps: [
@@ -146,13 +146,14 @@ export default function Page() {
         iconBg: 'bg-slate-100'
       }
     ],
-    layout: 'standard',
-    variant: 'iconCard',
-    showImage: false
-  } as const;
+    layout: 'standard' as const,
+    variant: 'iconCard' as const,
+    showImage: false,
+    cardClassName: 'border-none hover:shadow-xl transition-all'
+  };
 
   const ctaData = {
-    component_type: 'Text',
+    component_type: 'Text' as const,
     subheading: { text: 'Get started', icon: 'Rocket' },
     title: 'Automate inquiry-to-lead in ERPNext',
     description:
@@ -201,8 +202,7 @@ export default function Page() {
 
       {/* Benefits / Feature Cards */}
       <ResponsiveCardGrid
-        data={benefitsData as any}
-        cardClassName="border-none hover:shadow-xl transition-all"
+        data={benefitsData}
       />
 
       {/* 4️⃣ CTA SECTION (Required - Last) */}

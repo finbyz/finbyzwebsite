@@ -33,21 +33,29 @@ const featureCardsData = [
   {
     icon: Waveform,
     title: 'Detailed Analysis',
+    image: '/images/banner-analysis.svg',
+    alt: 'Detailed call analysis illustration',
     description: 'Tone shifts, keyword highlights, pauses, and engagement patterns made visible for fast review.',
   },
   {
     icon: MessageSquare,
     title: 'Actionable Feedback',
+    image: '/images/Enhanced Communication.png',
+    alt: 'Actionable feedback visual',
     description: 'Concrete suggestions to improve clarity, persuasion, objection handling, and delivery.',
   },
   {
     icon: ScrollText,
     title: 'Script Recommendations',
+    image: '/images/blog-icon-innovates-your-human-resource.svg',
+    alt: 'Script recommendations icon',
     description: 'Auto-generate 2–3 optimized outreach scripts tailored to the call’s context and persona.',
   },
   {
     icon: Database,
     title: 'Seamless ERPNext Storage',
+    image: '/images/Document Storage.svg',
+    alt: 'ERPNext storage illustration',
     description: 'Transcripts, insights, and scripts saved to the Voice Recording doctype for easy team access.',
   },
 ];
@@ -62,6 +70,7 @@ const workflowData = {
       description: 'Record calls directly or upload from third-party tools.',
       icon: 'Mic',
       details: ['Start/stop recording in ERPNext', 'Upload MP3/WAV/M4A files'],
+      duration: 'Instant',
       iconColor: 'text-blue-600',
       iconBg: 'bg-blue-50',
     },
@@ -71,6 +80,7 @@ const workflowData = {
       description: 'Speech is converted into a word-by-word transcript.',
       icon: 'FileAudio',
       details: ['Speaker labels', 'Timestamps per word'],
+      duration: 'Seconds',
       iconColor: 'text-emerald-600',
       iconBg: 'bg-emerald-50',
     },
@@ -80,6 +90,7 @@ const workflowData = {
       description: 'AI highlights tone, keywords, pauses, and engagement.',
       icon: 'Waveform',
       details: ['Tone shifts & sentiment', 'Keyword heatmap & pauses'],
+      duration: 'Seconds',
       iconColor: 'text-violet-600',
       iconBg: 'bg-violet-50',
     },
@@ -89,6 +100,7 @@ const workflowData = {
       description: 'Get suggestions on clarity, persuasion, and delivery.',
       icon: 'MessageSquare',
       details: ['What worked / what to improve', 'Coach-style recommendations'],
+      duration: 'Seconds',
       iconColor: 'text-amber-600',
       iconBg: 'bg-amber-50',
     },
@@ -98,6 +110,7 @@ const workflowData = {
       description: 'Generate 2–3 optimized outreach scripts.',
       icon: 'ScrollText',
       details: ['Tailored to context & persona', 'Openers, rebuttals, closes'],
+      duration: 'Seconds',
       iconColor: 'text-rose-600',
       iconBg: 'bg-rose-50',
     },
@@ -107,6 +120,7 @@ const workflowData = {
       description: 'All results stored in ERPNext Voice Recording doctype.',
       icon: 'Database',
       details: ['Transcripts, feedback, scripts in one place', 'Easy review for reps & managers'],
+      duration: 'Instant',
       iconColor: 'text-slate-600',
       iconBg: 'bg-slate-50',
     },
@@ -132,6 +146,7 @@ const benefitsData = {
   benefits: [
     {
       number: 1,
+      suffix: '',
       label: 'Skills',
       header: 'Improves Sales Skills',
       icon: 'Waveform',
@@ -140,6 +155,7 @@ const benefitsData = {
     },
     {
       number: 2,
+      suffix: '',
       label: 'Consistency',
       header: 'Consistency',
       icon: 'ClipboardList',
@@ -148,6 +164,7 @@ const benefitsData = {
     },
     {
       number: 3,
+      suffix: '',
       label: 'Training',
       header: 'Faster Training',
       icon: 'Bot',
@@ -156,6 +173,7 @@ const benefitsData = {
     },
     {
       number: 4,
+      suffix: '',
       label: 'Scale',
       header: 'Scalable',
       icon: 'Database',
@@ -164,6 +182,7 @@ const benefitsData = {
     },
     {
       number: 5,
+      suffix: '',
       label: 'Conversion',
       header: 'Better Conversions',
       icon: 'MessageSquare',

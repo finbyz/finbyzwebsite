@@ -18,7 +18,7 @@ export default function Page() {
   }
 
   const introTextData = {
-    component_type: 'Text',
+    component_type: 'Text' as const,
     title: 'Lead Follow-Up, Fully Automated',
     paragraphs: [
       'The Lead Follow-Up AI Tool automates the sales follow-up process by identifying inactive opportunities, analyzing customer context, and generating personalized follow-up emails using AI. It ensures every lead is nurtured on time without requiring manual effort from the sales team.',
@@ -26,7 +26,7 @@ export default function Page() {
   }
 
   const workflowData = {
-    component_type: 'Timeline',
+    component_type: 'Timeline' as const,
     title: 'How Follow Up Buddy Works',
     subtitle: 'From detection to delivery — a complete AI-assisted workflow',
     processSteps: [
@@ -189,10 +189,11 @@ export default function Page() {
     layout: 'standard' as const,
     variant: 'iconCard' as const,
     showImage: false,
+    cardClassName: 'border-none hover:shadow-xl transition-all hover:-translate-y-0.5',
   }
 
   const ctaData = {
-    component_type: 'Text',
+    component_type: 'Text' as const,
     subheading: { text: 'Start automating follow-ups', icon: 'Sparkles' },
     title: 'Never let a lead go cold again',
     description:
@@ -225,7 +226,6 @@ export default function Page() {
       <ResponsiveCardGrid
         data={benefitsData}
         className="container-custom"
-        cardClassName="border-none hover:shadow-xl transition-all hover:-translate-y-0.5"
       />
 
       {/* 4️⃣ CTA Section (Required - Last) */}
