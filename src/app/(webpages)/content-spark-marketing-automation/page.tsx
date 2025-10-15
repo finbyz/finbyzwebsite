@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
