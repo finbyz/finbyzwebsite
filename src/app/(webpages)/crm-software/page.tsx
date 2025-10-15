@@ -77,7 +77,7 @@ export default function Page() {
           <div className="absolute right-0 bottom-0 hidden sm:block opacity-30 pointer-events-none">
             <Image src="/images/three-hexagon.svg" alt="haxagon-image" width={120} height={120} />
           </div>
-          <h2 className="text-3xl font-bold text-center mb-4">Benefits that CRM software offers</h2>
+          <h2 className="text-3xl font-bold text-center mb-4 text-[#1A5276]">Benefits that CRM software offers</h2>
           <p className="text-center mb-8">
             Before investing in a CRM system, it’s natural to consider the value it brings. Here are key business benefits of integrating open source CRM software into your operations:
           </p>
@@ -118,7 +118,7 @@ export default function Page() {
       {/* Features of CRM Software */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-3xl font-bold text-center mb-8">Features of CRM Software</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 text-[#1A5276]">Features of CRM Software</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <FeatureCard
               title="Customer Management"

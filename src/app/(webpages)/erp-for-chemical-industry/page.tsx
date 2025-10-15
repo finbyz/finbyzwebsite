@@ -37,7 +37,7 @@ export default function Page() {
           <p className="mb-4 text-gray-700 text-lg">
             Finbyz is a leading provider of chemical industry ERP software based in Ahmedabad, Gujarat, India, serving both engineering and chemical sectors. If you're considering integrating ERP software for your engineering or chemical company, we offer complimentary consultations to identify the best solutions tailored to your requirements.
           </p>
-          <h2 className="text-2xl font-bold text-primary mb-4">ERP Software for Chemical Industry</h2>
+          <h2 className="text-2xl font-bold text-[#1A5276] mb-4">ERP Software for Chemical Industry</h2>
           <p className="mb-4 text-gray-700 text-lg">
             For businesses involved in manufacturing chemicals and allied products, Finbyz's ERP for the chemical industry offers a comprehensive solution to manage complex operations. From manufacturing and distribution to exports, our experience with chemical industry ERP helps streamline operations, improve efficiency, and increase overall productivity.
           </p>
@@ -53,7 +53,7 @@ export default function Page() {
           <p className="mb-6 black text-lg">
             The primary goal of every business is to reduce costs and enhance productivity and efficiency through automation. However, it's essential to understand that ERP for the chemical industry requires specific considerations:
           </p>
-          <h3 className="text-xl font-semibold text-primary mb-8">Key Considerations for ERP in Chemical Industry</h3>
+          <h3 className="text-xl font-semibold text-[#1A5276] mb-8">Key Considerations for ERP in Chemical Industry</h3>
           <List
             title=""
             items={[
@@ -72,7 +72,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h3 className="text-xl font-semibold text-primary mb-8">Key features of ERP for Chemical Industry</h3>
+          <h3 className="text-xl font-semibold text-[#1A5276] mb-8">Key features of ERP for Chemical Industry</h3>
           {/* Manage chemical formulation */}
           <div className="flex flex-col md:flex-row gap-8 items-center mb-12 animate-fadeInUp">
             <div className="md:w-1/3 flex-shrink-0 flex justify-center">
@@ -82,7 +82,7 @@ export default function Page() {
               </div>
             </div>
             <div className="md:w-2/3 bg-white rounded-xl shadow p-6">
-              <h3 className="text-lg font-bold text-black-900 mb-2">Manage chemical formulation</h3>
+              <h3 className="text-lg font-bold text-[#1A5276] mb-2">Manage chemical formulation</h3>
               <p className="mb-4 text-gray-700">
                 Chemical manufacturing companies invest significant time in research and development for better formulations. Our ERP's lab module records all lab activities, including various formulations and the chemical parameters of resultant products. It also provides expected costs for new formulations based on current raw material prices.
               </p>
@@ -102,7 +102,7 @@ export default function Page() {
               </div>
             </div>
             <div className="md:w-2/3 bg-white rounded-xl shadow p-6">
-              <h3 className="text-lg font-bold text-black-900 mb-2">Manage samples and quotation</h3>
+              <h3 className="text-lg font-bold text-[#1A5276] mb-2">Manage samples and quotation</h3>
               <p className="mb-4 text-gray-700">
                 Understanding that many chemical industries operate based on sample orders, our ERP includes a unique CRM tailored for chemical companies. It manages all samples sent to prospects, tracks courier details, and records client responses.
               </p>
@@ -132,7 +132,7 @@ export default function Page() {
               </div>
             </div>
             <div className="md:w-2/3 bg-white rounded-xl shadow p-6">
-              <h3 className="text-lg font-bold text-black-900 mb-2">Chemical manufacturing ERP process</h3>
+              <h3 className="text-lg font-bold text-[#1A5276] mb-2">Chemical manufacturing ERP process</h3>
               <p className="mb-4 text-gray-700">
                 The chemical manufacturing ERP process encompasses two main operations: reaction and blending. Our ERP system facilitates both activities efficiently. Recognizing that raw material consumption can vary from standard BOMs, the ERP allows production entries with actual batch quantities defined by the user, comparing them against BOM standards. It calculates key parameters such as yield, handling loss, and costing based on actual raw materials consumed.
               </p>
@@ -186,7 +186,7 @@ export default function Page() {
               </div>
             </div>
             <div className="md:w-2/3 bg-white rounded-xl shadow p-6">
-              <h2 className="text-lg font-bold text-black-900 mb-2">Robust Chemical Inventory Management</h2>
+              <h2 className="text-lg font-bold text-[#1A5276] mb-2">Robust Chemical Inventory Management</h2>
               <p className="mb-4 text-gray-700">
                 Effectively manage your chemical inventory with features like:
               </p>
@@ -207,7 +207,7 @@ export default function Page() {
               </div>
             </div>
             <div className="md:w-2/3 bg-white rounded-xl shadow p-6">
-              <h2 className="text-lg font-bold text-black-900 mb-2">Comprehensive Quality Assurance & Control</h2>
+              <h2 className="text-lg font-bold text-[#1A5276] mb-2">Comprehensive Quality Assurance & Control</h2>
               <p className="mb-4 text-gray-700">
                 Define and enforce quality inspection criteria for all items – at raw material receipt, during any manufacturing stage, or before delivery. Reduce wastage and improve the quality of finished chemicals.
               </p>
@@ -218,7 +218,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h3 className="text-lg font-bold text-black-900 mb-2">Comprehensive Quality Assurance & Control</h3>
+          <h3 className="text-lg font-bold text-[#1A5276] mb-2">Comprehensive Quality Assurance & Control</h3>
           <List
             title=''
             items={[

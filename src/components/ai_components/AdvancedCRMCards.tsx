@@ -26,7 +26,7 @@ const features = [
 const AdvancedCRMCards: React.FC = () => (
   <Section>
     <div className="container-custom py-8">
-      <h2 className="text-3xl font-bold text-center mb-8">Advanced CRM System Capabilities: Elevating Open Source CRM</h2>
+      <h2 className="text-3xl font-bold text-center mb-8 text-[#1A5276]">Advanced CRM System Capabilities: Elevating Open Source CRM</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {features.map((feature, idx) => (
           <FeatureCard key={idx} {...feature} />

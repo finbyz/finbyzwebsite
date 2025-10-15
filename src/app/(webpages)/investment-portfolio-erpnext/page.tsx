@@ -47,7 +47,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8" id="how-to-use">
-        <h2 className="text-2xl font-bold mb-6 text-black flex items-center gap-2">
+        <h2 className="text-2xl font-bold mb-6 text-[#1A5276] flex items-center gap-2">
   <CheckCircle className="text-green-500 w-6 h-6" />
   How to Use ERPNext Investment Portfolio
 </h2>
@@ -87,7 +87,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-        <h2 className="text-2xl font-bold mb-6 text-black flex items-center gap-2">
+        <h2 className="text-2xl font-bold mb-6 text-[#1A5276] flex items-center gap-2">
   <CheckCircle className="text-blue-500 w-6 h-6" />
   Exit Process of Investment Portfolio in ERPNext
 </h2>

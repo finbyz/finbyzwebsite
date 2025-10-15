@@ -35,7 +35,7 @@ export default function Page() {
       {/* Introduction Section */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4 text-center">ERP Software for Engineering Companies</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center text-[#1A5276]">ERP Software for Engineering Companies</h2>
           <p className="mb-6 text-gray-700 text-center">
             <span className="font-semibold">Why implement <a href="/erp-software" target="_blank" className="text-blue-600 underline">ERP software</a> for engineering companies?</span> ERP software for engineering companies offers benefits such as better project management, cost reduction, real-time calculated information, and a total integrated package. It improves decision making and helps your business grow. Core <a href="/benefits-of-erp" target="_blank" className="text-blue-600 underline">advantages of ERP</a> for engineering include customer-oriented systems, data efficiency, and effective communication.
           </p>
@@ -49,7 +49,7 @@ export default function Page() {
       {/* Features Section */}
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4 text-center">Key Features of Engineering ERP Software</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center  text-[#1A5276]">Key Features of Engineering ERP Software</h2>
           <QuoteBlock text="A project is complete when it starts working for you, Rather than you working for it – Scott Allen" isHeading={false} />
           <p className="mt-6 text-gray-700">
             Engineering ERPs are customized to each company's needs, but typically include modules for project planning, inventory control, finance, procurement, human resources, and customer management. Key features often cover:
@@ -69,7 +69,7 @@ export default function Page() {
       {/* Benefits Section */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4 text-center">Benefits of Engineering ERP Software</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center text-[#1A5276]">Benefits of Engineering ERP Software</h2>
           <QuoteBlock text="One of the advantages, but also criticisms, of ERP systems is that they impose a standardized way of conducting business processes. - Marianne Bradford." isHeading={false} />
           <p className="mt-6 text-gray-700">
             Companies should only adopt solutions that add value to the business. ERP software for engineering companies is essential, providing many benefits:
@@ -126,7 +126,7 @@ export default function Page() {
       {/* Types of ERP Section */}
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4 text-center">Types of Engineering ERP Solutions</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center text-[#1A5276]">Types of Engineering ERP Solutions</h2>
           <QuoteBlock text="Projects we have completed demonstrate what we know - future projects decide what we will learn. - Dr. Mohsin Tiwana" isHeading={false} />
           <p className="mt-6 text-gray-700">
             Engineering companies manage complex projects of varying sizes, raising issues of cost estimation and workforce management. ERP solutions are designed for two main categories:
@@ -163,7 +163,7 @@ export default function Page() {
 
       {/* Conclusion & CTA */}
       <Section>
-        <div className="container-custom">
+        <div className="mt-5">
           <CTA
             data={{
               subheading: {

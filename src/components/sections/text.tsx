@@ -42,7 +42,7 @@ export default function TextSection({
           {paragraphs.map((paragraph, idx) => (
             <p
               key={idx}
-              className="text-slate-700 text-base md:text-lg mb-6 md:mb-7"
+              className="text-slate-700 text-base md:text-lg mb-6 md:mb-7 text-justify"
               style={{ hyphens: 'auto' as const }}
             >
               {paragraph}

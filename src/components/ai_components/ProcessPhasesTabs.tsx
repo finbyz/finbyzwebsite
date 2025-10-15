@@ -47,7 +47,7 @@ const ProcessPhasesTabs: React.FC<ProcessPhasesTabsProps> = ({ phases }) => {
                 transition={{ duration: 0.3 }}
                 className="text-center"
               >
-                <h4 className="text-lg font-semibold mb-2">{phases[activeTab].title}</h4>
+                <h4 className="text-lg font-semibold mb-2 text-[#1A5276]">{phases[activeTab].title}</h4>
                 <p className="text-muted-foreground text-base">{phases[activeTab].description}</p>
               </motion.div>
             </TabsContent>

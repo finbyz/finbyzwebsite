@@ -67,8 +67,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         "@type": "Organization",
         "name": "FinByz Tech"
       },
-      "datePublished": "2025-10-14T12:21:08.459Z",
-      "dateModified": "2025-10-14T12:21:08.459Z",
+      "datePublished": "2025-10-15T05:44:10.464Z",
+      "dateModified": "2025-10-15T05:44:10.464Z",
     }
   };
 

@@ -163,7 +163,7 @@ export default function Page() {
       {/* Benefits Section */}
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4 text-center">Benefits of Human Resource Software for Your Business</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center text-[#1A5276]">Benefits of Human Resource Software for Your Business</h2>
           <div className="text-gray-700 text-lg text-justify leading-relaxed mb-6">
             <p className="mb-2">
               In addition to core functionalities, a robust human resource software also streamlines activities such as time tracking, skill management, employee training, and detailed reporting with analytics.

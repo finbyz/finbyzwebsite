@@ -192,7 +192,7 @@ export default function ResponsiveCardGrid({ data = { cards: [] }, className }: 
                       )
                     )}
                   </div>
-                  <div className="icon-card-separator" />
+                  {card.icon && iconMap[card.icon] && <div className="icon-card-separator" />} 
                   <div className="icon-card-content">
                     <h3 className="icon-card-title">{card.title}</h3>
                     <p className="icon-card-description">{card.description}</p>

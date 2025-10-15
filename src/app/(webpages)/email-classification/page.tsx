@@ -107,12 +107,6 @@ export default function Page() {
         iconBg: 'bg-cyan-100'
       }
     ],
-    stats: {
-      steps: '6',
-      weeks: '0 setup weeks (API-first)',
-      transparency: 'Full audit logs',
-      support: '24/7 monitoring ready'
-    }
   }
 
   const featureCards = {
@@ -125,54 +119,54 @@ export default function Page() {
         title: 'AI-Powered Email Reading',
         description:
           'Understands full email context, including attachments and headers, not just keywords.',
-        icon: 'MailOpen',
-        iconColor: 'text-indigo-600',
-        iconBg: 'bg-indigo-100'
+        icon: 'Cpu',
+        iconColor: "#ffffff",
+        iconBg: "#1A5276",
       },
       {
         id: 'f2',
         title: 'Smart Intent Classification',
         description:
           'Multi-label classification with priority and routing that improves over time.',
-        icon: 'BrainCircuit',
-        iconColor: 'text-purple-600',
-        iconBg: 'bg-purple-100'
+        icon: 'Zap',
+        iconBg: "#FF8C00",
+        iconColor: "#ffffff"
       },
       {
         id: 'f3',
         title: 'Automated Data Capture',
         description:
           'Extracts names, phones, companies, addresses, and inquiry details reliably.',
-        icon: 'FileText',
-        iconColor: 'text-emerald-600',
-        iconBg: 'bg-emerald-100'
+        icon: 'TrendingUp',
+        iconBg: "#27AE60",
+        iconColor: "#ffffff"
       },
       {
         id: 'f4',
         title: 'ERPNext Integration',
         description:
           'Real-time updates to leads, contacts, and pipeline objects keep teams in sync.',
-        icon: 'Cable',
-        iconColor: 'text-blue-600',
-        iconBg: 'bg-blue-100'
+        icon: 'Globe',
+        iconBg: "#8E44AD",
+        iconColor: "#ffffff"
       },
       {
         id: 'f5',
         title: 'Adaptive Learning',
         description:
           'Learns from user feedback and corrections to master industry terminology.',
-        icon: 'Sparkles',
-        iconColor: 'text-amber-600',
-        iconBg: 'bg-amber-100'
+        icon: 'BarChart3',
+        iconBg: "#1A5276",
+        iconColor: "#ffffff"
       },
       {
         id: 'f6',
         title: 'End-to-End Automation',
         description:
           'Runs unattended from email receipt to lead creation with audit logs and alerts.',
-        icon: 'Workflow',
-        iconColor: 'text-cyan-600',
-        iconBg: 'bg-cyan-100'
+        icon: 'Target',
+        iconBg: "#8E44AD",
+        iconColor: "#ffffff"
       }
     ],
     layout: 'standard' as const,
@@ -191,49 +185,49 @@ export default function Page() {
         id: 'b1',
         title: 'Saves Time & Resources',
         description: 'Cuts manual sorting and data entry—respond faster with less effort.',
-        icon: 'Clock',
-        iconColor: 'text-slate-700',
-        iconBg: 'bg-slate-100'
+        icon: 'Shield',
+        conColor: "#ffffff",
+        iconBg: "#1A5276",
       },
       {
         id: 'b2',
         title: 'Improves Accuracy',
         description: 'AI reduces human error and duplicate records in your CRM.',
         icon: 'Target',
-        iconColor: 'text-green-700',
-        iconBg: 'bg-green-100'
+        iconBg: "#FF8C00",
+        iconColor: "#ffffff"
       },
       {
         id: 'b3',
         title: 'Accelerates Lead Response',
         description: 'Leads are generated immediately, enabling rapid engagement.',
-        icon: 'Rocket',
-        iconColor: 'text-orange-700',
-        iconBg: 'bg-orange-100'
+        icon: 'Cpu',
+        iconBg: "#27AE60",
+        iconColor: "#ffffff"
       },
       {
         id: 'b4',
         title: 'Improves Lead Management',
         description: 'Structured data drives better segmentation, reporting, and campaigns.',
-        icon: 'ListChecks',
-        iconColor: 'text-indigo-700',
-        iconBg: 'bg-indigo-100'
+        icon: 'Globe',
+        iconBg: "#8E44AD",
+        iconColor: "#ffffff"
       },
       {
         id: 'b5',
         title: 'Enhances Sales Productivity',
         description: 'Free your team to focus on nurturing and closing deals.',
-        icon: 'Briefcase',
-        iconColor: 'text-fuchsia-700',
-        iconBg: 'bg-fuchsia-100'
+        icon: 'BarChart3',
+        iconBg: "#1A5276",
+        iconColor: "#ffffff"
       },
       {
         id: 'b6',
         title: 'Scalability',
         description: 'Designed to handle high email volumes without performance loss.',
         icon: 'TrendingUp',
-        iconColor: 'text-cyan-700',
-        iconBg: 'bg-cyan-100'
+        iconBg: "#8E44AD",
+        iconColor: "#ffffff"
       }
     ],
     layout: 'standard' as const,
@@ -250,12 +244,11 @@ export default function Page() {
       <HeroSection
         headline={seo.title}
         description={seo.description || undefined}
-        heroImage={{ alt: seo.title, src:"/images/email_classifiaction.gif" }}
-        accentColor="blue"
+        heroImage={{ alt: seo.title, src: "/images/email_classifiaction.gif" }}
       />
 
       {/* 2️⃣ OVERVIEW SECTION (Required) */}
-      <Section>
+      <Section id='email-classification-overview'>
         <div className="container-custom py-8">
           <h2 className="text-2xl text-bold md:text-3xl font-semibold text-[#1A5276] mb-4">Overview</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -265,7 +258,7 @@ export default function Page() {
       </Section>
 
       {/* 3️⃣ MAIN CONTENT SECTIONS */}
-      <div className=" py-8">
+      <div className=" py-8" id='workflow-step'>
         <ProcessWorkflow data={workflowData} />
       </div>
 
@@ -280,7 +273,10 @@ export default function Page() {
           description:
             'Deploy a production-ready email classification workflow that classifies, extracts, and creates leads automatically—so your team can move faster.',
           primaryButton: { text: 'Book a demo', action: '/contact' },
-          secondaryButton: { text: 'Talk to an expert', action: '/contact' },
+          secondaryButton: {
+            text: 'See How it Works',
+            action: "#workflow-step"
+          },
           trustIndicator: { text: 'Built with enterprise security in mind', icon: 'ShieldCheck' }
         }}
       />

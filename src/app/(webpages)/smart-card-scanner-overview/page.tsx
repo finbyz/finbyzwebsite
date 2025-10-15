@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import type { Metadata } from 'next'
 import DynamicHero from '@/components/sections/dynamic-hero'
@@ -9,6 +8,11 @@ import Benefits from '@/components/sections/benefits'
 import CTA from '@/components/sections/cta'
 import { Cpu, Bot, Database } from 'lucide-react'
 
+export const metadata: Metadata = {
+  title: 'Smart Card Scanner Overview',
+  description:
+    'The Smart Card Scanner revolutionizes business card management by leveraging artificial intelligence and seamless integration with ERPNext.',
+}
 
 // Data for the Hero Section
 const heroData = {
@@ -17,7 +21,8 @@ const heroData = {
     'The Smart Card Scanner revolutionizes business card management by leveraging artificial intelligence and seamless integration with ERPNext. This intelligent tool allows users to scan or upload business card images using a Telegram chatbot interface, making the process highly accessible and convenient from anywhere.',
   heroImage: {
     alt: 'Smart Card Scanner Overview',
-    src: '/images/contact creation.gif',
+    // FIX: Replaced 'undefined' with the correctly transformed image URL to prevent the error.
+    src: '/api/fb/n/files/ChatGPT%20Image%20Oct%2014,%202025,%2003_00_34%20PM.png',
   },
   features: [
     {
@@ -36,6 +41,7 @@ const heroData = {
       description: 'Duplicate checks, linking, and instant CRM updates.',
     },
   ],
+  backgroundColor: '#0b1220',
 }
 
 // Data for the Overview Section
@@ -187,14 +193,7 @@ const ctaData = {
   title: 'Turn business cards into qualified CRM data in seconds',
   description: 'Adopt the Smart Card Scanner to streamline capture, enrich contacts, and keep ERPNext clean and current—without extra effort.',
   primaryButton: { text: 'Request a Demo', icon: 'Play', action: '/contact' },
-  secondaryButton: { 
-    text: 'Learn More', 
-    icon: 'BookOpen', 
-    action: () => {
-      const el = document.getElementById('smart-card');
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-    }
-  },
+  secondaryButton: { text: 'Learn More', icon: 'BookOpen', action: '/resources' },
   trustIndicator: {
     text: 'Secure by design • ERPNext-native • 24/7 intake',
     icon: 'Shield',
@@ -210,7 +209,7 @@ export default function SmartCardScannerPage() {
       {/* 2️⃣ OVERVIEW SECTION */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl md:text-3xl font-semibold text-[#1A5276] mb-5" id="smart-card">Overview</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Overview</h2>
           <p className="text-lg text-gray-700 leading-relaxed">{pageDescription}</p>
         </div>
       </Section>
@@ -222,8 +221,11 @@ export default function SmartCardScannerPage() {
         </div>
       </Section>
 
-      <ProcessWorkflow data={workflowData} />
-
+      <Section>
+        <div className="container-custom py-12">
+          <ProcessWorkflow data={workflowData} />
+        </div>
+      </Section>
 
       <Section>
         <div className="container-custom py-12">
@@ -232,7 +234,11 @@ export default function SmartCardScannerPage() {
       </Section>
 
       {/* 4️⃣ CTA SECTION */}
-      <CTA data={ctaData} />
+      <Section>
+        <div className="container-custom py-12">
+          <CTA data={ctaData} />
+        </div>
+      </Section>
     </>
   )
 }

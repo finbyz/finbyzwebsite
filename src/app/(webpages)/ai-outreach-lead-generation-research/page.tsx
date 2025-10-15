@@ -20,8 +20,8 @@ export default function Page() {
         headline={seoTitle}
         highlightWords={[ "Lead Generation", "Email Outreach"]}
         description={seoDescription}
-        heroImage={{ src: "/images/Content Spark (marketing automation).gif", alt: '' }}
-        primaryButton={{ text: 'Get a Demo' }}
+        heroImage={{ src: "/images/Content Spark (marketing automation).gif", alt: 'Content Spark (marketing automation)' }}
+        primaryButton={{ text: 'Get a Demo', action:'/contact' }}
 
       // secondaryButton={{ text: 'See Workflow' }}
       />
@@ -42,6 +42,7 @@ export default function Page() {
         <div className="container-custom py-12">
           <h3 className="text-2xl md:text-3xl font-semibold mb-4 text-[#1A5276]">Lead Generation</h3>
           <p className="text-gray-700 mb-8">Choose the approach that fits your campaign and data sources.</p>
+
           <ResponsiveCardGrid
             data={{
               title: '',
@@ -136,65 +137,7 @@ export default function Page() {
       </Section>
 
       {/* Features as Icon Cards */}
-      <Section>
-        <div className="container-custom py-12">
-          <h3 className="text-2xl md:text-3xl font-semibold mb-4 text-[#1A5276]">Features</h3>
-          <ResponsiveCardGrid
-            data={{
-              variant: 'iconCard',
-              showImage: false,
-              cardClassName: 'border-none hover:shadow-xl transition-all',
-              cards: [
-                {
-                  id: 'feature-flexible',
-                  title: 'Flexible Lead Generation',
-                  description:
-                    'Upload sheets or use Apollo search URLs to build precise, targeted lists quickly.',
-                  icon: 'Shuffle',
-                  iconColor: 'text-blue-600',
-                  iconBg: 'bg-blue-100'
-                },
-                {
-                  id: 'feature-ai-research',
-                  title: 'AI-Powered Research',
-                  description:
-                    'Enrich company and contact profiles with actionable insights that drive relevance.',
-                  icon: 'Bot',
-                  iconColor: 'text-emerald-600',
-                  iconBg: 'bg-emerald-100'
-                },
-                {
-                  id: 'feature-drafting',
-                  title: 'Automated Email Drafting',
-                  description:
-                    'Generate three context-aware variations per contact for fast personalization.',
-                  icon: 'PenTool',
-                  iconColor: 'text-amber-600',
-                  iconBg: 'bg-amber-100'
-                },
-                {
-                  id: 'feature-scheduling',
-                  title: 'Smart Scheduling',
-                  description:
-                    'Send at optimal times to maximize engagement and maintain consistent follow-ups.',
-                  icon: 'CalendarClock',
-                  iconColor: 'text-violet-600',
-                  iconBg: 'bg-violet-100'
-                },
-                {
-                  id: 'feature-end-to-end',
-                  title: 'End-to-End Integration',
-                  description:
-                    'Unified workflow from sourcing to outreach—scalable with minimal manual effort.',
-                  icon: 'GitBranch',
-                  iconColor: 'text-rose-600',
-                  iconBg: 'bg-rose-100'
-                }
-              ]
-            }}
-          />
-        </div>
-      </Section>
+    
 
       {/* Benefits as List Points */}
       <Section className='container-custom'>
@@ -221,8 +164,8 @@ export default function Page() {
           title: 'Launch AI-Powered Outreach',
           description:
             'See how AI-driven research and automated drafting can transform your pipeline. Get a live demo or talk to an expert today.',
-          primaryButton: { text: 'Get a Demo', icon: 'Play', action: () => { window.location.hash = '#contact'; } },
-          secondaryButton: { text: 'Download Workflow', icon: 'Download', action: () => { window.location.hash = '#resources'; } },
+          primaryButton: { text: 'Get a Demo', icon: 'Play', action: () => { window.location.href = '/contact'; } },
+          secondaryButton: { text: 'Download Workflow', icon: 'Download', action: '#resources' },
           trustIndicator: { text: 'No spam. Cancel anytime.', icon: 'ShieldCheck' }
         }}
       />

@@ -174,15 +174,6 @@ const benefitsData = {
     {
       number: 4,
       suffix: '',
-      label: 'Scale',
-      header: 'Scalable',
-      icon: 'Database',
-      description: 'Analyze hundreds of calls automatically and consistently—far beyond manual capacity.',
-      palette: { iconBg: 'bg-amber-50', iconColor: 'text-amber-600' },
-    },
-    {
-      number: 5,
-      suffix: '',
       label: 'Conversion',
       header: 'Better Conversions',
       icon: 'MessageSquare',
@@ -197,8 +188,15 @@ const ctaData = {
   title: 'Turn every call into a coaching moment inside ERPNext',
   description:
     'Get AI-powered transcripts, feedback, and scripts—automatically stored in the Voice Recording doctype for faster reviews and better conversions.',
-  primaryButton: { text: 'Get a demo', icon: 'Mic', action: 'mailto:hello@example.com?subject=ERPNext%20AI%20Call%20Analysis%20Demo' },
-  secondaryButton: { text: 'See workflow', icon: 'ClipboardList', action: '#workflow' },
+  primaryButton: { text: 'Get a demo', icon: 'Mic', action: '/contact' },
+  secondaryButton: { 
+    text: 'See workflow', 
+    icon: 'ClipboardList', 
+    action: () => {
+      const el = document.getElementById('workflow');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } 
+  },
   trustIndicator: { text: 'Secure by design • Built for ERPNext', icon: 'Database' },
 };
 
@@ -223,7 +221,7 @@ export default function AiSalesCallAnalysisPage() {
       <Section useGradient>
         <div className="container-custom py-12">
           <div className="mb-8">
-            <h3 className="text-2xl md:text-3xl font-semibold text-[#1A5276] mb-5">Voice Recording + AI Feedback</h3>
+            <h3 className="text-2xl md:text-3xl font-semibold text-[#1A5276] mb-5" id="workflow">Voice Recording + AI Feedback</h3>
             <p className="text-muted-foreground mt-3">
               Record and analyze sales calls with instant transcripts, actionable feedback, and optimized outreach scripts—all inside ERPNext.
               Turn every call into a coaching opportunity.

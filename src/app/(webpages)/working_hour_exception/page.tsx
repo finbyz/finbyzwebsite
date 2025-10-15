@@ -47,8 +47,8 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8" id="about-exception-section">
-          <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
-            <FileText className="w-6 h-6 text-primary" />
+          <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2 text-[#1A5276]">
+            <FileText className="w-6 h-6 " />
             What is a Working Hour Exception?
           </h2>
           <p className="text-base text-muted-foreground mb-2">
@@ -70,7 +70,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h3 className="text-xl font-semibold mb-2">Why is this form important?</h3>
+          <h3 className="text-xl font-semibold mb-2 text-[#1A5276]">Why is this form important?</h3>
           <p className="text-base text-muted-foreground mb-2">
             Submitting a reason for incomplete working hours or low productivity ensures that your situation is properly documented and considered. It helps the organization maintain accurate records and provide necessary support or flexibility when needed.
           </p>
@@ -78,7 +78,7 @@ export default function Page() {
       </Section>
 
       <Section>
-        <div className="container-custom py-8">
+        <div className="py-8">
           <CTA
             data={{
               subheading: {

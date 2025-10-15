@@ -56,7 +56,7 @@ interface ProcessWorkflowProps {
 }
 
 export default function ProcessWorkflow({ data = {} }: ProcessWorkflowProps) {
-  const [sectionRef, inView] = useInView(0.3);
+  const [sectionRef, inView] = useInView(0.1);
 
   const {
     component_type = "Timeline",

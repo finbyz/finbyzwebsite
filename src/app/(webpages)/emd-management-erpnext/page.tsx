@@ -35,7 +35,7 @@ export default function Page() {
       <Section useGradient>
         <div className="container-custom py-8" id="introduction">
           <div className="space-y-6">
-            <h2 className="text-2xl font-bold flex items-center gap-2">
+            <h2 className="text-2xl font-bold flex items-center gap-2 text-[#1A5276]">
               {/* <CheckCircle2 className="text-primary" size={28} /> */}
               Introduction
             </h2>
@@ -75,7 +75,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-6">How to use EMD Management in ERPNext</h2>
+          <h2 className="text-2xl font-bold mb-6 text-[#1A5276]">How to use EMD Management in ERPNext</h2>
           <HowToUseEMDSteps
             steps={[
               {

@@ -45,7 +45,7 @@ const features = [
 const UniqueSellingPropositions: React.FC = () => (
   <Section>
     <div className="container-custom py-8">
-      <h2 className="text-3xl font-bold text-center mb-8">Unique Selling Propositions of Our Sales CRM Software</h2>
+      <h2 className="text-3xl font-bold text-center mb-8 text-[#1A5276]">Unique Selling Propositions of Our Sales CRM Software</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((feature, idx) => (
           <FeatureCard key={idx} {...feature} />

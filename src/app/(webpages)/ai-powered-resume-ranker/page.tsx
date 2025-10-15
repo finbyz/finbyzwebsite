@@ -148,26 +148,19 @@ export default function Page() {
         description: 'Transparent explanations enable confident shortlisting.',
         icon: 'CheckCircle2',
         palette: { iconBg: 'bg-orange-50', iconColor: 'text-orange-600' }
-      },
-      {
-        number: 10000,
-        suffix: '+',
-        label: 'Profiles/Day',
-        header: 'Built to scale',
-        description: 'Processes high volumes reliably to meet enterprise demand.',
-        icon: 'Layers',
-        palette: { iconBg: 'bg-cyan-50', iconColor: 'text-cyan-600' }
       }
     ]
   }
 
   const outputsPoints: PointsData = {
     component_type: 'Text',
-    title: 'What You Get',
+    title: 'What You Get ?',
     points: [
       'Skill-by-skill scores mapped to JD requirements',
       'Overall candidate rating with rationale',
-      'Actionable feedback highlighting strengths and gaps'
+      'Actionable feedback highlighting strengths and gaps',
+      'AI-driven matching accuracy for every candidate profile',
+      'Ranking of candidates by job relevance and skill proficiency'
     ]
   }
 
@@ -177,7 +170,7 @@ export default function Page() {
     description:
       'Plug into ERPNext, parse resumes automatically, and get explainable candidate scores for faster, fairer shortlisting.',
     primaryButton: { text: 'Request a Demo', icon: 'Rocket', action: '/contact' },
-    secondaryButton: { text: 'See How It Works', icon: 'Play', action: '/product/resume-ranker' },
+    secondaryButton: { text: 'See How It Works', icon: 'Play', action: '/resume-ranker' },
     trustIndicator: { text: 'GDPR-ready • ERPNext integration', icon: 'ShieldCheck' }
   }
 
@@ -188,7 +181,7 @@ export default function Page() {
         headline={seoTitle}
         highlightWords={["Resume Ranker"]}
         description={seoDescription}
-        heroImage={{ src:"/AI_Powered_Resume_Ranker.gif", alt: seoTitle }}
+        heroImage={{ src: "/AI_Powered_Resume_Ranker.gif", alt: seoTitle }}
       />
 
       {/* 2️⃣ OVERVIEW SECTION */}
@@ -203,26 +196,27 @@ export default function Page() {
 
       {/* 3️⃣ MAIN CONTENT SECTIONS */}
       <Section>
-        <div className="container-custom py-12">
+        <div className="py-12">
           <ProcessWorkflow data={workflowData} />
         </div>
       </Section>
 
       <Section>
-        <div className="container-custom py-12">
+        <div className="container-custom ">
           <Points data={outputsPoints} />
         </div>
       </Section>
 
       <Section>
-        <div className="container-custom py-12">
+        <div>
           <Benefits data={benefitsData} />
         </div>
       </Section>
 
       {/* 4️⃣ CTA SECTION */}
       <Section>
-        <div className="container-custom py-12">
+        <div className=" py-12">
+
           <CTA data={ctaData} />
         </div>
       </Section>

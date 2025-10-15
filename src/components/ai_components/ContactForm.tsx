@@ -53,7 +53,7 @@ const ContactForm: React.FC = () => {
   return (
     <Card className="border-none shadow-lg animate-fade-in-up">
       <CardHeader>
-        <CardTitle className="text-primary text-xl">Get in Touch</CardTitle>
+        <CardTitle className="text-[#1A5276] text-xl">Get in Touch</CardTitle>
       </CardHeader>
       <form onSubmit={handleSubmit} autoComplete="off">
         <CardContent className="flex flex-col gap-4">

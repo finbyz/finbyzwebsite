@@ -17,7 +17,7 @@ export const List = ({
   items = [],
   conclusion = "",
   accentColor = 'amber',
-  iconColor = 'sky',
+  iconColor = 'text-sky-600',
   Icon = CheckCircle,
   iconSize = 24,
   style={}
@@ -27,7 +27,7 @@ export const List = ({
     <section className="" style={style}>
       <div className="border-none">
         <div>
-          <h2 className={`text-3xl font-semibold text-[#1A5276] decoration-${accentColor}-500 decoration-2 underline-offset-4 mb-6`}>
+          <h2 className={`text-2xl font-semibold text-[#1A5276] decoration-${accentColor}-500 decoration-2 underline-offset-4 mb-6`}>
             {title}
           </h2>
         </div>
@@ -36,7 +36,7 @@ export const List = ({
             {items.map((item, index) => (
               <li key={index} className="flex items-start space-x-3">
                 <Icon 
-                  className={`flex-shrink-0 text-${iconColor}-600 mt-1`} 
+                  className={`flex-shrink-0 ${iconColor} mt-1`} 
                   size={iconSize} 
                 />
                 <p className="text-lg text-justify leading-relaxed">

@@ -41,7 +41,7 @@ const CRMImportanceSection = () => (
     <div className="container-custom px-4 py-16 md:py-24">
       {/* Header Section */}
       <div className="max-w-4xl mx-auto text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+        <h2 className="text-4xl md:text-5xl font-bold  text-[#1A5276] mb-6 leading-tight">
           Why is CRM Software Important for Companies?
         </h2>
         <p className="text-lg md:text-xl text-gray-600 leading-relaxed">

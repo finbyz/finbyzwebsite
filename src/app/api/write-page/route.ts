@@ -375,21 +375,21 @@ export async function POST(request: NextRequest) {
     const pageDir = path.join(process.cwd(), 'src', 'app', baseDir, slug);
     const pagePath = path.join(pageDir, 'page.tsx');
     
-    // if (fs.existsSync(pagePath)) {
-    //   return NextResponse.json(
-    //     {
-    //       success: false,
-    //       error: 'Page already exists',
-    //       message: `A ${body.type} with slug "${slug}" already exists at ${body.type === 'blog' ? `/blog/${slug}` : `/${slug}`}`,
-    //       data: {
-    //         slug,
-    //         type: body.type,
-    //         existingPath: `${baseDir}/${slug}/page.tsx`
-    //       }
-    //     },
-    //     { status: 409 } // 409 Conflict
-    //   );
-    // }
+    if (!pagePath.endsWith('test') && fs.existsSync(pagePath)) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'Page already exists',
+          message: `A ${body.type} with slug "${slug}" already exists at ${body.type === 'blog' ? `/blog/${slug}` : `/${slug}`}`,
+          data: {
+            slug,
+            type: body.type,
+            existingPath: `${baseDir}/${slug}/page.tsx`
+          }
+        },
+        { status: 409 } // 409 Conflict
+      );
+    }
     
     console.log(`📝 Generating ${body.type} for slug: ${slug}`);
     

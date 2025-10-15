@@ -244,7 +244,7 @@ const EmployeeJoiningForm: React.FC<EmployeeJoiningFormProps> = ({ fields, exclu
   return (
     <Card className="border-none shadow-lg">
       <CardHeader className="pb-2">
-        <CardTitle className="text-center text-lg font-semibold tracking-tight">Employee Joining Details Form</CardTitle>
+        <CardTitle className="text-center text-lg font-semibold tracking-tight text-[#1A5276]">Employee Joining Details Form</CardTitle>
       </CardHeader>
       <form ref={formRef} onSubmit={handleSubmit} onReset={handleReset} className="px-4 pt-2 pb-6">
         <CardContent className="space-y-2">

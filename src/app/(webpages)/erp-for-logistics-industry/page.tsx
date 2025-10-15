@@ -143,7 +143,7 @@ export default function Page() {
       {/* Introduction Section */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4">ERP Software for Logistics Industry</h2>
+          <h2 className="text-2xl font-bold mb-4 text-[#1A5276]">ERP Software for Logistics Industry</h2>
           <p className="text-muted-foreground text-base mb-4">
             The logistics sector operates under constant pressure to enhance speed, reliability, and cost-effectiveness. An ERP for the logistics industry, specifically designed for its unique operational demands, is crucial for navigating these complexities. By integrating key processes into a unified platform, a robust logistics ERP system provides the clarity and control needed to streamline your entire supply chain, from initial order to final delivery. This is how leading businesses gain a competitive edge.
           </p>
@@ -181,11 +181,11 @@ export default function Page() {
       {/* Benefits Section */}
       <Section>
         <div id="benefits-section" className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-8 text-center">What Benefits Does ERP Software Offer in the Logistics Industry?</h2>
+          <h2 className="text-2xl font-bold mb-8 text-center text-[#1A5276]">What Benefits Does ERP Software Offer in the Logistics Industry?</h2>
           <p className="text-base text-muted-foreground mb-6 text-center">
             ERP software revolutionizes logistics by streamlining operations from planning to quality control. It replaces manual processes with automation, enhancing efficiency and accuracy.
           </p>
-          <h3 className="text-lg font-semibold mb-6 text-center">Here are some of the benefits that ERP software provides in logistics:</h3>
+          <h3 className="text-lg font-semibold mb-6 text-center text-[#1A5276]">Here are some of the benefits that ERP software provides in logistics:</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, idx) => (
               <BenefitCard
@@ -204,7 +204,7 @@ export default function Page() {
       <Section useGradient>
         <div className="container-custom py-8 flex flex-col items-center">
           <h2 className="text-2xl font-bold mb-4 text-center" style={{color:" #1A5276;"}}>ERP Software Process in the Logistics Industry</h2>
-          <h3 className="text-lg font-semibold mb-8 text-center">The simplified process followed by ERP software is as below:</h3>
+          <h3 className="text-lg font-semibold mb-8 text-center text-[#1A5276]">The simplified process followed by ERP software is as below:</h3>
           <div className="w-full text-center mb-8">
             <ProcessPhasesTabs phases={processPhases} />
           </div>

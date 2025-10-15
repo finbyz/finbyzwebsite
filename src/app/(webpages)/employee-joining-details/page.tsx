@@ -56,8 +56,8 @@ export default function Page() {
       <Section>
         <div className="container-custom py-8 flex flex-col md:flex-row items-center gap-8 animate-fade-in-up">
           <div className="flex-1">
-            <h2 className="text-2xl font-bold mb-2 flex items-center gap-2">
-              <UserPlus className="text-primary" size={28} />
+            <h2 className="text-2xl font-bold mb-2 flex items-center gap-2 text-[#1A5276]">
+              <UserPlus className="text-[#1A5276]" size={28} />
               Welcome to Your New Journey
             </h2>
             <p className="text-base text-muted-foreground mb-2">
@@ -70,7 +70,7 @@ export default function Page() {
             </ul>
           </div>
           <div className="flex-1 flex justify-center">
-            <Image src="/images/employee-joining-form-illustration.png" alt="Employee Joining Form Illustration" width={500} height={500} className="rounded-xl shadow-lg w-full md:w-96 h-auto object-contain animate-fade-in" loading="lazy" />
+            {/* <Image src="/images/employee-joining-form-illustration.png" alt="Employee Joining Form Illustration" width={500} height={500} className="rounded-xl shadow-lg w-full md:w-96 h-auto object-contain animate-fade-in" loading="lazy" /> */}
           </div>
         </div>
       </Section>
@@ -81,10 +81,13 @@ export default function Page() {
       </Section>
       <Section useGradient>
         <div className="container-custom py-8 text-center">
-          <h3 className="text-xl font-semibold mb-2">Need Help?</h3>
+          <h3 className="text-xl font-semibold mb-2 text-[#1A5276]">Need Help?</h3>
           <p className="text-base text-muted-foreground mb-4">If you have any questions or need assistance with the joining process, our HR team is here to help you every step of the way.</p>
           <a href="mailto:hr@company.com" className="inline-flex items-center gap-2 text-primary font-medium hover:underline">
-            <UserPlus size={18} /> Contact HR
+            {/* <UserPlus size={18} /> */}
+            {/* <button className="bg-orange-500 text-white px-6 py-2 rounded-2xl hover:bg-orange-600">
+            Contact HR
+          </button> */}
           </a>
         </div>
       </Section>

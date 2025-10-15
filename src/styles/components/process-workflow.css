@@ -1,7 +1,7 @@
 /* Process Workflow Section Styles */
 .process-workflow-section {
   padding: 5rem 0;
-  background: linear-gradient(135deg, #1A5276 0%, #2E86AB 100%);
+  background: #0f172a var(--tw-gradient-to-position);
   width: 100%;
   position: relative;
   overflow: hidden;

@@ -10,7 +10,7 @@ import CircleReasonTabs from '@/components/ai_components/CircleReasonTabs';
 import Image from 'next/image';
 import { CheckCircle2 } from 'lucide-react';
 
-const heroHighlightWords = ["JavaScript", "Developer", "Hire"];
+const heroHighlightWords = [ "Developer", "Hire"];
 
 const whyChooseFeatures = [
   {
@@ -323,7 +323,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8 flex flex-col gap-6">
-          <h2 className="text-2xl font-bold text-center mb-4">Our Expertise with Javascript Frameworks</h2>
+          <h2 className="text-2xl font-bold text-center mb-4 text-[#1A5276]">Our Expertise with Javascript Frameworks</h2>
           <QuoteBlock
             text="JavaScript has a large number of frameworks that make it easier for developers to build complex applications and improve the overall performance and efficiency of their code. Here are some of the most popular JavaScript frameworks, along with their most effective applications."
             isHeading={false}
@@ -352,7 +352,7 @@ export default function Page() {
         <br></br><br></br><br></br><br></br><br></br><br></br>
       <Section>
         <div className="container-custom py-8 flex flex-col gap-6">
-          <h2 className="text-2xl font-bold mb-4">Node.JS Development Company</h2>
+          <h2 className="text-2xl font-bold mb-4 text-[#1A5276]">Node.JS Development Company</h2>
           <p className="text-base text-muted-foreground">
             Node.js, or simply Node, is a free, open-source, cross-platform JavaScript runtime environment that executes JavaScript code on the server side. Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
           </p>
@@ -394,21 +394,21 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8 flex flex-col items-center">
-          <h2 className="text-2xl font-bold text-center mb-8">Why to Choose Finbyz Tech?</h2>
+          <h2 className="text-2xl font-bold text-center mb-8 text-[#1A5276]">Why to Choose Finbyz Tech?</h2>
           <WhyChooseFinbyzGrid features={whyChooseFeatures} />
         </div>
       </Section>
 
       <Section>
         <div className="container-custom py-8 flex flex-col items-center">
-          <h2 className="text-2xl font-bold text-center mb-8">Most Compelling Reasons to Consider JS for Your All Software Needs</h2>
+          <h2 className="text-2xl font-bold text-center mb-8 text-[#1A5276]">Most Compelling Reasons to Consider JS for Your All Software Needs</h2>
           <CircleReasonTabs reasons={jsReasons} />
         </div>
       </Section>
 
       <Section useGradient>
         <div className="container-custom py-8 flex flex-col items-center">
-          <h2 className="text-2xl font-bold text-center mb-8">Where JS shall not be used?</h2>
+          <h2 className="text-2xl font-bold text-center mb-8 text-[#1A5276]">Where JS shall not be used?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
             {jsNotFor.map((item, idx) => (
               <div key={item.title} className="rounded-xl bg-white shadow p-6 flex flex-col items-center border border-muted transition hover:shadow-lg">

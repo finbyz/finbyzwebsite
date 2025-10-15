@@ -14,17 +14,17 @@ const ThankYouCard: React.FC<ThankYouCardProps> = ({ title, message, buttonText,
   return (
     <Card className="border-none shadow-lg bg-white/90 hover:shadow-xl transition-shadow duration-300">
       <CardHeader className="flex flex-col items-center gap-2 pb-0">
-        <CardTitle className="flex items-center gap-2 text-lg font-semibold text-primary">
-          <span className="inline-flex items-center px-3 py-1 rounded-full bg-muted text-muted-foreground text-xs font-medium">
+        <CardTitle className="flex items-center gap-2 text-2xl font-semibold text-[#1A5276]">
+          <h2 className="inline-flex items-center px-3 py-1 rounded-full bg-muted text-muted-foreground font-medium">
             {title}
-          </span>
+          </h2>
         </CardTitle>
       </CardHeader>
       <CardContent className="pt-4 pb-0 text-center text-base text-gray-700">
         {message}
       </CardContent>
       <CardFooter className="flex justify-center pt-6">
-        <Button onClick={buttonAction} variant="default" className="gap-2 px-6 py-2 rounded-full text-base font-medium shadow-md hover:scale-105 transition-transform">
+        <Button onClick={buttonAction} variant="default" className="gap-2 px-6 py-2 rounded-full text-base font-medium shadow-md bg-[#FF8C00] hover:bg-orange-500 hover:scale-105 transition-transform">
           <ArrowLeft className="w-4 h-4" />
           {buttonText}
         </Button>

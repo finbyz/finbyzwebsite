@@ -43,7 +43,7 @@ export default function Page() {
             <div className="md:w-1/12 flex justify-center mb-4 md:mb-0">
               {/* <Image src="/images/Quotation_marks.svg" alt="Quotation marks" width={40} height={40} className="opacity-80" /> */}
             </div>
-            <div className="md:w-11/12 text-[#FF8C00]">
+            <div className="md:w-11/12">
               <p>
                 "The surest foundation of a Manufacturing concern is quality. After that, and a long way after, comes cost – Andrew Carnegie"
               </p>
@@ -62,7 +62,7 @@ export default function Page() {
     <h2 className="text-2xl font-bold mb-6 text-center text-[#1A5276]">Why ERP is Crucial for Modern Manufacturing ?</h2>
 
     {/* Bold Intro Line with larger font, centered */}
-    <p className="text-center text-lg sm:text-xl font-semibold text-gray-900 mb-6">
+    <p className="text-center text-lg sm:text-xl font-semibold text-[#1A5276] mb-6">
       "Continuous learning and smart process automation are the minimum requirements for success in modern manufacturing - Brian Tracy"
     </p>
     
@@ -127,7 +127,7 @@ export default function Page() {
           <div className="flex flex-col md:flex-row md:items-center md:gap-8">
             <div className="md:w-1/12 flex justify-center mb-4 md:mb-0">
             </div>
-            <div className="md:w-11/12">
+            <div className="md:w-11/12 text-[#1A5276]">
               <p></p>
               <b>"Continuous improvement is better than delayed perfection – Mark Twain"</b>
             </div>
@@ -169,7 +169,7 @@ export default function Page() {
           <div className="flex flex-col md:flex-row md:items-center md:gap-8">
             <div className="md:w-1/12 flex justify-center mb-4 md:mb-0">
             </div>
-            <div className="md:w-11/12">
+            <div className="md:w-11/12 text-[#1A5276]">
               <p>
                 <b>"Time is needed to convert all ideas and added values into tangible products that benefit the world. - Sunday Adelaja"</b>
               </p>
@@ -207,7 +207,7 @@ export default function Page() {
             <div className="md:w-1/12 flex justify-center mb-4 md:mb-0">
             </div>
             <div className="md:w-11/12">
-              <div className="md:w-11/12">
+              <div className="md:w-11/12 text-[#1A5276]">
               <p>
                 <b>"Almost all quality improvements come via simplification of design, manufacturing, layout, processes, and procedures - Tom Peters"</b>
               </p>

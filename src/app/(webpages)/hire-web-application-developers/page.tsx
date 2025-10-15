@@ -60,7 +60,7 @@ export default function Page() {
       {/* What We Offer as Web Developers */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-8 text-primary">What We Offer as Web Developers?</h2>
+          <h2 className="text-2xl font-bold mb-8 text-[#1A5276]">What We Offer as Web Developers?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FeatureCard
               title="Custom Web Development"
@@ -105,7 +105,7 @@ export default function Page() {
       {/* Our Web Application Development Expertise */}
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold text-center mb-8 text-primary">Our Web Application Development Expertise</h2>
+          <h2 className="text-2xl font-bold text-center mb-8 text-[#1A5276]">Our Web Application Development Expertise</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <FeatureCard
               title="Front-End Development"
@@ -138,7 +138,7 @@ export default function Page() {
       {/* What is Web Development? */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4 text-primary">What is Web Development?</h2>
+          <h2 className="text-2xl font-bold mb-4 text-[#1A5276]">What is Web Development?</h2>
           <p>
             <a href="/website-development" className="text-primary underline hover:text-primary-700 transition">Web development</a> typically involves working with a combination of technologies that may include HTML, CSS, JavaScript, server-side scripting languages like PHP, Python, or Ruby, and various database systems. Web developers use these technologies to build websites that users can access over the internet using web browsers like Chrome, Firefox, or Safari.
           </p>
@@ -168,7 +168,7 @@ export default function Page() {
       {/* Process We Follow */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold text-center mb-8 text-primary">Process We Follow</h2>
+          <h2 className="text-2xl font-bold text-center mb-8 text-[#1A5276]">Process We Follow</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ProcessStepCard
               title="Planning and Analysis"
@@ -225,7 +225,7 @@ export default function Page() {
       {/* Industries We Serve */}
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold text-center mb-8 text-primary">Industries We Serve</h2>
+          <h2 className="text-2xl font-bold text-center mb-8 text-[#1A5276]">Industries We Serve</h2>
           <IndustryHexGrid />
         </div>
       </Section>
@@ -233,7 +233,7 @@ export default function Page() {
       {/* Conclusion & CTA */}
       <Section>
         <div className="py-8 flex flex-col items-center text-center gap-6">
-          <h2 className="text-2xl font-bold text-primary">Ready to Build Your Next Web Application?</h2>
+          <h2 className="text-2xl font-bold text-[#1A5276]">Ready to Build Your Next Web Application?</h2>
           <p>
             Partner with Finbyz Tech to unlock the full potential of your business with innovative, scalable, and secure web applications. Our expert team is ready to help you achieve your digital goals.
           </p>

@@ -18,7 +18,7 @@ export default function HowToUseFDAppSteps({ steps }: { steps: Array<{ title: st
             <CardTitle className="text-lg font-semibold">{step.title}</CardTitle>
           </CardHeader>
           <CardContent>
-            <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
+            <ol className="list-decimal list-inside space-y-2 text-muted-foreground text-justify">
               {step.items.map((item, i) => (
                 <li key={i} className="leading-relaxed">{item}</li>
               ))}

@@ -39,36 +39,36 @@ export default function Benefits({ data = {} }: BenefitsProps) {
     title = "Why Choose Finbyz",
     subtitle = "Proven results that speak for themselves",
     benefits = [
-      { 
-        number: 10, 
-        suffix: "+", 
+      {
+        number: 10,
+        suffix: "+",
         label: "Years of Proven Experience",
         header: "Proven Track Record",
         description: "Decade of expertise in delivering cutting-edge solutions",
         icon: "Award",
         palette: { iconBg: "#1A5276", iconColor: "#fff" }
       },
-      { 
-        number: 200, 
-        suffix: "+", 
+      {
+        number: 200,
+        suffix: "+",
         label: "Efficiency Gains with Our Solutions",
         header: "Maximum Efficiency",
         description: "Transform your operations with intelligent automation",
         icon: "TrendingUp",
         palette: { iconBg: "#FF8C00", iconColor: "#fff" }
       },
-      { 
-        number: 12, 
-        suffix: "+", 
+      {
+        number: 12,
+        suffix: "+",
         label: "Countries Served",
         header: "Global Reach",
         description: "Serving clients across multiple continents worldwide",
         icon: "Globe",
         palette: { iconBg: "#27AE60", iconColor: "#fff" }
       },
-      { 
-        number: 100, 
-        suffix: "+", 
+      {
+        number: 100,
+        suffix: "+",
         label: "Projects Delivered with Precision",
         header: "Quality Delivery",
         description: "Every project completed with exceptional precision and care",
@@ -76,7 +76,7 @@ export default function Benefits({ data = {} }: BenefitsProps) {
         palette: { iconBg: "#8E44AD", iconColor: "#fff" }
       }
     ],
-    ctaButton = { text: "Let's Build That Efficiency →", action: "efficiency"}
+    ctaButton = { text: "Let's Build That Efficiency →", action: "efficiency" }
   } = data;
 
   // Ensure distinct icons across benefits (fallback rotates through pool)
@@ -156,14 +156,14 @@ export default function Benefits({ data = {} }: BenefitsProps) {
             {subtitle}
           </p>
         </div>
-        
+
         {/* Grid layout for 4 cards */}
         <div className="benefits-grid">
           {distinctBenefits.map((benefit, index) => {
             const IconComponent = getIconComponent(benefit.icon);
-            
+
             return (
-              <div 
+              <div
                 key={benefit.label}
                 className={`benefits-card-wrapper ${getDelayClass(index)}`}
               >
@@ -174,35 +174,34 @@ export default function Benefits({ data = {} }: BenefitsProps) {
                     >
                       <IconComponent className={`benefits-icon benefits-icon-color--light`} />
                     </div>
-                    
+
                     {/* Header */}
                     <h3 className="benefits-card-header">
                       {benefit.header}
                     </h3>
-                    
+
                     {/* Animated Counter */}
-                    <div className="benefits-counter">
-                      {benefit.number}{benefit.suffix}
+                    <div className="benefits-counter inline">
+                      <span className="inline">
+                        {benefit.number}{benefit.suffix} <p className="benefits-card-label inline ms-1">
+                          {benefit.label}
+                        </p>
+                      </span>
+
                     </div>
                     {/* Label */}
-                    <p className="benefits-card-label">
-                      {benefit.label}
-                    </p>
-                    
+
                     {/* Description */}
                     <p className="benefits-card-description">
                       {benefit.description}
                     </p>
-                   
-                    
-                    
                   </CardContent>
                 </Card>
               </div>
             );
           })}
         </div>
-        
+
         {/* Bottom CTA */}
         {/*<div className={`benefits-cta benefits-delay-4`}>
           <Button 

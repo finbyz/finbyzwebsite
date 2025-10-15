@@ -29,7 +29,7 @@ const CoreFeaturesFlipCards: React.FC = () => (
         <span className="inline-block px-4 py-1.5 mb-4 text-sm font-semibold text-blue-600 bg-blue-50 rounded-full">
           Core Features
         </span>
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-[#1A5276]">
           Beyond Sales Tracker Software
         </h2>
         <p className="text-lg text-gray-600">

@@ -38,7 +38,6 @@ export default function Page() {
         heroImage={{
           alt: 'Argentina Electronic Invoicing in ERPNext: AFIP Compliance & Automation',
           src: '/images/Line Banner-41 (2)_11zon.png',
-          // videoSrc: ''
         }}
       />
 
@@ -55,9 +54,9 @@ export default function Page() {
 
       {/* Custom Fields Section */}
       <Section useGradient>
-        <div className="container-custom py-8 grid md:grid-cols-2 gap-8 items-center">
+        <div className="container-custom py-8 items-center">
           <div>
-            <h3 className="text-2xl font-semibold mb-2 flex items-center gap-2">
+            <h3 className="text-3xl font-semibold mb-2 flex items-center gap-2">
               {/* <HiOutlineDocumentText className="text-blue-500" size={28} /> */}
             <span className='text-[#1A5276]'>Custom Fields to Support Legal Compliance</span>
             </h3>
@@ -73,12 +72,6 @@ export default function Page() {
                 'Customer-specific tax identification fields to accommodate different tax categories, such as exempt, general, and reduced VAT rates.'
               ]}
             />
-          </div>
-          <div className="flex justify-center items-center">
-            <Image src="/images/Line Banner-41 (2)_11zon.png" alt="Custom Fields to Support Legal Compliance"
-              width={400}
-              height={260}
-              className="rounded-xl shadow-lg object-contain animate-fadeinleft" />
           </div>
         </div>
       </Section>
@@ -102,9 +95,6 @@ export default function Page() {
                 'Predefined Select Fields: Standardized dropdown options for VAT statuses, payment methods, and tax categories to reduce manual errors and ensure consistency.'
               ]}
             />
-          </div>
-          <div className="flex justify-center items-center">
-            <Image fill src="/images/Line Banner-41 (2)_11zon.png" alt="Enhanced Form Organization" />
           </div>
         </div>
       </Section>
@@ -182,7 +172,7 @@ export default function Page() {
 
       {/* Support for Various Business Scenarios */}
       <Section>
-        <div className="container-custom py-8 grid md:grid-cols-2 gap-8 items-center">
+        <div className="container-custom py-8 items-center">
           <div>
             <h3 className="text-2xl font-semibold mb-2 flex items-center gap-2">
               {/* <LuBanknote className="text-yellow-500" size={28} /> */}
@@ -198,9 +188,6 @@ export default function Page() {
                 'Assign appropriate VAT rates and exemptions based on customer and product categories.'
               ]}
             />
-          </div>
-          <div className="flex justify-center items-center">
-            <Image fill src="/images/Line Banner-41 (2)_11zon.png" alt="Support for Various Business Scenarios" />
           </div>
         </div>
       </Section>

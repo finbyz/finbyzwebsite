@@ -31,8 +31,8 @@ export default function Page() {
         heroImage={{
           alt: 'contact',
           // src: '/images/icon-phone.svg',
-          src:"/contact-hero.webp",
-          
+          src: "/contact-hero.webp",
+
         }}
       />
 
@@ -46,11 +46,11 @@ export default function Page() {
             ]}
             email={{ label: 'info@finbyz.com', href: 'mailto:info@finbyz.com' }}
             address={
-         '504-Addor Ambition,Nr. Navrang Circle,Navrangpura,Ahmedabad, Gujarat 380009'
+              '504-Addor Ambition,Nr. Navrang Circle,Navrangpura,Ahmedabad, Gujarat 380009'
             }
             office={'Registered Office'}
           />
-               {/* '504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009' */}
+          {/* '504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009' */}
           <div className="rounded-xl overflow-hidden shadow-lg animate-fade-in-up">
             <iframe
               title="Finbyz Location Map"
@@ -73,39 +73,35 @@ export default function Page() {
         </div>
       </Section>
 
-      <Section>
-        <div className=" py-8 flex flex-col items-center">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to Transform?',
-                icon: 'Phone',
-              },
-              title: 'Let’s Connect and Grow Your Business',
-              description: 'Contact Finbyz for expert ERP and digital solutions. Our team is ready to help you streamline your business operations.',
-              primaryButton: {
-                text: 'Contact Now',
-                icon: 'Send',
-                action: () => {
-                  const el = document.getElementById('contact-form-section');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                }
-              },
-              secondaryButton: {
-                text: 'Call Us',
-                icon: 'Phone',
-                action: () => {
-                  window.open('tel:9925701446', '_self');
-                }
-              },
-              trustIndicator: {
-                text: 'Trusted by 100+ businesses',
-                icon: 'CheckCircle',
-              }
-            }}
-          />
-        </div>
-      </Section>
+      <CTA
+        data={{
+          subheading: {
+            text: 'Ready to Transform?',
+            icon: 'Phone',
+          },
+          title: 'Let’s Connect and Grow Your Business',
+          description: 'Contact Finbyz for expert ERP and digital solutions. Our team is ready to help you streamline your business operations.',
+          primaryButton: {
+            text: 'Contact Now',
+            icon: 'Send',
+            action: () => {
+              const el = document.getElementById('contact-form-section');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }
+          },
+          secondaryButton: {
+            text: 'Call Us',
+            icon: 'Phone',
+            action: () => {
+              window.open('tel:9925701446', '_self');
+            }
+          },
+          trustIndicator: {
+            text: 'Trusted by 100+ businesses',
+            icon: 'CheckCircle',
+          }
+        }}
+      />
     </>
   );
 }

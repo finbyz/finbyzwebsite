@@ -38,11 +38,11 @@ export default function Page() {
       <Section useGradient>
         <div className="container-custom py-8 flex flex-col md:flex-row items-center gap-8 animate-fade-in-up">
           <div className="flex-1">
-            <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-              <span className="inline-block w-2 h-6 bg-primary rounded-sm mr-2" />
+            <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-[#1A5276]">
+              <span className="inline-block w-2 h-6 bg-primary rounded-sm" />
               Introduction
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <p className="text-muted-foreground text-lg leading-relaxed text-justify">
               In ERPNext, Fixed Deposit (FD) management is a vital component of effective financial asset planning. A fixed deposit is a secure investment option offered by banks and NBFCs, providing higher returns than a standard savings account over a fixed period. With FD management in ERPNext, businesses can track, manage, and automate their fixed deposit operations directly within the ERP system, ensuring accuracy and compliance.
             </p>
           </div>
@@ -64,7 +64,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[#1A5276]">
             <span className="inline-block w-2 h-6 bg-primary rounded-sm mr-2" />
             How to use the App
           </h2>
@@ -100,7 +100,7 @@ export default function Page() {
         </div>
       </Section>
 
-      <Section>
+      {/* <Section>
         <div className="container-custom py-8 flex flex-col items-center gap-4">
           <h4 className="text-lg font-semibold">Download:</h4>
           <Link href="https://frappecloud.com/marketplace/apps/fd_management" target="_blank" rel="noopener noreferrer">
@@ -110,7 +110,7 @@ export default function Page() {
             </Button>
           </Link>
         </div>
-      </Section>
+      </Section> */}
 
       <Section useGradient>
         <div className="container-custom py-8 flex flex-col items-center text-center">

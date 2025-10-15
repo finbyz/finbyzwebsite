@@ -160,25 +160,29 @@ export default function Page() {
         }}
       />
 
-      <div id="brochure-section">
+      <div id="brochure-section " className="text-[#1A5276]">
         <DownloadSection
           title="Download Brochure"
           items={brochureItems}
           onDownload={handleDownload}
         />
       </div>
-
-      <DownloadSection
+       
+      <div className="text-[#1A5276]">
+      <DownloadSection 
         title="AI-CRM Integration with ERPNext"
         items={aiCrmItems}
         onDownload={handleDownload}
       />
+      </div>
 
-      <DownloadSection
+      <div className="text-[#1A5276]">
+        <DownloadSection
         title="AI Automations"
         items={aiAutomationItems}
         onDownload={handleDownload}
       />
+      </div>
 
       <DownloadFormModal
         open={modalOpen}
@@ -189,7 +193,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8 flex flex-col items-center text-center gap-4">
-          <h2 className="text-2xl font-bold">Ready to Transform Your Business?</h2>
+          <h2 className="text-2xl font-bold text-[#1A5276]">Ready to Transform Your Business?</h2>
           <p className="text-muted-foreground">Contact us to learn more about our solutions or request a personalized demo.</p>
         </div>
       </Section>

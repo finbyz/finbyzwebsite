@@ -136,7 +136,7 @@ export default function Page() {
               paddingLeft: 0,
             }}
             Icon={CheckCircle}
-            iconColor='green'
+            iconColor='text-green-600'
           />
         </div>
       </Section>
@@ -159,7 +159,7 @@ export default function Page() {
               paddingLeft: 0,
             }}
             Icon={CheckCircle}
-            iconColor='green'
+            iconColor='text-green-600'
           />
         </div>
       </Section>

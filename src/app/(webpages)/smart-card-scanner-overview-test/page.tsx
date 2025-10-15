@@ -1,14 +1,19 @@
-'use client'
 import React from 'react'
 import type { Metadata } from 'next'
 import DynamicHero from '@/components/sections/dynamic-hero'
 import Section from '@/components/sections/Section'
 import Points from '@/components/sections/points'
-import ProcessWorkflow from '@/components/sections/process-workflow'
+// 👇 1. Import the new component
+import ResponsiveCardGrid from '@/components/sections/responsive-card-grid'
 import Benefits from '@/components/sections/benefits'
 import CTA from '@/components/sections/cta'
 import { Cpu, Bot, Database } from 'lucide-react'
 
+export const metadata: Metadata = {
+  title: 'Smart Card Scanner Overview',
+  description:
+    'The Smart Card Scanner revolutionizes business card management by leveraging artificial intelligence and seamless integration with ERPNext.',
+}
 
 // Data for the Hero Section
 const heroData = {
@@ -17,7 +22,7 @@ const heroData = {
     'The Smart Card Scanner revolutionizes business card management by leveraging artificial intelligence and seamless integration with ERPNext. This intelligent tool allows users to scan or upload business card images using a Telegram chatbot interface, making the process highly accessible and convenient from anywhere.',
   heroImage: {
     alt: 'Smart Card Scanner Overview',
-    src: '/images/contact creation.gif',
+    src: '/api/fb/n/files/ChatGPT%20Image%20Oct%2014,%202025,%2003_00_34%20PM.png',
   },
   features: [
     {
@@ -36,6 +41,7 @@ const heroData = {
       description: 'Duplicate checks, linking, and instant CRM updates.',
     },
   ],
+  backgroundColor: '#0b1220',
 }
 
 // Data for the Overview Section
@@ -54,67 +60,38 @@ const purposeData = {
   ],
 }
 
-// Data for the ProcessWorkflow Section
-const workflowData = {
-  component_type: 'Timeline' as const,
-  title: 'Expanded Workflow Steps',
-  subtitle: 'From card capture to clean CRM records in minutes',
-  processSteps: [
+// 👇 2. Transform the workflow data into the format for ResponsiveCardGrid
+const workflowCardData = {
+  title: 'Streamlined Contact Capture Workflow',
+  subtitle: 'From card capture to clean CRM records in three efficient steps',
+  variant: 'iconCard' as const, // Use the icon card style
+  cardClassName: 'border-none hover:shadow-xl transition-all', // Optional styling
+  cards: [
     {
-      step: '1',
-      title: 'Telegram Bot Scan & Upload',
-      description: 'Users initiate contact capture by scanning or uploading business card images to a dedicated Telegram bot. This familiar and mobile-friendly interface allows immediate submission from any device.',
+      id: 'step-1',
+      title: '1. Scan, Upload & AI Extraction',
+      description: 'Users scan or upload a business card via Telegram. Our AI engine immediately processes the image, extracting all contact details and validating data for accuracy.',
       icon: 'Scan',
-      details: ['Mobile-friendly interface', 'Immediate submission from any device', 'User-friendly workflow'],
-      duration: '~10s',
       iconColor: 'text-blue-600',
       iconBg: 'bg-blue-50',
     },
     {
-      step: '2',
-      title: 'AI Extraction of Contact Data',
-      description: 'The backend AI engine processes the uploaded images, extracting not only common contact fields (name, email, phone) but also company, designations, addresses, and even social media handles where available. Data quality validation routines verify field accuracy upon ingestion.',
-      icon: 'Brain',
-      details: [
-        'Extracts contact fields, company, and social handles',
-        'Data quality validation for accuracy',
-        'Automated data ingestion',
-      ],
-      duration: '~15s',
+      id: 'step-2',
+      title: '2. ERP Contact Verification & Sync',
+      description: 'The system queries ERPNext to prevent duplicates. It intelligently updates existing records or creates new leads and contacts, ensuring data integrity across the sales pipeline.',
+      icon: 'Database',
       iconColor: 'text-emerald-600',
       iconBg: 'bg-emerald-50',
     },
     {
-      step: '3',
-      title: 'ERP Contact Verification',
-      description: 'The system queries ERPNext for existing contacts using intelligent matching algorithms. If found, details are updated. If not, it searches for a linked lead or customer to associate the new contact with. If no link exists, a new lead and contact record are created.',
-      icon: 'Database',
-      details: [
-        'Intelligent matching algorithms',
-        'Updates existing records or creates new ones',
-        'Preserves data integrity in the sales pipeline',
-      ],
-      duration: '~10-20s',
-      iconColor: 'text-indigo-600',
-      iconBg: 'bg-indigo-50',
-    },
-    {
-      step: '4',
-      title: 'Instant User Confirmation via Telegram',
-      description: 'Upon successful creation or update, users receive a confirmation message summarizing the action taken—whether it was an update or new record creation—alongside key extracted contact details, enhancing transparency and accountability.',
+      id: 'step-3',
+      title: '3. Instant User Confirmation',
+      description: 'A confirmation message is sent back to the user via Telegram, summarizing the action taken and displaying the key contact details that were saved in the CRM.',
       icon: 'Send',
-      details: ['Summary of action taken', 'Key extracted contact details provided', 'Enhances transparency and accountability'],
-      duration: 'Instant',
       iconColor: 'text-violet-600',
       iconBg: 'bg-violet-50',
     },
   ],
-  stats: {
-    steps: '4 Steps',
-    weeks: 'Real-time',
-    transparency: 'Full Transparency',
-    support: '24/7 Bot Intake',
-  },
 }
 
 // Data for the Benefits Section
@@ -187,14 +164,7 @@ const ctaData = {
   title: 'Turn business cards into qualified CRM data in seconds',
   description: 'Adopt the Smart Card Scanner to streamline capture, enrich contacts, and keep ERPNext clean and current—without extra effort.',
   primaryButton: { text: 'Request a Demo', icon: 'Play', action: '/contact' },
-  secondaryButton: { 
-    text: 'Learn More', 
-    icon: 'BookOpen', 
-    action: () => {
-      const el = document.getElementById('smart-card');
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-    }
-  },
+  secondaryButton: { text: 'Learn More', icon: 'BookOpen', action: '/resources' },
   trustIndicator: {
     text: 'Secure by design • ERPNext-native • 24/7 intake',
     icon: 'Shield',
@@ -210,7 +180,7 @@ export default function SmartCardScannerPage() {
       {/* 2️⃣ OVERVIEW SECTION */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl md:text-3xl font-semibold text-[#1A5276] mb-5" id="smart-card">Overview</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Overview</h2>
           <p className="text-lg text-gray-700 leading-relaxed">{pageDescription}</p>
         </div>
       </Section>
@@ -222,8 +192,12 @@ export default function SmartCardScannerPage() {
         </div>
       </Section>
 
-      <ProcessWorkflow data={workflowData} />
-
+      <Section>
+        <div className="container-custom py-12">
+          {/* 👇 3. Use the new component and its data */}
+          <ResponsiveCardGrid data={workflowCardData} />
+        </div>
+      </Section>
 
       <Section>
         <div className="container-custom py-12">
@@ -232,7 +206,11 @@ export default function SmartCardScannerPage() {
       </Section>
 
       {/* 4️⃣ CTA SECTION */}
-      <CTA data={ctaData} />
+      <Section>
+        <div className="container-custom py-12">
+          <CTA data={ctaData} />
+        </div>
+      </Section>
     </>
   )
 }

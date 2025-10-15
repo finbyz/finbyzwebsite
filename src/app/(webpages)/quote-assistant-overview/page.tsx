@@ -55,7 +55,7 @@ export default function Page() {
           The Quote Assistant streamlines the entire sales quotation workflow, dramatically reducing the time and effort required in quote generation. It automatically extracts and analyzes customer inquiries—including all linked emails and attachments—to help sales teams respond faster and more accurately.
         </p>
         <p className="text-slate-700 text-base md:text-lg leading-8 md:leading-9 mb-6 md:mb-7">The system intelligently reads inquiry emails and diverse attachments such as Word documents, Excel sheets, PDFs, OCR scans, and images to identify product or item group requirements. Combining this with past purchase history, it suggests the most relevant items for quotations, ensuring proposals are tailored, competitive, and contextually accurate.</p>
-        <p className="text-slate-700 text-base md:text-lg leading-8 md:leading-9 mb-6 md:mb-7">A draft quotation is automatically generated and linked back to the relevant sales opportunity within ERPNext, maintaining a connected and transparent sales ecosystem.</p>
+        <p className="text-slate-700 text-base md:text-lg leading-8 md:leading-9 mb-6 md:mb-7" id="quote-assistant">A draft quotation is automatically generated and linked back to the relevant sales opportunity within ERPNext, maintaining a connected and transparent sales ecosystem.</p>
 
       </Section>
 
@@ -275,7 +275,14 @@ export default function Page() {
             description:
               'Cut response times from days to minutes. Automate intake, map items with AI, and ship accurate, tailored quotes—faster.',
             primaryButton: { text: 'Request a Demo', icon: 'Bot', action: '/contact' },
-            secondaryButton: { text: 'See Workflow Details', icon: 'FileText', action: '/solutions/quote-assistant' },
+            secondaryButton: { 
+              text: 'See Workflow Details', 
+              icon: 'FileText', 
+              action: () => {
+                const el = document.getElementById('quote-assistant');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }
+            },
             trustIndicator: { text: 'Secure. ERPNext-native. Human-in-the-loop.', icon: 'ShieldCheck' }
           }}
         />

@@ -25,7 +25,7 @@ export default function ProcessStepImageCard({ step, title, description, image, 
           <div className="flex-shrink-0 rounded-full bg-blue-100 text-blue-600 font-bold w-10 h-10 flex items-center justify-center text-lg">
             {step}
           </div>
-          <CardTitle className="text-lg font-semibold text-gray-800">{title}</CardTitle>
+          <CardTitle className="text-lg font-semibold text-[#1A5276]">{title}</CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col gap-3">
           <div className="text-gray-600 text-sm">{description}</div>

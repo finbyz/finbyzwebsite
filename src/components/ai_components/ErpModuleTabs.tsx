@@ -42,7 +42,7 @@ const moduleContent: Record<ModuleKey, { description: string; features: string[]
       "Automated payment reminders",
       "Integration with CRM",
     ],
-    imageSrc: "/images/account-module.png",
+    imageSrc: "/images/module-account.svg",
   },
   crm: {
     description: "The CRM Module of ERP solutions allows you to optimally manage your relationship with customers ...",
@@ -51,55 +51,55 @@ const moduleContent: Record<ModuleKey, { description: string; features: string[]
       "Follow-up call reminders",
       "Timeline feature per customer/lead",
     ],
-    imageSrc: "/images/crm-module.png",
+    imageSrc: "/images/module-crm.svg",
   },
   inventory: {
     description: "Inventory module helps manage stock levels, movements, tracking across warehouses etc.",
     features: ["Stock movement tracking", "Min/Max reordering rules", "Batch / serial management"],
-    imageSrc: "/images/inventory-module.png",
+    imageSrc: "/images/module-inventory.svg",
   },
   purchase: {
     description: "Purchase module streamlines procurement, supplier management, purchase orders etc.",
     features: ["Supplier quotations", "PO generation & tracking", "Approval workflows"],
-    imageSrc: "/images/purchase-module.png",
+    imageSrc: "/images/module-purchase.svg",
   },
   manufacturing: {
     description: "Manufacturing module handles production planning, BOM, work orders etc.",
     features: ["Bill of Materials", "Work order routing", "Capacity planning"],
-    imageSrc: "/images/manufacturing-module.png",
+    imageSrc: "/images/module-manufacturing.svg",
   },
   human_resource: {
     description: "HR module for employee data, payroll, attendance etc.",
     features: ["Employee records", "Attendance & leave", "Payroll processing"],
-    imageSrc: "/images/hr-module.png",
+    imageSrc: "/images/module-hr.svg",
   },
   asset: {
     description: "Asset module handles fixed assets, depreciation etc.",
     features: ["Asset acquisition", "Depreciation scheduling", "Asset disposal"],
-    imageSrc: "/images/asset-module.png",
+    imageSrc: "/images/asset.svg",
   },
   project: {
     description: "Project module for managing projects, tasks, budgets etc.",
     features: ["Task management", "Project budgeting", "Milestone tracking"],
-    imageSrc: "/images/project-module.png",
+    imageSrc: "/images/Project Management.svg",
   },
   support: {
     description: "Support module to manage tickets, SLAs, issue resolution.",
     features: ["Ticketing system", "SLA tracking", "Agent assignments"],
-    imageSrc: "/images/support-module.png",
+    imageSrc: "/images/module-support.svg",
   },
   exim: {
     description: "Exim (Import / Export) module for handling global trade processes.",
     features: ["Import/export documentation", "Customs formalities", "Trade compliance"],
-    imageSrc: "/images/exim-module.png",
+    imageSrc: "/images/module-exim.svg",
   },
 };
 
 export default function ErpModulesTabs() {
   return (
     <div className="py-12 bg-white">
-      <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-semibold text-gray-800 text-center mb-8">Other Modules of ERP</h2>
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-3xl font-semibold text-[#1A5276] text-center mb-8">Other Modules of ERP</h2>
         <Tabs defaultValue="account" className="space-y-6">
           <TabsList className="flex flex-wrap justify-center space-x-2 border-b border-gray-200 overflow-x-auto">
             {modules.map((mod) => (
@@ -112,7 +112,7 @@ export default function ErpModulesTabs() {
                   "hover:bg-blue-50 data-[state=inactive]:text-gray-600"
                 )}
               >
-                {mod.icon}
+                {/* {mod.icon} */}
                 <span>{mod.title}</span>
               </TabsTrigger>
             ))}

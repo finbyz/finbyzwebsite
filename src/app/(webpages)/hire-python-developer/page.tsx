@@ -136,7 +136,7 @@ export default function Page() {
       </Section>
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold text-center mb-8">Our Python Development Services</h2>
+          <h2 className="text-2xl font-bold text-center mb-8 text-[#1A5276]">Our Python Development Services</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {pythonServices.map((service, idx) => (
               <FlipCard
@@ -161,7 +161,7 @@ export default function Page() {
       </Section>
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold text-center mb-8">Why Choose Finbyz Tech Solutions</h2>
+          <h2 className="text-2xl font-bold text-center mb-8 text-[#1A5276]">Why Choose Finbyz Tech Solutions</h2>
           <WhyChooseFinbyzGrid features={whyChooseFinbyzFeatures} />
         </div>
       </Section>
@@ -172,7 +172,7 @@ export default function Page() {
       </Section>
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4">Where python shall not be used?</h2>
+          <h2 className="text-2xl font-bold mb-4 text-[#1A5276]">Where python shall not be used?</h2>
           <p className="mb-6 text-gray-700">Python is a versatile language that can be used for a wide range of tasks, but it may not be the best choice in certain circumstances. Here are a few scenarios where Python may not be the best choice:</p>
           <WhereNotToUsePythonGrid />
         </div>

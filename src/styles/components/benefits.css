@@ -10,7 +10,7 @@
 /* Full viewport height on md+ */
 @media (min-width: 768px) {
   .benefits-section {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     align-items: center;
     /* Minimal vertical padding so content can occupy more height */

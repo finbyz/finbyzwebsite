@@ -9,12 +9,16 @@ import CTA from '@/components/sections/cta'
 export default function Page() {
   const heroProps = {
     headline: 'Effective Sales Follow-Up Automation Tool',
+    highlightWords:['Automation','Effective Sales'],
     description:
       'Follow Up Buddy automates the sales process by generating personalized follow-up emails and identifying inactive leads, saving time and enhancing customer relationships.',
-    primaryButton: { text: 'Get a Demo' },
-    secondaryButton: { text: 'Learn More' },
+  primaryButton: { text: 'Get a Demo' ,action:'/contact' },
+    secondaryButton: { text: 'Learn More', action: () => {
+      const el = document.getElementById('follow-up');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } },
     heroImage: { alt: 'Effective Sales Follow-Up Automation Tool', src:"/images/Followup Buddy.gif" },
-    accentColor: 'blue' as const,
+    
   }
 
   const introTextData = {
@@ -154,9 +158,9 @@ export default function Page() {
         title: 'Saves Time',
         description:
           'Automates repetitive follow-ups so your team can focus on high-impact selling.',
-        icon: 'Clock',
-        iconColor: 'text-blue-600',
-        iconBg: 'bg-blue-50',
+        icon: 'Cpu',
+        iconColor: '#ffffff',
+        iconBg: '#1A5276',
       },
       {
         id: 'response',
@@ -199,10 +203,14 @@ export default function Page() {
     description:
       'Deploy Follow Up Buddy to identify stale opportunities, craft on-brand outreach, and send perfectly timed follow-ups — automatically.',
     primaryButton: { text: 'Get a Demo', icon: 'Send', action: '/contact' },
-    secondaryButton: { text: 'See how it works', icon: 'Play', action: '/product/follow-up-buddy' },
+    secondaryButton: { text: 'See how it works', icon: 'Play', action: () => {
+      const el = document.getElementById('follow-up');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } },
     trustIndicator: { text: 'Secure by design • ERPNext-ready', icon: 'ShieldCheck' },
   }
 
+ 
   return (
     <>
       {/* 1️⃣ Hero Section (Required - First) */}
@@ -211,8 +219,8 @@ export default function Page() {
       {/* 2️⃣ Overview Section (Required) */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Overview</h2>
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#1A5276]">Overview</h2>
+          <p className="text-lg text-gray-700 leading-relaxed text-justify" id="follow-up">
             Follow Up Buddy is an AI-driven Lead Follow-Up Tool designed to streamline sales processes by automatically identifying stale opportunities, analyzing customer context, and crafting personalized follow-up emails. This ensures that every lead is nurtured effectively without manual intervention, promoting timely communication and enhancing customer engagement. With features like automated lead detection, AI-powered research, and engagement analysis, Follow Up Buddy helps sales teams focus on higher-value tasks while boosting response rates and building stronger customer relationships.
           </p>
         </div>

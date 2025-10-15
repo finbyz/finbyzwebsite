@@ -1,3 +1,4 @@
+
 "use client"
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
@@ -158,8 +159,14 @@ export default function Page() {
     title: 'Automate inquiry-to-lead in ERPNext',
     description:
       'Turn unstructured emails into clean, actionable CRM records with AI-powered classification, extraction, and deduplication.',
-    primaryButton: { text: 'Request a demo', icon: 'Sparkles', action: '#contact' },
-    secondaryButton: { text: 'Talk to sales', icon: 'Phone', action: '/contact' },
+    primaryButton: { text: 'Request a demo', icon: 'Sparkles', action: '/contact' },
+    secondaryButton: { text: 'See How it Works', 
+      icon: 'Phone', 
+      action: () => {
+        const el = document.getElementById('lead');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      } 
+    },
     trustIndicator: { text: 'No lock-in • Secure • Auditable', icon: 'ShieldCheck' }
   };
 
@@ -169,14 +176,14 @@ export default function Page() {
       <HeroSection
         headline={seoTitle}
         description={seoDescription}
-        heroImage={{ alt: seoTitle, src:"/images/Lead Intelligence.gif" }}
+        heroImage={{ alt: seoTitle, src: "/images/Lead Intelligence.gif" }}
         accentColor="blue"
       />
 
       {/* 2️⃣ OVERVIEW SECTION (Required) */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Overview</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#1A5276]">Overview</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
             Lead Intelligence leverages advanced AI technology to streamline the processing of inquiry emails by transforming them into structured CRM records. The system captures critical information and prevents duplication by cross-checking with existing customer databases. By automating the lead qualification process, it accelerates response times, enhances data accuracy, and allows sales teams to focus on closing deals rather than administration, leading to higher conversion rates.
           </p>
@@ -187,11 +194,11 @@ export default function Page() {
       {/* Lead Intelligence — Deep Overview */}
       <Section>
         <div className="container-custom py-10">
-          <h3 className="text-2xl md:text-3xl font-semibold mb-4">Lead Intelligence</h3>
+          <h3 className="text-2xl md:text-3xl font-semibold mb-4 text-[#1A5276]">Lead Intelligence</h3>
           <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-4">
             Lead Intelligence leverages advanced artificial intelligence to revolutionize the handling and processing of inquiry emails. The system captures critical data points such as name, email, phone number, company, location, and inquiry content from incoming emails, transforming unstructured communication into structured, actionable CRM records.
           </p>
-          <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-4">
+          <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-4" id="lead">
             Beyond simple extraction, the AI intelligently cross-checks existing ERPNext customer and lead databases to prevent duplicates and ensure data accuracy. If a matching contact is found, the inquiry is linked directly; if not, new leads, contacts, and addresses are created according to available information, maintaining the integrity of the sales funnel and improving pipeline visibility. This automation eliminates the usual manual intervention required to capture and qualify inquiries, accelerating lead processing and enabling faster sales response times.
           </p>
         </div>

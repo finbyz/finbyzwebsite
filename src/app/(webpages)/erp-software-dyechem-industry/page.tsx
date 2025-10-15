@@ -57,7 +57,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold text-center mb-8 animate-fade-in-down">Problems of Dye Chem Industry</h2>
+          <h2 className="text-2xl font-bold text-center mb-8 animate-fade-in-down text-[#1A5276]">Problems of Dye Chem Industry</h2>
           <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
             <div className="flex-1">
               <ProblemList
@@ -86,7 +86,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold text-center mb-8 animate-fade-in-down">Software Solution for Dye Chem Industry</h2>
+          <h2 className="text-2xl font-bold text-center mb-8 animate-fade-in-down text-[#1A5276]">Software Solution for Dye Chem Industry</h2>
           <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
             <div className="flex-1">
               <SolutionList

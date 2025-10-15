@@ -86,13 +86,48 @@ import { Building2, Wrench, Users, FileText, Briefcase, Phone, Factory, Shopping
  * <Footer onNewsletterSubmit={handleNewsletterSubmit} />
  * ```
  */
+
+import {
+  FaFacebook as Facebook,
+  FaTwitter as Twitter,
+  FaLinkedin as Linkedin,
+  FaYoutube as Youtube,
+  FaInstagram as Instagram,
+} from "react-icons/fa";
 export default function Footer() {
+  const socialLinks = [
+    {
+      href: "https://www.facebook.com/FinByz",
+      icon: Facebook,
+      label: "Facebook",
+    },
+    {
+      href: "https://twitter.com/FinByz",
+      icon: Twitter,
+      label: "Twitter",
+    },
+    {
+      href: "https://www.linkedin.com/company/finbyz",
+      icon: Linkedin,
+      label: "LinkedIn",
+    },
+    {
+      href: "https://www.youtube.com/c/Finbyz",
+      icon: Youtube,
+      label: "YouTube",
+    },
+    {
+      href: "https://www.instagram.com/finbyz/",
+      icon: Instagram,
+      label: "Instagram",
+    },
+  ];
   return (
-    <footer className="bg-slate-900 text-white w-full">
+    <footer className=" bg-slate-900 text-white w-full">
       {/* Main Footer Content */}
-      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-20 py-16 max-w-screen-xl mx-auto">
+      <div className="w-full p-16 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-8">
-          
+
           {/* Company Info - Spans 1 column */}
           <div className="lg:col-span-1">
             <div className="space-y-6">
@@ -101,27 +136,29 @@ export default function Footer() {
                   <h3 className="text-2xl font-bold text-white mb-4">Finbyz.tech</h3>
                 </Link>
                 <p className="text-slate-300 text-sm leading-relaxed">
-                  Steer your vision with precision technology. ERP, AI, Software, and Top Tech Talent 
+                  Steer your vision with precision technology. ERP, AI, Software, and Top Tech Talent
                   delivered with clarity, speed & strategy.
                 </p>
               </div>
-              
+
               {/* Social Links */}
-              <div className="flex space-x-4">
-                <Button variant="ghost" size="icon" className="text-slate-400 hover:text-white hover:bg-slate-800 rounded-full w-10 h-10">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
-                </Button>
-                <Button variant="ghost" size="icon" className="text-slate-400 hover:text-white hover:bg-slate-800 rounded-full w-10 h-10">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
-                </Button>
+              <div className="flex space-x-4 mt-8">
+                {socialLinks.map(({ href, icon: Icon, label }) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="group text-slate-400 hover:text-white hover:bg-slate-800 rounded-full w-10 h-10 flex items-center justify-center transition-all duration-300"
+                  >
+                    <Icon className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
-          
+
           {/* About - Spans 1 column */}
           <div className="lg:col-span-1">
             <div className="space-y-4">
@@ -141,7 +178,7 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-          
+
           {/* Industries - Spans 1 column */}
           <div className="lg:col-span-1">
             <div className="space-y-4">
@@ -156,16 +193,16 @@ export default function Footer() {
                 {/* <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Services</a></li> */}
                 {/* <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Electronics</a></li> */}
                 {/* <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">Healthcare</a></li> */}
-                 <li><a href="/erp-for-chemical-industry" className="text-slate-300 hover:text-white transition-colors text-sm">Chemicals </a></li>
-                  <li><a href="/erp-for-engineering-industry" className="text-slate-300 hover:text-white transition-colors text-sm">Engineering</a></li>
-                   <li><a href="/erp-for-logistics-industry" className="text-slate-300 hover:text-white transition-colors text-sm">Logistics</a></li>
+                <li><a href="/erp-for-chemical-industry" className="text-slate-300 hover:text-white transition-colors text-sm">Chemicals </a></li>
+                <li><a href="/erp-for-engineering-industry" className="text-slate-300 hover:text-white transition-colors text-sm">Engineering</a></li>
+                <li><a href="/erp-for-logistics-industry" className="text-slate-300 hover:text-white transition-colors text-sm">Logistics</a></li>
                 <li><a href="/erp-for-agro-commodity" className="text-slate-300 hover:text-white transition-colors text-sm">Agriculture</a></li>
-                 <li><a href="/erp-for-education" className="text-slate-300 hover:text-white transition-colors text-sm">Education</a></li>
+                <li><a href="/erp-for-education" className="text-slate-300 hover:text-white transition-colors text-sm">Education</a></li>
                 <li><a href="/erp-for-industry" className="text-slate-300 hover:text-white transition-colors text-sm">View All →</a></li>
               </ul>
             </div>
           </div>
-          
+
           {/* Services - Spans 1 column */}
           <div className="lg:col-span-1">
             <div className="space-y-4">
@@ -178,9 +215,9 @@ export default function Footer() {
                 <li><a href="/ai-automation" className="text-slate-300 hover:text-white transition-colors text-sm">AI Automation</a></li>
                 <li><a href="/software-development" className="text-slate-300 hover:text-white transition-colors text-sm">Software Development</a></li>
 
-                 <li><a href="/data-analytics" className="text-slate-300 hover:text-white transition-colors text-sm"> Data Analytics</a></li>
+                <li><a href="/data-analytics" className="text-slate-300 hover:text-white transition-colors text-sm"> Data Analytics</a></li>
 
-                 
+
 
                 <li><a href="/crm-software" className="text-slate-300 hover:text-white transition-colors text-sm">CRM Software</a></li>
 
@@ -191,7 +228,7 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-          
+
           {/* Blog - Spans 1 column */}
           <div className="lg:col-span-1">
             <div className="space-y-4">
@@ -209,7 +246,7 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-          
+
           {/* Career - Spans 1 column */}
           <div className="lg:col-span-1">
             <div className="space-y-4">
@@ -222,12 +259,12 @@ export default function Footer() {
                 <li><a href="/current-opening" className="text-slate-300 hover:text-white transition-colors text-sm">Current Openings</a></li>
                 <li><a href="/internship" className="text-slate-300 hover:text-white transition-colors text-sm">Internships</a></li>
                 <li><a href="/hiring-process" className="text-slate-300 hover:text-white transition-colors text-sm">Hiring Process</a></li>
-            
+
               </ul>
             </div>
           </div>
         </div>
-        
+
         {/* Newsletter Subscription */}
         <div className="flex justify-end mb-8 mr-4">
           <div className="flex items-center space-x-2">
@@ -243,7 +280,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      
+
       {/* Bottom Bar */}
       <div className="border-t border-slate-800 bg-slate-950">
         <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-20 py-6">
@@ -258,7 +295,7 @@ export default function Footer() {
                 <a href="/cookie-policy" className="text-slate-400 hover:text-white transition-colors text-sm">Cookie Policy</a>
               </div>
             </div>
-            
+
             {/* Contact Info */}
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2 text-slate-400">

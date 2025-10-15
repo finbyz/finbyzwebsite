@@ -25,7 +25,7 @@ export default function Page() {
       {/* 2️⃣ OVERVIEW SECTION (Required) */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Overview</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6" id="content-spark">Overview</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
             Content Spark leverages the Frappe Framework to help businesses enhance their marketing strategies through AI-powered content generation tailored to brand voice and audience demographics. The platform automates the entire workflow from ideation to publishing, allowing users to create professional LinkedIn posts and accompanying visuals in minutes, while ensuring consistency and engagement. With benefits like time savings, creative boosts, and integrated visuals, Content Spark revolutionizes the marketing process in the ERPNext ecosystem.
           </p>
@@ -258,7 +258,14 @@ export default function Page() {
           description:
             'Empower your marketing team with AI agents that ideate, write, and design—right inside ERPNext. Faster campaigns, consistent branding, and better results.',
           primaryButton: { text: 'Request a demo', icon: 'Calendar', action: '/contact' },
-          secondaryButton: { text: 'See it in action', icon: 'PlayCircle', action: '/contact' },
+          secondaryButton: { 
+            text: 'See it in action', 
+            icon: 'PlayCircle', 
+            action: () => {
+              const el = document.getElementById('content-spark');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            } 
+          },
           trustIndicator: { text: 'Built for ERPNext on Frappe Framework', icon: 'ShieldCheck' },
         }}
       />

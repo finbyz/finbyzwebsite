@@ -31,7 +31,6 @@ export default function Page() {
         secondaryButton={{ text: 'Learn More', action: handleLearnMore }}
         heroImage={{
           alt: 'ERPNext for Commodity',
-          src: '/images/Web Portal Development.svg',
           videoSrc: '/images/Agro_Slide_for_Site.mp4',
         }}
       />

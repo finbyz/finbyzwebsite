@@ -1,3 +1,5 @@
+import Footer from "@/components/layout/footer";
+import Header from "@/components/layout/header";
 import BusinessSlider from "@/components/sections/business-slider";
 import FinbyzGallery from "@/components/sections/FinbyzGallery";
 import { getPageData } from "@/lib/getPageData";
@@ -103,10 +105,12 @@ export default async function Layout({ children }: { children: React.ReactNode }
         <meta itemProp="name" content="Get in Touch: Reach Out Today!" />
         <meta itemProp="description" content="Contact Finbyz for streamlined business solutions. Transform your operations with our expertly designed ERP and digital strategies. Reach out now!" />
       </article>
+      <Header/>
       {children}
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }
+      <Footer />
       <BusinessSlider />
     </>
   );

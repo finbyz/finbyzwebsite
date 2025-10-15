@@ -22,6 +22,10 @@ import { Database } from "lucide-react";
 import { Cog } from "lucide-react";
 import { Laptop } from "lucide-react";
 import { Lock } from "lucide-react";
+import { Landmark } from "lucide-react";
+import { Globe2 } from "lucide-react";
+import { Map } from "lucide-react";
+
 
 
 
@@ -192,19 +196,19 @@ export default function Header() {
           {
             name: "ERPNext Service Provider in UAE",
             description: "ERPNext services in United Arab Emirates",
-            icon: Building2,
+            icon: Landmark,
             href: "/erpnext-services-in-uae"
           },
           {
             name: "ERPNext Services in Canada",
             description: "ERPNext services in Canada",
-            icon: Building2,
+            icon: Map,
             href: "/erpnext-services-in-canada"
           },
           {
             name: "ERPNext Partner in Saudi Arabia",
             description: "ERPNext partnership in Saudi Arabia",
-            icon: Building2,
+            icon: Globe2,
             href: "/erpnext-partner-in-saudi-arabia"
           },
           {
@@ -934,17 +938,6 @@ export default function Header() {
                                                 setShowAllGallery(false);
                                               }}
                                             >
-                                              {/* {item.animated_image || item.svg_image ? (
-                  <Image 
-                    src={item.animated_image || item.svg_image || ''} 
-                    alt={item.title} 
-                    width={32} 
-                    height={32} 
-                    className="rounded object-cover" 
-                  />
-                ) : (
-                  <div className="w-8 h-8 rounded bg-gray-100" />
-                )} */}
                                               <span className="font-medium line-clamp-1">{item.title}</span>
                                             </Link>
                                           ))

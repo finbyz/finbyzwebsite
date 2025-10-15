@@ -26,7 +26,7 @@ const HowToUseEMDSteps: FC<HowToUseEMDStepsProps> = ({ steps }) => {
         >
           <Card className="border-none shadow-lg bg-white/90 dark:bg-muted/80">
             <CardHeader>
-              <CardTitle className="text-lg md:text-xl font-semibold mb-2">{step.title}</CardTitle>
+              <CardTitle className="text-lg md:text-xl font-semibold mb-2 text-[#1A5276]">{step.title}</CardTitle>
             </CardHeader>
             <CardContent className="flex flex-col md:flex-col-reverse items-center gap-6">
               <div className="flex-1 text-base text-muted-foreground mb-4 md:mb-0">
