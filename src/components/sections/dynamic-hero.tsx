@@ -181,7 +181,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
           {/* Right Visual */}
           <div className="relative">
-            <div className="relative bg-gradient-to-br from-slate-700 to-slate-800 rounded-3xl shadow-2xl border border-slate-600">
+            <div className="relative ">
               {heroImage.videoSrc ? (
                 <video
                   src={heroImage?.videoSrc}
