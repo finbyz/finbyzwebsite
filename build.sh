@@ -88,6 +88,10 @@ while [[ $# -gt 0 ]]; do
             echo "  --push-tag       Create and push Git tag"
             echo "  --all            Build, tag, and push everything"
             echo "  -h, --help       Show this help message"
+            echo ""
+            echo "Multi-platform builds:"
+            echo "  Without --push:  Builds for linux/amd64 only (local)"
+            echo "  With --push:     Builds for linux/amd64 and linux/arm64"
             exit 0
             ;;
         *)
@@ -131,18 +135,48 @@ export APP_VERSION=$VERSION
 IMAGE_NAME="ghcr.io/finbyz/finbyzwebsite-nextjs"
 IMAGE_TAG="$IMAGE_NAME:$VERSION"
 
+# Setup buildx for multi-platform builds
+echo ""
+echo -e "${BLUE}🔧 Setting up Docker Buildx...${NC}"
+if ! docker buildx inspect multiplatform-builder >/dev/null 2>&1; then
+    docker buildx create --name multiplatform-builder --use
+    echo -e "${GREEN}✓ Created buildx builder: multiplatform-builder${NC}"
+else
+    docker buildx use multiplatform-builder
+    echo -e "${GREEN}✓ Using existing buildx builder: multiplatform-builder${NC}"
+fi
+
 echo ""
 echo -e "${BLUE}🐳 Building Docker image...${NC}"
 echo -e "   Version: ${GREEN}$VERSION${NC}"
 echo -e "   Image: ${GREEN}$IMAGE_TAG${NC}"
+
+# Determine platforms based on push flag
+if [ "$PUSH_IMAGE" = true ]; then
+    PLATFORMS="linux/amd64,linux/arm64"
+    BUILD_ACTION="--push"
+    echo -e "   Platforms: ${GREEN}linux/amd64, linux/arm64${NC}"
+    echo ""
+    echo -e "${YELLOW}Note: Multi-platform builds with --push will automatically push to registry${NC}"
+else
+    PLATFORMS="linux/amd64"
+    BUILD_ACTION="--load"
+    echo -e "   Platforms: ${GREEN}linux/amd64 (local only)${NC}"
+    echo ""
+    echo -e "${YELLOW}Note: Building single platform for local use${NC}"
+    echo -e "${YELLOW}      Use --push flag for multi-platform builds${NC}"
+fi
+
 echo ""
 
 # Build the image with version tag
-docker build \
+docker buildx build \
     -f ./docker/Dockerfile \
+    --platform "$PLATFORMS" \
     -t "$IMAGE_TAG" \
     -t "$IMAGE_NAME:latest" \
     --build-arg APP_VERSION="$VERSION" \
+    $BUILD_ACTION \
     .
 
 echo ""
@@ -150,18 +184,11 @@ echo -e "${GREEN}✅ Build complete!${NC}"
 echo -e "   Tagged as: ${GREEN}$IMAGE_TAG${NC}"
 echo -e "   Tagged as: ${GREEN}$IMAGE_NAME:latest${NC}"
 
-# Push Docker image if requested
+# Confirmation message for push
 if [ "$PUSH_IMAGE" = true ]; then
     echo ""
-    echo -e "${BLUE}📤 Pushing Docker image...${NC}"
-    
-    # Push versioned image
-    docker push "$IMAGE_TAG"
-    echo -e "${GREEN}✓ Pushed: $IMAGE_TAG${NC}"
-    
-    # Push latest tag
-    docker push "$IMAGE_NAME:latest"
-    echo -e "${GREEN}✓ Pushed: $IMAGE_NAME:latest${NC}"
+    echo -e "${GREEN}✓ Multi-platform images pushed to registry${NC}"
+    echo -e "   Platforms: linux/amd64, linux/arm64${NC}"
 fi
 
 # Create Git tag if requested
@@ -195,6 +222,11 @@ echo "Summary:"
 echo -e "  Version: ${GREEN}$VERSION${NC}"
 echo -e "  Images: ${GREEN}$IMAGE_TAG${NC}"
 echo -e "          ${GREEN}$IMAGE_NAME:latest${NC}"
+if [ "$PUSH_IMAGE" = true ]; then
+    echo -e "  Platforms: ${GREEN}linux/amd64, linux/arm64${NC}"
+else
+    echo -e "  Platforms: ${GREEN}linux/amd64 (local only)${NC}"
+fi
 
 if [ "$PUSH_IMAGE" = true ]; then
     echo -e "  Docker push: ${GREEN}✓ Done${NC}"
@@ -217,9 +249,15 @@ echo ""
 
 # Show next steps if things weren't done
 if [ "$PUSH_IMAGE" = false ]; then
-    echo "💡 To push the Docker image:"
-    echo "   docker push $IMAGE_TAG"
-    echo "   docker push $IMAGE_NAME:latest"
+    echo "💡 To build and push multi-platform images:"
+    echo "   $0 --push"
+    echo ""
+    echo "💡 Or manually push with buildx:"
+    echo "   docker buildx build --platform linux/amd64,linux/arm64 \\"
+    echo "     -f ./docker/Dockerfile \\"
+    echo "     -t $IMAGE_TAG -t $IMAGE_NAME:latest \\"
+    echo "     --build-arg APP_VERSION=\"$VERSION\" \\"
+    echo "     --push ."
     echo ""
 fi
 
@@ -235,3 +273,6 @@ echo "   docker run -p 3000:3000 -e NODE_ENV=production $IMAGE_TAG"
 echo ""
 echo "💡 To see all images:"
 echo "   docker images | grep finbyzwebsite-nextjs"
+echo ""
+echo "💡 To inspect multi-platform manifest:"
+echo "   docker buildx imagetools inspect $IMAGE_TAG"
