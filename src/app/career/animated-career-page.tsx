@@ -118,26 +118,28 @@ export default function AnimatedCareerPage() {
       <section 
         id="why-join"
         ref={(el) => { sectionRefs.current['why-join'] = el; }}
-        className="py-24 bg-gradient-to-br from-blue-50 via-white to-orange-50 relative overflow-hidden w-full"
+        className="py-24  relative overflow-hidden w-full"
       >
         {/* Background decorative elements */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute top-20 left-10 w-32 h-32 rounded-full blur-3xl animate-float"></div>
           <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-orange-400/20 to-red-400/20 rounded-full blur-3xl animate-float" style={{animationDelay: '1s'}}></div>
           <div className="absolute bottom-32 left-1/4 w-16 h-16 bg-gradient-to-br from-green-400/20 to-blue-400/20 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
         </div>
         
-        <div className="w-full relative">
+        <div className="container-custom">
           <div className={`text-center mb-20 transition-all duration-1000 ${isVisible['why-join'] ? 'animate-fade-in-up' : ''}`}>
-            <Badge className="mb-6 bg-gradient-to-r  from-orange-400 to-orange-500 border-0 animate-fade-in-up-delayed">
+            {/* <Badge className="mb-6 bg-gradient-to-r  from-orange-400 to-orange-500 border-0 animate-fade-in-up-delayed">
               Why Choose Us
-            </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#FF8C00] mb-6 animate-fade-in-up-delayed-2">
+            </Badge> */}
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1A5276] mb-6 animate-fade-in-up-delayed-2">
               Why Join Finbyz Tech?
             </h2>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-fade-in-up-delayed-3">
+            <div className="container-custom">
+              <p className="text-xl md:text-2xl text-gray-600  leading-relaxed animate-fade-in-up-delayed-3">
               We're not just another tech company. We're a place where your ideas matter, your growth is prioritized, and your impact is real.
             </p>
+            </div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -149,25 +151,28 @@ export default function AnimatedCareerPage() {
                 "from-purple-500 to-pink-600"
               ];
               return (
+                
+                  
                 <Card 
-                  key={index} 
-                  className={`border-0 shadow-lg hover:shadow-xl transition-all duration-700 bg-white/80 backdrop-blur-sm overflow-hidden group hover:scale-105 ${
-                    isVisible['why-join'] 
-                      ? 'animate-fade-in-up opacity-100 translate-y-0' 
-                      : ''
-                  }`}
-                  style={{ transitionDelay: `${index * 200}ms` }}
-                >
-                  <CardHeader className="text-center pb-4">
-                    <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-br ${gradients[index]} rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg animate-pulse`}>
-                      <item.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <CardTitle className="text-xl font-bold text-[#1A5276]">{item.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <p className="text-gray-600 leading-relaxed">{item.description}</p>
-                  </CardContent>
-                </Card>
+                    key={index} 
+                    className={`w-79 h-96  border-0 shadow-lg hover:shadow-xl transition-all duration-700 bg-white/80 backdrop-blur-sm overflow-hidden group hover:scale-105 flex flex-col ${
+                      isVisible['why-join'] 
+                        ? 'animate-fade-in-up opacity-100 translate-y-0' 
+                        : ''
+                    }`}
+                    style={{ transitionDelay: `${index * 200}ms` }}
+                  >
+                    <CardHeader className="text-center pb-4 flex-shrink-0">
+                      <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-br ${gradients[index]} rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg animate-pulse`}>
+                        <item.icon className="w-8 h-8 text-white" />
+                      </div>
+                      <CardTitle className="text-xl font-bold text-[#1A5276]">{item.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-center flex-grow flex items-center justify-center">
+                      <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                    </CardContent>
+                  </Card>
+                
               );
             })}
           </div>
@@ -178,18 +183,18 @@ export default function AnimatedCareerPage() {
       <section 
         id="quote-section"
         ref={(el) => { sectionRefs.current['quote-section'] = el; }}
-        className="py-24 bg-gradient-to-br from-orange-100 via-yellow-50 to-pink-100 relative overflow-hidden w-full"
+        className="py-24  relative overflow-hidden w-full"
       >
         {/* Background decorative elements */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-br from-orange-400/30 to-red-400/30 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-10 right-10 w-40 h-40 bg-gradient-to-br from-yellow-400/30 to-orange-400/30 rounded-full blur-3xl animate-float" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-10 left-10 w-32 h-32  rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-10 right-10 w-40 h-40 rounded-full blur-3xl animate-float" style={{animationDelay: '1s'}}></div>
         </div>
         
-        <div className="w-full relative">
+        <div className="container-custom">
           <div className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${isVisible['quote-section'] ? 'animate-fade-in-up' : ''}`}>
-            <div className="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-[#FF8C00] to-[#FFA500] rounded-full flex items-center justify-center shadow-lg animate-pulse">
-              <Quote className="w-10 h-10 text-white" />
+            <div className="w-20 h-20 mx-auto mb-8 rounded-full flex items-center justify-center shadow-lg animate-pulse">
+              <Quote className="w-10 h-10 text-black" />
             </div>
             <blockquote className="text-2xl lg:text-3xl font-bold text-[#1A5276] mb-6 leading-relaxed animate-fade-in-up-delayed">
               "You bring the vision; we'll help you build the roadmap — not just for tech, but for your career."
@@ -203,7 +208,7 @@ export default function AnimatedCareerPage() {
       <section 
         id="who-thrives"
         ref={(el) => { sectionRefs.current['who-thrives'] = el; }}
-        className="py-24 bg-gradient-to-br from-green-50 via-white to-blue-50 relative overflow-hidden w-full"
+        className="py-24  relative overflow-hidden w-full"
       >
         {/* Background decorative elements */}
         <div className="absolute inset-0 pointer-events-none">
@@ -211,15 +216,15 @@ export default function AnimatedCareerPage() {
           <div className="absolute bottom-20 left-20 w-32 h-32 bg-gradient-to-br from-purple-400/15 to-pink-400/15 rounded-full blur-3xl animate-float" style={{animationDelay: '1.5s'}}></div>
         </div>
         
-        <div className="w-full relative">
+        <div className="container-custom">
           <div className={`text-center mb-20 transition-all duration-1000 ${isVisible['who-thrives'] ? 'animate-fade-in-up' : ''}`}>
-            <Badge className="mb-6 bg-gradient-to-r from-orange-400 to-orange-500 text-white border-0 animate-fade-in-up-delayed">
+            {/* <Badge className="mb-6 bg-gradient-to-r from-orange-400 to-orange-500 text-white border-0 animate-fade-in-up-delayed">
               Perfect Match
-            </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#FF8C00] mb-6 animate-fade-in-up-delayed-2">
+            </Badge> */}
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1A5276] mb-6 animate-fade-in-up-delayed-2">
               Who Thrives Here?
             </h2>
-            <div className="max-w-4xl mx-auto">
+            <div className="container-custom">
               <p className="text-xl md:text-2xl text-gray-600 leading-relaxed animate-fade-in-up-delayed-3">
                 We're drawn to self-starters. People who are curious, driven, and willing to stretch beyond job descriptions. If you're someone who asks 'why not?', prefers clarity over chaos, and enjoys solving real problems — we want you on the team.
               </p>
@@ -235,20 +240,20 @@ export default function AnimatedCareerPage() {
       <section 
         id="work-culture"
         ref={(el) => { sectionRefs.current['work-culture'] = el; }}
-        className="py-24 bg-gradient-to-br from-pink-50 via-white to-purple-50 relative overflow-hidden w-full"
+        className="py-24 relative overflow-hidden w-full"
       >
         {/* Background decorative elements */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-20 left-1/4 w-40 h-40 bg-gradient-to-br from-pink-400/20 to-purple-400/20 rounded-full blur-3xl animate-float" style={{animationDelay: '0.3s'}}></div>
-          <div className="absolute bottom-20 right-1/4 w-32 h-32 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-full blur-3xl animate-float" style={{animationDelay: '1.3s'}}></div>
+          <div className="absolute top-20 left-1/4 w-40 h-40 rounded-full blur-3xl animate-float" style={{animationDelay: '0.3s'}}></div>
+          <div className="absolute bottom-20 right-1/4 w-32 h-32 rounded-full blur-3xl animate-float" style={{animationDelay: '1.3s'}}></div>
         </div>
         
-        <div className="w-full relative">
+        <div className="container-custom">
           <div className={`text-center mb-20 transition-all duration-1000 ${isVisible['work-culture'] ? 'animate-fade-in-up' : ''}`}>
-            <Badge className="mb-6 bg-gradient-to-r from-orange-400 to-orange-500 text-white border-0 animate-fade-in-up-delayed">
+            {/* <Badge className="mb-6 bg-gradient-to-r from-orange-400 to-orange-500 text-white border-0 animate-fade-in-up-delayed">
               Our Culture
-            </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#FF8C00] mb-6 animate-fade-in-up-delayed-2">
+            </Badge> */}
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1A5276] mb-6 animate-fade-in-up-delayed-2">
               Our Work Culture
             </h2>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-fade-in-up-delayed-3">
@@ -295,31 +300,33 @@ export default function AnimatedCareerPage() {
       <section 
         id="apply-section"
         ref={(el) => { sectionRefs.current['apply-section'] = el; }}
-        className="py-24 bg-gradient-to-br from-blue-50 via-white to-indigo-50 relative overflow-hidden w-full"
+        className="py-24  relative overflow-hidden w-full"
       >
         {/* Background decorative elements */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-20 right-20 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-indigo-400/20 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-20 left-20 w-24 h-24 bg-gradient-to-br from-cyan-400/20 to-blue-400/20 rounded-full blur-3xl animate-float" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-20 right-20 w-32 h-32  rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-20 left-20 w-24 h-24  rounded-full blur-3xl animate-float" style={{animationDelay: '1s'}}></div>
         </div>
         
-        <div className="w-full relative">
+        <div className="container-custom">
           <div className={`text-center mb-20 transition-all duration-1000 ${isVisible['apply-section'] ? 'animate-fade-in-up' : ''}`}>
-            <Badge className="mb-6 bg-gradient-to-r from-orange-400 to-orange-500 text-white border-0 animate-fade-in-up-delayed">
+            {/* <Badge className="mb-6 bg-gradient-to-r from-orange-400 to-orange-500 text-white border-0 animate-fade-in-up-delayed">
               Apply Now
-            </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#FF8C00] mb-6 animate-fade-in-up-delayed-2">
+            </Badge> */}
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1A5276] mb-6 animate-fade-in-up-delayed-2">
               Come Flaunt Your Skills
             </h2>
-            <div className="max-w-4xl mx-auto">
+            <div className="container-custom">
               <p className="text-xl md:text-2xl text-gray-600 leading-relaxed animate-fade-in-up-delayed-3">
                 Ready to steer your career with us?
               </p>
               <p className="text-lg text-gray-600 mt-6 leading-relaxed">
                 Email your resume to{' '}
-                <a href="mailto:career@finbyz.tech" className="text-[#FF8C00] hover:text-[#FFA500] font-medium transition-colors">
+                 {/* className="text-[#FF8C00] hover:text-[#FFA500] font-medium transition-colors" */}
+                <a href="mailto:career@finbyz.tech">
                   career@finbyz.tech
                 </a>
+
                 . Bonus points for portfolios, GitHub links, or anything that showcases what you've built or solved. Don't forget to share your LinkedIn/Instagram — we love seeing the human behind the skills.
               </p>
             </div>
@@ -329,9 +336,9 @@ export default function AnimatedCareerPage() {
             <Link href="/job-application">
               <Button 
                 size="lg"
-                className="rounded-full bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white text-lg px-8 py-4 h-auto font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition-all"
+                className="rounded-full  text-white bg-[#f97316] text-lg px-8 py-4 h-auto font-semibold shadow-lg hover:bg-orange-500 hover:shadow-xl transition-all"
               >
-                <Mail className="mr-2 w-5 h-5" />
+                {/* <Mail className="mr-2 w-5 h-5" /> */}
                 Send Your Resume
               </Button>
             </Link>
@@ -339,9 +346,9 @@ export default function AnimatedCareerPage() {
               <Button 
                 size="lg"
                 variant="outline"
-                className="rounded-full border-2 border-[#1A5276] text-[#1A5276] bg-transparent hover:bg-[#1A5276] hover: text-lg px-8 py-4 h-auto font-semibold transition-all"
+                className="rounded-full border-2 border-[#1A5276] text-white  hover: bg-[#1A5276] px-8 py-4 h-auto font-semibold transition-all"
               >
-                <Briefcase className="mr-2 w-5 h-5" />
+                {/* <Briefcase className="mr-2 w-5 h-5" /> */}
                 See Open Roles
               </Button>
             </Link>
@@ -353,18 +360,18 @@ export default function AnimatedCareerPage() {
       <FAQSection />
 
       {/* Related Pages */}
-      <section className="py-24 bg-gradient-to-br from-teal-50 via-white to-green-50 relative overflow-hidden w-full">
+      <section className="py-24  relative overflow-hidden w-full">
         {/* Background decorative elements */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-10 left-1/4 w-40 h-40 bg-gradient-to-br from-teal-400/20 to-green-400/20 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute top-10 left-1/4 w-40 h-40  rounded-full blur-3xl animate-float"></div>
           <div className="absolute bottom-10 right-1/4 w-32 h-32 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-full blur-3xl animate-float" style={{animationDelay: '1s'}}></div>
         </div>
         
-        <div className="w-full relative">
+        <div className="container-custom">
           <div className="text-center mb-20">
-            <Badge className="mb-6 bg-gradient-to-r from-teal-500 to-green-600 text-white border-0">
+            {/* <Badge className="mb-6 bg-gradient-to-r from-teal-500 to-green-600 text-white border-0">
               Explore More
-            </Badge>
+            </Badge> */}
             <h2 className="text-4xl md:text-5xl font-bold text-[#1A5276] mb-6">
               Explore More
             </h2>
@@ -406,7 +413,7 @@ export default function AnimatedCareerPage() {
 
       {/* Final CTA */}
       <section className="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden w-full">
-        <div className="w-full relative">
+        <div className="container-custom">
           <div className="text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
               Let's build something meaningful together.

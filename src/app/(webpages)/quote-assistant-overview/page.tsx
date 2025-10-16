@@ -22,6 +22,8 @@ export default function Page() {
         highlightWords={highlightWords}
         description={seoDescription}
         heroImage={{ alt: seoTitle, src: "/images/Quote Assistant.gif" }}
+        primaryButton={{ text: 'Get a Demo', action:'/contact' }}
+
         features={[
           {
             icon: Bot,

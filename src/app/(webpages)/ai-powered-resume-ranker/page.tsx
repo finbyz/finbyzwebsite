@@ -182,6 +182,8 @@ export default function Page() {
         highlightWords={["Resume Ranker"]}
         description={seoDescription}
         heroImage={{ src: "/AI_Powered_Resume_Ranker.gif", alt: seoTitle }}
+        primaryButton={{ text: 'Get a Demo', action:'/contact' }}
+
       />
 
       {/* 2️⃣ OVERVIEW SECTION */}

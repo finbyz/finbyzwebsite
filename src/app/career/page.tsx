@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import Hero from "@/components/sections/hero_section_without_button";
+import HeroSection from '@/components/sections/dynamic-hero';
 import AnimatedCareerPage from "./animated-career-page";
 
 export const metadata: Metadata = {
@@ -14,18 +14,16 @@ export default function CareerPage() {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="pt-4">
-        <Hero 
-          data={{
-            title: "Build Your Career with AI & ERP",
-            subtitle: "Join a team where innovation meets opportunity. Shape the future of technology and grow with us.",
-            description: "Join our innovative team and shape the future of technology.",
-            image: {
-              src: "/careers_5.png",
-              alt: "Career opportunities at Finbyz Tech - Join our innovative team"
-            }
-          }}
-        />
+      <main className="">
+        <HeroSection
+        headline="Build Your Career with AI & ERP"
+        highlightWords={["Career", "AI", "ERP"]}
+        description="Join a team where innovation meets opportunity. Shape the future of technology and grow with us."
+        heroImage={{
+          alt: 'Career opportunities at Finbyz Tech - Join our innovative team',
+          src: '/careers_5.png'
+        }}
+      />
         <AnimatedCareerPage />
       </main>
       <Footer />

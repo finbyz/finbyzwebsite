@@ -247,6 +247,8 @@ export default function Page() {
         highlightWords={seo.highlightwords}
         description={seo.description || undefined}
         heroImage={{ alt: seo.title, src: "/images/email_classifiaction.gif" }}
+        primaryButton={{ text: 'Get a Demo', action:'/contact' }}
+
       />
 
       {/* 2️⃣ OVERVIEW SECTION (Required) */}

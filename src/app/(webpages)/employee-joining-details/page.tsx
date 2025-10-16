@@ -43,7 +43,7 @@ export default function Page() {
           }
         }}
         secondaryButton={{
-          text: "Learn More",
+          text: "Contact Us",
           action: () => {
             window.open('/contact', '_blank');
           }

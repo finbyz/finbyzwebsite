@@ -20,7 +20,8 @@ export default function Page() {
         primaryButton={{
           text: 'Get Started',
           action: () => {
-            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            const el = document.getElementById('contract');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
           }
         }}
         secondaryButton={{
@@ -55,7 +56,7 @@ export default function Page() {
 
       {/* Introduction Section */}
       <Section useGradient>
-        <div className="container-custom py-8">
+        <div className="container-custom py-8" id="contract">
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 animate-fade-in-up text-[#1A5276]">
             {/* <CheckCircle className="text-primary" size={24} /> */}
             Introduction

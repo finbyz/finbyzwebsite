@@ -19,16 +19,16 @@ export default function Page() {
     description:
       'Looking for a reliable software development company in Ahmedabad? FinByz Tech offers custom software solutions tailored to your business needs. We deliver scalable, secure, and high-performing applications to empower your business.',
     primaryButton: {
-      text: 'Get Started',
-      action: () => {
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-      },
-    },
-    secondaryButton: {
       text: 'Our Services',
       action: () => {
         const el = document.getElementById('sd-cards');
         if (el) el.scrollIntoView({ behavior: 'smooth' });
+      },
+    },
+    secondaryButton: {
+      text: 'Request Consultation',
+      action: () => {
+        window.location.href = '/contact';
       },
     },
     heroImage: {

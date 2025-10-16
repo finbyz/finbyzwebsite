@@ -9,7 +9,7 @@ interface BlogSectionProps {
 const BlogSection = ({ id, title, children }: BlogSectionProps) => {
   return (
     <>
-      <section id={id} className="mb-12">
+      <section id={id} className="mb-12 scroll-mt-20">
         <h2 className="text-3xl font-bold text-foreground mb-4">{title}</h2>
         {children}
       </section>

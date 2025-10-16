@@ -20,6 +20,10 @@ const heroData = {
     alt: 'Smart Card Scanner Overview',
     src: '/images/contact creation.gif',
   },
+  primaryButton: {
+    text: 'Get a Demo',
+    action: '/contact'
+  },
   features: [
     {
       icon: Cpu,

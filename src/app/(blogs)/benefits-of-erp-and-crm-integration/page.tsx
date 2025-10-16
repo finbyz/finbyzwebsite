@@ -42,12 +42,10 @@ export default function Page() {
         <BlogContent>
           <BlogSectionWithImage id="introduction" title="Introduction"
             image={{
-              src: '//files/benefits-of-erp-and-crm-integration.svg',
+              src: '/images/benefits-of-erp-and-crm-integration.svg',
               alt: 'Benefits of ERP and CRM integration',
               title: 'Benefits of ERP and CRM integration',
-              width: 480,
-              height: 320,
-              cover:true
+              cover:true,
             }}>
             <BlogParagraph>
               ERP and CRM are powerful software solutions designed to address specific business functions. ERP handles core backend operations such as accounting, procurement, supply chain, and inventory management, while CRM focuses on enhancing customer relationships and driving sales growth. Using <a href="/crm-software" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">CRM software</a> alongside ERP can improve individual performance, but the true power lies in ERP and CRM integration. The benefits of ERP and CRM integration include a unified approach to managing business and customer data, eliminating inefficiencies, and fostering collaboration across departments.

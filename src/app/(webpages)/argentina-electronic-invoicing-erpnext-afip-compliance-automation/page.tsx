@@ -82,12 +82,7 @@ export default function Page() {
         <div className="container-custom py-8 grid md:grid-cols-2 gap-8 items-center">
           <div>
             <h3 className="text-2xl font-semibold mb-2 flex items-center gap-2">
-              {/* <MdOutlinePayment className="text-green-500" size={28} /> */}
-              <span className='text-[#1A5276]'>Enhanced Form Organization</span>
             </h3>
-            <p className="text-gray-700 mb-4">
-              To improve user experience and ensure a structured layout, form enhancements are implemented in ERPNext:
-            </p>
             <List
               title="Form Enhancements"
               items={[

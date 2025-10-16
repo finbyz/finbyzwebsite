@@ -131,13 +131,13 @@ export default function BlogPostPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-[#0b1c2d] text-white">
+      <section className="container-custom bg-[#0b1c2d] text-white">
         <div className="absolute inset-0 pointer-events-none" aria-hidden>
           <div className="absolute inset-0 bg-[radial-gradient(1200px_600px_at_50%_-100px,_rgba(0,140,255,0.25),transparent_60%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(1000px_500px_at_80%_10%,_rgba(255,140,0,0.12),transparent_60%)]" />
         </div>
 
-        <div className="container mx-auto px-4 py-16 lg:py-24 relative">
+        <div className="container px-4 py-16 lg:py-24 relative">
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
             <span>Insights &amp; </span>
             <span className="gradient-text">Resources</span>
@@ -197,7 +197,7 @@ export default function BlogPostPage() {
 
       {/* Blog Grid */}
    
-      <main className="container mx-auto px-4 py-16">
+      <main className="container-custom mx-auto px-4 py-16">
         {loading ? (
           <p className="text-center text-muted-foreground">Loading...</p>
         ) : posts.length === 0 ? (

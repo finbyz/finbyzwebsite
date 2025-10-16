@@ -144,7 +144,13 @@ export default function Page() {
         headline="ERPNext Service Provider in UAE "
         highlightWords={heroHighlightWords}
         description="ERPNext Partner offers bespoke ERP solutions in manufacturing, agro, chemical, healthcare & pharmaceutical sectors."
-        primaryButton={{ text: "Get Started", action: handlePrimary }}
+        primaryButton={{ 
+          text: "Get Started", 
+          action: () => {
+            const el = document.getElementById('uae');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }
+         }}
         secondaryButton={{ text: "Our Partnership", action: handleSecondary }}
         heroImage={{
           alt: "ERPNext Service Provider in UAE ",
@@ -158,7 +164,7 @@ export default function Page() {
               Finbyz Tech, your trusted <a href="/erpnext-certified-partner" className="text-primary underline hover:text-primary/80">ERPNext partner</a> and ERPNext service provider in UAE. Specialized in delivering cutting-edge ERP solutions, we empower businesses to thrive in the competitive and innovative UAE market. Embrace the future with ERPNext’s powerful functionalities tailored by our experts to meet your unique business needs.
             </p>
             <p className="mt-4">
-              <a href="/erpnext-software" className="text-primary underline hover:text-primary/80">ERPNext</a> is a versatile open-source ERP software that caters to a wide range of industries, including manufacturing, distribution, retail, trading, services, education, non-profits, and healthcare. It is a cloud-based solution that is easy to use and affordable, making it a popular choice for businesses of all sizes in the UAE.
+              <a href="/erpnext-software" className="text-primary underline hover:text-primary/80" id="uae">ERPNext</a> is a versatile open-source ERP software that caters to a wide range of industries, including manufacturing, distribution, retail, trading, services, education, non-profits, and healthcare. It is a cloud-based solution that is easy to use and affordable, making it a popular choice for businesses of all sizes in the UAE.
             </p>
           </div>
          
@@ -295,7 +301,10 @@ export default function Page() {
               secondaryButton: {
                 text: "Learn More",
                 icon: "ArrowRight",
-                action: handleSecondary
+                action: () => {
+                  const el = document.getElementById('uae');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }
               },
               trustIndicator: {
                 text: "Trusted by businesses worldwide",

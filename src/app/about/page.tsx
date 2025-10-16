@@ -101,7 +101,7 @@ export default function AboutPage() {
       <main className="">
         <HeroSection
         headline="About Finbyz Tech"
-        highlightWords={["Workflow", "Transition"]}
+        highlightWords={["Finbyz", "Erp", "Ai","Erpnext"]}
         description="Where business challenges meet sharp solutions"
         heroImage={{
           alt: 'Timeline and visual roadmap of Finbyz Tech as a business solution provider',
@@ -193,9 +193,9 @@ export default function AboutPage() {
         {/* Quote Section */}
         <section className="py-24 ">
           <div className="container-custom">
-            <div className="w-20 h-20 mx-auto mb-8  rounded-full flex items-center justify-center shadow-lg">
+            {/* <div className="w-20 h-20 mx-auto mb-8  rounded-full flex items-center justify-center shadow-lg">
               <Quote className="w-10 h-10 text-black" />
-            </div>
+            </div> */}
             <blockquote className="text-2xl lg:text-3xl font-bold text-gray-800 mb-6 leading-relaxed">
               "We don't just build software — we help you steer toward smarter decisions, streamlined operations, and scalable outcomes."
             </blockquote>
@@ -306,10 +306,10 @@ export default function AboutPage() {
         {/* Final CTA */}
         <section className="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
           <div className="container-custom">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-center">
               Ready to steer your vision with us?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto text-center">
               Join us in creating innovative solutions that drive business transformation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

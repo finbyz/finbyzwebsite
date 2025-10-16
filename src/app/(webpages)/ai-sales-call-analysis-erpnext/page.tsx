@@ -22,6 +22,10 @@ const heroData = {
     alt: 'AI Sales Call Recording & Analysis in ERPNext',
     src: '/images/Ai Call Insights.gif',
   },
+  primaryButton: {
+    text: 'Get a Demo',
+    action: '/contact'
+  },
   features: [
     { icon: Mic, title: 'In-app recording', description: 'Record or upload calls directly in ERPNext.' },
     { icon: Bot, title: 'AI analysis', description: 'Transcripts, tone, and engagement insights.' },

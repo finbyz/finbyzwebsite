@@ -12,11 +12,11 @@ export default function Page() {
     highlightWords:['Automation','Effective Sales'],
     description:
       'Follow Up Buddy automates the sales process by generating personalized follow-up emails and identifying inactive leads, saving time and enhancing customer relationships.',
-  primaryButton: { text: 'Get a Demo' ,action:'/contact' },
-    secondaryButton: { text: 'Learn More', action: () => {
-      const el = document.getElementById('follow-up');
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-    } },
+    primaryButton: { text: 'Get a Demo' ,action:'/contact' },
+    // secondaryButton: { text: 'Learn More', action: () => {
+    //   const el = document.getElementById('follow-up');
+    //   if (el) el.scrollIntoView({ behavior: 'smooth' });
+    // } },
     heroImage: { alt: 'Effective Sales Follow-Up Automation Tool', src:"/images/Followup Buddy.gif" },
     
   }

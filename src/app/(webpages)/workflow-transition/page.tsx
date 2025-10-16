@@ -26,7 +26,12 @@ export default function Page() {
         headline="Workflow Transition"
         highlightWords={["Workflow", "Transition"]}
         description="Track document state changes with visual indicators, automated reminders, and comprehensive reports. Ensure accountability and transparency in your workflow with real-time insights and notifications."
-        primaryButton={{ text: 'Get Started', action: handleGetStarted }}
+        primaryButton={{ text: 'Get Started', 
+          action: () => {
+            const el = document.getElementById('workflow');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }
+        }}
         secondaryButton={{ text: 'Contact Us', action: handleContact }}
         heroImage={{
           alt: 'Workflow Transition',
@@ -37,7 +42,7 @@ export default function Page() {
       {/* Introduction */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4">Introduction</h2>
+          <h2 className="text-2xl font-bold mb-4" id ="workflow">Introduction</h2>
           <p className="text-gray-700 mb-6">
             This document describes the workflow transition system that tracks document state changes, sends automated reminders, and generates reports on workflow performance.
           </p>

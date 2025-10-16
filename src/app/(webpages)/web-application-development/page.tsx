@@ -21,9 +21,8 @@ export default function Page() {
         primaryButton={{
           text: 'Get Started',
           action: () => {
-            if (typeof window !== 'undefined') {
-              window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-            }
+            const el = document.getElementById('web-app');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
           }
         }}
         secondaryButton={{
@@ -47,7 +46,7 @@ export default function Page() {
           <div className="pb-6">
             <QuoteBlock text="Creating robust, affordable and efficient web applications that are tailor-made for your business" isHeading={false} />
           </div>
-          <p className="text-muted-foreground text-justify text-base animate-fade-in-up">
+          <p className="text-muted-foreground text-justify text-base animate-fade-in-up" id="web-app">
             We at FinByz use best programming practices and structured framework programming to deliver the most efficient web application solutions for you. We are constantly updating ourselves with the advancements in technology and programming arena to stay on top of the growing technological requirements of our clients.
           </p>
         </div>

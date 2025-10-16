@@ -245,13 +245,13 @@ export default function Page() {
         primaryButton={{
           text: 'Get Started',
           action: () => {
-            window.location.href = '/contact';
+            window.scrollTo({ top: 600, behavior: 'smooth' });
           }
         }}
         secondaryButton={{
-          text: 'Learn More',
+          text: 'Contact Us',
           action: () => {
-            window.scrollTo({ top: 600, behavior: 'smooth' });
+            window.location.href = '/contact';
           }
         }}
         heroImage={{

@@ -247,7 +247,7 @@ export default function AnimatedAboutPage() {
             <div className="absolute bottom-32 left-1/4 w-16 h-16 bg-gradient-to-br from-green-400/20 to-blue-400/20 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
           </div>
           
-          <div className="w-full relative">
+          <div className="container-custom">
             <div className={`text-center mb-20 transition-all duration-1000 ${isVisible['mission-vision'] ? 'animate-fade-in-up' : ''}`}>
               <Badge className="mb-6 bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white border-0 animate-fade-in-up-delayed">
                 Our Foundation
@@ -311,7 +311,7 @@ export default function AnimatedAboutPage() {
             <div className="absolute bottom-20 left-20 w-32 h-32 bg-gradient-to-br from-purple-400/15 to-pink-400/15 rounded-full blur-3xl animate-float" style={{animationDelay: '1.5s'}}></div>
           </div>
           
-          <div className="w-full relative">
+          <div className="container-custom">
             <div className={`text-center mb-20 transition-all duration-1000 ${isVisible['innovation-impact'] ? 'animate-fade-in-up' : ''}`}>
               <Badge className="mb-6 bg-gradient-to-r from-green-500 to-blue-600 text-white border-0 animate-fade-in-up-delayed">
                 Our Journey
@@ -343,7 +343,7 @@ export default function AnimatedAboutPage() {
             <div className="absolute bottom-10 right-10 w-40 h-40 bg-gradient-to-br from-yellow-400/30 to-orange-400/30 rounded-full blur-3xl animate-float" style={{animationDelay: '1s'}}></div>
           </div>
           
-          <div className="w-full relative">
+          <div className="container-custom">
             <div className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${isVisible['quote-section'] ? 'animate-fade-in-up' : ''}`}>
               <div className="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-[#FF8C00] to-[#FFA500] rounded-full flex items-center justify-center shadow-lg animate-pulse">
                 <Quote className="w-10 h-10 text-white" />
@@ -368,7 +368,7 @@ export default function AnimatedAboutPage() {
             <div className="absolute bottom-20 right-1/4 w-32 h-32 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-full blur-3xl animate-float" style={{animationDelay: '1.3s'}}></div>
           </div>
           
-          <div className="w-full relative">
+          <div className="container-custom">
             <div className={`text-center mb-20 transition-all duration-1000 ${isVisible['timeline'] ? 'animate-fade-in-up' : ''}`}>
               <Badge className="mb-6 bg-gradient-to-r from-pink-500 to-purple-600 text-white border-0 animate-fade-in-up-delayed">
                 Our History
@@ -441,7 +441,7 @@ export default function AnimatedAboutPage() {
             <div className="absolute bottom-20 left-20 w-24 h-24 bg-gradient-to-br from-cyan-400/20 to-blue-400/20 rounded-full blur-3xl animate-float" style={{animationDelay: '1s'}}></div>
           </div>
           
-          <div className="w-full relative">
+          <div className="container-custom">
             <div className={`text-center mb-20 transition-all duration-1000 ${isVisible['values'] ? 'animate-fade-in-up' : ''}`}>
               <Badge className="mb-6 bg-gradient-to-r from-blue-500 to-indigo-600 text-white border-0 animate-fade-in-up-delayed">
                 Our Values
@@ -500,7 +500,7 @@ export default function AnimatedAboutPage() {
             <div className="absolute bottom-10 right-1/4 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-gray-400/20 rounded-full blur-3xl animate-float" style={{animationDelay: '1s'}}></div>
           </div>
           
-          <div className="w-full relative">
+          <div className="container-custom">
             <div className="text-center mb-20">
               <Badge className="mb-6 bg-gradient-to-r from-gray-500 to-blue-600 text-white border-0">
                 Explore More
@@ -546,7 +546,7 @@ export default function AnimatedAboutPage() {
 
         {/* Final CTA */}
         <section className="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden w-full">
-          <div className="w-full relative">
+          <div className="container-custom">
             <div className="text-center">
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">
                 Ready to steer your vision with us?

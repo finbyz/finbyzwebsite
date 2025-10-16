@@ -19,8 +19,9 @@ export default function Page() {
         primaryButton={{
           text: 'Get Started',
           action: () => {
-            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-          },
+            const section = document.querySelector('#aal-section');
+            section?.scrollIntoView({ behavior: 'smooth' });
+          }
         }}
         secondaryButton={{
           text: 'Download App',
@@ -34,7 +35,7 @@ export default function Page() {
         }}
       />
 
-      <Section>
+      <Section id="aal-section">
         <div className="container-custom py-8">
           <div className="space-y-4">
             <p className="text-lg text-muted-foreground animate-fade-in">
@@ -194,7 +195,7 @@ export default function Page() {
                 icon: 'CheckCircle',
               },
               title: 'Get Advanced Authorisation Licence App for ERPNext',
-              highlightText:"Authorisation Licence App for ERPNext",
+              highlightText: "Authorisation Licence App for ERPNext",
               description: 'Automate, track, and manage your licences with ease. Ensure compliance and maximize your export-import benefits today.',
               primaryButton: {
                 text: 'Get Started',
