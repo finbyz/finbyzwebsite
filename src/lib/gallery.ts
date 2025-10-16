@@ -76,7 +76,6 @@ async function getGalleryByRoute(route: string): Promise<Gallery | null> {
             },
         });
 
-        console.log('Gallery details response:', detailsResponse);
 
         if (!detailsResponse.ok) {
             // If details fetch fails, return the basic gallery info
@@ -191,7 +190,6 @@ async function getGalleryRoutes(): Promise<string[]> {
         JSON.stringify(["route"])
     )}&limit=0`;
 
-    console.log(galleryPayload)
     const response = await fetch(galleryPayload, {
         headers: {
             ...getAuthHeaders(),

@@ -119,7 +119,7 @@ const Tutorials = ({ data }: TutorialsProps) => {
   }
 
   return (
-    <div className="min-h-screen bg-background mx-auto w-full border-b max-w-screen-xl">
+    <div className="min-h-screen bg-background w-full mx-auto container-custom">
       {/* Structured Data */}
       <script
         type="application/ld+json"
@@ -163,7 +163,7 @@ const Tutorials = ({ data }: TutorialsProps) => {
       <motion.header
         className="border-b border-border sticky top-12 z-40 bg-white"
       >
-        <div className="container mx-auto px-4 py-6">
+        <div className="mx-auto py-6">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
               <h1 className="responsive-card-grid-title mb-2">
@@ -197,7 +197,7 @@ const Tutorials = ({ data }: TutorialsProps) => {
         </div>
       </motion.header>
 
-      <div className="container mx-auto px-4 py-8">
+      <div className="mx-auto py-8">
         {hasGallerySidebar ? (
           <Tabs value={activeTab} onValueChange={v => setActiveTab(v as 'videos' | 'images')}>
             {!selectedItem ? (
