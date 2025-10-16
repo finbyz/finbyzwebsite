@@ -54,7 +54,7 @@ export default function Page() {
             title="Introduction"
             image={{
               alt:"Benefits of ERP",
-              src:"//files/Benefits-of-ERP.svg",
+              src:"/images/Benefits-of-ERP.svg",
               cover:true,
             }}
           >
@@ -74,7 +74,7 @@ export default function Page() {
             id="real-time-information"
             title="Real-time Information"
             image={{
-              src: '//files/Realtime-Information.svg',
+              src: '/images/Realtime-Information.svg',
               alt: 'Realtime Information',
               title: 'Realtime Information',
               width: 400,
@@ -102,7 +102,7 @@ export default function Page() {
             id="higher-productivity"
             title="Higher Productivity"
             image={{
-              src: '//files/Higher-Productivity.svg',
+              src: '/images/Higher-Productivity.svg',
               alt: 'Higher Productivity',
               title: 'Higher Productivity',
               width: 400,
@@ -147,7 +147,7 @@ export default function Page() {
             id="better-analytics"
             title="Better Analytics"
             image={{
-              src: '//files/Better-Analytics.svg',
+              src: '/images/Better-Analytics.svg',
               alt: 'Better Analytics',
               title: 'Better Analytics',
               width: 400,
@@ -175,7 +175,7 @@ export default function Page() {
             id="improved-collaboration"
             title="Improved Collaboration"
             image={{
-              src: '//files/Collaboration.svg',
+              src: '/images/Collaboration.svg',
               alt: 'Improved Collaboration',
               title: 'Improved Collaboration',
               width: 400,
@@ -196,7 +196,7 @@ export default function Page() {
             id="regulatory-compliances"
             title="Regulatory Compliances"
             image={{
-              src: '//files/Regulatory-Compliances.svg',
+              src: '/images/Regulatory-Compliances.svg',
               alt: 'Regulatory Compliances',
               title: 'Regulatory Compliances',
               width: 400,
@@ -217,7 +217,7 @@ export default function Page() {
             id="security"
             title="Security"
             image={{
-              src: '//files/Security.svg',
+              src: '/images/Security.svg',
               alt: 'Security',
               title: 'Security',
               width: 400,
@@ -230,7 +230,7 @@ export default function Page() {
             <BlogParagraph>
               <span className="italic text-muted-foreground block mb-2">Control access and protect sensitive business data!</span>
               Security is a critical advantage of ERP systems. With centralized{' '}
-              <Link href="/upgrade-olderp-with-clouderp" className="text-primary underline hover:text-primary/80" target="_blank">cloud-based ERP</Link> data storage and automated backups, business information is safe from accidental or malicious loss. ERP also allows you to define user permissions, limiting access to sensitive data and reducing risks associated with traditional methods like storing files in unsecured formats such as Excel.
+              <Link href="/upgrade-olderp-with-clouderp" className="text-primary underline hover:text-primary/80" target="_blank">cloud-based ERP</Link> data storage and automated backups, business information is safe from accidental or malicious loss. ERP also allows you to define user permissions, limiting access to sensitive data and reducing risks associated with traditional methods like storing images in unsecured formats such as Excel.
             </BlogParagraph>
           </BlogSectionWithImage>
 

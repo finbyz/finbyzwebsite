@@ -33,7 +33,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-2 text-primary">Our Culture & Values</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-2 text-[#1A5276]">Our Culture & Values</h2>
           <CultureValuesGrid
             items={[
               {
@@ -67,14 +67,14 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-primary">Professional Growth & Development</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-[#1A5276]">Professional Growth & Development</h2>
           <GrowthSection />
         </div>
       </Section>
 
       <Section useGradient>
-        <div className="container-custom py-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-primary">Fun at Finbyz</h2>
+        <div className="container-custom">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-[#1A5276]">Fun at Finbyz</h2>
           <FunGallery />
         </div>
       </Section>
@@ -96,6 +96,7 @@ export default function Page() {
               trustIndicator: {
                 text: 'Trusted by passionate professionals',
                 icon: 'Smile',
+                
               },
             }}
           />

@@ -197,9 +197,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 <Image
                   src={heroImage.poster || heroImage.src || ""}
                   alt={heroImage.alt || "Hero image"}
-                  width={480}
-                  height={360}
-                  className="w-[90%] max-w-[480px] h-auto rounded-2xl object-contain mx-auto"
+                  width={600}
+                  height={450}
+                  className="w-[90%] h-auto rounded-2xl object-contain mx-auto"
                   loading="lazy"
                   priority={false}
                 />

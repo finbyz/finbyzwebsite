@@ -90,8 +90,9 @@ export default function Page() {
               </div>
             </CardHeader>
             <CardContent className="pt-2 text-gray-700 space-y-4">
+            <h2 className="text-2xl font-bold mb-4 text-[#1A5276]">Types of Information Collected</h2>
               <List
-                title="Types of Information Collected"
+                title=""
                 items={[
                   'Personal identification information (e.g., name, email, address, phone, credit card info) provided voluntarily.',
                   'Non-personal identification information (browser, device, OS, ISP, etc.) collected automatically.',
@@ -117,8 +118,9 @@ export default function Page() {
               </div>
             </CardHeader>
             <CardContent className="pt-2 text-gray-700">
+            <h2 className="text-2xl font-bold mb-4 text-[#1A5276]">Purposes for Processing Your Data</h2>
               <List
-                title="Purposes for Processing Your Data"
+                title=""
                 items={[
                   'Analyze website and service usage (IP, location, browser, navigation, etc.).',
                   'Operate accounts and profiles, communicate with you, and maintain security.',
@@ -268,7 +270,7 @@ export default function Page() {
             <CardHeader className="flex flex-row items-center gap-4">
               <UserPlus className="text-blue-600 w-8 h-8" />
               <div>
-                <CardTitle className="text-lg font-semibold">Your Rights</CardTitle>
+                <CardTitle className="text-lg font-semibold"><h2 className='text-[#1A5276]'>Your Rights</h2></CardTitle>
                 <CardDescription>
                   You have several rights under data protection law, including access, rectification, erasure, and more.
                 </CardDescription>

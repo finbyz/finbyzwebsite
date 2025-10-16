@@ -279,8 +279,8 @@ export default function Page() {
       {/* Conclusion & CTA */}
       <Section>
         <div className="py-8">
-          <h2 className="text-2xl font-bold mb-4">Conclusion</h2>
-          <p className="text-gray-700 mb-6">
+          <h2 className="container-custom text-2xl font-bold mb-4">Conclusion</h2>
+          <p className="text-gray-700 mb-6 container-custom">
             This workflow transition system provides comprehensive tracking, automated notifications, and detailed reporting to ensure smooth document processing and accountability across the organization. By leveraging role-based permissions and project-specific access controls, the system ensures relevant stakeholders stay informed while maintaining data security.
           </p>
           <CTA

@@ -13,7 +13,7 @@ export default function Page() {
     <>
       <HeroSection
         headline="EMD Management in ERPNext"
-        highlightWords={["EMD", "ERPNext"]}
+        highlightWords={["EMD", "Management"]}
         description="Optimize your Earnest Money Deposit processes with ERPNext. Manage EMDs efficiently, automate accounting entries, and ensure compliance with ease."
         primaryButton={{
           text: 'Download App',

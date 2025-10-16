@@ -110,12 +110,12 @@ export default function Page() {
 
 
                 <ChemInfoBox
-                  icon={<CheckCircle className="text-black-600" size={22} />}
+                  icon={<CheckCircle className="text-sky-600" size={22} />}
                   title="Supplier Samples"
                   description="Store supplier samples with details of price fluctuations in quotations."
                 />
                 <ChemInfoBox
-                  icon={<CheckCircle className="text-black-600" size={22} />}
+                  icon={<CheckCircle className="text-sky-600" size={22} />}
                   title="Automated Follow-Up"
                   description="Automated follow-up emails based on tracking details to maximize business opportunities."
                 />

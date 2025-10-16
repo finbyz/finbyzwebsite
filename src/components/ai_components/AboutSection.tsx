@@ -8,7 +8,7 @@ const AboutSection = () => (
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.7 }}
       viewport={{ once: true }}
-      className="flex-1 flex justify-center"
+      className="flex-1 flex justify-arround"
     >
       <Image
         src="/Innovate-learn-create.jpg"

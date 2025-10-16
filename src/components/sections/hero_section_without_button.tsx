@@ -27,12 +27,12 @@ export default function Hero({ data = {} }: HeroSectionProps) {
         {/* Subtle gradient overlay */}
         <div className="hero-gradient-overlay"></div>
       </div>
-      <div className="hero-container">
+      <div className="hero-container ">
         {/* Left: Content */}
         <div className="hero-content">
           <h1 className="hero-title">
             {renderedData.title.split(' ').map((word: string, index: number) => 
-              word.includes('AI') || word.includes('ERP') ? (
+              word.includes('Finbyz') || word.includes('Tech') || word.includes('AI') || word.includes("ERP") ? (
                 <span key={index} className="hero-title-highlight">{word} </span>
               ) : (
                 <span key={index}>{word} </span>

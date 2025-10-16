@@ -43,11 +43,11 @@
 .hero-container {
   @apply relative z-10 w-full flex flex-col lg:flex-row items-center justify-center pt-24 lg:pt-0;
   max-width: 1400px;
-  margin: 0 auto;
+  /* margin: 0 auto;
   padding-left: 1rem;
-  padding-right: 1rem;
+  padding-right: 1rem; */
 }
-
+/* 
 @media (min-width: 640px) {
   .hero-container {
     padding-left: 1.5rem;
@@ -74,7 +74,7 @@
     padding-left: 3rem;
     padding-right: 3rem;
   }
-}
+} */
 
 .hero-content {
   @apply flex-1 flex flex-col justify-center items-center lg:items-start text-center lg:text-left lg:pr-8 xl:pr-12 py-8 lg:py-0 w-full max-w-2xl lg:max-w-none;

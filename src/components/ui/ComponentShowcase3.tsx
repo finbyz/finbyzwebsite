@@ -368,10 +368,10 @@ export function FAQSection() {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-violet-50 via-white to-purple-50">
+    <section className="py-16 ">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-[#1A5276] mb-4">Frequently Asked Questions</h2>
           <p className="text-gray-600">Everything you need to know about our services</p>
         </div>
         <div className="max-w-3xl mx-auto">
@@ -449,11 +449,11 @@ export function TimelineCarousel({
 
   return (
     <section
-      className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-50 via-white to-blue-100 relative overflow-hidden"
+      className="min-h-screen flex flex-col items-center justify-center  relative overflow-hidden"
       style={{ scrollSnapAlign: 'start' }}
     >
       <div className="text-center mb-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">{title}</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-[#1A5276] mb-2">{title}</h2>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">{subtitle}</p>
       </div>
       <div className="w-full flex flex-col items-center justify-center">
@@ -464,7 +464,7 @@ export function TimelineCarousel({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden px-12 py-6 sm:px-20 sm:py-8 max-w-2xl w-full text-center select-none outline-none focus:ring-2 focus:ring-blue-400"
+            className="bg-white rounded-3xl border border-gray-100 overflow-hidden px-12 py-6 sm:px-20 sm:py-8 max-w-2xl w-full text-center select-none outline-none focus:ring-2 focus:ring-blue-400"
             title="Auto-advancing timeline milestone"
           >
             <div className="flex flex-col items-center mb-6">

@@ -128,7 +128,7 @@ export default function ResponsiveCardGrid({ data = { cards: [] }, className }: 
 
   return (
     <section className={cn("responsive-card-grid-section", className)}>
-      <div className="responsive-card-grid-container" style={{ width: '100%' }}>
+      <div className="container-custom" style={{ width: '100%' }}>
         {/* Section Header */}
         <div className="responsive-card-grid-header responsive-card-grid-fade-in">
           <h2 className="responsive-card-grid-title">{title}</h2>

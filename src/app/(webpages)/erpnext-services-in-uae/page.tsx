@@ -190,9 +190,9 @@ export default function Page() {
       </Section>
       <Section useGradient>
         <div className="container-custom py-8">
-          {/* <h2 className="text-2xl font-bold mb-6">ERPNext provides a diverse array of features, which include</h2> */}
+          <h2 className="text-2xl font-bold mb-6 text-[#1A5276]">ERPNext provides a diverse array of features, which include</h2>
           <List
-            title="ERPNext provides a diverse array of features, which include"
+            title=""
             items={erpFeatures}
             style={{ marginBottom: 24 }}
           />
@@ -285,7 +285,7 @@ export default function Page() {
                 icon: "Rocket"
               },
               title: "Get Started with ERPNext in UAE",
-              highlightText : "Get Started with ERPNext in UAE",
+              highlightText : "ERPNext in UAE",
               description: "Contact Finbyz Tech today to discuss your ERP requirements and discover how we can help your business grow.",
               primaryButton: {
                 text: "Contact Us",

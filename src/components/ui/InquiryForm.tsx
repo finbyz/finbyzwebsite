@@ -142,7 +142,7 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
   return (
     <div className={cn('inquiry-form', className)}>
       {/* Main Form Container */}
-      <div className="inquiry-form__card">
+      <div className="container-custom">
         <div className="inquiry-form__inner">
           <div className="inquiry-form__grid">
             

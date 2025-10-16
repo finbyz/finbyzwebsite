@@ -62,8 +62,8 @@ export default function CompanyHistoryTimeline({ data }: CompanyHistoryTimelineP
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold" style={{ color: 'var(--text-blue)' }}>{title}</h2>
-          <p className="text-lg" style={{ color: 'var(--text-blue)', opacity: 0.7 }}>{subtitle}</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1A5276]" >{title}</h2>
+          <p className="text-lg" style={{  opacity: 0.7 }}>{subtitle}</p>
         </div>
 
       

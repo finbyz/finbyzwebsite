@@ -125,7 +125,8 @@ export default function Footer() {
   return (
     <footer className=" bg-slate-900 text-white w-full">
       {/* Main Footer Content */}
-      <div className="w-full p-16 mx-auto">
+      <div className="container-custom">
+      <div className=" w-full py-16 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-8">
 
           {/* Company Info - Spans 1 column */}
@@ -280,7 +281,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
+      </div>
       {/* Bottom Bar */}
       <div className="border-t border-slate-800 bg-slate-950">
         <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-20 py-6">

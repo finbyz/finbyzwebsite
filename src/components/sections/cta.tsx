@@ -40,7 +40,7 @@ export default function CTA({ data = {} }: CTAProps) {
     title = "Ready to Scale with Smart Tech? Let's Talk.",
     description = "Transform your business processes with AI-powered automation and expert implementation.",
     primaryButton = { text: "Book Demo", icon: "CalendarCheck", action: undefined },
-    secondaryButton = { text: "Get Proposal", icon: "FileText", action: undefined },
+    secondaryButton = { text: "Get Proposal", icon: "FileText", action: '/contact' },
     trustIndicator = { text: "Trusted by 100+ businesses", icon: "CalendarCheck" }
   } = data;
 

@@ -12,21 +12,23 @@ export default function Page() {
   const seoTitle = 'Content Spark Streamline Marketing Automation';
   const seoDescription = 'Content Spark is an advanced marketing automation platform designed to optimize content creation for marketing teams, ensuring brand consistency and rapid ideation.';
   const heroImage = '/images/Content Spark (marketing automation).gif';
+  const highlightWords = ['Content Spark', 'Marketing Automation']
 
   return (
     <>
       {/* 1️⃣ HERO SECTION (Required - First) */}
       <HeroSection
         headline={seoTitle}
+        highlightWords={highlightWords}
         description={seoDescription}
         heroImage={{ alt: seoTitle, src: heroImage }}
-        primaryButton={{ text: 'Get a demo', action:'/contact' }}
+        primaryButton={{ text: 'Get a demo', action: '/contact' }}
       />
 
       {/* 2️⃣ OVERVIEW SECTION (Required) */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6" id="content-spark">Overview</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#1A5276]" id="content-spark">Overview</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
             Content Spark leverages the Frappe Framework to help businesses enhance their marketing strategies through AI-powered content generation tailored to brand voice and audience demographics. The platform automates the entire workflow from ideation to publishing, allowing users to create professional LinkedIn posts and accompanying visuals in minutes, while ensuring consistency and engagement. With benefits like time savings, creative boosts, and integrated visuals, Content Spark revolutionizes the marketing process in the ERPNext ecosystem.
           </p>
@@ -136,7 +138,7 @@ export default function Page() {
             {
               number: 1,
               suffix: '',
-              label: 'Time Savings',
+              label: '',
               header: 'Significant Time Savings',
               description:
                 'Compress brainstorming, drafting, and design into minutes with AI-driven workflows.',
@@ -146,7 +148,7 @@ export default function Page() {
             {
               number: 2,
               suffix: '',
-              label: 'Brand Consistency',
+              label: '',
               header: 'Brand Consistency',
               description:
                 'Train once and maintain voice and design standards across every single post.',
@@ -156,7 +158,7 @@ export default function Page() {
             {
               number: 3,
               suffix: '',
-              label: 'Creative Boost',
+              label: '',
               header: 'Creative Boost',
               description:
                 'Beat blank-page syndrome with on-brand ideas tailored to audience and theme.',
@@ -166,7 +168,7 @@ export default function Page() {
             {
               number: 4,
               suffix: '',
-              label: 'Integrated Visuals',
+              label: '',
               header: 'Integrated Visuals',
               description:
                 'Auto-generate matching images—no external design tools or delays required.',
@@ -176,7 +178,7 @@ export default function Page() {
             {
               number: 5,
               suffix: '',
-              label: 'Unified Workflow',
+              label: '',
               header: 'Unified Workflow',
               description:
                 'Work end-to-end inside ERPNext—no app switching, smoother collaboration.',
@@ -186,7 +188,7 @@ export default function Page() {
             {
               number: 6,
               suffix: '',
-              label: 'Scalable Campaigns',
+              label: '',
               header: 'Scalable Campaigns',
               description:
                 'Generate and schedule multiple posts simultaneously to scale with ease.',
@@ -222,25 +224,25 @@ export default function Page() {
               id: 'o1',
               title: 'Ready-to-publish LinkedIn posts',
               description: 'Polished copy aligned to brand voice and audience.',
-              icon: 'FileText',
-              iconColor: 'text-indigo-600',
-              iconBg: 'bg-indigo-50',
+              icon: 'Cpu',
+              iconColor: "#ffffff",
+              iconBg: '#1A5276',
             },
             {
               id: 'o2',
               title: 'Custom branded images',
               description: 'Distinct visuals that match your message and guidelines.',
-              icon: 'Palette',
-              iconColor: 'text-rose-600',
-              iconBg: 'bg-rose-50',
+              icon: 'Target',
+              iconColor: "#ffffff",
+              iconBg: "#FF8C00",
             },
             {
               id: 'o3',
               title: 'Flexible scheduling',
               description: 'Publish now or queue in ERPNext’s calendar with ease.',
-              icon: 'CalendarClock',
-              iconColor: 'text-emerald-600',
-              iconBg: 'bg-emerald-50',
+              icon: 'BarChart3',
+              iconColor: "#ffffff",
+              iconBg: "#27AE60",
             },
           ],
           layout: 'standard',
@@ -259,13 +261,13 @@ export default function Page() {
           description:
             'Empower your marketing team with AI agents that ideate, write, and design—right inside ERPNext. Faster campaigns, consistent branding, and better results.',
           primaryButton: { text: 'Request a demo', icon: 'Calendar', action: '/contact' },
-          secondaryButton: { 
-            text: 'See it in action', 
-            icon: 'PlayCircle', 
+          secondaryButton: {
+            text: 'See it in action',
+            icon: 'PlayCircle',
             action: () => {
               const el = document.getElementById('content-spark');
               if (el) el.scrollIntoView({ behavior: 'smooth' });
-            } 
+            }
           },
           trustIndicator: { text: 'Built for ERPNext on Frappe Framework', icon: 'ShieldCheck' },
         }}

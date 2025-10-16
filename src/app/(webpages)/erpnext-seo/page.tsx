@@ -120,14 +120,14 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8" id="benefits-section">
-          <h2 className="text-2xl font-bold mb-6 text-center">Benefits of using ERPNext with SEO</h2>
+          <h2 className="text-2xl font-bold mb-6 text-center text-[#1A5276]">Benefits of using ERPNext with SEO</h2>
           <SeoImprovementGrid items={seoBenefits} />
         </div>
       </Section>
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-6 text-center">Getting started with ERPNext SEO</h2>
+          <h2 className="text-2xl font-bold mb-6 text-center text-[#1A5276]">Getting started with ERPNext SEO</h2>
           <List
             title=""
             items={gettingStartedList}
@@ -143,14 +143,14 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-6 text-center">Improving ERPNext SEO</h2>
+          <h2 className="text-2xl font-bold mb-6 text-center  text-[#1A5276]">Improving ERPNext SEO</h2>
           <SeoImprovementGrid items={improvementItems} />
         </div>
       </Section>
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-6 text-center">Other Tips</h2>
+          <h2 className="text-2xl font-bold mb-6 text-center  text-[#1A5276]">Other Tips</h2>
           <List
             title=""
             items={otherTipsList}

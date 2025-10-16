@@ -42,7 +42,7 @@ export default function Benefits({ data = {} }: BenefitsProps) {
       {
         number: 10,
         suffix: "+",
-        label: "Years of Proven Experience",
+        label: "Years of Experience",
         header: "Proven Track Record",
         description: "Decade of expertise in delivering cutting-edge solutions",
         icon: "Award",
@@ -51,7 +51,7 @@ export default function Benefits({ data = {} }: BenefitsProps) {
       {
         number: 200,
         suffix: "+",
-        label: "Efficiency Gains with Our Solutions",
+        label: "Efficiency Gains",
         header: "Maximum Efficiency",
         description: "Transform your operations with intelligent automation",
         icon: "TrendingUp",
@@ -69,7 +69,7 @@ export default function Benefits({ data = {} }: BenefitsProps) {
       {
         number: 100,
         suffix: "+",
-        label: "Projects Delivered with Precision",
+        label: "Projects",
         header: "Quality Delivery",
         description: "Every project completed with exceptional precision and care",
         icon: "Target",
@@ -146,8 +146,8 @@ export default function Benefits({ data = {} }: BenefitsProps) {
   };
 
   return (
-    <section className="benefits-section">
-      <div className="benefits-container">
+    <section >
+      <div className="container-custom mx-auto my-4">
         <div className={`benefits-header`}>
           <h2 className="benefits-title">
             {title}

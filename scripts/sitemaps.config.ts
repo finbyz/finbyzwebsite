@@ -73,7 +73,7 @@ const config: SitemapConfig[] = [
     includeRootIndex: true,
     changefreq: 'weekly',
     priority: 0.8,
-    exclude: ['/contact-old'],
+    exclude: ['/contact-old','/page-builder','/user-activity'],
     transform: ({ urls }) => {
       return urls.map(url => {
         let priority = 0.4;

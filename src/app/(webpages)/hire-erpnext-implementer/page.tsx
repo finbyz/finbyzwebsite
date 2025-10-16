@@ -262,7 +262,7 @@ export default function Page() {
       />
 
       <Section>
-        <div className="container-custom py-8  text-black">
+        <div className="container-custom py-8  text-[#000000] ">
           <QuoteBlock
             text="Looking to digitally transform your business? Choose Finbyz Tech – a leading ERPNext Implementation Company in Ahmedabad, Gujarat. Here's why"
             isHeading={true}
@@ -322,7 +322,7 @@ export default function Page() {
           style={{ height: "280px" }} // Reduced height
         >
           {/* Glow border effect */}
-          <div className="absolute inset-0 rounded-3xl p-[2px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></div>
+          {/* <div className="absolute inset-0 rounded-3xl p-[2px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></div> */}
 
           {/* Horizontal Card */}
           <div className="relative z-10 bg-white rounded-3xl h-full flex flex-col md:flex-row transform transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl">
@@ -348,7 +348,7 @@ export default function Page() {
     </div>
 
     {/* CTA */}
-<div className="text-center mt-20">
+{/* <div className="text-center mt-20">
   <a
     href="/contact"
     className="ml-4 bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white 
@@ -357,7 +357,7 @@ export default function Page() {
   >
     Talk to Our Experts
   </a>
-</div>
+</div> */}
 
   </div>
 </Section>

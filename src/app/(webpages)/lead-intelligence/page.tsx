@@ -102,49 +102,49 @@ export default function Page() {
         id: 1,
         title: 'Zero Missed Inquiries',
         description: 'Automatically capture and classify all inbound emails so nothing slips through.',
-        icon: 'MailCheck',
-        iconColor: 'text-emerald-600',
-        iconBg: 'bg-emerald-100'
+        icon: 'Award',
+        iconBg: "#1A5276",
+        iconColor: "#ffffff"
       },
       {
         id: 2,
         title: 'Streamlined Lead-to-Opportunity',
         description: 'Move from inquiry to opportunity seamlessly with clear routing and ownership.',
-        icon: 'GitMerge',
-        iconColor: 'text-blue-600',
-        iconBg: 'bg-blue-100'
+        icon: 'Zap',
+        iconBg: "#FF8C00",
+        iconColor: "#ffffff"
       },
       {
         id: 3,
         title: 'Reduced Manual Data Entry',
         description: 'AI populates CRM fields automatically, saving hours and reducing errors.',
-        icon: 'Keyboard',
-        iconColor: 'text-violet-600',
-        iconBg: 'bg-violet-100'
+        icon: 'Shield',
+        iconBg: "#27AE60",
+        iconColor: "#ffffff"
       },
       {
         id: 4,
         title: 'Clean, Current CRM Data',
         description: 'Smart deduplication and validation keep ERPNext records accurate and usable.',
-        icon: 'ShieldCheck',
-        iconColor: 'text-amber-600',
-        iconBg: 'bg-amber-100'
+        icon: 'TrendingUp',
+        iconBg: "#8E44AD",
+        iconColor: "#ffffff"
       },
       {
         id: 5,
         title: 'Faster Sales Response',
         description: 'Instant qualification and creation speed up outreach to hot prospects.',
-        icon: 'Clock',
-        iconColor: 'text-rose-600',
-        iconBg: 'bg-rose-100'
+        icon: 'BarChart3',
+        iconBg: "#1A5276",
+        iconColor: "#ffffff"
       },
       {
         id: 6,
         title: 'Configurable and Scalable',
         description: 'Works across providers, custom rules, and classifier APIs for enterprise scale.',
-        icon: 'Settings',
-        iconColor: 'text-slate-600',
-        iconBg: 'bg-slate-100'
+        icon: 'Target',
+        iconBg: "#8E44AD",
+        iconColor: "#ffffff"
       }
     ],
     layout: 'standard' as const,
@@ -177,7 +177,8 @@ export default function Page() {
         headline={seoTitle}
         description={seoDescription}
         heroImage={{ alt: seoTitle, src: "/images/Lead Intelligence.gif" }}
-        accentColor="blue"
+        highlightWords={["Lead Intelligence"]}
+        // accentColor="blue"
       />
 
       {/* 2️⃣ OVERVIEW SECTION (Required) */}

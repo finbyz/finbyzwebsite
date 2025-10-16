@@ -119,7 +119,7 @@ export default function Hero({ data = {} }: { data?: Record<string, any> }) {
   }
 
   return (
-    <section className="hero-section">
+    <section className="container-custom min-h-screen mx-auto bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Professional Background Pattern */}
       <div className="hero-background" aria-hidden="true">
         {/* Subtle geometric pattern */}
@@ -132,7 +132,7 @@ export default function Hero({ data = {} }: { data?: Record<string, any> }) {
         {/* Subtle gradient overlay */}
         <div className="hero-gradient-overlay"></div>
       </div>
-      <div className="hero-container">
+      <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
         {/* Left: Content */}
         <div className="hero-content">
           <h1 className="hero-title">

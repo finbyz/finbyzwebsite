@@ -62,9 +62,6 @@ export default function Header() {
   const [galleryLoading, setGalleryLoading] = useState(false);
   const [showAllGallery, setShowAllGallery] = useState(false);
 
-
-
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -86,7 +83,6 @@ export default function Header() {
       .finally(() => setBlogsLoading(false));
   }, [hoveredDropdown, hoveredService, blogsLoading, blogPosts.length]);
 
-
   // Load gallery when hovering Insights → Gallery
   useEffect(() => {
     const shouldFetch = hoveredDropdown === "Insights" && hoveredService === "Gallery" && !galleryLoading && galleryItems.length === 0;
@@ -106,10 +102,6 @@ export default function Header() {
         : [...prev, itemName]
     );
   };
-
-
-
-
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -163,12 +155,6 @@ export default function Header() {
 
 
   const navigationItems: NavigationItem[] = [
-    // {
-    //   name: "Solutions",
-    //   hasDropdown: false,
-    //   icon: Target,
-    //   href: "/solutions"
-    // },
     {
       name: "ERPNext",
       hasDropdown: true,
@@ -177,7 +163,6 @@ export default function Header() {
         { name: "ERPNext Services", icon: Wrench },
         { name: "ERPNext Products & Add-ons", icon: Package },
         { name: "ERPNext Solutions", icon: Target },
-        // { name: "ERPNext Partners", icon: Handshake }
       ],
       detailedItems: {
         "ERPNext Services": [
@@ -272,7 +257,6 @@ export default function Header() {
             description: "Advanced authorization license management",
             icon: FileCheck,
             href: "/advanced-authorisation-licence-erpnext"
-            // advanced-authorisation-licence-erpnext
           },
           {
             name: "Workflow Transitions",
@@ -331,26 +315,6 @@ export default function Header() {
             href: "/erp-for-education"
           }
         ],
-        // "ERPNext Partners": [
-        //   {
-        //     name: "Become a Partner",
-        //     description: "Join our partner network",
-        //     icon: Handshake,
-        //     href: "/erpnext/partners/join"
-        //   },
-        //   {
-        //     name: "Partner Benefits",
-        //     description: "Benefits of partnering with us",
-        //     icon: Star,
-        //     href: "/erpnext/partners/benefits"
-        //   },
-        //   {
-        //     name: "Partner Portal",
-        //     description: "Access partner resources",
-        //     icon: Users,
-        //     href: "/erpnext/partners/portal"
-        //   }
-        // ]
       }
     },
     {
@@ -388,6 +352,42 @@ export default function Header() {
         ],
         "AI Automation": [
           {
+            name: "Smart Card Scanner",
+            description: "Scan and extract business card details instantly.",
+            icon: CreditCard,
+            href: "/smart-card-scanner",
+          },
+          {
+            name: "Content Spark Marketing Automation",
+            description: "Automate and personalize your marketing campaigns.",
+            icon: Sparkles,
+            href: "/content-spark-marketing-automation",
+          },
+          {
+            name: "Lead Intelligence",
+            description: "Gain insights and prioritize your leads with AI.",
+            icon: Brain,
+            href: "/lead-intelligence",
+          },
+          {
+            name: "AI Outreach & Lead Generation Research",
+            description: "Discover and connect with potential leads intelligently.",
+            icon: Rocket,
+            href: "/ai-outreach-lead-generation-research",
+          },
+          {
+            name: "AI Sales Call Analysis for ERPNext",
+            description: "Analyze and summarize sales calls automatically.",
+            icon: PhoneCall,
+            href: "/ai-sales-call-analysis-erpnext",
+          },
+          {
+            name: "Email Classification",
+            description: "Classify and route emails automatically using AI.",
+            icon: Mail,
+            href: "/email-classification",
+          },
+          {
             name: "Quote Assistant Overview",
             description: "Streamline quotation creation and management.",
             icon: MessageSquare,
@@ -399,48 +399,14 @@ export default function Header() {
             icon: Users,
             href: "/follow-up-buddy",
           },
-          {
-            name: "Lead Intelligence",
-            description: "Gain insights and prioritize your leads with AI.",
-            icon: Brain,
-            href: "/lead-intelligence",
-          },
-          {
-            name: "Email Classification",
-            description: "Classify and route emails automatically using AI.",
-            icon: Mail,
-            href: "/email-classification",
-          },
-          {
-            name: "AI Outreach & Lead Generation Research",
-            description: "Discover and connect with potential leads intelligently.",
-            icon: Rocket,
-            href: "/ai-outreach-lead-generation-research",
-          },
-          {
-            name: "Smart Card Scanner",
-            description: "Scan and extract business card details instantly.",
-            icon: CreditCard,
-            href: "/smart-card-scanner",
-          },
-          {
-            name: "AI Sales Call Analysis for ERPNext",
-            description: "Analyze and summarize sales calls automatically.",
-            icon: PhoneCall,
-            href: "/ai-sales-call-analysis-erpnext",
-          },
+          
           {
             name: "AI Powered Resume Ranker",
             description: "Rank resumes and find the best candidates instantly.",
             icon: FileSearch,
             href: "/ai-powered-resume-ranker",
           },
-          {
-            name: "Content Spark Marketing Automation",
-            description: "Automate and personalize your marketing campaigns.",
-            icon: Sparkles,
-            href: "/content-spark-marketing-automation",
-          },
+          
         ],
         "Software Development": [
           {
@@ -658,7 +624,6 @@ export default function Header() {
       mainItems: [
         { name: "Blogs", icon: Wrench, href: "/blog-post" },
         { name: "Gallery", icon: Handshake, href: "/gallery" },
-        // { name: "Tech Update", icon: Briefcase, href:"/tech-update" },
       ],
 
       detailedItems: {
@@ -672,8 +637,6 @@ export default function Header() {
         ]
       }
     },
-
-
     {
       name: "Company",
       hasDropdown: true,
@@ -768,12 +731,12 @@ export default function Header() {
             : "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 backdrop-blur-sm"
           }`}
       >
-        <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-18">
+        <div className="container-custom">
+        <div className="w-full">
           <div className="flex justify-between items-center h-12 lg:h-14 w-full">
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center">
                 <Image
-                  // src="/FinByz_2025_Rect-removebg-preview.png"
                   src="/FinByz Logo 2025 copy.png"
                   alt="Finbyz"
                   width={120}
@@ -1087,6 +1050,7 @@ export default function Header() {
               </Button>
             </div>
           </div>
+        </div>
         </div>
       </nav>
 

@@ -157,6 +157,7 @@ const modules = [
 export default function Page() {
   return (
     <>
+      <div className='mt-5'></div>
       <HeroSection
         headline="Modules of ERP Software"
         highlightWords={["ERP", "Software", "Modules"]}

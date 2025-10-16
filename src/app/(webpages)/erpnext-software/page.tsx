@@ -64,7 +64,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold text-center mb-8 animate-fadeInUp">Why Choose ERPNext?</h2>
+          <h2 className="text-2xl font-bold text-center mb-8 animate-fadeInUp text-[#1A5276]">Why Choose ERPNext?</h2>
           <ERPNextFeatureGrid
             features={[
               {
@@ -102,7 +102,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold text-center mb-8 animate-fadeInUp">Elevate Your Operations with Advanced Features</h2>
+          <h2 className="text-2xl font-bold text-center mb-8 animate-fadeInUp text-[#1A5276]">Elevate Your Operations with Advanced Features</h2>
           <ERPNextFeatureGrid
             features={[
               {
@@ -140,9 +140,9 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          {/* <h2 className="text-2xl font-bold mb-6 animate-fadeInUp">Benefits of ERPNext</h2> */}
+          <h2 className="text-2xl font-bold mb-6 animate-fadeInUp text-[#1A5276]">Benefits of ERPNext</h2>
           <List
-            title="Benefits of ERPNext"
+            title=""
             items={[
               'Cost-Effective Solution',
               'Comprehensive and Integrated System',
@@ -166,7 +166,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold text-center mb-8 animate-fadeInUp">Key Features of ERPNext</h2>
+          <h2 className="text-2xl font-bold text-center mb-8 animate-fadeInUp text-[#1A5276]">Key Features of ERPNext</h2>
           <ERPNextKeyFeaturesSlider
             features={[
               {
@@ -218,7 +218,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold text-center mb-4 animate-fadeInUp">Serving Businesses Worldwide</h2>
+          <h2 className="text-2xl font-bold text-center mb-4 animate-fadeInUp text-[#1A5276]">Serving Businesses Worldwide</h2>
           <p className="text-gray-700 text-center animate-fadeInUp">
             At FinByz, we take pride in serving businesses worldwide as a leading <a href="/hire-erpnext-implementer" className="text-primary underline hover:text-primary/80">ERPNext implementation</a> partner. From India to the USA, Canada, UAE, Saudi Arabia, and the UK, our global footprint ensures that businesses everywhere can benefit from our expertise. Our dedicated team stands ready to assist with all your ERP implementation needs. Whether you have inquiries, require consultations, or need any form of assistance, please don't hesitate to reach out to us. We're here to help your business thrive.
           </p>

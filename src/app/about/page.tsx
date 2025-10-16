@@ -3,7 +3,7 @@
 import { Metadata } from "next";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import Hero from "@/components/sections/hero_section_without_button";
+import HeroSection from '@/components/sections/dynamic-hero';
 
 import { FAQSection, TimelineCarousel } from "@/components/ui/ComponentShowcase3";
 import CompanyHistoryTimeline from "@/components/ui/CompanyHistoryTimeline";
@@ -99,23 +99,19 @@ export default function AboutPage() {
     <div className="min-h-screen">
       <Header />
       <main className="">
-        <Hero
-          data={{
-            title: "About Finbyz Tech",
-            subtitle: "Where business challenges meet sharp solutions",
-            description: "We're not just a tech company — we're your strategic partner in navigating complexity.",
-            image: {
-              // src: "/AboutUs.png",
-              src:"/AboutUs-removebg-preview.png",
-              
-              alt: "Timeline and visual roadmap of Finbyz Tech as a business solution provider"
-            }
-          }}
+        <HeroSection
+        headline="About Finbyz Tech"
+        highlightWords={["Workflow", "Transition"]}
+        description="Where business challenges meet sharp solutions"
+        heroImage={{
+          alt: 'Timeline and visual roadmap of Finbyz Tech as a business solution provider',
+          src: '/AboutUs-removebg-preview.png'
+        }}
         />
 
         {/* Page Intro */}
-        <section className="py-16 bg-gradient-to-br from-blue-50 via-white to-orange-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <section className="py-16">
+          <div className="container-custom">
             <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
               We're not just a tech company — we're your strategic partner in navigating complexity. Since 2015, Finbyz Tech has empowered businesses with tailored digital solutions that unlock clarity, drive efficiency, and accelerate outcomes. From planning to execution, we simplify the road to transformation.
             </p>
@@ -123,13 +119,13 @@ export default function AboutPage() {
         </section>
 
         {/* Mission & Vision Section */}
-        <section className="py-24 bg-gradient-to-br from-green-50 via-white to-blue-50">
-          <div className="max-w-10xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-24">
+          <div className="container-custom">
             <div className="text-center mb-16">
-              <Badge className="mb-6 bg-gradient-to-r from-green-500 to-blue-600 text-white border-0">
+              {/* <Badge className="mb-6 bg-gradient-to-r from-green-500 to-blue-600 text-white border-0">
                 Our Foundation
-              </Badge>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+              </Badge> */}
+              <h2 className="text-4xl md:text-5xl font-bold text-[#1A5276] mb-6">
                 Our Tagline, Mission, and Vision
               </h2>
             </div>
@@ -137,8 +133,8 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-700 bg-white/80 backdrop-blur-sm overflow-hidden group hover:scale-105">
                 <CardHeader className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <Target className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 mx-auto mb-4  rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <Target className="w-8 h-8 text-black" />
                   </div>
                   <CardTitle className="text-xl font-bold text-gray-800">Tagline</CardTitle>
                 </CardHeader>
@@ -149,8 +145,8 @@ export default function AboutPage() {
               
               <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-700 bg-white/80 backdrop-blur-sm overflow-hidden group hover:scale-105">
                 <CardHeader className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <TrendingUp className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 mx-auto mb-4  rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <TrendingUp className="w-8 h-8 text-black" />
                   </div>
                   <CardTitle className="text-xl font-bold text-gray-800">Vision</CardTitle>
                 </CardHeader>
@@ -161,8 +157,8 @@ export default function AboutPage() {
               
               <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-700 bg-white/80 backdrop-blur-sm overflow-hidden group hover:scale-105">
                 <CardHeader className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <Award className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 mx-auto mb-4  rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <Award className="w-8 h-8 text-black" />
                   </div>
                   <CardTitle className="text-xl font-bold text-gray-800">Mission</CardTitle>
                 </CardHeader>
@@ -175,12 +171,12 @@ export default function AboutPage() {
         </section>
 
         {/* Innovation & Impact Section */}
-        <section className="py-24 bg-gradient-to-br from-purple-50 via-white to-pink-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <Badge className="mb-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white border-0">
+        <section className="py-24 ">
+          <div className="container-custom">
+            {/* <Badge className="mb-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white border-0">
               Our Journey
-            </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            </Badge> */}
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1A5276] mb-6">
               A Decade of Innovation & Impact
             </h2>
             <div className="text-xl md:text-2xl text-gray-600 leading-relaxed">
@@ -195,10 +191,10 @@ export default function AboutPage() {
         </section>
 
         {/* Quote Section */}
-        <section className="py-24 bg-gradient-to-br from-orange-100 via-yellow-50 to-pink-100">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg">
-              <Quote className="w-10 h-10 text-white" />
+        <section className="py-24 ">
+          <div className="container-custom">
+            <div className="w-20 h-20 mx-auto mb-8  rounded-full flex items-center justify-center shadow-lg">
+              <Quote className="w-10 h-10 text-black" />
             </div>
             <blockquote className="text-2xl lg:text-3xl font-bold text-gray-800 mb-6 leading-relaxed">
               "We don't just build software — we help you steer toward smarter decisions, streamlined operations, and scalable outcomes."
@@ -208,23 +204,19 @@ export default function AboutPage() {
         </section>
 
         {/* Timeline Section */}
-        <TimelineCarousel 
-          timelineItems={timelineData}
-          title="Our Journey Through the Years"
-          subtitle="From humble beginnings to industry leadership — here's how we've evolved and grown."
-        />
+        
 
         {/* Company History Timeline */}
         <CompanyHistoryTimeline />
 
         {/* Values Section */}
-        <section className="py-24 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-          <div className="max-w-10xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-24 ">
+          <div className="container-custom">
             <div className="text-center mb-16">
-              <Badge className="mb-6 bg-gradient-to-r from-blue-500 to-indigo-600 text-white border-0">
+              {/* <Badge className="mb-6 bg-gradient-to-r from-blue-500 to-indigo-600 text-white border-0">
                 Our Values
-              </Badge>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+              </Badge> */}
+              <h2 className="text-4xl md:text-5xl font-bold text-[#1A5276] mb-6">
                 What We Stand For
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -267,12 +259,12 @@ export default function AboutPage() {
 
         {/* Related Pages */}
         <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50">
-          <div className="max-w-10xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="container-custom">
             <div className="text-center mb-16">
-              <Badge className="mb-6 bg-gradient-to-r from-gray-500 to-blue-600 text-white border-0">
+              {/* <Badge className="mb-6 bg-gradient-to-r from-gray-500 to-blue-600 text-white border-0">
                 Explore More
-              </Badge>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+              </Badge> */}
+              <h2 className="text-4xl md:text-5xl font-bold text-[#1A5276] mb-6">
                 Explore More
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -313,7 +305,7 @@ export default function AboutPage() {
 
         {/* Final CTA */}
         <section className="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="container-custom">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
               Ready to steer your vision with us?
             </h2>
@@ -321,12 +313,16 @@ export default function AboutPage() {
               Join us in creating innovative solutions that drive business transformation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full font-semibold hover:scale-105 hover:shadow-xl transition-all text-lg">
-                Let's Steer Your Vision
+             <Link href="/steer-your-vision">
+              <button className="bg-[#f97316] text-white px-8 py-4 rounded-full font-semibold hover:scale-105 hover:shadow-xl transition-all text-lg">
+              Let's Steer Your Vision
               </button>
-              <button className="border-2 border-gray-300 text-gray-300 bg-transparent hover:bg-gray-300 hover:text-gray-900 px-8 py-4 rounded-full font-semibold transition-all text-lg">
+              </Link>
+              <Link href="/erpnext-service-provider">
+                <button className="border-2 border-gray-300 text-gray-300 bg-transparent hover:bg-gray-300 hover:text-gray-900 px-8 py-4 rounded-full font-semibold transition-all text-lg">
                 Explore Our Services
               </button>
+              </Link>
             </div>
           </div>
         </section>

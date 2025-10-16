@@ -4,7 +4,7 @@ import HeroSection from '@/components/sections/dynamic-hero';
 export default function Page() {
   const heroProps = {
     headline: 'Steer Your Vision',
-    highlightWords: ['Vision'],
+    highlightWords: ['Steer','Your'],
     description:
       '“Steer Your Vision” is our signature approach to your digital transformation.',
     heroImage: {
@@ -53,7 +53,7 @@ export default function Page() {
 
           </h2>
           <div className="flex flex-col md:flex-row md:items-center md:gap-8">
-            <div className="md:w-1/12 flex justify-center mb-4 md:mb-0"></div>
+            <div className="md:w-12/12 flex justify-center mb-4 md:mb-0"></div>
             <div className="mt-6 space-y-4 text-gray-700">
               <p>
                 "We believe technology acts both as a lighthouse guiding your direction and as the vessel that drives progress. Through our expertise in digital transformation consulting, we navigate clients from their current challenges toward their future vision. Leveraging advanced technologies, we help you optimize operations and innovate faster through automation and strategic process reengineering."

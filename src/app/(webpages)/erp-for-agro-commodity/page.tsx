@@ -28,7 +28,10 @@ export default function Page() {
         highlightWords={["ERPNext", "Commodity"]}
         description="Discover how Finbyz Tech's ERPNext solutions revolutionize agricultural operations. Enhance efficiency, ensure compliance, and drive growth in your agro commodity business."
         primaryButton={{ text: 'Get Started', action: handleContact }}
-        secondaryButton={{ text: 'Learn More', action: handleLearnMore }}
+        secondaryButton={{ text: 'Learn More',  action: () => {
+            const el = document.getElementById('erp-for-agro');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          } }}
         heroImage={{
           alt: 'ERPNext for Commodity',
           videoSrc: '/images/Agro_Slide_for_Site.mp4',
@@ -96,8 +99,9 @@ export default function Page() {
           <div className="absolute right-0 bottom-0 hidden sm:block opacity-70 pointer-events-none">
             <Image src="/images/three-hexagon.svg" alt="hexagon background" width={120} height={120} className="animate-pulse" />
           </div>
+          <h2 className="text-2xl text-[#1A5276] font-bold text-center mb-6">Other additional features of Our Agricultural ERP Solution:</h2>
           <List
-            title="Other additional features of Our Agricultural ERP Solution:"
+            title=""
             items={[
               'Crop and Land Management: Monitor crop cycles, soil health, and land utilization to optimize yields and maintain soil fertility.',
               'Inventory Management: Real-time tracking of seeds, fertilizers, and equipment to prevent stockouts and overstocking.',
@@ -112,7 +116,7 @@ export default function Page() {
 
       {/* Benefits List Section */}
       <Section useGradient>
-        <div className="container-custom py-8">
+        <div id='erp-for-agro' className="container-custom py-8">
           <h2 className="text-2xl text-[#1A5276] font-bold text-center mb-6">Benefits of Implementing ERPNext in Agriculture</h2>
           <p className="text-gray-700 text-center mb-6">
             Above the general <a href="https://finbyz.tech/benefits-of-erp" target="_blank" className="text-blue-600 underline">benefits of ERP Software</a>, there are various benefits, specific for Agro-Industry, some of them are as below
@@ -160,7 +164,11 @@ export default function Page() {
               secondaryButton: {
                 text: 'Learn More',
                 icon: 'info',
-                action: handleLearnMore,
+                // action: handleLearnMore,
+                 action: () => {
+            const el = document.getElementById('erp-for-agro');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }
               },
               trustIndicator: {
                 text: 'Trusted by leading agro businesses',

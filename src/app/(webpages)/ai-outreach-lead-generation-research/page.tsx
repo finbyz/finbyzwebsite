@@ -18,9 +18,9 @@ export default function Page() {
       {/* 1️⃣ HERO SECTION (Required - First) */}
       <HeroSection
         headline={seoTitle}
-        highlightWords={[ "Lead Generation", "Email Outreach"]}
+        highlightWords={["Lead Generation", "Email Outreach"]}
         description={seoDescription}
-        heroImage={{ src: "/images/Content Spark (marketing automation).gif", alt: 'Content Spark (marketing automation)' }}
+        heroImage={{ src: "/AI_Powered_Resume_Ranker.gif", alt: 'AI_Powered_Resume_Ranker' }}
         primaryButton={{ text: 'Get a Demo', action:'/contact' }}
 
       // secondaryButton={{ text: 'See Workflow' }}

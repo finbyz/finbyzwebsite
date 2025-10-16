@@ -40,8 +40,9 @@ export default function Page() {
           {/* <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
             <ShieldCheck className="text-primary" />
              Introduction</h2> */}
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-[#1A5276]">Key Points : </h2>
           <List
-            title="Key Points"
+            title=""
             items={[
               "When you use our services, you’re trusting us with your information. We understand this is a big responsibility and work hard to protect your information and put you in control.",
               "This Privacy Policy is meant to help you understand what information we collect, why we collect it, and what you can do to protect your information.",
@@ -56,7 +57,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8 animate-fade-in-up">
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">What is Finbyz Tech ?</h2>
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-[#1A5276]">What is Finbyz Tech ?</h2>
           <List
             title=''
             items={[
@@ -70,7 +71,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8 animate-fade-in-up">
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-[#1A5276]">
             Collection and Use of Personal Data</h2>
           <List
             title=''
@@ -93,7 +94,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8 animate-fade-in-up">
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-[#1A5276]">
             {/* <Cloud className="text-primary" />  */}
             Cloud API</h2>
           <p className="mb-2">Finbyz sends messages to Cloud API. The cloud API service stores the messages temporarily. Then, it takes on the task of sending the message to the WhatsApp platform. First, messages are stored for any necessary transmissions. Then, the WhatsApp messages are deleted automatically after 30 days.</p>
@@ -102,7 +103,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8 animate-fade-in-up">
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-[#1A5276]">
             {/* <UserCheck className="text-primary" /> */}
              Providing and Managing the Service</h2>
           <List
@@ -123,7 +124,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8 animate-fade-in-up">
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-[#1A5276]">
             {/* <Mail className="text-primary" />  */}
             Communicating with You and Marketing Practices</h2>
           <List
@@ -142,7 +143,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8 animate-fade-in-up">
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-[#1A5276]">
             {/* <FileText className="text-primary" />  */}
             Collecting Payment for the Service</h2>
           <p>For Clients that purchase a paid version of our Service, we collect and process information about how you use the Service, and your Account Information (including contact information, user profile information, and information about your payment method) for the purpose of billing you.</p>
@@ -151,7 +152,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8 animate-fade-in-up">
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-[#1A5276]">
             {/* <RefreshCw className="text-primary" /> */}
              To Understand and Improve our Services and Website</h2>
           <List
@@ -167,7 +168,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8 animate-fade-in-up">
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-[#1A5276]">
             {/* <Link2 className="text-primary" />  */}
             Disclosure of your Personal Data</h2>
           <List
@@ -187,7 +188,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8 animate-fade-in-up">
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-[#1A5276]">
             {/* <Users className="text-primary" />  */}
             Access and Correction of Personal Data</h2>
           <List
@@ -202,7 +203,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8 animate-fade-in-up">
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-[#1A5276]">
             {/* <Lock className="text-primary" /> */}
              How We Protect Personal Data</h2>
           <p>Finbyz Tech takes the security of user data seriously. We take various steps to protect the information you provide to us from loss, misuse, and unauthorized access or disclosure. These steps take into account the sensitivity of the information we collect, process and store, and the current state of technology.</p>
@@ -211,7 +212,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8 animate-fade-in-up">
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-[#1A5276]">
             {/* <Cookie className="text-primary" />  */}
             Cookie Policy</h2>
           <List
@@ -230,7 +231,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8 animate-fade-in-up">
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-[#1A5276]">
             {/* <RefreshCw className="text-primary" /> */}
              Updates to this Privacy Policy</h2>
           <p className="mb-2">This Privacy Policy may be updated periodically to reflect changes to our Personal Data handling practices. The revised Privacy Policy will be posted on the Website. If you continue to use the Service or the Website after the changes are in effect, you agree to the revised Notice.</p>

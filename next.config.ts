@@ -87,14 +87,9 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/api/fb/n/:path*",
-        destination: "https://finbyz.tech/:path*",
-
+        source: "/web-api/fb/n/:path*",
+        destination: "/api/fb/n/:path*",
         
-      },
-      {
-        source: "/api/fb/:path*",
-        destination: "https://finbyz.tech/api/method/:path*",
       },
       {
         source: "/web-api/:path*",

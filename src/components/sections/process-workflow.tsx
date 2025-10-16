@@ -205,7 +205,7 @@ export default function ProcessWorkflow({ data = {} }: ProcessWorkflowProps) {
     <section ref={sectionRef} className="process-workflow-section">
       {/* Background Pattern */}
 
-      
+
       <div className="process-workflow-container">
         <div className={`process-workflow-header ${inView ? 'process-workflow-fade-in-up' : 'process-workflow-fade-out'}`}>
           <h2 className="process-workflow-title">
@@ -215,16 +215,16 @@ export default function ProcessWorkflow({ data = {} }: ProcessWorkflowProps) {
             {subtitle}
           </p>
         </div>
-        
+
         <div className="process-workflow-grid">
           {distinctSteps.map((step, index) => {
             const IconComponent = getIconComponent(step.icon);
-            
+
             return (
               <div
                 key={`${step.step}-${step.title}-${index}`}
                 className={`process-workflow-card-wrapper ${inView ? 'process-workflow-fade-in-up' : 'process-workflow-fade-out'}`}
-                style={{ 
+                style={{
                   transitionDelay: inView ? `${index * 0.15}s` : '0s',
                   animationDelay: inView ? `${index * 0.15}s` : '0s'
                 }}
@@ -236,7 +236,7 @@ export default function ProcessWorkflow({ data = {} }: ProcessWorkflowProps) {
                         className="process-workflow-icon-wrapper"
                         style={{ background: step.iconBg }}
                       >
-                        <IconComponent className="process-workflow-icon" style={{ color: step.iconColor }} />
+                        <IconComponent className="process-workflow-icon" style={{ color: "white" }} />
                       </div>
                       <div className="process-workflow-step-badge">
                         <span className="process-workflow-step-number">{step.step}</span>
@@ -249,12 +249,12 @@ export default function ProcessWorkflow({ data = {} }: ProcessWorkflowProps) {
                       <p className="process-workflow-duration">{step.duration}</p>
                     </div>
                   </div>
-                  
+
                   <div className="process-workflow-card-content">
                     <p className="process-workflow-description">
                       {step.description}
                     </p>
-                    
+
                     <div className="process-workflow-details">
                       <h4 className="process-workflow-details-title">Key Activities:</h4>
                       <div className="process-workflow-details-list">
@@ -267,7 +267,7 @@ export default function ProcessWorkflow({ data = {} }: ProcessWorkflowProps) {
                       </div>
                     </div>
                   </div>
-                  
+
                   {index < safeProcessSteps.length - 1 && (
                     <div className="process-workflow-arrow">
                       <ArrowRight className="process-workflow-arrow-icon" />
@@ -278,7 +278,7 @@ export default function ProcessWorkflow({ data = {} }: ProcessWorkflowProps) {
             );
           })}
         </div>
-        
+
         {/* Process Stats */}
         <div className={`process-workflow-stats ${inView ? 'process-workflow-fade-in-up' : 'process-workflow-fade-out'}`}>
           <div className="process-workflow-stat">

@@ -11,37 +11,37 @@ const brochureItems = [
     title: "Company Profile",
     image: "/images/blog-only-for-large-businesses.svg",
     alt: "Real-time information",
-    fileUrl: "/images/Company Profile_Finbyz Tech Pvt. Ltd..pdf"
+    fileUrl: "/web-api/fb/n/files/Company Profile_Finbyz Tech Pvt. Ltd..pdf"
   },
   {
     title: "Productify Brochure",
     image: "/images/480.svg",
     alt: "Goals & Higher Productivity",
-    fileUrl: "/images/Productify Product Info.pdf"
+    fileUrl: "/web-api/fb/n/files/Productify Product Info.pdf"
   },
   {
     title: "Outsourcing Service",
     image: "/images/icon-supplier-management.svg",
     alt: "Improved TeamWork & Collaboration",
-    fileUrl: "/images/Dedicated Resource Plan.pdf"
+    fileUrl: "/web-api/fb/n/files/Dedicated Resource Plan.pdf"
   },
   {
     title: "Exim",
     image: "/images/226.svg",
     alt: "Exim",
-    fileUrl: "/images/EXIM1.pdf"
+    fileUrl: "/web-api/fb/n/files/EXIM1.pdf"
   },
   {
     title: "Chemical",
     image: "/images/web development.svg",
     alt: "Chemical",
-    fileUrl: "/images/CHEMICAL1.pdf"
+    fileUrl: "/web-api/fb/n/files/CHEMICAL1.pdf"
   },
   {
     title: "Whatsapp Integration",
     image: "/images/lack-of-communication.svg",
     alt: "Whatsapp Integration",
-    fileUrl: "/images/Whatsapp Integration With ERPNext.pdf"
+    fileUrl: "/web-api/fb/n/files/Whatsapp Integration With ERPNext.pdf"
   }
 ];
 
@@ -50,37 +50,37 @@ const aiCrmItems = [
     title: "Content Spark",
     image: "/images/335.svg",
     alt: "Content Spark",
-    fileUrl: "/images/FinByz Tech - Content Spark.pdf"
+    fileUrl: "/web-api/fb/n/files/FinByz Tech - Content Spark.pdf"
   },
   {
     title: "Smart Card Scanner",
     image: "/images/blog-icon-innovates-your-human-resource.svg",
     alt: "Smart Card Scanner",
-    fileUrl: "/images/smart_card_scanner.pdf"
+    fileUrl: "/web-api/fb/n/files/smart_card_scanner.pdf"
   },
   {
     title: "Lead Enrichment",
     image: "/images/208.svg",
     alt: "Lead Enrichment",
-    fileUrl: "/images/Email Classification.pdf"
+    fileUrl: "/web-api/fb/n/files/Email Classification.pdf"
   },
   {
     title: "Lead Intelligence",
     image: "/images/18.svg",
     alt: "Lead Intelligence",
-    fileUrl: "/images/Lead Intelligence.pdf"
+    fileUrl: "/web-api/fb/n/files/Lead Intelligence.pdf"
   },
   {
     title: "Quote Assistant",
     image: "/images/lack-of-communication.svg",
     alt: "Quote Assistant",
-    fileUrl: "/images/Quote_Assistant.pdf"
+    fileUrl: "/web-api/fb/n/files/Quote_Assistant.pdf"
   },
   {
     title: "Follow-Up Buddy",
     image: "/images/go live.svg",
     alt: "Follow-Up Buddy",
-    fileUrl: "/images/Follow_up_Buddy.pdf"
+    fileUrl: "/web-api/fb/n/files/Follow_up_Buddy.pdf"
   }
 ];
 
@@ -89,19 +89,19 @@ const aiAutomationItems = [
     title: "Resume Ranker",
     image: "/images/79.svg",
     alt: "Resume Ranker",
-    fileUrl: "/images/AI_Powered_Resume_Ranker (1) 1 (1).pdf"
+    fileUrl: "/web-api/fb/n/files/AI_Powered_Resume_Ranker (1) 1 (1).pdf"
   },
   {
     title: "Call Feedback",
     image: "/images/3939ac579.svg",
     alt: "Call Feedback",
-    fileUrl: "/images/FinByz Tech - Voice Recording + AI Feedback.pdf"
+    fileUrl: "/web-api/fb/n/files/FinByz Tech - Voice Recording + AI Feedback.pdf"
   },
   {
     title: "AI Outreach",
     image: "/images/380.svg",
     alt: "AI Outreach",
-    fileUrl: "/images/FinByz Tech -  AI Outreach Lead Generation + Research.pdf"
+    fileUrl: "/web-api/fb/n/files/FinByz Tech -  AI Outreach Lead Generation + Research.pdf"
   }
 ];
 
@@ -143,7 +143,7 @@ export default function Page() {
           text: "Download Brochure",
           action: () => {
             // Scroll to first download section
-            const el = document.getElementById('brochure-section');
+            const el = document.getElementById('download');
             if (el) el.scrollIntoView({ behavior: 'smooth' });
           }
         }}
@@ -193,7 +193,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8 flex flex-col items-center text-center gap-4">
-          <h2 className="text-2xl font-bold text-[#1A5276]">Ready to Transform Your Business?</h2>
+          <h2 className="text-2xl font-bold text-[#1A5276]" id="download">Ready to Transform Your Business?</h2>
           <p className="text-muted-foreground">Contact us to learn more about our solutions or request a personalized demo.</p>
         </div>
       </Section>

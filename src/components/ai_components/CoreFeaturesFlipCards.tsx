@@ -38,7 +38,7 @@ const CoreFeaturesFlipCards: React.FC = () => (
       </div>
 
       {/* Cards Grid */}
-      <div className="flex justify-center gap-4 flex-wrap">
+      <div className="container-custom flex justify-center gap-4 flex-wrap">
         {cards.map((card, idx) => (
           <FlipCard 
             key={idx}

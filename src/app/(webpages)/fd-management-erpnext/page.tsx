@@ -14,12 +14,13 @@ export default function Page() {
     <>
       <HeroSection
         headline="FD Management In ERPNext"
-        highlightWords={["FD Management", "ERPNext"]}
+        highlightWords={["FD Management"]}
         description="Discover how ERPNext simplifies fixed deposit management with automated tracking, interest accrual, and seamless integration into your financial asset portfolio."
         primaryButton={{
           text: 'Get Started',
           action: () => {
-            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            const el = document.getElementById('fd-managment');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
           }
         }}
         secondaryButton={{
@@ -42,7 +43,7 @@ export default function Page() {
               <span className="inline-block w-2 h-6 bg-primary rounded-sm" />
               Introduction
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed text-justify">
+            <p className="text-muted-foreground text-lg leading-relaxed text-justify" id="fd-managment">
               In ERPNext, Fixed Deposit (FD) management is a vital component of effective financial asset planning. A fixed deposit is a secure investment option offered by banks and NBFCs, providing higher returns than a standard savings account over a fixed period. With FD management in ERPNext, businesses can track, manage, and automate their fixed deposit operations directly within the ERP system, ensuring accuracy and compliance.
             </p>
           </div>

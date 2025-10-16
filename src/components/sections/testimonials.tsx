@@ -164,7 +164,7 @@ export default function Testimonials({ data = {} }: { data?: Record<string, any>
 
   return (
     <section id="testimonials" className="testimonials-section">
-      <div className="testimonials-container">
+      <div className="container-custom mx-auto py-16">
         <div className={`testimonials-header`}>
           <h2 className="testimonials-title">
             {renderedData.title}

@@ -137,14 +137,14 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-3xl font-bold text-center mb-8 relative inline-block after:absolute after:left-1/2 after:-bottom-2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-primary after:rounded-full">What we focus on for Website Development?</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 relative inline-block after:absolute after:left-1/2 after:-bottom-2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-primary after:rounded-full text-[#1A5276]">What we focus on for Website Development?</h2>
           <FeatureGrid features={features} />
         </div>
       </Section>
 
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-3xl font-bold text-center mb-4 relative inline-block after:absolute after:left-1/2 after:-bottom-2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-primary after:rounded-full">Website Development Process Flow</h2>
+          <h2 className="text-3xl font-bold text-center mb-4 relative inline-block after:absolute after:left-1/2 after:-bottom-2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-primary after:rounded-full text-[#1A5276]">Website Development Process Flow</h2>
           <p className="text-center mb-8">In order to customize the website as per business needs and requirements, we follow a systematic process to develop a website and combine it with our creative expertise.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
             {processSteps.slice(0, 3).map((step, idx) => (
@@ -161,7 +161,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-semibold mb-4">Website Development Company in Ahmedabad, Gujarat, India</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-[#1A5276]">Website Development Company in Ahmedabad, Gujarat, India</h2>
           <p>
             <Link href="/clients" target="_blank" className="text-primary underline">Our clients</Link> speak for our work. Our passion to develop websites and using expertise and excellence to provide a diverse range of technical services that are customized as per client’s need has helped us achieve the time specific and desired results. We offer powerful design solutions maintaining the utmost quality and speed. Our high-quality service through an extensive and talented team allows us to develop a stunning website for your business. Our experienced developers and testing team help us to deliver our projects in time to the client’s satisfaction. We don’t just build you a website, we create it for you.
           </p>

@@ -34,7 +34,7 @@ export default function Page() {
         secondaryButton={{ text: 'Contact Us', action: heroSecondaryAction }}
         heroImage={{
           alt: 'Hire Django Developer',
-          src: '/custom Django.svg',
+          src: '/Hire-dJango-Dev - New.svg',
           
         }}
       />
@@ -53,7 +53,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold text-center mb-8">What Our Django Full Stack Developers Can Do for You?</h2>
+          <h2 className="text-2xl font-bold text-center mb-8 text-[#1A5276]">What Our Django Full Stack Developers Can Do for You?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <FlipCard
               front={
@@ -153,7 +153,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-8">What Do We Offer As a Pro Django Coder</h2>
+          <h2 className="text-2xl font-bold mb-8 text-[#1A5276]">What Do We Offer As a Pro Django Coder</h2>
           <DjangoAdvantageGrid
             advantages={[
               {
@@ -187,7 +187,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-8">The Finbyz Advantage: Where Expertise Meets Innovation</h2>
+          <h2 className="text-2xl font-bold mb-8 text-[#1A5276]">The Finbyz Advantage: Where Expertise Meets Innovation</h2>
           <DjangoAdvantageGrid
             advantages={[
               {
@@ -233,7 +233,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold text-center mb-8">Why We Are The Best Django Developers</h2>
+          <h2 className="text-2xl font-bold text-center mb-8 text-[#1A5276]">Why We Are The Best Django Developers</h2>
           <DjangoWhyBestGrid
             items={[
               {
@@ -299,7 +299,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold text-center mb-8">The Case for Outsourcing Django Developer Services</h2>
+          <h2 className="text-2xl font-bold text-center mb-8 text-[#1A5276]">The Case for Outsourcing Django Developer Services</h2>
           <DjangoOutsourcingBenefitsGrid
             benefits={[
               {

@@ -209,7 +209,7 @@ export default function SmartCardScannerPage() {
       {/* 2️⃣ OVERVIEW SECTION */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Overview</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#1A5276]">Overview</h2>
           <p className="text-lg text-gray-700 leading-relaxed">{pageDescription}</p>
         </div>
       </Section>

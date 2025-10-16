@@ -27,8 +27,8 @@ interface FinbyzGalleryProps {
 const FinbyzGallery = ({ galleryItems = [], relatedReads = [] }: FinbyzGalleryProps) => {
   console.log(relatedReads)
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen bg-gray-50 py-12 container-custom mx-auto">
+      <div className="mx-auto">
         {/* Related Reads Section */}
         {relatedReads.length > 0 ?
           <div className='mb-16'>
@@ -129,6 +129,19 @@ const FinbyzGallery = ({ galleryItems = [], relatedReads = [] }: FinbyzGalleryPr
         .gallery-scroll-container {
           overflow: hidden;
           padding: 2rem 0;
+        }
+        .gallery-scroll-container {
+          overflow-x: auto;
+          scrollbar-width: none; /* Firefox */
+          -ms-overflow-style: none; /* IE and Edge */
+        }
+
+        .gallery-scroll-container::-webkit-scrollbar {
+          display: none; /* Chrome, Safari, Opera */
+        }
+
+        .gallery-scroll-container:hover {
+          overflow-x: auto;
         }
 
         .gallery-scroll {

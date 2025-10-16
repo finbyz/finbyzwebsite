@@ -270,9 +270,9 @@ export default function Page() {
       </Section>
       <Section useGradient>
         <div className="container-custom py-8 flex flex-col gap-8">
-          {/* <h2 className="text-2xl font-bold mb-2">ERPNext offers a wide range of functionalities including:</h2> */}
+          <h2 className="text-2xl font-bold mb-2 text-[#1A5276]">ERPNext offers a wide range of functionalities including:</h2>
           <List
-            title="ERPNext offers a wide range of functionalities including:"
+            title=""
             items={erpnextFunctionalityList}
             style={{}}
           />
@@ -314,14 +314,14 @@ export default function Page() {
               </CardContent>
             </Card>
           </div>
-          <p className="mt-4">
+          <p className="mt-4" id="canada">
             For business owners in Canada, ERPNext represents a robust, user-friendly, and cost-effective ERP option that can enhance operational efficiency, minimize expenses, boost operational transparency, and ensure regulatory compliance.
           </p>
         </div>
       </Section>
       <Section>
         <div className="container-custom py-8 flex flex-col gap-8">
-          <h2 className="text-2xl font-bold">ERP Services in Canada</h2>
+          <h2 className="text-2xl font-bold text-[#1A5276]">ERP Services in Canada</h2>
           <QuoteBlock
             text="A multitude of companies offer ERP services across Canada, assisting businesses with the implementation and customization of ERPNext, alongside providing ongoing support and maintenance."
             isHeading={false}
@@ -342,7 +342,7 @@ export default function Page() {
       </Section>
       <Section useGradient>
         <div className="container-custom py-8 flex flex-col gap-8">
-          <h2 className="text-2xl font-bold mb-4">Serving Diverse Industries with Finbyz ERPNext Solutions</h2>
+          <h2 className="text-2xl font-bold mb-4 text-[#1A5276]">Serving Diverse Industries with Finbyz ERPNext Solutions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {industryServices.map((service, idx) => (
               <FeatureCard
@@ -358,7 +358,7 @@ export default function Page() {
       </Section>
       <Section>
         <div className="container-custom py-8 flex flex-col gap-8">
-          <h2 className="text-2xl font-bold text-center mb-2">Serving Businesses Worldwide from Canada</h2>
+          <h2 className="text-2xl font-bold text-center mb-2 text-[#1A5276]">Serving Businesses Worldwide from Canada</h2>
           <p className="text-justify">
             As a premier global ERP implementation partner, FinByz Tech is dedicated to supporting businesses not only in Canada but also in India, the USA, the UK, UAE, and Saudi Arabia. Our experienced team is always on standby, ready to address your ERP implementation needs, no matter where your business is located. Whether you're looking for information, seeking expert consultations, or in need of any assistance, don't hesitate to reach out to us. We're committed to fulfilling your ERP requirements in these varied markets, ensuring your business is equipped with the best ERP solutions, tailored to the global stage.
           </p>
@@ -384,7 +384,10 @@ export default function Page() {
               secondaryButton: {
                 text: 'Learn More',
                 icon: 'info',
-                action: handleSecondary,
+                action: () => {
+                  const el = document.getElementById('canada');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }
               },
               trustIndicator: {
                 text: 'Trusted by businesses worldwide',

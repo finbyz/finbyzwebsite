@@ -9,7 +9,8 @@ import CTA from '@/components/sections/cta'
 export default function Page() {
   const seo = {
     title: 'Email classification',
-    description: ''
+    description: '',
+    highlightwords: ['classification']
   }
 
   const workflowData = {
@@ -243,6 +244,7 @@ export default function Page() {
       {/* 1️⃣ HERO SECTION (Required - First) */}
       <HeroSection
         headline={seo.title}
+        highlightWords={seo.highlightwords}
         description={seo.description || undefined}
         heroImage={{ alt: seo.title, src: "/images/email_classifiaction.gif" }}
       />

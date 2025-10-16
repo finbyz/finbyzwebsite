@@ -99,9 +99,9 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4 text-primary">Some of the many features that ERPNext provides are the following</h2>
+          <h2 className="text-2xl font-bold mb-4  text-[#1A5276]">Some of the many features that ERPNext provides are the following :</h2>
           <List
-            title="ERPNext Features"
+            title=""
             items={[
               'Management of finances and accounting',
               'Inventory management',
@@ -122,7 +122,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold text-center mb-6 text-primary">What follows are advantages of ERPNext implementation in Saudi Arabia</h2>
+          <h2 className="text-2xl font-bold text-center mb-6 text-[#1A5276]">What follows are advantages of ERPNext implementation in Saudi Arabia</h2>
           <p className="text-justify mb-8 text-gray-700">ERPNext offers Saudi Arabian business owners a reliable, affordable, and easy-to-use ERP solution that may improve operational effectiveness, reduce costs, increase operational transparency, and guarantee regulatory compliance.</p>
           <ERPNextBenefitsGrid
             benefits={[
@@ -149,7 +149,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold text-center text-primary mb-6">Saudi Arabian ERP Services</h2>
+          <h2 className="text-2xl font-bold text-center  mb-6 text-[#1A5276]">Saudi Arabian ERP Services</h2>
           <div className="space-y-4 mb-8 text-justify">
             <p>In Saudi Arabia, there are many organisations that provide ERP services. These companies help businesses customise and deploy ERPNext while also provide continuous support and maintenance. It is important to take into account multiple factors while choosing an ERP service provider in Saudi Arabia, including industry experience, support, and maintenance options.</p>
             <p>For companies thinking about ERPNext, contacting a Saudi Arabian ERP service provider is a wise option. Such a provider can give ongoing support and maintenance, as well as help with the seamless adoption and customisation of ERPNext.</p>
@@ -192,7 +192,7 @@ export default function Page() {
             <Image src="/images/238 (2).svg" alt="ERPNext-partner-Saudi-Arebia" width={220} height={220} className="rounded-lg shadow-md object-contain bg-white p-4" />
           </div>
           <div className="w-full md:w-2/3">
-            <h2 className="text-2xl font-bold mb-4 text-primary">Serving Saudi Arabian Businesses Globally</h2>
+            <h2 className="text-2xl font-bold mb-4 text-[#1A5276]">Serving Saudi Arabian Businesses Globally</h2>
             <p className='text-justify'>FinByz Tech, a leading global ERP implementation partner, is committed to helping companies worldwide, not just in Saudi Arabia. Our skilled staff is always available to handle your ERP implementation requirements, making sure that your company has the greatest ERP solutions available that are suited for the worldwide arena. Please do not hesitate to contact us if you need information, professional advice, or help. Regardless of where your company is located, we are dedicated to meeting your ERP requirements.</p>
           </div>
         </div>

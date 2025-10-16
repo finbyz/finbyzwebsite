@@ -63,22 +63,22 @@ export default function Page() {
               <InvestmentProcessStepCard
                 title="Configure Investment Accounts"
                 description="Define default accounts under the Investment Portfolio Accounts section, including your bank, capital, charges, and income accounts. These settings streamline portfolio tracking and automate journal entries for investment transactions."
-                image="/images/1.png"
-                alt="Configure Accounts"
+                // image="/images/1.png"
+                // alt="Configure Accounts"
               />
               <InvestmentProcessStepCard
                 title="Fill Portfolio Investment Form"
                 description="Enter key details such as Segment, Category, Script (investment name), and Investment Date in the Portfolio Investment Form. This lays the foundation for accurate ERPNext portfolio tracking."
-                image="/images/1.png"
-                alt="Investment Form"
+                // image="/images/1.png"
+                // alt="Investment Form"
               />
             </div>
             <div className="flex flex-col gap-6">
               <InvestmentProcessStepCard
                 title="Enter Investment Details"
                 description="Provide essential details like quantity, entry price, entry charges, and total cost of ownership. You can set entry charges manually or let the system calculate them. Default accounts are picked automatically but can be changed for specific transactions. After submission, a journal entry is created, and your portfolio entry status updates to 'Holding'. For existing portfolios, link the Journal Voucher and mark as 'Is Existing'."
-                image="/images/1.png"
-                alt="Investment Entry"
+                // image="/images/1.png"
+                // alt="Investment Entry"
               />
             </div>
           </div>
@@ -103,22 +103,22 @@ export default function Page() {
               <InvestmentProcessStepCard
                 title="Fill Exit Form"
                 description="In the Exit section, provide details like Exit Quantity, Exit Price, Exit Charges, and Net Exit Amount. You can set exit charges manually or let the system calculate them."
-                image="/images/2df25a0.png"
-                alt="Exit Form"
+                // image="/images/2df25a0.png"
+                // alt="Exit Form"
               />
               <InvestmentProcessStepCard
                 title="Create Exit Journal Voucher"
                 description="Click 'Create Exit JV' to automatically generate a journal entry. ERPNext will debit the bank and investment charges accounts while crediting capital and income accounts, keeping your investment records in sync."
-                image="/images/2df25a0.png"
-                alt="Exit JV"
+                // image="/images/2df25a0.png"
+                // alt="Exit JV"
               />
             </div>
             <div className="flex flex-col gap-6">
               <InvestmentProcessStepCard
                 title="Update Investment Portfolio"
                 description="After submitting the journal entry, it will be added to the Investment Portfolio Segment table. The exit transaction appears in the table, and you can perform multiple partial exits as needed. The system updates the investment status as 'Exited' or 'Partially Exited' based on remaining quantity, ensuring end-to-end tracking with automatic financial journal entries."
-                image="/images/3.png"
-                alt="Investment Portfolio Segment"
+                // image="/images/3.png"
+                // alt="Investment Portfolio Segment"
               />
             </div>
           </div>

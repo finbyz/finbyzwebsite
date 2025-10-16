@@ -15,13 +15,13 @@ import { Mic, FileAudio, LucideWaves as Waveform, MessageSquare, ScrollText, Dat
 
 const heroData = {
   headline: 'AI Sales Call Recording & Analysis in ERPNext',
+  highlightWords: ['Sales Call Recording', 'Analysis'],
   description:
     'Record and analyze sales calls in ERPNext. Get AI-powered transcripts, actionable feedback, and optimized scripts to improve sales conversions and scale coaching.',
   heroImage: {
     alt: 'AI Sales Call Recording & Analysis in ERPNext',
     src: '/images/Ai Call Insights.gif',
   },
-  accentColor: 'blue' as const,
   features: [
     { icon: Mic, title: 'In-app recording', description: 'Record or upload calls directly in ERPNext.' },
     { icon: Bot, title: 'AI analysis', description: 'Transcripts, tone, and engagement insights.' },
@@ -189,13 +189,13 @@ const ctaData = {
   description:
     'Get AI-powered transcripts, feedback, and scripts—automatically stored in the Voice Recording doctype for faster reviews and better conversions.',
   primaryButton: { text: 'Get a demo', icon: 'Mic', action: '/contact' },
-  secondaryButton: { 
-    text: 'See workflow', 
-    icon: 'ClipboardList', 
+  secondaryButton: {
+    text: 'See workflow',
+    icon: 'ClipboardList',
     action: () => {
       const el = document.getElementById('workflow');
       if (el) el.scrollIntoView({ behavior: 'smooth' });
-    } 
+    }
   },
   trustIndicator: { text: 'Secure by design • Built for ERPNext', icon: 'Database' },
 };

@@ -13,6 +13,7 @@ import { Cpu, Bot, Database } from 'lucide-react'
 // Data for the Hero Section
 const heroData = {
   headline: 'Smart Card Scanner',
+  highlightWords: ['Card Scanner'],
   description:
     'The Smart Card Scanner revolutionizes business card management by leveraging artificial intelligence and seamless integration with ERPNext. This intelligent tool allows users to scan or upload business card images using a Telegram chatbot interface, making the process highly accessible and convenient from anywhere.',
   heroImage: {
@@ -187,9 +188,9 @@ const ctaData = {
   title: 'Turn business cards into qualified CRM data in seconds',
   description: 'Adopt the Smart Card Scanner to streamline capture, enrich contacts, and keep ERPNext clean and current—without extra effort.',
   primaryButton: { text: 'Request a Demo', icon: 'Play', action: '/contact' },
-  secondaryButton: { 
-    text: 'Learn More', 
-    icon: 'BookOpen', 
+  secondaryButton: {
+    text: 'Learn More',
+    icon: 'BookOpen',
     action: () => {
       const el = document.getElementById('smart-card');
       if (el) el.scrollIntoView({ behavior: 'smooth' });

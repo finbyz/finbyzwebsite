@@ -11,6 +11,7 @@ import { Bot, Paperclip, Boxes, FileText, CheckCircle2, Zap, ShieldCheck, Users,
 
 export default function Page() {
   const seoTitle = 'Quote Assistant Overview: Streamlining Sales Quotations'
+  const highlightWords = ['Quote Assistant', 'Sales Quotations']
   const seoDescription = 'Explore the Quote Assistant, an innovative automation tool that enhances the sales quotation process by intelligently managing customer inquiries and generating tailored quotes.'
 
   return (
@@ -18,8 +19,9 @@ export default function Page() {
       {/* 1️⃣ HERO SECTION (Required - First) */}
       <HeroSection
         headline={seoTitle}
+        highlightWords={highlightWords}
         description={seoDescription}
-        heroImage={{ alt: seoTitle,src:"/images/Quote Assistant.gif" }}
+        heroImage={{ alt: seoTitle, src: "/images/Quote Assistant.gif" }}
         features={[
           {
             icon: Bot,
@@ -37,7 +39,6 @@ export default function Page() {
             description: 'Draft quotations linked back to the correct Opportunity.'
           }
         ]}
-        accentColor="blue"
       />
 
       {/* 2️⃣ OVERVIEW SECTION (Required) */}
@@ -275,9 +276,9 @@ export default function Page() {
             description:
               'Cut response times from days to minutes. Automate intake, map items with AI, and ship accurate, tailored quotes—faster.',
             primaryButton: { text: 'Request a Demo', icon: 'Bot', action: '/contact' },
-            secondaryButton: { 
-              text: 'See Workflow Details', 
-              icon: 'FileText', 
+            secondaryButton: {
+              text: 'See Workflow Details',
+              icon: 'FileText',
               action: () => {
                 const el = document.getElementById('quote-assistant');
                 if (el) el.scrollIntoView({ behavior: 'smooth' });

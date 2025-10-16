@@ -25,7 +25,7 @@ const BlogHero = ({
   readTime
 }: BlogHeroProps) => {
   return (
-    <div className="w-full bg-muted/30 border-b max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-screen-xl px-4 sm:px-6 mx-auto">
+    <div className="container-custom mx-auto">
       <div className="py-12 md:py-16">
         <div className="space-y-6">
           <div className="flex flex-wrap gap-3">
@@ -39,18 +39,18 @@ const BlogHero = ({
               </Badge>
             ))}
           </div>
-          
+
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-tight">
             {title}
           </h1>
-          
+
           <p className="text-xl text-muted-foreground leading-relaxed">
             {description}
           </p>
-          
+
           <div className="flex flex-wrap items-center gap-4 md:gap-6 text-sm text-muted-foreground pt-4 border-t">
             <div className="flex items-center gap-2">
-              <img 
+              <img
                 src={`/images/Mukesh.jpg`}
                 alt={author.name}
                 className="w-10 h-10 rounded-full border-2 border-background"
@@ -62,7 +62,11 @@ const BlogHero = ({
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="h-4 w-4" />
-              <span>{publishDate}</span>
+              <span>{new Date(publishDate).toLocaleDateString('en-GB', {
+                day: '2-digit',
+                month: 'short',
+                year: '2-digit',
+              })}</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="h-4 w-4" />

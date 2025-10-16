@@ -9,7 +9,7 @@ interface ContactInfoCardProps {
   office: string;
 }
 
-const ContactInfoCard: React.FC<ContactInfoCardProps> = ({ phoneNumbers, email, address,office }) => {
+const ContactInfoCard: React.FC<ContactInfoCardProps> = ({ phoneNumbers, email, address, office }) => {
   return (
     <div className="bg-black rounded-xl shadow-lg p-6 flex flex-col gap-6 animate-fade-in">
       <h2 className="text-2xl font-bold text-white mb-2">Contact Us</h2>
@@ -46,7 +46,7 @@ const ContactInfoCard: React.FC<ContactInfoCardProps> = ({ phoneNumbers, email, 
         <div className="flex items-center gap-4">
           <span className="text-white">{office}</span><br />
           <MapPin className="text-white w-6 h-6" aria-label="Location" />
-          
+
           <span className="text-white">{address}</span>
         </div>
       </div>

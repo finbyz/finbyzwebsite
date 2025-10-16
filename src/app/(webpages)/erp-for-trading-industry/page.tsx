@@ -104,7 +104,7 @@ export default function Page() {
       <Section>
         <div className="container-custom py-8" id="erp-trading">
           <div className="flex flex-col items-center gap-4 animate-fade-in-up">
-            <h2 className="text-2xl font-bold text-center">ERP Software for Trading Business</h2>
+            <h2 className="text-2xl font-bold text-center text-[#1A5276]">ERP Software for Trading Business</h2>
             <QuoteBlock
               text="The secret to being successful from a trading perspective is to have an indefatigable and an undying and unquenchable thirst for information and knowledge.- Paul Tudor Jones"
               isHeading={false}
@@ -125,7 +125,7 @@ export default function Page() {
       <Section useGradient>
         <div className="container-custom py-8">
           <div className="flex flex-col items-center gap-4 animate-fade-in-up">
-            <h2 className="text-2xl font-bold text-center">Features of ERP for Trading Business</h2>
+            <h2 className="text-2xl font-bold text-center text-[#1A5276]">Features of ERP for Trading Business</h2>
             <p className="text-muted-foreground text-center">
               The ERP software we offer has many features, but below are a few features which we think can add substantial value to the Trading business. Eventually, the ROI of any software is what counts the most, which can be generated through the featured listed below.
             </p>
@@ -140,7 +140,7 @@ export default function Page() {
       <Section>
         <div className="container-custom py-8">
           <div className="flex flex-col items-center gap-4 animate-fade-in-up">
-            <h2 className="text-2xl font-bold text-center">What will you gain?</h2>
+            <h2 className="text-2xl font-bold text-center text-[#1A5276]">What will you gain?</h2>
             <p className="text-muted-foreground text-center">
               The most important question while automating any function, arises is that what will you gain out of it? Or is it worth spending money and time on new technology for your business? The benefits of ERP for trading business will help you answer these questions.
             </p>

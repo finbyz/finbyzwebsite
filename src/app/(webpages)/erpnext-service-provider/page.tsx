@@ -44,7 +44,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-8 text-center relative inline-block after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-2">Why Choose Finbyz as Your ERPNext Service Provider?</h2>
+          <h2 className="text-2xl font-bold mb-8 text-center relative inline-block after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-2 text-[#1A5276]">Why Choose Finbyz as Your ERPNext Service Provider?</h2>
           <WhyChooseFinbyzGrid
             features={[
               {
@@ -82,7 +82,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8 text-center">
-          <h2 className="text-2xl font-bold mb-8 relative inline-block after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-2">Our ERPNext Services Includes</h2>
+          <h2 className="text-2xl font-bold mb-8 relative inline-block after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-2 text-[#1A5276]">Our ERPNext Services Includes</h2>
           <ERPNextServicesGrid
             services={[
               {
@@ -116,7 +116,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8 text-center">
-          <h2 className="text-2xl font-bold mb-8 relative inline-block after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-2">Discover the Difference with Our ERPNext Solutions</h2>
+          <h2 className="text-2xl font-bold mb-8 relative inline-block after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-2 text-[#1A5276]">Discover the Difference with Our ERPNext Solutions</h2>
           <p className="text-lg text-gray-700 mb-8">
             At Finbyz, we transform corporate processes rather than just set up ERP systems. Our all-inclusive ERPNext solutions are made to give you the efficiency, control, and clarity you need to make wise decisions and grow your company. What defines us is this:
           </p>
@@ -153,7 +153,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4 relative inline-block after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-2">Ready to Transform Your Business with ERPNext?</h2>
+          <h2 className="text-2xl font-bold mb-4 relative inline-block after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-2 text-[#1A5276]">Ready to Transform Your Business with ERPNext?</h2>
           <p className="text-gray-700 mb-4">
             One step is all it takes to achieve operational excellence and digital transformation. Get in touch with Finbyz right now to find out how our ERPNext solutions can revolutionize your company. Every stage of your ERP journey, from initial planning and customisation to deployment and beyond, is something our team is prepared to help you with.
           </p>

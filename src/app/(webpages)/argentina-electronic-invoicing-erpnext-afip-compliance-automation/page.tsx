@@ -19,6 +19,7 @@ import Link from 'next/link';
 export default function Page() {
   return (
     <>
+      <div className='mt-6'></div>
       <HeroSection
         headline="Argentina Electronic Invoicing in ERPNext: AFIP Compliance & Automation"
         highlightWords={["Electronic Invoicing", "Argentina"]}

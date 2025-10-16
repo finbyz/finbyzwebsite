@@ -20,11 +20,11 @@
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
   position: relative;
   box-sizing: border-box;
 }
-
+/* 
 @media (min-width: 640px) {
   .responsive-card-grid-container {
     padding: 0 1.5rem;
@@ -47,7 +47,7 @@
   .responsive-card-grid-container {
     padding: 0 3rem;
   }
-}
+} */
 
 /* Header */
 .responsive-card-grid-header {

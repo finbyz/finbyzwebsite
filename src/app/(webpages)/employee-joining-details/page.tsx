@@ -33,7 +33,7 @@ export default function Page() {
     <>
       <HeroSection
         headline="Employee Joining details"
-        highlightWords={["Employee", "Joining"]}
+        highlightWords={["Employee", "Joining","details"]}
         description="Easily submit and manage your joining details. Fill out the form to complete your onboarding process quickly and securely."
         primaryButton={{
           text: "Start Now",
@@ -113,7 +113,7 @@ export default function Page() {
                 text: "Contact HR",
                 icon: "UserPlus",
                 action: () => {
-                  window.open('mailto:hr@company.com', '_blank');
+                  window.open('https://web.finbyz.tech/contact', '_blank');
                 }
               },
               trustIndicator: {
