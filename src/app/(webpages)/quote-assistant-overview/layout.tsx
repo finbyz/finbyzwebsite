@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://web.finbyz.tech/quote-assistant-overview",
+    canonical: "https://finbyz.tech/quote-assistant-overview",
   },
   openGraph: {
     title: "Quote Assistant Overview: Streamlining Sales Quotations",
     description: "Explore the Quote Assistant, an innovative automation tool that enhances the sales quotation process by intelligently managing customer inquiries and generating tailored quotes.",
-    url: "https://web.finbyz.tech/quote-assistant-overview",
+    url: "https://finbyz.tech/quote-assistant-overview",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -48,7 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "Quote Assistant Overview: Streamlining Sales Quotations",
     "description": "Explore the Quote Assistant, an innovative automation tool that enhances the sales quotation process by intelligently managing customer inquiries and generating tailored quotes.",
-    "url": "https://web.finbyz.tech/quote-assistant-overview",
+    "url": "https://finbyz.tech/quote-assistant-overview",
     
     "keywords": "Quote Assistant, quotation automation, sales quotation workflow, customer inquiries, ERPNext, AI agent, item mapping, draft quotation, sales team review, historical purchase data",
     "inLanguage": "en-US",

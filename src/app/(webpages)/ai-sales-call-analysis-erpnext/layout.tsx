@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://web.finbyz.tech/ai-sales-call-analysis-erpnext",
+    canonical: "https://finbyz.tech/ai-sales-call-analysis-erpnext",
   },
   openGraph: {
     title: "AI Sales Call Recording & Analysis in ERPNext",
     description: "Record and analyze sales calls in ERPNext. Get AI-powered transcripts, actionable feedback, and optimized scripts to improve sales conversions and scale coaching.",
-    url: "https://web.finbyz.tech/ai-sales-call-analysis-erpnext",
+    url: "https://finbyz.tech/ai-sales-call-analysis-erpnext",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -48,7 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "AI Sales Call Recording & Analysis in ERPNext",
     "description": "Record and analyze sales calls in ERPNext. Get AI-powered transcripts, actionable feedback, and optimized scripts to improve sales conversions and scale coaching.",
-    "url": "https://web.finbyz.tech/ai-sales-call-analysis-erpnext",
+    "url": "https://finbyz.tech/ai-sales-call-analysis-erpnext",
     "image": "/files/Generated Image September 09, 2025 - 11_33AM.png",
     "keywords": "Voice Recording\",\n    \"AI Feedback\",\n    \"Sales Calls\",\n    \"ERPNext\",\n    \"Automatic Transcription\",\n    \"Call Analysis\",\n    \"Outreach Scripts\",\n    \"Sales Coaching\",\n    \"Sales Conversions\"",
     "inLanguage": "en-US",

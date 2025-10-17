@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://web.finbyz.tech/career",
+    canonical: "https://finbyz.tech/career",
   },
   openGraph: {
     title: "Job Opening | Career Opportunity",
     description: "At FinByz, we believe the team builds company. Initiator or leader, Technical or Creative there is a space for each one.",
-    url: "https://web.finbyz.tech/career",
+    url: "https://finbyz.tech/career",
     siteName: "Your Site Name",
     type: "website",
     locale: "en_US",
@@ -50,7 +50,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "Job Opening | Career Opportunity",
     "description": "At FinByz, we believe the team builds company. Initiator or leader, Technical or Creative there is a space for each one.",
-    "url": "https://web.finbyz.tech/career",
+    "url": "https://finbyz.tech/career",
     "image": "/images/banner-career.svg",
     "keywords": "Job, Internship, Job in Ahmedabad,Python, finbyz tech private limited, python developer, python jobs, python programmer, jobs, job, python careers, software developer jobs, python developers, sales manager,tech sales manager, written communication jobs, content writer, content writer jobs, content writing jobs, job for content writer, job writer, analytics solution provider, analytics solution ",
     "inLanguage": "en-US",

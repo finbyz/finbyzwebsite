@@ -21,7 +21,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Contact Us',
-          action: () => window.open('https://web.finbyz.tech/contact', '_blank'),
+          action: () => window.open('https://finbyz.tech/contact', '_blank'),
         }}
         heroImage={{
           alt: 'RODTEP Claim Management in ERPNext',
@@ -143,7 +143,7 @@ export default function Page() {
               secondaryButton: {
                 text: 'Contact Us',
                 icon: 'mail',
-                action: () => window.open('https://web.finbyz.tech/contact', '_blank'),
+                action: () => window.open('https://finbyz.tech/contact', '_blank'),
               },
               trustIndicator: {
                 text: 'Trusted ERPNext Partner',

@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://web.finbyz.tech/lead-intelligence",
+    canonical: "https://finbyz.tech/lead-intelligence",
   },
   openGraph: {
     title: "Lead Intelligence: Revolutionizing Inquiry Processing",
     description: "Lead Intelligence automates the capture and classification of inquiry emails using AI, transforming unstructured data into actionable CRM records.",
-    url: "https://web.finbyz.tech/lead-intelligence",
+    url: "https://finbyz.tech/lead-intelligence",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -48,7 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "Lead Intelligence: Revolutionizing Inquiry Processing",
     "description": "Lead Intelligence automates the capture and classification of inquiry emails using AI, transforming unstructured data into actionable CRM records.",
-    "url": "https://web.finbyz.tech/lead-intelligence",
+    "url": "https://finbyz.tech/lead-intelligence",
     
     "keywords": "Lead Intelligence, CRM, AI, email processing, data extraction, duplicate prevention, sales funnel, pipeline visibility, automated lead capture, ERPNext",
     "inLanguage": "en-US",

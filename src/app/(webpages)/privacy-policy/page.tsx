@@ -25,7 +25,7 @@ export default function Page() {
         secondaryButton={{
           text: 'Visit Website',
           action: () => {
-            window.open('https://web.finbyz.tech', '_blank');
+            window.open('https://finbyz.tech', '_blank');
           }
         }}
         heroImage={{
@@ -272,7 +272,7 @@ export default function Page() {
                 text: 'Visit Website',
                 icon: 'Link2',
                 action: () => {
-                  window.open('https://web.finbyz.tech', '_blank');
+                  window.open('https://finbyz.tech', '_blank');
                 },
               },
               trustIndicator: {

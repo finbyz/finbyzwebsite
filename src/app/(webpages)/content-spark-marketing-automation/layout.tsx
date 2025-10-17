@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://web.finbyz.tech/content-spark-marketing-automation",
+    canonical: "https://finbyz.tech/content-spark-marketing-automation",
   },
   openGraph: {
     title: "Content Spark Streamline Marketing Automation",
     description: "Content Spark is an advanced marketing automation platform designed to optimize content creation for marketing teams, ensuring brand consistency and rapid ideation.",
-    url: "https://web.finbyz.tech/content-spark-marketing-automation",
+    url: "https://finbyz.tech/content-spark-marketing-automation",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -48,7 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "Content Spark Streamline Marketing Automation",
     "description": "Content Spark is an advanced marketing automation platform designed to optimize content creation for marketing teams, ensuring brand consistency and rapid ideation.",
-    "url": "https://web.finbyz.tech/content-spark-marketing-automation",
+    "url": "https://finbyz.tech/content-spark-marketing-automation",
     "image": "/files/FinByz (7).gif",
     "keywords": "Content Spark, marketing automation, Frappe Framework, AI content generation, brand consistency, LinkedIn posts, marketing teams, content creation, visual design, branding, campaign planning",
     "inLanguage": "en-US",

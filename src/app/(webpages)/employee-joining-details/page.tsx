@@ -114,7 +114,7 @@ export default function Page() {
                 text: "Contact HR",
                 icon: "UserPlus",
                 action: () => {
-                  window.open('https://web.finbyz.tech/contact', '_blank');
+                  window.open('https://finbyz.tech/contact', '_blank');
                 }
               },
               trustIndicator: {

@@ -10,7 +10,7 @@ export default function Page() {
   const router = useRouter();
 
   const handleHome = () => {
-    window.open('https://web.finbyz.tech', '_self');
+    window.open('https://finbyz.tech', '_self');
   };
 
   return (

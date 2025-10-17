@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://web.finbyz.tech/ai-powered-resume-ranker",
+    canonical: "https://finbyz.tech/ai-powered-resume-ranker",
   },
   openGraph: {
     title: "AI Powered Resume Ranker",
     description: "Streamline recruitment with an AI-powered resume ranking system that enhances candidate evaluation and decision-making.",
-    url: "https://web.finbyz.tech/ai-powered-resume-ranker",
+    url: "https://finbyz.tech/ai-powered-resume-ranker",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -48,7 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "AI Powered Resume Ranker",
     "description": "Streamline recruitment with an AI-powered resume ranking system that enhances candidate evaluation and decision-making.",
-    "url": "https://web.finbyz.tech/ai-powered-resume-ranker",
+    "url": "https://finbyz.tech/ai-powered-resume-ranker",
     
     "keywords": "AI, resume ranking, recruitment workflow, job description, skill extraction, resume parsing, candidate evaluation, scoring logic, skill matching, hiring decisions",
     "inLanguage": "en-US",

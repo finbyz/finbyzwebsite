@@ -65,7 +65,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'web.finbyz.tech',
+        hostname: 'finbyz.tech',
         port: '',
         pathname: '/api/fb/n/**',
         search: '',

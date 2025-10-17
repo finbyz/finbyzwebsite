@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://web.finbyz.tech/follow-up-buddy",
+    canonical: "https://finbyz.tech/follow-up-buddy",
   },
   openGraph: {
     title: "Effective Sales Follow-Up Automation Tool",
     description: "Follow Up Buddy automates the sales process by generating personalized follow-up emails and identifying inactive leads, saving time and enhancing customer relationships.",
-    url: "https://web.finbyz.tech/follow-up-buddy",
+    url: "https://finbyz.tech/follow-up-buddy",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -48,7 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "Effective Sales Follow-Up Automation Tool",
     "description": "Follow Up Buddy automates the sales process by generating personalized follow-up emails and identifying inactive leads, saving time and enhancing customer relationships.",
-    "url": "https://web.finbyz.tech/follow-up-buddy",
+    "url": "https://finbyz.tech/follow-up-buddy",
     
     "keywords": "Lead Follow-Up, AI Tool, Sales Automation, Customer Engagement, Personalized Emails, Sales Follow-up, Opportunity Nurturing, Workflow Automation, Sales Team Efficiency",
     "inLanguage": "en-US",

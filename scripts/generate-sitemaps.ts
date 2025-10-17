@@ -5,7 +5,7 @@ import config, { SitemapConfig, GLOBAL_EXCLUDE } from './sitemaps.config'
 import dotenv from 'dotenv';
 dotenv.config();
 
-const SITE_URL = process.env.SITE_URL || 'https://web.finbyz.tech'
+const SITE_URL = process.env.SITE_URL || 'https://finbyz.tech'
 const OUT_DIR = path.join(process.cwd(), 'public')
 
 type SitemapUrl = {

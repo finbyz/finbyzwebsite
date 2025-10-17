@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://web.finbyz.tech/email-classification",
+    canonical: "https://finbyz.tech/email-classification",
   },
   openGraph: {
     title: "AI-Driven Email Classification for Businesses",
     description: "Discover how AI-driven email classification automates email handling, improves lead management, and enhances productivity.",
-    url: "https://web.finbyz.tech/email-classification",
+    url: "https://finbyz.tech/email-classification",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -48,7 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "AI-Driven Email Classification for Businesses",
     "description": "Discover how AI-driven email classification automates email handling, improves lead management, and enhances productivity.",
-    "url": "https://web.finbyz.tech/email-classification",
+    "url": "https://finbyz.tech/email-classification",
     
     "keywords": "Email Classification, AI-driven workflow, ERPNext, intent classification, data extraction, lead management, automated data capture, natural language processing, CRM, end-to-end automation",
     "inLanguage": "en-US",

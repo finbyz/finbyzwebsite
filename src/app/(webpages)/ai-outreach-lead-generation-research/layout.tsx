@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://web.finbyz.tech/ai-outreach-lead-generation-research",
+    canonical: "https://finbyz.tech/ai-outreach-lead-generation-research",
   },
   openGraph: {
     title: "AI-Powered Lead Generation and Email Outreach",
     description: "Streamline your lead generation and outreach with AI-driven research and automated email drafting for higher conversion rates.",
-    url: "https://web.finbyz.tech/ai-outreach-lead-generation-research",
+    url: "https://finbyz.tech/ai-outreach-lead-generation-research",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -48,7 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "AI-Powered Lead Generation and Email Outreach",
     "description": "Streamline your lead generation and outreach with AI-driven research and automated email drafting for higher conversion rates.",
-    "url": "https://web.finbyz.tech/ai-outreach-lead-generation-research",
+    "url": "https://finbyz.tech/ai-outreach-lead-generation-research",
     
     "keywords": "lead generation, email outreach, AI-driven research, Apollo, personalized outreach, conversion rates, email drafting, company insights, contact insights, automated scheduling",
     "inLanguage": "en-US",

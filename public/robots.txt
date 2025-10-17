@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://web.finbyz.tech
+Host: https://finbyz.tech
 
 # Sitemaps
-Sitemap: https://web.finbyz.tech/sitemap.xml
+Sitemap: https://finbyz.tech/sitemap.xml

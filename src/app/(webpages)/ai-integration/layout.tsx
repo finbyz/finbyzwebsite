@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://web.finbyz.tech/ai-products",
+    canonical: "https://finbyz.tech/ai-products",
   },
   openGraph: {
     title: "AI Products",
     description: "",
-    url: "https://web.finbyz.tech/ai-products",
+    url: "https://finbyz.tech/ai-products",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -48,7 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "AI Products",
     "description": "",
-    "url": "https://web.finbyz.tech/ai-products",
+    "url": "https://finbyz.tech/ai-products",
     
     
     "inLanguage": "en-US",

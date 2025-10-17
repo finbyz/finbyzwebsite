@@ -47,7 +47,7 @@ const CRMImportanceSection = () => (
         <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
           Before diving into the role of CRM software, it's crucial to understand why Customer Relationship Management matters. A robust CRM system helps you build stronger relationships with customers, increasing repeat purchases, enhancing customer satisfaction, and improving brand reputation. An{' '}
           <a 
-            href="https://web.finbyz.tech/benefits-of-erp-and-crm-integration" 
+            href="https://finbyz.tech/benefits-of-erp-and-crm-integration" 
             className="text-blue-600 hover:text-blue-700 font-semibold underline decoration-2 underline-offset-2 transition-colors"
           >
             open source CRM
