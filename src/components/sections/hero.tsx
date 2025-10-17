@@ -110,16 +110,14 @@ export default function Hero({ data = {} }: { data?: Record<string, any> }) {
 
   // Scroll to inquiry form section
   function GotoInquiryForm() {
-    console.log("Navigating to inquiry form working...");
     const inquiryForm = document.getElementsByClassName('inquiry-form')[0];;
-    console.log("Inquiry form element:", inquiryForm);
     if (inquiryForm) {
       inquiryForm.scrollIntoView({ behavior: 'smooth' });
     }
   }
 
   return (
-    <section className="container-custom min-h-screen mx-auto bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+    <section className="container-custom min-h-screen mx-auto bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white mt-12">
       {/* Professional Background Pattern */}
       <div className="hero-background" aria-hidden="true">
         {/* Subtle geometric pattern */}
@@ -160,6 +158,9 @@ export default function Hero({ data = {} }: { data?: Record<string, any> }) {
               variant="outline" 
               size="lg"
               className="hero-secondary-button"
+              onClick={()=>{
+                window.location.href = '/contact'
+              }}
             >
               {renderedData.secondaryButton}
             </Button>

@@ -331,7 +331,6 @@ type TimeSpan = 'today' | 'last7' | 'last30' | 'thisMonth' | 'custom'
         fetch(url, { cache: 'no-store', credentials: 'include' })
             .then(async (r) => (r.ok ? r.json() : r.json().catch(() => ({})).then((j)=>Promise.reject(j))))
             .then((json) => {
-                console.log('[Projects] client received', { count: Array.isArray(json?.projects) ? json.projects.length : 0, debug: json?.debug })
                 const list = Array.isArray(json?.projects) ? json.projects : []
                 setProjectOptions(list)
                 // Auto-select first project if none selected yet
@@ -543,7 +542,6 @@ function OverviewInner() {
         setLoading(true)
         setError(null)
         const url = `/web-api/user-activity/matrix?${params.toString()}`
-        console.log('[Overview] fetching', url, { project: filters.project })
         const controller = new AbortController()
         // Increase timeout to accommodate slower upstream (~16s observed)
         const timeoutId = setTimeout(() => controller.abort(), 35000)
@@ -553,8 +551,6 @@ function OverviewInner() {
                 const res = await fetchWithRetry(url, { signal: controller.signal, cache: 'no-store' }, 2)
                 const status = `${res.status} ${res.statusText}`
                 const raw = await res.clone().text().catch(() => '')
-                console.log('[Overview] upstream status', status)
-                console.log('[Overview] upstream raw (first 2k chars) ->\n', raw.slice(0, 2000))
 
                 let json: any = null
                 try {
@@ -567,9 +563,7 @@ function OverviewInner() {
                     setError('Unexpected response from API')
                     return
                 }
-                console.log('[Overview] json keys', Object.keys(json || {}))
                 const payload = Array.isArray(json?.data) ? json.data : (Array.isArray(json?.message) ? json.message : [])
-                console.log('[Overview] payload length', Array.isArray(payload) ? payload.length : 'not-array')
                 const rows: RecordRow[] = Array.isArray(payload) ? payload.map((it: any) => ({
                     day: String(it.day ?? ''),
                     employee: String(it.employee ?? it.person ?? 'Unknown'),
@@ -583,7 +577,6 @@ function OverviewInner() {
                     issue_hours: Number(it.issue_hours ?? 0),
                 })) : []
                 if (rows.length > 0) {
-                    console.log('[Overview] sample row', rows[0])
                     // Debug: Check if employee_id is present
                     console.log('[Overview] employee_id check:', {
                         hasEmployeeId: !!rows[0].employee_id,
@@ -598,7 +591,6 @@ function OverviewInner() {
                 const msg = e?.message ? String(e.message) : ''
                 const isAbort = e?.name === 'AbortError' || msg.toLowerCase().includes('aborted')
                 if (isAbort) {
-                    console.log('[Overview] fetch aborted')
                     return
                 }
                 console.error('[Overview] fetch error', e)

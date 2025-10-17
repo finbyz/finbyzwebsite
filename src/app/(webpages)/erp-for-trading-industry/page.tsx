@@ -187,8 +187,9 @@ export default function Page() {
             text: 'Learn More',
             icon: 'info',
             action: () => {
-              window.open('/erp-software', '_self');
-            },
+              const el = document.getElementById('erp-trading');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }
           },
           trustIndicator: {
             text: 'Trusted by leading trading businesses',

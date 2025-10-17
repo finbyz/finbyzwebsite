@@ -72,7 +72,8 @@ export default function Page() {
         primaryButton={{
           text: 'Get Started',
           action: () => {
-            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            const intro = document.getElementById('industry-intro');
+            if (intro) intro.scrollIntoView({ behavior: 'smooth' });
           },
         }}
         secondaryButton={{
@@ -119,7 +120,7 @@ export default function Page() {
                 icon: 'factory',
               },
               title: 'Get a Customized ERP Solution for Your Business',
-              highlightText:'Get a Customized ERP Solution for Your Business',
+              highlightText:' ERP Solution ',
               description: 'Contact us today to discover how our tailored ERP solutions can streamline your operations and drive growth.',
               primaryButton: {
                 text: 'Request a Demo',

@@ -43,7 +43,7 @@ const ContactInfoCard: React.FC<ContactInfoCardProps> = ({ phoneNumbers, email, 
             {email.label}
           </Link>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-wrap items-center gap-3">
           <span className="text-white">{office}</span><br />
           <MapPin className="text-white w-6 h-6" aria-label="Location" />
 

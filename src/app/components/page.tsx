@@ -173,12 +173,6 @@ export default function ComponentsPage() {
 
     const Component = componentMap[schema.id];
     
-    console.log('Component lookup:', {
-      id: schema.id,
-      component: Component,
-      componentType: typeof Component,
-      isReactComponent: Component && typeof Component === 'function' && Component.prototype?.isReactComponent
-    });
     
     if (Component) {
       const manifest = getComponentManifest(schema.id);

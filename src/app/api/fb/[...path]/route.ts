@@ -59,7 +59,6 @@ async function handleRequest(
     const url = new URL(request.url);
     const queryString = url.search || '';
     const targetUrl = `${frappeUrl}/${basePath}${queryString}`;
-    console.log('targetUrl', targetUrl);
     const headers: Record<string, string> = {
     };
 
@@ -133,7 +132,6 @@ async function handleRequest(
         
         if (error.name === 'AbortError' || error.code === 'UND_ERR_CONNECT_TIMEOUT') {
           if (retryCount <= maxRetries) {
-            console.log(`Request timeout, retrying... (${retryCount}/${maxRetries})`);
             // Wait before retry (exponential backoff)
             await new Promise(resolve => setTimeout(resolve, Math.pow(2, retryCount) * 1000));
             continue;
@@ -151,7 +149,6 @@ async function handleRequest(
       throw new Error('No response received from Frappe server');
     }
     
-    console.log('frappeResponse', frappeResponse);
     if (frappeResponse.status === 401 || frappeResponse.status === 403) {
       return NextResponse.json(
         { error: 'Authentication failed or insufficient permissions' },

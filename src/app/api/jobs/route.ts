@@ -30,15 +30,12 @@ interface JobOpeningData {
 // Removed getJobOpenings function - now using custom Frappe function directly
 
 export async function GET(request: NextRequest) {
-  console.log('🚀 Jobs API GET request started');
-  console.log('🔗 Request URL:', request.url);
   
   try {
     // Check if we should use mock data (for development/testing)
     const useMockData = process.env.USE_MOCK_JOBS_DATA === 'true';
     
     if (useMockData) {
-      console.log('🧪 Using mock data for development');
       const mockJobs = [
         {
           name: 'JOB-001',

@@ -63,6 +63,14 @@ export default function Page() {
         'Legacy systems can hinder growth and efficiency. Our software development experts evaluate and upgrade outdated enterprise applications using the latest technologies. Through our modernization services, we transform legacy systems into agile, future-ready platforms that enhance user satisfaction and productivity.',
       link: '/erp-implementaion',
     },
+    {
+      title: 'Cloud Application Development',
+      image: '/images/speed-strikes-the-first-impression.svg',
+      alt: 'Cloud Application Development',
+      description:
+        'Leverage the power of the cloud with scalable, secure, and high-performance applications. Our cloud development services enable seamless accessibility, faster deployment, and cost efficiency—helping your business stay agile and competitive in the digital era.',
+      link: '/erp-implementaion',
+    }
   ];
 
   // Process Steps for Hex Grid
@@ -205,7 +213,7 @@ export default function Page() {
       {/* Software Development Services Section */}
       <Section useGradient>
         <div className="container-custom py-8" id="sd-cards">
-          <h2 className="text-center text-2xl font-bold mb-8 relative inline-block after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-2">Software Development Services</h2>
+          <h2 className="text-center text-2xl font-bold mb-8 relative inline-block after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-2 text-[#1A5276]">Software Development Services</h2>
           <ServiceFlipCards cards={serviceCards} />
         </div>
       </Section>
@@ -213,9 +221,9 @@ export default function Page() {
       {/* Software Development Stages (Hex Grid) */}
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-center text-2xl font-bold mb-8 relative inline-block after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-2">Software Development Stages</h2>
+          <h2 className="text-center text-2xl font-bold mb-8 relative inline-block after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-2 text-[#1A5276]">Software Development Stages</h2>
           <div className="relative w-full flex justify-center mb-8">
-            <Image src="/images/dotted-wave.svg" alt="bg-wave" width={800} height={60} className="w-full h-12 object-contain opacity-60" />
+            {/* <Image src="/images/dotted-wave.svg" alt="bg-wave" width={800} height={60} className="w-full h-12 object-contain opacity-60" /> */}
           </div>
           <HexProcessGrid steps={processSteps} />
         </div>
@@ -224,7 +232,7 @@ export default function Page() {
       {/* Software Development Methodology Section */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-center text-2xl font-bold mb-8 relative inline-block after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-2">Software Development Methodology</h2>
+          <h2 className="text-center text-2xl font-bold mb-8 relative inline-block after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-2 text-[#1A5276]">Software Development Methodology</h2>
           <FeatureGrid features={methodologyFeatures} />
         </div>
       </Section>
@@ -232,7 +240,7 @@ export default function Page() {
       {/* Our Collaborative and Client-Centric Approach */}
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-center text-2xl font-bold mb-8 relative inline-block after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-2">Our Collaborative and Client-Centric Approach</h2>
+          <h2 className="text-center text-2xl font-bold mb-8 relative inline-block after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-2 text-[#1A5276]">Our Collaborative and Client-Centric Approach</h2>
           <ApproachFeatureGrid features={approachFeatures} />
         </div>
       </Section>

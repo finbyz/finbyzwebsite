@@ -10,7 +10,7 @@ import CTA from '@/components/sections/cta';
 import Image from 'next/image';
 import { FaArrowRight } from 'react-icons/fa6';
 
-const heroHighlightWords = ["ERPNext", "Logistics", "Industry"];
+const heroHighlightWords = [ "Logistics", "Industry"];
 
 const features = [
   {

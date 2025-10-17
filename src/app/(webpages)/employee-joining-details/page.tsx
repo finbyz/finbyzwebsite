@@ -33,7 +33,7 @@ export default function Page() {
     <>
       <HeroSection
         headline="Employee Joining details"
-        highlightWords={["Employee", "Joining","details"]}
+        highlightWords={["Employee", "Joining", "details"]}
         description="Easily submit and manage your joining details. Fill out the form to complete your onboarding process quickly and securely."
         primaryButton={{
           text: "Start Now",
@@ -47,7 +47,7 @@ export default function Page() {
           action: () => {
             window.open('/contact', '_blank');
           }
-      }}
+        }}
         heroImage={{
           alt: "Employee Joining details",
           src: "/emp-details.jpg",
@@ -92,7 +92,7 @@ export default function Page() {
         </div>
       </Section>
       <Section>
-        <div className="py-8">
+        <div className="py-1">
           <CTA
             data={{
               subheading: {
@@ -100,6 +100,7 @@ export default function Page() {
                 icon: "UserPlus"
               },
               title: "Complete Your Onboarding Today!",
+              highlightText: "Onboarding",
               description: "Submit your joining details and start your journey with us. We look forward to working with you!",
               primaryButton: {
                 text: "Submit Now",

@@ -240,7 +240,7 @@ export default function Page() {
     <>
       <HeroSection
         headline="ERPNext Implementation"
-        highlightWords={["ERPNext", "Implementation"]}
+        highlightWords={["Implementation"]}
         description="Looking for a trusted ERPNext Implementation Partner in Ahmedabad? Finbyz Tech offers expert ERPNext services tailored to your business needs."
         primaryButton={{
           text: 'Get Started',
@@ -263,10 +263,11 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8  text-[#000000] ">
-          <QuoteBlock
+          {/* <QuoteBlock
             text="Looking to digitally transform your business? Choose Finbyz Tech – a leading ERPNext Implementation Company in Ahmedabad, Gujarat. Here's why"
             isHeading={true}
-          />
+          /> */}
+          
           <List
             title="Why Choose Finbyz Tech for ERPNext Implementation?"
             items={whyChooseList}
@@ -300,10 +301,7 @@ export default function Page() {
     {/* Heading */}
     <div className="text-center max-w-3xl mx-auto mb-16">
       <h2 className="text-4xl sm:text-5xl font-extrabold text-[#1A5276] leading-tight">
-        Overcoming{" "}
-        <span className="bg-gradient-to-r from-[#FF8C00] to-[#FFA500] bg-clip-text text-transparent">
-          ERPNext Challenges
-        </span>
+        Overcoming ERPNext Challenges
       </h2>
       <p className="mt-4 text-lg text-gray-600">
         Our proven solutions help you unlock ERPNext’s full potential while avoiding common pitfalls.
@@ -321,14 +319,12 @@ export default function Page() {
           className="w-full relative group bg-white rounded-3xl shadow-lg overflow-hidden transition-all duration-500"
           style={{ height: "280px" }} // Reduced height
         >
-          {/* Glow border effect */}
-          {/* <div className="absolute inset-0 rounded-3xl p-[2px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></div> */}
 
           {/* Horizontal Card */}
           <div className="relative z-10 bg-white rounded-3xl h-full flex flex-col md:flex-row transform transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl">
             
             {/* Left Image */}
-            <div className="relative md:w-1/3 w-full h-full flex items-center justify-center bg-gray-50">
+            <div className="relative md:w-1/3 w-full h-64 md:h-full flex items-center justify-center bg-gray-50 overflow-hidden">
               <Image src={card.image} alt={card.alt} width={500} height={500} className="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105" />
               {/* Overlay */}
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
@@ -411,11 +407,6 @@ export default function Page() {
   </div>
 </Section>
 
-
-
-
-
-
       <Section>
         <div className="container-custom py-8">
           <h2 className="text-2xl font-bold mb-4 text-[#1A5276]">Our ERPNext Implementation Strategy</h2>
@@ -428,7 +419,7 @@ export default function Page() {
       <Section useGradient>
         <div className="container-custom py-8">
           <h2 className="text-2xl font-bold mb-4 text-center  text-[#1A5276]">We Serve Businesses Across the Globe</h2>
-          <p className="mb-8 text-gray-700 text-center">FinByz is a leading <a href="/erpnext-services-in-uae" className="text-primary underline">ERPNext service provider in UAE</a>, India, Canada, USA, Saudi Arabia, UK, and beyond. As a renowned global <a href="/erp-software" className="text-primary underline">ERP implementation</a> partner, we proudly offer our expertise to businesses spanning these regions. Our committed team stands ready to address all your ERP implementation challenges, from consultations to hands-on assistance. Should you have any questions or need guidance, please don't hesitate to contact us.</p>
+          <p className="mb-8 text-gray-700 text-center">FinByz is a leading <a href="/erpnext-services-in-uae" className="text-primary underline">ERPNext service provider in UAE</a>, India, Canada, USA, Saudi Arabia, UK, and beyond. As a renowned global <a href="/erpnext-software" className="text-primary underline">ERP implementation</a> partner, we proudly offer our expertise to businesses spanning these regions. Our committed team stands ready to address all your ERP implementation challenges, from consultations to hands-on assistance. Should you have any questions or need guidance, please don't hesitate to contact us.</p>
           <ClientCountryGrid countries={countries} />
         </div>
       </Section>

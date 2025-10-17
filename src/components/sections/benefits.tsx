@@ -42,8 +42,8 @@ export default function Benefits({ data = {} }: BenefitsProps) {
       {
         number: 10,
         suffix: "+",
-        label: "Years of Experience",
-        header: "Proven Track Record",
+        label: "Years",
+        header: "Implementing ERPNext",
         description: "Decade of expertise in delivering cutting-edge solutions",
         icon: "Award",
         palette: { iconBg: "#1A5276", iconColor: "#fff" }
@@ -51,8 +51,8 @@ export default function Benefits({ data = {} }: BenefitsProps) {
       {
         number: 200,
         suffix: "+",
-        label: "Efficiency Gains",
-        header: "Maximum Efficiency",
+        label: "Projects",
+        header: "Proven Track Record",
         description: "Transform your operations with intelligent automation",
         icon: "TrendingUp",
         palette: { iconBg: "#FF8C00", iconColor: "#fff" }
@@ -60,17 +60,17 @@ export default function Benefits({ data = {} }: BenefitsProps) {
       {
         number: 12,
         suffix: "+",
-        label: "Countries Served",
-        header: "Global Reach",
+        label: "Countries",
+        header: "Global Client Presence",
         description: "Serving clients across multiple continents worldwide",
         icon: "Globe",
         palette: { iconBg: "#27AE60", iconColor: "#fff" }
       },
       {
-        number: 100,
+        number: 150,
         suffix: "+",
-        label: "Projects",
-        header: "Quality Delivery",
+        label: "Custom Apps",
+        header: "Built for Unique Client Needs",
         description: "Every project completed with exceptional precision and care",
         icon: "Target",
         palette: { iconBg: "#8E44AD", iconColor: "#fff" }

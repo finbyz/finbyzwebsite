@@ -102,7 +102,6 @@ const LeadPage = () => {
       });
 
       const result = await response.json();
-      console.log("API response:", result.message);
       
 
       if (response.ok && result.message?.status !== "error") {

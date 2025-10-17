@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { getFullGallery, getGalleryRoutes } from '@/lib/gallery';
 import Tutorials from './Tutorials';
+import { getPageData } from '@/lib/getPageData';
+import FinbyzGallery from '@/components/sections/FinbyzGallery';
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -13,10 +15,10 @@ export const revalidate = 3600;
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  
+
   try {
     const galleries = await getFullGallery(slug);
-    
+
     if (!galleries?.parent) {
       return {
         title: 'Gallery Not Found',
@@ -99,7 +101,7 @@ export async function generateStaticParams() {
 
 const GalleryPage = async ({ params }: PageProps) => {
   const { slug } = await params;
-
+  const data = await getPageData("Gallery", slug || "home");
   if (!slug) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
@@ -113,7 +115,12 @@ const GalleryPage = async ({ params }: PageProps) => {
     notFound();
   }
 
-  return <Tutorials data={galleries} />;
+  return <>
+    <Tutorials data={galleries} />;
+    {
+      (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
+    }
+  </>
 };
 
 export default GalleryPage;

@@ -110,7 +110,7 @@ export default function JobsPage() {
           }}
         />
         {/* Search and Filters Section */}
-        <section className="container mx-auto px-4 py-16">
+        <section className="container-custom">
           <div className="max-w-6xl mx-auto">
             {/* Search Bar */}
             <div className="mb-8">

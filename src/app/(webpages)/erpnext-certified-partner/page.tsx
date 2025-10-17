@@ -15,7 +15,7 @@ export default function Page() {
     <>
       <HeroSection
         headline="ERPNext Certified Partner"
-        highlightWords={["ERPNext", "Certified", "Partner"]}
+        highlightWords={["Certified", "Partner"]}
         description="Finbyz Tech, a certified ERPNext and Frappe Partner in Ahmedabad, offers expert ERP implementation, customization, and support services tailored to your business needs."
         primaryButton={{
           text: 'Contact Us',
@@ -100,35 +100,7 @@ export default function Page() {
 
             {/* Right Column - Certified Partner Image + Stats */}
             <div className="flex-1 animate-fade-up flex flex-col items-center lg:items-center  gap-6">
-              {/* <a href="https://frappe.io/partners/India/Finbyz-Tech-Pvt-Ltd" target="_blank" rel="noopener noreferrer" className="relative block">
-                <div className="bg-white rounded-xl p-6 shadow-xl border border-gray-200 hover:border-primary/40 hover:shadow-2xl group hover:scale-[1.03] transition-all duration-500">
-                   */}
-              {/* Verified Badge */}
-              {/* <div className="absolute top-4 right-4 flex items-center gap-1.5 bg-green-50 px-2.5 py-1 rounded-full border border-green-200">
-                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-xs font-semibold text-green-700">Verified</span>
-                  </div> */}
-
-              {/* <Image src="/images/Frappe-Partner-Certificate-Logo.svg" alt="ERPNext partner img" width={270} height={140} className="w-full h-auto" /> */}
-
-              {/* <div className="mt-4 pt-4 border-t border-gray-100">
-                    <p className="text-center text-gray-800 text-sm font-bold">Official Frappe Partner</p>
-                    <p className="text-center text-gray-500 text-xs mt-1">Certified Implementation Expert</p>
-                  </div> */}
-              {/* </div>
-              </a> */}
-
-              {/* Stats */}
-              {/* <div className="flex gap-3">
-                <div className="bg-white rounded-lg px-4 py-2 shadow-md border border-gray-200 hover:border-primary/40 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer">
-                  <div className="text-xl font-bold text-primary">100+</div>
-                  <div className="text-xs text-gray-600 font-medium">Countries</div>
-                </div>
-                <div className="bg-white rounded-lg px-4 py-2 shadow-md border border-gray-200 hover:border-primary/40 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer">
-                  <div className="text-xl font-bold text-primary">30+</div>
-                  <div className="text-xs text-gray-600 font-medium">Languages</div>
-                </div>
-              </div> */}
+             
             </div>
           </div>
         </div>
@@ -239,7 +211,7 @@ export default function Page() {
                 icon: 'Rocket',
               },
               title: 'Partner with a Certified ERPNext Expert',
-              highlightText: 'Certified ERPNext Expert',
+              highlightText: ' ERPNext Expert',
               description: 'Get in touch with Finbyz Tech for tailored ERPNext implementation, customization, and support. Let’s drive your business growth together!',
               primaryButton: {
                 text: 'Get Started',

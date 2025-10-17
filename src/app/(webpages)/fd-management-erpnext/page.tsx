@@ -37,13 +37,13 @@ export default function Page() {
       />
 
       <Section useGradient>
-        <div className="container-custom py-8 flex flex-col md:flex-row items-center gap-8 animate-fade-in-up">
+        <div className="container-custom py-8 flex flex-col md:flex-row items-center gap-8 animate-fade-in-up" id="fd-managment">
           <div className="flex-1">
             <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-[#1A5276]">
               <span className="inline-block w-2 h-6 bg-primary rounded-sm" />
               Introduction
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed text-justify" id="fd-managment">
+            <p className="text-muted-foreground text-lg leading-relaxed text-justify" >
               In ERPNext, Fixed Deposit (FD) management is a vital component of effective financial asset planning. A fixed deposit is a secure investment option offered by banks and NBFCs, providing higher returns than a standard savings account over a fixed period. With FD management in ERPNext, businesses can track, manage, and automate their fixed deposit operations directly within the ERP system, ensuring accuracy and compliance.
             </p>
           </div>

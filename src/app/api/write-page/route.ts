@@ -84,7 +84,7 @@ function generateWebpageLayout(slug: string, seoData: SEOData): string {
   const keywords = escapeString(seoData.keywords || '');
   const image = seoData.image || '';
   const content = escapeString((seoData.content || '').substring(0, 500));
-  const canonicalUrl = `https://web.finbyz.tech/${slug}`;
+  const canonicalUrl = `${process.env.FRAPPE_URL}/${slug}`;
 
   return `import BusinessSlider from "@/components/sections/business-slider";
 import { Metadata } from "next";
@@ -188,7 +188,7 @@ function generateBlogLayout(slug: string, seoData: SEOData): string {
   const keywords = escapeString(seoData.keywords || '');
   const image = seoData.image || '';
   const content = escapeString((seoData.content || '').substring(0, 500));
-  const canonicalUrl = `https://web.finbyz.tech/blog/${slug}`;
+  const canonicalUrl = `${process.env.FRAPPE_URL}/blog/${slug}`;
 
   return `import { Metadata } from "next";
 import Script from "next/script";
@@ -391,13 +391,11 @@ export async function POST(request: NextRequest) {
       );
     }
     
-    console.log(`📝 Generating ${body.type} for slug: ${slug}`);
     
     // Decode base64 page code
     let decodedPageCode: string;
     try {
       decodedPageCode = decodeBase64(body.pageCode);
-      console.log(`✅ Successfully decoded page code`);
     } catch (error) {
       return NextResponse.json(
         {
@@ -411,7 +409,6 @@ export async function POST(request: NextRequest) {
     
     // Write components if provided
     if (body.components && body.components.length > 0) {
-      console.log(`📦 Writing ${body.components.length} components`);
       body.components.forEach(comp => {
         // Decode component code if it's base64
         try {
@@ -426,17 +423,14 @@ export async function POST(request: NextRequest) {
     }
     
     // Write page
-    console.log(`📄 Writing page.tsx`);
     writePage(slug, decodedPageCode, body.type);
     
     // Write layout
-    console.log(`📐 Writing layout.tsx`);
     writeLayout(slug, body.type, body.seoData || {});
     
     // Update completed pages registry
     updateCompletedPages(slug);
     
-    console.log(`✅ Successfully generated ${body.type}: ${slug}`);
     
     return NextResponse.json({
       success: true,

@@ -51,7 +51,6 @@ const RecentActivity: React.FC<RecentActivityProps> = ({ employee, startDate, en
             for (const attempt of attempts) {
                 const qs = new URLSearchParams(attempt.params)
                 const url = `/web-api/fb/method/finbyz.finbyz.page.productify_activity_analysis_finbyz.productify_activity_analysis_finbyz.user_activity_images?${qs.toString()}`
-                console.log('[RecentActivity] try', attempt.params)
                 const res = await fetch(url, { credentials: 'include', cache: 'no-store' })
                 lastStatus = res.status
                 if (!res.ok) continue

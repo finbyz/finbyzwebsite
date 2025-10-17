@@ -397,8 +397,6 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
         body: JSON.stringify(payload),
       });
 
-      console.log('Inquiry submission response:', res);
-      
 
       if (!res.ok) {
         const raw = await res.text();

@@ -115,20 +115,20 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   };
 
   return (
-    <div className={`container-custom min-h-screen ${backgroundColor} text-white`}>
+    <div className={`container-custom min-h-screen ${backgroundColor} text-white mt-12`}>
       {/* Main Hero Section */}
-      <div className="mx-auto py-8">
+      <div className="mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Left Content */}
           <div className="space-y-6">
 
             {/* Headline */}
-            <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-snug sm:leading-tight lg:leading-none">
               {highlightWordsInText(headline, highlightWords)}
             </h1>
 
             {/* Description */}
-            <p className="text-xl text-slate-300 leading-relaxed max-w-2xl">
+            <p className="text-base sm:text-lg md:text-xl lg:text-xl text-slate-300 leading-relaxed sm:leading-relaxed md:leading-relaxed max-w-full sm:max-w-xl md:max-w-2xl">
               {description}
             </p>
 
@@ -197,9 +197,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 <Image
                   src={heroImage.poster || heroImage.src || ""}
                   alt={heroImage.alt || "Hero image"}
-                  width={600}
+                  width={600} 
                   height={450}
-                  className="w-[90%] h-auto rounded-2xl object-contain mx-auto"
+                  className="w-full sm:w-11/12 md:w-3/4 lg:w-2/3 h-auto rounded-2xl object-contain mx-auto"
                   loading="lazy"
                   priority={false}
                 />
@@ -209,7 +209,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               {/* Decorative floating elements */}
               <div className={`absolute -top-4 -right-4 w-8 h-8 ${colors.bg} rounded-full opacity-80 animate-pulse`}></div>
               <div className="absolute -bottom-6 -left-6 w-6 h-6 bg-blue-500 rounded-full opacity-60 animate-bounce"></div>
-              <div className={`absolute top-1/2 -right-8 w-4 h-4 ${colors.bg} opacity-70 rounded-full`}></div>
+              <div className={`absolute top-1/2 -right-8 w-4 h-4 ${colors.bg} opacity-70 rounded-full hidden md:block`}></div>
             </div>
           </div>
         </div>

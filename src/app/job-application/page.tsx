@@ -19,7 +19,6 @@ export default function JobApplication() {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const WEB_FORM_NAME = "job-application";
 
-  console.log("applicantTypes",applicantTypes)
 
 useEffect(() => {
   const fetchJobOpenings = async () => {
@@ -31,7 +30,6 @@ useEffect(() => {
        "https://finbyz.tech/api/method/finbyzweb.api.get_all_job_openings"
       );
       const data = await res.json();
-      console.log("Job Openings API response:", data);
 
       if (Array.isArray(data.message?.data)) {
         setJobOpenings(data.message.data);
@@ -49,65 +47,6 @@ useEffect(() => {
 }, []);
 
 
-  //  useEffect(() => {
-  //   const fetchJobOpenings = async () => {
-  //     try {
-  //       const res = await fetch(
-  //         "https://finbyz.tech/api/method/finbyzweb.api.get_all_job_openings"
-  //       );
-  //       const data = await res.json();
-  //       console.log("Job Openings API response:", data.message.data);
-
-
-  //       // ✅ Ensure it's always an array
-  //       if (Array.isArray(data.message)) {
-  //         setJobOpenings(data.message);
-  //       } else if (data.message) {
-  //         setJobOpenings([data.message]); // wrap single object in array
-  //       } 
-
-        
-
-  //       // if (data?.message) {
-  //       //   setJobOpenings(data.message); 
-  //       //   console.log("Job Openings data",data.message)
-  //       // }
-  //     } catch (error) {
-  //       console.error("Error fetching job openings:", error);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-
-  //   fetchJobOpenings();
-  // }, []);
-
-//  useEffect(() => {
-//   async function fetchApplicantTypes() {
-//     try {
-//       const res = await fetch(
-//         "https://finbyz.tech/api/method/finbyzweb.api.get_applicant_types"
-//       );
-//       const data = await res.json();
-//       console.log("Applicant types API response: dhanvant---", data);
-
-//       if (data.message) {
-//         // Split string by newline if it's a string
-//         const types = typeof data.message === "string" 
-//           ? data.message.split("\n") 
-//           : Array.isArray(data.message) 
-//             ? data.message 
-//             : [];
-//         setApplicantTypes(types);
-//         console.log("Applicant types:", types);
-//       }
-//     } catch (err) {
-//       console.error("Failed to fetch applicant types: ", err);
-//     }
-//   }
-//   fetchApplicantTypes();
-// }, []);
-
 
 useEffect(() => {
   async function fetchApplicantTypes() {
@@ -124,14 +63,12 @@ useEffect(() => {
       }
 
       const data = await response.json();
-      console.log("Applicant types API response:", data);
 
       // Handle nested message.message structure
       const types =
         Array.isArray(data.message?.message) ? data.message.message : [];
 
       setApplicantTypes(types);
-      console.log("Applicant types:", types);
     } catch (error) {
       console.error("Failed to fetch applicant types:", error);
     }
@@ -210,7 +147,6 @@ useEffect(() => {
         return;
       }
 
-      console.log("formData prepared:", formData);
       
 
       // Send request to Frappe web form API

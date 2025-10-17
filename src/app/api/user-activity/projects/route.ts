@@ -8,20 +8,15 @@ export async function GET(request: Request) {
     const incomingCookie = request.headers.get('cookie')
     if (incomingCookie) headers['Cookie'] = incomingCookie
 
-    console.log('[projects] incoming cookies?', !!incomingCookie)
-    console.log('[projects] query user', user)
 
     // If user was not provided explicitly, try to resolve it from ERPNext session
     if (!user) {
         try {
             const whoUrl = `${process.env.FRAPPE_URL || 'https://finbyz.tech'}/api/method/frappe.auth.get_logged_user`
-            console.log('[projects] resolve user via', whoUrl)
             const who = await fetch(whoUrl, { headers, cache: 'no-store' })
-            console.log('[projects] who status', who.status)
             if (who.ok) {
                 const wj = await who.json()
                 const resolved = (wj as any)?.message || (wj as any)?.data
-                console.log('[projects] who payload keys', Object.keys(wj || {}))
                 if (typeof resolved === 'string') user = resolved
             } else {
                 console.warn('[projects] who not ok')
@@ -35,16 +30,13 @@ export async function GET(request: Request) {
     if (user) search.append('user', user)
     const base = process.env.FRAPPE_URL || 'https://finbyz.tech'
     const upstream = `${base}/api/method/productivity_next.api.get_projects${search.toString() ? `?${search.toString()}` : ''}`
-    console.log('[projects] upstream', upstream)
     try {
         const res = await fetch(upstream, { cache: 'no-store', headers })
-        console.log('[projects] upstream status', res.status)
         if (!res.ok) {
             const text = await res.text().catch(() => '')
             return NextResponse.json({ error: `Upstream ${res.status}`, body: text?.slice(0, 500), debug: debug ? { upstream, cookies: !!incomingCookie, user } : undefined }, { status: 502 })
         }
         const raw = await res.clone().text().catch(() => '')
-        console.log('[projects] upstream raw first 400', raw.slice(0, 400))
         let json: any = null
         try { json = raw ? JSON.parse(raw) : null } catch {}
         const rows = Array.isArray((json as any)?.message)

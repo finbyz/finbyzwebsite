@@ -40,43 +40,44 @@ const cards = [
 
 const ITConsultingFlipCards: React.FC = () => {
   return (
-   <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+ <div className="w-full grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-8">
   {cards.map((card, idx) => (
     <FlipCard
       key={card.title}
-      className="border-none shadow-lg hover:scale-105 transition-transform duration-300 bg-white rounded-xl overflow-hidden"
+      className="border-none shadow-lg hover:scale-105 transition-transform duration-300 bg-white rounded-xl overflow-hidden min-h-[400px] w-full"
       front={
-        <div className="flex flex-col items-center justify-center py-8 px-4 text-center break-words">
+        <div className="flex flex-col items-center justify-center py-10 px-6 text-center h-full w-full min-h-[400px] overflow-hidden">
           <Image
             src={card.image}
             alt={card.alt}
-            width={180}
-            height={180}
-            className="mb-4 max-w-full h-auto object-contain"
+            width={200}
+            height={200}
+            className="mb-6 max-w-full h-auto object-contain flex-shrink-0"
             loading="lazy"
           />
-          <h3 className="text-lg font-semibold text-gray-900 mt-2 leading-snug">
+          <h3 className="text-xl font-semibold text-gray-900 mt-2 leading-snug break-words w-full px-2">
             {card.title}
           </h3>
         </div>
       }
       back={
-        <div className="flex flex-col items-center justify-center py-8 px-4 h-full text-center overflow-hidden break-words">
-          <h3 className="text-lg font-semibold text-gray-900 mb-2 leading-snug">
+        <div className="flex flex-col items-center justify-center py-8 px-8 h-full w-full min-h-[400px] text-center overflow-hidden">
+          <h3 className="text-xl font-semibold text-gray-900 mb-4 leading-snug break-words w-full">
             {card.title}
           </h3>
-          <div className="flex items-start gap-2 mb-2 text-primary flex-wrap justify-center">
-            <FaQuoteLeft className="text-xl text-primary shrink-0" />
-            <span className="italic text-sm text-gray-700 break-words">
+          <div className="flex items-start gap-3 mb-4 text-primary w-full">
+            <FaQuoteLeft className="text-lg text-primary shrink-0 mt-1" />
+            <span className="italic text-base text-gray-700 break-words text-left flex-1 overflow-wrap-anywhere leading-relaxed">
               {card.quote}
             </span>
           </div>
-          <p className="text-gray-700 text-sm mt-4 leading-relaxed break-words">
+          <p className="text-gray-700 text-base mt-2 leading-relaxed break-words w-full overflow-wrap-anywhere">
             {card.description}
           </p>
         </div>
       }
-      flipOnClick={true}
+      // flipOnClick={true}
+      
     />
   ))}
 </div>

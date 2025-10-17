@@ -184,7 +184,7 @@ export default function Page() {
                 text: 'Request Demo',
                 icon: 'PlayCircle',
                 action: () => {
-                  window.location.href = '/demo';
+                  window.location.href = '/contact';
                 },
               },
               trustIndicator: {

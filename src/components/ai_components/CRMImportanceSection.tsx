@@ -47,7 +47,7 @@ const CRMImportanceSection = () => (
         <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
           Before diving into the role of CRM software, it's crucial to understand why Customer Relationship Management matters. A robust CRM system helps you build stronger relationships with customers, increasing repeat purchases, enhancing customer satisfaction, and improving brand reputation. An{' '}
           <a 
-            href="https://finbyz.tech/benefits-of-erp-and-crm-integration" 
+            href="https://web.finbyz.tech/benefits-of-erp-and-crm-integration" 
             className="text-blue-600 hover:text-blue-700 font-semibold underline decoration-2 underline-offset-2 transition-colors"
           >
             open source CRM
@@ -75,13 +75,13 @@ const CRMImportanceSection = () => (
                 <h3 className="text-xl font-bold text-gray-900 text-center leading-tight px-2">
                   {benefit.title}
                 </h3>
-                <div className="mt-6 w-12 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full" />
+                <div className="mt-6 w-12 h-1 rounded-full" />
               </div>
             }
             back={
-              <div className="h-full flex flex-col items-center justify-center p-8 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-700 rounded-2xl shadow-xl">
+              <div className="h-full flex flex-col items-center justify-center p-8  rounded-2xl shadow-xl">
                 <div className="mb-4">
-                  <div className="w-14 h-14 relative flex items-center justify-center bg-white/20 backdrop-blur-sm rounded-xl border border-white/30">
+                  <div className="w-14 h-14 relative flex items-center justify-center bg-black/20 backdrop-blur-sm rounded-xl border border-white/30">
                     <Image 
                       src={benefit.icon} 
                       alt={benefit.title} 
@@ -91,10 +91,10 @@ const CRMImportanceSection = () => (
                     />
                   </div>
                 </div>
-                <h4 className="text-lg font-bold text-white mb-4 text-center">
+                <h4 className="text-lg font-bold text-black mb-4 text-center">
                   {benefit.title}
                 </h4>
-                <p className="text-white/95 text-sm leading-relaxed text-center">
+                <p className="text-black/95 text-sm leading-relaxed text-center">
                   {benefit.description}
                 </p>
               </div>

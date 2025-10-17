@@ -145,9 +145,7 @@ export default function Header() {
 
   // Scroll to inquiry form section
   function GotoInquiryForm() {
-    // console.log("Navigating to inquiry form working...");
     const inquiryForm = document.getElementsByClassName('inquiry-form')[0];;
-    // console.log("Inquiry form element:", inquiryForm);
     if (inquiryForm) {
       inquiryForm.scrollIntoView({ behavior: 'smooth' });
     }

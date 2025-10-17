@@ -94,7 +94,6 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
-      console.log('Inquiry submission response:', res);
       
 
       if (!res.ok) {

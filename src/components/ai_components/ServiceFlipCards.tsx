@@ -18,7 +18,7 @@ interface ServiceFlipCardsProps {
 
 export default function ServiceFlipCards({ cards }: ServiceFlipCardsProps) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-8">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-8 py-8">
       {cards.map((card, idx) => (
         <FlipCard
           key={card.title}

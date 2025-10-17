@@ -206,7 +206,7 @@ export default function ProcessWorkflow({ data = {} }: ProcessWorkflowProps) {
       {/* Background Pattern */}
 
 
-      <div className="process-workflow-container">
+      <div className="container-custom  process-workflow-container">
         <div className={`process-workflow-header ${inView ? 'process-workflow-fade-in-up' : 'process-workflow-fade-out'}`}>
           <h2 className="process-workflow-title">
             {title}

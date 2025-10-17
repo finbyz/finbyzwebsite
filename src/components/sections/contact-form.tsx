@@ -40,7 +40,6 @@ export default function ContactFormSection(props: ContactFormProps = {}) {
       notes: formData.message,
     };
 
-    console.log("Form Payload:", payload);
 
     try {
       const res = await fetch(
@@ -53,7 +52,6 @@ export default function ContactFormSection(props: ContactFormProps = {}) {
       );
 
       const data = await res.json();
-      // console.log("Response Data:", data);
 
       if (res.ok) {
         alert(

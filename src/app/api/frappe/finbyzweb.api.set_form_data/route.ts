@@ -60,13 +60,11 @@ export async function POST(request: Request) {
     }
 
     const upstream = await fetch(UPSTREAM, { method: 'POST', headers, body })
-    console.log('Upstream responce---------', upstream);
     
 
     const text = await upstream.text()
     let data: any = null
     try { data = JSON.parse(text) 
-      console.log('data-------',data);
       
     } catch { /* not json */ }
 
@@ -76,7 +74,6 @@ export async function POST(request: Request) {
 
     return NextResponse.json(data ?? { ok: true })
   } catch (err: any) {
-    console.log('Error in finbyzweb.api.set_form_data', err);
     
     return NextResponse.json({ error: 'Proxy failure', message: err?.message || String(err) }, { status: 500 })
   }

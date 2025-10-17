@@ -17,7 +17,7 @@ export default function Page() {
     window.location.href = '/contact';
   };
   const handleSecondary = () => {
-    window.location.href = '/demo';
+    window.location.href = '/contact';
   };
 
   return (
@@ -26,7 +26,13 @@ export default function Page() {
         headline="ERPNext for Manufacturing"
         highlightWords={["for", "Manufacturing"]}
         description="FinByz Tech’s ERPNext manufacturing ERP software streamlines production and inventory management, reducing costs and improving efficiency."
-        primaryButton={{ text: 'Get Started', action: handlePrimary }}
+        primaryButton={{ 
+          text: 'Get Started', 
+          action: () => {
+            const el = document.getElementById('manufacturing');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }
+         }}
         secondaryButton={{ text: 'Request Demo', action: handleSecondary }}
         heroImage={{
           alt: 'ERPNext for Manufacturing',
@@ -38,13 +44,13 @@ export default function Page() {
       {/* Introduction Section */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold text-[#1A5276] mb-6 text-center">ERP software for Manufacturing industry</h2>
+          <h2 className="text-2xl font-bold text-[#1A5276] mb-6 text-center scroll-mt-20" id ="manufacturing">ERP software for Manufacturing industry</h2>
           <div className="flex flex-col md:flex-row md:items-center md:gap-8">
             <div className="md:w-1/12 flex justify-center mb-4 md:mb-0">
               {/* <Image src="/images/Quotation_marks.svg" alt="Quotation marks" width={40} height={40} className="opacity-80" /> */}
             </div>
             <div className="md:w-11/12">
-              <p>
+              <p className="text-center text-lg sm:text-xl font-semibold mb-6">
                 "The surest foundation of a Manufacturing concern is quality. After that, and a long way after, comes cost – Andrew Carnegie"
               </p>
             </div>
@@ -62,7 +68,7 @@ export default function Page() {
     <h2 className="text-2xl font-bold mb-6 text-center text-[#1A5276]">Why ERP is Crucial for Modern Manufacturing ?</h2>
 
     {/* Bold Intro Line with larger font, centered */}
-    <p className="text-center text-lg sm:text-xl font-semibold text-[#1A5276] mb-6">
+    <p className="text-center text-lg sm:text-xl font-semibold mb-6">
       "Continuous learning and smart process automation are the minimum requirements for success in modern manufacturing - Brian Tracy"
     </p>
     
@@ -127,14 +133,13 @@ export default function Page() {
           <div className="flex flex-col md:flex-row md:items-center md:gap-8">
             <div className="md:w-1/12 flex justify-center mb-4 md:mb-0">
             </div>
-            <div className="md:w-11/12 text-[#1A5276]">
-              <p></p>
-              <b>"Continuous improvement is better than delayed perfection – Mark Twain"</b>
+            <div className="md:w-11/12">
+              <p className="text-center text-lg sm:text-xl font-semibold mb-6">"Continuous improvement is better than delayed perfection – Mark Twain"</p>
             </div>
           </div>
           <div className="mt-6 text-gray-700">
             <div className='mb-4'>
-              <p className='text-justify'><a className="text-blue-600 underline" href="/erp-software" target="_blank" rel="noopener noreferrer">Implementation of ERP Software</a> is the answer to many problems related to management in the manufacturing industry. The industry in today’s business environment is very dynamic and innovating rapidly. For being at the same pace as the changing market, latest technology is a must as <a href="/benefits-of-erp" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">ERP Software has various benefits</a>, some of them are as follows:</p>
+              <p className='text-justify'><a className="text-blue-600 underline" href="/erpnext-software" target="_blank" rel="noopener noreferrer">Implementation of ERP Software</a> is the answer to many problems related to management in the manufacturing industry. The industry in today’s business environment is very dynamic and innovating rapidly. For being at the same pace as the changing market, latest technology is a must as <a href="/benefits-of-erp" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">ERP Software has various benefits</a>, some of them are as follows:</p>
             </div>
             <ManufacturingBenefitsGrid
               benefits={[
@@ -169,9 +174,9 @@ export default function Page() {
           <div className="flex flex-col md:flex-row md:items-center md:gap-8">
             <div className="md:w-1/12 flex justify-center mb-4 md:mb-0">
             </div>
-            <div className="md:w-11/12 text-[#1A5276]">
-              <p>
-                <b>"Time is needed to convert all ideas and added values into tangible products that benefit the world. - Sunday Adelaja"</b>
+            <div className="md:w-11/12">
+              <p className="text-center text-lg sm:text-xl font-semibold mb-6">
+                "Time is needed to convert all ideas and added values into tangible products that benefit the world. - Sunday Adelaja"
               </p>
             </div>
           </div>

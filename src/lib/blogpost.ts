@@ -22,7 +22,6 @@ async function getBlogs(filters: any[][] = []): Promise<RelatedLinksData[]> {
 
   const blogsJson = await blogsResponse.json();
   const blogsData: RelatedLinksData[] = blogsJson.data || [];
-  // console.log("blogsData------------",blogsData)
 
   return blogsData.map(blog => {
     return {
@@ -64,7 +63,6 @@ export async function getBlogPosts({
   //   cache: "no-store",
   // });
   const blogs = await getBlogs()
-  // console.log(blogs)
   return blogs.map(blog => {
     return {
       "name": blog.name,

@@ -7,12 +7,12 @@ const cards = [
   {
     icon: "/images/django%20devloper.svg",
     title: "Comprehensive Lead Management",
-    description: "Our CRM software, developed with our extensive software development expertise, goes beyond basic sales tracking by providing a complete system for managing leads from initial contact to final conversion streamlining the entire process."
+    description: "Our CRM software offers a comprehensive lead management system, streamlining the entire sales process from initial contact to conversion."
   },
   {
     icon: "/images/49.svg",
     title: "Customer Segmentation",
-    description: "Leveraging our experience in ERP implementation, the CRM system enables detailed customer segmentation, helping businesses target marketing and sales efforts more effectively and enhance customer experiences."
+    description: "Our CRM system uses ERP expertise to enable detailed customer segmentation, improving targeted marketing, sales, and customer experiences."
   },
   {
     icon: "/sales forecasting.svg",
@@ -26,7 +26,7 @@ const CoreFeaturesFlipCards: React.FC = () => (
     <div className="container-custom px-4 py-16 md:py-20">
       {/* Header Section */}
       <div className="max-w-3xl mx-auto text-center mb-12">
-        <span className="inline-block px-4 py-1.5 mb-4 text-sm font-semibold text-blue-600 bg-blue-50 rounded-full">
+        <span className="inline-block px-4 py-1.5 mb-4 text-sm font-semibold  text-[#1A5276] bg-blue-50 rounded-full">
           Core Features
         </span>
         <h2 className="text-4xl md:text-5xl font-bold text-[#1A5276]">
@@ -38,17 +38,17 @@ const CoreFeaturesFlipCards: React.FC = () => (
       </div>
 
       {/* Cards Grid */}
-      <div className="container-custom flex justify-center gap-4 flex-wrap">
+      <div className="container-custom justify-center flex gap-4 flex-wrap ">
         {cards.map((card, idx) => (
-          <FlipCard 
+          <FlipCard
             key={idx}
             front={
               <div className="h-full flex flex-col items-center justify-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-20 h-20 mb-6 relative flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl">
-                  <img 
-                    src={card.icon} 
-                    alt={card.title} 
-                    width={48} 
+                <div className="w-30 h-30 mb-6 relative flex items-center justify-center  rounded-2xl">
+                  <img
+                    src={card.icon}
+                    alt={card.title}
+                    width={48}
                     height={48}
                     className="object-contain"
                   />
@@ -56,7 +56,7 @@ const CoreFeaturesFlipCards: React.FC = () => (
                 <h3 className="text-xl font-bold text-gray-900 text-center leading-tight">
                   {card.title}
                 </h3>
-                <div className="mt-6 text-blue-600 text-sm font-medium flex items-center gap-1">
+                <div className="mt-6 text-[#1A5276] text-sm font-medium flex items-center gap-1">
                   Learn more
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -65,22 +65,22 @@ const CoreFeaturesFlipCards: React.FC = () => (
               </div>
             }
             back={
-              <div className="h-full flex flex-col items-center justify-center p-8 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl shadow-lg">
+              <div className="h-full flex flex-col items-center justify-center p-8  rounded-xl shadow-lg">
                 <div className="mb-4">
-                  <div className="w-12 h-12 relative flex items-center justify-center bg-white/20 rounded-xl">
-                    <Image 
-                      src={card.icon} 
-                      alt={card.title} 
-                      width={28} 
+                  <div className="w-12 h-12 relative flex items-center justify-center bg-black/20 rounded-xl">
+                    <Image
+                      src={card.icon}
+                      alt={card.title}
+                      width={28}
                       height={28}
                       className="object-contain brightness-0 invert"
                     />
                   </div>
                 </div>
-                <h4 className="text-lg font-bold text-white mb-3 text-center">
+                <h4 className="text-lg font-bold text-black mb-3 text-center">
                   {card.title}
                 </h4>
-                <p className="text-white/90 text-sm leading-relaxed text-center">
+                <p className="text-black text-sm leading-relaxed text-center">
                   {card.description}
                 </p>
               </div>

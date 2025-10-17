@@ -93,9 +93,6 @@ export default function JobsLayout({
           },
         };
       }
-      // console.log(jobPosting);
-      console.log(job.posted_date)
-      // ✅ Handle datePosted with fallbacks + ISO formatting
 
       jobPosting.datePosted = job.posted_date;
 

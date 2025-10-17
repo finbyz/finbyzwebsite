@@ -25,7 +25,7 @@ const Index = () => {
         readTime="4 min read"
       />
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 py-12 mx-auto w-full bg-muted/30 border-b max-w-screen-xl">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 py-12 mx-auto w-full bg-muted/30 border-b container-custom">
         <BlogTableOfContents items={tocItems} />
         <BlogContent>
           <section id="introduction" className="space-y-4">

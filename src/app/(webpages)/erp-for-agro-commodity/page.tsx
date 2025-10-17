@@ -27,11 +27,13 @@ export default function Page() {
         headline="ERPNext for Commodity"
         highlightWords={["ERPNext", "Commodity"]}
         description="Discover how Finbyz Tech's ERPNext solutions revolutionize agricultural operations. Enhance efficiency, ensure compliance, and drive growth in your agro commodity business."
-        primaryButton={{ text: 'Get Started', action: handleContact }}
-        secondaryButton={{ text: 'Learn More',  action: () => {
+        primaryButton={{ text: 'Get a Demo', action: handleContact }}
+        secondaryButton={{
+          text: 'Learn More', action: () => {
             const el = document.getElementById('erp-for-agro');
             if (el) el.scrollIntoView({ behavior: 'smooth' });
-          } }}
+          }
+        }}
         heroImage={{
           alt: 'ERPNext for Commodity',
           videoSrc: '/images/Agro_Slide_for_Site.mp4',
@@ -134,7 +136,7 @@ export default function Page() {
           />
           <div className="mt-8">
             <p className="text-gray-700 mb-6">
-              We can help you analyze carefully all the needs and requirements of your business and then suggest you the solution that can help in increasing profits, productivity and control. There are many challenges in Implementing ERP software for agriculture industry, but adopting the latest technology is the only way to grow your business. We provide full hand holding in your journey to adopt <a href="/erp-software" className="text-blue-600 underline">ERP software</a> for effective management of procurement, supply chain and distribution of agro-products.
+              We can help you analyze carefully all the needs and requirements of your business and then suggest you the solution that can help in increasing profits, productivity and control. There are many challenges in Implementing ERP software for agriculture industry, but adopting the latest technology is the only way to grow your business. We provide full hand holding in your journey to adopt <a href="/erpnext-software" className="text-blue-600 underline">ERP software</a> for effective management of procurement, supply chain and distribution of agro-products.
             </p>
             <QuoteBlock
               text="Without change, performance would never improve. -Marianne Bradford."
@@ -154,7 +156,7 @@ export default function Page() {
                 icon: 'leaf',
               },
               title: 'Get Started with ERPNext for Agriculture',
-              highlightText:"ERPNext for Agriculture",
+              highlightText: "ERPNext for Agriculture",
               description: 'Contact our experts to discuss your requirements and see how ERPNext can revolutionize your agricultural operations.',
               primaryButton: {
                 text: 'Request a Demo',
@@ -165,10 +167,10 @@ export default function Page() {
                 text: 'Learn More',
                 icon: 'info',
                 // action: handleLearnMore,
-                 action: () => {
-            const el = document.getElementById('erp-for-agro');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }
+                action: () => {
+                  const el = document.getElementById('erp-for-agro');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }
               },
               trustIndicator: {
                 text: 'Trusted by leading agro businesses',

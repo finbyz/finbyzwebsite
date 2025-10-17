@@ -25,7 +25,6 @@ interface FinbyzGalleryProps {
 
 
 const FinbyzGallery = ({ galleryItems = [], relatedReads = [] }: FinbyzGalleryProps) => {
-  console.log(relatedReads)
   return (
     <div className="min-h-screen bg-gray-50 py-12 container-custom mx-auto">
       <div className="mx-auto">
@@ -33,8 +32,7 @@ const FinbyzGallery = ({ galleryItems = [], relatedReads = [] }: FinbyzGalleryPr
         {relatedReads.length > 0 ?
           <div className='mb-16'>
             <div className="text-center mb-10">
-              <h2 className="text-4xl font-bold text-gray-900 mb-3">Related Read</h2>
-              <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+              <h2 className="text-4xl font-bold text-[#1A5276] mb-3">Related Read</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -53,7 +51,7 @@ const FinbyzGallery = ({ galleryItems = [], relatedReads = [] }: FinbyzGalleryPr
                   </div>
 
                   <div className="p-6">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#1A5276] transition-colors">
                       {read.title}
                     </h3>
                     <p className="text-gray-600 leading-relaxed mb-4 text-sm">
@@ -78,12 +76,11 @@ const FinbyzGallery = ({ galleryItems = [], relatedReads = [] }: FinbyzGalleryPr
         {galleryItems.length > 0 ?
           <div>
             <div className="text-center mb-10">
-              <h2 className="text-4xl font-bold text-gray-900 mb-3">Gallery</h2>
-              <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+              <h2 className="text-4xl font-bold text-[#1A5276] mb-3">Gallery</h2>
             </div>
             <div className="overflow-hidden">
               <div className="gallery-scroll-container">
-                <div className="gallery-scroll">
+                <div className="gallery-scroll flex gap-5">
                   {[...galleryItems, ...galleryItems].map((item, index) => (
                     <div
                       key={index}

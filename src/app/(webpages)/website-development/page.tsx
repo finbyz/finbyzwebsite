@@ -118,6 +118,7 @@ export default function Page() {
         heroImage={{
           alt: 'Website Development',
           src: '/images/web-development.svg',
+          // src:'/web-development.png'
           
         }}
       />

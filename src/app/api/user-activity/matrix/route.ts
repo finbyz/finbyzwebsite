@@ -45,27 +45,20 @@ export async function GET(request: Request) {
     const upstream = `https://finbyz.tech/api/method/productivity_next.api.get_time_utilization_daily?${search.toString()}`
 
     try {
-        console.log('[API matrix] params', { from_date, to_date, project, employee })
-        console.log('[API matrix] upstream', upstream)
         const headers: Record<string, string> = {}
         const incomingCookie = request.headers.get('cookie')
         if (incomingCookie) headers['Cookie'] = incomingCookie
         const res = await fetch(upstream, { cache: 'no-store', headers })
-        console.log('[API matrix] upstream status', res.status)
         if (!res.ok) {
             const text = await res.text().catch(() => '')
             return NextResponse.json({ error: `Upstream ${res.status}`, body: text?.slice(0, 500) }, { status: 502 })
         }
         // Read raw first for diagnostics
         const raw = await res.clone().text().catch(() => '')
-        console.log('[API matrix] upstream raw first 1k', raw.slice(0, 1000))
-        console.log('[API matrix] upstream raw full length', raw.length)
         
         let json: any = null
         try {
             json = raw ? JSON.parse(raw) : null
-            console.log('[API matrix] parsed JSON keys:', Object.keys(json || {}))
-            console.log('[API matrix] parsed JSON structure:', JSON.stringify(json, null, 2).slice(0, 2000))
         } catch (e) {
             console.warn('[API matrix] upstream not JSON', e)
         }
@@ -77,12 +70,8 @@ export async function GET(request: Request) {
                 : Array.isArray(json?.message?.data)
                     ? json.message.data
                     : []
-        console.log('[API matrix] payload length', Array.isArray(payload) ? payload.length : 'not-array')
-        console.log('[API matrix] payload type', typeof payload)
         
         if (Array.isArray(payload) && payload.length > 0) {
-            console.log('[API matrix] first payload item:', JSON.stringify(payload[0], null, 2))
-            console.log('[API matrix] first payload item keys:', Object.keys(payload[0] || {}))
         }
 
         const rows: NormalizedRow[] = Array.isArray(payload) ? payload.map((it: any): NormalizedRow => ({
@@ -99,8 +88,6 @@ export async function GET(request: Request) {
         })) : []
 
         if (rows.length > 0) {
-            console.log('[API matrix] sample normalized row', rows[0])
-            console.log('[API matrix] all normalized rows:', JSON.stringify(rows, null, 2))
         }
 
         const body = debug ? { raw: json, data: rows } : { data: rows }
