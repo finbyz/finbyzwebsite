@@ -45,7 +45,7 @@ export default function Page() {
       alt: 'Custom Software Development',
       description:
         'Empower your business infrastructure with robust software development that enhances automation, collaboration, and decision-making. Our custom software development services are designed to meet specific business goals through scalable, secure, and high-performing enterprise solutions.',
-      link: '/erp-implementaion',
+      link: '/software-development',
     },
     {
       title: 'Software Solution Integration',
@@ -53,7 +53,7 @@ export default function Page() {
       alt: 'Software Solution Integration',
       description:
         'As a full-service software development company, we help businesses integrate cloud-based SaaS and on-premise systems seamlessly. Our services include API development, microservices architecture, and enterprise application integration to ensure unified data flow and optimized performance across platforms.',
-      link: '/erp-implementaion',
+      link: '/erpnext-software',
     },
     {
       title: 'Legacy Application Modernization',
@@ -61,7 +61,7 @@ export default function Page() {
       alt: 'Legacy Application Modernization',
       description:
         'Legacy systems can hinder growth and efficiency. Our software development experts evaluate and upgrade outdated enterprise applications using the latest technologies. Through our modernization services, we transform legacy systems into agile, future-ready platforms that enhance user satisfaction and productivity.',
-      link: '/erp-implementaion',
+      link: '/web-application-development',
     },
     {
       title: 'Cloud Application Development',
@@ -69,7 +69,7 @@ export default function Page() {
       alt: 'Cloud Application Development',
       description:
         'Leverage the power of the cloud with scalable, secure, and high-performance applications. Our cloud development services enable seamless accessibility, faster deployment, and cost efficiency—helping your business stay agile and competitive in the digital era.',
-      link: '/erp-implementaion',
+      link: '/erpnext-software',
     }
   ];
 

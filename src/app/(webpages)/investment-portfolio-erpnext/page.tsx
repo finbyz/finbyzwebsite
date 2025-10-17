@@ -12,7 +12,7 @@ export default function Page() {
     <>
       <HeroSection
         headline="Investment Portfolio Management in ERPNext"
-        highlightWords={["Portfolio", "ERPNext"]}
+        highlightWords={[ "Investment","Portfolio","Management"]}
         description="Discover how ERPNext empowers you to seamlessly track and optimize your financial assets. Manage stocks, bonds, mutual funds, and more with a unified dashboard for insightful decision-making."
         primaryButton={{
           text: 'Get Started',

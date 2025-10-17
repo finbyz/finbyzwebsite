@@ -94,7 +94,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4 animate-fade-in text-[#1A5276]">How to Manage or Create an Advanced Authorisation Licence in ERPNext</h2>
+          <h2 className="text-2xl font-bold mb-7 animate-fade-in text-[#1A5276]">How to Manage or Create an Advanced Authorisation Licence in ERPNext :</h2>
           <ol className="list-decimal pl-6 space-y-3 animate-fade-in">
             <li>
               <span className="font-semibold">Go to the Advance Authorisation Licence list in ERPNext and click on add Advance Authorisation Licence.</span>

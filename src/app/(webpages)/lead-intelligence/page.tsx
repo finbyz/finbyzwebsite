@@ -178,6 +178,8 @@ export default function Page() {
         description={seoDescription}
         heroImage={{ alt: seoTitle, src: "/images/Lead Intelligence.gif" }}
         highlightWords={["Lead Intelligence"]}
+        primaryButton={{ text: 'Get a Demo', action:'/contact' }}
+
         // accentColor="blue"
       />
 

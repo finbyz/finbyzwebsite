@@ -53,7 +53,7 @@ export default function Benefits({ data = {} }: BenefitsProps) {
         suffix: "+",
         label: "Projects",
         header: "Proven Track Record",
-        description: "Transform your operations with intelligent automation",
+        description: "Every project completed with exceptional precision and care",
         icon: "TrendingUp",
         palette: { iconBg: "#FF8C00", iconColor: "#fff" }
       },
@@ -71,7 +71,7 @@ export default function Benefits({ data = {} }: BenefitsProps) {
         suffix: "+",
         label: "Custom Apps",
         header: "Built for Unique Client Needs",
-        description: "Every project completed with exceptional precision and care",
+        description: "Transform your operations with intelligent automation",
         icon: "Target",
         palette: { iconBg: "#8E44AD", iconColor: "#fff" }
       }
