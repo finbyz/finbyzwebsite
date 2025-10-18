@@ -42,7 +42,7 @@ export async function GET(request: Request) {
     if (project && project !== 'all') search.append('project', project)
     if (employee) search.append('employee', employee)
     const debug = url.searchParams.get('debug') === '1'
-    const upstream = `https://finbyz.tech/api/method/productivity_next.api.get_time_utilization_daily?${search.toString()}`
+    const upstream = `${process.env.FRAPPE_URL}/api/method/productivity_next.api.get_time_utilization_daily?${search.toString()}`
 
     try {
         const headers: Record<string, string> = {}

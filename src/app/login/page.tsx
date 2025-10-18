@@ -21,7 +21,7 @@ export default function LoginPage() {
       
       if (result.success) {
         // Redirect to home page after successful login
-        router.push('/user-activity');
+        router.push('/user-activity/overview');
       } else {
         setError(result.error || 'Login failed');
       }

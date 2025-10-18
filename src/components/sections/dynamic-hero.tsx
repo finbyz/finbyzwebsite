@@ -199,7 +199,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                   alt={heroImage.alt || "Hero image"}
                   width={600} 
                   height={450}
-                  className="w-full sm:w-11/12 md:w-3/4 lg:w-2/3 h-auto rounded-2xl object-contain mx-auto"
+                  className="w-full h-auto rounded-2xl object-contain mx-auto"
                   loading="lazy"
                   priority={false}
                 />

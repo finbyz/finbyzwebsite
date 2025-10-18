@@ -12,7 +12,7 @@ export async function GET(request: Request) {
     // If user was not provided explicitly, try to resolve it from ERPNext session
     if (!user) {
         try {
-            const whoUrl = `${process.env.FRAPPE_URL || 'https://finbyz.tech'}/api/method/frappe.auth.get_logged_user`
+            const whoUrl = `${process.env.FRAPPE_URL || 'https://erp.finbyz.tech'}/api/method/frappe.auth.get_logged_user`
             const who = await fetch(whoUrl, { headers, cache: 'no-store' })
             if (who.ok) {
                 const wj = await who.json()
@@ -28,7 +28,7 @@ export async function GET(request: Request) {
 
     const search = new URLSearchParams()
     if (user) search.append('user', user)
-    const base = process.env.FRAPPE_URL || 'https://finbyz.tech'
+    const base = process.env.FRAPPE_URL || 'https://erp.finbyz.tech'
     const upstream = `${base}/api/method/productivity_next.api.get_projects${search.toString() ? `?${search.toString()}` : ''}`
     try {
         const res = await fetch(upstream, { cache: 'no-store', headers })
