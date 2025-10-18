@@ -170,7 +170,7 @@ async function main() {
       
       const filename = `${item.name}-sitemap.xml`
       let urls: SitemapUrl[] = routes.map(route => ({
-        loc: `${SITE_URL}${item.routePrefix || '/'}${route}`.replace(/\/+/, '/'),
+        loc: `${SITE_URL}${item.routePrefix || '/'}${route}`.replace(/(?<!:)\/+/g, '/'),
         changefreq: item.changefreq,
         priority: item.priority,
       }))

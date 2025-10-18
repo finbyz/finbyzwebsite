@@ -107,7 +107,7 @@ const config: SitemapConfig[] = [
     type: 'frappe',
     doctype: 'Gallery',
     routeField: 'route',
-    routePrefix: '/',
+    routePrefix: '//',
     filters: [['published', 'is', 'set']],
     fields: ['route'],
     changefreq: 'weekly',
