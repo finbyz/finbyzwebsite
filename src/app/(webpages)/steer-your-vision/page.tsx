@@ -47,33 +47,27 @@ export default function Page() {
 
       {/* Quote Block Section */}
       <section>
-        <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold text-[#1A5276] mb-6 text-center">
+      <div className="container-custom py-8">
+        <h2 className="text-2xl font-bold text-[#1A5276] mb-6 text-center">
           Solutions built to navigate you towards your Goals faster.
+        </h2>
 
-          </h2>
-          <div className="flex flex-col md:flex-row md:items-center md:gap-8">
-            <div className="md:w-12/12 flex justify-center mb-4 md:mb-0"></div>
-            <div className="mt-6 space-y-4 text-gray-700">
-              <p>
-                "We believe technology acts both as a lighthouse guiding your direction and as the vessel that drives progress. Through our expertise in digital transformation consulting, we navigate clients from their current challenges toward their future vision. Leveraging advanced technologies, we help you optimize operations and innovate faster through automation and strategic process reengineering."
-              </p>
-            </div>
-          </div>
-          <div className="mt-6 space-y-4 text-gray-700">
-            <p>
-            In today's hyper-competitive business environment, technology is no longer optional—it’s essential. Organizations that embrace digital transformation gain a critical edge. Our approach, grounded in Agile principles, surpasses conventional delivery models. We empower businesses through a robust framework that prioritizes speed, adaptability, and sustainable growth by integrating business intelligent systems.
-
-
-            </p>
-            <p>
-            Through our “Steer Your Vision” model, we assist enterprises in implementing real-time transformation strategies. Our experience in digital transformation consulting has shown that staying ahead means continuously evolving how your organization functions—from customer interactions to internal processes. We provide actionable data insights, automate routine workflows, and apply business process reengineering to streamline operations. This positions our clients as digital-first leaders capable of thriving in an ever-changing technological landscape.
-
-
-            </p>
-          </div>
+        <div className="mt-6 space-y-4 text-gray-700 text-justify">
+          <p>
+            "We believe technology acts both as a lighthouse guiding your direction and as the vessel that drives progress. Through our expertise in digital transformation consulting, we navigate clients from their current challenges toward their future vision. Leveraging advanced technologies, we help you optimize operations and innovate faster through automation and strategic process reengineering."
+          </p>
         </div>
-      </section>
+
+        <div className="mt-6 space-y-4 text-gray-700 text-justify">
+          <p>
+            In today's hyper-competitive business environment, technology is no longer optional—it’s essential. Organizations that embrace digital transformation gain a critical edge. Our approach, grounded in Agile principles, surpasses conventional delivery models. We empower businesses through a robust framework that prioritizes speed, adaptability, and sustainable growth by integrating business intelligent systems.
+          </p>
+          <p>
+            Through our “Steer Your Vision” model, we assist enterprises in implementing real-time transformation strategies. Our experience in digital transformation consulting has shown that staying ahead means continuously evolving how your organization functions—from customer interactions to internal processes. We provide actionable data insights, automate routine workflows, and apply business process reengineering to streamline operations. This positions our clients as digital-first leaders capable of thriving in an ever-changing technological landscape.
+          </p>
+        </div>
+      </div>
+    </section>
     </>
   );
 }

@@ -80,6 +80,7 @@ export default function Page() {
             icon: 'Phone',
           },
           title: 'Let’s Connect and Grow Your Business',
+          highlightText:"Grow Your Business",
           description: 'Contact Finbyz for expert ERP and digital solutions. Our team is ready to help you streamline your business operations.',
           primaryButton: {
             text: 'Contact Now',

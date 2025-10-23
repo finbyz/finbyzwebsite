@@ -17,7 +17,7 @@ export default function Page() {
     <>
       <HeroSection
         headline="ERPNext for Chemical Industry"
-        highlightWords={["ERPNext", "Chemical Industry"]}
+        highlightWords={["for", "Chemical Industry"]}
         description="Discover Finbyz Tech's tailored ERP solutions for the chemical industry. Streamline operations, ensure compliance, and boost productivity with our specialized ERP software."
         primaryButton={{
           text: 'Get Free Consultation',

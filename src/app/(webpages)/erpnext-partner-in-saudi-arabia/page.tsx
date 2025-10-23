@@ -15,7 +15,7 @@ export default function Page() {
     <>
       <HeroSection
         headline="ERPNext Partner in Saudi Arabia"
-        highlightWords={["ERPNext", "Saudi Arabia"]}
+        highlightWords={["Saudi Arabia"]}
         description="Discover leading ERPNext service providers and partners in Saudi Arabia. Trusted solutions tailored to optimize your business operations and drive growth."
         primaryButton={{
           text: 'Get Consultation',

@@ -25,6 +25,8 @@ import { Lock } from "lucide-react";
 import { Landmark } from "lucide-react";
 import { Globe2 } from "lucide-react";
 import { Map } from "lucide-react";
+import { Atom } from "lucide-react"
+import { Notebook } from "lucide-react";
 
 
 
@@ -311,6 +313,12 @@ export default function Header() {
             description: "ERP solutions for educational institutions",
             icon: GraduationCap,
             href: "/erp-for-education"
+          },
+          {
+            name: "Brochure",
+            description: "",
+            icon: Notebook,
+            href: "/brochure"
           }
         ],
       }
@@ -532,6 +540,12 @@ export default function Header() {
             description: "",
             icon: TestTube,
             href: "/erp-for-chemical-industry"
+          },
+          {
+            name: "Dyechem",
+            description: "",
+            icon: Atom,
+            href: "/erp-software-dyechem-industry"
           },
           {
             name: "Electronics",
@@ -802,9 +816,19 @@ export default function Header() {
                           // Two-panel layout when detailedItems exist
                           <div className="flex w-[800px] min-h-[500px] max-w-[90vw] max-h-[85vh] overflow-hidden lg:w-[800px] md:w-[600px] sm:w-[400px]">
                             <div className="w-1/2 p-6 border-r border-gray-200 bg-gray-50/30 overflow-y-auto">
+
                               <h3 className="font-semibold text-[#1A5276] mb-6 text-lg">
-                                {item.name === "Services" ? "Our Services" : item.name === "Company" ? "Our Company" : "ERPNext Solutions"}
+                                {item.name === "Services"
+                                  ? "Our Services"
+                                  : item.name === "Company"
+                                    ? "Our Company"
+                                    : item.name === "Industries"
+                                      ? "Industries We Serve"
+                                      : item.name === "Insights"
+                                        ? "Insights"
+                                        : "ERPNext Solutions"}
                               </h3>
+
                               <div className="space-y-2">
                                 {item.mainItems?.map((mainItem) => (
                                   <div

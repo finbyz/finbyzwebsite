@@ -79,7 +79,7 @@ export default function Page() {
     <>
       <HeroSection
         headline="ERP for Trading"
-        highlightWords={["ERP", "Trading"]}
+        highlightWords={["Trading"]}
         description="Unlock premium ERP for trading sector: Optimize processes, boost efficiency, and fuel business expansion. Transform your enterprise now!"
         primaryButton={{
           text: 'Get Started',

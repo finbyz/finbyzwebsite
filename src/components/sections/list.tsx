@@ -31,15 +31,15 @@ export const List = ({
             {title}
           </h2>
         </div>
-        <div className="px-6 pb-6">
+        <div className="sm:px-6 pb-6">
           <ul className="list-none space-y-6">
             {items.map((item, index) => (
               <li key={index} className="flex items-start space-x-3">
                 <Icon 
-                  className={`flex-shrink-0 ${iconColor} mt-1`} 
+                  className={`flex-shrink-0 ${iconColor} mt-1 w-4 sm:w-6`} 
                   size={iconSize} 
                 />
-                <p className="text-lg text-justify leading-relaxed">
+                <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
                   {item}
                 </p>
               </li>

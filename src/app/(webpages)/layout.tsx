@@ -1,3 +1,4 @@
+import FAQ from "@/components/ai_components/FAQ";
 import Footer from "@/components/layout/footer";
 import Header from "@/components/layout/header";
 import InquiryForm from "@/components/ui/InquiryForm";

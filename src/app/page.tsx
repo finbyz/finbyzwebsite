@@ -199,7 +199,7 @@ export default function Home() {
         <CTA
           data={{
             title: "Ready to Scale with Smart Tech? Let's Talk",
-            highlightText: "Ready to Scale with Smart Tech? Let's Talk",
+            highlightText: "Smart Tech?",
           }}
         />
 

@@ -43,7 +43,7 @@ export default function Page() {
           <Card className="border-none bg-muted/40 shadow-none animate-fade-in-up">
             <CardHeader className="flex flex-row items-center gap-3">
               {/* <CheckCircle className="text-primary shrink-0" size={28} /> */}
-              <h2><CardTitle className="text-lg font-semibold text-[#1A5276]">Overview</CardTitle></h2>
+              <h2 className="text-2xl font-bold mb-4 flex items-center gap-0 animate-fade-in-up text-[#1A5276]">Overview</h2>
             </CardHeader>
             <CardContent>
               <p className="text-base text-muted-foreground">

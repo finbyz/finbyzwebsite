@@ -67,7 +67,7 @@ export default function Page() {
     <>
       <HeroSection
         headline="Customized ERP For Industries"
-        highlightWords={["ERP", "Industries"]}
+        highlightWords={["Industries"]}
         description="Discover tailored solutions with customized ERP software and custom ERP system customization services. Optimize your business processes today."
         primaryButton={{
           text: 'Get Started',

@@ -58,8 +58,8 @@ const IndustryTabs: React.FC<IndustryTabsProps> = ({ tabs }) => {
           className="inline-flex items-center gap-2 group"
         >
           <a href={active.link} target="_blank" rel="noopener noreferrer">
-            View More
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+            <span className='text-black'>View More</span>
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200 text-black" />
           </a>
         </Button>
       </div>

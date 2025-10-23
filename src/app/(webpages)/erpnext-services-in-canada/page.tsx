@@ -19,7 +19,7 @@ const handleSecondary = () => {
   window.location.href = '/erpnext-certified-partner';
 };
 
-const heroHighlightWords = ['ERPNext', 'Canada', 'Services'];
+const heroHighlightWords = [ 'Canada', 'Services'];
 
 const flipCards = [
   {

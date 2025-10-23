@@ -17,7 +17,7 @@ export default function Page() {
     <>
       <HeroSection
         headline="Thank you for Inquiry"
-        highlightWords={["Thank you", "Inquiry"]}
+        highlightWords={["Inquiry"]}
         description="Thanks for reaching out! We're excited to assist you. Our team is on it and will get back to you soon."
         primaryButton={{
           text: 'Home',
@@ -48,6 +48,7 @@ export default function Page() {
               },
               title: 'Return to Home or Explore More',
               description: 'Discover our services and solutions to help your business grow.',
+              highlightText:'Home',
               primaryButton: {
                 text: 'Go to Home',
                 icon: 'ArrowLeft',

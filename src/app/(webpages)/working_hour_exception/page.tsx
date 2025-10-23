@@ -40,7 +40,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'Working Hour Exception',
-          src: '/images/working-hour-exception-hero.png',
+          src: '/images/Working_hour_exception.png',
           
         }}
       />

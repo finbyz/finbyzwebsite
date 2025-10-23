@@ -246,7 +246,7 @@ export default function Page() {
           </div>
           <div className="text-gray-700 text-lg">
             <p>
-              Implementing electronic-invoicing compliance in ERPNext streamlines tax reporting, reduces manual errors, and enhances regulatory adherence. With custom fields, optimized workflows, and security enhancements, businesses can ensure seamless, accurate, and legally compliant invoicing. <Link href="/erp-for-chemical-industry" className="text-blue-600 underline" target="_blank">ERP for chemical business</Link> to work with your convenience. Know more about our <Link href="/erp-software" className="text-blue-600 underline" target="_blank">ERP Software and ERP Implementation Services</Link>.
+              Implementing electronic-invoicing compliance in ERPNext streamlines tax reporting, reduces manual errors, and enhances regulatory adherence. With custom fields, optimized workflows, and security enhancements, businesses can ensure seamless, accurate, and legally compliant invoicing. <Link href="/erp-for-chemical-industry" className="text-blue-600 underline" target="_blank">ERP for chemical business</Link> to work with your convenience. Know more about our <Link href="/erpnext-software" className="text-blue-600 underline" target="_blank">ERP Software </Link> and  <Link href="/hire-erpnext-implementer" className="text-blue-600 underline" target="_blank">ERP Implementation Services</Link>.
             </p>
           </div>
           <div className="mt-6">
@@ -270,7 +270,7 @@ export default function Page() {
                   text: 'Learn More',
                   icon: 'TbApi',
                   action: () => {
-                    if (typeof window !== 'undefined') window.location.href = '/erp-software';
+                    if (typeof window !== 'undefined') window.scrollTo({ top: 800, behavior: 'smooth' });
                   }
                 },
                 trustIndicator: {

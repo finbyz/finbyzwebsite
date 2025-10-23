@@ -85,7 +85,7 @@ export default function Page() {
               front={
                 <div className="flex flex-col items-center justify-center h-full">
                   <Image src="/images/api development.svg" alt="Django Rest API Development" width={64} height={64} />
-                  <h3 className="mt-4 font-semibold text-lg">Django Rest API Development</h3>
+                  <h3 className="mt-4 font-semibold text-lg text-center">Django Rest API Development</h3>
                 </div>
               }
               back={
@@ -341,6 +341,7 @@ export default function Page() {
               },
               title: 'Let’s Build Your Next Project Together',
               description: 'Contact us today to discuss your Django development needs and discover how our expert team can help you achieve your goals.',
+              highlightText:'Project',
               primaryButton: {
                 text: 'Get Started',
                 icon: 'ArrowRight',

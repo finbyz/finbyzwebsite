@@ -25,7 +25,7 @@ export default function Page() {
     <>
       <HeroSection
         headline="ERPNext for Commodity"
-        highlightWords={["ERPNext", "Commodity"]}
+        highlightWords={["for", "Commodity"]}
         description="Discover how Finbyz Tech's ERPNext solutions revolutionize agricultural operations. Enhance efficiency, ensure compliance, and drive growth in your agro commodity business."
         primaryButton={{ text: 'Get a Demo', action: handleContact }}
         secondaryButton={{

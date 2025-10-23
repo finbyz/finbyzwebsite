@@ -160,7 +160,7 @@ export default function Page() {
       <div className='mt-5'></div>
       <HeroSection
         headline="Modules of ERP Software"
-        highlightWords={["ERP", "Software", "Modules"]}
+        highlightWords={["Software", "Modules"]}
         description="From Customer Relationship Management (CRM) to Supply Chain Management (SCM), from Accounts to HR we cover it all. Our ERP Software is highly developed which helps any business to get a control on management of almost all the major functions of the business."
         primaryButton={{
           text: 'Get a Demo',

@@ -13,7 +13,7 @@ export default function Page() {
     <>
       <HeroSection
         headline="Life at Finbyz"
-        highlightWords={["Life", "Finbyz"]}
+        highlightWords={["Finbyz"]}
         description="Discover life at Finbyz Tech – where innovation meets growth. Explore our vibrant work culture, values, and commitment to learning, collaboration, and work-life balance."
         primaryButton={{
           text: 'Explore Openings',

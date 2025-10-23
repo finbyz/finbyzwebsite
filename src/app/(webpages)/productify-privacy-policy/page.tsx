@@ -19,7 +19,7 @@ export default function Page() {
         primaryButton={{
           text: 'Contact Support',
           action: () => {
-            window.location.href = 'mailto:support@finbyz.tech';
+            window.location.href = './contact';
           },
         }}
         secondaryButton={{
@@ -177,13 +177,18 @@ export default function Page() {
                 icon: 'ShieldCheck',
               },
               title: 'Experience Secure Productivity with Productify',
+              highlightText:'Productify',
               description: 'Contact us for any privacy concerns or to learn more about how we protect your data.',
               primaryButton: {
                 text: 'Contact Support',
                 icon: 'Mail',
+                // action: () => {
+                //   window.location.href = 'mailto:support@finbyz.tech';
+                // },
                 action: () => {
-                  window.location.href = 'mailto:support@finbyz.tech';
+                  window.location.href = './contact';
                 },
+
               },
               secondaryButton: {
                 text: 'Back to Productify',

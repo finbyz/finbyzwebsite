@@ -322,22 +322,6 @@ function updateAIComponentsRegistry(components: Component[]): void {
   fs.writeFileSync(registryPath, JSON.stringify(registry, null, 2), 'utf-8');
 }
 
-function updateCompletedPages(slug: string): void {
-  const completedPath = path.join(process.cwd(), 'completed_pages.json');
-  
-  let completed: { pages: string[] } = { pages: [] };
-  
-  if (fs.existsSync(completedPath)) {
-    const content = fs.readFileSync(completedPath, 'utf-8');
-    completed = JSON.parse(content);
-  }
-  
-  if (!completed.pages.includes(slug)) {
-    completed.pages.push(slug);
-  }
-  
-  fs.writeFileSync(completedPath, JSON.stringify(completed, null, 2), 'utf-8');
-}
 
 // ---- API Handler ----
 export async function POST(request: NextRequest) {
@@ -429,7 +413,6 @@ export async function POST(request: NextRequest) {
     writeLayout(slug, body.type, body.seoData || {});
     
     // Update completed pages registry
-    updateCompletedPages(slug);
     
     
     return NextResponse.json({

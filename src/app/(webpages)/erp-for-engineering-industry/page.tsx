@@ -43,7 +43,7 @@ export default function Page() {
         <div className="container-custom py-8">
           <h2 className="text-2xl font-bold mb-4 text-center text-[#1A5276]" id="engineering">ERP Software for Engineering Companies</h2>
           <p className="mb-6 text-gray-700 text-center">
-            <span className="font-semibold">Why implement <a href="/erpnext-software" target="_blank" className="text-blue-600 underline">ERP software</a> for engineering companies?</span> ERP software for engineering companies offers benefits such as better project management, cost reduction, real-time calculated information, and a total integrated package. It improves decision making and helps your business grow. Core <a href="/benefits-of-erp" target="_blank" className="text-blue-600 underline">advantages of ERP</a> for engineering include customer-oriented systems, data efficiency, and effective communication.
+            Why implement <a href="/erpnext-software" target="_blank" className="text-blue-600 underline">ERP software</a> for engineering companies? ERP software for engineering companies offers benefits such as better project management, cost reduction, real-time calculated information, and a total integrated package. It improves decision making and helps your business grow. Core <a href="/benefits-of-erp" target="_blank" className="text-blue-600 underline">advantages of ERP</a> for engineering include customer-oriented systems, data efficiency, and effective communication.
           </p>
           <QuoteBlock text="The proposed process designs should always be designed within the logic of the ERP systems. - Andera." isHeading={false} />
           <p className="mt-6 text-gray-700">

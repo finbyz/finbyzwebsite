@@ -20,7 +20,9 @@ export default function Page() {
         description="Learn how Finbyz Tech collects, uses, and protects your personal information when you use our WhatsApp-related services. Stay informed about your rights, data security, and our commitment to privacy."
         primaryButton={{
           text: "Contact Support",
-          action: () => window.location.href = 'mailto:support@finbyz.tech',
+          action: () => {
+            window.location.href = '/contact';
+          },
         }}
         secondaryButton={{
           text: "Learn More",
@@ -381,7 +383,9 @@ export default function Page() {
               primaryButton: {
                 text: "Contact Support",
                 icon: "Mail",
-                action: () => window.location.href = 'mailto:support@finbyz.tech',
+                action: () => {
+                  window.location.href = '/contact';
+                },
               },
               secondaryButton: {
                 text: "Learn More",

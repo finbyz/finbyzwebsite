@@ -150,6 +150,7 @@ export default function Page() {
                 icon: 'TrendingUp',
               },
               title: 'Transform Your Investment Portfolio Management',
+              highlightText : 'Investment Portfolio Management',
               description: 'Experience seamless, automated, and insightful investment tracking with ERPNext. Contact us to get started or request a demo today.',
               primaryButton: {
                 text: 'Request Demo',

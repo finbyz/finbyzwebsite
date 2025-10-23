@@ -64,12 +64,12 @@ export default function Page() {
       link: '/web-application-development',
     },
     {
-      title: 'Cloud Application Development',
+      title: 'Human Resouce System',
       image: '/images/speed-strikes-the-first-impression.svg',
-      alt: 'Cloud Application Development',
+      alt: 'Human Resource System',
       description:
-        'Leverage the power of the cloud with scalable, secure, and high-performance applications. Our cloud development services enable seamless accessibility, faster deployment, and cost efficiency—helping your business stay agile and competitive in the digital era.',
-      link: '/erpnext-software',
+        'Human resource, often considered the backbone of any organization, is the only function with a strong human element at its core.As businesses move toward complete automation, it’s essential for HR departments to embrace technology through advanced human resource software.',
+      link: '/human-resource-system',
     }
   ];
 

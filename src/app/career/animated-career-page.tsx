@@ -342,13 +342,12 @@ export default function AnimatedCareerPage() {
                 Send Your Resume
               </Button>
             </Link>
-            <Link href="/jobs">
+                <Link href="/jobs">
               <Button 
                 size="lg"
-                variant="outline"
-                className="rounded-full border-2 border-[#1A5276] text-white  hover: bg-[#1A5276] px-8 py-4 h-auto font-semibold transition-all"
+                className="rounded-full  text-white bg-[#1A5276] text-lg px-8 py-4 h-auto font-semibold shadow-lg hover:bg-[#1A5276] hover:shadow-xl transition-all"
               >
-                {/* <Briefcase className="mr-2 w-5 h-5" /> */}
+                {/* <Mail className="mr-2 w-5 h-5" /> */}
                 See Open Roles
               </Button>
             </Link>

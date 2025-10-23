@@ -129,7 +129,7 @@ export default function Page() {
                 icon: 'MonitorSmartphone',
               },
               title: 'Let’s Build Your Next Web App',
-              highlightText:"Let’s Build Your Next Web App",
+              highlightText:"Web App",
               description: 'Finbyz is a leading provider of advanced web application development services customized for your specific needs. Our team of knowledgeable web app developers is committed to making your ideas a reality and giving your audience a perfect online experience.',
               primaryButton: {
                 text: 'Request a Consultation',

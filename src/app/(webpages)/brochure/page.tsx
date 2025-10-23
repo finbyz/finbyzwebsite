@@ -160,7 +160,7 @@ export default function Page() {
         }}
       />
 
-      <div id="brochure-section " className="text-[#1A5276]">
+      <div id="brochure-section" className="text-[#1A5276]">
         <DownloadSection
           title="Download Brochure"
           items={brochureItems}
@@ -204,6 +204,7 @@ export default function Page() {
             icon: "Rocket"
           },
           title: "Download, Explore, and Accelerate Your Growth!",
+          highlightText:'Accelerate Your Growth!',
           description: "Access our brochures and discover how our AI-powered ERPNext solutions can help your business thrive.",
           primaryButton: {
             text: "Download Now",

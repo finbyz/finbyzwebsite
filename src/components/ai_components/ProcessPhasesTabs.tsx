@@ -22,7 +22,7 @@ const ProcessPhasesTabs: React.FC<ProcessPhasesTabsProps> = ({ phases }) => {
   return (
     <div className="w-full flex flex-col items-center">
       <Tabs value={String(activeTab)} onValueChange={v => setActiveTab(Number(v))} className="w-full">
-        <TabsList className="flex justify-center gap-2 bg-muted rounded-lg p-2 mb-6">
+        <TabsList className="flex justify-center gap-2 bg-muted rounded-lg p-2 mb-6 h-11">
           {phases.map((phase, idx) => (
             <TabsTrigger
               key={idx}

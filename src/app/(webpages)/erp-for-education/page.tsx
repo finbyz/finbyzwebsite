@@ -108,7 +108,7 @@ export default function Page() {
     <>
       <HeroSection
         headline="ERP For Education"
-        highlightWords={["ERP", "Education"]}
+        highlightWords={["Education"]}
         description="Discover the best ERP for schools. Our education ERP software streamlines operations, enhancing efficiency and learning outcomes for educational institutions."
         primaryButton={{
           text: 'Get Started',

@@ -139,6 +139,7 @@ export default function Page() {
               },
               title: 'Get Started with ERP for DyeChem Industry',
               description: 'Experience seamless batch-wise inventory, recipe, and sample management. Request a demo or talk to our experts today!',
+              highlightText:'DyeChem',
               primaryButton: {
                 text: 'Request Demo',
                 icon: 'arrowRight',

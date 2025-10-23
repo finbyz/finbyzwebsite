@@ -258,13 +258,13 @@ export default function Page() {
 
       {/* Second Image */}
       <div className="flex flex-col items-center">
-        <div className="w-full max-w-md overflow-hidden rounded-lg shadow-lg bg-white p-4">
+        <div className="w-full max-w-xl overflow-hidden rounded-lg shadow-lg bg-white p-4">
           <Image
             src="/images/Type%20of%20Calls.png"
             alt="Type of Calls"
-            width={500}
-            height={500}
-            className="w-full h-[420px] object-contain"
+            width={1000}
+            height={600}
+            className="w-full h-[450px] object-contain"
           />
         </div>
         <p className="mt-4 text-center text-muted-foreground text-base leading-relaxed max-w-md">
