@@ -157,7 +157,7 @@ export default function Page() {
         description:
           'Learns from user feedback and corrections to master industry terminology.',
         icon: 'BarChart3',
-        iconBg: "#1A5276",
+        iconBg: "#FF3333",
         iconColor: "#ffffff"
       },
       {
@@ -166,7 +166,7 @@ export default function Page() {
         description:
           'Runs unattended from email receipt to lead creation with audit logs and alerts.',
         icon: 'Target',
-        iconBg: "#8E44AD",
+        iconBg: "#FFB347",
         iconColor: "#ffffff"
       }
     ],
@@ -219,7 +219,7 @@ export default function Page() {
         title: 'Enhances Sales Productivity',
         description: 'Free your team to focus on nurturing and closing deals.',
         icon: 'BarChart3',
-        iconBg: "#1A5276",
+        iconBg: "#FF3333",
         iconColor: "#ffffff"
       },
       {
@@ -227,7 +227,7 @@ export default function Page() {
         title: 'Scalability',
         description: 'Designed to handle high email volumes without performance loss.',
         icon: 'TrendingUp',
-        iconBg: "#8E44AD",
+        iconBg: "#FFB347",
         iconColor: "#ffffff"
       }
     ],

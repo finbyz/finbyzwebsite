@@ -84,6 +84,8 @@ export default function ResponsiveCardGrid({ data = { cards: [] }, className }: 
     "#FF8C00", // orange
     "#27AE60", // green
     "#8E44AD", // purple
+    "#FF3333", // red
+    "#FFB347", //light-orange
   ];
 
   const getPaletteSubset = (count: number): string[] => {

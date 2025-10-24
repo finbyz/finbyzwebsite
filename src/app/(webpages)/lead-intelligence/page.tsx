@@ -135,7 +135,7 @@ export default function Page() {
         title: 'Faster Sales Response',
         description: 'Instant qualification and creation speed up outreach to hot prospects.',
         icon: 'BarChart3',
-        iconBg: "#1A5276",
+        iconBg: "#FF3333",
         iconColor: "#ffffff"
       },
       {
@@ -143,7 +143,7 @@ export default function Page() {
         title: 'Configurable and Scalable',
         description: 'Works across providers, custom rules, and classifier APIs for enterprise scale.',
         icon: 'Target',
-        iconBg: "#8E44AD",
+        iconBg: "#FFB347",
         iconColor: "#ffffff"
       }
     ],

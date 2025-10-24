@@ -176,7 +176,7 @@ export default function Home() {
                   title: "Data Analytics",
                   description: "Intelligent automation and predictive analytics solutions.",
                   icon: "BarChart3",
-                  iconBg: "#1A5276",
+                  iconBg: "#FF3333",
                   iconColor: "#ffffff"
                 },
                 {
@@ -184,7 +184,7 @@ export default function Home() {
                   title: "Software Development",
                   description: "End-to-end software development services",
                   icon: "Cpu",
-                  iconBg: "#8E44AD",
+                  iconBg: "#FFB347",
                   iconColor: "#ffffff"
                 }
               ]

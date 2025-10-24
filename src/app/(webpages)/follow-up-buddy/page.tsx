@@ -168,26 +168,26 @@ export default function Page() {
         description:
           'Personalized, context-aware emails increase engagement and replies.',
         icon: 'TrendingUp',
-        iconColor: 'text-emerald-600',
-        iconBg: 'bg-emerald-50',
+        iconColor: '#ffffff',
+        iconBg: '#FF8C00',
       },
       {
         id: 'never-miss',
         title: 'Never Miss a Lead',
         description:
           'Every opportunity gets timely attention with automated triggers.',
-        icon: 'BellRing',
-        iconColor: 'text-purple-600',
-        iconBg: 'bg-purple-50',
+        icon: 'Target',
+        iconColor: '#ffffff',
+        iconBg: "#27AE60",
       },
       {
         id: 'relationships',
         title: 'Strengthens Relationships',
         description:
           'Consistent touchpoints build trust and long-term loyalty.',
-        icon: 'Handshake',
-        iconColor: 'text-amber-600',
-        iconBg: 'bg-amber-50',
+        icon: 'Award',
+        iconBg: "#8E44AD",
+        iconColor: "#ffffff"
       },
     ],
     layout: 'standard' as const,
