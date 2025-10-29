@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+@import '../styles/component-colors.css';
+
+/* Import unified container system */
+@import '../styles/components/unified-container.css';
+
+/* Import component-specific CSS files */
+@import '../styles/components/business-slider.css';
+@import '../styles/components/technology-stack.css';
+@import '../styles/components/stats-showcase.css';
+@import '../styles/components/benefits.css';
+@import '../styles/components/responsive-card-grid.css';
+@import '../styles/components/cta.css';
+@import '../styles/components/client-logos.css';
+
+@import '../styles/components/team-expertise.css';
+
+ 
+@import '../styles/components/resource-center.css';
+@import '../styles/components/contact-info.css';
+@import '../styles/components/global-presence.css';
+@import '../styles/components/comment.css';
+@import '../styles/components/differentiators.css';
+@import '../styles/components/process-workflow.css';
 
 
 :root {
