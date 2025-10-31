@@ -11,13 +11,14 @@ import { SidebarMediaItem } from '@/components/ai_components/gallery/SidebarMedi
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { MediaItem, MediaCategory } from '@/types/media';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
+import Link from 'next/link';
 
 interface TutorialsProps {
   data: Galleries | null;
 }
 
 const Tutorials = ({ data }: TutorialsProps) => {
-  const [selectedItem, setSelectedItem] = useState<Gallery | null>(null);
+  const [selectedItem, setSelectedItem] = useState<Gallery | null>(data?.parent || null);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeTab, setActiveTab] = useState<'videos' | 'images'>('videos');
   // Category filtering removed; we always show all
@@ -98,7 +99,7 @@ const Tutorials = ({ data }: TutorialsProps) => {
   const toMediaItem = (g: Gallery): MediaItem => ({
     id: g.name,
     type: g.youtube_link ? 'video' : 'image',
-    title: g.seo_title,
+    title: g.gallery_title,
     description: g.description || g.small_description,
     small_description: g.small_description,
     thumbnail: g.svg_image,
@@ -107,6 +108,7 @@ const Tutorials = ({ data }: TutorialsProps) => {
     videoId: g.youtube_link ? extractYouTubeId(g.youtube_link) : undefined,
     imageUrl: !g.youtube_link ? g.svg_image : undefined,
     tags: g.keywords ? g.keywords.split(',').map(k => k.trim()).filter(Boolean) : undefined,
+    route: g.route
   });
 
   // Show loading or empty state if no data
@@ -161,7 +163,7 @@ const Tutorials = ({ data }: TutorialsProps) => {
       
       {/* Header */}
       <motion.header
-        className="border-b border-border sticky top-12 z-40 bg-white"
+        className="border-b border-border top-12 z-40 bg-white"
       >
         <div className="mx-auto py-6">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -215,13 +217,13 @@ const Tutorials = ({ data }: TutorialsProps) => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.05 }}
                           >
-                            <div onClick={() => handleItemClick(item)} className="cursor-pointer">
+                            <Link href={item.route} className="cursor-pointer">
                               <MediaListItem
                                 item={toMediaItem(item)}
-                                onClick={() => handleItemClick(item)}
+                                onClick={() => {}}
                                 isActive={false}
                               />
-                            </div>
+                            </Link>
                           </motion.div>
                         ))}
                       </div>
@@ -265,7 +267,7 @@ const Tutorials = ({ data }: TutorialsProps) => {
               <div className="flex flex-col lg:flex-row gap-6">
                 {/* Left Sidebar - Media List */}
                 <aside className="lg:w-[380px] order-2 lg:order-2">
-                  <div className="sticky top-32">
+                  <div className="sticky top-16">
                     <div className="bg-card border border-border rounded-lg">
                       <div className="p-4 border-b border-border bg-muted/30 flex items-center justify-between">
                         <div>
@@ -276,12 +278,6 @@ const Tutorials = ({ data }: TutorialsProps) => {
                             {activeTab === 'videos' ? filteredVideos.length : filteredImages.length} items
                           </p>
                         </div>
-                        <button
-                          onClick={() => setSelectedItem(null)}
-                          className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                        >
-                          <ArrowLeft className='inline-block' /> Go Back
-                        </button>
                       </div>
 
                       <ScrollArea>
@@ -291,7 +287,7 @@ const Tutorials = ({ data }: TutorialsProps) => {
                               <SidebarMediaItem
                                 key={item.name}
                                 item={toMediaItem(item)}
-                                onClick={() => handleItemClick(item)}
+                                onClick={() => {}}
                                 isActive={selectedItem?.name === item.name}
                               />
                             ))}
