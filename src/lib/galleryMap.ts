@@ -19,6 +19,7 @@ export function mapGallariesToMedia(data: Galleries): { items: MediaItem[]; cate
     videoId: g.youtube_link || undefined,
     imageUrl: g.svg_image || undefined,
     tags: g.keywords ? g.keywords.split(',').map((s) => s.trim()) : [],
+    route: g.route
   }));
 
   return { items, categories };
