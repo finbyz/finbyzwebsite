@@ -1,9 +1,9 @@
 
 import { Button } from "@/components/ui/button";
 import { CalendarCheck, FileText, Rocket, Calendar } from "lucide-react";
-import "@/styles/components/cta.css";
 import React from "react";
 import Link from "next/link";
+import '@/styles/components/cta.css'
 
 interface CTAProps {
   data?: {
