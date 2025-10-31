@@ -27,7 +27,7 @@ useEffect(() => {
     try {
      
       const res = await fetch(
-       "https://finbyz.tech/api/method/finbyzweb.api.get_all_job_openings"
+       "/web-api/method/finbyzweb.api.get_all_job_openings"
       );
       const data = await res.json();
 
@@ -55,7 +55,7 @@ useEffect(() => {
     try {
       
       const response = await fetch(
-       "https://finbyz.tech/api/method/finbyzweb.api.get_applicant_types"
+       "/web-api/method/finbyzweb.api.get_applicant_types"
       );
 
       if (!response.ok) {
@@ -151,7 +151,7 @@ useEffect(() => {
 
       // Send request to Frappe web form API
       // https://finbyz.tech//api/method/finbyz.api.set_form_job_applicant
-      const res = await fetch("https://finbyz.tech/api/method/finbyzweb.api.set_form_job_applicant", {
+      const res = await fetch("/web-api/method/finbyzweb.api.set_form_job_applicant", {
         method: "POST",
         body: formData,
       });

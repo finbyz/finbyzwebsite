@@ -163,6 +163,7 @@ async function getJobByRoute(route: string) {
 
   const filters: any[][] = [
     ['publish', 'is', 'set'],
+    ['status', '=', 'Open'],
     ['route', '=', route],
   ];
 
@@ -246,7 +247,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const jobTitle = job.job_title || job.name;
   const siteUrl = 'https://finbyz.tech';
-  const jobUrl = `${siteUrl}/job-opening/${slug}`;
+  const jobUrl = `${siteUrl}/jobs/${slug}`;
   const imageUrl = job.image
     ? job.image.startsWith('http')
       ? job.image

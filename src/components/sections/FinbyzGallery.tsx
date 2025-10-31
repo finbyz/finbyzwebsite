@@ -38,7 +38,7 @@ const FinbyzGallery = ({ galleryItems = [], relatedReads = [] }: FinbyzGalleryPr
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {relatedReads.map((read, index) => (
                 <a
-                  key={index}
+                  key={`${read.route}-${index}`}
                   href={read.route}
                   className="group bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 cursor-pointer transform hover:-translate-y-1 block"
                 >
@@ -83,7 +83,7 @@ const FinbyzGallery = ({ galleryItems = [], relatedReads = [] }: FinbyzGalleryPr
                 <div className="gallery-scroll flex gap-5">
                   {[...galleryItems, ...galleryItems].map((item, index) => (
                     <div
-                      key={index}
+                      key={`${item.route}-${index}`}
                       className="flex-shrink-0 w-80 hover:scale-110 hover:z-10"
                     >
                       <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer group flex flex-col h-[380px]">
