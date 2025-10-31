@@ -14,6 +14,7 @@ export interface MediaItem {
   // For images
   imageUrl?: string;
   tags?: string[];
+  route:string;
 }
 
 export interface MediaCategory {
