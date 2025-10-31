@@ -160,7 +160,7 @@ export default function Page() {
             id="innovates-your-hr"
             title="3. Enhancing Human Resource with ERP Automation"
             image={{
-              src: '//files/blog-icon-innovates-your-human-resource.svg',
+              src: '/images/blog-icon-innovates-your-human-resource.svg',
               alt: 'Innovates your human resource',
               title: 'Innovates your human resource',
               width: 200,

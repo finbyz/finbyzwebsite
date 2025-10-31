@@ -63,7 +63,7 @@ export default function Page() {
             id="what-is-erp"
             title="What is ERP?"
             image={{
-              src: '//files/ERPNext-logo1.png',
+              src: '/images/ERPNext-logo1.png',
               alt: 'ERP',
               title: 'ERP',
               width: 180,
@@ -84,7 +84,7 @@ export default function Page() {
             id="understanding-erp-for-manufacturing"
             title="Understanding ERP for Manufacturing"
             image={{
-              src: '//files/asynchnorus.svg',
+              src: '/images/asynchnorus.svg',
               alt: 'ERP for Manufacturing',
               title: 'ERP-for-Manufacturing',
               width: 150,
@@ -105,7 +105,7 @@ export default function Page() {
                 id="enhanced-efficiency"
                 title="Enhanced Efficiency"
                 image={{
-                  src: '//files/system%20setup.svg',
+                  src: '/images/system%20setup.svg',
                   alt: 'Enhanced Efficiency',
                   title: 'Enhanced-Efficiency',
                   width: 150,
@@ -127,7 +127,7 @@ export default function Page() {
                 id="improved-visibility"
                 title="Improved Visibility"
                 image={{
-                  src: '//files/15.svg',
+                  src: '/images/15.svg',
                   alt: 'Improved Visibility',
                   title: 'Improved-Visibility',
                   width: 150,
@@ -165,7 +165,7 @@ export default function Page() {
                 id="improved-quality-control"
                 title="Improved Quality Control"
                 image={{
-                  src: '//files/animation.svg',
+                  src: '/images/animation.svg',
                   alt: 'Improved Quality Control',
                   title: 'Improved-Quality-Control',
                   width: 150,
@@ -184,7 +184,7 @@ export default function Page() {
                 id="simplified-supply-chain-management"
                 title="Simplified Supply Chain Management"
                 image={{
-                  src: '//files/automation-increases.svg',
+                  src: '/images/automation-increases.svg',
                   alt: 'Simplified Supply Chain Management',
                   title: 'Simplified-Supply-Chain-Management',
                 }}
@@ -201,7 +201,7 @@ export default function Page() {
                 id="cost-savings"
                 title="Cost Savings"
                 image={{
-                  src: '//files/cost-effective%20solutions.svg',
+                  src: '/images/cost-effective%20solutions.svg',
                   alt: 'Cost Savings',
                   title: 'Cost-Savings',
                   width: 150,

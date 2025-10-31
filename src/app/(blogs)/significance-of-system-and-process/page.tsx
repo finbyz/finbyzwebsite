@@ -48,7 +48,7 @@ export default function Page() {
             id="uniformity"
             title="Uniformity"
             image={{
-              src: '//files/Uniformity.svg',
+              src: '/images/Uniformity.svg',
               alt: 'Uniformity',
               title: 'Uniformity',
               width: 240,
@@ -67,7 +67,7 @@ export default function Page() {
             id="precision"
             title="Precision"
             image={{
-              src: '//files/Precision.svg',
+              src: '/images/Precision.svg',
               alt: 'Precision',
               title: 'Precision',
               width: 240,
@@ -86,7 +86,7 @@ export default function Page() {
             id="scalability"
             title="Scalability"
             image={{
-              src: '//files/Scalability.svg',
+              src: '/images/Scalability.svg',
               alt: 'Scalability',
               title: 'Scalability',
               width: 240,
@@ -105,7 +105,7 @@ export default function Page() {
             id="productivity"
             title="Productivity"
             image={{
-              src: '//files/Productivity.svg',
+              src: '/images/Productivity.svg',
               alt: 'Productivity',
               title: 'Productivity',
               width: 240,
@@ -124,7 +124,7 @@ export default function Page() {
             id="adaptability"
             title="Adaptability"
             image={{
-              src: '//files/Adaptability.svg',
+              src: '/images/Adaptability.svg',
               alt: 'Adaptability',
               title: 'Adaptability',
               width: 240,

@@ -50,7 +50,7 @@ export default function Page() {
             id="introduction"
             title="Introduction"
             image={{
-              src: '//files/erp-can-change-your-business.svg',
+              src: '/images/erp-can-change-your-business.svg',
               alt: 'How ERP Software Can Change Your Business',
               title: 'How ERP Software Can Change Your Business',
               cover:true
@@ -68,7 +68,7 @@ export default function Page() {
             id="increases-supply-chain-visibility"
             title="1. Increases Supply Chain Visibility"
             image={{
-              src: '//files/blog-increases-supply-chain-visibility.svg',
+              src: '/images/blog-increases-supply-chain-visibility.svg',
               alt: 'Increases Supply Chain Visibility',
               title: 'Increases Supply Chain Visibility',
               width: 360,
@@ -89,7 +89,7 @@ export default function Page() {
             id="improves-productivity"
             title="2. Improves Productivity"
             image={{
-              src: '//files/blog-improves-productivity.svg',
+              src: '/images/blog-improves-productivity.svg',
               alt: 'Improves Productivity',
               title: 'Improves Productivity',
               width: 360,
@@ -110,7 +110,7 @@ export default function Page() {
             id="provides-real-time-data"
             title="3. Provides Real-Time Data"
             image={{
-              src: '//files/blog-provides-real-time-data.svg',
+              src: '/images/blog-provides-real-time-data.svg',
               alt: 'Provides Real-Time Data',
               title: 'Provides Real-Time Data',
               width: 360,
@@ -131,7 +131,7 @@ export default function Page() {
             id="decreases-costs"
             title="4. Decreases Costs"
             image={{
-              src: '//files/blog-decreases-costs.svg',
+              src: '/images/blog-decreases-costs.svg',
               alt: 'Decreases Costs',
               title: 'Decreases Costs',
               width: 360,
@@ -155,7 +155,7 @@ export default function Page() {
             id="customer-service"
             title="5. Customer Service"
             image={{
-              src: '//files/blog-customer-service.svg',
+              src: '/images/blog-customer-service.svg',
               alt: 'Customer Service',
               title: 'Customer Service',
               width: 360,
@@ -175,7 +175,7 @@ export default function Page() {
           <BlogSection id="erp-benefits-image" title="Top Benefits of Implementing ERP Software">
             <div className="flex justify-center py-6 animate-fade-in">
               <Image
-                src="//files/benefits-of-erp-imlementing.png"
+                src="/images/benefits-of-erp-imlementing.png"
                 alt="Top Benefits of Implementing ERP Software"
                 title="Top Benefits of Implementing ERP Software"
                 width={600}

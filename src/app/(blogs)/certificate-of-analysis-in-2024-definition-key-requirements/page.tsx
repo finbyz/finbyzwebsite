@@ -25,7 +25,7 @@ const heroProps = {
   publishDate: '2024-04-10',
   readTime: '7 min read',
   image: {
-    src: "//files/coa.PNG",
+    src: "/images/coa.PNG",
     alt: "Certificate of Analysis (CoA) Illustration",
     title: "certificate-of-analysis-in-2024-definition-key-requirements",
     width: 500,

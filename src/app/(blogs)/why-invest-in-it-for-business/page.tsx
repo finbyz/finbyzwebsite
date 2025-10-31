@@ -47,7 +47,7 @@ export default function Page() {
           {/* Introduction */}
           <BlogSectionWithImage id="introduction" title="Introduction"
             image={{
-              src: '//files/Startup.svg',
+              src: '/images/Startup.svg',
               alt: 'Why Invest in IT for business',
               title: 'Why Invest in IT for business',
               cover:true
@@ -84,7 +84,7 @@ export default function Page() {
             <div className="flex flex-col md:flex-row gap-6 mt-8">
               <Card className="flex-1 border-none shadow-md hover:scale-105 transition-transform duration-300 bg-background/80">
                 <CardHeader className="flex flex-col items-center gap-2">
-                  <Image src="//files/blog-reduced-complexity.svg" alt="Reduced Complexity" width={64} height={64} />
+                  <Image src="/images/blog-reduced-complexity.svg" alt="Reduced Complexity" width={64} height={64} />
                   <CardTitle className="text-lg font-semibold mt-2">Reduced Complexity</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center text-muted-foreground">
@@ -93,7 +93,7 @@ export default function Page() {
               </Card>
               <Card className="flex-1 border-none shadow-md hover:scale-105 transition-transform duration-300 bg-background/80">
                 <CardHeader className="flex flex-col items-center gap-2">
-                  <Image src="//files/blog-optimize-interface.svg" alt="Optimize Interface" width={64} height={64} />
+                  <Image src="/images/blog-optimize-interface.svg" alt="Optimize Interface" width={64} height={64} />
                   <CardTitle className="text-lg font-semibold mt-2">Optimize Interface</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center text-muted-foreground">
@@ -102,7 +102,7 @@ export default function Page() {
               </Card>
               <Card className="flex-1 border-none shadow-md hover:scale-105 transition-transform duration-300 bg-background/80">
                 <CardHeader className="flex flex-col items-center gap-2">
-                  <Image src="//files/blog-speed.svg" alt="Speed" width={64} height={64} />
+                  <Image src="/images/blog-speed.svg" alt="Speed" width={64} height={64} />
                   <CardTitle className="text-lg font-semibold mt-2">Speed</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center text-muted-foreground">
@@ -117,7 +117,7 @@ export default function Page() {
             id="improved-collaboration"
             title="Improved Collaboration"
             image={{
-              src: '//files/blog-collaboration.svg',
+              src: '/images/blog-collaboration.svg',
               alt: 'Improved Collaboration',
               title: 'Improved Collaboration',
               width: 320,
@@ -136,7 +136,7 @@ export default function Page() {
             id="regulatory-compliance"
             title="Adherence to Regulatory Compliance"
             image={{
-              src: '//files/blog-regulatory-compliances.svg',
+              src: '/images/blog-regulatory-compliances.svg',
               alt: 'Adherence to regulatory compliance',
               title: 'Adherence to regulatory compliance',
               width: 320,
@@ -155,7 +155,7 @@ export default function Page() {
             id="better-delegation"
             title="Passing the Baton Through Better Delegation"
             image={{
-              src: '//files/blog-better-delegation.svg',
+              src: '/images/blog-better-delegation.svg',
               alt: 'Better Delegation',
               title: 'Better Delegation',
               width: 320,
@@ -174,7 +174,7 @@ export default function Page() {
             id="analytics"
             title="Analytics for Superior Decision Making"
             image={{
-              src: '//files/blog-analytics.svg',
+              src: '/images/blog-analytics.svg',
               alt: 'Analytics for better Superior making',
               title: 'Analytics for better Superior making',
               width: 320,

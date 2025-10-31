@@ -48,7 +48,7 @@ export default function Page() {
           id="introduction"
           title="Introduction"
           image={{
-            src: '//files/chemical-banner.svg',
+            src: '/images/chemical-banner.svg',
             alt: 'Top 5 Benefits of ERP for Chemical Industry',
             title: 'Top 5 Benefits of ERP for Chemical Industry',
             cover:true
@@ -70,7 +70,7 @@ export default function Page() {
             id="agile-response"
             title="1. Agile Response and Dynamic Adjustments"
             image={{
-              src: '//files/Agile-Response-and-Dynamic-Adjustments.svg',
+              src: '/images/Agile-Response-and-Dynamic-Adjustments.svg',
               alt: 'Agile Response and Dynamic Adjustments',
               title: 'Agile Response and Dynamic Adjustments',
               width: 200,
@@ -95,7 +95,7 @@ export default function Page() {
             id="improved-operations"
             title="2. Improved Operations & Team Collaborations"
             image={{
-              src: '//files/Improved-Operations-&%20Team-Collaborations.svg',
+              src: '/images/Improved-Operations-&%20Team-Collaborations.svg',
               alt: 'Improved Operations & Team Collaborations',
               title: 'Improved Operations & Team Collaborations',
               width: 200,
@@ -117,7 +117,7 @@ export default function Page() {
             id="tracking-analysis"
             title="3. Tracking & Analysis"
             image={{
-              src: '//files/Tracking-&-Analysis.svg',
+              src: '/images/Tracking-&-Analysis.svg',
               alt: 'Tracking & Analysis',
               title: 'Tracking & Analysis',
             }}
@@ -137,7 +137,7 @@ export default function Page() {
             id="electronic-records"
             title="4. Better Electronic Management of Records"
             image={{
-              src: '//files/Better-Electronic-Management-of-Records.svg',
+              src: '/images/Better-Electronic-Management-of-Records.svg',
               alt: 'Better Electronic Management of Records',
               title: 'Better Electronic Management of Records',
               width: 200,
@@ -162,7 +162,7 @@ export default function Page() {
             id="mobile-accessibility"
             title="5. Mobile Accessibility"
             image={{
-              src: '//files/Mobile-Accessibility.svg',
+              src: '/images/Mobile-Accessibility.svg',
               alt: 'Mobile Accessibility',
               title: 'Mobile Accessibility',
               width: 200,

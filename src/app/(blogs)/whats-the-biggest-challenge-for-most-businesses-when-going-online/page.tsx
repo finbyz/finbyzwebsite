@@ -73,7 +73,7 @@ export default function Page() {
             id="visibility-discoverability"
             title="1. Visibility and Discoverability"
             image={{
-              src: '//files/36.svg',
+              src: '/images/36.svg',
               alt: 'Visibility and Discoverability',
               title: 'Visibility and Discoverability',
               width: 200,
@@ -92,7 +92,7 @@ export default function Page() {
             id="reputation-trust"
             title="2. Building Reputation and Trust"
             image={{
-              src: '//files/459.svg',
+              src: '/images/459.svg',
               alt: 'Building Reputation and Trust',
               title: 'Building Reputation and Trust',
               width: 200,
@@ -111,7 +111,7 @@ export default function Page() {
             id="adapting-technology"
             title="3. Adapting to Technological Advancements"
             image={{
-              src: '//files/371.svg',
+              src: '/images/371.svg',
               alt: 'Adapting to Technological Advancements',
               title: 'Adapting to Technological Advancements',
               width: 200,
@@ -131,7 +131,7 @@ export default function Page() {
             id="managing-competition"
             title="4. Managing Online Competition"
             image={{
-              src: '//files/blog-icon-erp-vendors.svg',
+              src: '/images/blog-icon-erp-vendors.svg',
               alt: 'Managing Online Competition',
               title: 'Managing Online Competition',
               width: 200,
@@ -157,7 +157,7 @@ export default function Page() {
             id="invest-digital-marketing"
             title="Invest in Digital Marketing"
             image={{
-              src: '//files/100.svg',
+              src: '/images/100.svg',
               alt: 'Invest in Digital Marketing',
               title: 'Invest in Digital Marketing',
               width: 200,
@@ -176,7 +176,7 @@ export default function Page() {
             id="focus-user-experience"
             title="Focus on User Experience"
             image={{
-              src: '//files/33ea4363.svg',
+              src: '/images/33ea4363.svg',
               alt: 'Focus on User Experience',
               title: 'Focus on User Experience',
               width: 200,
@@ -195,7 +195,7 @@ export default function Page() {
             id="personalize-value"
             title="Personalize Through Value"
             image={{
-              src: '//files/django%20devloper.svg',
+              src: '/images/django%20devloper.svg',
               alt: 'Personalize Through Value',
               title: 'Personalize Through Value',
               width: 200,
@@ -214,7 +214,7 @@ export default function Page() {
             id="data-driven-insights"
             title="Accept Data-Driven Insights"
             image={{
-              src: '//files/187.svg',
+              src: '/images/187.svg',
               alt: 'Accept Data-Driven Insights',
               title: 'Accept Data-Driven Insights',
               width: 200,
@@ -233,7 +233,7 @@ export default function Page() {
             id="engage-audience"
             title="Engage Your Audience"
             image={{
-              src: '//files/3939ac579.svg',
+              src: '/images/3939ac579.svg',
               alt: 'Engage Your Audience',
               title: 'Engage Your Audience',
               width: 200,
@@ -252,7 +252,7 @@ export default function Page() {
             id="quick-adaptive"
             title="Remain Quick and Adaptive"
             image={{
-              src: '//files/507.svg',
+              src: '/images/507.svg',
               alt: 'Remain Quick and Adaptive',
               title: 'Remain Quick and Adaptive',
               width: 200,
@@ -271,7 +271,7 @@ export default function Page() {
             id="cybersecurity-priority"
             title="Make Cybersecurity a Priority"
             image={{
-              src: '//files/293.svg',
+              src: '/images/293.svg',
               alt: 'Make Cybersecurity a Priority',
               title: 'Make Cybersecurity a Priority',
               width: 200,

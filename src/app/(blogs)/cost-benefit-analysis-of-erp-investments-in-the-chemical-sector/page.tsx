@@ -51,7 +51,7 @@ export default function Page() {
           {/* Introduction */}
           <BlogSectionWithImage id="introduction" title="Introduction"
             image={{
-              src: "//files/15-04-24.svg",
+              src: "/images/15-04-24.svg",
               alt: "cost-benefit-analysis-of-erp-investments-in-the-chemical-sector",
               title: "cost-benefit-analysis-of-erp-investments-in-the-chemical-sector",
               cover:true
@@ -87,7 +87,7 @@ export default function Page() {
             id="implementation-costs"
             title="Implementation Costs"
             image={{
-              src: '//files/Price of Implementation.png',
+              src: '/images/Price of Implementation.png',
               alt: 'Price-of-Implementation',
               title: 'Price-of-Implementation',
               width: 150,
@@ -107,7 +107,7 @@ export default function Page() {
             id="continuous-spending"
             title="Continuous Spending"
             image={{
-              src: '//files/Continuous Spending.png',
+              src: '/images/Continuous Spending.png',
               alt: 'Continuous-Spending',
               title: 'Continuous-Spending',
               width: 150,
@@ -127,7 +127,7 @@ export default function Page() {
             id="financial-advantages"
             title="Assessing ERP's Financial Advantages in the Chemical Sector"
             image={{
-              src: "//files/Evaluating ERP's Financial Benefits for the Chemical Sector Enhanced.png",
+              src: "/images/Evaluating ERP's Financial Benefits for the Chemical Sector Enhanced.png",
               alt: "Evaluating-ERP's-Financial-Benefits-for-the-Chemical-Sector-Enhanced",
               title: "Evaluating-ERP's-Financial-Benefits-for-the-Chemical-Sector-Enhanced",
               width: 150,
@@ -147,7 +147,7 @@ export default function Page() {
             id="risk-management"
             title="Improved Risk Management and Regulatory Compliance"
             image={{
-              src: '//files/Improved Risk Management and Compliance.png',
+              src: '/images/Improved Risk Management and Compliance.png',
               alt: 'Improved-Risk-Management-and-Compliance',
               title: 'Improved-Risk-Management-and-Compliance',
               width: 150,
@@ -167,7 +167,7 @@ export default function Page() {
             id="cost-savings"
             title="Cost Savings"
             image={{
-              src: '//files/Savings on Costs.png',
+              src: '/images/Savings on Costs.png',
               alt: 'Savings-on-Costs',
               title: 'Savings-on-Costs',
               width: 150,
@@ -187,7 +187,7 @@ export default function Page() {
             id="flexibility-scalability"
             title="Flexibility and Scalability"
             image={{
-              src: '//files/Flexibility-and-Scalability.png',
+              src: '/images/Flexibility-and-Scalability.png',
               alt: 'Explore-Remote-and-Freelance-Options',
               title: 'Explore-Remote-and-Freelance-Options',
               width: 150,
@@ -207,7 +207,7 @@ export default function Page() {
             id="decision-making"
             title="Measuring Real Profits Better Ability to Make Decisions"
             image={{
-              src: '//files/Measuring Real Profits Better Ability to Make Decisions.png',
+              src: '/images/Measuring Real Profits Better Ability to Make Decisions.png',
               alt: 'Measuring-Real-Profits-Better-Ability-to-Make-Decisions',
               title: 'Measuring-Real-Profits-Better-Ability-to-Make-Decisions',
               width: 150,
@@ -227,7 +227,7 @@ export default function Page() {
             id="client-happiness"
             title="Client Happiness"
             image={{
-              src: '//files/Client Happiness.png',
+              src: '/images/Client Happiness.png',
               alt: 'Client-Happiness',
               title: 'Client-Happiness',
               width: 150,
@@ -247,7 +247,7 @@ export default function Page() {
             id="competitive-advantage"
             title="Competitive Advantage"
             image={{
-              src: '//files/A benefit over competitors.png',
+              src: '/images/A benefit over competitors.png',
               alt: 'A-benefit-over-competitors',
               title: 'A-benefit-over-competitors',
               width: 150,
@@ -267,7 +267,7 @@ export default function Page() {
             id="step-by-step-guide"
             title="A Step-by-Step Guide to Conducting a Cost-Benefit Analysis"
             image={{
-              src: '//files/A Step-by-Step Guide to Conducting a Cost-Benefit Analysis.png',
+              src: '/images/A Step-by-Step Guide to Conducting a Cost-Benefit Analysis.png',
               alt: 'A-Step-by-Step-Guide-to-Conducting-a-Cost-Benefit-Analysis',
               title: 'A-Step-by-Step-Guide-to-Conducting-a-Cost-Benefit-Analysis',
               width: 150,
@@ -287,7 +287,7 @@ export default function Page() {
             id="call-to-action"
             title="Call to Action"
             image={{
-              src: '//files/Call to Action.png',
+              src: '/images/Call to Action.png',
               alt: 'Call-to-Action',
               title: 'Call-to-Action',
               width: 150,

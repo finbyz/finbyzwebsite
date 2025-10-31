@@ -46,7 +46,7 @@ export default function Page() {
             id="introduction"
             title="Introduction"
             image={{
-              src: '//files/ERP_Implement.svg',
+              src: '/images/ERP_Implement.svg',
               alt: 'HR Services',
               title: 'HR Services',
               width: 400,
@@ -74,7 +74,7 @@ export default function Page() {
             id="changing-environment"
             title="HR Software in India: A Changing Environment"
             image={{
-              src: '//files/347.svg',
+              src: '/images/347.svg',
               alt: 'HR Software in India: A Changing Environment',
               title: 'HR Software in India: A Changing Environment',
               width: 200,
@@ -95,7 +95,7 @@ export default function Page() {
             id="payroll-software"
             title="HR Payroll Software: Making Salary Administration Simpler"
             image={{
-              src: '//files/estimation-of-cost.svg',
+              src: '/images/estimation-of-cost.svg',
               alt: 'HR Payroll Software',
               title: 'HR Payroll Software',
               width: 200,
@@ -140,37 +140,37 @@ export default function Page() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
               {/* Payroll Management */}
               <div className="flex flex-col items-center bg-background rounded-xl shadow-sm p-6 transition-transform hover:scale-105 duration-300">
-                <Image src="//files/payroll.svg" alt="Payroll Management" title="Payroll Management" width={120} height={120} className="mb-4" />
+                <Image src="/images/payroll.svg" alt="Payroll Management" title="Payroll Management" width={120} height={120} className="mb-4" />
                 <h3 className="font-semibold text-lg mb-2">Payroll Management</h3>
                 <p className="text-muted-foreground text-center">Verify that the program has strong payroll processing features, such as direct deposit, tax computations, and compliance with laws!</p>
               </div>
               {/* Employee Self-Service */}
               <div className="flex flex-col items-center bg-background rounded-xl shadow-sm p-6 transition-transform hover:scale-105 duration-300">
-                <Image src="//files/employee-attendance.svg" alt="Employee Self-Service" title="Employee Self-Service" width={120} height={120} className="mb-4" />
+                <Image src="/images/employee-attendance.svg" alt="Employee Self-Service" title="Employee Self-Service" width={120} height={120} className="mb-4" />
                 <h3 className="font-semibold text-lg mb-2">Employee Self-Service</h3>
                 <p className="text-muted-foreground text-center">Search for tools that enable staff members to handle HR duties on their own, such as accessing pay stubs, requesting leaves of absence, and updating personal data!</p>
               </div>
               {/* Reporting and Analytics */}
               <div className="flex flex-col items-center bg-background rounded-xl shadow-sm p-6 transition-transform hover:scale-105 duration-300">
-                <Image src="//files/380.svg" alt="Reporting and Analytics" title="Reporting and Analytics" width={120} height={120} className="mb-4" />
+                <Image src="/images/380.svg" alt="Reporting and Analytics" title="Reporting and Analytics" width={120} height={120} className="mb-4" />
                 <h3 className="font-semibold text-lg mb-2">Reporting and Analytics</h3>
                 <p className="text-muted-foreground text-center">To learn more about HR metrics and trends, pick a software program that has robust reporting capabilities and analytics dashboards!</p>
               </div>
               {/* Integration Capabilities */}
               <div className="flex flex-col items-center bg-background rounded-xl shadow-sm p-6 transition-transform hover:scale-105 duration-300">
-                <Image src="//files/icon-tl-revamp.svg" alt="Integration Capabilities" title="Integration Capabilities" width={120} height={120} className="mb-4" />
+                <Image src="/images/icon-tl-revamp.svg" alt="Integration Capabilities" title="Integration Capabilities" width={120} height={120} className="mb-4" />
                 <h3 className="font-semibold text-lg mb-2">Integration Capabilities</h3>
                 <p className="text-muted-foreground text-center">Choose a platform for your program that can easily interface with other corporate systems, including time and attendance, accounting, and performance management software!</p>
               </div>
               {/* Compliance and Security */}
               <div className="flex flex-col items-center bg-background rounded-xl shadow-sm p-6 transition-transform hover:scale-105 duration-300">
-                <Image src="//files/Security3b8a73.svg" alt="Compliance and Security" title="Compliance and Security" width={120} height={120} className="mb-4" />
+                <Image src="/images/Security3b8a73.svg" alt="Compliance and Security" title="Compliance and Security" width={120} height={120} className="mb-4" />
                 <h3 className="font-semibold text-lg mb-2">Compliance and Security</h3>
                 <p className="text-muted-foreground text-center">To protect the confidentiality and integrity of HR data, give top priority to software solutions that comply by industry rules and data security requirements.</p>
               </div>
               {/* User Feedback and Reviews */}
               <div className="flex flex-col items-center bg-background rounded-xl shadow-sm p-6 transition-transform hover:scale-105 duration-300">
-                <Image src="//files/69.svg" alt="User Feedback and Reviews" title="User Feedback and Reviews" width={120} height={120} className="mb-4" />
+                <Image src="/images/69.svg" alt="User Feedback and Reviews" title="User Feedback and Reviews" width={120} height={120} className="mb-4" />
                 <h3 className="font-semibold text-lg mb-2">User Feedback and Reviews</h3>
                 <p className="text-muted-foreground text-center">Look for user reviews and testimonials to gauge the experiences of other organizations using the software!</p>
               </div>

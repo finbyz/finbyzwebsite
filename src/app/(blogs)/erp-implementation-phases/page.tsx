@@ -56,7 +56,7 @@ export default function Page() {
             id="phases-overview"
             title="Phases of ERP Implementation Life Cycle"
             image={{
-              src: '//files/Phases_of_ERP_Implementation.svg',
+              src: '/images/Phases_of_ERP_Implementation.svg',
               alt: 'Phases of ERP Implementation life cycle',
               title: 'Phases of ERP Implementation life cycle',
               width: 480,

@@ -244,7 +244,7 @@ export default function Page() {
               id="faq-languages"
               title="3. What are the programming languages that I should study to work as a software engineer?"
               image={{
-                src: '//files/go%20live.svg',
+                src: '/images/go%20live.svg',
                 alt: 'What are the programming languages that I should study to work as a software engineer?',
                 title: 'What are the programming languages that I should study to work as a software engineer?',
                 width: 200,
