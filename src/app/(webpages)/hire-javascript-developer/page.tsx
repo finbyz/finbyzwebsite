@@ -94,64 +94,37 @@ const serviceCards = [
   }
 ];
 
-const jsFrameworkCards = [
+const jsFrameworkServices = [
   {
-    front: (
-      <div className="flex flex-col items-center justify-center py-6">
-        <Image src="/images/angular.svg" alt="angular" width={80} height={80} />
-        <h3 className="mt-4 font-semibold text-lg">Angular</h3>
-      </div>
-    ),
-    back: (
-      <div className="flex flex-col items-center justify-center py-6 px-2">
-        <h3 className="font-semibold text-lg mb-2">Angular</h3>
-        <p className="text-sm text-muted-foreground">Angular is a full-fledged framework for building dynamic web applications, and it's used to create complex and feature-rich applications. Angular's two-way data binding and dependency injection make it a great choice for building large-scale applications, and its modular architecture makes it easy to maintain and scale code over time. Angular's most effective applications include video streaming platforms, weather apps, and travel websites.</p>
-      </div>
-    )
+    title: 'Angular',
+    image: '/images/angular.svg',
+    alt: 'angular',
+    description:
+      "Angular is a full-fledged framework for building dynamic web applications, and it's used to create complex and feature-rich applications. Angular's two-way data binding and dependency injection make it a great choice for building large-scale applications, and its modular architecture makes it easy to maintain and scale code over time. Angular's most effective applications include video streaming platforms, weather apps, and travel websites."
   },
   {
-    front: (
-      <div className="flex flex-col items-center justify-center py-6">
-        <Image src="/images/vuejs.svg" alt="vuejs" width={80} height={80} />
-        <h3 className="mt-4 font-semibold text-lg">Vue.js</h3>
-      </div>
-    ),
-    back: (
-      <div className="flex flex-col items-center justify-center py-6 px-2">
-        <h3 className="font-semibold text-lg mb-2">Vue.js</h3>
-        <p className="text-sm text-muted-foreground">Vue.js is a progressive JavaScript framework for building user interfaces, and it's known for its simplicity and ease of use. Vue's template-based syntax and reactive data binding make it a great choice for building dynamic and interactive web applications. Vue's most effective applications include personal portfolios, landing pages, and small-scale web applications.</p>
-      </div>
-    )
+    title: 'Vue.js',
+    image: '/images/vuejs.svg',
+    alt: 'vuejs',
+    description:
+      "Vue.js is a progressive JavaScript framework for building user interfaces, and it's known for its simplicity and ease of use. Vue's template-based syntax and reactive data binding make it a great choice for building dynamic and interactive web applications. Vue's most effective applications include personal portfolios, landing pages, and small-scale web applications."
   },
   {
-    front: (
-      <div className="flex flex-col items-center justify-center py-6">
-        <Image src="/images/express-js.svg" alt="express-js" width={80} height={80} />
-        <h3 className="mt-4 font-semibold text-lg">Express</h3>
-      </div>
-    ),
-    back: (
-      <div className="flex flex-col items-center justify-center py-6 px-2">
-        <h3 className="font-semibold text-lg mb-2">Express</h3>
-        <p className="text-sm text-muted-foreground">Express is a fast, flexible, and minimalist framework for building web applications and APIs on top of Node.js. Express provides a simple and straightforward way to build server-side applications, and it's widely used for building RESTful APIs and web applications that require real-time functionality. Express's most effective applications include real-time chat apps, online marketplaces, and e-commerce websites.</p>
-      </div>
-    )
+    title: 'Express',
+    image: '/images/express-js.svg',
+    alt: 'express-js',
+    description:
+      "Express is a fast, flexible, and minimalist framework for building web applications and APIs on top of Node.js. Express provides a simple and straightforward way to build server-side applications, and it's widely used for building RESTful APIs and web applications that require real-time functionality. Express's most effective applications include real-time chat apps, online marketplaces, and e-commerce websites."
   },
   {
-    front: (
-      <div className="flex flex-col items-center justify-center py-6">
-        <Image src="/images/react.svg" alt="react" width={80} height={80} />
-        <h3 className="mt-4 font-semibold text-lg">React</h3>
-      </div>
-    ),
-    back: (
-      <div className="flex flex-col items-center justify-center py-6 px-2">
-        <h3 className="font-semibold text-lg mb-2">React</h3>
-        <p className="text-sm text-muted-foreground">React is a JavaScript library for building user interfaces. It is used for building complex and dynamic web applications and is particularly well-suited for single-page applications (SPAs) and mobile apps. React is highly efficient and fast, and is maintained by Facebook.</p>
-      </div>
-    )
+    title: 'React',
+    image: '/images/react.svg',
+    alt: 'react',
+    description:
+      "React is a JavaScript library for building user interfaces. It is used for building complex and dynamic web applications and is particularly well-suited for single-page applications (SPAs) and mobile apps. React is highly efficient and fast, and is maintained by Facebook."
   }
 ];
+
 
 const nodeJsFeatures = [
   {
@@ -336,12 +309,23 @@ export default function Page() {
 
        <Section useGradient>
       ` <div className="container-custom py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {jsFrameworkCards.map((card, idx) => (
+          {jsFrameworkServices.map((service, idx) => (
             <FlipCard
-              key={idx}
-              front={card.front}
-              back={card.back}
-              className="h-full"
+              key={service.title}
+              front={
+                <div className="flex flex-col items-center justify-center py-6">
+                  <Image src={service.image} alt={service.alt} width={80} height={80} className="mb-4 object-contain" />
+                  <h3 className="mt-4 font-semibold text-lg">{service.title}</h3>
+                </div>
+              }
+              back={
+                <div className="flex flex-col items-center justify-center py-6">
+                  <p className="mt-4 font-semibold text-lg">{service.title}</p>
+                  <p className="text-justify text-sm text-gray-700">{service.description}</p>
+                </div>
+              }
+              className="border-none shadow-md bg-white hover:shadow-lg transition-shadow duration-300"
+              // flipOnClick
             />
           ))}
         </div>
