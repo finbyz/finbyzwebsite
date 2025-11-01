@@ -71,6 +71,13 @@ const nextConfig = {
         search: '',
       },
       {
+        protocol: 'https',
+        hostname: 'erp.finbyz.tech',
+        port: '',
+        pathname: '/**',
+        search: '',
+      },
+      {
         protocol: "https",
         hostname: "via.placeholder.com",
         port: "",
