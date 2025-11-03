@@ -1,6 +1,5 @@
 import FAQ from "@/components/ai_components/FAQ";
 import BusinessSlider from "@/components/sections/business-slider";
-import { getFaqData } from "@/lib/getPageData";
 import { Metadata } from "next";
 import Script from "next/script";
 
@@ -73,7 +72,6 @@ export default async function Layout({ children }: { children: React.ReactNode }
       "dateModified": "2025-10-25T09:26:42.760Z",
     }
   };
-  const faqItems = await getFaqData("Web Page", "erp-healthcare-industry");
 
   return (
     <>
@@ -89,10 +87,6 @@ export default async function Layout({ children }: { children: React.ReactNode }
       </article>
       
       {children}
-      {faqItems && faqItems.faq && faqItems.faq.length > 0 ? (
-        <FAQ faqs={faqItems.faq} />
-      ) : null}
-      
       <BusinessSlider />
     </>
   );
