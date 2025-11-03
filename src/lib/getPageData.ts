@@ -1,6 +1,7 @@
 
 export async function getPageData(doctype:string,route: string): Promise<FinbyzGalleryProps> {
     const links = await getLinks(doctype, route)
+   
     const webpages = await getWebpages(
         links.related_links
             .filter(item => item.reference_doctype === "Web Page")
@@ -43,10 +44,11 @@ export async function getPageData(doctype:string,route: string): Promise<FinbyzG
             title: blog.title
         })
     }
-
+    
     return {
         galleryItems,
-        relatedReads
+        relatedReads,
+        
     }
 }
 
@@ -65,7 +67,8 @@ async function getLinks(doctype: string, route: string): Promise<Links> {
     if(!response.ok || jsonData?.data?.length == 0){
         return {
             related_links:[],
-            gallery_links:[]
+            gallery_links:[],
+        
         }
     }
     const ID = jsonData.data?.[0]['name'] || '';
@@ -80,7 +83,8 @@ async function getLinks(doctype: string, route: string): Promise<Links> {
     const doc = docJson['data']
     return {
         related_links: doc.related_links || [],
-        gallery_links: doc.gallery_links || []
+        gallery_links: doc.gallery_links || [],   
+       
     }
 }
 
@@ -166,3 +170,54 @@ async function getGalleries(names: string[]): Promise<RelatedLinksData[]> {
         }
     })
 }
+
+
+
+
+export async function getFaqData(doctype: string, route: string): Promise<WebpageFaqData | null> {
+
+  try {
+    const frappeUrl = process.env.WEBSITE_URL;
+
+    //  First, fetch the document by route
+    const docResponse = await fetch(
+      `${frappeUrl}/api/resource/${doctype}?filters=${encodeURIComponent(
+        JSON.stringify([["route", "=", route]])
+      )}`,
+      {
+        headers: {
+         "Content-Type":"application/json",
+        "Authorization":'token 46362c0d14c31fb:2e085c7ea8ca586',
+        },
+       
+      }
+    );
+
+    const docJson = await docResponse.json();
+
+    const docData = docJson.data?.[0];
+    if (!docData) return null;
+
+    // Fetch the full document to get the FAQ child table
+    const fullDocResponse = await fetch(`${frappeUrl}/api/resource/${doctype}/${docData.name}`, {
+      headers: {
+       "Content-Type":"application/json",
+       "Authorization":'token 46362c0d14c31fb:2e085c7ea8ca586',
+      },
+      
+    });
+
+    const fullDocJson = await fullDocResponse.json();
+    const faqData: FAQItem[] = fullDocJson.data?.faq || [];
+
+    // Return combined data
+    return {
+      name: docData.name,
+      route: docData.route,
+      faq: faqData,
+    };
+  } catch (error) {
+    return null;
+  }
+}
+

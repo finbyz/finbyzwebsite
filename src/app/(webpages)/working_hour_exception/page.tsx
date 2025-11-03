@@ -27,9 +27,15 @@ export default function Page() {
         primaryButton={{
           text: "Submit Reason",
           action: () => {
-            const el = document.getElementById('exception-form-section');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }
+            if (typeof document !== "undefined") {
+              const el = document.getElementById("exception-form-section");
+              if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+              } else {
+                console.warn("Section element not found — showing form anyway");
+              }
+            }
+          },
         }}
         secondaryButton={{
           text: "Learn More",

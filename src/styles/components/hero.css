@@ -81,8 +81,9 @@
 }
 
 .hero-title {
-  @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 lg:mb-6 leading-tight tracking-tight text-white drop-shadow-sm animate-fade-in-up;
+  @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 lg:mb-6 leading-tight tracking-tight text-white drop-shadow-sm;
 }
+/* animate-fade-in-up */
 
 .hero-title-highlight {
   @apply text-[#FF8C00] animate-fade-in-up-delayed;

@@ -27,6 +27,7 @@ import { Globe2 } from "lucide-react";
 import { Map } from "lucide-react";
 import { Atom } from "lucide-react"
 import { Notebook } from "lucide-react";
+import { MediaViewer } from "../ai_components/gallery/MediaViewer";
 
 
 
@@ -425,13 +426,13 @@ export default function Header() {
             name: "Mobile Apps",
             description: "Mobile application development",
             icon: Smartphone,
-            href: "/mobile-development"
+            href: "/mobile-app-development"
           },
           {
             name: "API Development",
             description: "API and middleware services",
             icon: CodeSquare,
-            href: "/web-api-development"
+            href: "/api-development-services"
           },
           {
             name: "CRM Software",
@@ -457,7 +458,7 @@ export default function Header() {
             name: "Digital Transformation",
             description: "Transform your business digitally",
             icon: Zap,
-            href: "/digital-transformation"
+            href: "/digital-transformation-services"
           },
           {
             name: "Process Consulting",
@@ -489,13 +490,13 @@ export default function Header() {
             name: "ERPNext System Maintenance",
             description: "Regular system maintenance",
             icon: Wrench,
-            href: "/system-maintenance"
+            href: "/erpnext-system-maintenance"
           },
           {
             name: "ERPNext Performance Optimization",
             description: "Optimize system performance",
             icon: TrendingUp,
-            href: "/performance-optimization"
+            href: "/erpnext-performance-optimization"
           }
         ],
 
@@ -533,7 +534,7 @@ export default function Header() {
             name: "Textile",
             description: "",
             icon: ShoppingCart,
-            href: "/erp-for-textile"
+            href: "/erp-for-textile-industry"
           },
           {
             name: "Chemicals",
@@ -551,13 +552,13 @@ export default function Header() {
             name: "Electronics",
             description: "",
             icon: Zap,
-            href: "/erp-for-electronics"
+            href: "/erp-for-electronics-industry"
           },
           {
             name: "Mining",
             description: "",
             icon: Hammer,
-            href: "/erp-for-mining"
+            href: "/erp-for-mining-industry"
           },
           {
             name: "Agriculture",
@@ -582,7 +583,7 @@ export default function Header() {
             name: "Construction",
             description: "",
             icon: Hammer,
-            href: "/erp-for-construction"
+            href: "/erp-for-construction-industry"
           },
           {
             name: "Engineering",
@@ -595,7 +596,7 @@ export default function Header() {
             name: "Healthcare",
             description: "",
             icon: Heart,
-            href: "/erp-for-healthcare"
+            href: "/erp-healthcare-industry"
           },
           {
             name: "Education",
@@ -614,7 +615,7 @@ export default function Header() {
             name: "Retail & eCommerce",
             description: "",
             icon: ShoppingCart,
-            href: "erp-for-retailer"
+            href: "/erp-for-retail-industry"
           },
           {
             name: "Logistics",
@@ -690,7 +691,7 @@ export default function Header() {
             name: "Start Your ERP Journey",
             description: "Begin your ERP transformation",
             icon: Rocket,
-            href: "/start-erp-journey"
+            href: "/start-your-erp-journey"
           },
           {
             name: "Hire Our Experts",
@@ -702,7 +703,7 @@ export default function Header() {
             name: "Reseller / Strategic Partnerships",
             description: "Partner with us strategically",
             icon: Handshake,
-            href: "/partnerships"
+            href: "/partnership-programs"
           },
           {
             name: "Contact Us",
@@ -862,7 +863,7 @@ export default function Header() {
                                       ) : blogPosts.length === 0 ? (
                                         <div className="text-sm text-gray-500 px-3 py-2">No blog posts found.</div>
                                       ) : (
-                                        (showAllBlogs ? blogPosts : blogPosts.slice(0, 5)).map((post) => (
+                                        (showAllBlogs ? blogPosts : blogPosts.slice(0, 8)).map((post) => (
                                           <Link
                                             key={post.name}
                                             href={post.route || "/blog-post"}
@@ -912,7 +913,8 @@ export default function Header() {
                                         ) : galleryItems.length === 0 ? (
                                           <div className="text-sm text-gray-500 px-3 py-2">No gallery items found.</div>
                                         ) : (
-                                          (showAllGallery ? galleryItems : galleryItems.slice(0, 5)).map((item) => (
+                                          (showAllGallery ? galleryItems : galleryItems.slice(0, 8)).map((item) => (
+                                          
                                             <Link
                                               key={item.name}
                                               href={item.route || "/gallery"}
@@ -927,7 +929,7 @@ export default function Header() {
                                             </Link>
                                           ))
                                         )}
-                                        {galleryItems.length > 5 && (
+                                        {galleryItems.length > 8 && (
                                           <div className="pt-2 flex items-center gap-3">
                                             <button
                                               className="text-sm px-3 py-2 rounded-lg text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5"

@@ -43,13 +43,6 @@ export default function Page() {
         <div className="container-custom py-12 md:py-16 relative z-10 flex flex-col gap-12">
 
           {/* Full-width Paragraph */}
-          {/* <div className="animate-fade-up">
-            <p className="mb-6 text-gray-700 leading-relaxed text-lg text-justify">
-              As a trusted ERPNext Partner in Ahmedabad, Gujarat, <span className="font-semibold text-gray-900">Finbyz Tech</span> empowers businesses with scalable, robust, and intuitive ERP solutions. ERPNext is a comprehensive and user-friendly Enterprise Resource Planning (ERP) platform, designed specifically for small to medium-sized businesses. It is trusted by users in <span className="font-semibold text-primary">over 100 countries</span>, available in more than <span className="font-semibold text-primary">30 languages</span>, and is known for its flexibility with both cloud and on-premise deployments. Whether you're transitioning from SAP, Oracle, Odoo, Microsoft Dynamics, Tally, or Zoho, <Link href="/erpnext-software" className="text-primary font-semibold underline decoration-2 underline-offset-4 hover:text-primary/80 transition-colors">ERPNext</Link> provides a seamless shift with lower costs and enhanced control. Learn more about how to <a href="https://finbyz.tech/how-to-choose-the-right-erp-software-for-your-company" target="_blank" className="text-primary font-semibold underline decoration-2 underline-offset-4 hover:text-primary/80 transition-colors">choose the right ERP</a> for your company.
-            </p>
-             
-          </div>
-           */}
 
           <div className="animate-fade-up flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-8">
             {/* Image - Right Side */}

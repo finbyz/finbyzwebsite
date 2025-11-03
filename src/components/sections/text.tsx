@@ -30,9 +30,10 @@ export default function TextSection({
     : [
         "This is a generic text section. Provide an array of paragraphs to display.",
       ];
-
+  
+  // px-12 sm:px-8 lg:px-16 xl:px-20 2xl:px-24
   return (
-      <div className="mx-auto px-12 sm:px-8 lg:px-16 xl:px-20 2xl:px-24">
+      <div className="mx-auto px-12 sm:px-8 lg:px-16 xl:px-20 2xl:px-24 mt-2">
         {content.title && (
           <h2 className="text-2xl text-bold md:text-3xl font-semibold text-[#1A5276] mb-4 ">
             {content.title}

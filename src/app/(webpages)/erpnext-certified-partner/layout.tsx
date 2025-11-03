@@ -1,6 +1,7 @@
+import FAQ from "@/components/ai_components/FAQ";
 import BusinessSlider from "@/components/sections/business-slider";
 import FinbyzGallery from "@/components/sections/FinbyzGallery";
-import { getPageData } from "@/lib/getPageData";
+import { getFaqData, getPageData } from "@/lib/getPageData";
 
 import { Metadata } from "next";
 import Script from "next/script";
@@ -89,8 +90,13 @@ export default async function Layout({ children }: { children: React.ReactNode }
   ]
 };
   const data = await getPageData("Web Page","erpnext-certified-partner");
+ 
+  const faqItems = await getFaqData("Web Page", "erpnext-certified-partner");
+  console.log("faq data layout --------------",faqItems)
+
   return (
     <>
+
       {/* JSON-LD structured data for LLMs */}
       <Script
         id="structured-data"
@@ -107,6 +113,11 @@ export default async function Layout({ children }: { children: React.ReactNode }
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }
+
+     
+      {faqItems && faqItems.faq && faqItems.faq.length > 0 ? (
+        <FAQ faqs={faqItems.faq} />
+      ) : null}
       <BusinessSlider />
     </>
   );

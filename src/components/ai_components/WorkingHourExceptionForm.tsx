@@ -73,7 +73,6 @@ const WorkingHourExceptionForm: React.FC<WorkingHourExceptionFormProps> = ({ onS
     const id = getDocIdFromUrl();
     setDocId(id);
     if (!id) {
-      setError("Missing Document ID in URL");
       setLoading(false);
       return;
     }
@@ -136,11 +135,15 @@ const WorkingHourExceptionForm: React.FC<WorkingHourExceptionFormProps> = ({ onS
   }
 
   return (
-    <Card className="border-none shadow-lg transition-all duration-300 hover:shadow-xl">
+      <Card className="border-none shadow-lg transition-all duration-300 hover:shadow-xl">
       <CardHeader>
-        <CardTitle className="text-center text-lg md:text-xl font-semibold">Please Fill a Reason For Incomplete Working Hours</CardTitle>
-        <CardDescription className="text-center text-muted-foreground">This information helps us understand and address your working hour exception.</CardDescription>
-      </CardHeader>
+      <CardTitle className="text-center text-lg md:text-xl font-semibold text-[#0b3d5c]">
+        Please Fill a Reason For Incomplete Working Hours
+      </CardTitle>
+      <CardDescription className="text-center text-[#0b3d5c]">
+        This information helps us understand and address your working hour exception.
+      </CardDescription>
+    </CardHeader>
       <form onSubmit={handleSubmit}>
         <CardContent className="space-y-4">
           <div>
@@ -175,11 +178,23 @@ const WorkingHourExceptionForm: React.FC<WorkingHourExceptionFormProps> = ({ onS
           )}
         </CardContent>
         <CardFooter className="flex flex-row justify-between gap-2 pt-4">
-          <Button type="reset" variant="outline" onClick={handleReset} className="rounded-md">Discard</Button>
-          <Button type="submit" disabled={submitting || !reason.trim()} className="rounded-md">
-            {submitting ? <Loader2 className="w-4 h-4 animate-spin mr-2" /> : null}
-            Submit
-          </Button>
+          <Button
+          type="reset"
+          variant="outline"
+          onClick={handleReset}
+          className="rounded-md bg-[#0b3d5c] text-white hover:bg-[#0d4b72]"
+        >
+          Discard
+        </Button>
+
+        <Button
+          type="submit"
+          disabled={submitting || !reason.trim()}
+          className="rounded-md bg-[#ff9800] text-white hover:bg-[#e68a00]"
+        >
+          {submitting ? <Loader2 className="w-4 h-4 animate-spin mr-2" /> : null}
+          Submit
+        </Button>
         </CardFooter>
       </form>
     </Card>

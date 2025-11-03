@@ -16,7 +16,7 @@ interface RelatedRead {
 
 interface FinbyzGalleryProps {
     galleryItems: GalleryItem[]
-    relatedReads: RelatedRead[]
+    relatedReads: RelatedRead[]  
 }
 
 
@@ -48,4 +48,18 @@ interface RelatedLink {
 interface Links {
     gallery_links: GalleryLink[]
     related_links: RelatedLink[]
+    
 }
+
+type FAQItem = {
+  question: string;
+  answer: string;
+  idx: number;
+};
+
+type WebpageFaqData = {
+  name: string;
+  route: string;
+  faq?: FAQItem[];
+};
+

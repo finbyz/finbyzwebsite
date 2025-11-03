@@ -171,9 +171,9 @@ export default function Footer() {
                   <li><a href="/our-story" className="text-slate-300 hover:text-white transition-colors text-sm">Our Story</a></li>
                   <li><a href="/steer-your-vision" className="text-slate-300 hover:text-white transition-colors text-sm">Vision & Mission</a></li>
                   <li><a href="/leadership-team" className="text-slate-300 hover:text-white transition-colors text-sm">Leadership Team</a></li>
-                  <li><a href="/core-value" className="text-slate-300 hover:text-white transition-colors text-sm">Core Values</a></li>
+                  <li><a href="/core-values" className="text-slate-300 hover:text-white transition-colors text-sm">Core Values</a></li>
                   <li><a href="/life-at-finbyz" className="text-slate-300 hover:text-white transition-colors text-sm">Life @ Finbyz</a></li>
-                  <li><a href="/erp-partner" className="text-slate-300 hover:text-white transition-colors text-sm">Partners & Certifications</a></li>
+                  <li><a href="/partnership-programs" className="text-slate-300 hover:text-white transition-colors text-sm">Partners & Certifications</a></li>
                   <li><a href="/testimonial" className="text-slate-300 hover:text-white transition-colors text-sm">Testimonials</a></li>
                   {/* <li><a href="/csr-sustainability" className="text-slate-300 hover:text-white transition-colors text-sm">CSR / Sustainability</a></li> */}
                 </ul>
@@ -223,7 +223,7 @@ export default function Footer() {
                   <li><a href="/crm-software" className="text-slate-300 hover:text-white transition-colors text-sm">CRM Software</a></li>
 
 
-                  <li><a href="/resource-augmentation" className="text-slate-300 hover:text-white transition-colors text-sm">Resource Augmentation</a></li>
+                  <li><a href="/erpnext-resource-augmentation" className="text-slate-300 hover:text-white transition-colors text-sm">Resource Augmentation</a></li>
                   <li><a href="/it-consulting" className="text-slate-300 hover:text-white transition-colors text-sm">Consulting</a></li>
                   {/* <li><a href="#" className="text-slate-300 hover:text-white transition-colors text-sm">View All →</a></li> */}
                 </ul>
@@ -240,7 +240,7 @@ export default function Footer() {
                 <ul className="space-y-3">
                   <li><a href="/erpnext-software" className="text-slate-300 hover:text-white transition-colors text-sm">ERPNext</a></li>
                   <li><a href="/ai-automation" className="text-slate-300 hover:text-white transition-colors text-sm">AI Automation</a></li>
-                  <li><a href="/use-cases" className="text-slate-300 hover:text-white transition-colors text-sm">Use Cases</a></li>
+                  <li><a href="/erpnext-use-cases" className="text-slate-300 hover:text-white transition-colors text-sm">Use Cases</a></li>
                   <li><a href="/success-story" className="text-slate-300 hover:text-white transition-colors text-sm">Success Stories</a></li>
                   <li><a href="/gallery" className="text-slate-300 hover:text-white transition-colors text-sm">Gallery</a></li>
                   {/* <li><a href="/guide" className="text-slate-300 hover:text-white transition-colors text-sm">How-to Guides</a></li> */}
@@ -257,7 +257,7 @@ export default function Footer() {
                 </h4>
                 <ul className="space-y-3">
                   <li><a href="/life-at-finbyz" className="text-slate-300 hover:text-white transition-colors text-sm">Life at Finbyz</a></li>
-                  <li><a href="/current-opening" className="text-slate-300 hover:text-white transition-colors text-sm">Current Openings</a></li>
+                  <li><a href="/jobs" className="text-slate-300 hover:text-white transition-colors text-sm">Current Openings</a></li>
                   <li><a href="/internship" className="text-slate-300 hover:text-white transition-colors text-sm">Internships</a></li>
                   <li><a href="/hiring-process" className="text-slate-300 hover:text-white transition-colors text-sm">Hiring Process</a></li>
 
@@ -291,7 +291,7 @@ export default function Footer() {
               <div className="flex items-center space-x-4">
                 <a href="/privacy-policy" className="text-slate-400 hover:text-white transition-colors text-sm">Privacy Policy</a>
                 <span className="text-slate-600">•</span>
-                <a href="/term-of-services" className="text-slate-400 hover:text-white transition-colors text-sm">Terms of Service</a>
+                <a href="/terms-of-service" className="text-slate-400 hover:text-white transition-colors text-sm">Terms of Service</a>
               </div>
             </div>
 

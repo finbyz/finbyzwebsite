@@ -284,8 +284,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 `;
 }
 
-function writeLayout(slug: string, type: 'webpage' | 'blog', seoData: SEOData): void {
-  const baseDir = type === 'blog' ? '(blog)' : '(webpages)';
+
+const pageGroups = {
+  'blog': '(blogs)',
+  'webpage': '(webpages)',
+  'code-snippet': '(code-snippets)'
+}
+type PageType = 'webpage' | 'blog' | 'code-snippet'
+
+
+function writeLayout(slug: string, type: PageType, seoData: SEOData): void {
+  const baseDir = pageGroups[type];
   const pageDir = path.join(process.cwd(), 'src', 'app', baseDir, slug);
   
   ensureDirectory(pageDir);

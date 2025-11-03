@@ -7,8 +7,8 @@ import "@/styles/components/unified-container.css";
 // Server-side render: static display without IntersectionObserver/counter hooks
 
 interface BenefitItem {
-  number: number;
-  suffix: string;
+  number?: number;
+  suffix?: string;
   label: string;
   header: string;
   description: string;

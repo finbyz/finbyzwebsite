@@ -1,4 +1,4 @@
-import { Eye, Heart, CheckCircle, BarChart3 } from "lucide-react";
+import { Eye, Heart, CheckCircle, BarChart3,Brain,Infinity,Globe,Rocket,Activity,ShieldCheck,Star,Handshake,Users,Layers } from "lucide-react";
 import "@/styles/components/differentiators.css";
 
 interface DifferentiatorItem {
@@ -91,6 +91,26 @@ export default function Differentiators({ data = {} }: DifferentiatorsProps) {
         return CheckCircle;
       case "BarChart3":
         return BarChart3;
+      case "Brain":
+        return Brain;
+      case "Infinity":
+        return Infinity;
+      case "Globe":
+          return Globe;
+      case "Rocket":
+          return Rocket;
+      case "Activity":
+          return Activity;
+      case "ShieldCheck":
+          return ShieldCheck;
+      case "Star":
+          return Star;
+      case "Handshake":
+          return Handshake;
+      case "Users":
+          return Users;
+      case "Layers":
+          return Layers;
       default:
         return Eye;
     }
