@@ -47,7 +47,7 @@ export default function Page() {
       {/* Quote Section */}
       <Section>
         <div className="container-custom py-8 flex flex-col gap-6 items-center" id="human-resources">
-         <span className='text-lg'><b>Looking for a Complete HR and Payroll Software Solution for Your Business?</b></span>
+         <h2 className='text-2xl font-bold text-center text-[#1A5276]'>Looking for a Complete HR and Payroll Software Solution for Your Business?</h2>
           <div className="text-gray-700 text-justify text-lg leading-relaxed">
             <p className="mb-4">
               Human resource, often considered the backbone of any organization, is the only function with a strong human element at its core. As businesses move toward complete automation, it’s essential for HR departments to embrace technology through advanced human resource software. While automation may seem to reduce the “human touch,” it actually empowers HR professionals by simplifying complex processes. With increasing business demands, automating HR functions—especially recruitment—has become a necessity. Our HR software offers the perfect solution to streamline your operations, reduce manual workload, and enhance productivity.
@@ -188,9 +188,9 @@ export default function Page() {
       {/* Insightful Quote Section */}
       <Section>
         <div className="container-custom py-8 flex flex-col items-center">
-          <h2 className="text-center text-2xl font-semibold mb-2">
+          <h2 className="text-center text-2xl font-semibold mb-2 text-[#1A5276]">
             The main objective of using software in the Human resource departments is to have insights for effective decision making as
-            <span className="block italic text-primary mt-2">“The goal is to turn data into information, and information into insights” (Carly Fiorina).</span>
+            <span className="block italic mt-2">“The goal is to turn data into information, and information into insights” (Carly Fiorina).</span>
           </h2>
         </div>
       </Section>

@@ -50,16 +50,15 @@ interface Links {
     related_links: RelatedLink[]
     
 }
-
-type FAQItem = {
+type FAQ = {
+  id: number;
+  name: string;
   question: string;
   answer: string;
-  idx: number;
 };
 
-type WebpageFaqData = {
+type FAQGroup = {
   name: string;
-  route: string;
-  faq?: FAQItem[];
+  faqs: FAQ[];
 };
 

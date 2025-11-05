@@ -102,7 +102,7 @@ export default function Page() {
         primaryButton={{
           text: 'Get Started',
           action: () => {
-            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            window.location.href = '/contact';
           },
         }}
         secondaryButton={{

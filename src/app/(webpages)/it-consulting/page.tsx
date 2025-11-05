@@ -17,7 +17,7 @@ export default function Page() {
           text: 'Get Consultation',
           action: () => {
             if (typeof window !== 'undefined') {
-              window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+              window.location.href = '/contact';
             }
           }
         }}
@@ -59,7 +59,7 @@ export default function Page() {
       </Section>
 
       <Section>
-        <div className="py-8 ">
+        <div className="py-8 " id="It">
           <CTA
             data={{
               subheading: {

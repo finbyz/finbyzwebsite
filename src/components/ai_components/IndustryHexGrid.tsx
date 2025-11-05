@@ -44,14 +44,14 @@ const industries = [
     title: "Fintech",
     icon: "/images/icon-brokerage-commission.svg",
     number: "06",
-    href: "/fintech",
+    href: "/fintech-solutions",
     fade: 1
   },
   {
     title: "Healthcare",
     icon: "/images/Healthcare.svg",
     number: "07",
-    href: "/erp-for-healthcare",
+    href: "/erp-healthcare-industry",
     fade: 2
   },
   {
@@ -72,7 +72,7 @@ const industries = [
     title: "E-commerce ",
     icon: "/images/E-commerce.svg",
     number: "010",
-    href: "/erp-for-retailer",
+    href: "/erp-for-retail-industry",
     fade: 5
   }
 ];

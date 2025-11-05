@@ -19,6 +19,15 @@ const DownloadFormModal: React.FC<DownloadFormModalProps> = ({ open, onClose, fi
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   useEffect(() => {
+    if (open) {
+      const storedFormData = localStorage.getItem("formData");
+      if (storedFormData) {
+        setForm(JSON.parse(storedFormData));
+      }
+    }
+  }, [open]);
+
+  useEffect(() => {
     if (!open) {
       setForm({ name: "", email: "", mobile: "", organization: "" });
       setSubmitting(false);
@@ -59,11 +68,13 @@ const DownloadFormModal: React.FC<DownloadFormModalProps> = ({ open, onClose, fi
     
     if (validateForm()) {
       setSubmitting(true);
+      localStorage.setItem("formData", JSON.stringify(form));
       onSubmit({ ...form, fileUrl });
     }
   };
 
   if (!open) return null;
+
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
@@ -76,9 +87,10 @@ const DownloadFormModal: React.FC<DownloadFormModalProps> = ({ open, onClose, fi
       {/* Modal */}
       <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md transform transition-all">
         {/* Header with gradient */}
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-t-2xl p-6 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -mr-20 -mt-20" />
-          <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full -ml-16 -mb-16" />
+        {/* bg-gradient-to-r from-blue-600 to-indigo-600 */}
+        <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-t-2xl p-6 relative overflow-hidden">
+          {/* <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -mr-20 -mt-20" /> */}
+          {/* <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full -ml-16 -mb-16" /> */}
           
           <button
             onClick={onClose}
@@ -91,7 +103,7 @@ const DownloadFormModal: React.FC<DownloadFormModalProps> = ({ open, onClose, fi
             <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4">
               <Download className="text-white" size={28} />
             </div>
-            <h2 className="text-2xl font-bold text-black mb-1">Download Resource</h2>
+            <h2 className="text-2xl font-bold text-[#FF8C00] mb-1">Download Resource</h2>
             <p className="text-blue-100 text-sm">Fill in your details to access the file</p>
           </div>
         </div>
@@ -203,7 +215,7 @@ const DownloadFormModal: React.FC<DownloadFormModalProps> = ({ open, onClose, fi
             <button
               onClick={handleSubmit}
               disabled={submitting}
-              className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
+              className="flex-1 bg-[#1A5276] text-white py-3 rounded-lg font-semibol disabled:opacity-50 disabled:cursor-not-allowed transition-all transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
             >
               {submitting ? (
                 <>

@@ -89,7 +89,7 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
       // https://website.finbyz.com/api/method/finbyzweb.api.set_form_data
 
       // Use the same API as business slider
-      const res = await fetch('https://website.finbyz.com/api/method/finbyzweb.api.set_form_data', {
+      const res = await fetch('/web-api/fb/method/finbyzweb.api.set_form_data', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
@@ -162,22 +162,43 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
                 </p>
                 
                 {/* Feature Icons */}
-                <div className="inquiry-form__feature-grid">
-                  <div className="inquiry-form__feature-card">
-                    <div className="inquiry-form__icon-circle" style={{ backgroundColor: "#1A5276" }}>
-                      <Mail className="w-5 h-5 text-white" />
+                  <div className="inquiry-form__feature-grid">
+                    {/* Quick Response */}
+                    <div
+                      className="inquiry-form__feature-card cursor-pointer"
+                      onClick={() =>
+                        window.open(
+                          "mailto:info@finbyz.tech",
+                          "_blank"
+                        )
+                      }
+                    >
+                      <div
+                        className="inquiry-form__icon-circle"
+                        style={{ backgroundColor: "#1A5276" }}
+                      >
+                        <Mail className="w-5 h-5 text-white" />
+                      </div>
+                      <span className="inquiry-form__feature-text">Quick Response</span>
                     </div>
-                    <span className="inquiry-form__feature-text">Quick Response</span>
-                  </div>
-                  <div className="inquiry-form__feature-card">
-                    <div className="inquiry-form__icon-circle" style={{ backgroundColor: "#1A5276" }}>
-                      <Phone className="w-5 h-5 text-white" />
+
+                    {/* Free Consultation */}
+                    <div
+                      className="inquiry-form__feature-card cursor-pointer"
+                      onClick={() => window.open("tel:+919925701446")}
+                    >
+                      <div
+                        className="inquiry-form__icon-circle"
+                        style={{ backgroundColor: "#1A5276" }}
+                      >
+                        <Phone className="w-5 h-5 text-white" />
+                      </div>
+                      <span className="inquiry-form__feature-text">Free Consultation</span>
                     </div>
-                    <span className="inquiry-form__feature-text">Free Consultation</span>
                   </div>
+
                 </div>
               </div>
-            </div>
             
             {/* Right Section - Form */}
             <div className="inquiry-form__form-section">

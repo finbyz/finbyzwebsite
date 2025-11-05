@@ -72,8 +72,7 @@ export default function Page() {
         primaryButton={{
           text: 'Get Started',
           action: () => {
-            const intro = document.getElementById('industry-intro');
-            if (intro) intro.scrollIntoView({ behavior: 'smooth' });
+            window.location.href = '/contact';
           },
         }}
         secondaryButton={{

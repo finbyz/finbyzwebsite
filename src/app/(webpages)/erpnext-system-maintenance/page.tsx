@@ -6,7 +6,6 @@ import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
 import Comment from '@/components/sections/comment';
 import CTA from '@/components/sections/cta';
-import { List } from '@/components/sections/list';
 
 export default function Page(): ReactElement {
   return (

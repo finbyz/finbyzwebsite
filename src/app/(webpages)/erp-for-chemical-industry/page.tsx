@@ -41,16 +41,18 @@ export default function Page() {
           <p className="mb-4 text-gray-700 text-lg">
             For businesses involved in manufacturing chemicals and allied products, Finbyz's ERP for the chemical industry offers a comprehensive solution to manage complex operations. From manufacturing and distribution to exports, our experience with chemical industry ERP helps streamline operations, improve efficiency, and increase overall productivity.
           </p>
-          {/* <div className="my-8">
-            <QuoteBlock
+        <div className="my-8">
+            
+             <QuoteBlock
               text="The first rule of any technology used in a business is that automation applied to an efficient operation will magnify the efficiency. The second is that automation applied to an inefficient operation will magnify the inefficiency – Bill Gates"
               isHeading={false}
             />
-          </div> */}
-          <p className="my-6">
+          {/* <p className="mb-4 text-gray-700 text-lg">
               The first rule of any technology used in a business is that automation applied to an efficient operation will magnify the efficiency. The second is that automation applied to an inefficient operation will magnify the inefficiency – Bill Gates
-          </p>
-          <p className="mb-6 black text-lg">
+          </p> */}
+        </div> 
+         
+          <p className="mb-6 text-gray-700 text-lg">
             The primary goal of every business is to reduce costs and enhance productivity and efficiency through automation. However, it's essential to understand that ERP for the chemical industry requires specific considerations:
           </p>
           <h3 className="text-xl font-semibold text-[#1A5276] mb-8">Key Considerations for ERP in Chemical Industry</h3>

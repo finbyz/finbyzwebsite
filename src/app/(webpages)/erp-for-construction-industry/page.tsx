@@ -596,7 +596,7 @@ export default function Page() {
       /> */}
       <div className='container-custom mt-5'>
         <h2 className=' text-2xl md:text-2xl font-bold mb-4 text-[#1A5276] animate-fadeIn'>
-          "In the construction industry, efficiency isn't just a buzzword – it's the bedrock of profitability and success. At Finbyz Tec, we believe in empowering businesses with solutions that bring clarity, drive efficiency, and deliver tangible impact. Our ERPNext implementations simplify complex construction processes, putting you in control of your projects, resources, and finances. We're not just selling software; we're providing a strategic advantage that helps you build smarter, faster, and more profitably."<br/>- Mukesh Variyani, CEO
+          "In the construction industry, efficiency isn't just a buzzword – it's the bedrock of profitability and success. At Finbyz Tech, we believe in empowering businesses with solutions that bring clarity, drive efficiency, and deliver tangible impact. Our ERPNext implementations simplify complex construction processes, putting you in control of your projects, resources, and finances. We're not just selling software; we're providing a strategic advantage that helps you build smarter, faster, and more profitably."<br/>- Mukesh Variyani, CEO
         </h2>
       </div>
       

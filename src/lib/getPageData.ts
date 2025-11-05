@@ -173,51 +173,52 @@ async function getGalleries(names: string[]): Promise<RelatedLinksData[]> {
 
 
 
-
-export async function getFaqData(doctype: string, route: string): Promise<WebpageFaqData | null> {
-
+export async function getFaqs(doctype: string, route: string): Promise<FAQGroup | null> {
   try {
-    const frappeUrl = process.env.WEBSITE_URL;
+    const frappeUrl = process.env.FRAPPE_URL;
 
-    //  First, fetch the document by route
     const docResponse = await fetch(
       `${frappeUrl}/api/resource/${doctype}?filters=${encodeURIComponent(
         JSON.stringify([["route", "=", route]])
       )}`,
       {
         headers: {
-         "Content-Type":"application/json",
-        "Authorization":'token 46362c0d14c31fb:2e085c7ea8ca586',
+            "Authorization": `token ${process.env.FRAPPE_API_KEY}:${process.env.FRAPPE_API_SECRET}`,
         },
-       
       }
     );
 
     const docJson = await docResponse.json();
-
     const docData = docJson.data?.[0];
     if (!docData) return null;
 
-    // Fetch the full document to get the FAQ child table
-    const fullDocResponse = await fetch(`${frappeUrl}/api/resource/${doctype}/${docData.name}`, {
-      headers: {
-       "Content-Type":"application/json",
-       "Authorization":'token 46362c0d14c31fb:2e085c7ea8ca586',
-      },
-      
-    });
+    const fullDocResponse = await fetch(
+      `${frappeUrl}/api/resource/${doctype}/${docData.name}`,
+      {
+        headers: {
+            "Authorization": `token ${process.env.FRAPPE_API_KEY}:${process.env.FRAPPE_API_SECRET}`,
+        },
+      }
+    );
 
     const fullDocJson = await fullDocResponse.json();
-    const faqData: FAQItem[] = fullDocJson.data?.faq || [];
+    const data = fullDocJson.data;
 
-    // Return combined data
+    if (!data) return null;
+
+    const faqs = (data.faqs || []).map((faq: any): FAQ => ({
+      id: faq.idx,
+      name: faq.name,
+      question: faq.question,
+      answer: faq.answer,
+    }));
+
     return {
-      name: docData.name,
-      route: docData.route,
-      faq: faqData,
+      name: data.name,
+      faqs: faqs,
     };
   } catch (error) {
+    console.error("FAQ fetch error:", error);
     return null;
   }
 }
-

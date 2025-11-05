@@ -22,17 +22,12 @@ export default function JobApplication() {
 
 useEffect(() => {
   const fetchJobOpenings = async () => {
-    // https://finbyz.tech//api/method/finbyz.api.get_all_job_openings
-    // cors issue
     try {
-     
-      const res = await fetch(
-       "/web-api/method/finbyzweb.api.get_all_job_openings"
-      );
+      const res = await fetch("/web-api/jobs");
       const data = await res.json();
-
-      if (Array.isArray(data.message?.data)) {
-        setJobOpenings(data.message.data);
+   
+      if (Array.isArray(data.data)) {
+        setJobOpenings(data.data);
       } else {
         setJobOpenings([]);
       }
@@ -50,12 +45,10 @@ useEffect(() => {
 
 useEffect(() => {
   async function fetchApplicantTypes() {
-    // https://finbyz.tech//api/method/finbyz.api.get_applicant_types
-    // cors issue
     try {
-      
+      const url =`/web-api/fb/method/finbyz.job_application_api.get_applicant_types`
       const response = await fetch(
-       "/web-api/method/finbyzweb.api.get_applicant_types"
+       url
       );
 
       if (!response.ok) {
@@ -63,8 +56,6 @@ useEffect(() => {
       }
 
       const data = await response.json();
-
-      // Handle nested message.message structure
       const types =
         Array.isArray(data.message?.message) ? data.message.message : [];
 
@@ -147,11 +138,8 @@ useEffect(() => {
         return;
       }
 
-      
-
-      // Send request to Frappe web form API
-      // https://finbyz.tech//api/method/finbyz.api.set_form_job_applicant
-      const res = await fetch("/web-api/method/finbyzweb.api.set_form_job_applicant", {
+      const url =`/web-api/fb/method/finbyz.job_application_api.set_form_job_applicant`
+      const res = await fetch(url, {
         method: "POST",
         body: formData,
       });
@@ -221,22 +209,6 @@ useEffect(() => {
                   <p className={styles.sectionDescription}>Basic details about the applicant</p>
                 </div>
 
-                {/* <div className={styles.formGroup}>
-                  <label htmlFor="jobOpening" className={styles.formLabel}>
-                    Job Opening <span className={styles.required}>*</span>
-                  </label>
-                  <select id="jobOpening" className={styles.selectInput} required>
-                    <option value="">Select a job opening</option>
-                    <option value="frontend-developer">Frontend Developer</option>
-                    <option value="backend-developer">Backend Developer</option>
-                    <option value="fullstack-developer">Full Stack Developer</option>
-                    <option value="ui-ux-designer">UI/UX Designer</option>
-                    <option value="project-manager">Project Manager</option>
-                    <option value="devops-engineer">DevOps Engineer</option>
-                    <option value="data-analyst">Data Analyst</option>
-                    <option value="qa-engineer">QA Engineer</option>
-                  </select>
-                </div> */}
                 <div className={styles.formGroup}>
                     <label htmlFor="jobOpening" className={styles.formLabel}>
                       Job Opening <span className={styles.required}>*</span>
@@ -247,8 +219,8 @@ useEffect(() => {
 
                       {!loading &&
                     jobOpenings.map((job, index) => (
-                      <option key={index} value={job.designation}>
-                        {job.designation}
+                      <option key={index} value={job.name}>
+                        {job.name}
                       </option>
                     ))}
                     </select>
@@ -321,21 +293,45 @@ useEffect(() => {
                   />
                 </div>
 
-                <div className={styles.formGroup}>
+                {/* <div className={styles.formGroup}>
                   <label htmlFor="applicantType" className={styles.formLabel}>
                     Applicant Type <span className={styles.required}>*</span>
                   </label>
                   <select id="applicantType" className={styles.selectInput} required>
                   <option value="">Select applicant type</option>
-                  {/* <option value="Fresher">Fresher</option>
-                  <option value="Experience">Experience</option>  */}
+                  <option value="Fresher">Fresher</option>
+                  <option value="Experienced">Experienced</option> 
                    {applicantTypes.map((type, idx) => (
                     <option key={idx} value={type}>
                       {type}
                     </option>
                   ))}
                 </select>
+                </div> */}
+
+                <div className={styles.formGroup}>
+                  <label htmlFor="applicantType" className={styles.formLabel}>
+                    Applicant Type <span className={styles.required}>*</span>
+                  </label>
+
+                  <select id="applicantType" className={styles.selectInput} required>
+                    <option value="">Select applicant type</option>
+
+                    {applicantTypes && applicantTypes.length > 0 ? (
+                      applicantTypes.map((type, idx) => (
+                        <option key={idx} value={type}>
+                          {type}
+                        </option>
+                      ))
+                    ) : (
+                      <>
+                        <option value="Fresher">Fresher</option>
+                        <option value="Experienced">Experienced</option>
+                      </>
+                    )}
+                  </select>
                 </div>
+
 
                 <div className={styles.formGroup}>
                   <label htmlFor="qualification" className={styles.formLabel}>
@@ -343,12 +339,12 @@ useEffect(() => {
                   </label>
                   <select id="qualification" className={styles.selectInput} required>
                     <option value="">Select your highest qualification</option>
-                    <option value="high-school">High School</option>
-                    <option value="diploma">Diploma</option>
-                    <option value="bachelors">Bachelor's Degree</option>
-                    <option value="masters">Master's Degree</option>
-                    <option value="phd">PhD</option>
-                    <option value="other">Other</option>
+                    <option value="High School">High School</option>
+                    <option value="Diploma">Diploma</option>
+                    <option value="Bachelor's Degree">Bachelor's Degree</option>
+                    <option value="Master's Degree">Master's Degree</option>
+                    <option value="PhD<">PhD</option>
+                    <option value="Other">Other</option>
                   </select>
                 </div>
 

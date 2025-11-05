@@ -391,7 +391,7 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
       };
 
       // Use the proxy endpoint to avoid CORS
-      const res = await fetch('https://finbyz.tech/api/method/finbyzweb.api.set_form_data', {
+      const res = await fetch('/web-api/fb/method/finbyzweb.api.set_form_data', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),

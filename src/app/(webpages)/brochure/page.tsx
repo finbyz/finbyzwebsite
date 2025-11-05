@@ -141,11 +141,7 @@ export default function Page() {
         description="Download our latest company profile, product brochures, and AI-powered ERPNext solutions. Explore resources to accelerate your business transformation."
         primaryButton={{
           text: "Download Brochure",
-          action: () => {
-            // Scroll to first download section
-            const el = document.getElementById('download');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }
+          action: '#brochure-section'
         }}
         secondaryButton={{
           text: "Contact Us",
