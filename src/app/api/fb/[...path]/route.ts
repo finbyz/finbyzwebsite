@@ -97,14 +97,11 @@ async function handleRequest(
       }
     });
 
-    let body: string | undefined;
+    // Preserve original body for all non-GET/HEAD requests.
+    // Using ArrayBuffer ensures we can retry safely without re-reading the stream.
+    let body: ArrayBuffer | undefined;
     if (method !== 'GET' && method !== 'HEAD') {
-      try {
-        const requestBody = await (request.clone()).json();
-        body = JSON.stringify(requestBody);
-      } catch {
-        body = await request.text();
-      }
+      body = await request.arrayBuffer();
     }
 
 

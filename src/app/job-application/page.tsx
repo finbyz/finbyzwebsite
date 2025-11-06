@@ -16,6 +16,7 @@ export default function JobApplication() {
   const [applicantTypes, setApplicantTypes] = useState<string[]>([]);
   const [jobOpenings, setJobOpenings] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const WEB_FORM_NAME = "job-application";
 
@@ -105,6 +106,8 @@ useEffect(() => {
     
     e.preventDefault();
     try {
+      if (isSubmitting) return;
+      setIsSubmitting(true);
       const form = e.currentTarget;
       const getValue = (id: string) =>
         (form.querySelector(`#${id}`) as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement)?.value || '';
@@ -174,6 +177,8 @@ useEffect(() => {
     } catch (err) {
       console.error("Application submission failed:", err);
       alert("Sorry, something went wrong submitting your application. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -424,13 +429,13 @@ useEffect(() => {
                 </div>
 
                 <div className={styles.actionButtons}>
-                  <Button type="button" variant="outline" className={styles.discardButton}>
+                  <Button type="button" variant="outline" className={styles.discardButton} disabled={isSubmitting}>
                     <X className={styles.buttonIcon} />
                     Discard
                   </Button>
-                  <Button type="submit" className={styles.saveButton}>
+                  <Button type="submit" className={styles.saveButton} disabled={isSubmitting}>
                     <Save className={styles.buttonIcon} />
-                    Save Application
+                    {isSubmitting ? "Submitting..." : "Save Application"}
                   </Button>
                 </div>
               </form>
