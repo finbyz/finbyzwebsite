@@ -3,7 +3,6 @@ import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/componen
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { toast } from "sonner";
 
 const initialState = {
   lead_name: '',
@@ -14,41 +13,59 @@ const initialState = {
 };
 
 const ContactForm: React.FC = () => {
-  const [form, setForm] = useState(initialState);
-  const [loading, setLoading] = useState(false);
+    const [form, setForm] = useState(initialState);
+    const [loading, setLoading] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      setForm({ ...form, [e.target.name]: e.target.value });
+    };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+
     try {
-      const res = await fetch('/web-api/fb/method/finbyzweb.api.set_form_contact_data', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          lead_name: form.lead_name,
-          company_name: form.company_name,
-          mobile_no: form.mobile_no,
-          title: document.title + '<br>' + window.location.href,
-          email: form.email_id,
-          notes: form.notes
-        })
+      const data = {
+        name1: form.lead_name,
+        email: form.email_id,
+        subject: form.mobile_no,
+        message: form.notes,
+        doctype: "Contact Us",
+        web_form_name: "contact",
+      };
+
+      const formBody = new URLSearchParams({
+        data: JSON.stringify(data),
+        web_form: "contact",
+        for_payment: "false",
+        cmd: "frappe.website.doctype.web_form.web_form.accept",
+      }).toString();
+
+      const res = await fetch("web-api/fb/n", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+          "Accept": "application/json, text/javascript, */*; q=0.01",
+          "X-Requested-With": "XMLHttpRequest",
+        },
+        body: formBody,
       });
+
       if (res.ok) {
         setForm(initialState);
-        toast.success("Your interest is inspiring us to do better...\nFinbyz Tech expert shall reach you shortly");
+        alert(
+          "Your interest is inspiring us to do better...\nFinbyz Tech expert shall reach you shortly"
+        );
       } else {
-        toast.error("Something went wrong. Please try again.");
+        alert("Something went wrong. Please try again.");
       }
     } catch (err) {
-      toast.error("Something went wrong. Please try again.");
+      alert("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
   };
+
 
   return (
     <Card className="border-none shadow-lg animate-fade-in-up">
