@@ -221,10 +221,7 @@ export default function Page() {
         highlightWords={heroHighlightWords}
         description="ERPNext Partners in Canada: ERPNext Service Providers offers bespoke ERP solutions in manufacturing, agro, chemical, healthcare & pharmaceutical sectors."
         primaryButton={{ text: 'Get Started', 
-          action: () => {
-            const el = document.getElementById('erpnext-canada');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }
+          action: "#canada"
          }}
         secondaryButton={{ text: 'Our ERPNext Partners', action: handleSecondary }}
         heroImage={{
@@ -384,10 +381,7 @@ export default function Page() {
               secondaryButton: {
                 text: 'Learn More',
                 icon: 'info',
-                action: () => {
-                  const el = document.getElementById('canada');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                }
+                action: "#canada"
               },
               trustIndicator: {
                 text: 'Trusted by businesses worldwide',

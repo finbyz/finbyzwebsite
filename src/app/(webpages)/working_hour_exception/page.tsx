@@ -26,23 +26,11 @@ export default function Page() {
         description="Submit your reason for incomplete working hours or low productivity. This helps us understand and address your situation better."
         primaryButton={{
           text: "Submit Reason",
-          action: () => {
-            if (typeof document !== "undefined") {
-              const el = document.getElementById("exception-form-section");
-              if (el) {
-                el.scrollIntoView({ behavior: "smooth" });
-              } else {
-                console.warn("Section element not found — showing form anyway");
-              }
-            }
-          },
+          action: "#exception-form-section"
         }}
         secondaryButton={{
           text: "Learn More",
-          action: () => {
-            const el = document.getElementById('about-exception-section');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }
+          action: "#exception-form-section"
         }}
         heroImage={{
           alt: 'Working Hour Exception',
@@ -63,13 +51,13 @@ export default function Page() {
           <ul className="list-disc pl-6 text-muted-foreground space-y-1">
             <li>All fields are auto-filled except the reason.</li>
             <li>Your response will be reviewed by the HR/Admin team.</li>
-            <li>Providing a clear reason helps in accurate record keeping.</li>
+            <li id="exception-form-section">Providing a clear reason helps in accurate record keeping.</li>
           </ul>
         </div>
       </Section>
 
       <Section>
-        <div className="container-custom py-8" id="exception-form-section">
+        <div className="container-custom py-8" >
           <WorkingHourExceptionForm onSuccess={handleFormSuccess} />
         </div>
       </Section>
@@ -92,6 +80,7 @@ export default function Page() {
                 icon: 'HelpCircle',
               },
               title: 'Contact HR or Admin for Assistance',
+              highlightText:"Assistance",
               description: 'If you have any questions or face issues submitting your exception, reach out to the HR/Admin team for support.',
               primaryButton: {
                 text: 'Contact HR',

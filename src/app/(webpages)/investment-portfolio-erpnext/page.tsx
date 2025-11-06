@@ -16,10 +16,8 @@ export default function Page() {
         description="Discover how ERPNext empowers you to seamlessly track and optimize your financial assets. Manage stocks, bonds, mutual funds, and more with a unified dashboard for insightful decision-making."
         primaryButton={{
           text: 'Get Started',
-          action: () => {
-            const section = document.querySelector('#aal-section');
-            section?.scrollIntoView({ behavior: 'smooth' });
-          }
+          action:"#aal-section"
+          
         }}
         secondaryButton={{
           text: 'Request Demo',

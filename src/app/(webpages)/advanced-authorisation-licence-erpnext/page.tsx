@@ -18,10 +18,7 @@ export default function Page() {
         description="Optimize your import-export operations with ERPNext. Streamline Advanced Authorisation Licence management, ensure compliance, and enhance efficiency."
         primaryButton={{
           text: 'Get Started',
-          action: () => {
-            const section = document.querySelector('#aal-section');
-            section?.scrollIntoView({ behavior: 'smooth' });
-          }
+          action: "#aal-section"
         }}
         secondaryButton={{
           text: 'Download App',
@@ -35,10 +32,10 @@ export default function Page() {
         }}
       />
 
-      <Section id="aal-section">
+      <Section>
         <div className="container-custom py-8">
           <div className="space-y-4">
-            <p className="text-lg text-muted-foreground animate-fade-in">
+            <p className="text-lg text-muted-foreground animate-fade-in"  id="aal-section">
               This app in ERPNext for Advanced Authorisation Licence helps automate and streamline Import Export Licence management. It ensures proper utilisation of licences that exempt import duties on raw materials used for manufacturing export products. With this app, businesses can avoid overutilization of the advanced authorisation licence, preventing penalties and loss of duty drawback benefits. Users can create, track, and manage licences efficiently, while the system automatically calculates remaining quantities and values for each declared item.
             </p>
           </div>
@@ -200,9 +197,7 @@ export default function Page() {
               primaryButton: {
                 text: 'Get Started',
                 icon: 'ArrowRight',
-                action: () => {
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                },
+                action: "#aal-section"
               },
               secondaryButton: {
                 text: 'Download App',

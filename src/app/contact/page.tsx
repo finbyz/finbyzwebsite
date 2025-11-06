@@ -17,10 +17,8 @@ export default function Page() {
         description="Contact Finbyz for streamlined business solutions. Transform your operations with our expertly designed ERP and digital strategies. Reach out now!"
         primaryButton={{
           text: 'Get in Touch',
-          action: () => {
-            const el = document.getElementById('contact-form-section');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }
+          action:"#contact-form-section"
+          
         }}
         secondaryButton={{
           text: 'Call Us',

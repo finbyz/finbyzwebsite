@@ -26,10 +26,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: "Learn More",
-          action: () => {
-            const el = document.getElementById('info-section');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          },
+          action: "#info-section"
         }}
         heroImage={{
           alt: 'Whatsapp Privacy Policy',
@@ -390,10 +387,7 @@ export default function Page() {
               secondaryButton: {
                 text: "Learn More",
                 icon: "Info",
-                action: () => {
-                  const el = document.getElementById('info-section');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                },
+                action: "#info-section"
               },
               trustIndicator: {
                 text: "Trusted by 1000+ Businesses",

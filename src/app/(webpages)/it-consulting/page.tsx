@@ -38,7 +38,7 @@ export default function Page() {
       />
 
       <Section>
-        <div id='it-consulting' className="container-custom py-8">
+        <div  className="container-custom py-8">
           <p className="text-gray-700 text-justify text-base mb-4">
             With our IT expertise and in-depth understanding of the industry, we can help you develop or update your strategy, refine your goals and business objectives, and maximize your chances of success. This results in better, measurable goals from your IT investment. We work as an IT partner to our clients, where we not only guide them on current issues in hand but by understanding their current processes we also suggest possible solutions for increasing the productivity of the team.
           </p>
@@ -46,7 +46,7 @@ export default function Page() {
           <p className="text-gray-700 text-justify text-base mt-6 mb-4">
             In ever-evolving technology, the businesses face challenge to identify new technologies to reduce cost, increase sales and improve productivity. This requires constant tracking of new opportunities presented by evolving technologies. Many times the cost of upgrading the old legacy system can run higher than buying next-generation solutions for the same problem. But lack of knowledge of new technology can lead to poor decision making. FinByz Tech’s consulting service is a way to bridge this gap.
           </p>
-          <p   className="text-gray-700 text-justify text-base">
+          <p   className="text-gray-700 text-justify text-base" id='it-consulting'>
             Our experienced team will take time to understand you and your responsibilities. The processes you have in place, the technologies that are available to you, and how you like to work. We will then work with you to achieve your goals. As necessary we can redesign processes, re-define responsibilities, and help you select the most suitable technologies that drive user adoption and let you capitalize on your technology investments.
           </p>
         </div>
@@ -81,10 +81,7 @@ export default function Page() {
               secondaryButton: {
                 text: 'Learn More',
                 icon: 'Info',
-                 action: () => {
-            const el = document.getElementById('it-consulting');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }
+                 action: "#it-consulting"
               },
               trustIndicator: {
                 text: 'Trusted by 100+ Businesses',

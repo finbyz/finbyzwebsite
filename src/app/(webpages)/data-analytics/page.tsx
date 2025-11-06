@@ -80,10 +80,7 @@ export default function Page() {
         primaryButton={{ text: 'Request Demo', action: handleContact }}
         secondaryButton={{ 
           text: 'Learn More', 
-          action: () => {
-            const el = document.getElementById('data');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          } 
+          action:"#data" 
         }}
         heroImage={{
           alt: 'Data Analytics',
@@ -92,13 +89,13 @@ export default function Page() {
         }}
       />
 
-      <Section>
-        <div className="container-custom py-8 flex flex-col gap-4 animate-fade-in-up" id="data">
+      <Section >
+        <div className="container-custom py-8 flex flex-col gap-4 animate-fade-in-up" >
 
-          <p>
+          <p >
             Welcome to Finbyz, where data evolves into powerful business intelligence. As one of the trusted data analytics companies, we specialize in transforming complex data sets into clear, actionable strategies. Our data analytics services are designed to drive operational efficiency, support smarter decision-making, and unlock growth across multiple industries. In today’s data-driven landscape, making fast, accurate, and future-proof decisions is critical and we help customer-centric organizations achieve this by aligning the right mix of people, processes, and technology.
           </p>
-          <p>
+          <p id="data">
             Our advanced data analytics solutions go beyond traditional business intelligence. Whether you’re looking to optimize operations or integrate CRM analytics for deeper customer insights, our experienced data scientists apply cutting-edge techniques to uncover meaningful patterns and solve real-world business challenges. At Finbyz, we turn raw data into strategic advantage.
           </p>
 
@@ -145,10 +142,7 @@ export default function Page() {
               secondaryButton: {
                 text: 'Learn More',
                 icon: 'Info',
-                action: () => {
-                  const el = document.getElementById('data');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                } 
+                action: "#data"
               },
               trustIndicator: {
                 text: 'Trusted by leading businesses',

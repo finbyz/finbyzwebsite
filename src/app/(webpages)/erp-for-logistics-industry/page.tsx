@@ -125,14 +125,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Learn More',
-          action: () => {
-            if (typeof window !== 'undefined') {
-              const element = document.getElementById('benefits-section');
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-              }
-            }
-          },
+          action: "#benefits-section"
         }}
         heroImage={{
           alt: 'ERPNext for Logistics Industry',
@@ -155,7 +148,7 @@ export default function Page() {
           <p className="text-base mt-6">
             Transportation in logistics is concerned with the transfer of goods from one place to another, generally moving goods between warehouses of the same company or multiple companies. Implementing <a href="/erp-software" className="text-primary underline hover:text-primary-foreground transition-colors" target="_blank">ERP system</a> for the logistics industry with respect to transportation is all about providing real-time information of all indirect costs, related to manpower, documentation, truck maintenance and their impact on profitability.
           </p>
-          <p className="text-base mt-2">
+          <p className="text-base mt-2" id="benefits-section">
             It tracks all the functions of logistics in an efficient manner making it easy for the decision makers.
           </p>
         </div>
@@ -181,7 +174,7 @@ export default function Page() {
 
       {/* Benefits Section */}
       <Section>
-        <div id="benefits-section" className="container-custom py-8">
+        <div  className="container-custom py-8">
           <h2 className="text-2xl font-bold mb-8 text-center text-[#1A5276]">What Benefits Does ERP Software Offer in the Logistics Industry?</h2>
           <p className="text-base text-muted-foreground mb-6 text-center">
             ERP software revolutionizes logistics by streamlining operations from planning to quality control. It replaces manual processes with automation, enhancing efficiency and accuracy.
@@ -250,14 +243,7 @@ export default function Page() {
               secondaryButton: {
                 text: 'Learn More',
                 icon: 'Download',
-                action: () => {
-                  if (typeof window !== 'undefined') {
-                    const element = document.getElementById('benefits-section');
-                    if (element) {
-                      element.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }
-                },
+                action: "#benefits-section"
               },
               trustIndicator: {
                 text: 'Trusted by leading logistics companies',

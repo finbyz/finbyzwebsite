@@ -14,12 +14,7 @@ import { FaCheckCircle } from 'react-icons/fa';
 
 const heroHighlightWords = ["in", "UAE", "Service Provider"];
 
-const handlePrimary = () => {
-  window.location.href = '/contact';
-};
-const handleSecondary = () => {
-  window.location.href = '/erpnext-certified-partner';
-};
+
 
 const flipCards = [
   {
@@ -146,12 +141,9 @@ export default function Page() {
         description="ERPNext Partner offers bespoke ERP solutions in manufacturing, agro, chemical, healthcare & pharmaceutical sectors."
         primaryButton={{ 
           text: "Get Started", 
-          action: () => {
-            const el = document.getElementById('uae');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }
+          action: "#uae"
          }}
-        secondaryButton={{ text: "Our Partnership", action: handleSecondary }}
+        secondaryButton={{ text: "Our Partnership", action: '/partnership-programs' }}
         heroImage={{
           alt: "ERPNext Service Provider in UAE ",
           src: "/images/Hire-ERPNext-Implementor679475.svg",
@@ -164,7 +156,7 @@ export default function Page() {
               Finbyz Tech, your trusted <a href="/erpnext-certified-partner" className="text-primary underline hover:text-primary/80">ERPNext partner</a> and ERPNext service provider in UAE. Specialized in delivering cutting-edge ERP solutions, we empower businesses to thrive in the competitive and innovative UAE market. Embrace the future with ERPNext’s powerful functionalities tailored by our experts to meet your unique business needs.
             </p>
             <p className="mt-4">
-              <a href="/erpnext-software" className="text-primary underline hover:text-primary/80" id="uae">ERPNext</a> is a versatile open-source ERP software that caters to a wide range of industries, including manufacturing, distribution, retail, trading, services, education, non-profits, and healthcare. It is a cloud-based solution that is easy to use and affordable, making it a popular choice for businesses of all sizes in the UAE.
+              <a href="/erpnext-software" className="text-primary underline hover:text-primary/80" >ERPNext</a> is a versatile open-source ERP software that caters to a wide range of industries, including manufacturing, distribution, retail, trading, services, education, non-profits, and healthcare. It is a cloud-based solution that is easy to use and affordable, making it a popular choice for businesses of all sizes in the UAE.
             </p>
           </div>
          
@@ -232,7 +224,7 @@ export default function Page() {
               description="ERPNext can help businesses in the UAE to comply with local regulations. ERPNext is regularly updated to comply with the latest changes in UAE laws and regulations."
             />
           </div>
-          <p className="mt-8">
+          <p className="mt-8" id="uae">
             If you are a business owner in the UAE, ERPNext is a great option to consider for your ERP needs. ERPNext is a comprehensive, easy-to-use, and affordable ERP solution that can help your business to improve its efficiency, reduce costs, increase visibility, and improve compliance.
           </p>
         </div>
@@ -301,10 +293,7 @@ export default function Page() {
               secondaryButton: {
                 text: "Learn More",
                 icon: "ArrowRight",
-                action: () => {
-                  const el = document.getElementById('uae');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                }
+                action: "#uae"
               },
               trustIndicator: {
                 text: "Trusted by businesses worldwide",

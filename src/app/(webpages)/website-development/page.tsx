@@ -132,7 +132,7 @@ export default function Page() {
       <Section>
         <div className="container-custom py-8 space-y-4">
           <p>Your website is the first impression that every person gets when they search for your company’s name. It has to be the most interesting and informative part of your business if you wish to retain your prospective clients. The visitors should get an enlightening experience while they scroll through the website. We continue to provide growth and excellence to your business with our development expertise.</p>
-          <p>As an experienced website development company in Ahmedabad, Gujrat, India. We build dynamic websites with robust technology, tailored solutions as per your company needs. Don’t just become a domain on the internet use it as a powerful tool for marketing your brand.</p>
+          <p id="website">As an experienced website development company in Ahmedabad, Gujrat, India. We build dynamic websites with robust technology, tailored solutions as per your company needs. Don’t just become a domain on the internet use it as a powerful tool for marketing your brand.</p>
         </div>
       </Section>
 
@@ -186,11 +186,7 @@ export default function Page() {
               primaryButton: {
                 text: 'Get Started',
                 icon: 'ArrowRight',
-                action: () => {
-                  if (typeof window !== 'undefined') {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }
-                }
+                action: "#website"
               },
               secondaryButton: {
                 text: 'See Our Work',

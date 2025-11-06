@@ -25,11 +25,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Learn More',
-          action: () => {
-            if (typeof window !== 'undefined') {
-              window.scrollTo({ top: 600, behavior: 'smooth' });
-            }
-          },
+          action: "#DyeChem"
         }}
         heroImage={{
           alt: 'DyeChem Industry',
@@ -48,7 +44,7 @@ export default function Page() {
             <p>
               The whole chemical industry works based on yield, concentration or purity of the chemicals used or produced. The costing changes dynamically based on these parameters of same item. So they need inventory management with not only quantity for each item, but also batch-wise quality parameters with price.
             </p>
-            <p>
+            <p id="DyeChem">
               Given samples play an important role in deciding the quality of chemical, most of the orders are based on a sample provided. This creates a requirement to manage the samples and their recipes. The raw material cost (RMC) may change for each sample if you customize your standard products as per customer requirement. Fluctuating raw material prices may make it difficult to quote for old samples if client inquiries.
             </p>
           </div>

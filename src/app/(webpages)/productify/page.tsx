@@ -23,10 +23,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Learn More',
-          action: () => {
-            const el = document.getElementById('features-section');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          },
+          action: "#features-section"
         }}
         heroImage={{
           alt: 'Productify',
@@ -59,15 +56,15 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8 flex flex-col gap-6">
-          <p className="text-lg text-muted-foreground animate-fadeInUp">
+          <p className="text-lg text-muted-foreground animate-fadeInUp" id="features-section">
             Productify includes two primary modules – the Activity Analysis dashboard and Summary Reports. Both are integrated with ERP, allowing employees and leadership to monitor and evaluate productivity. This Employee Monitoring Software supports transparency, boosts accountability, and aligns employee efforts with organizational objectives.
           </p>
         </div>
       </Section>
-
-      <Section id="features-section" useGradient>
-        <div className="container-custom py-8">
-          <h2 className="text-3xl text-[#1A5276] font-bold text-center mb-8 animate-fadeInUp">Features</h2>
+      
+      <Section  useGradient>
+        <div className="container-custom py-8" >
+          <h2 className="text-3xl text-[#1A5276] font-bold text-center mb-8 animate-fadeInUp" >Features</h2>
           <FeatureGrid
             features={[
               {

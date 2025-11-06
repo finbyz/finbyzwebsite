@@ -15,10 +15,7 @@ export default function Page() {
         description="Discover leading ERPNext service providers for seamless business management solutions. Expert customization, support, and integration services."
         primaryButton={{
           text: 'Get Started',
-          action: () => {
-            const el = document.getElementById('erp-service');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }
+          action: "#erp-service"
         }}
         secondaryButton={{
           text: 'Contact Us',
@@ -186,10 +183,7 @@ export default function Page() {
               secondaryButton: {
                 text: 'Learn More',
                 icon: 'Info',
-                action: () => {
-                  const el = document.getElementById('erp-service');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                }
+                action: "#erp-service"
               },
               trustIndicator: {
                 text: 'Trusted by leading businesses',

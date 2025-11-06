@@ -18,10 +18,7 @@ export default function Page() {
         description="Discover how ERPNext simplifies fixed deposit management with automated tracking, interest accrual, and seamless integration into your financial asset portfolio."
         primaryButton={{
           text: 'Get Started',
-          action: () => {
-            const el = document.getElementById('fd-managment');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }
+          action: "#fd-managment"
         }}
         secondaryButton={{
           text: 'Download App',
@@ -37,13 +34,13 @@ export default function Page() {
       />
 
       <Section useGradient>
-        <div className="container-custom py-8 flex flex-col md:flex-row items-center gap-8 animate-fade-in-up" id="fd-managment">
+        <div className="container-custom py-8 flex flex-col md:flex-row items-center gap-8 animate-fade-in-up" >
           <div className="flex-1">
             <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-[#1A5276]">
               <span className="inline-block w-2 h-6 bg-primary rounded-sm" />
               Introduction
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed text-justify" >
+            <p  className="text-muted-foreground text-lg leading-relaxed text-justify" >
               In ERPNext, Fixed Deposit (FD) management is a vital component of effective financial asset planning. A fixed deposit is a secure investment option offered by banks and NBFCs, providing higher returns than a standard savings account over a fixed period. With FD management in ERPNext, businesses can track, manage, and automate their fixed deposit operations directly within the ERP system, ensuring accuracy and compliance.
             </p>
           </div>
@@ -54,7 +51,7 @@ export default function Page() {
       </Section>
 
       <Section>
-        <div className="container-custom py-8">
+        <div className="container-custom py-8" id="fd-managment">
           <YouTubeEmbed
             url="https://www.youtube.com/watch?v=hZTaBWUbmf0"
             title="FD Management In ERPNext Demo"
@@ -101,17 +98,7 @@ export default function Page() {
         </div>
       </Section>
 
-      {/* <Section>
-        <div className="container-custom py-8 flex flex-col items-center gap-4">
-          <h4 className="text-lg font-semibold">Download:</h4>
-          <Link href="https://frappecloud.com/marketplace/apps/fd_management" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" size="lg" className="gap-2">
-              <Download className="w-5 h-5" />
-              FD Management
-            </Button>
-          </Link>
-        </div>
-      </Section> */}
+      
 
       <Section useGradient>
         <div className="container-custom py-8 flex flex-col items-center text-center">

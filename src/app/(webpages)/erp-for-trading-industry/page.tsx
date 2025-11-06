@@ -83,10 +83,7 @@ export default function Page() {
         description="Unlock premium ERP for trading sector: Optimize processes, boost efficiency, and fuel business expansion. Transform your enterprise now!"
         primaryButton={{
           text: 'Get Started',
-          action: () => {
-            const el = document.getElementById('erp-trading');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }
+          action:"#erp-trading"
         }}
         secondaryButton={{
           text: 'Watch Demo',
@@ -102,7 +99,7 @@ export default function Page() {
       />
 
       <Section>
-        <div className="container-custom py-8" id="erp-trading">
+        <div className="container-custom py-8" >
           <div className="flex flex-col items-center gap-4 animate-fade-in-up">
             <h2 className="text-2xl font-bold text-center text-[#1A5276]">ERP Software for Trading Business</h2>
             <QuoteBlock
@@ -113,7 +110,7 @@ export default function Page() {
               <p>
               In today's digital era, information is the cornerstone of success. ERP software, particularly for trading businesses, stands out not only for its capability to aggregate critical data but also for its exceptional ability to transform this data into actionable insights. This conversion of quotations into successful sales orders is facilitated by ERP, making it an indispensable tool for forward-thinking enterprises. As a premier ERP service provider, we specialize in customizing solutions that harness the power of ERP to drive your trading business towards unparalleled efficiency and profitability.</p>
 
-          <p>Trading businesses are said to be the link between the manufacturers or suppliers and the end customers. They deal in one specific good or a few categories of goods that render benefit to them. The main function in the trading business is the management of logistics and distribution of the goods and products. Traditional ways of managing the sales of these goods are very hectic and tedious. The automation of these processes through ERP Software can lead to more efficiency and growth in sales and distribution.
+          <p id="erp-trading">Trading businesses are said to be the link between the manufacturers or suppliers and the end customers. They deal in one specific good or a few categories of goods that render benefit to them. The main function in the trading business is the management of logistics and distribution of the goods and products. Traditional ways of managing the sales of these goods are very hectic and tedious. The automation of these processes through ERP Software can lead to more efficiency and growth in sales and distribution.
 
                 Every piece of information and knowledge is important for every type of business.
           </p>
@@ -186,10 +183,7 @@ export default function Page() {
           secondaryButton: {
             text: 'Learn More',
             icon: 'info',
-            action: () => {
-              const el = document.getElementById('erp-trading');
-              if (el) el.scrollIntoView({ behavior: 'smooth' });
-            }
+            action: "#erp-trading"
           },
           trustIndicator: {
             text: 'Trusted by leading trading businesses',

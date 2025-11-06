@@ -21,19 +21,18 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Learn More',
-          action: () => {
-            const el = document.getElementById('introduction');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          },
+          action: "#introduction"
         }}
         heroImage={{
           alt: 'EMD Management in ERPNext',
           src: '/images/EMD-PageDesign-for-Apps.svg',
         }}
       />
+      
+      
 
-      <Section useGradient>
-        <div className="container-custom py-8" id="introduction">
+      <Section useGradient >
+        <div className="container-custom py-8">
           <div className="space-y-6">
             <h2 className="text-2xl font-bold flex items-center gap-2 text-[#1A5276]">
               {/* <CheckCircle2 className="text-primary" size={28} /> */}
@@ -46,7 +45,7 @@ export default function Page() {
         </div>
       </Section>
 
-      <Section>
+      <Section id="introduction">
         <div className="container-custom py-8 flex flex-col items-center">
           <YouTubeEmbed
             url="https://www.youtube.com/embed/oArobHyygSQ"

@@ -85,8 +85,6 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
         email: formData.email,
       };
 
-      // /api/frappe/finbyzweb.api.set_form_data
-      // https://website.finbyz.com/api/method/finbyzweb.api.set_form_data
 
       // Use the same API as business slider
       const res = await fetch('/web-api/fb/method/finbyzweb.api.set_form_data', {

@@ -26,10 +26,7 @@ export default function Page() {
         primaryButton={{ text: 'Get Free Consultation', action: handlePrimaryCTA }}
         secondaryButton={{ 
           text: 'Learn More', 
-          action: () => {
-            const el = document.getElementById('engineering');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }
+          action: "#engineering"
          }}
         heroImage={{
           alt: 'ERPNext for the Engineering Industry',
@@ -41,20 +38,22 @@ export default function Page() {
       {/* Introduction Section */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4 text-center text-[#1A5276]" id="engineering">ERP Software for Engineering Companies</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center text-[#1A5276]" >ERP Software for Engineering Companies</h2>
           <p className="mb-6 text-gray-700 text-center">
             Why implement <a href="/erpnext-software" target="_blank" className="text-blue-600 underline">ERP software</a> for engineering companies? ERP software for engineering companies offers benefits such as better project management, cost reduction, real-time calculated information, and a total integrated package. It improves decision making and helps your business grow. Core <a href="/benefits-of-erp" target="_blank" className="text-blue-600 underline">advantages of ERP</a> for engineering include customer-oriented systems, data efficiency, and effective communication.
           </p>
           <QuoteBlock text="The proposed process designs should always be designed within the logic of the ERP systems. - Andera." isHeading={false} />
-          <p className="mt-6 text-gray-700">
+          <p className="mt-6 text-gray-700" id="engineering"  >
             Engineering industry companies deal with manufacturing and designing machines, complex structures, and various devices. The main functions are manufacturing, design, processing, and construction. This industry faces challenges like complex projects, production costs, and pricing. ERP helps manage operations systematically and standardizes processes. It automates business processes, integrates all departments, and simplifies complex elements (like 3D designs) for professionals. ERP also solves inventory tracking and management challenges for engineering companies.
           </p>
         </div>
+    
       </Section>
 
       {/* Features Section */}
+      
       <Section useGradient>
-        <div className="container-custom py-8">
+        <div className="container-custom py-8" id="engineering"  >
           <h2 className="text-2xl font-bold mb-4 text-center  text-[#1A5276]">Key Features of Engineering ERP Software</h2>
           <QuoteBlock text="A project is complete when it starts working for you, Rather than you working for it – Scott Allen" isHeading={false} />
           <p className="mt-6 text-gray-700">
@@ -187,10 +186,7 @@ export default function Page() {
               secondaryButton: {
                 text: 'Learn More',
                 icon: 'info',
-                action: () => {
-                  const el = document.getElementById('engineering');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                }
+                action: "#engineering"
               },
               trustIndicator: {
                 text: 'Trusted by leading engineering firms',

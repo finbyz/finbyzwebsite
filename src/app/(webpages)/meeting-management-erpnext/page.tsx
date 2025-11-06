@@ -21,10 +21,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Watch Video',
-          action: () => {
-            const el = document.getElementById('meeting-video');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          },
+          action: "#meeting-video"
         }}
         heroImage={{
           alt: 'Meeting Management In ERPNext',

@@ -20,10 +20,7 @@ export default function Page() {
       'Looking for a reliable software development company in Ahmedabad? FinByz Tech offers custom software solutions tailored to your business needs. We deliver scalable, secure, and high-performing applications to empower your business.',
     primaryButton: {
       text: 'Our Services',
-      action: () => {
-        const el = document.getElementById('sd-cards');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      },
+      action:"#sd-cards"
     },
     secondaryButton: {
       text: 'Request Consultation',
@@ -203,7 +200,7 @@ export default function Page() {
             <p>
               We provide tailored <a href="/erpnext-services-in-uae" className="text-primary hover:text-primary/80" target="_blank" rel="noopener noreferrer">custom software development</a> and enterprise software implementation services designed to meet your unique business needs. As a trusted software development company, we deliver scalable solutions that support critical operations, integrate with mobile apps and third-party software, adopt advanced technologies, and align with your long-term business objectives.
             </p>
-            <p>
+            <p  id="sd-cards">
               Our custom software development approach ensures your solution is crafted to solve specific challenges. We align with your business processes to deliver software that streamlines workflow, improves productivity, and enhances overall efficiency.
             </p>
           </div>
@@ -212,7 +209,7 @@ export default function Page() {
 
       {/* Software Development Services Section */}
       <Section useGradient>
-        <div className="container-custom py-8" id="sd-cards">
+        <div className="container-custom py-8">
           <h2 className="text-center text-2xl font-bold mb-8 relative inline-block after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-2 text-[#1A5276]">Software Development Services</h2>
           <ServiceFlipCards cards={serviceCards} />
         </div>

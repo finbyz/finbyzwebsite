@@ -30,7 +30,7 @@ export default function Page() {
         headline="Hire Django Developer "
         highlightWords={["Django", "Developer"]}
         description="Looking to hire Django developers? Find expert Python Django developers for your project needs. Hire Django developers today and level up your project!"
-        primaryButton={{ text: 'Hire Now', action: heroPrimaryAction }}
+        primaryButton={{ text: 'Hire Now', action: "#django" }}
         secondaryButton={{ text: 'Contact Us', action: heroSecondaryAction }}
         heroImage={{
           alt: 'Hire Django Developer',
@@ -45,14 +45,14 @@ export default function Page() {
             text="Best Django Development Company"
             isHeading={true}
           />
-          <p className="mt-6 text-gray-700 text-base">
+          <p className="mt-6 text-gray-700 text-base" id="django">
             Get ready to revolutionize your outsourcing needs with Finbyz Tech. Our cutting-edge Django development services are designed to cater and scale your operations with ease. Our team of expert developers has a track record of delivering high-quality results, so you can trust us to handle your most complex projects. Don't settle for anything less than the best - partner with Finbyz Tech for all your Django development needs and experience the difference for yourself.
           </p>
         </div>
       </Section>
 
       <Section useGradient>
-        <div className="container-custom py-8">
+        <div className="container-custom py-8" >
           <h2 className="text-2xl font-bold text-center mb-8 text-[#1A5276]">What Our Django Full Stack Developers Can Do for You?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <FlipCard
@@ -345,7 +345,7 @@ export default function Page() {
               primaryButton: {
                 text: 'Get Started',
                 icon: 'ArrowRight',
-                action: heroPrimaryAction,
+                action: "#django",
               },
               secondaryButton: {
                 text: 'Contact Sales',

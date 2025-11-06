@@ -20,10 +20,7 @@ export default function Page() {
         description="Access premier web app development from our top web application development company. We're leaders in expert solutions among web development companies."
         primaryButton={{
           text: 'Get Started',
-          action: () => {
-            const el = document.getElementById('web-app');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }
+          action: "#web-app"
         }}
         secondaryButton={{
           text: 'Contact Us',

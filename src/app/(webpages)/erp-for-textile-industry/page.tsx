@@ -6,12 +6,13 @@ import { List } from '@/components/sections/list';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
 import CTA from '@/components/sections/cta';
+import Section from '@/components/sections/Section';
 
 export default function Page() {
   return (
     <>
       {/* HERO SECTION */}
-      <section>
+      <Section>
         <DynamicHero
           headline="ERP Solutions for Textile Manufacturing & Distribution"
           highlightWords={[ "Textile", "Manufacturing", "Distribution"]}
@@ -33,30 +34,30 @@ export default function Page() {
           }}
           accentColor="orange"
         />
-      </section>
+      </Section>
 
       {/* OVERVIEW SECTION */}
-      <section id="overview">
+      <Section id="overview">
         <div className="container-custom py-8">
           <h2 className="text-3xl font-bold text-[#1A5276] mb-6">Overview</h2>
           <p className="text-slate-700 text-base md:text-lg mb-6 md:mb-7 text-justify">
             The textile sector faces swift demand shifts, intricate manufacturing processes, global supply chain management, and precise quality requirements. Modern ERP solutions empower textile manufacturers and distributors by connecting operations from raw material sourcing to finished goods delivery. Finbyz Tech delivers ERPNext implementations purpose-built for textile operations, weaving industry best-practices and technology together. With seamless data visibility, optimized production, advanced analytics, and cost controls, your textile enterprise can streamline every workflow, minimize risks, and unlock new opportunities for growth and profitability.
           </p>
         </div>
-      </section>
+      </Section>
 
       {/* INTRO CONTENT */}
-      <section>
+      <Section>
         <div className="container-custom py-8">
         <h2 className="text-3xl font-bold text-[#1A5276] mb-6">Revolutionizing the Textile Industry with Advanced ERP Solutions</h2>
         <p className="text-slate-700 text-base md:text-lg mb-6 md:mb-7 text-justify">The textile industry is dynamic and complex, characterized by intricate supply chains, fluctuating demands, and an ongoing need for innovation. From yarn production and weaving to dyeing, finishing, and garment manufacturing, every stage presents specialized operational challenges.</p>
         <p className="text-slate-700 text-base md:text-lg mb-6 md:mb-7 text-justify">To thrive in this competitive landscape, textile businesses need robust, integrated systems that deliver clarity, efficiency, and control. A specialized Enterprise Resource Planning (ERP) system is essential for unifying the value chain and delivering transformation.</p>
         <p className="text-slate-700 text-base md:text-lg mb-6 md:mb-7 text-justify">At Finbyz Tech, we bring over a decade of ERP expertise, blending deep industry knowledge with custom ERPNext implementations tailored to the nuances and workflows unique to textiles.</p>
         </div>
-      </section>
+      </Section>
 
       {/* CHALLENGES SECTION - ResponsiveCardGrid */}
-      <section>
+      <Section>
         <div className="py-8">
           <ResponsiveCardGrid
             data={{
@@ -140,10 +141,10 @@ export default function Page() {
             className="animate-fade-in"
           />
         </div>
-      </section>
+      </Section>
 
       {/* BENEFITS SECTION - Benefits component */}
-      <section>
+      <Section>
         <div className="py-8">
           <Benefits
             data={{
@@ -249,10 +250,10 @@ export default function Page() {
             }}
           />
         </div>
-      </section>
+      </Section>
 
       {/* CORE MODULES & CUSTOMIZATIONS SECTION - ResponsiveCardGrid */}
-      <section>
+      <Section>
         <div className="py-8">
           <ResponsiveCardGrid
             data={{
@@ -336,10 +337,10 @@ export default function Page() {
             className="animate-fade-in"
           />
         </div>
-      </section>
+      </Section>
 
       {/* ADVANCED FEATURES SECTION - ResponsiveCardGrid */}
-      <section>
+      <Section>
         <div className="py-8">
           <ResponsiveCardGrid
             data={{
@@ -423,10 +424,10 @@ export default function Page() {
             className="animate-fade-in"
           />
         </div>
-      </section>
+      </Section>
 
       {/* THE FINBYZ TECH ADVANTAGE - List (simple bullets) */}
-      <section>
+      <Section>
         <div className="container-custom py-8">
           <List
             title="The Finbyz Tech Advantage"
@@ -442,10 +443,10 @@ export default function Page() {
             iconColor="text-[#1A5276]"
           />
         </div>
-      </section>
+      </Section>
 
       {/* FINAL CTA SECTION */}
-      <section>
+      <Section>
         <div className="py-8">
           <CTA
             data={{
@@ -470,7 +471,7 @@ export default function Page() {
             }}
           />
         </div>
-      </section>
+      </Section>
     </>
   );
 }

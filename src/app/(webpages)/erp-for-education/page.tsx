@@ -112,10 +112,7 @@ export default function Page() {
         description="Discover the best ERP for schools. Our education ERP software streamlines operations, enhancing efficiency and learning outcomes for educational institutions."
         primaryButton={{
           text: 'Get Started',
-          action: () => {
-            const el = document.getElementById('erp-education');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }
+          action: "#erp-education"
         }}
         secondaryButton={{
           text: 'Request Demo',
@@ -127,11 +124,11 @@ export default function Page() {
       />
 
       <Section>
-        <div className="container-custom py-8 animate-fade-in-up" id="erp-education">
+        <div className="container-custom py-8 animate-fade-in-up">
           <h2 className="text-3xl font-bold mb-4 text-[#1A5276]">ERP software for the Education Purpose</h2>
           <p className="mb-2">Finbyz ERP is an open source, modern ERP software for educational institutes and schools. It helps schools of any size to manage students, teachers, courses, and academic programs with an interactive portal built on our platform, all out of the box.</p>
           <p className="mb-2">With recent government initiatives to provide education in every nook and corner of the world, the future of education looks promising. Meanwhile, with growing competition between educational institutes and businesses, everyone is looking to next-gen enterprise technology solutions.</p>
-          <p className="mb-2">Increase productivity, stand out from the pack, and focus on what matters — academics. Finbyz ERP is an open-source solution for student information management, employee management and expenses that can help you keep all critical information in one integrated system.</p>
+          <p className="mb-2" id="erp-education">Increase productivity, stand out from the pack, and focus on what matters — academics. Finbyz ERP is an open-source solution for student information management, employee management and expenses that can help you keep all critical information in one integrated system.</p>
         </div>
       </Section>
 
@@ -188,10 +185,8 @@ export default function Page() {
               primaryButton: {
                 text: 'Get Started',
                 icon: 'ArrowRight',
-                action: () => {
-                  const el = document.getElementById('erp-education');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                }
+                action: "erp-education"
+                  
               },
               secondaryButton: {
                 text: 'Request Demo',

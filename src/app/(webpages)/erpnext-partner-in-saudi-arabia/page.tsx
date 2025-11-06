@@ -25,9 +25,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Learn More',
-          action: () => {
-            window.scrollTo({ top: 600, behavior: 'smooth' });
-          },
+          action: "#saudi"
         }}
         heroImage={{
           alt: 'ERPNext Partner in Saudi Arabia',
@@ -41,7 +39,7 @@ export default function Page() {
             <p>
               Welcome FinByz Tech, your trusted <a href="https://finbyz.tech/erpnext-certified-partner" className="text-primary underline hover:text-primary/80 transition-colors">ERPNext partner</a> providing the best ERPNext services specifically designed for Saudi Arabian companies. By focusing on providing innovative ERP systems, we enable Saudi businesses to prosper in a market that is dynamic and full of both opportunities and difficulties. With ERPNext's powerful capabilities, which have been expertly customised to match the particular requirements of Saudi Arabian businesses, you can confidently move into the future.
             </p>
-            <p>
+            <p id="saudi">
               A wide range of industries, including manufacturing, distribution, retail, trading, services, education, non-profits, and healthcare, are served by the adaptable open-source ERP software ERPNext. For companies of all sizes in Saudi Arabia, its cost-effectiveness, user-friendliness, and cloud-based architecture make it a desirable choice.
             </p>
           </div>
@@ -217,9 +215,7 @@ export default function Page() {
               secondaryButton: {
                 text: 'Learn More',
                 icon: 'Info',
-                action: () => {
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                },
+                action: "#saudi"
               },
               trustIndicator: {
                 text: 'Trusted by leading Saudi businesses',

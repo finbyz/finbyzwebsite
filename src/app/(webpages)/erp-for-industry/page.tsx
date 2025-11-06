@@ -71,16 +71,11 @@ export default function Page() {
         description="Discover tailored solutions with customized ERP software and custom ERP system customization services. Optimize your business processes today."
         primaryButton={{
           text: 'Get Started',
-          action: () => {
-            window.location.href = '/contact';
-          },
+          action: "#industry-intro"
         }}
         secondaryButton={{
           text: 'Learn More',
-          action: () => {
-            const intro = document.getElementById('industry-intro');
-            if (intro) intro.scrollIntoView({ behavior: 'smooth' });
-          },
+          action: "#industry-intro"
         }}
         heroImage={{
           alt: 'Customized ERP For Industries',
@@ -89,7 +84,7 @@ export default function Page() {
       />
 
       <Section>
-        <div className="container-custom py-8" id="industry-intro">
+        <div className="container-custom py-8" >
           <p className="text-lg text-justify leading-relaxed animate-fade-in">
             When it comes to ERP Software, customization on the basis of industries plays a very important role. Industry-specific ERP is more beneficial to a company as they are very flexible and provide the possibility of adding features and integrating add-on customization as per the specific industry that your company belongs to. It is a solution that is made according to the different requirements and needs of various departments of your business. Implementation of Industry-specific ERP in your business helps you to simplify and fasten the planning and decision making of your business. The Industrial Specific ERP mainly provides the advantages of speed, efficiency, and convenience. Some of the main Industry Specific ERP Software are as follows:
           </p>
@@ -97,7 +92,7 @@ export default function Page() {
       </Section>
 
       <Section useGradient>
-        <div className="container-custom py-8">
+        <div className="container-custom py-8" id='industry-intro'>
           <IndustryTabs tabs={industryTabs} />
         </div>
       </Section>

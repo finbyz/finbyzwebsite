@@ -19,10 +19,7 @@ export default function Page() {
         description="Master forward contract management in ERPNext. Learn setup, utilization, cancellation, and seamless accounting integration for effective currency hedging."
         primaryButton={{
           text: 'Get Started',
-          action: () => {
-            const el = document.getElementById('contract');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }
+          action: "#contract"
         }}
         secondaryButton={{
           text: 'Download App',
@@ -46,7 +43,7 @@ export default function Page() {
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-0 animate-fade-in-up text-[#1A5276]">Overview</h2>
             </CardHeader>
             <CardContent>
-              <p className="text-base text-muted-foreground">
+              <p className="text-base text-muted-foreground" id="contract">
                 Forward contracting in ERPNext is a powerful tool for currency hedging, allowing businesses to lock in exchange rates for future international transactions. Through the forward contract ERPNext feature, importers and exporters can minimize the impact of currency fluctuations by setting a fixed rate in advance. With integrated forward contract accounting ERPNext capabilities, companies can efficiently track forward contracts, manage gains or losses, and maintain accurate financial records aligned with their forex exposures.
               </p>
             </CardContent>
@@ -55,8 +52,8 @@ export default function Page() {
       </Section>
 
       {/* Introduction Section */}
-      <Section useGradient>
-        <div className="container-custom py-8" id="contract">
+      <Section useGradient >
+        <div className="container-custom py-8" >
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 animate-fade-in-up text-[#1A5276]">
             {/* <CheckCircle className="text-primary" size={24} /> */}
             Introduction

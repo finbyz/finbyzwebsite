@@ -37,10 +37,7 @@ export default function Page() {
         description="Easily submit and manage your joining details. Fill out the form to complete your onboarding process quickly and securely."
         primaryButton={{
           text: "Start Now",
-          action: () => {
-            const el = document.getElementById('employee-joining-form-section');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }
+          action: "#employee-joining-form-section"
         }}
         secondaryButton={{
           text: "Contact Us",
@@ -76,7 +73,8 @@ export default function Page() {
       </Section>
       <Section>
         <div className="container-custom py-8" id="employee-joining-form-section">
-          <EmployeeJoiningForm fields={fields} excludedFieldnames={excludedFieldnames} />
+          {/* <EmployeeJoiningForm fields={fields} excludedFieldnames={excludedFieldnames} /> */}
+          <EmployeeJoiningForm/>
         </div>
       </Section>
       <Section useGradient>
@@ -105,10 +103,7 @@ export default function Page() {
               primaryButton: {
                 text: "Submit Now",
                 icon: "Save",
-                action: () => {
-                  const el = document.getElementById('employee-joining-form-section');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                }
+                action: "#employee-joining-form-section"
               },
               secondaryButton: {
                 text: "Contact HR",

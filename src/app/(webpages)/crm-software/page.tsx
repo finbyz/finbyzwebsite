@@ -22,10 +22,7 @@ export default function Page() {
         description="Streamline your sales, marketing, and support with Finbyz CRM Software. Discover our powerful CRM system and flexible open source CRM solutions designed for growth."
         primaryButton={{
           text: 'Get Started',
-          action: () => {
-            const section = document.querySelector('#aal-section');
-            section?.scrollIntoView({ behavior: 'smooth' });
-          }
+          action:"#crm-software"
         }}
         secondaryButton={{
           text: 'Contact Us',
@@ -50,16 +47,17 @@ export default function Page() {
             <p>
               Optimum customer relationship management is the key to achieving happy customers. Every business nowadays leverages CRM software to improve its productivity and efficiency. The technology of CRM systems allows organizations of all sizes to automate and synchronize the phases of customer interaction. The dynamic business environment has openly embraced this technology. Finbyz offers customized CRM software solutions in Ahmedabad for various industries, helping you increase sales and customer engagement.
             </p>
-            <p>
+            <p id="crm-software">
               Customers should be a priority for every kind of business. This makes acquiring and retaining customers a very important part of the organization. This is where the power of CRM systems comes to play. It refers to the practices and guidelines adopted by firms to interact with their customers effectively. Maintaining strong customer relationships boosts sales volumes and simplifies sales and marketing functions. Businesses can specify their own rules within a CRM system to automate customer communications, reducing human errors and increasing customer satisfaction.
             </p>
           </div>
         </div>
       </Section>
-
+    
       {/* Inventive in CRM Software */}
       <InventiveCRMSection />
-
+    
+  
       {/* Unique Selling Propositions */}
       <UniqueSellingPropositions />
 
@@ -73,6 +71,7 @@ export default function Page() {
       <CRMImportanceSection />
 
       {/* Benefits Section */}
+    
       <Section>
         <div className="container-custom py-8 relative">
           <div className="absolute right-0 bottom-0 hidden sm:block opacity-30 pointer-events-none">

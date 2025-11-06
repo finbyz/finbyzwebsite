@@ -267,13 +267,7 @@ export default function Page() {
                   window.location.href = '/contact';
                 },
               },
-              // secondaryButton: {
-              //   text: 'Download Brochure',
-              //   icon: 'download',
-              //   action: () => {
-              //     window.open('/images/chemical_new.svg', '_blank');
-              //   },
-              // },
+              
               trustIndicator: {
                 text: 'Trusted by leading chemical manufacturers',
                 icon: 'award',

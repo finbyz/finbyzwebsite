@@ -26,9 +26,7 @@ export default function Page() {
         description="Implement AFIP-compliant electronic invoicing in ERPNext for Argentina. Automate invoice validation, ensure tax compliance, and streamline financial operations."
         primaryButton={{
           text: 'Get Started',
-          action: () => {
-            if (typeof window !== 'undefined') window.scrollTo({ top: 800, behavior: 'smooth' });
-          }
+          action: "#invoice"
         }}
         secondaryButton={{
           text: 'Contact Us',
@@ -65,7 +63,7 @@ export default function Page() {
               To ensure seamless electronic-invoicing compliance within ERPNext, custom fields are introduced to meet regulatory requirements and facilitate tax reporting.
             </p>
             <List
-              title="Key Custom Fields & Requirements"
+              title=""
               items={[
                 'Dedicated fields to generate the CAE (Authorization Code) and track its expiration date for each invoice.',
                 'Custom fields to manage VAT statuses for both customers and the company, ensuring compliance with local tax regulations.',
@@ -81,10 +79,12 @@ export default function Page() {
       <Section>
         <div className="container-custom py-8 grid md:grid-cols-2 gap-8 items-center">
           <div>
-            <h3 className="text-2xl font-semibold mb-2 flex items-center gap-2">
+          <h3 className="text-3xl font-semibold mb-2 flex items-center gap-2">
+              {/* <HiOutlineDocumentText className="text-blue-500" size={28} /> */}
+            <span className='text-[#1A5276]'>Form Enhancements</span>
             </h3>
             <List
-              title="Form Enhancements"
+              title=""
               items={[
                 'Tab Breaks: Grouping electronic invoicing fields into logical sections to enhance navigation and user efficiency.',
                 'Column Breaks: Optimizing field placement for better readability and workflow organization.',
@@ -97,13 +97,11 @@ export default function Page() {
 
       {/* Process Flow Section */}
       <Section useGradient>
-        <div className="container-custom py-8">
+        <div className="container-custom py-8" id="invoice">
           <div className="mb-8">
-            <h3 className="text-2xl font-semibold flex items-center gap-2 mb-2">
-              {/* <TbApi className="text-purple-500" size={28} /> */}
-              <span className='text-[#1A5276]'>
-                Process Flow for Sales Invoice with Electronic-Invoice Generation
-              </span>
+          <h3 className="text-3xl font-semibold mb-2 flex items-center gap-2">
+              {/* <HiOutlineDocumentText className="text-blue-500" size={28} /> */}
+            <span className='text-[#1A5276]'>Process Flow for Sales Invoice with Electronic-Invoice Generation</span>
             </h3>
             <p className="text-gray-700">
               A streamlined process flow is established to integrate electronic-invoicing into the sales invoice workflow:
@@ -170,15 +168,15 @@ export default function Page() {
       <Section>
         <div className="container-custom py-8 items-center">
           <div>
-            <h3 className="text-2xl font-semibold mb-2 flex items-center gap-2">
-              {/* <LuBanknote className="text-yellow-500" size={28} /> */}
-            <span className='text-[#1A5276]'>  Support for Various Business Scenarios</span>
+          <h3 className="text-3xl font-semibold mb-2 flex items-center gap-2">
+              {/* <HiOutlineDocumentText className="text-blue-500" size={28} /> */}
+            <span className='text-[#1A5276]'>Support for Various Business Scenarios</span>
             </h3>
             <p className="text-gray-700 mb-4">
               ERPNext customizations cater to different business models and regulatory requirements:
             </p>
             <List
-              title="Business Scenario Support"
+              title=""
               items={[
                 'Enable businesses to process payments through diverse channels like cash, bank transfers, credit cards, and online payment gateways.',
                 'Assign appropriate VAT rates and exemptions based on customer and product categories.'
@@ -269,9 +267,7 @@ export default function Page() {
                 secondaryButton: {
                   text: 'Learn More',
                   icon: 'TbApi',
-                  action: () => {
-                    if (typeof window !== 'undefined') window.scrollTo({ top: 800, behavior: 'smooth' });
-                  }
+                  action: "#invoice"
                 },
                 trustIndicator: {
                   text: 'Trusted by leading businesses in Argentina',

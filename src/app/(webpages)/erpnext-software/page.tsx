@@ -19,17 +19,11 @@ export default function Page() {
         description="Discover ERPNext System - your ultimate ERP solution. Streamline operations and enhance efficiency with a unified, open-source platform. Join now to transform your business."
         primaryButton={{
           text: 'Get Started',
-          action: () => {
-            const el = document.getElementById('about-erpnext');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          },
+          action: "#about-erpnext"
         }}
         secondaryButton={{
           text: 'Learn More',
-          action: () => {
-            const el = document.getElementById('about-erpnext');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          },
+          action: "#about-erpnext"
         }}
         heroImage={{
           alt: 'ERPNext',
@@ -49,13 +43,13 @@ export default function Page() {
       </Section>
 
       <Section>
-        <div className="container-custom py-8" id="about-erpnext">
+        <div className="container-custom py-8" >
           <QuoteBlock text="What is ERPNext ?" isHeading={true} />
           <div className="mt-6 text-gray-700 animate-fadeInUp space-y-4">
             <p>
               ERPNext is an open-source enterprise resource planning (ERP) software that is designed to serve small to medium-sized businesses across various industries. It's a comprehensive suite of applications that manages core business processes in a single system, which can include finance, <a href="/human-resource-system" className="text-primary underline hover:text-primary/80">Human Resource</a>, manufacturing, sales, purchasing, <a href="/crm-software" className="text-primary underline hover:text-primary/80">customer relationship management</a> (CRM), inventory, and more.
             </p>
-            <p>
+            <p id="about-erpnext">
               One of the key advantages of ERPNext is its flexibility and ease of use. The software can be customized to fit the unique needs of a business, making it a versatile choice for companies in sectors such as manufacturing, retail, distribution, education, healthcare, agriculture, and services. Its modular design allows businesses to select and implement only the modules they need, with the option to add more functionality as the business grows.
             </p>
           </div>

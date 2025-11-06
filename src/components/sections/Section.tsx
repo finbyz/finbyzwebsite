@@ -25,7 +25,7 @@ const Section: React.FC<SectionProps> = ({
   return (
     <div
       style={appliedStyle}
-      className={className}
+      className={`${className} scroll-mt-20`}
       {...props}
     >
       {children}

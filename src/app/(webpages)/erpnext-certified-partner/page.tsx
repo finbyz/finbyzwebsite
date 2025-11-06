@@ -92,18 +92,15 @@ export default function Page() {
             </div>
 
             {/* Right Column - Certified Partner Image + Stats */}
-            <div className="flex-1 animate-fade-up flex flex-col items-center lg:items-center  gap-6">
+            <div id="certified" className="flex-1 animate-fade-up flex flex-col items-center lg:items-center  gap-6">
              
             </div>
           </div>
         </div>
       </Section>
 
-
-
-
       <Section useGradient>
-        <div className="container-custom py-8">
+        <div className="container-custom py-8" >
           <p className="mb-4 text-gray-700 animate-fade-in-up">
             We’re proud to announce our official recognition as a certified Frappe Partner and ERPNext Partner. This achievement highlights our commitment to providing top-tier ERP solutions and implementation services. As an ERPNext Partner in Ahmedabad, we have successfully completed all certification and training milestones, ensuring we bring the latest knowledge and best practices to every project. Finbyz Tech is your reliable partner for <Link href="/hire-erpnext-implementer" className="text-primary underline hover:text-primary/80">ERPNext implementation, customization, and support</Link>.
           </p>
@@ -216,9 +213,7 @@ export default function Page() {
               secondaryButton: {
                 text: 'Learn More',
                 icon: 'Info',
-                action: () => {
-                  window.location.href = '/erpnext-software';
-                },
+                action: "#certified"
               },
               trustIndicator: {
                 text: 'Trusted by 100+ businesses globally',

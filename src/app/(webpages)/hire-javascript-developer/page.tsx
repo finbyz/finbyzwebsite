@@ -228,9 +228,7 @@ export default function Page() {
         description="Looking to hire JavaScript developers? Our expert JS programmers craft dynamic, interactive front-end apps tailored to your needs."
         primaryButton={{
           text: 'Get Started',
-          action: () => {
-            window.location.href = '/contact';
-          }
+          action: "#javscript"
         }}
         secondaryButton={{
           text: 'View Portfolio',
@@ -255,7 +253,7 @@ export default function Page() {
             <p className="text-base text-muted-foreground">
               We are a team of highly skilled and experienced full-stack JavaScript developers, dedicated to delivering top-notch solutions to businesses of all sizes. Our passion for technology and our commitment to excellence have earned us a reputation as a leading provider of JavaScript development services.
             </p>
-            <p className="text-base text-muted-foreground">
+            <p className="text-base text-muted-foreground" id="javscript">
               At Finbyz Tech, we offer a range of services to meet the diverse needs of our clients. Whether you are looking to build a new website, enhance an existing one, or develop a complex web-based application, we have the expertise to help you achieve your goals.
             </p>
           </div>
