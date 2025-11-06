@@ -112,6 +112,11 @@ export default async function Layout({ children }: { children: React.ReactNode }
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+      <Script
+        id="structured-faqs"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqstructureData) }}
+      />
       
       {/* Semantic HTML wrapper for better content extraction */}
       <article itemScope itemType="https://schema.org/WebPage">
