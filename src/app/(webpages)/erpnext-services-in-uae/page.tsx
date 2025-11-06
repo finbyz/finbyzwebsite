@@ -288,7 +288,7 @@ export default function Page() {
               primaryButton: {
                 text: "Contact Us",
                 icon: "Mail",
-                action: handlePrimary
+                action: "/contact"
               },
               secondaryButton: {
                 text: "Learn More",
