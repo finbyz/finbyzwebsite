@@ -164,7 +164,7 @@ export default function Benefits({ data = {} }: BenefitsProps) {
 
             return (
               <div
-                key={benefit.label}
+                key={`${benefit.label}-${benefit.header}-${index}`}
                 className={`benefits-card-wrapper ${getDelayClass(index)}`}
               >
                 <Card className="benefits-card">
