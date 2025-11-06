@@ -1,6 +1,7 @@
 import BusinessSlider from "@/components/sections/business-slider";
 import FinbyzGallery from "@/components/sections/FinbyzGallery";
-import { getPageData } from "@/lib/getPageData";
+import FAQ from "@/components/ai_components/FAQ";
+import { getFaqs, getPageData } from "@/lib/getPageData";
 
 import { Metadata } from "next";
 import Script from "next/script";
@@ -22,14 +23,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/images/banner-analysis.svg", width: 1200, height: 630, alt: "Data Analytics Company | Finbyz Tech" }],
+    images: [{ url: "/files/banner-analysis.svg", width: 1200, height: 630, alt: "Data Analytics Company | Finbyz Tech" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Data Analytics Company | Finbyz Tech",
     description: "Unlock business intelligence with Finbyz Tech’s data analytics solutions. We deliver CRM analytics, real-time dashboards, and predictive insights to drive growth.\n\n",
     creator: "@finbyz",
-    images: ["/images/banner-analysis.svg"],
+    images: ["/files/banner-analysis.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +53,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Data Analytics Company | Finbyz Tech",
   "url": "https://finbyz.tech/data-analytics",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/images/banner-analysis.svg",
+  "image": "/files/banner-analysis.svg",
   "description": "Unlock business intelligence with Finbyz Tech’s data analytics solutions. We deliver CRM analytics, real-time dashboards, and predictive insights to drive growth.\n\n",
   "priceRange": "INR",
   "address": {
@@ -89,6 +90,20 @@ export default async function Layout({ children }: { children: React.ReactNode }
   ]
 };
   const data = await getPageData("Web Page","data-analytics");
+  const faqsGroup = await getFaqs("Web Page","data-analytics");
+  const faqstructureData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqsGroup?.faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <>
       {/* JSON-LD structured data for LLMs */}
@@ -104,6 +119,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
         <meta itemProp="description" content="Unlock business intelligence with Finbyz Tech’s data analytics solutions. We deliver CRM analytics, real-time dashboards, and predictive insights to drive growth.\n\n" />
       </article>
       {children}
+      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }

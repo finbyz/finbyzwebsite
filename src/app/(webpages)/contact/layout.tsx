@@ -7,30 +7,30 @@ import { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Productify: Advanced Employee Productivity Tracker & Sales Monitoring Software",
-  description: "Boost your team\'s efficiency with Productify, the leading employee productivity tracker and sales person monitoring software. Gain insights, enhance accountability, and drive performance.",
-  keywords: "Employee Monitoring Software, \nTime tracking software, \nStaff Monitoring software",
+  title: "Get in Touch: Reach Out Today!",
+  description: "Contact Finbyz for streamlined business solutions. Transform your operations with our expertly designed ERP and digital strategies. Reach out now!",
+  keywords: "Get in Touch ",
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://finbyz.tech/productify",
+    canonical: "https://finbyz.tech/contact",
   },
   openGraph: {
-    title: "Productify: Advanced Employee Productivity Tracker & Sales Monitoring Software",
-    description: "Boost your team\'s efficiency with Productify, the leading employee productivity tracker and sales person monitoring software. Gain insights, enhance accountability, and drive performance.",
-    url: "https://finbyz.tech/productify",
+    title: "Get in Touch: Reach Out Today!",
+    description: "Contact Finbyz for streamlined business solutions. Transform your operations with our expertly designed ERP and digital strategies. Reach out now!",
+    url: "https://finbyz.tech/contact",
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/Productify image (1).svg", width: 1200, height: 630, alt: "Productify: Advanced Employee Productivity Tracker & Sales Monitoring Software" }],
+    
   },
   twitter: {
     card: "summary_large_image",
-    title: "Productify: Advanced Employee Productivity Tracker & Sales Monitoring Software",
-    description: "Boost your team\'s efficiency with Productify, the leading employee productivity tracker and sales person monitoring software. Gain insights, enhance accountability, and drive performance.",
+    title: "Get in Touch: Reach Out Today!",
+    description: "Contact Finbyz for streamlined business solutions. Transform your operations with our expertly designed ERP and digital strategies. Reach out now!",
     creator: "@finbyz",
-    images: ["/files/Productify image (1).svg"],
+    
   },
   robots: {
     index: true,
@@ -50,11 +50,11 @@ export default async function Layout({ children }: { children: React.ReactNode }
   const structuredData = {
   "@context": "http://www.schema.org",
   "@type": "ProfessionalService",
-  "name": "Productify: Advanced Employee Productivity Tracker & Sales Monitoring Software",
-  "url": "https://finbyz.tech/productify",
+  "name": "Get in Touch: Reach Out Today!",
+  "url": "https://finbyz.tech/contact",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/Productify image (1).svg",
-  "description": "Boost your team\'s efficiency with Productify, the leading employee productivity tracker and sales person monitoring software. Gain insights, enhance accountability, and drive performance.",
+  "image": "None",
+  "description": "Contact Finbyz for streamlined business solutions. Transform your operations with our expertly designed ERP and digital strategies. Reach out now!",
   "priceRange": "INR",
   "address": {
     "@type": "PostalAddress",
@@ -89,8 +89,8 @@ export default async function Layout({ children }: { children: React.ReactNode }
     "https://www.instagram.com/finbyz/"
   ]
 };
-  const data = await getPageData("Web Page","productify");
-  const faqsGroup = await getFaqs("Web Page","productify");
+  const data = await getPageData("Web Page","contact");
+  const faqsGroup = await getFaqs("Web Page","contact");
   const faqstructureData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -115,8 +115,8 @@ export default async function Layout({ children }: { children: React.ReactNode }
       
       {/* Semantic HTML wrapper for better content extraction */}
       <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Productify: Advanced Employee Productivity Tracker & Sales Monitoring Software" />
-        <meta itemProp="description" content="Boost your team\'s efficiency with Productify, the leading employee productivity tracker and sales person monitoring software. Gain insights, enhance accountability, and drive performance." />
+        <meta itemProp="name" content="Get in Touch: Reach Out Today!" />
+        <meta itemProp="description" content="Contact Finbyz for streamlined business solutions. Transform your operations with our expertly designed ERP and digital strategies. Reach out now!" />
       </article>
       {children}
       {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}

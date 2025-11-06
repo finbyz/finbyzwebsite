@@ -1,6 +1,7 @@
 import BusinessSlider from "@/components/sections/business-slider";
 import FinbyzGallery from "@/components/sections/FinbyzGallery";
-import { getPageData } from "@/lib/getPageData";
+import FAQ from "@/components/ai_components/FAQ";
+import { getFaqs, getPageData } from "@/lib/getPageData";
 
 import { Metadata } from "next";
 import Script from "next/script";
@@ -22,14 +23,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/images/banner-consulting.svg", width: 1200, height: 630, alt: "IT Consulting Services in Ahmedabad, Gujarat - India" }],
+    images: [{ url: "/files/banner-consulting.svg", width: 1200, height: 630, alt: "IT Consulting Services in Ahmedabad, Gujarat - India" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "IT Consulting Services in Ahmedabad, Gujarat - India",
     description: "Elevate your business goals with our IT Consulting Services in Ahmedabad. Expert support, unbiased advice, and innovative solutions for optimal IT investment. ",
     creator: "@finbyz",
-    images: ["/images/banner-consulting.svg"],
+    images: ["/files/banner-consulting.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +53,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "IT Consulting Services in Ahmedabad, Gujarat - India",
   "url": "https://finbyz.tech/it-consulting",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/images/banner-consulting.svg",
+  "image": "/files/banner-consulting.svg",
   "description": "Elevate your business goals with our IT Consulting Services in Ahmedabad. Expert support, unbiased advice, and innovative solutions for optimal IT investment. ",
   "priceRange": "INR",
   "address": {
@@ -89,6 +90,20 @@ export default async function Layout({ children }: { children: React.ReactNode }
   ]
 };
   const data = await getPageData("Web Page","it-consulting");
+  const faqsGroup = await getFaqs("Web Page","it-consulting");
+  const faqstructureData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqsGroup?.faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <>
       {/* JSON-LD structured data for LLMs */}
@@ -104,6 +119,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
         <meta itemProp="description" content="Elevate your business goals with our IT Consulting Services in Ahmedabad. Expert support, unbiased advice, and innovative solutions for optimal IT investment. " />
       </article>
       {children}
+      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }

@@ -1,6 +1,7 @@
 import BusinessSlider from "@/components/sections/business-slider";
 import FinbyzGallery from "@/components/sections/FinbyzGallery";
-import { getPageData } from "@/lib/getPageData";
+import FAQ from "@/components/ai_components/FAQ";
+import { getFaqs, getPageData } from "@/lib/getPageData";
 
 import { Metadata } from "next";
 import Script from "next/script";
@@ -22,14 +23,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/images/Frappe-Certified-Erpnext-Partner.svg", width: 1200, height: 630, alt: "ERPNext Service Provider | Cloud ERP Software Company" }],
+    images: [{ url: "/files/Frappe-Certified-Erpnext-Partner.svg", width: 1200, height: 630, alt: "ERPNext Service Provider | Cloud ERP Software Company" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ERPNext Service Provider | Cloud ERP Software Company",
     description: "Discover leading ERPNext service providers for seamless business management solutions. Expert customization, support, and integration services.",
     creator: "@finbyz",
-    images: ["/images/Frappe-Certified-Erpnext-Partner.svg"],
+    images: ["/files/Frappe-Certified-Erpnext-Partner.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +53,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "ERPNext Service Provider | Cloud ERP Software Company",
   "url": "https://finbyz.tech/erpnext-service-provider",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/images/Frappe-Certified-Erpnext-Partner.svg",
+  "image": "/files/Frappe-Certified-Erpnext-Partner.svg",
   "description": "Discover leading ERPNext service providers for seamless business management solutions. Expert customization, support, and integration services.",
   "priceRange": "INR",
   "address": {
@@ -89,6 +90,20 @@ export default async function Layout({ children }: { children: React.ReactNode }
   ]
 };
   const data = await getPageData("Web Page","erpnext-service-provider");
+  const faqsGroup = await getFaqs("Web Page","erpnext-service-provider");
+  const faqstructureData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqsGroup?.faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <>
       {/* JSON-LD structured data for LLMs */}
@@ -104,6 +119,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
         <meta itemProp="description" content="Discover leading ERPNext service providers for seamless business management solutions. Expert customization, support, and integration services." />
       </article>
       {children}
+      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }

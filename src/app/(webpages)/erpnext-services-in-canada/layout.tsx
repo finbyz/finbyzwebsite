@@ -1,6 +1,7 @@
 import BusinessSlider from "@/components/sections/business-slider";
 import FinbyzGallery from "@/components/sections/FinbyzGallery";
-import { getPageData } from "@/lib/getPageData";
+import FAQ from "@/components/ai_components/FAQ";
+import { getFaqs, getPageData } from "@/lib/getPageData";
 
 import { Metadata } from "next";
 import Script from "next/script";
@@ -22,14 +23,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/images/Hire-ERPNext-Implementor679475.svg", width: 1200, height: 630, alt: "ERPNext Service providers in Canada | ERP Implementation" }],
+    images: [{ url: "/files/Hire-ERPNext-Implementor679475.svg", width: 1200, height: 630, alt: "ERPNext Service providers in Canada | ERP Implementation" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ERPNext Service providers in Canada | ERP Implementation",
     description: "ERPNext Partners in Canada: ERPNext Service Providers offers bespoke ERP solutions in manufacturing, agro, chemical, healthcare & pharmaceutical sectors.",
     creator: "@finbyz",
-    images: ["/images/Hire-ERPNext-Implementor679475.svg"],
+    images: ["/files/Hire-ERPNext-Implementor679475.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +53,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "ERPNext Service providers in Canada | ERP Implementation",
   "url": "https://finbyz.tech/erpnext-services-in-canada",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/images/Hire-ERPNext-Implementor679475.svg",
+  "image": "/files/Hire-ERPNext-Implementor679475.svg",
   "description": "ERPNext Partners in Canada: ERPNext Service Providers offers bespoke ERP solutions in manufacturing, agro, chemical, healthcare & pharmaceutical sectors.",
   "priceRange": "INR",
   "address": {
@@ -89,6 +90,20 @@ export default async function Layout({ children }: { children: React.ReactNode }
   ]
 };
   const data = await getPageData("Web Page","erpnext-services-in-canada");
+  const faqsGroup = await getFaqs("Web Page","erpnext-services-in-canada");
+  const faqstructureData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqsGroup?.faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <>
       {/* JSON-LD structured data for LLMs */}
@@ -104,6 +119,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
         <meta itemProp="description" content="ERPNext Partners in Canada: ERPNext Service Providers offers bespoke ERP solutions in manufacturing, agro, chemical, healthcare & pharmaceutical sectors." />
       </article>
       {children}
+      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }

@@ -1,7 +1,7 @@
-import FAQ from "@/components/ai_components/FAQ";
 import BusinessSlider from "@/components/sections/business-slider";
 import FinbyzGallery from "@/components/sections/FinbyzGallery";
-import { getPageData } from "@/lib/getPageData";
+import FAQ from "@/components/ai_components/FAQ";
+import { getFaqs, getPageData } from "@/lib/getPageData";
 
 import { Metadata } from "next";
 import Script from "next/script";
@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/images/chemical_Module 2019-04-12 12_42_16.svg", width: 1200, height: 630, alt: "ERP for DyeChem Industry | Dyes & Intermediates ERP Software" }],
+    images: [{ url: "/files/chemical_Module 2019-04-12 12_42_16.svg", width: 1200, height: 630, alt: "ERP for DyeChem Industry | Dyes & Intermediates ERP Software" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ERP for DyeChem Industry | Dyes & Intermediates ERP Software",
     description: "ERP Software for DyeChem industry solve problems of batch-wise Inventory management, Samples management, Manufacturing of dyes and Pigment with yield, concentration and purity.",
     creator: "@finbyz",
-    images: ["/images/chemical_Module 2019-04-12 12_42_16.svg"],
+    images: ["/files/chemical_Module 2019-04-12 12_42_16.svg"],
   },
   robots: {
     index: true,
@@ -53,7 +53,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "ERP for DyeChem Industry | Dyes & Intermediates ERP Software",
   "url": "https://finbyz.tech/erp-software-dyechem-industry",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/images/chemical_Module 2019-04-12 12_42_16.svg",
+  "image": "/files/chemical_Module 2019-04-12 12_42_16.svg",
   "description": "ERP Software for DyeChem industry solve problems of batch-wise Inventory management, Samples management, Manufacturing of dyes and Pigment with yield, concentration and purity.",
   "priceRange": "INR",
   "address": {
@@ -90,6 +90,20 @@ export default async function Layout({ children }: { children: React.ReactNode }
   ]
 };
   const data = await getPageData("Web Page","erp-software-dyechem-industry");
+  const faqsGroup = await getFaqs("Web Page","erp-software-dyechem-industry");
+  const faqstructureData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqsGroup?.faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <>
       {/* JSON-LD structured data for LLMs */}
@@ -105,6 +119,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
         <meta itemProp="description" content="ERP Software for DyeChem industry solve problems of batch-wise Inventory management, Samples management, Manufacturing of dyes and Pigment with yield, concentration and purity." />
       </article>
       {children}
+      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }

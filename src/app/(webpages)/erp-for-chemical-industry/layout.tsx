@@ -1,6 +1,7 @@
 import BusinessSlider from "@/components/sections/business-slider";
 import FinbyzGallery from "@/components/sections/FinbyzGallery";
-import { getPageData } from "@/lib/getPageData";
+import FAQ from "@/components/ai_components/FAQ";
+import { getFaqs, getPageData } from "@/lib/getPageData";
 
 import { Metadata } from "next";
 import Script from "next/script";
@@ -22,14 +23,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/images/chemical_new.svg", width: 1200, height: 630, alt: "Comprehensive ERP Solutions for the Chemical Industry | Finbyz Tech" }],
+    images: [{ url: "/files/chemical_new.svg", width: 1200, height: 630, alt: "Comprehensive ERP Solutions for the Chemical Industry | Finbyz Tech" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Comprehensive ERP Solutions for the Chemical Industry | Finbyz Tech",
     description: "Discover Finbyz Tech\'s tailored ERP solutions for the chemical industry. Streamline operations, ensure compliance, and boost productivity with our specialized ERP software.",
     creator: "@finbyz",
-    images: ["/images/chemical_new.svg"],
+    images: ["/files/chemical_new.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +53,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Comprehensive ERP Solutions for the Chemical Industry | Finbyz Tech",
   "url": "https://finbyz.tech/erp-for-chemical-industry",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/images/chemical_new.svg",
+  "image": "/files/chemical_new.svg",
   "description": "Discover Finbyz Tech\'s tailored ERP solutions for the chemical industry. Streamline operations, ensure compliance, and boost productivity with our specialized ERP software.",
   "priceRange": "INR",
   "address": {
@@ -89,6 +90,20 @@ export default async function Layout({ children }: { children: React.ReactNode }
   ]
 };
   const data = await getPageData("Web Page","erp-for-chemical-industry");
+  const faqsGroup = await getFaqs("Web Page","erp-for-chemical-industry");
+  const faqstructureData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqsGroup?.faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <>
       {/* JSON-LD structured data for LLMs */}
@@ -104,6 +119,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
         <meta itemProp="description" content="Discover Finbyz Tech\'s tailored ERP solutions for the chemical industry. Streamline operations, ensure compliance, and boost productivity with our specialized ERP software." />
       </article>
       {children}
+      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }

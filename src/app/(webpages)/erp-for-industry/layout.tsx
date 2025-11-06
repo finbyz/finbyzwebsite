@@ -1,6 +1,7 @@
 import BusinessSlider from "@/components/sections/business-slider";
 import FinbyzGallery from "@/components/sections/FinbyzGallery";
-import { getPageData } from "@/lib/getPageData";
+import FAQ from "@/components/ai_components/FAQ";
+import { getFaqs, getPageData } from "@/lib/getPageData";
 
 import { Metadata } from "next";
 import Script from "next/script";
@@ -22,14 +23,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/images/INDUSTRY.svg", width: 1200, height: 630, alt: "Customized ERP Software | ERP system customization" }],
+    images: [{ url: "/files/INDUSTRY.svg", width: 1200, height: 630, alt: "Customized ERP Software | ERP system customization" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Customized ERP Software | ERP system customization",
     description: "Discover tailored solutions with customized ERP software and custom ERP system customization services. Optimize your business processes today.",
     creator: "@finbyz",
-    images: ["/images/INDUSTRY.svg"],
+    images: ["/files/INDUSTRY.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +53,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Customized ERP Software | ERP system customization",
   "url": "https://finbyz.tech/erp-for-industry",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/images/INDUSTRY.svg",
+  "image": "/files/INDUSTRY.svg",
   "description": "Discover tailored solutions with customized ERP software and custom ERP system customization services. Optimize your business processes today.",
   "priceRange": "INR",
   "address": {
@@ -89,6 +90,20 @@ export default async function Layout({ children }: { children: React.ReactNode }
   ]
 };
   const data = await getPageData("Web Page","erp-for-industry");
+  const faqsGroup = await getFaqs("Web Page","erp-for-industry");
+  const faqstructureData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqsGroup?.faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <>
       {/* JSON-LD structured data for LLMs */}
@@ -104,6 +119,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
         <meta itemProp="description" content="Discover tailored solutions with customized ERP software and custom ERP system customization services. Optimize your business processes today." />
       </article>
       {children}
+      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }

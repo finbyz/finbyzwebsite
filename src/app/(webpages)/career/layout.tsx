@@ -1,6 +1,7 @@
 import BusinessSlider from "@/components/sections/business-slider";
 import FinbyzGallery from "@/components/sections/FinbyzGallery";
-import { getPageData } from "@/lib/getPageData";
+import FAQ from "@/components/ai_components/FAQ";
+import { getFaqs, getPageData } from "@/lib/getPageData";
 
 import { Metadata } from "next";
 import Script from "next/script";
@@ -22,14 +23,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/images/banner-career.svg", width: 1200, height: 630, alt: "Job Opening | Career Opportunity" }],
+    images: [{ url: "/files/banner-career.svg", width: 1200, height: 630, alt: "Job Opening | Career Opportunity" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Job Opening | Career Opportunity",
     description: "At FinByz, we believe the team builds company. Initiator or leader, Technical or Creative there is a space for each one.",
     creator: "@finbyz",
-    images: ["/images/banner-career.svg"],
+    images: ["/files/banner-career.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +53,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Job Opening | Career Opportunity",
   "url": "https://finbyz.tech/career",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/images/banner-career.svg",
+  "image": "/files/banner-career.svg",
   "description": "At FinByz, we believe the team builds company. Initiator or leader, Technical or Creative there is a space for each one.",
   "priceRange": "INR",
   "address": {
@@ -89,6 +90,20 @@ export default async function Layout({ children }: { children: React.ReactNode }
   ]
 };
   const data = await getPageData("Web Page","career");
+  const faqsGroup = await getFaqs("Web Page","career");
+  const faqstructureData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqsGroup?.faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <>
       {/* JSON-LD structured data for LLMs */}
@@ -104,6 +119,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
         <meta itemProp="description" content="At FinByz, we believe the team builds company. Initiator or leader, Technical or Creative there is a space for each one." />
       </article>
       {children}
+      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }

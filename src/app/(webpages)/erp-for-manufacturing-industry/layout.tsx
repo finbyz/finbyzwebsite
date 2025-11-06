@@ -1,6 +1,7 @@
 import BusinessSlider from "@/components/sections/business-slider";
 import FinbyzGallery from "@/components/sections/FinbyzGallery";
-import { getPageData } from "@/lib/getPageData";
+import FAQ from "@/components/ai_components/FAQ";
+import { getFaqs, getPageData } from "@/lib/getPageData";
 
 import { Metadata } from "next";
 import Script from "next/script";
@@ -22,14 +23,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "https://finbyz.tech/files/Manufacturingc334bc.svg", width: 1200, height: 630, alt: "ERP Software for Manufacturing Industry | FinByz Tech" }],
+    images: [{ url: "/files/Manufacturing7ad5f1.svg", width: 1200, height: 630, alt: "ERP Software for Manufacturing Industry | FinByz Tech" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ERP Software for Manufacturing Industry | FinByz Tech",
     description: "FinByz Tech’s ERPNext manufacturing ERP software streamlines production and inventory management, reducing costs and improving efficiency.",
     creator: "@finbyz",
-    images: ["https://finbyz.tech/files/Manufacturingc334bc.svg"],
+    images: ["/files/Manufacturing7ad5f1.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +53,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "ERP Software for Manufacturing Industry | FinByz Tech",
   "url": "https://finbyz.tech/erp-for-manufacturing-industry",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "https://finbyz.tech/files/Manufacturingc334bc.svg",
+  "image": "/files/Manufacturing7ad5f1.svg",
   "description": "FinByz Tech’s ERPNext manufacturing ERP software streamlines production and inventory management, reducing costs and improving efficiency.",
   "priceRange": "INR",
   "address": {
@@ -89,6 +90,20 @@ export default async function Layout({ children }: { children: React.ReactNode }
   ]
 };
   const data = await getPageData("Web Page","erp-for-manufacturing-industry");
+  const faqsGroup = await getFaqs("Web Page","erp-for-manufacturing-industry");
+  const faqstructureData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqsGroup?.faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <>
       {/* JSON-LD structured data for LLMs */}
@@ -104,6 +119,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
         <meta itemProp="description" content="FinByz Tech’s ERPNext manufacturing ERP software streamlines production and inventory management, reducing costs and improving efficiency." />
       </article>
       {children}
+      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }

@@ -1,6 +1,7 @@
 import BusinessSlider from "@/components/sections/business-slider";
 import FinbyzGallery from "@/components/sections/FinbyzGallery";
-import { getPageData } from "@/lib/getPageData";
+import FAQ from "@/components/ai_components/FAQ";
+import { getFaqs, getPageData } from "@/lib/getPageData";
 
 import { Metadata } from "next";
 import Script from "next/script";
@@ -22,14 +23,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/images/Hire-JS-Dev.svg", width: 1200, height: 630, alt: "Hire Dedicated JavaScript Developers | Expert JS Programmers" }],
+    images: [{ url: "/files/Hire-JS-Dev.svg", width: 1200, height: 630, alt: "Hire Dedicated JavaScript Developers | Expert JS Programmers" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Hire Dedicated JavaScript Developers | Expert JS Programmers",
     description: "Looking to hire JavaScript developers? Look no further than FinByz. Our expert JS programmers craft dynamic, interactive front-end apps tailored to your needs. ",
     creator: "@finbyz",
-    images: ["/images/Hire-JS-Dev.svg"],
+    images: ["/files/Hire-JS-Dev.svg"],
   },
   robots: {
     index: true,
@@ -52,7 +53,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Hire Dedicated JavaScript Developers | Expert JS Programmers",
   "url": "https://finbyz.tech/hire-javascript-developer",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/images/Hire-JS-Dev.svg",
+  "image": "/files/Hire-JS-Dev.svg",
   "description": "Looking to hire JavaScript developers? Look no further than FinByz. Our expert JS programmers craft dynamic, interactive front-end apps tailored to your needs. ",
   "priceRange": "INR",
   "address": {
@@ -89,6 +90,20 @@ export default async function Layout({ children }: { children: React.ReactNode }
   ]
 };
   const data = await getPageData("Web Page","hire-javascript-developer");
+  const faqsGroup = await getFaqs("Web Page","hire-javascript-developer");
+  const faqstructureData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqsGroup?.faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <>
       {/* JSON-LD structured data for LLMs */}
@@ -104,6 +119,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
         <meta itemProp="description" content="Looking to hire JavaScript developers? Look no further than FinByz. Our expert JS programmers craft dynamic, interactive front-end apps tailored to your needs. " />
       </article>
       {children}
+      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }

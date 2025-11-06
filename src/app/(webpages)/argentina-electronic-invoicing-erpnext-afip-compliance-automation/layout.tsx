@@ -1,6 +1,7 @@
 import BusinessSlider from "@/components/sections/business-slider";
 import FinbyzGallery from "@/components/sections/FinbyzGallery";
-import { getPageData } from "@/lib/getPageData";
+import FAQ from "@/components/ai_components/FAQ";
+import { getFaqs, getPageData } from "@/lib/getPageData";
 
 import { Metadata } from "next";
 import Script from "next/script";
@@ -22,14 +23,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/images/Line Banner-41 (2)_11zon.png", width: 1200, height: 630, alt: "Argentina Electronic Invoicing in ERPNext: AFIP Compliance & Automation" }],
+    images: [{ url: "/files/Line Banner-41 (2)_11zon.png", width: 1200, height: 630, alt: "Argentina Electronic Invoicing in ERPNext: AFIP Compliance & Automation" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Argentina Electronic Invoicing in ERPNext: AFIP Compliance & Automation",
     description: "Implement AFIP-compliant electronic invoicing in ERP Next for Argentina. Automate invoice validation, ensure tax compliance, and streamline financial operations with custom fields, API integration, and optimized workflows.",
     creator: "@finbyz",
-    images: ["/images/Line Banner-41 (2)_11zon.png"],
+    images: ["/files/Line Banner-41 (2)_11zon.png"],
   },
   robots: {
     index: true,
@@ -52,7 +53,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   "name": "Argentina Electronic Invoicing in ERPNext: AFIP Compliance & Automation",
   "url": "https://finbyz.tech/argentina-electronic-invoicing-erpnext-afip-compliance-automation",
   "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/images/Line Banner-41 (2)_11zon.png",
+  "image": "/files/Line Banner-41 (2)_11zon.png",
   "description": "Implement AFIP-compliant electronic invoicing in ERP Next for Argentina. Automate invoice validation, ensure tax compliance, and streamline financial operations with custom fields, API integration, and optimized workflows.",
   "priceRange": "INR",
   "address": {
@@ -89,6 +90,20 @@ export default async function Layout({ children }: { children: React.ReactNode }
   ]
 };
   const data = await getPageData("Web Page","argentina-electronic-invoicing-erpnext-afip-compliance-automation");
+  const faqsGroup = await getFaqs("Web Page","argentina-electronic-invoicing-erpnext-afip-compliance-automation");
+  const faqstructureData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqsGroup?.faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <>
       {/* JSON-LD structured data for LLMs */}
@@ -104,6 +119,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
         <meta itemProp="description" content="Implement AFIP-compliant electronic invoicing in ERP Next for Argentina. Automate invoice validation, ensure tax compliance, and streamline financial operations with custom fields, API integration, and optimized workflows." />
       </article>
       {children}
+      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }
