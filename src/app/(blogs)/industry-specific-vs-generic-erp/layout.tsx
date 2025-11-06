@@ -1,6 +1,7 @@
 import BusinessSlider from "@/components/sections/business-slider";
 import FinbyzGallery from "@/components/sections/FinbyzGallery";
-import { getPageData } from "@/lib/getPageData";
+import FAQ from "@/components/ai_components/FAQ";
+import { getFaqs, getPageData } from "@/lib/getPageData";
 import { Metadata } from "next";
 import Script from "next/script";
 
@@ -43,7 +44,19 @@ export const metadata: Metadata = {
     },
   }
 };
-
+const faqsGroup = await getFaqs("Blog Post","industry-specific-vs-generic-erp");
+const faqstructureData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqsGroup?.faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+    }
+    }))
+};
 export default async function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
   "@context": "https://schema.org/",
@@ -109,6 +122,11 @@ export default async function Layout({ children }: { children: React.ReactNode }
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+      <Script
+        id="structured-faqs"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqstructureData) }}
+      />
 
       <article itemScope itemType="https://schema.org/BlogPosting">
         <meta itemProp="headline" content="Industry-Specific vs. Generic ERP: Which ERP Software is Right for Your Business?" />
@@ -116,6 +134,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
       </article>
 
       {children}
+      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }
