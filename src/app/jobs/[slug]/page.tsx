@@ -73,16 +73,54 @@ function createJobPostingData(job: any) {
     },
     employmentType: job.employment_type || 'FULL_TIME',
     industry: job.department || 'Technology',
-    datePosted: job.creation || job.modified || new Date().toISOString(),
-    validThrough: job.valid_through || new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(),
+    datePosted: job.posted_on || job.creation || job.modified || new Date().toISOString(),
     jobBenefits: [
       'Competitive salary',
       'Health insurance',
       'Professional development opportunities',
       'Flexible work arrangements'
     ],
-    workHours: '40 hours per week',
-    baseSalary: {
+    workHours: '40 hours per week'
+  };
+
+  // ✅ Valid through - only include if valid_till exists
+  if (job.valid_till) {
+    jobPosting.validThrough = job.valid_till;
+  } else {
+    // Fallback to 30 days from now if not provided
+    jobPosting.validThrough = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString();
+  }
+
+  // ✅ Salary info - use actual job data if available
+  if (job.lower_range && job.upper_range) {
+    // Use salary range if available
+    jobPosting.baseSalary = {
+      '@type': 'MonetaryAmount',
+      currency: job.currency || 'INR',
+      value: {
+        '@type': 'QuantitativeValue',
+        minValue: job.lower_range,
+        maxValue: job.upper_range,
+        unitText: (job.salary_per || 'MONTH').toUpperCase()
+      }
+    };
+  } else if (job.salary) {
+    // Use single salary value if range not available
+    const salaryValue = typeof job.salary === 'string' ? parseFloat(job.salary) : job.salary;
+    if (!isNaN(salaryValue) && salaryValue > 0) {
+      jobPosting.baseSalary = {
+        '@type': 'MonetaryAmount',
+        currency: job.currency || 'INR',
+        value: {
+          '@type': 'QuantitativeValue',
+          value: salaryValue,
+          unitText: (job.salary_per || 'MONTH').toUpperCase()
+        }
+      };
+    }
+  } else {
+    // Default fallback if no salary data
+    jobPosting.baseSalary = {
       '@type': 'MonetaryAmount',
       currency: 'INR',
       value: {
@@ -91,8 +129,8 @@ function createJobPostingData(job: any) {
         maxValue: 1000000,
         unitText: 'MONTH'
       }
-    }
-  };
+    };
+  }
 
   // Add job location
   if (isRemote) {
@@ -159,6 +197,13 @@ async function getJobByRoute(route: string) {
     'route',
     'image',
     'skills',
+    'salary',
+    'valid_till',
+    'posted_on',
+    'lower_range',
+    'upper_range',
+    'salary_per',
+    'currency',
   ];
 
   const filters: any[][] = [

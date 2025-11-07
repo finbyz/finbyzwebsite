@@ -1,24 +1,13 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import HeroSection from '@/components/sections/dynamic-hero';
+import Script from 'next/script';
+import { Job } from '@/lib/jobs';
 
-interface Job {
-  id: number;
-  title: string;
-  description: string;
-  department: string;
-  responsibilities?: string[];
-  skills?: string[];
-  location?: string;
-  employment_type?: string;
-  job_title?: string;
-  route: string;
-  small_description: string;
-}
 
 // Helper function to clean HTML content
 const cleanHtmlContent = (html: string): string => {
@@ -95,8 +84,109 @@ export default function JobsPage() {
     return matchesCategory && matchesSearch;
   });
 
+  // Structured data for SEO - memoized to only recalculate when jobs_opening changes
+  const structuredData = useMemo(() => {
+    return {
+      "@context": "https://schema.org/",
+      "@type": "CollectionPage",
+      name: "Jobs",
+      hasPart: jobs_opening.map((job) => {
+        const title = job.job_title || job.title || "Job Opening";
+        const locationText = (job.location || "").trim();
+        const isRemote = locationText.toLowerCase().includes("remote");
+
+        const jobPosting: any = {
+          "@type": "JobPosting",
+          title,
+          description: cleanHtmlContent(job.description || ""),
+          employmentType: job.employment_type || "Full-time",
+          department: job.department,
+        };
+
+        // ✅ Handle location
+        if (isRemote) {
+          jobPosting.jobLocationType = "TELECOMMUTE";
+        } else if (locationText) {
+          jobPosting.jobLocation = {
+            "@type": "Place",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: locationText,
+            },
+          };
+        }
+
+        jobPosting.datePosted = job.posted_on;
+
+        // ✅ Organization info
+        jobPosting.hiringOrganization = {
+          "@type": "Organization",
+          name: "FinByz Tech Pvt Ltd",
+          url: "https://finbyz.tech",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://finbyz.tech/files/FinbyzLogo.png",
+          },
+        };
+
+        // ✅ Salary info - only include if salary exists
+        if (job.salary) {
+          jobPosting.baseSalary = {
+            "@type": "MonetaryAmount",
+            currency: "INR",
+            value: {
+              "@type": "QuantitativeValue",
+              value: job.salary,
+              unitText: "MONTH"
+            }
+          };
+        }
+
+        // ✅ Valid through - only include if valid_till exists
+        if (job.valid_till) {
+          jobPosting.validThrough = job.valid_till;
+        }
+
+        // ✅ Qualifications example
+        jobPosting.qualifications = {
+          "@type": "EducationalOccupationalCredential",
+          credentialCategory: "Bachelor of Science",
+          about: "Computer Science",
+          recognizedBy: {
+            "@type": "Organization",
+            name: "ABET",
+            url: "https://www.abet.org/",
+          },
+        };
+        jobPosting.jobLocation = {
+          "@type": "Place",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress:
+              "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
+            addressLocality: "Ahmedabad",
+            addressRegion: "Gujarat",
+            addressCountry: "IN",
+            postalCode: "380009",
+          },
+        };
+
+        return jobPosting;
+      }),
+    };
+  }, [jobs_opening]);
   return (
     <>
+    {jobs_opening.length > 0 && (
+        <Script
+          id="jobs-structured-data"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
+      )}
       <Header />
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
