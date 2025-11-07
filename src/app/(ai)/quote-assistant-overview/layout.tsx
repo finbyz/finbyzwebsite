@@ -44,15 +44,36 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@context": "http://www.schema.org",
+    "@type": "ProfessionalService",
     "name": "Quote Assistant Overview: Streamlining Sales Quotations",
-    "description": "Explore the Quote Assistant, an innovative automation tool that enhances the sales quotation process by intelligently managing customer inquiries and generating tailored quotes.",
     "url": "https://finbyz.tech/quote-assistant-overview",
-    
+    "logo": "https://finbyz.tech/files/FinbyzLogo.png",
+    "image": "",
+    "description": "Explore the Quote Assistant, an innovative automation tool that enhances the sales quotation process by intelligently managing customer inquiries and generating tailored quotes.",
+    "priceRange": "INR",
     "keywords": "Quote Assistant, quotation automation, sales quotation workflow, customer inquiries, ERPNext, AI agent, item mapping, draft quotation, sales team review, historical purchase data",
     "inLanguage": "en-US",
     "isAccessibleForFree": true,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
+      "addressLocality": "Ahmedabad",
+      "addressRegion": "Gujarat",
+      "addressCountry": "IN",
+      "postalCode": "380009"
+    },
+    "telephone": "+919925701446",
+    "openingHours": "Mo, Tu, We, Th, Fr, Sa 10:00-19:00",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+91 7948912428",
+        "contactType": "customer support",
+        "areaServed": ["IN"],
+        "availableLanguage": ["Hindi", "Gujarati", "English"]
+      }
+    ],
     "publisher": {
       "@type": "Organization",
       "name": "FinByz Tech",
@@ -68,11 +89,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         "name": "FinByz Tech"
       },
       "datePublished": "2025-10-14T12:17:57.924Z",
-      "dateModified": "2025-10-14T12:17:57.924Z",
-    }
+      "dateModified": "2025-10-14T12:17:57.924Z"
+    },
+    "sameAs": [
+      "https://www.facebook.com/FinByz",
+      "https://twitter.com/FinByz",
+      "https://www.linkedin.com/company/finbyz",
+      "https://www.youtube.com/c/Finbyz",
+      "https://www.instagram.com/finbyz/"
+    ]
   };
 
-  const productstructuredData = 
+  const softwareApplicationStructuredData = 
 
 {
   "@context": "https://schema.org",
@@ -89,11 +117,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   ],
   "offers": {
     "@type": "Offer",
-    "price": "–",               
+    "price": "0",               
     "priceCurrency": "INR",    
     "url": "https://finbyz.tech/quote-assistant-overview",
     "availability": "https://schema.org/InStock"  
   },
+  "aggregateRating":
+    {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "54"
+    },
   "brand": {
     "@type": "Organization",
     "name": "Finbyz Tech Pvt Ltd",
@@ -114,7 +148,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Script
         id="productstructured-data"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productstructuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationStructuredData) }}
       />
       
       <article itemScope itemType="https://schema.org/WebPage">

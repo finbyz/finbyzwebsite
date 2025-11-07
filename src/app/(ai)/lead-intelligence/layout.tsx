@@ -44,15 +44,36 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@context": "http://www.schema.org",
+    "@type": "ProfessionalService",
     "name": "Lead Intelligence: Revolutionizing Inquiry Processing",
-    "description": "Lead Intelligence automates the capture and classification of inquiry emails using AI, transforming unstructured data into actionable CRM records.",
     "url": "https://finbyz.tech/lead-intelligence",
-    
+    "logo": "https://finbyz.tech/files/FinbyzLogo.png",
+    "image": "",
+    "description": "Lead Intelligence automates the capture and classification of inquiry emails using AI, transforming unstructured data into actionable CRM records.",
+    "priceRange": "INR",
     "keywords": "Lead Intelligence, CRM, AI, email processing, data extraction, duplicate prevention, sales funnel, pipeline visibility, automated lead capture, ERPNext",
     "inLanguage": "en-US",
     "isAccessibleForFree": true,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
+      "addressLocality": "Ahmedabad",
+      "addressRegion": "Gujarat",
+      "addressCountry": "IN",
+      "postalCode": "380009"
+    },
+    "telephone": "+919925701446",
+    "openingHours": "Mo, Tu, We, Th, Fr, Sa 10:00-19:00",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+91 7948912428",
+        "contactType": "customer support",
+        "areaServed": ["IN"],
+        "availableLanguage": ["Hindi", "Gujarati", "English"]
+      }
+    ],
     "publisher": {
       "@type": "Organization",
       "name": "FinByz Tech",
@@ -68,11 +89,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         "name": "FinByz Tech"
       },
       "datePublished": "2025-10-14T12:20:05.323Z",
-      "dateModified": "2025-10-14T12:20:05.323Z",
-    }
+      "dateModified": "2025-10-14T12:20:05.323Z"
+    },
+    "sameAs": [
+      "https://www.facebook.com/FinByz",
+      "https://twitter.com/FinByz",
+      "https://www.linkedin.com/company/finbyz",
+      "https://www.youtube.com/c/Finbyz",
+      "https://www.instagram.com/finbyz/"
+    ]
   };
 
-  const productstructuredData = 
+  const softwareApplicationStructuredData = 
 
 {
   "@context": "https://schema.org",
@@ -89,11 +117,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   ],
   "offers": {
     "@type": "Offer",
-    "price": "–",               
+    "price": "0",               
     "priceCurrency": "INR",    
     "url": "https://finbyz.tech/lead-intelligence",
     "availability": "https://schema.org/InStock"  
   },
+   "aggregateRating":
+    {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "54"
+    },
   "brand": {
     "@type": "Organization",
     "name": "Finbyz Tech Pvt Ltd",
@@ -113,7 +147,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
        <Script
         id="productstructured-data"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productstructuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationStructuredData) }}
       />
       
       <article itemScope itemType="https://schema.org/WebPage">

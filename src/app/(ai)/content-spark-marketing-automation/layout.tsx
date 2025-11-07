@@ -44,15 +44,36 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@context": "http://www.schema.org",
+    "@type": "ProfessionalService",
     "name": "Content Spark Streamline Marketing Automation",
-    "description": "Content Spark is an advanced marketing automation platform designed to optimize content creation for marketing teams, ensuring brand consistency and rapid ideation.",
     "url": "https://finbyz.tech/content-spark-marketing-automation",
-    "image": "/files/FinByz (7).gif",
+    "logo": "https://finbyz.tech/files/FinbyzLogo.png",
+    "image": "https://finbyz.tech/files/FinByz (7).gif",
+    "description": "Content Spark is an advanced marketing automation platform designed to optimize content creation for marketing teams, ensuring brand consistency and rapid ideation.",
+    "priceRange": "INR",
     "keywords": "Content Spark, marketing automation, Frappe Framework, AI content generation, brand consistency, LinkedIn posts, marketing teams, content creation, visual design, branding, campaign planning",
     "inLanguage": "en-US",
     "isAccessibleForFree": true,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
+      "addressLocality": "Ahmedabad",
+      "addressRegion": "Gujarat",
+      "addressCountry": "IN",
+      "postalCode": "380009"
+    },
+    "telephone": "+919925701446",
+    "openingHours": "Mo, Tu, We, Th, Fr, Sa 10:00-19:00",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+91 7948912428",
+        "contactType": "customer support",
+        "areaServed": ["IN"],
+        "availableLanguage": ["Hindi", "Gujarati", "English"]
+      }
+    ],
     "publisher": {
       "@type": "Organization",
       "name": "FinByz Tech",
@@ -68,12 +89,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         "name": "FinByz Tech"
       },
       "datePublished": "2025-10-14T12:09:52.715Z",
-      "dateModified": "2025-10-14T12:09:52.715Z",
-    }
+      "dateModified": "2025-10-14T12:09:52.715Z"
+    },
+    "sameAs": [
+      "https://www.facebook.com/FinByz",
+      "https://twitter.com/FinByz",
+      "https://www.linkedin.com/company/finbyz",
+      "https://www.youtube.com/c/Finbyz",
+      "https://www.instagram.com/finbyz/"
+    ]
   };
 
 
-  const productstructuredData = 
+  const softwareApplicationStructuredData = 
 
 {
   "@context": "https://schema.org",
@@ -90,11 +118,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   ],
   "offers": {
     "@type": "Offer",
-    "price": "–",               
+    "price": "0",               
     "priceCurrency": "INR",    
     "url": "https://finbyz.tech/content-spark-marketing-automation", 
     "availability": "https://schema.org/InStock"  
   },
+   "aggregateRating":
+    {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "54"
+    },
   "brand": {
     "@type": "Organization",
     "name": "Finbyz Tech Pvt Ltd",
@@ -112,7 +146,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
        <Script
         id="productstructured-data"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productstructuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationStructuredData) }}
       />
       
       <article itemScope itemType="https://schema.org/WebPage">

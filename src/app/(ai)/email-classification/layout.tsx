@@ -44,15 +44,36 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@context": "http://www.schema.org",
+    "@type": "ProfessionalService",
     "name": "AI-Driven Email Classification for Businesses",
-    "description": "Discover how AI-driven email classification automates email handling, improves lead management, and enhances productivity.",
     "url": "https://finbyz.tech/email-classification",
-    
+    "logo": "https://finbyz.tech/files/FinbyzLogo.png",
+    "image": "",
+    "description": "Discover how AI-driven email classification automates email handling, improves lead management, and enhances productivity.",
+    "priceRange": "INR",
     "keywords": "Email Classification, AI-driven workflow, ERPNext, intent classification, data extraction, lead management, automated data capture, natural language processing, CRM, end-to-end automation",
     "inLanguage": "en-US",
     "isAccessibleForFree": true,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
+      "addressLocality": "Ahmedabad",
+      "addressRegion": "Gujarat",
+      "addressCountry": "IN",
+      "postalCode": "380009"
+    },
+    "telephone": "+919925701446",
+    "openingHours": "Mo, Tu, We, Th, Fr, Sa 10:00-19:00",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+91 7948912428",
+        "contactType": "customer support",
+        "areaServed": ["IN"],
+        "availableLanguage": ["Hindi", "Gujarati", "English"]
+      }
+    ],
     "publisher": {
       "@type": "Organization",
       "name": "FinByz Tech",
@@ -68,10 +89,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         "name": "FinByz Tech"
       },
       "datePublished": "2025-10-15T05:44:10.464Z",
-      "dateModified": "2025-10-15T05:44:10.464Z",
-    }
+      "dateModified": "2025-10-15T05:44:10.464Z"
+    },
+    "sameAs": [
+      "https://www.facebook.com/FinByz",
+      "https://twitter.com/FinByz",
+      "https://www.linkedin.com/company/finbyz",
+      "https://www.youtube.com/c/Finbyz",
+      "https://www.instagram.com/finbyz/"
+    ]
   };
-const productstructuredData = 
+const softwareApplicationStructuredData = 
 
 {
   "@context": "https://schema.org",
@@ -88,11 +116,17 @@ const productstructuredData =
   ],
   "offers": {
     "@type": "Offer",
-    "price": "–",               
+    "price": "0",               
     "priceCurrency": "INR",    
     "url": "https://finbyz.tech/email-classification",
     "availability": "https://schema.org/InStock"  
   },
+   "aggregateRating":
+    {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "54"
+    },
   "brand": {
     "@type": "Organization",
     "name": "Finbyz Tech Pvt Ltd",
@@ -111,7 +145,7 @@ const productstructuredData =
        <Script
         id="productstructured-data"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productstructuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationStructuredData) }}
       />
       
       <article itemScope itemType="https://schema.org/WebPage">
