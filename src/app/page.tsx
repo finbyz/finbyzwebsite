@@ -122,6 +122,37 @@ export default function Home() {
           }),
         }}
       />
+      <Script
+        id="prod-structured-data"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": "Home",
+            "description": "FinByz Tech Pvt Ltd offers ERPNext implementation, customization, and integration services for businesses across industries. As one of India's top ERP software companies, we provide scalable ERP solutions, mobile apps, and workflow automation for digital transformation.",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://finbyz.tech/images/FinbyzLogo.png",
+              "width": 512,
+              "height": 512
+            },
+            "brand": {
+              "@type": "Brand",
+              "name": "FinByz Tech Pvt. Ltd."
+            },
+            "sku": "ERPNext-Implementation",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "ratingCount": "128",
+              "bestRating": "5",
+              "worstRating": "1"
+            }
+          })
+        }}
+      />
       <Header />
       <main >
         <Hero />
