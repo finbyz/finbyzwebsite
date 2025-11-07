@@ -2,8 +2,9 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { getFullGallery, getGalleryRoutes } from '@/lib/gallery';
 import Tutorials from './Tutorials';
-import { getPageData } from '@/lib/getPageData';
+import { getFaqs, getPageData } from '@/lib/getPageData';
 import FinbyzGallery from '@/components/sections/FinbyzGallery';
+import FAQ from '@/components/ai_components/FAQ';
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -115,8 +116,11 @@ const GalleryPage = async ({ params }: PageProps) => {
     notFound();
   }
 
+  const faqsGroup = await getFaqs("Gallery", slug)
+
   return <>
     <Tutorials data={galleries} />;
+    {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
     {
       (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
     }
