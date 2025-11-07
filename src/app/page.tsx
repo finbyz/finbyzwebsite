@@ -13,8 +13,8 @@ import { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "FinByz Tech Pvt Ltd - ERPNext Implementation & Software Development Company",
-  description: "Looking for Software developer company in Ahmadabad? Based in Gujarat, India we are one of the best ERP software development company. We also provide services of custom software development, mobile application, website development.",
+  title: "Best ERP Software Company in India | FinByz Tech",
+  description: "Looking for a software development company in Ahmedabad? FinByz Tech offers ERP, custom software, mobile app, and website development services.",
   keywords: ["ERPNext Implementation", "Software Development", "ERP Software", "Custom Software Development", "Mobile Application", "Website Development", "Ahmedabad", "Gujarat", "India"],
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   openGraph: {
