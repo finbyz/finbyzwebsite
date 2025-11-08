@@ -44,6 +44,63 @@ export default function RootLayout({
             });
           `}
         </Script>
+        <Script
+          id="prod-structured-data"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Finbyz Tech Pvt Ltd",
+              "alternateName": ["Finbyz", "FinbyzTech"],
+              "url": "https://finbyz.tech/",
+              "@id": "https://finbyz.tech/#organization",
+              "logo": "https://finbyz.tech/images/FinbyzLogo.png",
+              "description": "Unlock global talent with Finbyz Tech, your strategic partner for IT resource augmentation and offshore development from India. We are expert ERPNext implementation partners and specialists in high-impact AI automation services. We deliver world-class custom software, web, and mobile applications to clients across the US, Europe, UK, and the Gulf.",
+              "telephone": "+91-9925701446",
+              "location": {
+                "@type": "Place",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "504-Addor Ambition, Nr. Navrang Circle, Navrangpura",
+                  "addressLocality": "Ahmedabad",
+                  "addressRegion": "Gujarat",
+                  "postalCode": "380009",
+                  "addressCountry": "IN"
+                },
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": 23.046477,
+                  "longitude": 72.558351
+                }
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-9925701446",
+                "contactType": "sales",
+                "areaServed": [
+                  "US", "CA", "GB", "AU", "AE", "SA", "QA", "KW", "OM", "BH",
+                  "DE", "FR", "ES", "IT", "NL", "CH", "IE", "SE", "NO", "DK", "BE",
+                  "ZA", "AR",
+                  "145", "150", "419", "002"
+                ],
+                "availableLanguage": [
+                  "en", "hi", "ar", "es", "gu", "mr", "te", "sd"
+                ]
+              },
+              "sameAs": [
+                "https://www.youtube.com/Finbyz",
+                "https://www.linkedin.com/company/finbyz",
+                "https://maps.app.goo.gl/6uk8D86abe6cQTBb9",
+                "https://www.facebook.com/FinByz",
+                "https://twitter.com/FinByz",
+                "https://github.com/finbyz/",
+                "https://www.indiamart.com/finbyz-tech-private-limited/",
+              ]
+            })
+          }}
+        />
       </head>
       <body
         className={`${interSans.variable} ${geistMono.variable} antialiased`}

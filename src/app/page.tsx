@@ -8,9 +8,7 @@ import ClientLogos from "@/components/sections/client-logos";
 import ResponsiveCardGrid from "@/components/sections/responsive-card-grid";
 import BusinessSlider from "@/components/sections/business-slider";
 import InquiryForm from "@/components/ui/InquiryForm";
-import { Clock } from "lucide-react";
 import { Metadata } from "next";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Best ERP Software Company in India | FinByz Tech",
@@ -59,130 +57,9 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <Script
-        id="org-structured-data"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "http://schema.org",
-            "@type": "Organization",
-            name: "Finbyz Tech Pvt Ltd",
-            image: "https://finbyz.tech/files/finbyz-tech.svg",
-            "@id": "https://finbyz.tech",
-            url: "https://finbyz.tech",
-            location: [
-              {
-                "@type": "LocalBusiness",
-                parentOrganization: { name: "Finbyz Tech Pvt Ltd" },
-                name: "Finbyz Tech Pvt Ltd - Ahmedabad",
-                image: "https://finbyz.tech/files/finbyz-tech.svg",
-                address: {
-                  "@type": "PostalAddress",
-                  addressLocality: "Ahmedabad",
-                  addressRegion: "Gujarat",
-                  addressCountry: "IN",
-                  postalCode: "380009",
-                  streetAddress:
-                    "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura",
-                },
-                geo: {
-                  "@type": "GeoCoordinates",
-                  latitude: 23.046477,
-                  longitude: 72.558351,
-                },
-                openingHoursSpecification: [
-                  {
-                    "@type": "OpeningHoursSpecification",
-                    dayOfWeek: [
-                      "Monday",
-                      "Tuesday",
-                      "Wednesday",
-                      "Thursday",
-                      "Friday",
-                      "Saturday",
-                    ],
-                    opens: "09:30",
-                    closes: "18:30",
-                  },
-                ],
-                telephone: "+91 07948912428",
-                sameAs: [
-                  "https://www.facebook.com/FinByz",
-                  "https://twitter.com/FinByz",
-                  "https://plus.google.com/s/finbyz",
-                  "https://www.linkedin.com/company/finbyz",
-                  "https://www.youtube.com/c/Finbyz",
-                ],
-                priceRange: "INR",
-              },
-            ],
-            description:
-              "Looking for Software developer company in Ahmadabad? Based in Gujarat, India we are one of the best ERP software development company. We also provide services of custom software development, mobile application, website development.",
-          }),
-        }}
-      />
-      <Script
-        id="prod-structured-data"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Finbyz Tech Pvt Ltd",
-            "alternateName": ["Finbyz", "FinbyzTech"],
-            "url": "https://finbyz.tech/",
-            "@id": "https://finbyz.tech/#organization",
-            "logo": "https://finbyz.tech/images/FinbyzLogo.png",
-            "description": "Unlock global talent with Finbyz Tech, your strategic partner for IT resource augmentation and offshore development from India. We are expert ERPNext implementation partners and specialists in high-impact AI automation services. We deliver world-class custom software, web, and mobile applications to clients across the US, Europe, UK, and the Gulf.",
-            "telephone": "+91-9925701446",
-            "location": {
-              "@type": "Place",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "504-Addor Ambition, Nr. Navrang Circle, Navrangpura",
-                "addressLocality": "Ahmedabad",
-                "addressRegion": "Gujarat",
-                "postalCode": "380009",
-                "addressCountry": "IN"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 23.046477,
-                "longitude": 72.558351
-              }
-            },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+91-9925701446",
-              "contactType": "sales",
-              "areaServed": [
-                "US", "CA", "GB", "AU", "AE", "SA", "QA", "KW", "OM", "BH",
-                "DE", "FR", "ES", "IT", "NL", "CH", "IE", "SE", "NO", "DK", "BE",
-                "ZA", "AR",
-                "145", "150", "419", "002"
-              ],
-              "availableLanguage": [
-                "en", "hi", "ar", "es", "gu", "mr", "te", "sd"
-              ]
-            },
-            "sameAs": [
-              "https://www.youtube.com/Finbyz",
-              "https://www.linkedin.com/company/finbyz",
-              "https://maps.app.goo.gl/6uk8D86abe6cQTBb9",
-              "https://www.facebook.com/FinByz",
-              "https://twitter.com/FinByz",
-              "https://github.com/finbyz/",
-              "https://www.indiamart.com/finbyz-tech-private-limited/",
-            ]
-          })
-        }}
-      />
       <Header />
       <main >
         <Hero />
-
         <Benefits />
         <div className="[&_h2]:text-[#1A5276]">
           <ResponsiveCardGrid
