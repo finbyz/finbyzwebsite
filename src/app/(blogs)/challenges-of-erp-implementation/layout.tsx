@@ -45,18 +45,7 @@ export const metadata: Metadata = {
   }
 };
 const faqsGroup = await getFaqs("Blog Post","challenges-of-erp-implementation");
-const faqstructureData = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqsGroup?.faqs.map(faq => ({
-    "@type": "Question",
-    "name": faq.question,
-    "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-    }
-    }))
-};
+
 export default async function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
   "@context": "https://schema.org/",
@@ -121,11 +110,6 @@ export default async function Layout({ children }: { children: React.ReactNode }
         id="structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-      <Script
-        id="structured-faqs"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqstructureData) }}
       />
 
       <article itemScope itemType="https://schema.org/BlogPosting">
