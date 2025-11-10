@@ -1,4 +1,8 @@
+"use client";
+
 import React, { useState } from 'react';
+import { useRouter } from "next/navigation";
+
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -15,6 +19,7 @@ const initialState = {
 const ContactForm: React.FC = () => {
     const [form, setForm] = useState(initialState);
     const [loading, setLoading] = useState(false);
+   const router = useRouter(); // ✅ Initialize router
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       setForm({ ...form, [e.target.name]: e.target.value });
@@ -53,9 +58,11 @@ const ContactForm: React.FC = () => {
 
       if (res.ok) {
         setForm(initialState);
-        alert(
-          "Your interest is inspiring us to do better...\nFinbyz Tech expert shall reach you shortly"
-        );
+        
+         //  Redirect after successful submit
+        router.push("/thank-you-for-inquiry");
+     
+       
       } else {
         alert("Something went wrong. Please try again.");
       }

@@ -14,7 +14,7 @@ import Grid from '@/components/layout/Grid';
 import { motion } from "framer-motion";
 
 const whyChooseList = [
-  'Boost operational efficiency and reduce costs with expert ERPNext implementation by a trusted partner in Ahmedabad.',
+  'Boost operational efficiency and reduce costs with expert ERPNext implementation by a trusted partner.',
   'End-to-end ERPNext services from planning, customization, deployment to post-launch support – everything under one roof.',
   'Trusted ERPNext Service Providers with a proven track record across diverse industries in Gujarat and beyond.',
   'Leverage the full potential of ERPNext to scale and streamline your business with Finbyz Tech – Your ERPNext Implementation Partner.'
@@ -25,13 +25,13 @@ const whyUsFeatures = [
     title: 'ERPNext Implementation Experience',
     image: '/images/experience.svg',
     alt: 'experience',
-    description: 'With over a decade of ERPNext implementation experience in Gujarat, we craft scalable solutions that meet your unique business requirements.'
+    description: 'With over a decade of ERPNext implementation experience, we craft scalable solutions that meet your unique business requirements.'
   },
   {
     title: 'Implemented Projects',
     image: '/images/icon-order-management.svg',
     alt: 'Implemented Projects',
-    description: 'We have successfully delivered 140+ ERPNext implementations across industries, positioning us as one of the top ERPNext service providers in Ahmedabad.'
+    description: 'We have successfully delivered 140+ ERPNext implementations across industries, positioning us as one of the top ERPNext service providers globally.'
   },
   {
     title: 'Excellent Support Service',
@@ -61,25 +61,25 @@ const whyUsFeatures = [
     title: 'Established System & Processes',
     image: '/images/system%20setup.svg',
     alt: 'Established System & Processes',
-    description: 'We follow industry best practices from 140+ implementations, making us a structured and process-driven ERPNext Implementation Company in Gujarat.'
+    description: 'We follow industry best practices from 140+ implementations, making us a structured and process-driven ERPNext Implementation Company.'
   },
   {
     title: 'ISO 27001-2013 Certified Company',
     image: '/images/quality%20assurance.svg',
     alt: 'ISO Certified',
-    description: 'Our ISO certification ensures data security and process quality, making Finbyz Tech a trusted ERPNext partner in Ahmedabad.'
+    description: 'Our ISO certification ensures data security and process quality, making Finbyz Tech a trusted ERPNext partner.'
   },
   {
     title: 'Open-Source ERPNext Expertise',
     image: '/images/Open%20Source%20Solutions.svg',
     alt: 'Open Source Solutions',
-    description: 'With 100+ years of combined experience in open-source technologies, we bring the right mix of flexibility and innovation to ERPNext implementation.'
+    description: 'With 10+ years of combined experience in open-source technologies, we bring the right mix of flexibility and innovation to ERPNext implementation.'
   },
   {
     title: 'Certified ERPNext Implementation Partner',
     image: '/images/blog-icon-ensures-customer-satisfaction.svg',
     alt: 'Certified ERPNext Implementation Partner',
-    description: 'We are an Official Certified ERPNext Partner with the expertise and credibility you need from your ERPNext Implementation Company in Ahmedabad.'
+    description: 'We are an Official Certified ERPNext Partner with the expertise and credibility you need from your ERPNext Implementation Company.'
   }
 ];
 
@@ -87,44 +87,44 @@ const challengeCards = [
   {
     title: "User Adoption",
     image: "/images/dedicated%20developer.svg",
-    alt: "dedicated developer",
+    alt: "Dedicated developer",
     description:
-      "Businesses often struggle to get employees fully onboard with ERPNext. As a trusted ERPNext Implementation Partner we help ensure ERP adoption is smooth and effective. As a leading ERPNext Implementation Company in Gujarat, we provide continuous support and video-based training to empower users. Our ERPNext service includes easily accessible resources to help teams become confident users. At our company, we understand that implementing a new system can be challenging for some users. That's why we provide ongoing support and training to ensure that our users are comfortable and confident in using the system. Our video training resources are designed to be user-friendly and accessible, allowing users to learn at their own pace and on their own schedule."
+      "Businesses often struggle to get employees fully onboard with ERPNext, we help ensure ERP adoption is smooth and effective. As a leading ERPNext Implementation Company, we provide continuous support and video-based training to empower users. Our ERPNext service includes easily accessible resources to help teams become confident users. At our company, we understand that implementing a new system can be challenging for some users. That's why we provide ongoing support and training to ensure that our users are comfortable and confident in using the system. Our video training resources are designed to be user-friendly and accessible, allowing users to learn at their own pace and on their own schedule."
   },
   {
     title: "Data Importing",
     image: "/images/Data%20Importing.svg",
     alt: "Data Importing",
     description:
-      "Migrating master data from legacy systems to ERPNext can be complex. Our ERPNext service providers from Ahmedabad ensure a precise and loss-free data transition. Our ERPNext Implementation Company follows a systematic data migration process. Located in Gujarat, we map fields to ERPNext formats and use a maker-checker system to ensure 100% data accuracy. We take data migration seriously and follow a structured process to ensure accuracy and reliability. Our process involves mapping data fields to the ERPNext Data importing format, which ensures that the data is formatted correctly for the system. We also follow the maker checker concept, which means that data is reviewed and verified by multiple team members to ensure 100% accuracy before it is imported into the system. By adhering to this process, we can minimize errors and ensure a smooth and seamless transition to the new system."
+      "Migrating master data from legacy systems to ERPNext can be complex. Our ERPNext service providers ensures precise and loss-free data transition. Our ERPNext Implementation Company follows a systematic data migration process. Located in Gujarat, we map fields to ERPNext formats and use a maker-checker system to ensure 100% data accuracy. We take data migration seriously and follow a structured process to ensure accuracy and reliability. Our process involves mapping data fields to the ERPNext Data importing format, which ensures that the data is formatted correctly for the system. We also follow the maker checker concept, which means that data is reviewed and verified by multiple team members to ensure 100% accuracy before it is imported into the system. By adhering to this process, we can minimize errors and ensure a smooth and seamless transition to the new system."
   },
   {
     title: "Complex Integration",
     image: "/images/Complex%20Integration.svg",
     alt: "Complex Integration",
     description:
-      "Integrating ERPNext with existing software and hardware can be difficult. Our expert ERPNext Implementation Partner team in Ahmedabad tackles complex integrations with ease. As one of the experienced ERPNext service providers in Gujarat, we handle integrations with IoT, SCADA, and third-party systems using custom development, APIs, and webhooks for seamless functionality. Addressing technical complexity in ERPNext integration projects requires expertise and experience. At our company, we work with experienced developers who have a deep understanding of both ERPNext and the systems being integrated. They can develop custom code or utilize the flexible API and webhooks provided by ERPNext to ensure a seamless integration. By utilizing the right tools and strategies, we ensure that our clients achieve a successful outcome with their ERPNext integration projects while also meeting their unique business requirements."
+      "Integrating ERPNext with existing software and hardware can be difficult. Our expert team tackles complex integrations with ease. As one of the experienced ERPNext service providers, we handle integrations with IoT, SCADA, and third-party systems using custom development, APIs, and webhooks for seamless functionality. Addressing technical complexity in ERPNext integration projects requires expertise and experience. At our company, we work with experienced developers who have a deep understanding of both ERPNext and the systems being integrated. They can develop custom code or utilize the flexible API and webhooks provided by ERPNext to ensure a seamless integration. By utilizing the right tools and strategies, we ensure that our clients achieve a successful outcome with their ERPNext integration projects while also meeting their unique business requirements."
   },
   {
     title: "Customization",
     image: "/images/Customization.svg",
     alt: "Customization",
     description:
-      "ERPNext may need customization to fit your business. Our ERPNext Implementation Company in Ahmedabad works closely with clients to deliver tailored solutions. We are a collaborative ERPNext Implementation Partner in Gujarat. Our customization services align ERPNext with your specific workflows, ensuring productivity and business success. We believe in a collaborative approach to customization in ERPNext. We involve our clients in the customization process to ensure that their unique business requirements are met. This approach enables us to create customized ERPNext solutions that are tailored to our clients' specific needs and workflows, leading to increased productivity and efficiency in their business processes. Our clients remain involved throughout the customization process, ensuring that they are fully satisfied with the final outcome."
+      "ERPNext may need customization to fit your business. Our Company works closely with clients to deliver tailored solutions. We are a collaborative ERPNext Implementation Partner globally, our customization services align ERPNext with your specific workflows, ensuring productivity and business success. We believe in a collaborative approach to customization in ERPNext. We involve our clients in the customization process to ensure that their unique business requirements are met. This approach enables us to create customized ERPNext solutions that are tailored to our clients' specific needs and workflows, leading to increased productivity and efficiency in their business processes. Our clients remain involved throughout the customization process, ensuring that they are fully satisfied with the final outcome."
   },
   {
     title: "Scalability",
     image: "/images/Scalability(1).svg",
     alt: "Scalability",
     description:
-      "Rapid business growth can challenge ERP systems. Our ERPNext Implementation Company in Ahmedabad builds scalable ERPNext architecture ready for the future. We design cloud-based ERPNext systems with scalability in mind. As top ERPNext service providers we ensure your system can handle higher volumes and business expansion. We design ERPNext system architecture with scalability in mind. Our team ensures that the system can handle future growth and expansion by leveraging industry-standard cloud infrastructure. We use the latest cloud technologies to ensure that the system can handle increased traffic and data volume, providing our clients with the ability to scale their business processes seamlessly without worrying about system limitations. By designing ERPNext systems with scalability in mind, we enable our clients to grow their business processes without any interruptions."
+      "Rapid business growth can challenge ERP systems. Our Company builds scalable ERPNext architecture ready for the future. We design cloud-based ERPNext systems with scalability in mind. As top ERPNext service providers we ensure your system can handle higher volumes and business expansion. We design ERPNext system architecture with scalability in mind. Our team ensures that the system can handle future growth and expansion by leveraging industry-standard cloud infrastructure. We use the latest cloud technologies to ensure that the system can handle increased traffic and data volume, providing our clients with the ability to scale their business processes seamlessly without worrying about system limitations. By designing ERPNext systems with scalability in mind, we enable our clients to grow their business processes without any interruptions."
   },
   {
     title: "Security",
     image: "/images/Security3b8a73.svg",
     alt: "Security",
     description:
-      "Protecting sensitive data is critical. As a secure ERPNext Implementation Partner in Ahmedabad, we enforce strict access controls and data security policies. Our ERPNext Implementation Company in Gujarat sets up role-based user access controls to protect data. We prevent breaches by ensuring only authorized users can access sensitive ERPNext modules. We recognize the importance of data security in ERPNext systems. To prevent data breaches caused by unauthorized access, we implement a user access control system. This system ensures that only authorized users can access sensitive data, thereby reducing the risk of data theft or data loss. We provide role-based access control and implement security policies that restrict access to sensitive data, ensuring that only the right people have access to the right data. By implementing a user access control system, we provide our clients with a secure ERPNext system that protects their sensitive data from unauthorized access."
+      "Protecting sensitive data is our top priority. As a secure ERPNext Implementation Partner globally, we enforce strict access controls and data security policies to safeguard client information. Our company implements role-based user access controls to ensure that only authorized users can access sensitive ERPNext modules. This approach helps prevent data breaches and unauthorized access, reducing the risk of data theft or data loss. We understand the importance of data security in ERPNext systems and have developed a comprehensive user access control system that provides multiple layers of protection. By implementing role-based permissions and security policies, we make sure that the right people have access to the right data at the right time. Through these measures, we deliver a secure ERPNext environment that protects sensitive information and builds trust with our clients."
   }
 ];
 
@@ -135,8 +135,8 @@ const industries = [
   { title: 'Manufacturing', image: '/images/nav-manufacturing.svg', alt: 'Manufacturing', description: '', link: '/erp-for-manufacturing-industry' },
   { title: 'Agro Commodity', image: '/images/nav-agro.svg', alt: 'Agro Commodity', description: '', link: '/erp-for-agro-commodity' },
   { title: 'Trading', image: '/images/nav-trading.svg', alt: 'Trading', description: '', link: '/erp-for-trading-industry' },
-  { title: 'Textile', image: '/images/yarn.svg', alt: 'Textile', description: '', link: '' },
-  { title: 'Services', image: '/images/nav-services.svg', alt: 'Services', description: '', link: '' },
+  { title: 'Textile', image: '/images/yarn.svg', alt: 'Textile', description: '', link: '/erp-for-textile-industry' },
+  { title: 'Services', image: '/images/nav-services.svg', alt: 'Services', description: '', link: '/erpnext-service-provider' },
   { title: 'Real Estate', image: '/images/icon-business-app.svg', alt: 'Real Estate', description: '', link: '' },
   { title: 'Ceramics', image: '/images/Ceramics.svg', alt: 'Ceramics', description: '', link: '' }
 ];
@@ -241,7 +241,7 @@ export default function Page() {
       <HeroSection
         headline="ERPNext Implementation"
         highlightWords={["Implementation"]}
-        description="Looking for a trusted ERPNext Implementation Partner in Ahmedabad? Finbyz Tech offers expert ERPNext services tailored to your business needs."
+        description="Looking for a trusted ERPNext Implementation Partner? Finbyz Tech offers expert ERPNext services tailored to your business needs."
         primaryButton={{
           text: 'Get Started',
           action: () => {
@@ -277,7 +277,7 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold mb-4 text-[#1A5276]">Why Consider Us As Your ERPNext Implementation Partner in Gujarat?</h2>
+          <h2 className="text-2xl font-bold mb-4 text-[#1A5276]">Why Consider Us As Your ERPNext Implementation Partner?</h2>
           <p className="mb-8 text-gray-700">We are a trusted <a href="/erpnext-services-in-uae" className="text-primary underline">ERPNext Implementation Company</a> based in Ahmedabad, known for our comprehensive and client-focused ERPNext services. Here's what makes us stand out as preferred ERPNext service providers.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {whyUsFeatures.map((feature, idx) => (
@@ -374,7 +374,7 @@ export default function Page() {
       viewport={{ once: true, amount: 0.5 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      As a trusted ERPNext Implementation Partner based in Ahmedabad, Gujarat, FinByz Tech serves diverse industries with custom ERPNext solutions. Our ERPNext service providers design systems that meet unique operational needs across sectors.
+      As a trusted ERPNext Implementation Partner globally, FinByz Tech serves diverse industries with custom ERPNext solutions. Our ERPNext service providers design systems that meet unique operational needs across sectors.
     </motion.p>
 
     {/* Industries Grid */}
@@ -419,7 +419,7 @@ export default function Page() {
       <Section useGradient>
         <div className="container-custom py-8">
           <h2 className="text-2xl font-bold mb-4 text-center  text-[#1A5276]">We Serve Businesses Across the Globe</h2>
-          <p className="mb-8 text-gray-700 text-center">FinByz is a leading <a href="/erpnext-services-in-uae" className="text-primary underline">ERPNext service provider in UAE</a>, India, Canada, USA, Saudi Arabia, UK, and beyond. As a renowned global <a href="/erpnext-software" className="text-primary underline">ERP implementation</a> partner, we proudly offer our expertise to businesses spanning these regions. Our committed team stands ready to address all your ERP implementation challenges, from consultations to hands-on assistance. Should you have any questions or need guidance, please don't hesitate to contact us.</p>
+          <p className="mb-8 text-gray-700 text-center">FinByz is a leading <a href="/erpnext-services-in-uae" className="text-primary underline">ERPNext service provider in UAE</a>, India, Canada, USA, Saudi Arabia, UK, and beyond. As a renowned global <a href="/erpnext-software" className="text-primary underline">ERP implementation</a> partner, we proudly offer our expertise to businesses spanning these regions. Our committed team stands ready to address all your ERP implementation challenges, from consultations to hands-on assistance.You have any questions or need guidance, please don't hesitate to contact us.</p>
           <ClientCountryGrid countries={countries} />
         </div>
       </Section>

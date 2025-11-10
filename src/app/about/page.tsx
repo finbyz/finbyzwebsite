@@ -112,14 +112,14 @@ export default function AboutPage() {
         {/* Page Intro */}
         <section className="py-16">
           <div className="container-custom">
-            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
+            <p className="text-xl md:text-xl text-gray-700 leading-relaxed">
               We're not just a tech company — we're your strategic partner in navigating complexity. Since 2015, Finbyz Tech has empowered businesses with tailored digital solutions that unlock clarity, drive efficiency, and accelerate outcomes. From planning to execution, we simplify the road to transformation.
             </p>
           </div>
         </section>
 
         {/* Mission & Vision Section */}
-        <section className="py-24">
+        <section className="py-8">
           <div className="container-custom">
             <div className="text-center mb-16">
               {/* <Badge className="mb-6 bg-gradient-to-r from-green-500 to-blue-600 text-white border-0">
@@ -171,15 +171,15 @@ export default function AboutPage() {
         </section>
 
         {/* Innovation & Impact Section */}
-        <section className="py-24 ">
+        <section className="py-20">
           <div className="container-custom">
             {/* <Badge className="mb-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white border-0">
               Our Journey
             </Badge> */}
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1A5276] mb-6">
+            <h2 className="text-2xl md:text-5xl font-bold text-[#1A5276] mb-6">
               A Decade of Innovation & Impact
             </h2>
-            <div className="text-xl md:text-2xl text-gray-600 leading-relaxed">
+            <div className="text-xl md:text-xl text-gray-600 leading-relaxed">
               <p className="mb-6">
                 Founded on the belief that technology should empower rather than overwhelm, Finbyz Tech has grown from a consulting firm into a full-fledged technology partner. We serve clients across industries — from manufacturing to finance — with solutions that are as strategic as they are scalable.
               </p>
@@ -191,12 +191,12 @@ export default function AboutPage() {
         </section>
 
         {/* Quote Section */}
-        <section className="py-24 ">
+        <section className="py-8 ">
           <div className="container-custom">
             {/* <div className="w-20 h-20 mx-auto mb-8  rounded-full flex items-center justify-center shadow-lg">
               <Quote className="w-10 h-10 text-black" />
             </div> */}
-            <blockquote className="text-2xl lg:text-3xl font-bold text-gray-800 mb-6 leading-relaxed">
+            <blockquote className="text-2xl lg:text-2xl font-bold text-gray-800 mb-6 leading-relaxed">
               "We don't just build software — we help you steer toward smarter decisions, streamlined operations, and scalable outcomes."
             </blockquote>
             <p className="text-lg text-gray-600 font-medium">— Finbyz Tech Brand Persona</p>
@@ -227,10 +227,10 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {valuesItems.map((item, index) => {
                 const gradients = [
-                  "from-blue-500 to-purple-600",
+                  "from-blue-500 to-purple-500",
                   "from-orange-500 to-red-500", 
                   "from-green-500 to-teal-600",
-                  "from-purple-500 to-pink-600",
+                  "from-blue-500 to-blue-600",
                   "from-indigo-500 to-blue-600"
                 ];
                 return (
@@ -258,7 +258,7 @@ export default function AboutPage() {
         <FAQSection />
 
         {/* Related Pages */}
-        <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50">
+        <section className="py-12 bg-gradient-to-br from-gray-50 via-white to-blue-50">
           <div className="container-custom">
             <div className="text-center mb-16">
               {/* <Badge className="mb-6 bg-gradient-to-r from-gray-500 to-blue-600 text-white border-0">
@@ -304,12 +304,12 @@ export default function AboutPage() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+        <section className="py-12 bg-gradient-to-br from-gray-50 via-white to-blue-50">
           <div className="container-custom">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-center">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-center text-[#1A5276]">
               Ready to steer your vision with us?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto text-center">
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto text-center">
               Join us in creating innovative solutions that drive business transformation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -319,7 +319,7 @@ export default function AboutPage() {
               </button>
               </Link>
               <Link href="/erpnext-service-provider">
-                <button className="border-2 border-gray-300 text-gray-300 bg-transparent hover:bg-gray-300 hover:text-gray-900 px-8 py-4 rounded-full font-semibold transition-all text-lg">
+                <button className="border-2 border-gray-300 text-gray-900 bg-transparent hover:bg-gray-300 hover:text-gray-900 px-8 py-4 rounded-full font-semibold transition-all text-lg">
                 Explore Our Services
               </button>
               </Link>

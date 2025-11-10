@@ -10,7 +10,7 @@ export default function Page() {
   const router = useRouter();
 
   const handleHome = () => {
-    window.open('https://finbyz.tech', '_self');
+    router.push("/")
   };
 
   return (
@@ -21,7 +21,7 @@ export default function Page() {
         description="Thanks for reaching out! We're excited to assist you. Our team is on it and will get back to you soon."
         primaryButton={{
           text: 'Home',
-          action: handleHome,
+          action: "/",
         }}
         heroImage={{
           alt: 'Thank you for Inquiry',
@@ -52,12 +52,12 @@ export default function Page() {
               primaryButton: {
                 text: 'Go to Home',
                 icon: 'ArrowLeft',
-                action: handleHome,
+                action: "/",
               },
               secondaryButton: {
                 text: 'Contact Us',
                 icon: 'Mail',
-                action: () => router.push('/contact'),
+                action: "/contact",
               },
               trustIndicator: {
                 text: 'Trusted by 100+ businesses',

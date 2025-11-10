@@ -70,7 +70,7 @@ export default function CompanyHistoryTimeline({ data }: CompanyHistoryTimelineP
       {/* Vertical Timeline */}
         <div className="relative max-w-5xl mx-auto">
           {/* Central vertical line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-1 z-0 rounded-full" style={{ background: 'linear-gradient(180deg, var(--primary-blue), var(--primary-purple))', transform: 'translateX(-50%)' }}></div>
+          <div className="absolute left-1/2 top-0 bottom-0 w-1 z-0 rounded-full bg-[#1A5276]"></div>
           
           {events.map((event, idx) => {
             const isLeft = idx % 2 === 0;
@@ -78,7 +78,7 @@ export default function CompanyHistoryTimeline({ data }: CompanyHistoryTimelineP
               <div key={idx} className="timeline-item relative mb-16 last:mb-0">
                 {/* Dot on the line */}
                 <div className="absolute left-1/2 top-8 z-10" style={{ transform: 'translate(-50%, 0)' }}>
-                  <div className="w-5 h-5 rounded-full border-4 border-white shadow-lg" style={{ background: 'linear-gradient(135deg, var(--primary-blue), var(--primary-purple))' }}></div>
+                  <div className="w-5 h-5 rounded-full border-4 border-white shadow-lg" style={{ background: '#1A5276' }}></div>
                 </div>
                 
                 {/* Event Content */}
@@ -88,26 +88,26 @@ export default function CompanyHistoryTimeline({ data }: CompanyHistoryTimelineP
                       <>
                         <div className="flex-1">
                           <div className="rounded-lg shadow-md p-6" style={{ background: 'var(--bg-blue-light)', color: 'var(--text-blue)', border: '1px solid var(--border-blue)' }}>
-                            <div className="font-bold text-xl mb-2" style={{ color: 'var(--primary-blue)' }}>{event.date}</div>
-                            <div className="font-semibold text-lg mb-2">{event.title}</div>
-                            <div className="text-sm" style={{ color: 'var(--text-blue)', opacity: 0.8 }}>{event.description}</div>
+                            <div className="font-bold text-xl mb-2 text-[#1A5276]" style={{  }}>{event.date}</div>
+                            <div className="font-semibold text-lg mb-2 text-[#1A5276]">{event.title}</div>
+                            <div className="text-sm text-black" style={{ opacity: 0.8 }}>{event.description}</div>
                           </div>
                         </div>
-                        <div className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg border-4 border-white flex-shrink-0" style={{ background: 'linear-gradient(135deg, var(--primary-blue), var(--primary-purple))' }}>
+                        <div className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg border-4 border-white flex-shrink-0" style={{ background: '#1A5276' }}>
                           <event.icon className="w-8 h-8 text-white" />
                         </div>
                       </>
                     )}
                     {!isLeft && (
                       <>
-                        <div className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg border-4 border-white flex-shrink-0" style={{ background: 'linear-gradient(135deg, var(--primary-blue), var(--primary-purple))' }}>
+                        <div className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg border-4 border-white flex-shrink-0" style={{ background: '#1A5276' }}>
                           <event.icon className="w-8 h-8 text-white" />
                         </div>
                         <div className="flex-1">
                           <div className=" rounded-lg shadow-md p-6" style={{ background: 'var(--bg-blue-light)', color: 'var(--text-blue)', border: '1px solid var(--border-blue)' }}>
-                            <div className="font-bold text-xl mb-2" style={{ color: 'var(--primary-blue)' }}>{event.date}</div>
-                            <div className="font-semibold text-lg mb-2">{event.title}</div>
-                            <div className="text-sm" style={{ color: 'var(--text-blue)', opacity: 0.8 }}>{event.description}</div>
+                            <div className="font-bold text-xl mb-2 text-[#1A5276]" style={{ }}>{event.date}</div>
+                            <div className="font-semibold text-lg mb-2 text-[#1A5276]">{event.title}</div>
+                            <div className="text-sm text-black" style={{ opacity: 0.8 }}>{event.description}</div>
                           </div>
                         </div>
                       </>

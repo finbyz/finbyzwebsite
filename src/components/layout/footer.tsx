@@ -38,7 +38,7 @@
  * @requires @/components/ui/button - For action buttons
  * @requires lucide-react - For icon components
  */
-
+"use client"
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Building2, Wrench, Users, FileText, Briefcase, Phone, Factory, ShoppingCart, Truck, Heart, GraduationCap, Leaf, TestTube, Hammer, Pill, Zap, Code, UserPlus, Lightbulb, BookOpen, Target, Star, Calendar, Home, Eye, Mail } from "lucide-react";
@@ -94,7 +94,11 @@ import {
   FaYoutube as Youtube,
   FaInstagram as Instagram,
 } from "react-icons/fa";
+import { useState } from "react";
 export default function Footer() {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  // const [message, setMessage] = useState("");
   const socialLinks = [
     {
       href: "https://www.facebook.com/FinByz",
@@ -122,6 +126,47 @@ export default function Footer() {
       label: "Instagram",
     },
   ];
+
+
+  const handleSubscribe = async () => {
+    if (!email) {
+      alert("Please enter an email address.");
+      return;
+    }
+
+    setLoading(true);
+    
+
+    try {
+      const res = await fetch(
+        "/web-api/fb/method/finbyz.email_newsletter_api.subscriber_email_newsletter",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email }),
+        }
+      );
+
+      const data = await res.json();
+
+      if (data?.message?.status === "success") {
+        alert("Subscription successful!");
+        setEmail("");
+      } else if (data?.message?.status === "exists") {
+        alert("You’re already subscribed.");
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Network error. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <footer className=" bg-slate-900 text-white w-full">
       {/* Main Footer Content */}
@@ -267,18 +312,27 @@ export default function Footer() {
           </div>
 
           {/* Newsletter Subscription */}
-          <div className="flex justify-end mb-8 mr-4">
+       
+           <div className="flex justify-end mb-8 mr-4">
             <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4 text-slate-400" />
               <input
                 type="email"
                 placeholder="Subscribe to newsletter"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="px-3 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400 transition-all duration-200 w-44"
               />
-              <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-4 py-2 text-sm rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
-                Subscribe
+              <Button
+                onClick={handleSubscribe}
+                disabled={loading}
+                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-4 py-2 text-sm rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
+              >
+                {loading ? "Subscribing..." : "Subscribe"}
               </Button>
             </div>
+
+           
           </div>
         </div>
       </div>

@@ -342,7 +342,7 @@ export default function Header() {
             name: "ERPNext Implementation",
             description: "Complete ERPNext setup",
             icon: Cpu,
-            href: "/erpnext-implementer"
+            href: "/hire-erpnext-implementer"
           },
           {
             name: "Custom ERP Development",

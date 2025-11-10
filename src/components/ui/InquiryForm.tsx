@@ -5,6 +5,7 @@ import { Input } from './input';
 import { Button } from './button';
 import { cn } from '@/lib/utils';
 import { Mail, Phone, Building, User } from 'lucide-react';
+import { useRouter } from "next/navigation";
 
 interface InquiryFormProps {
   data?: any;
@@ -20,6 +21,7 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const router = useRouter(); // ✅ Initialize router
 
   const defaultData = {
     component_type: "Form",
@@ -121,7 +123,9 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
       }
 
       // Success
-      alert('Thanks! Your inquiry has been submitted.');
+
+       //  Redirect after successful submit
+      router.push("/thank-you-for-inquiry");
       setFormData({
         name: '',
         organization: '',

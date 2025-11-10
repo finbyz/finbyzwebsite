@@ -291,6 +291,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Send, X, MessageCircle, Info } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 interface FormData {
   name: string;
@@ -313,6 +314,7 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
   });
   const [open, setOpen] = useState(false);
   const formRef = useRef<HTMLDivElement>(null);
+  const router = useRouter(); // ✅ Initialize router
 
   // Function to set cookie for 1 hour
   const setSliderCookie = () => {
@@ -420,7 +422,8 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
       }
 
       // Success
-      alert('Thanks! Your inquiry has been submitted.');
+      //  Redirect after successful submit
+      router.push("/thank-you-for-inquiry");
       setFormData({ name: '', organization: '', email: '', mobile: '' });
       setSliderCookie(); // Set cookie to prevent showing again for 1 hour
       resetOpenCount(); // Reset the open count since user completed the form
