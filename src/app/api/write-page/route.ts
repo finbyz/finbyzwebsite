@@ -68,8 +68,8 @@ function writeComponent(filename: string, code: string): void {
   fs.writeFileSync(filePath, code, 'utf-8');
 }
 
-function writePage(slug: string, code: string, type: 'webpage' | 'blog'): void {
-  const baseDir = type === 'blog' ? '(blog)' : '(webpages)';
+function writePage(slug: string, code: string, type: 'webpage' | 'blog' | 'code-snippet'): void {
+  const baseDir = pageGroups[type]
   const pageDir = path.join(process.cwd(), 'src', 'app', baseDir, slug);
   
   ensureDirectory(pageDir);
@@ -78,17 +78,22 @@ function writePage(slug: string, code: string, type: 'webpage' | 'blog'): void {
   fs.writeFileSync(pagePath, code, 'utf-8');
 }
 
-function generateWebpageLayout(slug: string, seoData: SEOData): string {
+function generateWebpageLayout(slug: string, seoData: SEOData, type: PageType): string {
   const title = escapeString(seoData.seo_title || seoData.title || '');
   const description = escapeString(seoData.description || seoData.small_description || '');
   const keywords = escapeString(seoData.keywords || '');
   const image = seoData.image || '';
   const content = escapeString((seoData.content || '').substring(0, 500));
   const canonicalUrl = `${process.env.FRAPPE_URL}/${slug}`;
+  const doctype = docTypes[type] || 'Web Page';
 
   return `import BusinessSlider from "@/components/sections/business-slider";
+import FinbyzGallery from "@/components/sections/FinbyzGallery";
+import FAQ from "@/components/ai_components/FAQ";
+import { getFaqs, getPageData } from "@/lib/getPageData";
 import { Metadata } from "next";
 import Script from "next/script";
+
 
 export const metadata: Metadata = {
   title: "${title}",
@@ -130,35 +135,52 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default async function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@context": "http://www.schema.org",
+    "@type": "ProfessionalService",
     "name": "${title}",
-    "description": "${description}",
     "url": "${canonicalUrl}",
-    ${image ? `"image": "${image}",` : ''}
-    ${keywords ? `"keywords": "${keywords}",` : ''}
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
-    "publisher": {
-      "@type": "Organization",
-      "name": "FinByz Tech",
-      "url": "https://finbyz.tech"
+    "logo": "https://finbyz.tech/files/FinbyzLogo.png",
+    "image": "${image}",
+    "description": "${description}",
+    "priceRange": "INR",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
+      "addressLocality": "Ahmedabad",
+      "addressRegion": "Gujarat",
+      "addressCountry": "IN",
+      "postalCode": "380009"
     },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "${title}",
-      "description": "${description}",
-      ${content ? `"articleBody": "${content}",` : ''}
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech"
-      },
-      "datePublished": "${new Date().toISOString()}",
-      "dateModified": "${new Date().toISOString()}",
-    }
+    "telephone": "+919925701446",
+    "openingHours": "Mo, Tu, We, Th, Fr, Sa 10.00:00-19:00",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+91 7948912428",
+        "contactType": "customer support",
+        "areaServed": [
+          "IN"
+        ],
+        "availableLanguage": [
+          "Hindi",
+          "Gujarati",
+          "English"
+        ]
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/FinByz",
+      "https://twitter.com/FinByz",
+      "https://www.linkedin.com/company/finbyz",
+      "https://www.youtube.com/c/Finbyz",
+      "https://www.instagram.com/finbyz/"
+    ]
   };
+
+  const data = await getPageData("${doctype}", "${slug}");
+  const faqsGroup = await getFaqs("${doctype}", "${slug}");
 
   return (
     <>
@@ -174,7 +196,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </article>
       
       {children}
-      
+      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
+      {
+        (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
+      }
       <BusinessSlider />
     </>
   );
@@ -290,6 +315,12 @@ const pageGroups = {
   'webpage': '(webpages)',
   'code-snippet': '(code-snippets)'
 }
+const docTypes = {
+  blog: 'Blog Post',
+  'code-snippet': 'Code Snippet',
+  webpage: 'Web Page'
+};
+
 type PageType = 'webpage' | 'blog' | 'code-snippet'
 
 
@@ -301,7 +332,7 @@ function writeLayout(slug: string, type: PageType, seoData: SEOData): void {
   
   const layoutCode = type === 'blog' 
     ? generateBlogLayout(slug, seoData)
-    : generateWebpageLayout(slug, seoData);
+    : generateWebpageLayout(slug, seoData, type);
   
   const layoutPath = path.join(pageDir, 'layout.tsx');
   fs.writeFileSync(layoutPath, layoutCode, 'utf-8');
@@ -349,12 +380,12 @@ export async function POST(request: NextRequest) {
       );
     }
     
-    if (body.type !== 'webpage' && body.type !== 'blog') {
+    if (body.type !== 'webpage' && body.type !== 'blog' && body.type !== 'code-snippet') {
       return NextResponse.json(
         {
           success: false,
           error: 'Invalid type',
-          message: 'type must be either "webpage" or "blog"'
+          message: 'type must be either "webpage" or "blog" or "code-snippet"'
         },
         { status: 400 }
       );
