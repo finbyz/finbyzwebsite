@@ -91,19 +91,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
 };
   const data = await getPageData("Web Page","erpnext-software");
   const faqsGroup = await getFaqs("Web Page","erpnext-software");
-  const faqstructureData = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqsGroup?.faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  };
-
+  
   return (
     <>
       {/* JSON-LD structured data for LLMs */}
@@ -112,12 +100,6 @@ export default async function Layout({ children }: { children: React.ReactNode }
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <Script
-        id="structured-faqs"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqstructureData) }}
-      />
-      
       {/* Semantic HTML wrapper for better content extraction */}
       <article itemScope itemType="https://schema.org/WebPage">
         <meta itemProp="name" content="ERPNext: Free and Open Source Cloud ERP Software\n" />

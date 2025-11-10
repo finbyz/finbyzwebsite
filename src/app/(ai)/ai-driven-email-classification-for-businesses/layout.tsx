@@ -1,31 +1,35 @@
 import BusinessSlider from "@/components/sections/business-slider";
+import FinbyzGallery from "@/components/sections/FinbyzGallery";
+import FAQ from "@/components/ai_components/FAQ";
+import { getFaqs, getPageData } from "@/lib/getPageData";
+
 import { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "AI-Driven Email Classification for Businesses",
-  description: "Discover how AI-driven email classification automates email handling, improves lead management, and enhances productivity.",
-  keywords: "Email Classification, AI-driven workflow, ERPNext, intent classification, data extraction, lead management, automated data capture, natural language processing, CRM, end-to-end automation",
-  authors: [{ name: "FinByz Tech" }],
-  creator: "FinByz Tech",
-  publisher: "FinByz Tech",
+  title: "AI-Driven Email Classification for Businesses | Automate Inbox Management with ERPNext",
+  description: "Automate your email management with AI-powered classification in ERPNext. Instantly detect intent, extract data, and manage leads more efficiently to boost productivity and customer engagement.",
+  keywords: "",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://finbyz.tech/email-classification",
+    canonical: "https://finbyz.tech/ai-driven-email-classification-for-businesses",
   },
   openGraph: {
-    title: "AI-Driven Email Classification for Businesses",
-    description: "Discover how AI-driven email classification automates email handling, improves lead management, and enhances productivity.",
-    url: "https://finbyz.tech/email-classification",
-    siteName: "FinByz Tech",
+    title: "AI-Driven Email Classification for Businesses | Automate Inbox Management with ERPNext",
+    description: "Automate your email management with AI-powered classification in ERPNext. Instantly detect intent, extract data, and manage leads more efficiently to boost productivity and customer engagement.",
+    url: "https://finbyz.tech/ai-driven-email-classification-for-businesses",
+    siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
     
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI-Driven Email Classification for Businesses",
-    description: "Discover how AI-driven email classification automates email handling, improves lead management, and enhances productivity.",
-    creator: "@finbyztech",
+    title: "AI-Driven Email Classification for Businesses | Automate Inbox Management with ERPNext",
+    description: "Automate your email management with AI-powered classification in ERPNext. Instantly detect intent, extract data, and manage leads more efficiently to boost productivity and customer engagement.",
+    creator: "@finbyz",
     
   },
   robots: {
@@ -39,122 +43,73 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
+  }
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default async function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "http://www.schema.org",
-    "@type": "ProfessionalService",
-    "name": "AI-Driven Email Classification for Businesses",
-    "url": "https://finbyz.tech/email-classification",
-    "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-    "image": "",
-    "description": "Discover how AI-driven email classification automates email handling, improves lead management, and enhances productivity.",
-    "priceRange": "INR",
-    "keywords": "Email Classification, AI-driven workflow, ERPNext, intent classification, data extraction, lead management, automated data capture, natural language processing, CRM, end-to-end automation",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
-      "addressLocality": "Ahmedabad",
-      "addressRegion": "Gujarat",
-      "addressCountry": "IN",
-      "postalCode": "380009"
-    },
-    "telephone": "+919925701446",
-    "openingHours": "Mo, Tu, We, Th, Fr, Sa 10:00-19:00",
-    "contactPoint": [
-      {
-        "@type": "ContactPoint",
-        "telephone": "+91 7948912428",
-        "contactType": "customer support",
-        "areaServed": ["IN"],
-        "availableLanguage": ["Hindi", "Gujarati", "English"]
-      }
-    ],
-    "publisher": {
-      "@type": "Organization",
-      "name": "FinByz Tech",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "AI-Driven Email Classification for Businesses",
-      "description": "Discover how AI-driven email classification automates email handling, improves lead management, and enhances productivity.",
-      "articleBody": "Email Classification\nOverview\nEmail Classification is an AI-driven workflow designed to automate the handling of incoming email inquiries efficiently and accurately. By integrating deeply with ERPNext, this solution enables businesses to quickly categorize emails based on their intent, extract vital contact and inquiry details, and automatically create or update leads and contacts in the ERP system. This automation eliminates manual inbox sorting and data entry, allowing sales and support teams ",
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech"
-      },
-      "datePublished": "2025-10-15T05:44:10.464Z",
-      "dateModified": "2025-10-15T05:44:10.464Z"
-    },
-    "sameAs": [
-      "https://www.facebook.com/FinByz",
-      "https://twitter.com/FinByz",
-      "https://www.linkedin.com/company/finbyz",
-      "https://www.youtube.com/c/Finbyz",
-      "https://www.instagram.com/finbyz/"
-    ]
-  };
-const softwareApplicationStructuredData = 
-
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "AI-Driven Email Classification for Businesses",
-    "url": "https://finbyz.tech/email-classification",
-  "description": "Discover how AI-driven email classification automates email handling, improves lead management, and enhances productivity.",  
-  "softwareVersion": "–",       
-  "applicationCategory": "MarketingAutomation",  
-  "operatingSystem": "Web",    
-  "image": [
-    // no image in page
-    
-  ],
-  "offers": {
-    "@type": "Offer",
-    "price": "0",               
-    "priceCurrency": "INR",    
-    "url": "https://finbyz.tech/email-classification",
-    "availability": "https://schema.org/InStock"  
+  "@context": "http://www.schema.org",
+  "@type": "ProfessionalService",
+  "name": "AI-Driven Email Classification for Businesses | Automate Inbox Management with ERPNext",
+  "url": "https://finbyz.tech/ai-driven-email-classification-for-businesses",
+  "logo": "https://finbyz.tech/files/FinbyzLogo.png",
+  "image": "None",
+  "description": "Automate your email management with AI-powered classification in ERPNext. Instantly detect intent, extract data, and manage leads more efficiently to boost productivity and customer engagement.",
+  "priceRange": "INR",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
+    "addressLocality": "Ahmedabad",
+    "addressRegion": "Gujarat",
+    "addressCountry": "IN",
+    "postalCode": "380009"
   },
-   "aggregateRating":
+  "telephone": "+919925701446",
+  "openingHours": "Mo, Tu, We, Th, Fr, Sa 10.00:00-19:00",
+  "contactPoint": [
     {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "54"
-    },
-  "brand": {
-    "@type": "Organization",
-    "name": "Finbyz Tech Pvt Ltd",
-    "url": "https://finbyz.tech"
-  }
-}
-
+      "@type": "ContactPoint",
+      "telephone": "+91 7948912428",
+      "contactType": "customer support",
+      "areaServed": [
+        "IN"
+      ],
+      "availableLanguage": [
+        "Hindi",
+        "Gujarati",
+        "English"
+      ]
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/FinByz",
+    "https://twitter.com/FinByz",
+    "https://www.linkedin.com/company/finbyz",
+    "https://www.youtube.com/c/Finbyz",
+    "https://www.instagram.com/finbyz/"
+  ]
+};
+  const data = await getPageData("Web Page","ai-driven-email-classification-for-businesses");
+  const faqsGroup = await getFaqs("Web Page","ai-driven-email-classification-for-businesses");
+  
   return (
     <>
+      {/* JSON-LD structured data for LLMs */}
       <Script
         id="structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-
-       <Script
-        id="productstructured-data"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationStructuredData) }}
-      />
-      
+      {/* Semantic HTML wrapper for better content extraction */}
       <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="AI-Driven Email Classification for Businesses" />
-        <meta itemProp="description" content="Discover how AI-driven email classification automates email handling, improves lead management, and enhances productivity." />
+        <meta itemProp="name" content="AI-Driven Email Classification for Businesses | Automate Inbox Management with ERPNext" />
+        <meta itemProp="description" content="Automate your email management with AI-powered classification in ERPNext. Instantly detect intent, extract data, and manage leads more efficiently to boost productivity and customer engagement." />
       </article>
-      
       {children}
-      
+      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
+      {
+        (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
+      }
       <BusinessSlider />
     </>
   );

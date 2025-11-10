@@ -1,31 +1,35 @@
 import BusinessSlider from "@/components/sections/business-slider";
+import FinbyzGallery from "@/components/sections/FinbyzGallery";
+import FAQ from "@/components/ai_components/FAQ";
+import { getFaqs, getPageData } from "@/lib/getPageData";
+
 import { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "AI Powered Resume Ranker",
+  title: "AI-Powered Resume Ranker | Smart Candidate Scoring & Recruitment Automation by FinByz Tech",
   description: "Streamline recruitment with an AI-powered resume ranking system that enhances candidate evaluation and decision-making.",
-  keywords: "AI, resume ranking, recruitment workflow, job description, skill extraction, resume parsing, candidate evaluation, scoring logic, skill matching, hiring decisions",
-  authors: [{ name: "FinByz Tech" }],
-  creator: "FinByz Tech",
-  publisher: "FinByz Tech",
+  keywords: "",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://finbyz.tech/ai-powered-resume-ranker",
   },
   openGraph: {
-    title: "AI Powered Resume Ranker",
+    title: "AI-Powered Resume Ranker | Smart Candidate Scoring & Recruitment Automation by FinByz Tech",
     description: "Streamline recruitment with an AI-powered resume ranking system that enhances candidate evaluation and decision-making.",
     url: "https://finbyz.tech/ai-powered-resume-ranker",
-    siteName: "FinByz Tech",
+    siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
     
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Powered Resume Ranker",
+    title: "AI-Powered Resume Ranker | Smart Candidate Scoring & Recruitment Automation by FinByz Tech",
     description: "Streamline recruitment with an AI-powered resume ranking system that enhances candidate evaluation and decision-making.",
-    creator: "@finbyztech",
+    creator: "@finbyz",
     
   },
   robots: {
@@ -39,122 +43,73 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
+  }
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default async function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "http://www.schema.org",
-    "@type": "ProfessionalService",
-    "name": "AI Powered Resume Ranker",
-    "url": "https://finbyz.tech/ai-powered-resume-ranker",
-    "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-    "image": "",
-    "description": "Streamline recruitment with an AI-powered resume ranking system that enhances candidate evaluation and decision-making.",
-    "priceRange": "INR",
-    "keywords": "AI, resume ranking, recruitment workflow, job description, skill extraction, resume parsing, candidate evaluation, scoring logic, skill matching, hiring decisions",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
-      "addressLocality": "Ahmedabad",
-      "addressRegion": "Gujarat",
-      "addressCountry": "IN",
-      "postalCode": "380009"
-    },
-    "telephone": "+919925701446",
-    "openingHours": "Mo, Tu, We, Th, Fr, Sa 10:00-19:00",
-    "contactPoint": [
-      {
-        "@type": "ContactPoint",
-        "telephone": "+91 7948912428",
-        "contactType": "customer support",
-        "areaServed": ["IN"],
-        "availableLanguage": ["Hindi", "Gujarati", "English"]
-      }
-    ],
-    "publisher": {
-      "@type": "Organization",
-      "name": "FinByz Tech",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "AI Powered Resume Ranker",
-      "description": "Streamline recruitment with an AI-powered resume ranking system that enhances candidate evaluation and decision-making.",
-      "articleBody": "The recruitment workflow starts when a job application is received and the job description (JD) is fetched from ERPNext or via webhook. AI extracts key skills from the JD to define the job requirements. On the candidate side, the resume is parsed and cleaned to extract skills and experience. These are compared against the JD requirements using a scoring logic that applies rules and weights for fair evaluation. The system produces a skill score, overall rating, and feedback to help recruiters mak",
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech"
-      },
-      "datePublished": "2025-10-14T12:05:18.693Z",
-      "dateModified": "2025-10-14T12:05:18.693Z"
-    },
-    "sameAs": [
-      "https://www.facebook.com/FinByz",
-      "https://twitter.com/FinByz",
-      "https://www.linkedin.com/company/finbyz",
-      "https://www.youtube.com/c/Finbyz",
-      "https://www.instagram.com/finbyz/"
-    ]
-  };
-
-const softwareApplicationStructuredData = 
-
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "AI Powered Resume Ranker",
+  "@context": "http://www.schema.org",
+  "@type": "ProfessionalService",
+  "name": "AI-Powered Resume Ranker | Smart Candidate Scoring & Recruitment Automation by FinByz Tech",
   "url": "https://finbyz.tech/ai-powered-resume-ranker",
-  "description": "Streamline recruitment with an AI-powered resume ranking system that enhances candidate evaluation and decision-making.",  
-  "softwareVersion": "–",       
-  "applicationCategory": "MarketingAutomation",  
-  "operatingSystem": "Web",    
-  "image": [
-   // no image in page 
-    
-  ],
-  "offers": {
-    "@type": "Offer",
-    "price": "0",               
-    "priceCurrency": "INR",    
-    "url": "https://finbyz.tech/ai-powered-resume-ranker",
-    "availability": "https://schema.org/InStock"  
+  "logo": "https://finbyz.tech/files/FinbyzLogo.png",
+  "image": "None",
+  "description": "Streamline recruitment with an AI-powered resume ranking system that enhances candidate evaluation and decision-making.",
+  "priceRange": "INR",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
+    "addressLocality": "Ahmedabad",
+    "addressRegion": "Gujarat",
+    "addressCountry": "IN",
+    "postalCode": "380009"
   },
-   "aggregateRating":
+  "telephone": "+919925701446",
+  "openingHours": "Mo, Tu, We, Th, Fr, Sa 10.00:00-19:00",
+  "contactPoint": [
     {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "54"
-    },
-  "brand": {
-    "@type": "Organization",
-    "name": "Finbyz Tech Pvt Ltd",
-    "url": "https://finbyz.tech"
-  }
-}
-
+      "@type": "ContactPoint",
+      "telephone": "+91 7948912428",
+      "contactType": "customer support",
+      "areaServed": [
+        "IN"
+      ],
+      "availableLanguage": [
+        "Hindi",
+        "Gujarati",
+        "English"
+      ]
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/FinByz",
+    "https://twitter.com/FinByz",
+    "https://www.linkedin.com/company/finbyz",
+    "https://www.youtube.com/c/Finbyz",
+    "https://www.instagram.com/finbyz/"
+  ]
+};
+  const data = await getPageData("Web Page","ai-powered-resume-ranker");
+  const faqsGroup = await getFaqs("Web Page","ai-powered-resume-ranker");
+  
   return (
     <>
+      {/* JSON-LD structured data for LLMs */}
       <Script
         id="structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <Script
-        id="productstructured-data"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationStructuredData) }}
-      />
-      
+      {/* Semantic HTML wrapper for better content extraction */}
       <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="AI Powered Resume Ranker" />
+        <meta itemProp="name" content="AI-Powered Resume Ranker | Smart Candidate Scoring & Recruitment Automation by FinByz Tech" />
         <meta itemProp="description" content="Streamline recruitment with an AI-powered resume ranking system that enhances candidate evaluation and decision-making." />
       </article>
-      
       {children}
-      
+      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
+      {
+        (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
+      }
       <BusinessSlider />
     </>
   );

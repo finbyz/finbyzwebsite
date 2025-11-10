@@ -1,32 +1,36 @@
 import BusinessSlider from "@/components/sections/business-slider";
+import FinbyzGallery from "@/components/sections/FinbyzGallery";
+import FAQ from "@/components/ai_components/FAQ";
+import { getFaqs, getPageData } from "@/lib/getPageData";
+
 import { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Content Spark Streamline Marketing Automation",
-  description: "Content Spark is an advanced marketing automation platform designed to optimize content creation for marketing teams, ensuring brand consistency and rapid ideation.",
-  keywords: "Content Spark, marketing automation, Frappe Framework, AI content generation, brand consistency, LinkedIn posts, marketing teams, content creation, visual design, branding, campaign planning",
-  authors: [{ name: "FinByz Tech" }],
-  creator: "FinByz Tech",
-  publisher: "FinByz Tech",
+  title: "Content Spark | Streamline Marketing Automation with AI-Powered Content Creation",
+  description: "Content Spark is an AI-powered marketing automation platform that helps teams create, plan, and publish content faster. Maintain brand consistency, automate content ideation, and scale marketing effortlessly with AI.",
+  keywords: "",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
     canonical: "https://finbyz.tech/content-spark-marketing-automation",
   },
   openGraph: {
-    title: "Content Spark Streamline Marketing Automation",
-    description: "Content Spark is an advanced marketing automation platform designed to optimize content creation for marketing teams, ensuring brand consistency and rapid ideation.",
+    title: "Content Spark | Streamline Marketing Automation with AI-Powered Content Creation",
+    description: "Content Spark is an AI-powered marketing automation platform that helps teams create, plan, and publish content faster. Maintain brand consistency, automate content ideation, and scale marketing effortlessly with AI.",
     url: "https://finbyz.tech/content-spark-marketing-automation",
-    siteName: "FinByz Tech",
+    siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/FinByz (7).gif", width: 1200, height: 630, alt: "Content Spark Streamline Marketing Automation" }],
+    
   },
   twitter: {
     card: "summary_large_image",
-    title: "Content Spark Streamline Marketing Automation",
-    description: "Content Spark is an advanced marketing automation platform designed to optimize content creation for marketing teams, ensuring brand consistency and rapid ideation.",
-    creator: "@finbyztech",
-    images: ["/files/FinByz (7).gif"],
+    title: "Content Spark | Streamline Marketing Automation with AI-Powered Content Creation",
+    description: "Content Spark is an AI-powered marketing automation platform that helps teams create, plan, and publish content faster. Maintain brand consistency, automate content ideation, and scale marketing effortlessly with AI.",
+    creator: "@finbyz",
+    
   },
   robots: {
     index: true,
@@ -39,123 +43,73 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
+  }
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default async function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "http://www.schema.org",
-    "@type": "ProfessionalService",
-    "name": "Content Spark Streamline Marketing Automation",
-    "url": "https://finbyz.tech/content-spark-marketing-automation",
-    "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-    "image": "https://finbyz.tech/files/FinByz (7).gif",
-    "description": "Content Spark is an advanced marketing automation platform designed to optimize content creation for marketing teams, ensuring brand consistency and rapid ideation.",
-    "priceRange": "INR",
-    "keywords": "Content Spark, marketing automation, Frappe Framework, AI content generation, brand consistency, LinkedIn posts, marketing teams, content creation, visual design, branding, campaign planning",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
-      "addressLocality": "Ahmedabad",
-      "addressRegion": "Gujarat",
-      "addressCountry": "IN",
-      "postalCode": "380009"
-    },
-    "telephone": "+919925701446",
-    "openingHours": "Mo, Tu, We, Th, Fr, Sa 10:00-19:00",
-    "contactPoint": [
-      {
-        "@type": "ContactPoint",
-        "telephone": "+91 7948912428",
-        "contactType": "customer support",
-        "areaServed": ["IN"],
-        "availableLanguage": ["Hindi", "Gujarati", "English"]
-      }
-    ],
-    "publisher": {
-      "@type": "Organization",
-      "name": "FinByz Tech",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "Content Spark Streamline Marketing Automation",
-      "description": "Content Spark is an advanced marketing automation platform designed to optimize content creation for marketing teams, ensuring brand consistency and rapid ideation.",
-      "articleBody": "Content Spark (Marketing Automation)\nOverview\nContent Spark is an advanced marketing automation platform built natively on the Frappe Framework. Aimed at helping businesses, especially marketing teams, streamline their content creation and publishing processes, it eliminates the common challenges of ideation, brand consistency, and visual design. Content Spark leverages AI-powered agents to transform simple user inputs—like topic keywords, target audience, or campaign themes—into fully formed Li",
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech"
-      },
-      "datePublished": "2025-10-14T12:09:52.715Z",
-      "dateModified": "2025-10-14T12:09:52.715Z"
-    },
-    "sameAs": [
-      "https://www.facebook.com/FinByz",
-      "https://twitter.com/FinByz",
-      "https://www.linkedin.com/company/finbyz",
-      "https://www.youtube.com/c/Finbyz",
-      "https://www.instagram.com/finbyz/"
-    ]
-  };
-
-
-  const softwareApplicationStructuredData = 
-
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Content Spark Streamline Marketing Automation",
+  "@context": "http://www.schema.org",
+  "@type": "ProfessionalService",
+  "name": "Content Spark | Streamline Marketing Automation with AI-Powered Content Creation",
   "url": "https://finbyz.tech/content-spark-marketing-automation",
-  "description": "Content Spark is an advanced marketing automation platform designed to optimize content creation for marketing teams, ensuring brand consistency and rapid ideation.",  
-  "softwareVersion": "–",       
-  "applicationCategory": "MarketingAutomation",  
-  "operatingSystem": "Web",    
-  "image": [
-    "https://finbyz.tech/files/FinByz (7).gif", 
-    
-  ],
-  "offers": {
-    "@type": "Offer",
-    "price": "0",               
-    "priceCurrency": "INR",    
-    "url": "https://finbyz.tech/content-spark-marketing-automation", 
-    "availability": "https://schema.org/InStock"  
+  "logo": "https://finbyz.tech/files/FinbyzLogo.png",
+  "image": "None",
+  "description": "Content Spark is an AI-powered marketing automation platform that helps teams create, plan, and publish content faster. Maintain brand consistency, automate content ideation, and scale marketing effortlessly with AI.",
+  "priceRange": "INR",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
+    "addressLocality": "Ahmedabad",
+    "addressRegion": "Gujarat",
+    "addressCountry": "IN",
+    "postalCode": "380009"
   },
-   "aggregateRating":
+  "telephone": "+919925701446",
+  "openingHours": "Mo, Tu, We, Th, Fr, Sa 10.00:00-19:00",
+  "contactPoint": [
     {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "54"
-    },
-  "brand": {
-    "@type": "Organization",
-    "name": "Finbyz Tech Pvt Ltd",
-    "url": "https://finbyz.tech"
-  }
-}
-
+      "@type": "ContactPoint",
+      "telephone": "+91 7948912428",
+      "contactType": "customer support",
+      "areaServed": [
+        "IN"
+      ],
+      "availableLanguage": [
+        "Hindi",
+        "Gujarati",
+        "English"
+      ]
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/FinByz",
+    "https://twitter.com/FinByz",
+    "https://www.linkedin.com/company/finbyz",
+    "https://www.youtube.com/c/Finbyz",
+    "https://www.instagram.com/finbyz/"
+  ]
+};
+  const data = await getPageData("Web Page","content-spark-marketing-automation");
+  const faqsGroup = await getFaqs("Web Page","content-spark-marketing-automation");
+  
   return (
     <>
+      {/* JSON-LD structured data for LLMs */}
       <Script
         id="structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-       <Script
-        id="productstructured-data"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationStructuredData) }}
-      />
-      
+      {/* Semantic HTML wrapper for better content extraction */}
       <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Content Spark Streamline Marketing Automation" />
-        <meta itemProp="description" content="Content Spark is an advanced marketing automation platform designed to optimize content creation for marketing teams, ensuring brand consistency and rapid ideation." />
+        <meta itemProp="name" content="Content Spark | Streamline Marketing Automation with AI-Powered Content Creation" />
+        <meta itemProp="description" content="Content Spark is an AI-powered marketing automation platform that helps teams create, plan, and publish content faster. Maintain brand consistency, automate content ideation, and scale marketing effortlessly with AI." />
       </article>
-      
       {children}
-      
+      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
+      {
+        (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
+      }
       <BusinessSlider />
     </>
   );

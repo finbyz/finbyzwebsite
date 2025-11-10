@@ -1,32 +1,36 @@
 import BusinessSlider from "@/components/sections/business-slider";
+import FinbyzGallery from "@/components/sections/FinbyzGallery";
+import FAQ from "@/components/ai_components/FAQ";
+import { getFaqs, getPageData } from "@/lib/getPageData";
+
 import { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "AI-Powered Lead Generation and Email Outreach",
-  description: "Streamline your lead generation and outreach with AI-driven research and automated email drafting for higher conversion rates.",
-  keywords: "lead generation, email outreach, AI-driven research, Apollo, personalized outreach, conversion rates, email drafting, company insights, contact insights, automated scheduling",
-  authors: [{ name: "FinByz Tech" }],
-  creator: "FinByz Tech",
-  publisher: "FinByz Tech",
+  description: "Streamline your lead generation and outreach with AI-driven research and automated email drafting for higher conversion rates",
+  keywords: "",
+  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+  creator: "FinByz Tech Pvt Ltd",
+  publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://finbyz.tech/ai-outreach-lead-generation-research",
+    canonical: "https://finbyz.tech/ai-powered-lead-generation-and-email-outreach",
   },
   openGraph: {
     title: "AI-Powered Lead Generation and Email Outreach",
-    description: "Streamline your lead generation and outreach with AI-driven research and automated email drafting for higher conversion rates.",
-    url: "https://finbyz.tech/ai-outreach-lead-generation-research",
-    siteName: "FinByz Tech",
+    description: "Streamline your lead generation and outreach with AI-driven research and automated email drafting for higher conversion rates",
+    url: "https://finbyz.tech/ai-powered-lead-generation-and-email-outreach",
+    siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-
+    
   },
   twitter: {
     card: "summary_large_image",
     title: "AI-Powered Lead Generation and Email Outreach",
-    description: "Streamline your lead generation and outreach with AI-driven research and automated email drafting for higher conversion rates.",
-    creator: "@finbyztech",
-
+    description: "Streamline your lead generation and outreach with AI-driven research and automated email drafting for higher conversion rates",
+    creator: "@finbyz",
+    
   },
   robots: {
     index: true,
@@ -39,117 +43,73 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
+  }
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default async function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
-    "@context": "http://www.schema.org",
-    "@type": "ProfessionalService",
-    "name": "AI-Powered Lead Generation and Email Outreach",
-    "url": "https://finbyz.tech/ai-outreach-lead-generation-research",
-    "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-    "image": "https://finbyz.tech/assets/images/ai-outreach-cover.jpg",
-    "description": "Streamline your lead generation and outreach with AI-driven research and automated email drafting for higher conversion rates.",
-    "priceRange": "INR",
-    "keywords": "lead generation, email outreach, AI-driven research, Apollo, personalized outreach, conversion rates, email drafting, company insights, contact insights, automated scheduling",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
-      "addressLocality": "Ahmedabad",
-      "addressRegion": "Gujarat",
-      "addressCountry": "IN",
-      "postalCode": "380009"
-    },
-    "telephone": "+919925701446",
-    "openingHours": "Mo, Tu, We, Th, Fr, Sa 10:00-19:00",
-    "contactPoint": [
-      {
-        "@type": "ContactPoint",
-        "telephone": "+91 7948912428",
-        "contactType": "customer support",
-        "areaServed": ["IN"],
-        "availableLanguage": ["Hindi", "Gujarati", "English"]
-      }
-    ],
-    "publisher": {
-      "@type": "Organization",
-      "name": "FinByz Tech",
-      "url": "https://finbyz.tech"
-    },
-    "mainEntity": {
-      "@type": "Article",
-      "headline": "AI-Powered Lead Generation and Email Outreach",
-      "description": "Streamline your lead generation and outreach with AI-driven research and automated email drafting for higher conversion rates.",
-      "author": {
-        "@type": "Organization",
-        "name": "FinByz Tech"
-      },
-      "datePublished": "2025-10-14T11:31:10.210Z",
-      "dateModified": "2025-10-14T11:31:10.210Z"
-    },
-    "sameAs": [
-      "https://www.facebook.com/FinByz",
-      "https://twitter.com/FinByz",
-      "https://www.linkedin.com/company/finbyz",
-      "https://www.youtube.com/c/Finbyz",
-      "https://www.instagram.com/finbyz/"
-    ]
-  };
-  const softwareApplicationStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "AI-Powered Lead Generation and Email Outreach",
-    "url": "https://finbyz.tech/ai-outreach-lead-generation-research",
-    "description": "Streamline your lead generation and outreach with AI-driven research and automated email drafting for higher conversion rates.",
-    "softwareVersion": "–",
-    "applicationCategory": "MarketingAutomation",
-    "operatingSystem": "Web",
-    "image": "https://finbyz.tech/images/AI_Powered_Resume_Ranker.gif",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "INR",
-      "url": "https://finbyz.tech/ai-outreach-lead-generation-research",
-      "availability": "https://schema.org/InStock"
-    },
-    "aggregateRating":
+  "@context": "http://www.schema.org",
+  "@type": "ProfessionalService",
+  "name": "AI-Powered Lead Generation and Email Outreach",
+  "url": "https://finbyz.tech/ai-powered-lead-generation-and-email-outreach",
+  "logo": "https://finbyz.tech/files/FinbyzLogo.png",
+  "image": "None",
+  "description": "Streamline your lead generation and outreach with AI-driven research and automated email drafting for higher conversion rates",
+  "priceRange": "INR",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
+    "addressLocality": "Ahmedabad",
+    "addressRegion": "Gujarat",
+    "addressCountry": "IN",
+    "postalCode": "380009"
+  },
+  "telephone": "+919925701446",
+  "openingHours": "Mo, Tu, We, Th, Fr, Sa 10.00:00-19:00",
+  "contactPoint": [
     {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "54"
-    },
-    "brand": {
-      "@type": "Organization",
-      "name": "Finbyz Tech Pvt Ltd",
-      "url": "https://finbyz.tech"
+      "@type": "ContactPoint",
+      "telephone": "+91 7948912428",
+      "contactType": "customer support",
+      "areaServed": [
+        "IN"
+      ],
+      "availableLanguage": [
+        "Hindi",
+        "Gujarati",
+        "English"
+      ]
     }
-  }
-
-
+  ],
+  "sameAs": [
+    "https://www.facebook.com/FinByz",
+    "https://twitter.com/FinByz",
+    "https://www.linkedin.com/company/finbyz",
+    "https://www.youtube.com/c/Finbyz",
+    "https://www.instagram.com/finbyz/"
+  ]
+};
+  const data = await getPageData("Web Page","ai-powered-lead-generation-and-email-outreach");
+  const faqsGroup = await getFaqs("Web Page","ai-powered-lead-generation-and-email-outreach");
+  
   return (
     <>
+      {/* JSON-LD structured data for LLMs */}
       <Script
         id="structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <Script
-        id="productstructured-data"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationStructuredData) }}
-      />
-
-
+      {/* Semantic HTML wrapper for better content extraction */}
       <article itemScope itemType="https://schema.org/WebPage">
         <meta itemProp="name" content="AI-Powered Lead Generation and Email Outreach" />
-        <meta itemProp="description" content="Streamline your lead generation and outreach with AI-driven research and automated email drafting for higher conversion rates." />
+        <meta itemProp="description" content="Streamline your lead generation and outreach with AI-driven research and automated email drafting for higher conversion rates" />
       </article>
-
       {children}
-
+      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
+      {
+        (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
+      }
       <BusinessSlider />
     </>
   );
