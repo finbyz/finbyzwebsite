@@ -1,7 +1,11 @@
-'use client'
-import React, { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
 import Link from 'next/link';
+import Script from 'next/script';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 
 interface FAQItem {
   question: string;
@@ -14,72 +18,77 @@ interface FAQProps {
   subtitle?: string;
 }
 
-const FAQ: React.FC<FAQProps> = ({
+const FAQ = ({
   faqs,
   title = "Frequently Asked Questions",
   subtitle = "Find answers to common questions about our services"
-}) => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const toggleFAQ = (index: number): void => {
-    setOpenIndex(openIndex === index ? null : index);
+}: FAQProps) => {
+  const faqStructureData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
   };
 
   return (
-    <div className="container-custom py-12">
-      <div className="mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-slate-900 mb-3">
-            {title}
-          </h1>
-          <p className="text-slate-600 text-lg">
-            {subtitle}
-          </p>
-        </div>
+    <>
+      <Script
+        id="structured-faqs"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructureData) }}
+      />
+      <div className="container-custom py-12">
+        <div className="mx-auto">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-slate-900 mb-3">
+              {title}
+            </h1>
+            <p className="text-slate-600 text-lg">
+              {subtitle}
+            </p>
+          </div>
 
-        <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden transition-all duration-200 hover:shadow-md"
-            >
-              <button
-                onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-slate-50 transition-colors"
+          <Accordion type="single" collapsible className="space-y-4">
+            {faqs.map((faq, index) => (
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`}
+                className="bg-white rounded-lg shadow-sm border border-slate-200 px-6 data-[state=open]:shadow-md transition-shadow"
               >
-                <span className="font-semibold text-slate-900 text-lg">
-                  {faq.question}
-                </span>
-                <ChevronDown
-                  className={`w-5 h-5 text-slate-500 flex-shrink-0 transition-transform duration-200 ${openIndex === index ? 'rotate-180' : ''
-                    }`}
-                />
-              </button>
-
-              <div
-                className={`overflow-hidden transition-all duration-200 ${openIndex === index ? 'max-h-96' : 'max-h-0'
-                  }`}
-              >
-                <div className="px-6 pb-5 pt-1">
+                <AccordionTrigger className="text-left hover:no-underline py-5 hover:bg-slate-50 -mx-6 px-6 rounded-t-lg">
+                  <span className="font-semibold text-slate-900 text-lg">
+                    {faq.question}
+                  </span>
+                </AccordionTrigger>
+                <AccordionContent className="pt-1 pb-5">
                   <p className="text-slate-600 leading-relaxed">
                     {faq.answer}
                   </p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
 
-        <div className="mt-12 text-center">
-          <p className="text-slate-600 mb-4">
-            Still have questions?
-          </p>
-          <Link className='px-6 py-3 bg-slate-900 text-white rounded-lg font-medium hover:bg-slate-800 transition-colors' href={'/contact#contact-form-section'}>
-            Contact Support
-          </Link>
+          <div className="mt-12 text-center">
+            <p className="text-slate-600 mb-4">
+              Still have questions?
+            </p>
+            <Link 
+              className='px-6 py-3 bg-slate-900 text-white rounded-lg font-medium hover:bg-slate-800 transition-colors inline-block' 
+              href='/contact#contact-form-section'
+            >
+              Contact Support
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
