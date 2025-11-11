@@ -362,7 +362,7 @@ export default function Header() {
             name: "Smart Card Scanner",
             description: "Scan and extract business card details instantly.",
             icon: CreditCard,
-            href: "/smart-card-scanner",
+            href: "/ai-powered-smart-card-scanner",
           },
           {
             name: "Content Spark Marketing Automation",
@@ -380,31 +380,31 @@ export default function Header() {
             name: "AI Outreach & Lead Generation Research",
             description: "Discover and connect with potential leads intelligently.",
             icon: Rocket,
-            href: "/ai-outreach-lead-generation-research",
+            href: "/ai-powered-lead-generation-and-email-outreach",
           },
           {
             name: "AI Sales Call Analysis for ERPNext",
             description: "Analyze and summarize sales calls automatically.",
             icon: PhoneCall,
-            href: "/ai-sales-call-analysis-erpnext",
+            href: "/ai-sales-call-recording-and-analysis-in-erpnext",
           },
           {
             name: "Email Classification",
             description: "Classify and route emails automatically using AI.",
             icon: Mail,
-            href: "/email-classification",
+            href: "/ai-driven-email-classification-for-businesses",
           },
           {
             name: "Quote Assistant Overview",
             description: "Streamline quotation creation and management.",
             icon: MessageSquare,
-            href: "/quote-assistant-overview",
+            href: "/ai-powered-quote-assistant",
           },
           {
             name: "Follow Up Buddy",
             description: "Automated follow-up reminders and tracking.",
             icon: Users,
-            href: "/follow-up-buddy",
+            href: "/ai-powered-follow-up-buddy-automate-your-sales-follow-up-process",
           },
           
           {
