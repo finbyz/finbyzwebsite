@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Home, Users, Building2, Wrench, FileText, Briefcase, Phone, BookOpen, Target, Factory, ShoppingCart, Heart, GraduationCap, Truck, Leaf, TestTube, Hammer, Pill, Eye, Zap, Code, UserPlus, Lightbulb, Calendar, Star, Mail, ChevronLeft, ChevronRight, Handshake, Rocket, Send, Sparkles, BarChart3, Package, DollarSign, TrendingUp, Search, Video, Newspaper, Smartphone, Brain, CheckCircle, MapPin, LogIn, Globe, FileSearch, PhoneCall, CreditCard, MessageSquare } from "lucide-react";
+import { Menu, X, ChevronDown, Home, Users, Building2, Wrench, FileText, Briefcase, Phone, BookOpen, Target, Factory, ShoppingCart, Heart, GraduationCap, Truck, Leaf, TestTube, Hammer, Pill, Eye, Zap, Code, UserPlus, Lightbulb, Calendar, Star, Mail, ChevronLeft, ChevronRight, Handshake, Rocket, Send, Sparkles, BarChart3, Package, DollarSign, TrendingUp, Search, Video, Newspaper, Smartphone, Brain, CheckCircle, MapPin, LogIn, Globe, FileSearch, PhoneCall, CreditCard, MessageSquare, Code2 } from "lucide-react";
 import { useMobileMenu } from "@/contexts/MobileMenuContext";
 import {
   DropdownMenu,
@@ -406,14 +406,14 @@ export default function Header() {
             icon: Users,
             href: "/ai-powered-follow-up-buddy-automate-your-sales-follow-up-process",
           },
-          
+
           {
             name: "AI Powered Resume Ranker",
             description: "Rank resumes and find the best candidates instantly.",
             icon: FileSearch,
             href: "/ai-powered-resume-ranker",
           },
-          
+
         ],
         "Software Development": [
           {
@@ -484,7 +484,7 @@ export default function Header() {
             name: "ERPNext Support",
             description: "Round-the-clock technical support",
             icon: Phone,
-            href: "/24-7-support"
+            href: "/erpnext-support"
           },
           {
             name: "ERPNext System Maintenance",
@@ -637,6 +637,7 @@ export default function Header() {
       mainItems: [
         { name: "Blogs", icon: Wrench, href: "/blog-post" },
         { name: "Gallery", icon: Handshake, href: "/gallery" },
+        { name: "Dev Insights", icon: Code2, href: "#" },
       ],
 
       detailedItems: {
@@ -647,8 +648,100 @@ export default function Header() {
             icon: Wrench,
             href: "/blog-post"
           },
+        ],
+        "Dev Insights": [
+          {
+            name: "Add Filter in Child Table Field",
+            description: "Learn about adding filters in a child table field in Frappe",
+            icon: Wrench,
+            href: "/dev-insight/add-filter-in-child-table-field"
+          },
+          {
+            name: "Fetch Session User and Modified",
+            description: "Learn how to fetch session user and last modified details",
+            icon: Wrench,
+            href: "/dev-insight/fetch-session-user-and-modified"
+          },
+          {
+            name: "List of Events",
+            description: "Explore available event hooks and how to use them effectively",
+            icon: Wrench,
+            href: "/dev-insight/list-of-events"
+          },
+          {
+            name: "Address Jinja",
+            description: "Learn how to use Jinja templating with address fields in Frappe",
+            icon: Wrench,
+            href: "/dev-insight/address-jinja"
+          },
+          {
+            name: "Fetch Table All Rows",
+            description: "Fetch all rows from a table field using Frappe APIs",
+            icon: Wrench,
+            href: "/dev-insight/fetch-table-all-rows"
+          },
+          {
+            name: "Fetch User Name and Role",
+            description: "Learn how to get the current user's name and role in Frappe",
+            icon: Wrench,
+            href: "/dev-insight/fetch-user-name-and-role"
+          },
+          {
+            name: "Field Visibility Evaluation",
+            description: "Control field visibility dynamically using Frappe logic",
+            icon: Wrench,
+            href: "/dev-insight/field-visibility-evaluation"
+          },
+          {
+            name: "Rows Addition",
+            description: "Learn how to add rows programmatically in a child table",
+            icon: Wrench,
+            href: "/dev-insight/rows-additon"
+          },
+          {
+            name: "Calculations on Child Rows",
+            description: "Perform calculations on child table rows using scripts",
+            icon: Wrench,
+            href: "/dev-insight/calculations-on-child-rows"
+          },
+          {
+            name: "Span Table Cell Look",
+            description: "Customize and span table cells for better readability",
+            icon: Wrench,
+            href: "/dev-insight/span-table-cell-look"
+          },
+          {
+            name: "Change Color of Child Rows",
+            description: "Style and change colors of child table rows dynamically",
+            icon: Wrench,
+            href: "/dev-insight/change-color-of-child-rows"
+          },
+          {
+            name: "Status Colour Coding",
+            description: "Apply color coding to indicate status in list or reports",
+            icon: Wrench,
+            href: "/dev-insight/status-colour-coding"
+          },
+          {
+            name: "Child Table Row Colour Change",
+            description: "Modify the background color of specific child table rows",
+            icon: Wrench,
+            href: "/dev-insight/child-table-row-colour-change"
+          },
+          {
+            name: "Subtraction",
+            description: "Perform subtraction logic within child tables or forms",
+            icon: Wrench,
+            href: "/dev-insight/subtraction"
+          },
+          {
+            name: "CSS for Print Formats",
+            description: "Learn how to apply custom CSS for print formats in Frappe",
+            icon: Wrench,
+            href: "/dev-insight/css-for-print-formats"
+          }
         ]
-      }
+      },
     },
     {
       name: "Company",
@@ -740,210 +833,164 @@ export default function Header() {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${isScrolled
-            ? "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 backdrop-blur-md shadow-lg"
-            : "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 backdrop-blur-sm"
+          ? "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 backdrop-blur-md shadow-lg"
+          : "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 backdrop-blur-sm"
           }`}
       >
         <div className="container-custom">
-        <div className="w-full">
-          <div className="flex justify-between items-center h-12 lg:h-14 w-full">
-            <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center">
-                <Image
-                  src="/FinByz Logo 2025 copy.png"
-                  alt="Finbyz"
-                  width={120}
-                  height={32}
-                  priority
-                />
-              </Link>
-            </div>
+          <div className="w-full">
+            <div className="flex justify-between items-center h-12 lg:h-14 w-full">
+              <div className="flex-shrink-0">
+                <Link href="/" className="flex items-center">
+                  <Image
+                    src="/FinByz Logo 2025 copy.png"
+                    alt="Finbyz"
+                    width={120}
+                    height={32}
+                    priority
+                  />
+                </Link>
+              </div>
 
-            <div className="hidden lg:flex items-center space-x-3 ml-auto">
-              {navigationItems.map((item, index) => (
-                <div key={item.name} className="relative">
-                  {item.hasDropdown ? (
-                    <div className="relative">
-                      <Button
-                        variant="ghost"
-                        className={`text-gray-300 hover:text-[#FF8C00] hover:bg-gray-700/50 transition-all font-medium flex items-center space-x-1 text-base py-6 z-[110] px-3 rounded-lg relative group ${hoveredDropdown === item.name ? 'text-[#FF8C00] bg-gray-700/50' : ''
-                          }`}
-                        onMouseEnter={() => {
-                          setHoveredDropdown(item.name);
-                          setHoveredService(null);
-                        }}
-                        onMouseLeave={() => {
-                          setHoveredDropdown(null);
-                          setHoveredService(null);
-                        }}
-                      >
-                        <item.icon className="w-4 h-4" />
-                        <span>{item.name}</span>
-                        <ChevronDown className={`w-3 h-3 transition-transform ${hoveredDropdown === item.name ? 'rotate-180' : ''
-                          }`} />
-                        <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FF8C00] transition-all duration-300 group-hover:w-full"></div>
-                      </Button>
-                      <div
-                        className={`absolute top-full bg-white border border-gray-200 shadow-2xl rounded-xl transition-all duration-300 z-50 ${hoveredDropdown === item.name
-                            ? 'opacity-100 visible translate-y-0'
-                            : 'opacity-0 invisible translate-y-2'
-                          }`}
-                        style={{
-                          maxWidth: '90vw',
-                          maxHeight: '85vh',
-
-                          ...(index === 0 ? {
-                            left: '0',
-                            transform: 'none'
-                          } : {
-                            left: '50%',
-                            transform: 'translateX(-50%)'
-                          }),
-
-                          minWidth: '300px',
-                          overflow: 'hidden',
-                          right: 'auto'
-                        }}
-                        onMouseEnter={() => setHoveredDropdown(item.name)}
-                        onMouseLeave={(e) => {
-                          const relatedTarget = e.relatedTarget as HTMLElement;
-                          if (!e.currentTarget.contains(relatedTarget)) {
+              <div className="hidden lg:flex items-center space-x-3 ml-auto">
+                {navigationItems.map((item, index) => (
+                  <div key={item.name} className="relative">
+                    {item.hasDropdown ? (
+                      <div className="relative">
+                        <Button
+                          variant="ghost"
+                          className={`text-gray-300 hover:text-[#FF8C00] hover:bg-gray-700/50 transition-all font-medium flex items-center space-x-1 text-base py-6 z-[110] px-3 rounded-lg relative group ${hoveredDropdown === item.name ? 'text-[#FF8C00] bg-gray-700/50' : ''
+                            }`}
+                          onMouseEnter={() => {
+                            setHoveredDropdown(item.name);
+                            setHoveredService(null);
+                          }}
+                          onMouseLeave={() => {
                             setHoveredDropdown(null);
                             setHoveredService(null);
-                          }
-                        }}
-                      >
-                        {item.detailedItems ? (
-                          // Two-panel layout when detailedItems exist
-                          <div className="flex w-[800px] min-h-[500px] max-w-[90vw] max-h-[85vh] overflow-hidden lg:w-[800px] md:w-[600px] sm:w-[400px]">
-                            <div className="w-1/2 p-6 border-r border-gray-200 bg-gray-50/30 overflow-y-auto">
+                          }}
+                        >
+                          <item.icon className="w-4 h-4" />
+                          <span>{item.name}</span>
+                          <ChevronDown className={`w-3 h-3 transition-transform ${hoveredDropdown === item.name ? 'rotate-180' : ''
+                            }`} />
+                          <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FF8C00] transition-all duration-300 group-hover:w-full"></div>
+                        </Button>
+                        <div
+                          className={`absolute top-full bg-white border border-gray-200 shadow-2xl rounded-xl transition-all duration-300 z-50 ${hoveredDropdown === item.name
+                            ? 'opacity-100 visible translate-y-0'
+                            : 'opacity-0 invisible translate-y-2'
+                            }`}
+                          style={{
+                            maxWidth: '90vw',
+                            maxHeight: '85vh',
 
-                              <h3 className="font-semibold text-[#1A5276] mb-6 text-lg">
-                                {item.name === "Services"
-                                  ? "Our Services"
-                                  : item.name === "Company"
-                                    ? "Our Company"
-                                    : item.name === "Industries"
-                                      ? "Industries We Serve"
-                                      : item.name === "Insights"
-                                        ? "Insights"
-                                        : "ERPNext Solutions"}
-                              </h3>
+                            ...(index === 0 ? {
+                              left: '0',
+                              transform: 'none'
+                            } : {
+                              left: '50%',
+                              transform: 'translateX(-50%)'
+                            }),
 
-                              <div className="space-y-2">
-                                {item.mainItems?.map((mainItem) => (
-                                  <div
-                                    key={mainItem.name}
-                                    className={`group/main flex items-center space-x-3 px-4 py-3 text-[#1A5276] hover:text-[#FF8C00] hover:bg-white cursor-pointer transition-all rounded-lg border border-transparent hover:border-gray-200 hover:shadow-sm ${hoveredService === mainItem.name ? 'bg-white border-gray-200 shadow-sm text-[#FF8C00]' : ''
-                                      }`}
-                                    onMouseEnter={() => setHoveredService(mainItem.name)}
-                                    onMouseLeave={() => {
-                                      setTimeout(() => {
-                                        if (hoveredDropdown !== item.name) {
-                                          setHoveredService(null);
-                                        }
-                                      }, 100);
-                                    }}
-                                  >
-                                    <mainItem.icon className="w-5 h-5 flex-shrink-0" />
-                                    <span className="text-sm font-medium">{mainItem.name}</span>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
+                            minWidth: '300px',
+                            overflow: 'hidden',
+                            right: 'auto'
+                          }}
+                          onMouseEnter={() => setHoveredDropdown(item.name)}
+                          onMouseLeave={(e) => {
+                            const relatedTarget = e.relatedTarget as HTMLElement;
+                            if (!e.currentTarget.contains(relatedTarget)) {
+                              setHoveredDropdown(null);
+                              setHoveredService(null);
+                            }
+                          }}
+                        >
+                          {item.detailedItems ? (
+                            // Two-panel layout when detailedItems exist
+                            <div className="flex w-[800px] min-h-[500px] max-w-[90vw] max-h-[85vh] overflow-hidden lg:w-[800px] md:w-[600px] sm:w-[400px]">
+                              <div className="w-1/2 p-6 border-r border-gray-200 bg-gray-50/30 overflow-y-auto">
 
-                            <div className="w-1/2 p-6 overflow-y-auto">
-                              {hoveredService ? (
-                                <div>
-                                  <h4 className="font-semibold text-[#1A5276] mb-4 text-lg border-b border-gray-100 pb-2">{hoveredService}</h4>
-                                  {item.name === "Insights" && hoveredService === "Blogs" ? (
-                                    <div className="space-y-2">
-                                      {blogsLoading ? (
-                                        <div className="text-sm text-gray-500 px-3 py-2">Loading blogs...</div>
-                                      ) : blogPosts.length === 0 ? (
-                                        <div className="text-sm text-gray-500 px-3 py-2">No blog posts found.</div>
-                                      ) : (
-                                        (showAllBlogs ? blogPosts : blogPosts.slice(0, 8)).map((post) => (
-                                          <Link
-                                            key={post.name}
-                                            href={post.route || "/blog-post"}
-                                            className="flex items-center space-x-3 px-3 py-2 text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5 cursor-pointer transition-all rounded-lg text-sm"
-                                            onClick={() => {
-                                              setHoveredDropdown(null);
-                                              setHoveredService(null);
-                                              setShowAllBlogs(false);
-                                            }}
-                                          >
-                                            {/* {post.image ? (
-                                              <Image src={post.image} alt={post.title} width={32} height={32} className="rounded object-cover" />
-                                            ) : (
-                                              <div className="w-8 h-8 rounded bg-gray-100" />
-                                            )} */}
-                                            <span className="font-medium line-clamp-1">{post.title}</span>
-                                          </Link>
-                                        ))
-                                      )}
-                                      {blogPosts.length > 5 && (
-                                        <div className="pt-2 flex items-center gap-3">
-                                          <button
-                                            className="text-sm px-3 py-2 rounded-lg text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5"
-                                            onClick={() => setShowAllBlogs(v => !v)}
-                                          >
-                                            {showAllBlogs ? "Show less" : "View more"}
-                                          </button>
-                                          <Link
-                                            href="/blog-post"
-                                            className="text-sm px-3 py-2 rounded-lg text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5"
-                                            onClick={() => {
-                                              setHoveredDropdown(null);
-                                              setHoveredService(null);
-                                              setShowAllBlogs(false);
-                                            }}
-                                          >
-                                            View all
-                                          </Link>
-                                        </div>
-                                      )}
+                                <h3 className="font-semibold text-[#1A5276] mb-6 text-lg">
+                                  {item.name === "Services"
+                                    ? "Our Services"
+                                    : item.name === "Company"
+                                      ? "Our Company"
+                                      : item.name === "Industries"
+                                        ? "Industries We Serve"
+                                        : item.name === "Insights"
+                                          ? "Insights"
+                                          : "ERPNext Solutions"}
+                                </h3>
+
+                                <div className="space-y-2">
+                                  {item.mainItems?.map((mainItem) => (
+                                    <div
+                                      key={mainItem.name}
+                                      className={`group/main flex items-center space-x-3 px-4 py-3 text-[#1A5276] hover:text-[#FF8C00] hover:bg-white cursor-pointer transition-all rounded-lg border border-transparent hover:border-gray-200 hover:shadow-sm ${hoveredService === mainItem.name ? 'bg-white border-gray-200 shadow-sm text-[#FF8C00]' : ''
+                                        }`}
+                                      onMouseEnter={() => setHoveredService(mainItem.name)}
+                                      onMouseLeave={() => {
+                                        setTimeout(() => {
+                                          if (hoveredDropdown !== item.name) {
+                                            setHoveredService(null);
+                                          }
+                                        }, 100);
+                                      }}
+                                    >
+                                      <mainItem.icon className="w-5 h-5 flex-shrink-0" />
+                                      <span className="text-sm font-medium">{mainItem.name}</span>
                                     </div>
-                                  )
-                                    : item.name === "Insights" && hoveredService === "Gallery" ? (
+                                  ))}
+                                </div>
+                              </div>
+
+                              <div className="w-1/2 p-6 overflow-y-auto">
+                                {hoveredService ? (
+                                  <div>
+                                    <h4 className="font-semibold text-[#1A5276] mb-4 text-lg border-b border-gray-100 pb-2">{hoveredService}</h4>
+                                    {item.name === "Insights" && hoveredService === "Blogs" ? (
                                       <div className="space-y-2">
-                                        {galleryLoading ? (
-                                          <div className="text-sm text-gray-500 px-3 py-2">Loading gallery...</div>
-                                        ) : galleryItems.length === 0 ? (
-                                          <div className="text-sm text-gray-500 px-3 py-2">No gallery items found.</div>
+                                        {blogsLoading ? (
+                                          <div className="text-sm text-gray-500 px-3 py-2">Loading blogs...</div>
+                                        ) : blogPosts.length === 0 ? (
+                                          <div className="text-sm text-gray-500 px-3 py-2">No blog posts found.</div>
                                         ) : (
-                                          (showAllGallery ? galleryItems : galleryItems.slice(0, 8)).map((item) => (
-                                          
+                                          (showAllBlogs ? blogPosts : blogPosts.slice(0, 8)).map((post) => (
                                             <Link
-                                              key={item.name}
-                                              href={item.route || "/gallery"}
+                                              key={post.name}
+                                              href={post.route || "/blog-post"}
                                               className="flex items-center space-x-3 px-3 py-2 text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5 cursor-pointer transition-all rounded-lg text-sm"
                                               onClick={() => {
                                                 setHoveredDropdown(null);
                                                 setHoveredService(null);
-                                                setShowAllGallery(false);
+                                                setShowAllBlogs(false);
                                               }}
                                             >
-                                              <span className="font-medium line-clamp-1">{item.title}</span>
+                                              {/* {post.image ? (
+                                              <Image src={post.image} alt={post.title} width={32} height={32} className="rounded object-cover" />
+                                            ) : (
+                                              <div className="w-8 h-8 rounded bg-gray-100" />
+                                            )} */}
+                                              <span className="font-medium line-clamp-1">{post.title}</span>
                                             </Link>
                                           ))
                                         )}
-                                        {galleryItems.length > 8 && (
+                                        {blogPosts.length > 5 && (
                                           <div className="pt-2 flex items-center gap-3">
                                             <button
                                               className="text-sm px-3 py-2 rounded-lg text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5"
-                                              onClick={() => setShowAllGallery(v => !v)}
+                                              onClick={() => setShowAllBlogs(v => !v)}
                                             >
-                                              {showAllGallery ? "Show less" : "View more"}
+                                              {showAllBlogs ? "Show less" : "View more"}
                                             </button>
                                             <Link
-                                              href="/gallery"
+                                              href="/blog-post"
                                               className="text-sm px-3 py-2 rounded-lg text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5"
                                               onClick={() => {
                                                 setHoveredDropdown(null);
                                                 setHoveredService(null);
-                                                setShowAllGallery(false);
+                                                setShowAllBlogs(false);
                                               }}
                                             >
                                               View all
@@ -952,129 +999,175 @@ export default function Header() {
                                         )}
                                       </div>
                                     )
-                                      :
-
-                                      (
+                                      : item.name === "Insights" && hoveredService === "Gallery" ? (
                                         <div className="space-y-2">
-                                          {(item.detailedItems as any)?.[hoveredService]?.map((subItem: any) => (
-                                            <Link
-                                              key={subItem.name}
-                                              href={subItem.href || "#"}
-                                              className="flex items-center space-x-3 px-3 py-2 text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5 cursor-pointer transition-all rounded-lg text-sm"
-                                              onClick={() => {
-                                                setHoveredDropdown(null);
-                                                setHoveredService(null);
-                                              }}
-                                            >
-                                              <subItem.icon className="w-4 h-4 flex-shrink-0" />
-                                              <span className="font-medium">{subItem.name}</span>
-                                            </Link>
-                                          ))}
+                                          {galleryLoading ? (
+                                            <div className="text-sm text-gray-500 px-3 py-2">Loading gallery...</div>
+                                          ) : galleryItems.length === 0 ? (
+                                            <div className="text-sm text-gray-500 px-3 py-2">No gallery items found.</div>
+                                          ) : (
+                                            (showAllGallery ? galleryItems : galleryItems.slice(0, 8)).map((item) => (
+
+                                              <Link
+                                                key={item.name}
+                                                href={item.route || "/gallery"}
+                                                className="flex items-center space-x-3 px-3 py-2 text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5 cursor-pointer transition-all rounded-lg text-sm"
+                                                onClick={() => {
+                                                  setHoveredDropdown(null);
+                                                  setHoveredService(null);
+                                                  setShowAllGallery(false);
+                                                }}
+                                              >
+                                                <span className="font-medium line-clamp-1">{item.title}</span>
+                                              </Link>
+                                            ))
+                                          )}
+                                          {galleryItems.length > 8 && (
+                                            <div className="pt-2 flex items-center gap-3">
+                                              <button
+                                                className="text-sm px-3 py-2 rounded-lg text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5"
+                                                onClick={() => setShowAllGallery(v => !v)}
+                                              >
+                                                {showAllGallery ? "Show less" : "View more"}
+                                              </button>
+                                              <Link
+                                                href="/gallery"
+                                                className="text-sm px-3 py-2 rounded-lg text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5"
+                                                onClick={() => {
+                                                  setHoveredDropdown(null);
+                                                  setHoveredService(null);
+                                                  setShowAllGallery(false);
+                                                }}
+                                              >
+                                                View all
+                                              </Link>
+                                            </div>
+                                          )}
                                         </div>
-                                      )}
-                                </div>
-                              ) : (
-                                <div className="flex items-center justify-center h-full">
-                                  <div className="text-center text-gray-400">
-                                    {item.name === "Services" ? (
-                                      <Wrench className="w-12 h-12 mx-auto mb-3 opacity-50" />
-                                    ) : item.name === "Company" ? (
-                                      <Users className="w-12 h-12 mx-auto mb-3 opacity-50" />
-                                    ) : (
-                                      <Building2 className="w-12 h-12 mx-auto mb-3 opacity-50" />
-                                    )}
-                                    <p className="text-sm">Hover over a {item.name === "Services" ? "service" : item.name === "Company" ? "section" : "solution"} to see details</p>
+                                      )
+                                        :
+
+                                        (
+                                          <div className="space-y-2">
+                                            {(item.detailedItems as any)?.[hoveredService]?.map((subItem: any) => (
+                                              <Link
+                                                key={subItem.name}
+                                                href={subItem.href || "#"}
+                                                className="flex items-center space-x-3 px-3 py-2 text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5 cursor-pointer transition-all rounded-lg text-sm"
+                                                onClick={() => {
+                                                  setHoveredDropdown(null);
+                                                  setHoveredService(null);
+                                                }}
+                                              >
+                                                <subItem.icon className="w-4 h-4 flex-shrink-0" />
+                                                <span className="font-medium">{subItem.name}</span>
+                                              </Link>
+                                            ))}
+                                          </div>
+                                        )}
                                   </div>
-                                </div>
-                              )}
+                                ) : (
+                                  <div className="flex items-center justify-center h-full">
+                                    <div className="text-center text-gray-400">
+                                      {item.name === "Services" ? (
+                                        <Wrench className="w-12 h-12 mx-auto mb-3 opacity-50" />
+                                      ) : item.name === "Company" ? (
+                                        <Users className="w-12 h-12 mx-auto mb-3 opacity-50" />
+                                      ) : (
+                                        <Building2 className="w-12 h-12 mx-auto mb-3 opacity-50" />
+                                      )}
+                                      <p className="text-sm">Hover over a {item.name === "Services" ? "service" : item.name === "Company" ? "section" : "solution"} to see details</p>
+                                    </div>
+                                  </div>
+                                )}
+                              </div>
                             </div>
-                          </div>
-                        ) : (
-                          // Simple single-column layout when no detailedItems
-                          <div className="w-80 p-6 max-w-[90vw] overflow-y-auto min-h-[500px] max-h-[85vh]">
-                            {/* <h3 className="font-semibold text-[#1A5276] mb-6 text-lg">
+                          ) : (
+                            // Simple single-column layout when no detailedItems
+                            <div className="w-80 p-6 max-w-[90vw] overflow-y-auto min-h-[500px] max-h-[85vh]">
+                              {/* <h3 className="font-semibold text-[#1A5276] mb-6 text-lg">
                               {item.name === "Services" ? "Our Services" : item.name === "Company" ? "Our Company" : "ERPNext Solutions"}
                             </h3> */}
-                            <h3 className="font-semibold text-[#1A5276] mb-6 text-lg">
-                              {item.name === "Services"
-                                ? "Our Services"
-                                : item.name === "Company"
-                                  ? "Our Company"
-                                  : item.name === "Industries"
-                                    ? "Our Industries"
-                                    : item.name === "Insights"
-                                      ? "Insights"
-                                      : "ERPNext Solutions"}
-                            </h3>
+                              <h3 className="font-semibold text-[#1A5276] mb-6 text-lg">
+                                {item.name === "Services"
+                                  ? "Our Services"
+                                  : item.name === "Company"
+                                    ? "Our Company"
+                                    : item.name === "Industries"
+                                      ? "Our Industries"
+                                      : item.name === "Insights"
+                                        ? "Insights"
+                                        : "ERPNext Solutions"}
+                              </h3>
 
 
 
-                            <div className="space-y-2">
-                              {item.mainItems?.map((mainItem) => (
-                                <Link
-                                  key={mainItem.name}
-                                  href={mainItem.href || item.detailedItems?.[mainItem.name]?.[0]?.href || "#"}
-                                  className="flex items-center space-x-3 px-4 py-3 text-[#1A5276] hover:text-[#FF8C00] hover:bg-gray-50 cursor-pointer transition-all rounded-lg border border-transparent hover:border-gray-200 hover:shadow-sm"
-                                  onClick={() => {
-                                    setHoveredDropdown(null);
-                                    setHoveredService(null);
-                                  }}
-                                >
-                                  <mainItem.icon className="w-5 h-5 flex-shrink-0" />
-                                  <span className="text-sm font-medium">{mainItem.name}</span>
-                                </Link>
-                              ))}
+                              <div className="space-y-2">
+                                {item.mainItems?.map((mainItem) => (
+                                  <Link
+                                    key={mainItem.name}
+                                    href={mainItem.href || item.detailedItems?.[mainItem.name]?.[0]?.href || "#"}
+                                    className="flex items-center space-x-3 px-4 py-3 text-[#1A5276] hover:text-[#FF8C00] hover:bg-gray-50 cursor-pointer transition-all rounded-lg border border-transparent hover:border-gray-200 hover:shadow-sm"
+                                    onClick={() => {
+                                      setHoveredDropdown(null);
+                                      setHoveredService(null);
+                                    }}
+                                  >
+                                    <mainItem.icon className="w-5 h-5 flex-shrink-0" />
+                                    <span className="text-sm font-medium">{mainItem.name}</span>
+                                  </Link>
+                                ))}
+                              </div>
                             </div>
-                          </div>
-                        )}
+                          )}
+                        </div>
                       </div>
-                    </div>
-                  ) : (
-                    <Button
-                      variant="ghost"
-                      className="text-gray-300 hover:text-[#FF8C00] hover:bg-gray-700/50 transition-all font-medium flex items-center space-x-1 text-base py-6 px-3 rounded-lg"
-                    >
-                      <item.icon className="w-4 h-4" />
-                      <span>{item.name}</span>
-                    </Button>
-                  )}
-                </div>
-              ))}
+                    ) : (
+                      <Button
+                        variant="ghost"
+                        className="text-gray-300 hover:text-[#FF8C00] hover:bg-gray-700/50 transition-all font-medium flex items-center space-x-1 text-base py-6 px-3 rounded-lg"
+                      >
+                        <item.icon className="w-4 h-4" />
+                        <span>{item.name}</span>
+                      </Button>
+                    )}
+                  </div>
+                ))}
 
-              <Button
-                className="ml-4 bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white hover:shadow-lg hover:shadow-orange-500/25 transition-all text-sm py-2 px-6 font-medium rounded-full"
-                onClick={GotoInquiryForm}
-              >
-                Book Consultation
-              </Button>
+                <Button
+                  className="ml-4 bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white hover:shadow-lg hover:shadow-orange-500/25 transition-all text-sm py-2 px-6 font-medium rounded-full"
+                  onClick={GotoInquiryForm}
+                >
+                  Book Consultation
+                </Button>
 
-              <Link href="/login" className="ml-2">
+                <Link href="/login" className="ml-2">
+                  <Button
+                    variant="ghost"
+                    className="text-gray-300 hover:text-[#FF8C00] hover:bg-gray-700/50 transition-all font-medium flex items-center space-x-2 text-sm py-2 px-4 rounded-full"
+                  >
+                    <LogIn className="w-4 h-4" />
+                    <span>Login</span>
+                  </Button>
+                </Link>
+              </div>
+
+              <div className="lg:hidden ml-auto">
                 <Button
                   variant="ghost"
-                  className="text-gray-300 hover:text-[#FF8C00] hover:bg-gray-700/50 transition-all font-medium flex items-center space-x-2 text-sm py-2 px-4 rounded-full"
+                  size="icon"
+                  onClick={() => {
+                    toggleMenu();
+                    setMobileNavStack([]);
+                    setNavAnimation(null);
+                  }}
+                  className="text-gray-300 hover:bg-gray-700/50 w-12 h-12 rounded-lg"
                 >
-                  <LogIn className="w-4 h-4" />
-                  <span>Login</span>
+                  {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
                 </Button>
-              </Link>
-            </div>
-
-            <div className="lg:hidden ml-auto">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => {
-                  toggleMenu();
-                  setMobileNavStack([]);
-                  setNavAnimation(null);
-                }}
-                className="text-gray-300 hover:bg-gray-700/50 w-12 h-12 rounded-lg"
-              >
-                {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-              </Button>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </nav>
 
@@ -1098,10 +1191,10 @@ export default function Header() {
               </button>
             </div>
             <div className={`py-2 flex-1 ${navAnimation === 'slide-in'
-                ? (isGoingBack ? 'animate-slide-in-left' : 'animate-slide-in-right')
-                : navAnimation === 'slide-out'
-                  ? 'animate-slide-out-left'
-                  : ''
+              ? (isGoingBack ? 'animate-slide-in-left' : 'animate-slide-in-right')
+              : navAnimation === 'slide-out'
+                ? 'animate-slide-out-left'
+                : ''
               }`}>
               <div className="py-2">
                 {(mobileNavStack.length === 0 ? navigationItems : mobileNavStack[mobileNavStack.length - 1].items).map((item: any) => (

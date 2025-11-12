@@ -313,7 +313,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 const pageGroups = {
   'blog': '(blogs)',
   'webpage': '(webpages)',
-  'code-snippet': '(code-snippets)'
+  'code-snippet': 'dev-insight'
 }
 const docTypes = {
   blog: 'Blog Post',
