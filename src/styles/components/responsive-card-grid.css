@@ -62,10 +62,8 @@
   transform: translateY(0);
 }
 
-.responsive-card-grid-fade-out {
-  opacity: 0;
-  transform: translateY(0);
-}
+
+
 
 /* .responsive-card-grid-title {
   font-size: 2rem;

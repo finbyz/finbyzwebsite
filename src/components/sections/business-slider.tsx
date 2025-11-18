@@ -313,6 +313,7 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
     mobile: ""
   });
   const [open, setOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const formRef = useRef<HTMLDivElement>(null);
   const router = useRouter(); // ✅ Initialize router
 
@@ -365,22 +366,28 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (isSubmitting) return; // stop double click
+    setIsSubmitting(true);
     try {
       // Basic client-side validation
       if (!formData.name.trim()) {
         alert("Please enter your name.");
+        setIsSubmitting(false);
         return;
       }
       if (!formData.organization.trim()) {
         alert("Please enter your organization name.");
+        setIsSubmitting(false);
         return;
       }
       if (!formData.email.match(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
         alert("Please enter a valid email address.");
+        setIsSubmitting(false);
         return;
       }
       if (!formData.mobile.match(/^\+?\d{10,15}$/)) {
         alert("Please enter a valid mobile number.");
+        setIsSubmitting(false);
         return;
       }
 
@@ -388,7 +395,7 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
         lead_name: formData.name,
         company_name: formData.organization,
         mobile_no: formData.mobile,
-        title: typeof window !== 'undefined' ? document.title : 'Website Inquiry',
+        title: typeof window !== "undefined" ? window.location.href : "Website Inquiry",
         email: formData.email,
       };
 
@@ -416,6 +423,7 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
           alert('We already have your inquiry. Thank you!');
           setFormData({ name: '', organization: '', email: '', mobile: '' });
           setOpen(false);
+          setIsSubmitting(false);
           return;
         }
         throw new Error(message || `Request failed with status ${res.status}`);
@@ -428,9 +436,11 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
       setSliderCookie(); // Set cookie to prevent showing again for 1 hour
       resetOpenCount(); // Reset the open count since user completed the form
       setOpen(false);
+      setIsSubmitting(false);
     } catch (error) {
       console.error('Inquiry submission failed:', error);
       alert('Sorry, something went wrong submitting your inquiry. Please try again.');
+      setIsSubmitting(false);
     }
   };
 
@@ -568,13 +578,32 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
                     required
                   />
                 </div>
-                <Button type="submit" className="submit-button">
+                <Button   disabled={isSubmitting} type="submit" className="submit-button">
                   <div className="button-left-animation"></div>
                   <div className="button-right-animation"></div>
-                  <div className="button-content">
-                    <Send className="button-icon" />
-                    <span className="button-text">SUBMIT</span>
-                  </div>
+                   <div className="button-content">
+                      {isSubmitting ? (
+                        <>
+                          <span
+                            className="
+                              w-4 h-4
+                              border-2 border-white 
+                              border-t-transparent 
+                              rounded-full 
+                              mr-2 
+                              animate-spin
+                            "
+                          ></span>
+                          <span className="button-text">PLEASE WAIT...</span>
+
+                        </>
+                      ) : (
+                        <>
+                          <Send className="button-icon" />
+                          <span className="button-text">SUBMIT</span>
+                        </>
+                      )}
+                    </div>
                 </Button>
               </form>
             </div>

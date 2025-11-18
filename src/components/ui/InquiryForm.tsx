@@ -53,7 +53,9 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
+ 
     e.preventDefault();
+    if (isSubmitting) return; // stop double click
     setIsSubmitting(true);
     
     try {
@@ -83,7 +85,7 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
         lead_name: formData.name,
         company_name: formData.organization,
         mobile_no: formData.mobile,
-        title: typeof window !== 'undefined' ? document.title : 'Website Inquiry',
+        title: typeof window !== "undefined" ? window.location.href : "Website Inquiry",
         email: formData.email,
       };
 

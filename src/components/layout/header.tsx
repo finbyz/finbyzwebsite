@@ -49,6 +49,13 @@ interface MobileNavStackItem {
   parent?: string;
 }
 
+// Type definitions
+interface CodeSnippet {
+  route: string;
+  title: string;
+}
+
+
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const { isOpen, toggleMenu } = useMobileMenu();
@@ -64,6 +71,11 @@ export default function Header() {
   const [galleryItems, setGalleryItems] = useState<Array<{ name: string; title: string; route?: string; animated_image?: string; svg_image?: string }>>([]);
   const [galleryLoading, setGalleryLoading] = useState(false);
   const [showAllGallery, setShowAllGallery] = useState(false);
+
+  const [codeSnippets, setCodeSnippets] = useState<CodeSnippet[]>([]);
+  const [snippetsLoading, setSnippetsLoading] = useState(false);
+  const [showAllSnippets, setShowAllSnippets] = useState(false);
+   
 
   useEffect(() => {
     const handleScroll = () => {
@@ -97,6 +109,24 @@ export default function Header() {
       .catch(() => setGalleryItems([]))
       .finally(() => setGalleryLoading(false));
   }, [hoveredDropdown, hoveredService, galleryLoading, galleryItems.length]);
+
+
+// Load code snippets when hovering Insights → Code Snippet
+useEffect(() => {
+  const shouldFetch = hoveredDropdown === "Insights" && hoveredService === "Dev Insights" && !snippetsLoading && codeSnippets.length === 0;
+  
+  if (!shouldFetch) return;
+  setSnippetsLoading(true);
+    fetch("/web-api/code-snippets")
+      .then(r => r.json())
+      .then(j => setCodeSnippets(Array.isArray(j?.data) ? j.data : []))
+      .catch(() => setCodeSnippets([]))
+      .finally(() => setSnippetsLoading(false));
+
+
+}, [hoveredDropdown, hoveredService, snippetsLoading, codeSnippets.length]);
+
+
 
   const toggleMobileItem = (itemName: string) => {
     setExpandedMobileItems(prev =>
@@ -649,98 +679,7 @@ export default function Header() {
             href: "/blog-post"
           },
         ],
-        "Dev Insights": [
-          {
-            name: "Add Filter in Child Table Field",
-            description: "Learn about adding filters in a child table field in Frappe",
-            icon: Wrench,
-            href: "/dev-insight/add-filter-in-child-table-field"
-          },
-          {
-            name: "Fetch Session User and Modified",
-            description: "Learn how to fetch session user and last modified details",
-            icon: Wrench,
-            href: "/dev-insight/fetch-session-user-and-modified"
-          },
-          {
-            name: "List of Events",
-            description: "Explore available event hooks and how to use them effectively",
-            icon: Wrench,
-            href: "/dev-insight/list-of-events"
-          },
-          {
-            name: "Address Jinja",
-            description: "Learn how to use Jinja templating with address fields in Frappe",
-            icon: Wrench,
-            href: "/dev-insight/address-jinja"
-          },
-          {
-            name: "Fetch Table All Rows",
-            description: "Fetch all rows from a table field using Frappe APIs",
-            icon: Wrench,
-            href: "/dev-insight/fetch-table-all-rows"
-          },
-          {
-            name: "Fetch User Name and Role",
-            description: "Learn how to get the current user's name and role in Frappe",
-            icon: Wrench,
-            href: "/dev-insight/fetch-user-name-and-role"
-          },
-          {
-            name: "Field Visibility Evaluation",
-            description: "Control field visibility dynamically using Frappe logic",
-            icon: Wrench,
-            href: "/dev-insight/field-visibility-evaluation"
-          },
-          {
-            name: "Rows Addition",
-            description: "Learn how to add rows programmatically in a child table",
-            icon: Wrench,
-            href: "/dev-insight/rows-additon"
-          },
-          {
-            name: "Calculations on Child Rows",
-            description: "Perform calculations on child table rows using scripts",
-            icon: Wrench,
-            href: "/dev-insight/calculations-on-child-rows"
-          },
-          {
-            name: "Span Table Cell Look",
-            description: "Customize and span table cells for better readability",
-            icon: Wrench,
-            href: "/dev-insight/span-table-cell-look"
-          },
-          {
-            name: "Change Color of Child Rows",
-            description: "Style and change colors of child table rows dynamically",
-            icon: Wrench,
-            href: "/dev-insight/change-color-of-child-rows"
-          },
-          {
-            name: "Status Colour Coding",
-            description: "Apply color coding to indicate status in list or reports",
-            icon: Wrench,
-            href: "/dev-insight/status-colour-coding"
-          },
-          {
-            name: "Child Table Row Colour Change",
-            description: "Modify the background color of specific child table rows",
-            icon: Wrench,
-            href: "/dev-insight/child-table-row-colour-change"
-          },
-          {
-            name: "Subtraction",
-            description: "Perform subtraction logic within child tables or forms",
-            icon: Wrench,
-            href: "/dev-insight/subtraction"
-          },
-          {
-            name: "CSS for Print Formats",
-            description: "Learn how to apply custom CSS for print formats in Frappe",
-            icon: Wrench,
-            href: "/dev-insight/css-for-print-formats"
-          }
-        ]
+       
       },
     },
     {
@@ -967,11 +906,7 @@ export default function Header() {
                                                 setShowAllBlogs(false);
                                               }}
                                             >
-                                              {/* {post.image ? (
-                                              <Image src={post.image} alt={post.title} width={32} height={32} className="rounded object-cover" />
-                                            ) : (
-                                              <div className="w-8 h-8 rounded bg-gray-100" />
-                                            )} */}
+                                              
                                               <span className="font-medium line-clamp-1">{post.title}</span>
                                             </Link>
                                           ))
@@ -1043,9 +978,57 @@ export default function Header() {
                                               </Link>
                                             </div>
                                           )}
+
                                         </div>
                                       )
                                         :
+                                          item.name === "Insights" && hoveredService === "Dev Insights" ? (
+                                            <div className="space-y-2">
+                                              {snippetsLoading ? (
+                                                <div className="text-sm text-gray-500 px-3 py-2">Loading code snippets...</div>
+                                              ) : codeSnippets.length === 0 ? (
+                                                <div className="text-sm text-gray-500 px-3 py-2">No code snippets found.</div>
+                                              ) : (
+                                                (showAllSnippets ? codeSnippets : codeSnippets.slice(0, 8)).map((snippet) => (
+                                                  <Link
+                                                    key={snippet.route}
+                                                    href={`/dev-insight/${snippet.route}`}
+                                                    className="flex items-center space-x-3 px-3 py-2 text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5 cursor-pointer transition-all rounded-lg text-sm"
+                                                    onClick={() => {
+                                                      setHoveredDropdown(null);
+                                                      setHoveredService(null);
+                                                      setShowAllSnippets(false);
+                                                    }}
+                                                  >
+                                                    <span className="font-medium line-clamp-1">
+                                                      {snippet.title}
+                                                    </span>
+                                                  </Link>
+                                                ))
+                                              )}
+                                              {codeSnippets.length > 8 && (
+                                                <div className="pt-2 flex items-center gap-3">
+                                                  <button
+                                                    className="text-sm px-3 py-2 rounded-lg text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5"
+                                                    onClick={() => setShowAllSnippets(v => !v)}
+                                                  >
+                                                    {showAllSnippets ? "Show less" : "View more"}
+                                                  </button>
+                                                  <Link
+                                                    href="/code-snippet"
+                                                    className="text-sm px-3 py-2 rounded-lg text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5"
+                                                    onClick={() => {
+                                                      setHoveredDropdown(null);
+                                                      setHoveredService(null);
+                                                      setShowAllSnippets(false);
+                                                    }}
+                                                  >
+                                                    View all
+                                                  </Link>
+                                                </div>
+                                              )}
+                                            </div>
+                                          )  :
 
                                         (
                                           <div className="space-y-2">

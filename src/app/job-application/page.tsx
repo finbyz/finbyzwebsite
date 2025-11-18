@@ -18,6 +18,9 @@ export default function JobApplication() {
   const [loading, setLoading] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+ 
+  const [applicantType, setApplicantType] = useState('');
+  const [selectedJobOpening, setSelectedJobOpening] = useState('');
   const WEB_FORM_NAME = "job-application";
 
 
@@ -41,6 +44,20 @@ useEffect(() => {
 
   fetchJobOpenings();
 }, []);
+
+
+// Add this useEffect to extract job_title from URL
+useEffect(() => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const jobTitleParam = urlParams.get('job_title');
+  
+  if (jobTitleParam) {
+    // Decode the URL-encoded string 
+    const decodedJobTitle = decodeURIComponent(jobTitleParam.replace(/\+/g, ' '));
+    setSelectedJobOpening(decodedJobTitle);
+  }
+}, []);
+
 
 
 
@@ -105,9 +122,10 @@ useEffect(() => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     
     e.preventDefault();
+    if (isSubmitting) return; // stop double click
+    setIsSubmitting(true);
     try {
-      if (isSubmitting) return;
-      setIsSubmitting(true);
+    
       const form = e.currentTarget;
       const getValue = (id: string) =>
         (form.querySelector(`#${id}`) as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement)?.value || '';
@@ -116,6 +134,7 @@ useEffect(() => {
       const formData = new FormData();
       formData.append("web_form", WEB_FORM_NAME);
       formData.append("for_payment", "0");
+      const applicantTypeValue = getValue("applicantType");
       // Prepare document data
       const doc = {
         job_title: getValue("jobOpening"),
@@ -127,8 +146,18 @@ useEffect(() => {
         applicant_type: getValue("applicantType"),
         qualification: getValue("qualification"),
         additional_info: getValue("additionalInfo"),
-        linkedin_link : getValue("linkedin_link")
+        linkedin_link : getValue("linkedin_link"),
+        // Conditionally spread experienced fields
+        ...(applicantTypeValue === "Experienced" && {
+          current_ctc: getValue("currentCTC"),
+          expected_ctc: getValue("expectedCTC"),
+          current_employer_: getValue("currentEmployer"),
+          total_experience: getValue("totalExperience")
+        })
+       
       };
+
+       
 
       // Append document data as JSON
       formData.append("data", JSON.stringify(doc));
@@ -173,6 +202,7 @@ useEffect(() => {
       form.reset();
       setSelectedFile(null);
       setFileName("");
+      setApplicantType(''); // Reset applicant type state
       if (fileInputRef.current) fileInputRef.current.value = "";
     } catch (err) {
       console.error("Application submission failed:", err);
@@ -214,20 +244,26 @@ useEffect(() => {
                   <p className={styles.sectionDescription}>Basic details about the applicant</p>
                 </div>
 
-                <div className={styles.formGroup}>
+                  <div className={styles.formGroup}>
                     <label htmlFor="jobOpening" className={styles.formLabel}>
                       Job Opening <span className={styles.required}>*</span>
                     </label>
-                
-                    <select id="jobOpening" className={styles.selectInput} required>
+
+                    <select 
+                      id="jobOpening" 
+                      className={styles.selectInput} 
+                      required
+                      value={selectedJobOpening}
+                      onChange={(e) => setSelectedJobOpening(e.target.value)}
+                    >
                       <option value="">{loading ? "Loading..." : "Select a job opening"}</option>
 
                       {!loading &&
-                    jobOpenings.map((job, index) => (
-                      <option key={index} value={job.name}>
-                        {job.name}
-                      </option>
-                    ))}
+                        jobOpenings.map((job, index) => (
+                          <option key={index} value={job.name}>
+                            {job.name}
+                          </option>
+                        ))}
                     </select>
                   </div>
                  
@@ -298,44 +334,99 @@ useEffect(() => {
                   />
                 </div>
 
-                {/* <div className={styles.formGroup}>
-                  <label htmlFor="applicantType" className={styles.formLabel}>
-                    Applicant Type <span className={styles.required}>*</span>
-                  </label>
-                  <select id="applicantType" className={styles.selectInput} required>
-                  <option value="">Select applicant type</option>
-                  <option value="Fresher">Fresher</option>
-                  <option value="Experienced">Experienced</option> 
-                   {applicantTypes.map((type, idx) => (
+                
+
+              
+
+              
+            <div className={styles.formGroup}>
+              <label htmlFor="applicantType" className={styles.formLabel}>
+                Applicant Type <span className={styles.required}>*</span>
+              </label>
+
+              <select 
+                id="applicantType" 
+                className={styles.selectInput} 
+                required
+                value={applicantType}
+                onChange={(e) => setApplicantType(e.target.value)}
+              >
+                <option value="">Select applicant type</option>
+
+                {applicantTypes && applicantTypes.length > 0 ? (
+                  applicantTypes.map((type, idx) => (
                     <option key={idx} value={type}>
                       {type}
                     </option>
-                  ))}
-                </select>
-                </div> */}
+                  ))
+                ) : (
+                  <>
+                    <option value="Fresher">Fresher</option>
+                    <option value="Experienced">Experienced</option>
+                  </>
+                )}
+              </select>
+            </div>
 
-                <div className={styles.formGroup}>
-                  <label htmlFor="applicantType" className={styles.formLabel}>
-                    Applicant Type <span className={styles.required}>*</span>
-                  </label>
+{/* Conditional fields for Experienced applicants */}
+              {applicantType === 'Experienced' && (
+                <>
+                  <div className={styles.formGroup}>
+                    <label htmlFor="currentCTC" className={styles.formLabel}>
+                      Current CTC (Per Annum) <span className={styles.required}>*</span>
+                    </label>
+                    <input
+                      type="number"
+                      id="currentCTC"
+                      className={styles.textInput}
+                      placeholder="Enter current CTC"
+                      step="0.01"
+                      required
+                    />
+                  </div>
 
-                  <select id="applicantType" className={styles.selectInput} required>
-                    <option value="">Select applicant type</option>
+                  <div className={styles.formGroup}>
+                    <label htmlFor="expectedCTC" className={styles.formLabel}>
+                      Expected CTC (Per Annum) <span className={styles.required}>*</span>
+                    </label>
+                    <input
+                      type="number"
+                      id="expectedCTC"
+                      className={styles.textInput}
+                      placeholder="Enter expected CTC"
+                      step="0.01"
+                      required
+                    />
+                  </div>
 
-                    {applicantTypes && applicantTypes.length > 0 ? (
-                      applicantTypes.map((type, idx) => (
-                        <option key={idx} value={type}>
-                          {type}
-                        </option>
-                      ))
-                    ) : (
-                      <>
-                        <option value="Fresher">Fresher</option>
-                        <option value="Experienced">Experienced</option>
-                      </>
-                    )}
-                  </select>
-                </div>
+                  <div className={styles.formGroup}>
+                    <label htmlFor="currentEmployer" className={styles.formLabel}>
+                      Current Employer <span className={styles.required}>*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="currentEmployer"
+                      className={styles.textInput}
+                      placeholder="Enter current employer name"
+                      required
+                    />
+                  </div>
+
+                  <div className={styles.formGroup}>
+                    <label htmlFor="totalExperience" className={styles.formLabel}>
+                      Total Experience (Years) <span className={styles.required}>*</span>
+                    </label>
+                    <input
+                      type="number"
+                      id="totalExperience"
+                      className={styles.textInput}
+                      placeholder="Enter total years of experience"
+                      step="0.01"
+                      required
+                    />
+                  </div>
+                </>
+              )}
 
 
                 <div className={styles.formGroup}>
