@@ -1,35 +1,41 @@
 import BusinessSlider from "@/components/sections/business-slider";
 import FinbyzGallery from "@/components/sections/FinbyzGallery";
 import FAQ from "@/components/ai_components/FAQ";
+import StructureData from "@/components/seo/StructureData";
+import { fetchFrappeSchemaData } from "@/lib/fetchFrappeSeoData";
 import { getFaqs, getPageData } from "@/lib/getPageData";
 import { Metadata } from "next";
-import Script from "next/script";
 
-export const metadata: Metadata = {
-  title: "Top Benefits of Integrating ERP and CRM Systems for Business Growth",
-  description: "Discover how ERP and CRM integration can streamline operations, enhance customer experiences, and drive business growth. Learn the key benefits and best practices.",
-  keywords: "ERP and CRM,\nERP and CRM integration, \nbenefits of ERP and CRM integration, \nCRM systems,\nERP ",
-  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+export async function generateMetadata(): Promise<Metadata> {
+const pageData = await fetchFrappeSchemaData({
+    name: "benefits-of-erp-and-crm-integration",
+    type: "blog"
+})
+return {
+  title: pageData?.data?.title,
+  description: pageData?.data?.description,
+  keywords: pageData?.data?.keywords,
+  authors: [{ "name": "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://finbyz.tech/benefits-of-erp-and-crm-integration",
+    "canonical": `${process.env.SITE_URL}/${pageData?.data?.route}`,
   },
   openGraph: {
-    title: "Top Benefits of Integrating ERP and CRM Systems for Business Growth",
-    description: "Discover how ERP and CRM integration can streamline operations, enhance customer experiences, and drive business growth. Learn the key benefits and best practices.",
-    url: "https://finbyz.tech/benefits-of-erp-and-crm-integration",
+    title: pageData?.data?.seo_title,
+    description: pageData?.data?.meta_description,
+    url: `${process.env.SITE_URL}/${pageData?.data?.route}`,
     siteName: "Finbyz Tech",
-    type: "article",
+    type: "website",
     locale: "en_US",
-    
+      images: [{ url: `${process.env.FRAPPE_URL}/${pageData?.data?.meta_image}`, width: 1200, height: 630, alt: pageData?.data?.seo_title }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Top Benefits of Integrating ERP and CRM Systems for Business Growth",
-    description: "Discover how ERP and CRM integration can streamline operations, enhance customer experiences, and drive business growth. Learn the key benefits and best practices.",
+    title: pageData?.data?.seo_title,
+    description: pageData?.data?.small_description,
     creator: "@finbyz",
-    
+    images: [`${process.env.FRAPPE_URL}/${pageData?.data?.meta_image}`],
   },
   robots: {
     index: true,
@@ -43,88 +49,22 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   }
-};
+}
+}
 const faqsGroup = await getFaqs("Blog Post","benefits-of-erp-and-crm-integration");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const structuredData = {
-  "@context": "https://schema.org/",
-  "@type": "BlogPosting",
-  "@id": "https://finbyz.tech/benefits-of-erp-and-crm-integration#BlogPosting",
-  "mainEntityOfPage": "https://finbyz.tech/benefits-of-erp-and-crm-integration",
-  "headline": "Top Benefits of Integrating ERP and CRM Systems for Business Growth",
-  "name": "Top Benefits of Integrating ERP and CRM Systems for Business Growth",
-  "description": "Discover how ERP and CRM integration can streamline operations, enhance customer experiences, and drive business growth. Learn the key benefits and best practices.",
-  "datePublished": "",
-  "dateModified": "",
-  "author": {
-    "@type": "Person",
-    "name": "FinByz Tech Pvt Ltd",
-    "url": "https://finbyz.tech/about-us",
-    "image": {
-      "@type": "ImageObject",
-      "url": "https://finbyz.tech/files/FinbyzLogo.png",
-      "height": "96",
-      "width": "96"
-    }
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "FinByz Tech Pvt Ltd",
-    "url": "https://finbyz.tech",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://finbyz.tech/files/FinbyzLogo.png",
-      "width": "600",
-      "height": "60"
-    }
-  },
-  "image": {
-    "@type": "ImageObject",
-    "url": "https://finbyz.tech/files/FinbyzLogo.png",
-    "width": "1200",
-    "height": "630"
-  },
-  "url": "https://finbyz.tech/benefits-of-erp-and-crm-integration",
-  "isPartOf": {
-    "@type": "Blog",
-    "@id": "https://finbyz.tech/blog-post/",
-    "name": "FinByz Tech Blog",
-    "publisher": {
-      "@type": "Organization",
-      "@id": "https://finbyz.tech",
-      "name": "FinByz Tech Pvt Ltd"
-    }
-  },
-  "keywords": [
-    "ERP and CRM",
-    "ERP and CRM integration",
-    "benefits of ERP and CRM integration",
-    "CRM systems",
-    "ERP"
-  ]
-};
   const data = await getPageData("Blog Post","benefits-of-erp-and-crm-integration");
 
   return (
     <>
-      <Script
-        id="structured-data"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-
-      <article itemScope itemType="https://schema.org/BlogPosting">
-        <meta itemProp="headline" content="Top Benefits of Integrating ERP and CRM Systems for Business Growth" />
-        <meta itemProp="description" content="Discover how ERP and CRM integration can streamline operations, enhance customer experiences, and drive business growth. Learn the key benefits and best practices." />
-      </article>
-
       {children}
       {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }
       <BusinessSlider />
+      <StructureData name="benefits-of-erp-and-crm-integration" type="blog" />
     </>
   );
 }

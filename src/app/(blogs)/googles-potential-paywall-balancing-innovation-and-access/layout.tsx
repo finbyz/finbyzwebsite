@@ -1,35 +1,41 @@
 import BusinessSlider from "@/components/sections/business-slider";
 import FinbyzGallery from "@/components/sections/FinbyzGallery";
 import FAQ from "@/components/ai_components/FAQ";
+import StructureData from "@/components/seo/StructureData";
+import { fetchFrappeSchemaData } from "@/lib/fetchFrappeSeoData";
 import { getFaqs, getPageData } from "@/lib/getPageData";
 import { Metadata } from "next";
-import Script from "next/script";
 
-export const metadata: Metadata = {
-  title: "Google\'s Potential Paywall: Innovation in AI Search vs. Information Access",
-  description: "Explore how Google\'s AI-powered search is reshaping the web, and what the proposed paywall for premium AI features could mean for users, publishers, and digital inclusivity.",
-  keywords: "google,\ngoogle\'s ai search,\nai powered search engine,\nai",
-  authors: [{ name: "FinByz Tech Pvt Ltd" }],
+export async function generateMetadata(): Promise<Metadata> {
+const pageData = await fetchFrappeSchemaData({
+    name: "googles-potential-paywall-balancing-innovation-and-access",
+    type: "blog"
+})
+return {
+  title: pageData?.data?.title,
+  description: pageData?.data?.description,
+  keywords: pageData?.data?.keywords,
+  authors: [{ "name": "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://finbyz.tech/googles-potential-paywall-balancing-innovation-and-access",
+    "canonical": `${process.env.SITE_URL}/${pageData?.data?.route}`,
   },
   openGraph: {
-    title: "Google\'s Potential Paywall: Innovation in AI Search vs. Information Access",
-    description: "Explore how Google\'s AI-powered search is reshaping the web, and what the proposed paywall for premium AI features could mean for users, publishers, and digital inclusivity.",
-    url: "https://finbyz.tech/googles-potential-paywall-balancing-innovation-and-access",
+    title: pageData?.data?.seo_title,
+    description: pageData?.data?.meta_description,
+    url: `${process.env.SITE_URL}/${pageData?.data?.route}`,
     siteName: "Finbyz Tech",
-    type: "article",
+    type: "website",
     locale: "en_US",
-    
+      images: [{ url: `${process.env.FRAPPE_URL}/${pageData?.data?.meta_image}`, width: 1200, height: 630, alt: pageData?.data?.seo_title }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Google\'s Potential Paywall: Innovation in AI Search vs. Information Access",
-    description: "Explore how Google\'s AI-powered search is reshaping the web, and what the proposed paywall for premium AI features could mean for users, publishers, and digital inclusivity.",
+    title: pageData?.data?.seo_title,
+    description: pageData?.data?.small_description,
     creator: "@finbyz",
-    
+    images: [`${process.env.FRAPPE_URL}/${pageData?.data?.meta_image}`],
   },
   robots: {
     index: true,
@@ -43,87 +49,22 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   }
-};
+}
+}
 const faqsGroup = await getFaqs("Blog Post","googles-potential-paywall-balancing-innovation-and-access");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const structuredData = {
-  "@context": "https://schema.org/",
-  "@type": "BlogPosting",
-  "@id": "https://finbyz.tech/googles-potential-paywall-balancing-innovation-and-access#BlogPosting",
-  "mainEntityOfPage": "https://finbyz.tech/googles-potential-paywall-balancing-innovation-and-access",
-  "headline": "Google\\'s Potential Paywall: Innovation in AI Search vs. Information Access",
-  "name": "Google\\'s Potential Paywall: Innovation in AI Search vs. Information Access",
-  "description": "Explore how Google\\'s AI-powered search is reshaping the web, and what the proposed paywall for premium AI features could mean for users, publishers, and digital inclusivity.",
-  "datePublished": "",
-  "dateModified": "",
-  "author": {
-    "@type": "Person",
-    "name": "FinByz Tech Pvt Ltd",
-    "url": "https://finbyz.tech/about-us",
-    "image": {
-      "@type": "ImageObject",
-      "url": "https://finbyz.tech/files/FinbyzLogo.png",
-      "height": "96",
-      "width": "96"
-    }
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "FinByz Tech Pvt Ltd",
-    "url": "https://finbyz.tech",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://finbyz.tech/files/FinbyzLogo.png",
-      "width": "600",
-      "height": "60"
-    }
-  },
-  "image": {
-    "@type": "ImageObject",
-    "url": "https://finbyz.tech/files/FinbyzLogo.png",
-    "width": "1200",
-    "height": "630"
-  },
-  "url": "https://finbyz.tech/googles-potential-paywall-balancing-innovation-and-access",
-  "isPartOf": {
-    "@type": "Blog",
-    "@id": "https://finbyz.tech/blog-post/",
-    "name": "FinByz Tech Blog",
-    "publisher": {
-      "@type": "Organization",
-      "@id": "https://finbyz.tech",
-      "name": "FinByz Tech Pvt Ltd"
-    }
-  },
-  "keywords": [
-    "google",
-    "google's ai search",
-    "ai powered search engine",
-    "ai"
-  ]
-};
   const data = await getPageData("Blog Post","googles-potential-paywall-balancing-innovation-and-access");
 
   return (
     <>
-      <Script
-        id="structured-data"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-
-      <article itemScope itemType="https://schema.org/BlogPosting">
-        <meta itemProp="headline" content="Google\'s Potential Paywall: Innovation in AI Search vs. Information Access" />
-        <meta itemProp="description" content="Explore how Google\'s AI-powered search is reshaping the web, and what the proposed paywall for premium AI features could mean for users, publishers, and digital inclusivity." />
-      </article>
-
       {children}
       {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }
       <BusinessSlider />
+      <StructureData name="googles-potential-paywall-balancing-innovation-and-access" type="blog" />
     </>
   );
 }
