@@ -5,6 +5,10 @@ import "./globals.css";
 import "@/styles/components/inquiry-form.css";
 import "@/styles/components/inquiry-form.css";
 import { MobileMenuProvider } from "@/contexts/MobileMenuContext";
+import BreadcrumbSchema from "@/components/seo/BreadCrumbSchema";
+
+
+export const dynamic = "force-dynamic";
 
 const interSans = Inter({
   variable: "--font-geist-sans",
@@ -101,6 +105,7 @@ export default function RootLayout({
             })
           }}
         />
+        <BreadcrumbSchema baseUrl={ process.env.SITE_URL || ""} />
       </head>
       <body
         className={`${interSans.variable} ${geistMono.variable} antialiased`}
