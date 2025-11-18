@@ -10,10 +10,6 @@ interface Component {
   props: Record<string, string>;
 }
 
-interface PageData {
-  filename: string;
-  code: string;
-}
 
 // ---- Base64 Decode Helper ----
 function decodeBase64(base64String: string): string {
@@ -36,6 +32,7 @@ interface SEOData {
 
 interface GeneratePageRequest {
   slug: string;
+  name: string;
   type: 'webpage' | 'blog';
   pageCode: string;
   components?: Component[];
@@ -78,7 +75,7 @@ function writePage(slug: string, code: string, type: 'webpage' | 'blog' | 'code-
   fs.writeFileSync(pagePath, code, 'utf-8');
 }
 
-function generateWebpageLayout(slug: string, seoData: SEOData, type: PageType): string {
+function generateWebpageLayout(slug: string, id:string, seoData: SEOData, type: PageType): string {
   const title = escapeString(seoData.seo_title || seoData.title || '');
   const description = escapeString(seoData.description || seoData.small_description || '');
   const keywords = escapeString(seoData.keywords || '');
@@ -91,94 +88,61 @@ function generateWebpageLayout(slug: string, seoData: SEOData, type: PageType): 
 import FinbyzGallery from "@/components/sections/FinbyzGallery";
 import FAQ from "@/components/ai_components/FAQ";
 import { getFaqs, getPageData } from "@/lib/getPageData";
+import { fetchFrappeSchemaData } from "@/lib/fetchFrappeSeoData";
+
 import { Metadata } from "next";
 import Script from "next/script";
 
 
-export const metadata: Metadata = {
-  title: "${title}",
-  description: "${description}",
-  keywords: "${keywords}",
-  authors: [{ name: "FinByz Tech" }],
-  creator: "FinByz Tech",
-  publisher: "FinByz Tech",
-  alternates: {
-    canonical: "${canonicalUrl}",
-  },
-  openGraph: {
-    title: "${title}",
-    description: "${description}",
-    url: "${canonicalUrl}",
-    siteName: "FinByz Tech",
-    type: "website",
-    locale: "en_US",
-    ${image ? `images: [{ url: "${image}", width: 1200, height: 630, alt: "${title}" }],` : ''}
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "${title}",
-    description: "${description}",
-    creator: "@finbyztech",
-    ${image ? `images: ["${image}"],` : ''}
-  },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: false,
-    googleBot: {
+export async function generateMetadata(): Promise<Metadata> {
+  const pageData = await fetchFrappeSchemaData({
+    name: "${id}",
+    type: "webpage"
+  })
+
+  return {
+    title: pageData?.data?.title,
+    description: pageData?.data?.description,
+    keywords: pageData?.data?.keywords,
+    authors: [{ name: "FinByz Tech Pvt Ltd" }],
+    creator: "FinByz Tech Pvt Ltd",
+    publisher: "FinByz Tech Pvt Ltd",
+    alternates: {
+      canonical: ${process.env.SITE_URL}/" + pageData?.data?.route || "",
+    },
+    openGraph: {
+      title: pageData?.data?.seo_title,
+      description: pageData?.data?.meta_description,
+      url: ${process.env.SITE_URL}/" + pageData?.data?.route || "",
+      siteName: "Finbyz Tech",
+      type: "website",
+      locale: "en_US",
+      images: [{ url: "${process.env.FRAPPE_URL}/${image}", width: 1200, height: 630, alt: pageData?.data?.seo_title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: pageData?.data?.seo_title,
+      description: pageData?.data?.small_description,
+      creator: "@finbyz",
+      images: ["${process.env.FRAPPE_URL}/" + pageData?.data?.title || ""],
+    },
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+      nocache: false,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    }
+  }
+}
+
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const structuredData = {
-    "@context": "http://www.schema.org",
-    "@type": "ProfessionalService",
-    "name": "${title}",
-    "url": "${canonicalUrl}",
-    "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-    "image": "${image}",
-    "description": "${description}",
-    "priceRange": "INR",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
-      "addressLocality": "Ahmedabad",
-      "addressRegion": "Gujarat",
-      "addressCountry": "IN",
-      "postalCode": "380009"
-    },
-    "telephone": "+919925701446",
-    "openingHours": "Mo, Tu, We, Th, Fr, Sa 10.00:00-19:00",
-    "contactPoint": [
-      {
-        "@type": "ContactPoint",
-        "telephone": "+91 7948912428",
-        "contactType": "customer support",
-        "areaServed": [
-          "IN"
-        ],
-        "availableLanguage": [
-          "Hindi",
-          "Gujarati",
-          "English"
-        ]
-      }
-    ],
-    "sameAs": [
-      "https://www.facebook.com/FinByz",
-      "https://twitter.com/FinByz",
-      "https://www.linkedin.com/company/finbyz",
-      "https://www.youtube.com/c/Finbyz",
-      "https://www.instagram.com/finbyz/"
-    ]
-  };
-
   const data = await getPageData("${doctype}", "${slug}");
   const faqsGroup = await getFaqs("${doctype}", "${slug}");
 
@@ -190,16 +154,12 @@ export default async function Layout({ children }: { children: React.ReactNode }
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       
-      <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="${title}" />
-        <meta itemProp="description" content="${description}" />
-      </article>
-      
       {children}
       {faqsGroup?.faqs.length && <FAQ faqs={faqsGroup.faqs} />}
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }
+      <StructureData name="${id}" type="webpage" />  
       <BusinessSlider />
     </>
   );
@@ -207,7 +167,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
 `;
 }
 
-function generateBlogLayout(slug: string, seoData: SEOData): string {
+function generateBlogLayout(slug: string,id:string, seoData: SEOData): string {
   const title = escapeString(seoData.seo_title || seoData.title || '');
   const description = escapeString(seoData.description || seoData.small_description || '');
   const keywords = escapeString(seoData.keywords || '');
@@ -324,15 +284,15 @@ const docTypes = {
 type PageType = 'webpage' | 'blog' | 'code-snippet'
 
 
-function writeLayout(slug: string, type: PageType, seoData: SEOData): void {
+function writeLayout(slug: string, id:string , type: PageType, seoData: SEOData): void {
   const baseDir = pageGroups[type];
   const pageDir = path.join(process.cwd(), 'src', 'app', baseDir, slug);
   
   ensureDirectory(pageDir);
   
   const layoutCode = type === 'blog' 
-    ? generateBlogLayout(slug, seoData)
-    : generateWebpageLayout(slug, seoData, type);
+    ? generateBlogLayout(slug, id, seoData)
+    : generateWebpageLayout(slug, id, seoData, type);
   
   const layoutPath = path.join(pageDir, 'layout.tsx');
   fs.writeFileSync(layoutPath, layoutCode, 'utf-8');
@@ -369,7 +329,7 @@ export async function POST(request: NextRequest) {
     const body: GeneratePageRequest = await request.json();
     
     // Validate request
-    if (!body.slug || !body.pageCode || !body.type) {
+    if (!body.slug || !body.name || !body.pageCode || !body.type) {
       return NextResponse.json(
         {
           success: false,
@@ -447,10 +407,10 @@ export async function POST(request: NextRequest) {
     }
     
     // Write page
-    writePage(slug, decodedPageCode, body.type);
+    writePage(slug, decodedPageCode, body.type,);
     
     // Write layout
-    writeLayout(slug, body.type, body.seoData || {});
+    writeLayout(slug,body.name, body.type, body.seoData || {});
     
     // Update completed pages registry
     
