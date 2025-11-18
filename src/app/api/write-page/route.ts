@@ -196,7 +196,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
       </article>
       
       {children}
-      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
+      {faqsGroup?.faqs.length && <FAQ faqs={faqsGroup.faqs} />}
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }
