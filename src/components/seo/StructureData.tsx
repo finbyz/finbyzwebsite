@@ -50,8 +50,8 @@ export default async function StructureData({
 
 
   const { data }: { data: FrappePageData } = await fetchFrappeSchemaData({
-    type: "webpage",
-    name: "productify"
+    type: type,
+    name: name
   })
   // Helpers
   const fullUrl = `${BASE_URL}/${data.route}`;
@@ -82,7 +82,7 @@ export default async function StructureData({
       ...baseSchema,
       "@type": "ImageGallery",
       headline: data.gallery_title || data.title,
-      datePublished: data.published_on,
+      datePublished: `${data.published_on}T08:00:00+08:00`,
       keywords: data.keywords,
       publisher: {
         "@type": "Organization",
@@ -117,9 +117,10 @@ export default async function StructureData({
       headline: data.seo_title || data.title,
       author: {
         "@type": "Person",
-        name: data.author || "FinByz Team"
+        name: data.author || "FinByz Team",
+        url: `${process.env.SITE_URL}/blog?blogger=${data.author || "Finbyz Team"}`
       },
-      datePublished: data.published_on,
+      datePublished: `${data.published_on}T08:00:00+08:00`,
       publisher: {
         "@type": "Organization",
         name: "FinByz Tech",
