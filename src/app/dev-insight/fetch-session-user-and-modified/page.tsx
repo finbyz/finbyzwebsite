@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import CodeSnippetHero from "@/components/code-snippets/code-snippet-hero";
 import CodeBlock from "@/components/code-snippets/code-block";
@@ -8,10 +6,10 @@ import KeyConcepts from "@/components/code-snippets/key-concepts";
 import StepByStepTutorial from "@/components/code-snippets/step-by-step-tutorial";
 import Troubleshooting from "@/components/code-snippets/troubleshooting";
 
-export default function FetchSessionUserAndModified() {
+export default function Page() {
   const snippetName = "Fetch Session User and Modified";
-  const language = "jinja";
-  const category = "Data Fetching";
+  const language = "Jinja";
+  const category = "Frappe Templating & Server-side Data Fetching";
 
   const codeSnippet = `//Session User
 {{ frappe.user }}
@@ -27,66 +25,68 @@ export default function FetchSessionUserAndModified() {
 {{ frappe.db.get_value("Employee", { "user_id": doc.modified_by }, "designation") }}`;
 
   return (
-    <>
+    <main>
       <CodeSnippetHero
-        title="How to fetch session user information and related user data in Jinja using Frappe?"
-        description="This snippet demonstrates how to retrieve session user details, the last user who modified a document, user roles, and employee details directly within Jinja templates using Frappe's database API. Useful for dynamic template rendering based on user context."
+        title="How to fetch session user and related user details in Frappe using Jinja?"
+        description="This snippet demonstrates how to retrieve the current session user, the last modifying user of a document, their roles, and other related employee information using Frappe's server-side Jinja templating and database queries."
         snippetName={snippetName}
         language={language}
         category={category}
-        accentColor="blue"
+        accentColor="orange"
       />
 
-      <section className="container-custom mt-8">
-        <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
-        <p className="mb-6 text-gray-700">
-          This code snippet leverages the Frappe framework’s Jinja templating to fetch various user-related information at runtime within templates. It covers how to access the session
-          user, fetch the full name of the last person who modified a document, retrieve the user’s role or designation from the Employee doctype, and get specific user and
-          employee details. These techniques are essential when building dynamic content that adapts based on the current user’s identity and roles, enhancing personalization and
-          data-driven UI behavior within Frappe-based applications.
+      <section className="container-custom my-2">
+        <h2>Introduction</h2>
+        <p>
+          <strong>Problem:</strong> In Frappe web templates or server-rendered pages, you often need to display user-related
+          information dynamically, such as the currently logged-in user's name, who last modified a document, or details about
+          specific users or employees.
+          <br />
+          <strong>Solution:</strong> This snippet uses Frappe's convenient Jinja variables and
+          <code>frappe.db.get_value</code> server-side database queries to fetch and display user information like session user
+          ID, full names, employee designations, and more within a template.
+          <br />
+          It leverages the <code>doc</code> object for context when available, and <code>frappe.session.user</code> for session info.
+          <br />
+          Note: No explicit description was provided for this snippet.
         </p>
       </section>
 
-      <CodeBlock
-        code={codeSnippet}
-        language={language}
-        showLineNumbers
-        allowCopy
-        referenceLink=""
-        referenceLinkText=""
-      />
+      <CodeBlock code={codeSnippet} language={language} showLineNumbers allowCopy />
 
       <CodeOverview
-        whatItDoes="Fetches session user details, last modified user name, user roles, and employee information dynamically inside Jinja templates using Frappe's API calls."
-        whenToUse="Use this snippet when you need to display or utilize user and modification metadata directly within your web templates or reports built on Frappe."
+        whatItDoes={`This snippet shows how to fetch various user and employee details in Frappe web templates using Jinja syntax and built-in helpers.
+It accesses the current session user, retrieves the full name of the last modifier of a document, fetches roles/designations from linked Employee DocTypes, and extracts employee names from the logged-in user.`}
+        whenToUse={`Use this approach when you want to display dynamic user-related metadata on server-rendered Frappe pages or templates,
+such as audit info, personalized greetings, or hierarchical employee details without additional client-side scripting.`}
         prerequisites={[
-          "Basic knowledge of Jinja templating",
-          "Understanding of Frappe framework's user and Employee doctypes",
-          "Access to frappe.db.get_value and frappe.session methods"
+          "Basic understanding of Frappe templating with Jinja.",
+          "A 'doc' context object is available if fetching document-specific data.",
+          "Familiarity with linked DocTypes like Employee and User in Frappe."
         ]}
       />
 
       <KeyConcepts
         concepts={[
           {
-            title: "frappe.user",
-            description: "Provides the current logged-in session user ID in the template.",
-            relatedLink: "https://frappeframework.com/docs/user/en/api/jinja#frappe-user"
+            title: "frappe.user & frappe.session.user",
+            description: "Global Jinja variables that hold information about the currently logged-in session user.",
+            relatedLink: "https://frappeframework.com/docs/user/en/api/jinja"
           },
           {
-            title: "frappe.get_fullname",
-            description: "Retrieves the full name of a user by their user ID.",
-            relatedLink: "https://frappeframework.com/docs/user/en/api/jinja#frappe-get-fullname"
+            title: "frappe.get_fullname(user)",
+            description: "Fetches the full name of a Frappe user given the username or ID.",
+            relatedLink: "https://frappeframework.com/docs/user/en/api/utils#frappe.get_fullname"
           },
           {
             title: "frappe.db.get_value",
-            description: "Fetches field values from a specific doctype optionally filtered by conditions.",
-            relatedLink: "https://frappeframework.com/docs/user/en/api/database#frappe-db-get-value"
+            description: "A server-side method to retrieve a field value from any DocType record with optional filters.",
+            relatedLink: "https://frappeframework.com/docs/user/en/api/database#frappe.db.get_value"
           },
           {
-            title: "doc.modified_by",
-            description: "A standard field representing the last user who modified the document.",
-            relatedLink: "https://frappeframework.com/docs/user/en/model/standard-fields"
+            title: "Employee and User DocTypes",
+            description: "Core Frappe DocTypes representing employees and users, often linked for role and designation purposes.",
+            relatedLink: "https://frappeframework.com/docs/user/en/api/models"
           }
         ]}
       />
@@ -95,37 +95,44 @@ export default function FetchSessionUserAndModified() {
         steps={[
           {
             stepNumber: 1,
-            title: "Get Current Session User",
-            explanation: "Use {{ frappe.user }} in your Jinja template to access the currently logged-in user's ID.",
+            title: "Retrieve Current Session User",
+            explanation: "Use the built-in `frappe.user` Jinja variable to get the current logged-in user's ID or name.",
             code: "{{ frappe.user }}",
             language: "jinja"
           },
           {
             stepNumber: 2,
-            title: "Retrieve Last Modified User's Full Name",
-            explanation: "Use frappe.get_fullname(doc.modified_by) to obtain the full name of the user who last modified the document.",
+            title: "Get Full Name of Last Modified User",
+            explanation: "Use `frappe.get_fullname` passing `doc.modified_by` to fetch the full name of the user who last modified the document.",
             code: "{{ frappe.get_fullname(doc.modified_by) or \"\" }}",
             language: "jinja"
           },
           {
             stepNumber: 3,
-            title: "Fetch User Role or Designation",
-            explanation: "Query the Employee doctype for the user's designation based on their user ID.",
+            title: "Fetch Designation of User who Modified the Document",
+            explanation: "Query the Employee DocType to get the designation associated with the user ID in `doc.modified_by` using `frappe.db.get_value`.",
             code: "{{ frappe.db.get_value(\"Employee\", { \"user_id\": doc.modified_by }, \"designation\") or \"\" }}",
             language: "jinja"
           },
           {
             stepNumber: 4,
-            title: "Get Full Name for Manager",
-            explanation: "Fetches the full name of a User given the user's name variable 'manager'.",
+            title: "Fetch Full Name of a User Specified by Manager Variable",
+            explanation: "Retrieve the full_name field of a User record where the name matches the variable 'manager'. Useful for dynamic user lookups.",
             code: "{{ frappe.db.get_value(\"User\", {\"name\": manager}, \"full_name\") }}",
             language: "jinja"
           },
           {
             stepNumber: 5,
-            title: "Fetch Employee Name for Session User",
-            explanation: "Retrieve the employee_name from the Employee doctype using the current session user ID.",
+            title: "Get Employee Name of the Current Session User",
+            explanation: "Query the Employee DocType to fetch the employee_name linked to the current logged-in user identified by `frappe.session.user`.",
             code: "{{ frappe.db.get_value(\"Employee\", {\"user_id\": frappe.session.user}, \"employee_name\") }}",
+            language: "jinja"
+          },
+          {
+            stepNumber: 6,
+            title: "Redundant Fetch of Designation",
+            explanation: "Repeated retrieval of the designation field of the Employee linked to `doc.modified_by`. Could be optimized by caching.",
+            code: "{{ frappe.db.get_value(\"Employee\", { \"user_id\": doc.modified_by }, \"designation\") }}",
             language: "jinja"
           }
         ]}
@@ -134,19 +141,19 @@ export default function FetchSessionUserAndModified() {
       <Troubleshooting
         items={[
           {
-            problem: "frappe.get_fullname(doc.modified_by) returns empty or null",
-            solution: "Ensure 'doc.modified_by' is set and the user exists. Also, verify permissions to access user data in your context."
+            problem: "`doc` is undefined or not passed to the template.",
+            solution: "Ensure that the template context includes a valid `doc` object representing the current document when rendering to access `doc.modified_by` properly."
           },
           {
-            problem: "frappe.db.get_value returns unexpected null values",
-            solution: "Check that the conditions and field names are correct and that the referenced records exist in the database. Double-check spelling and data integrity."
+            problem: "`manager` variable is undefined.",
+            solution: "Pass the `manager` variable in the template context or set it before using it in the Jinja expression."
           },
           {
-            problem: "Session user info not accessible",
-            solution: "Confirm that a user session exists and that the template has permission to access 'frappe.user' and 'frappe.session.user' properties."
+            problem: "Returned values are empty strings or null.",
+            solution: "Check that the queried DocTypes (User, Employee) and fields exist and contain data; use fallback or error handling as needed."
           }
         ]}
       />
-    </>
+    </main>
   );
 }

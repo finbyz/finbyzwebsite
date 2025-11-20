@@ -8,12 +8,11 @@ import KeyConcepts from "@/components/code-snippets/key-concepts";
 import StepByStepTutorial from "@/components/code-snippets/step-by-step-tutorial";
 import Troubleshooting from "@/components/code-snippets/troubleshooting";
 
-export default function FetchTableAllRowsPage() {
-  const snippetName = "Fetch Table All Rows";
-  const language = "Javascript";
-  const category = "Form Scripting";
+const snippetName = "Fetch Table All Rows";
+const language = "javascript";
+const category = "Frappe Client Script";
 
-  const codeSnippet = `//Fetch Table on link field Event
+const codeSnippet = `//Fetch Table on link field Event
 frappe.ui.form.on("DocTypeB", "Trigger", function(frm) {
 	frappe.model.with_doc("DocTypeA", frm.doc.trigger, function() {
 		var qmtable= frappe.model.get_doc("DocTypeA", frm.doc.Trigger)
@@ -41,7 +40,6 @@ frappe.ui.form.on("Maintenance Visit", "serial_no", function(frm) {
 		})
 	});
 });
-
 //Example 2: When serial no is part of other table called Maintenance Visit Purpose.
 frappe.ui.form.on("Maintenance Visit Purpose", "serial_no_link", function(frm,cdt,cdn) {
 	var m = locals[cdt][cdn];
@@ -93,7 +91,7 @@ frappe.ui.form.on("Sales Invoice", "get_transport_details", function(frm) {
 					d.driver = row.driver;
 					d.contact_no = row.contact_no;
 					d.container_no = row.container_no;
-					d.truck_qty = row.truck_qty;				
+					d.truck_qty = row.truck_qty;			
 				cur_frm.refresh_field("transport");
 				})
 			});
@@ -125,72 +123,66 @@ function get_qty(frm) {
 }
 `;
 
+export default function Page() {
   return (
     <main>
       <CodeSnippetHero
-        title="How to fetch and copy all rows from a linked child table in a Frappe form?"
-        description="This snippet demonstrates fetching all rows from a linked child table on link field events or button clicks, enabling developers to dynamically populate tables based on linked documents in Frappe ERPNext."
+        title="How to fetch all rows from a child table using a link field in Frappe client script?"
+        description="This snippet demonstrates fetching linked DocType child table rows and dynamically adding them to another child table in the current form, useful for Frappe form customizations."
         snippetName={snippetName}
         language={language}
         category={category}
         accentColor="blue"
       />
 
-      <section className="container-custom py-8 px-4">
-        <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
-        <p className="text-base leading-relaxed">
-          This code snippet addresses common needs in Frappe (and ERPNext) forms when you want to fetch all rows
-          of a child table from a related document and copy them into another child table on the current form.
-          This is useful for scenarios such as replicating parts or items from linked documents without manual
-          re-entry.
-          The snippet showcases practical uses of the <code className="font-mono">frappe.model.with_doc</code>,
-          <code className="font-mono">frappe.model.get_doc</code>, and client-side form event handlers.
-          Multiple examples highlight different trigger events including link field change, button clicks,
-          and even serial execution of asynchronous operations to preserve order.
-          Overall, it enables developers to smoothly automate data propagation within Frappe forms,
-          improving user efficiency and accuracy.
+      <section className="container-custom">
+        <h2>Introduction</h2>
+        <p>
+          This code snippet illustrates how to dynamically fetch rows from a linked DocType child table field within a Frappe form client script and populate them into another child table. Using Frappe's 
+          <code>frappe.model.with_doc</code> and <code>frappe.model.get_doc</code> APIs, it loads the data asynchronously, loops through child table entries of the linked document, and adds new rows to the current form’s child table. 
+          This pattern is particularly useful when you want to automatically sync or copy related child table data based on a link field selection, reducing manual data entry and improving user experience in customized ERPNext/Frappe apps.
         </p>
       </section>
 
       <CodeBlock
         code={codeSnippet}
-        language="javascript"
+        language={language}
         showLineNumbers={true}
         allowCopy={true}
       />
 
       <CodeOverview
-        whatItDoes="Fetches all rows from a child table of a linked document and programmatically copies those rows into another child table on the current form using Frappe client scripting."
-        whenToUse="Use this snippet when you need to automate copying child table data from a linked document after a field value is set or on manual triggers like button clicks to avoid manual re-entry and maintain data consistency."
-        prerequisites={["Frappe/ERPNext environment","Knowledge of client scripting using JavaScript","Familiarity with Frappe models and child tables"]}
+        whatItDoes="Fetches all rows of a child table from a linked DocType by using the link field's value, then adds corresponding rows to the current form's child table dynamically."
+        whenToUse="Use this snippet when you need to auto-populate child table data from a linked document's child table, such as copying machine parts, order items, transport details, etc., triggered by user interaction like field change or button click."
+        prerequisites={[
+          "Frappe Framework client scripting basics",
+          "Familiarity with DocType and child tables",
+          "Understanding of link fields in forms",
+          "Basic JavaScript and jQuery knowledge"
+        ]}
       />
 
       <KeyConcepts
         concepts={[
           {
             title: "frappe.model.with_doc",
-            description: "Loads a linked document asynchronously to ensure data availability before further processing.",
-            relatedLink: "https://frappeframework.com/docs/user/en/api/model#frappe.model.with_doc"
+            description: "Asynchronously loads a linked document by DocType and name (primary key) for safe, reactive client-side access.",
+            relatedLink: "https://frappeframework.com/docs/v14/user/en/api/client-scripting#frappe-model"
           },
           {
-            title: "frappe.model.get_doc",
-            description: "Retrieves the loaded document data (including child tables) for client-side manipulation.",
-            relatedLink: "https://frappeframework.com/docs/user/en/api/model#frappe.model.get_doc"
+            title: "Child Tables in Frappe",
+            description: "Child tables are list-type fields in DocTypes representing one-to-many relations; this snippet populates such tables dynamically from linked documents.",
+            relatedLink: "https://frappeframework.com/docs/v14/user/en/models/child-tables"
           },
           {
-            title: "frm.add_child",
-            description: "Adds a new child table row on the current form dynamically.",
-            relatedLink: "https://frappeframework.com/docs/user/en/api/form#frm.add_child"
+            title: "Link Field",
+            description: "A field type that links one document to another DocType, used here to fetch data from related records.",
+            relatedLink: "https://frappeframework.com/docs/v14/user/en/api/link-field"
           },
           {
-            title: "cur_frm.refresh_field",
-            description: "Refreshes the UI for changes made programmatically to child tables or fields.",
-            relatedLink: "https://frappeframework.com/docs/user/en/api/form#cur_frm.refresh_field"
-          },
-          {
-            title: "frappe.run_serially",
-            description: "Executes functions serially in sequence, useful for chaining asynchronous operations.",
-            relatedLink: "https://frappeframework.com/docs/user/en/api/runner#frappe.run_serially"
+            title: "Client Script Events",
+            description: "The code hooks into link field events to trigger custom logic, enabling interactive form behavior.",
+            relatedLink: "https://frappeframework.com/docs/v14/user/en/api/client-scripting#events"
           }
         ]}
       />
@@ -199,37 +191,46 @@ function get_qty(frm) {
         steps={[
           {
             stepNumber: 1,
-            title: "Triggering the fetch",
-            explanation: "Use a form event such as a link field’s change event or a button click to trigger fetching the linked document.",
-            code: `frappe.ui.form.on(\"DocTypeB\", \"Trigger\", function(frm) { /* fetch doc inside */ })`,
+            title: "Listen to Link Field Event",
+            explanation: "Set up a Frappe client script event handler on the link field (e.g., \"Trigger\") to detect when the field value changes.",
+            code: `frappe.ui.form.on("DocTypeB", "Trigger", function(frm) {
+  // logic here
+});`,
             language: "javascript"
           },
           {
             stepNumber: 2,
-            title: "Loading the linked document",
-            explanation: "Call frappe.model.with_doc to fetch the linked document asynchronously before accessing its data.",
-            code: `frappe.model.with_doc(\"DocTypeA\", frm.doc.trigger, function() { /* logic here */ })`,
+            title: "Load the Linked Document",
+            explanation: "Use frappe.model.with_doc to asynchronously load the linked document based on the link field value (e.g., \"DocTypeA\" with the triggered name), ensuring data is available before accessing.",
+            code: `frappe.model.with_doc("DocTypeA", frm.doc.trigger, function() {
+  // next steps
+});`,
             language: "javascript"
           },
           {
             stepNumber: 3,
-            title: "Retrieving child table rows",
-            explanation: "Use frappe.model.get_doc to get the loaded document and iterate over its child table rows.",
-            code: `var qmtable= frappe.model.get_doc(\"DocTypeA\", frm.doc.Trigger); $.each(qmtable.ChildTableA, function(index, row){ /* copy rows */ })`,
+            title: "Access and Iterate over Child Table Rows",
+            explanation: "Retrieve the loaded document with frappe.model.get_doc and loop through its child table entries using $.each to access each row's fields.",
+            code: `var qmtable = frappe.model.get_doc("DocTypeA", frm.doc.Trigger);
+$.each(qmtable.ChildTableA, function(index, row){
+  // process row
+});`,
             language: "javascript"
           },
           {
             stepNumber: 4,
-            title: "Adding rows to target child table",
-            explanation: "Use frm.add_child to append a new row for each source child table row and copy relevant fields.",
-            code: `d = frm.add_child(\"ChildTableB\"); d.field1 = row.fielda; d.field2 = row.fieldb;`,
+            title: "Add New Rows to Current Child Table",
+            explanation: "For each row in the linked child table, add a new child row into the current form's child table with frm.add_child and copy field values accordingly.",
+            code: `var d = frm.add_child("ChildTableB");
+d.field1 = row.fielda;
+d.field2 = row.fieldb;`,
             language: "javascript"
           },
           {
             stepNumber: 5,
-            title: "Refreshing the form",
-            explanation: "Call cur_frm.refresh_field with the target child table name to update the UI and show the new rows.",
-            code: `cur_frm.refresh_field(\"ChildTableB\");`,
+            title: "Refresh the Form Field",
+            explanation: "After adding child rows, refresh the field using cur_frm.refresh_field to update the UI and show the newly added rows.",
+            code: `cur_frm.refresh_field("ChildTableB");`,
             language: "javascript"
           }
         ]}
@@ -238,20 +239,20 @@ function get_qty(frm) {
       <Troubleshooting
         items={[
           {
-            problem: "Linked document does not load and child rows are empty.",
-            solution: "Ensure the linked document name in frm.doc.trigger is valid and frappe.model.with_doc is used correctly before accessing data."
+            problem: "Child table rows not appearing after script runs.",
+            solution: "Ensure you call cur_frm.refresh_field on the child table field after adding rows to force UI update."
           },
           {
-            problem: "New rows not appearing in child table UI.",
-            solution: "Use cur_frm.refresh_field with the exact child table fieldname after adding rows."
+            problem: "Linked document data not loading or undefined.",
+            solution: "Verify the link field value is correct and exists. Use frappe.model.with_doc to load asynchronously and access data only within its callback."
           },
           {
-            problem: "Fields in new child rows stay empty.",
-            solution: "Confirm the correct fieldnames are assigned and the source child table rows contain values."
+            problem: "Script runs but no data copied to child table.",
+            solution: "Check field names carefully for case sensitivity and correct spelling between source and target fields. Debug inside the $.each loop with console logs."
           },
           {
-            problem: "Operations occur out of order with async data fetching.",
-            solution: "Use frappe.run_serially for sequential async calls to maintain order."
+            problem: "Performance issues when loading large child tables.",
+            solution: "Consider optimizing by limiting number of rows fetched or using server scripts to pre-process data if feasible."
           }
         ]}
       />

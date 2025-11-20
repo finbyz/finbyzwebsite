@@ -7,9 +7,9 @@ import Script from "next/script";
 
 
 export const metadata: Metadata = {
-  title: "Fetch Session User and Metadata in Jinja with Frappe",
-  description: "Learn how to fetch session user information, last modified user, and related user data using Jinja in Frappe framework for effective data retrieval.",
-  keywords: "Frappe, Jinja, fetch user data, session user, last modified by, user roles, Frappe DB queries, Employee designation, User fullname, Jinja templating",
+  title: "How to Fetch Session User Data and Related Information in Frappe?",
+  description: "Learn how to use Frappe Jinja templating to fetch session user details, last modified user, user roles, and related employee information dynamically within your Frappe apps or web templates.",
+  keywords: "Frappe, Jinja, session user, frappe.db.get_value, Frappe templating, DocType, user roles, employee, modified by, frappe.session.user, frappe.user, Frappe Framework",
   authors: [{ name: "FinByz Tech" }],
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     canonical: "https://erp.finbyz.tech/fetch-session-user-and-modified",
   },
   openGraph: {
-    title: "Fetch Session User and Metadata in Jinja with Frappe",
-    description: "Learn how to fetch session user information, last modified user, and related user data using Jinja in Frappe framework for effective data retrieval.",
+    title: "How to Fetch Session User Data and Related Information in Frappe?",
+    description: "Learn how to use Frappe Jinja templating to fetch session user details, last modified user, user roles, and related employee information dynamically within your Frappe apps or web templates.",
     url: "https://erp.finbyz.tech/fetch-session-user-and-modified",
     siteName: "FinByz Tech",
     type: "website",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fetch Session User and Metadata in Jinja with Frappe",
-    description: "Learn how to fetch session user information, last modified user, and related user data using Jinja in Frappe framework for effective data retrieval.",
+    title: "How to Fetch Session User Data and Related Information in Frappe?",
+    description: "Learn how to use Frappe Jinja templating to fetch session user details, last modified user, user roles, and related employee information dynamically within your Frappe apps or web templates.",
     creator: "@finbyztech",
     
   },
@@ -50,11 +50,11 @@ export default async function Layout({ children }: { children: React.ReactNode }
   const structuredData = {
     "@context": "http://www.schema.org",
     "@type": "ProfessionalService",
-    "name": "Fetch Session User and Metadata in Jinja with Frappe",
+    "name": "How to Fetch Session User Data and Related Information in Frappe?",
     "url": "https://erp.finbyz.tech/fetch-session-user-and-modified",
     "logo": "https://finbyz.tech/files/FinbyzLogo.png",
     "image": "",
-    "description": "Learn how to fetch session user information, last modified user, and related user data using Jinja in Frappe framework for effective data retrieval.",
+    "description": "Learn how to use Frappe Jinja templating to fetch session user details, last modified user, user roles, and related employee information dynamically within your Frappe apps or web templates.",
     "priceRange": "INR",
     "address": {
       "@type": "PostalAddress",
@@ -102,12 +102,12 @@ export default async function Layout({ children }: { children: React.ReactNode }
       />
       
       <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Fetch Session User and Metadata in Jinja with Frappe" />
-        <meta itemProp="description" content="Learn how to fetch session user information, last modified user, and related user data using Jinja in Frappe framework for effective data retrieval." />
+        <meta itemProp="name" content="How to Fetch Session User Data and Related Information in Frappe?" />
+        <meta itemProp="description" content="Learn how to use Frappe Jinja templating to fetch session user details, last modified user, user roles, and related employee information dynamically within your Frappe apps or web templates." />
       </article>
       
       {children}
-      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
+      {faqsGroup?.faqs.length && <FAQ faqs={faqsGroup.faqs} />}
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }

@@ -7,9 +7,9 @@ import Script from "next/script";
 
 
 export const metadata: Metadata = {
-  title: "Status Colour Coding in Frappe ListView - JavaScript Snippet",
-  description: "Learn how to implement status colour coding in Frappe ListView using JavaScript. This snippet demonstrates how to visually distinguish statuses in document lists to improve UX and efficiency.",
-  keywords: "frappe, listview, status color coding, javascript snippet, ui color indicators, frappe listview settings, frontend development, enterprise software, erpnext, javascript",
+  title: "How to Use Status Colour Coding in Frappe ListView for Better Visual Indicators?",
+  description: "Learn how to implement status-based colour coding in Frappe ListView to visually distinguish document statuses using custom color indicators in client-side scripts.",
+  keywords: "Frappe, DocType, ListView, status color coding, client script, frappe.listview_settings, get_indicator, frontend customization, ERPNext, select field, JavaScript, Frappe Framework",
   authors: [{ name: "FinByz Tech" }],
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     canonical: "https://erp.finbyz.tech/status-colour-coding",
   },
   openGraph: {
-    title: "Status Colour Coding in Frappe ListView - JavaScript Snippet",
-    description: "Learn how to implement status colour coding in Frappe ListView using JavaScript. This snippet demonstrates how to visually distinguish statuses in document lists to improve UX and efficiency.",
+    title: "How to Use Status Colour Coding in Frappe ListView for Better Visual Indicators?",
+    description: "Learn how to implement status-based colour coding in Frappe ListView to visually distinguish document statuses using custom color indicators in client-side scripts.",
     url: "https://erp.finbyz.tech/status-colour-coding",
     siteName: "FinByz Tech",
     type: "website",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Status Colour Coding in Frappe ListView - JavaScript Snippet",
-    description: "Learn how to implement status colour coding in Frappe ListView using JavaScript. This snippet demonstrates how to visually distinguish statuses in document lists to improve UX and efficiency.",
+    title: "How to Use Status Colour Coding in Frappe ListView for Better Visual Indicators?",
+    description: "Learn how to implement status-based colour coding in Frappe ListView to visually distinguish document statuses using custom color indicators in client-side scripts.",
     creator: "@finbyztech",
     
   },
@@ -50,11 +50,11 @@ export default async function Layout({ children }: { children: React.ReactNode }
   const structuredData = {
     "@context": "http://www.schema.org",
     "@type": "ProfessionalService",
-    "name": "Status Colour Coding in Frappe ListView - JavaScript Snippet",
+    "name": "How to Use Status Colour Coding in Frappe ListView for Better Visual Indicators?",
     "url": "https://erp.finbyz.tech/status-colour-coding",
     "logo": "https://finbyz.tech/files/FinbyzLogo.png",
     "image": "",
-    "description": "Learn how to implement status colour coding in Frappe ListView using JavaScript. This snippet demonstrates how to visually distinguish statuses in document lists to improve UX and efficiency.",
+    "description": "Learn how to implement status-based colour coding in Frappe ListView to visually distinguish document statuses using custom color indicators in client-side scripts.",
     "priceRange": "INR",
     "address": {
       "@type": "PostalAddress",
@@ -102,12 +102,12 @@ export default async function Layout({ children }: { children: React.ReactNode }
       />
       
       <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Status Colour Coding in Frappe ListView - JavaScript Snippet" />
-        <meta itemProp="description" content="Learn how to implement status colour coding in Frappe ListView using JavaScript. This snippet demonstrates how to visually distinguish statuses in document lists to improve UX and efficiency." />
+        <meta itemProp="name" content="How to Use Status Colour Coding in Frappe ListView for Better Visual Indicators?" />
+        <meta itemProp="description" content="Learn how to implement status-based colour coding in Frappe ListView to visually distinguish document statuses using custom color indicators in client-side scripts." />
       </article>
       
       {children}
-      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
+      {faqsGroup?.faqs.length && <FAQ faqs={faqsGroup.faqs} />}
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }

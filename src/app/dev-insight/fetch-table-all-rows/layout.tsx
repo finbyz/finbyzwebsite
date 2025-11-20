@@ -7,9 +7,9 @@ import Script from "next/script";
 
 
 export const metadata: Metadata = {
-  title: "Fetch Table All Rows in Frappe via JavaScript Link Field Events - Code Snippet",
-  description: "Learn how to fetch and manipulate all rows from a linked child table in Frappe using JavaScript event handlers. This snippet demonstrates multiple practical examples to efficiently copy and populate child tables in forms.",
-  keywords: "Frappe, JavaScript, fetch table rows, link field, child table, ERPNext, form scripting, frappe.ui.form.on, with_doc, dynamic table population",
+  title: "Frappe Client Script to Fetch All Rows from Child Tables via Link Field",
+  description: "Learn how to use Frappe client scripts to dynamically fetch all rows from child tables using link fields and update child table data in parent DocTypes.",
+  keywords: "Frappe, DocType, child table, link field, frappe.model.with_doc, frappe.ui.form.on, client script, fetch data, childtable, frappe model, frappe client customization",
   authors: [{ name: "FinByz Tech" }],
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     canonical: "https://erp.finbyz.tech/fetch-table-all-rows",
   },
   openGraph: {
-    title: "Fetch Table All Rows in Frappe via JavaScript Link Field Events - Code Snippet",
-    description: "Learn how to fetch and manipulate all rows from a linked child table in Frappe using JavaScript event handlers. This snippet demonstrates multiple practical examples to efficiently copy and populate child tables in forms.",
+    title: "Frappe Client Script to Fetch All Rows from Child Tables via Link Field",
+    description: "Learn how to use Frappe client scripts to dynamically fetch all rows from child tables using link fields and update child table data in parent DocTypes.",
     url: "https://erp.finbyz.tech/fetch-table-all-rows",
     siteName: "FinByz Tech",
     type: "website",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fetch Table All Rows in Frappe via JavaScript Link Field Events - Code Snippet",
-    description: "Learn how to fetch and manipulate all rows from a linked child table in Frappe using JavaScript event handlers. This snippet demonstrates multiple practical examples to efficiently copy and populate child tables in forms.",
+    title: "Frappe Client Script to Fetch All Rows from Child Tables via Link Field",
+    description: "Learn how to use Frappe client scripts to dynamically fetch all rows from child tables using link fields and update child table data in parent DocTypes.",
     creator: "@finbyztech",
     
   },
@@ -50,11 +50,11 @@ export default async function Layout({ children }: { children: React.ReactNode }
   const structuredData = {
     "@context": "http://www.schema.org",
     "@type": "ProfessionalService",
-    "name": "Fetch Table All Rows in Frappe via JavaScript Link Field Events - Code Snippet",
+    "name": "Frappe Client Script to Fetch All Rows from Child Tables via Link Field",
     "url": "https://erp.finbyz.tech/fetch-table-all-rows",
     "logo": "https://finbyz.tech/files/FinbyzLogo.png",
     "image": "",
-    "description": "Learn how to fetch and manipulate all rows from a linked child table in Frappe using JavaScript event handlers. This snippet demonstrates multiple practical examples to efficiently copy and populate child tables in forms.",
+    "description": "Learn how to use Frappe client scripts to dynamically fetch all rows from child tables using link fields and update child table data in parent DocTypes.",
     "priceRange": "INR",
     "address": {
       "@type": "PostalAddress",
@@ -102,8 +102,8 @@ export default async function Layout({ children }: { children: React.ReactNode }
       />
       
       <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Fetch Table All Rows in Frappe via JavaScript Link Field Events - Code Snippet" />
-        <meta itemProp="description" content="Learn how to fetch and manipulate all rows from a linked child table in Frappe using JavaScript event handlers. This snippet demonstrates multiple practical examples to efficiently copy and populate child tables in forms." />
+        <meta itemProp="name" content="Frappe Client Script to Fetch All Rows from Child Tables via Link Field" />
+        <meta itemProp="description" content="Learn how to use Frappe client scripts to dynamically fetch all rows from child tables using link fields and update child table data in parent DocTypes." />
       </article>
       
       {children}

@@ -7,9 +7,9 @@ import Script from "next/script";
 
 
 export const metadata: Metadata = {
-  title: "How to Filter Fields Dynamically in JavaScript Forms | Field Filteration Code Snippet",
-  description: "Learn how to dynamically filter form fields in JavaScript using custom get_query filters for various field types including table fields and child tables. This snippet demonstrates practical code examples for efficient field filtering in web applications.",
-  keywords: "JavaScript field filtering, dynamic form filters, get_query filter, ERP form filtering, child table filtering, JavaScript form customization, front-end filtering examples, filteration code snippet, filter table fields, ERPNext filtering",
+  title: "How to Filter Link and Child Table Fields Dynamically in Frappe Client Script?",
+  description: "Learn how to dynamically apply filters to Link fields and Child Table fields in Frappe client scripts using get_query. This guide includes filtering based on parent DocType fields and child table rows with code examples.",
+  keywords: "Frappe, DocType, get_query, child table, client script, link field, filters, frappe.db, locals, frappe form customization, frappe framework, javascript filtering",
   authors: [{ name: "FinByz Tech" }],
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     canonical: "https://erp.finbyz.tech/field-filteration",
   },
   openGraph: {
-    title: "How to Filter Fields Dynamically in JavaScript Forms | Field Filteration Code Snippet",
-    description: "Learn how to dynamically filter form fields in JavaScript using custom get_query filters for various field types including table fields and child tables. This snippet demonstrates practical code examples for efficient field filtering in web applications.",
+    title: "How to Filter Link and Child Table Fields Dynamically in Frappe Client Script?",
+    description: "Learn how to dynamically apply filters to Link fields and Child Table fields in Frappe client scripts using get_query. This guide includes filtering based on parent DocType fields and child table rows with code examples.",
     url: "https://erp.finbyz.tech/field-filteration",
     siteName: "FinByz Tech",
     type: "website",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "How to Filter Fields Dynamically in JavaScript Forms | Field Filteration Code Snippet",
-    description: "Learn how to dynamically filter form fields in JavaScript using custom get_query filters for various field types including table fields and child tables. This snippet demonstrates practical code examples for efficient field filtering in web applications.",
+    title: "How to Filter Link and Child Table Fields Dynamically in Frappe Client Script?",
+    description: "Learn how to dynamically apply filters to Link fields and Child Table fields in Frappe client scripts using get_query. This guide includes filtering based on parent DocType fields and child table rows with code examples.",
     creator: "@finbyztech",
     
   },
@@ -50,11 +50,11 @@ export default async function Layout({ children }: { children: React.ReactNode }
   const structuredData = {
     "@context": "http://www.schema.org",
     "@type": "ProfessionalService",
-    "name": "How to Filter Fields Dynamically in JavaScript Forms | Field Filteration Code Snippet",
+    "name": "How to Filter Link and Child Table Fields Dynamically in Frappe Client Script?",
     "url": "https://erp.finbyz.tech/field-filteration",
     "logo": "https://finbyz.tech/files/FinbyzLogo.png",
     "image": "",
-    "description": "Learn how to dynamically filter form fields in JavaScript using custom get_query filters for various field types including table fields and child tables. This snippet demonstrates practical code examples for efficient field filtering in web applications.",
+    "description": "Learn how to dynamically apply filters to Link fields and Child Table fields in Frappe client scripts using get_query. This guide includes filtering based on parent DocType fields and child table rows with code examples.",
     "priceRange": "INR",
     "address": {
       "@type": "PostalAddress",
@@ -102,12 +102,12 @@ export default async function Layout({ children }: { children: React.ReactNode }
       />
       
       <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="How to Filter Fields Dynamically in JavaScript Forms | Field Filteration Code Snippet" />
-        <meta itemProp="description" content="Learn how to dynamically filter form fields in JavaScript using custom get_query filters for various field types including table fields and child tables. This snippet demonstrates practical code examples for efficient field filtering in web applications." />
+        <meta itemProp="name" content="How to Filter Link and Child Table Fields Dynamically in Frappe Client Script?" />
+        <meta itemProp="description" content="Learn how to dynamically apply filters to Link fields and Child Table fields in Frappe client scripts using get_query. This guide includes filtering based on parent DocType fields and child table rows with code examples." />
       </article>
       
       {children}
-      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
+      {faqsGroup?.faqs.length && <FAQ faqs={faqsGroup.faqs} />}
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }

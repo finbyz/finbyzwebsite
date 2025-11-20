@@ -7,9 +7,9 @@ import Script from "next/script";
 
 
 export const metadata: Metadata = {
-  title: "Fetch User Name and Role in JavaScript with Frappe",
-  description: "Learn how to fetch the current session user name and role using Frappe JavaScript API with practical code examples and explanations.",
-  keywords: "fetch user name, fetch user role, frappe session user, frappe user role, javascript fetch user data, frappe db get_value, Frappe JavaScript API, Frappe employee fetch, web app user data",
+  title: "Fetch User Name and Role in Frappe Framework | Data Retrieval Example",
+  description: "Learn how to fetch user full name, roles, employee name, and designation in Frappe Framework using frappe.db.get_value and frappe.get_roles for session and specified users.",
+  keywords: "Frappe, frappe.db.get_value, frappe.get_roles, Frappe Framework, fetch user role, fetch user full name, fetch employee name, Frappe DocType, Frappe user session, Python Frappe, Frappe data retrieval, Frappe session user, fetch data in Frappe",
   authors: [{ name: "FinByz Tech" }],
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     canonical: "https://erp.finbyz.tech/fetch-user-name-and-role",
   },
   openGraph: {
-    title: "Fetch User Name and Role in JavaScript with Frappe",
-    description: "Learn how to fetch the current session user name and role using Frappe JavaScript API with practical code examples and explanations.",
+    title: "Fetch User Name and Role in Frappe Framework | Data Retrieval Example",
+    description: "Learn how to fetch user full name, roles, employee name, and designation in Frappe Framework using frappe.db.get_value and frappe.get_roles for session and specified users.",
     url: "https://erp.finbyz.tech/fetch-user-name-and-role",
     siteName: "FinByz Tech",
     type: "website",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fetch User Name and Role in JavaScript with Frappe",
-    description: "Learn how to fetch the current session user name and role using Frappe JavaScript API with practical code examples and explanations.",
+    title: "Fetch User Name and Role in Frappe Framework | Data Retrieval Example",
+    description: "Learn how to fetch user full name, roles, employee name, and designation in Frappe Framework using frappe.db.get_value and frappe.get_roles for session and specified users.",
     creator: "@finbyztech",
     
   },
@@ -50,11 +50,11 @@ export default async function Layout({ children }: { children: React.ReactNode }
   const structuredData = {
     "@context": "http://www.schema.org",
     "@type": "ProfessionalService",
-    "name": "Fetch User Name and Role in JavaScript with Frappe",
+    "name": "Fetch User Name and Role in Frappe Framework | Data Retrieval Example",
     "url": "https://erp.finbyz.tech/fetch-user-name-and-role",
     "logo": "https://finbyz.tech/files/FinbyzLogo.png",
     "image": "",
-    "description": "Learn how to fetch the current session user name and role using Frappe JavaScript API with practical code examples and explanations.",
+    "description": "Learn how to fetch user full name, roles, employee name, and designation in Frappe Framework using frappe.db.get_value and frappe.get_roles for session and specified users.",
     "priceRange": "INR",
     "address": {
       "@type": "PostalAddress",
@@ -102,12 +102,12 @@ export default async function Layout({ children }: { children: React.ReactNode }
       />
       
       <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Fetch User Name and Role in JavaScript with Frappe" />
-        <meta itemProp="description" content="Learn how to fetch the current session user name and role using Frappe JavaScript API with practical code examples and explanations." />
+        <meta itemProp="name" content="Fetch User Name and Role in Frappe Framework | Data Retrieval Example" />
+        <meta itemProp="description" content="Learn how to fetch user full name, roles, employee name, and designation in Frappe Framework using frappe.db.get_value and frappe.get_roles for session and specified users." />
       </article>
       
       {children}
-      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
+      {faqsGroup?.faqs.length && <FAQ faqs={faqsGroup.faqs} />}
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }
