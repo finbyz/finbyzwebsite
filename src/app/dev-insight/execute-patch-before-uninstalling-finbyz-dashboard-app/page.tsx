@@ -50,11 +50,11 @@ if frappe.db.exists("Number Card","Items to Deliver"):
 	frappe.db.delete('Number Card','Items to Deliver')
 
 frappe.db.sql("""
-delete from `tabCustom Field` where name like '%Dashboard%'
+delete from \`tabCustom Field\` where name like '%Dashboard%'
 """)
 
 frappe.db.sql("""
-delete from `tabProperty Setter` where name like '%Dashboard%'
+delete from \`tabProperty Setter\` where name like '%Dashboard%'
 """)
 
 # At the time of installation comment the patch

@@ -102,8 +102,8 @@ export default function AddFilterInChildTableField() {
               stepNumber: 1,
               title: "Identify the child table and field",
               explanation: "Determine the child table name ('participant_table') and the specific field ('activity') where the filter should be applied.",
-              code: null,
-              language: null
+              code: '',
+              language: ''
             },
             {
               stepNumber: 2,
@@ -123,8 +123,8 @@ export default function AddFilterInChildTableField() {
               stepNumber: 4,
               title: "Test and validate",
               explanation: "Save and reload the form to test that the filter on the child table 'activity' field works as expected.",
-              code: null,
-              language: null
+              code: '',
+              language: ''
             }
           ]}
         />

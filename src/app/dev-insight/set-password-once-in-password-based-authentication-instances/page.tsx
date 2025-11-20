@@ -101,8 +101,7 @@ step 3] cat ~/.ssh/id_rsa.pub | ssh ubuntu@0.0.0.0 -p 22 \"cat >> ~/.ssh/authori
           {
             stepNumber: 3,
             title: "Copy your public key to the remote server",
-            explanation: "Manually append your public SSH key to the remote server's 'authorized_keys' file using SSH. This copies the key and requires you to enter your password once.
-Replace 'ubuntu', '0.0.0.0', and '22' with your remote username, IP address, and port respectively.",
+            explanation: "Manually append your public SSH key to the remote server's 'authorized_keys' file using SSH. This copies the key and requires you to enter your password once.\nReplace 'ubuntu', '0.0.0.0', and '22' with your remote username, IP address, and port respectively.",
             code: "cat ~/.ssh/id_rsa.pub | ssh ubuntu@0.0.0.0 -p 22 \"cat >> ~/.ssh/authorized_keys\"",
             language: "bash"
           }

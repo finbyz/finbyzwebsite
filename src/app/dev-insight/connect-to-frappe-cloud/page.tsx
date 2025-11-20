@@ -173,6 +173,7 @@ open cmd with the path of .ssh folder
               "Check the certificate file contents for extraneous characters such as commas, single quotes, or echo commands, and remove them. Ensure the file is correctly saved in PEM format."
           }
         ]}
+      />
     </main>
   );
 }

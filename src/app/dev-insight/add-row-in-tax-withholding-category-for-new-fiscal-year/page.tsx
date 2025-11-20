@@ -90,7 +90,7 @@ export default function AddRowTaxWithholdingCategory() {
       />
 
       <KeyConcepts
-        concepts=[
+        concepts={[
           {
             title: "frappe.get_doc",
             description: "Retrieves a document instance by DocType and name, allowing access to its fields and child tables.",
@@ -120,7 +120,7 @@ export default function AddRowTaxWithholdingCategory() {
       />
 
       <StepByStepTutorial
-        steps=[
+        steps={[
           {
             stepNumber: 1,
             title: "Retrieve the latest Fiscal Year document",
@@ -145,8 +145,7 @@ export default function AddRowTaxWithholdingCategory() {
           {
             stepNumber: 4,
             title: "Check and append new rate row if needed",
-            explanation: "Compare the last rates row's from_date and to_date with the new fiscal year dates; if they differ, append a new row
-            copying the last withholding rate and thresholds but updating the fiscal year dates.",
+            explanation: "Compare the last rates row's from_date and to_date with the new fiscal year dates; if they differ, append a new row\ncopying the last withholding rate and thresholds but updating the fiscal year dates.",
             code: "if hasattr(doc, 'rates') and doc.rates:\n    last_row = doc.rates[-1]\n    last_row_from_date = datetime.strptime(str(last_row.from_date), '%Y-%m-%d').date()\n    last_row_to_date = datetime.strptime(str(last_row.to_date), '%Y-%m-%d').date()\n    if last_row_from_date != from_date and last_row_to_date != to_date:\n        doc.append('rates', {\n            'tax_withholding_rate': last_row.tax_withholding_rate,\n            'single_threshold': last_row.single_threshold,\n            'cumulative_threshold': last_row.cumulative_threshold,\n            'from_date': from_date,\n            'to_date': to_date\n        })\n        doc.save()",
             language: "python"
           },

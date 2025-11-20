@@ -228,6 +228,7 @@ Webhook Verify Token: <random_token>
               "Ensure you have proper permissions in Facebook WhatsApp Manager and that the app is live. Refresh the template fetch and check API access."
           }
         ]}
+        />
     </>
   );
 }

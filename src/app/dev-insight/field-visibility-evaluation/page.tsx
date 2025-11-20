@@ -102,7 +102,7 @@ eval:in_list([
             stepNumber: 1,
             title: "Identify the field whose visibility you want to control",
             explanation: "Open the Doctype customization and select the field you want to conditionally hide or show.",
-            code: null,
+            code: "",
             language: ""
           },
           {
@@ -123,7 +123,7 @@ eval:in_list([
             stepNumber: 4,
             title: "Test visibility behavior in the form",
             explanation: "Reload and test the form to verify fields appear or disappear correctly based on your conditions.",
-            code: null,
+            code: "",
             language: ""
           }
         ]}

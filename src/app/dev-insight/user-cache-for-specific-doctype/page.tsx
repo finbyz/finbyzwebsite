@@ -149,6 +149,7 @@ const userShareURL = window.location.href;` ,
             solution: "Clear browser cache and user session cookies or consider reloading the user session programmatically when syncing URLs."
           }
         ]}
+        />
     </main>
   );
 }

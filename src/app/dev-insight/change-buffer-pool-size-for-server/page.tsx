@@ -4,7 +4,7 @@ import CodeBlock from "@/components/code-snippets/code-block";
 import CodeOverview from "@/components/code-snippets/code-overview";
 import KeyConcepts from "@/components/code-snippets/key-concepts";
 import StepByStepTutorial from "@/components/code-snippets/step-by-step-tutorial";
-import Troubleshooting from "@/components/troubleshooting";
+import Troubleshooting from "@/components/code-snippets/troubleshooting";
 
 export default function ChangeBufferPoolSizeForServer() {
   const snippetName = "Change Buffer Pool Size for server";

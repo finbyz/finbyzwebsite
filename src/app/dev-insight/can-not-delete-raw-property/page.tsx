@@ -110,6 +110,7 @@ export default function CanNotDeleteRawProperty() {
             solution: "Clear browser cache and reload the form. Also verify no other scripts override this setting afterward."
           }
         ]}
+        />
     </main>
   );
 }

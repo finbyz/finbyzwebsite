@@ -126,6 +126,7 @@ frappe.db.set_value("DocType", "Journal Entry", "allow_rename", 0, update_modifi
             solution: "Use ERPNext's full rename utility or scripts to ensure linked documents and references are updated correctly."
           }
         ]}
+        />
     </main>
   );
 }

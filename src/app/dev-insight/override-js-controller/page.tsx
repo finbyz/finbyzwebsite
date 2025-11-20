@@ -127,6 +127,7 @@ export default function OverrideJsController() {
             solution: "Override only what you need and avoid changing global controller logic; use extensive testing before deployment."
           }
         ]}
+      />
     </>
   );
 }

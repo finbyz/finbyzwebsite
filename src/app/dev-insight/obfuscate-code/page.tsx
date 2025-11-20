@@ -242,7 +242,7 @@ def obfuscate_app(source_dir, dest_dir, skip_list):
                     shutil.copy2(source_file, dest_file)
             except Exception as e:
                 print(f"Error processing file {source_file}: {e}")
-`
+`,
             language: "python"
           }
         ]}

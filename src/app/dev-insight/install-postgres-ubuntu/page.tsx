@@ -66,8 +66,7 @@ sudo apt-get -y install postgresql
           included in Ubuntu's default repositories."
         prerequisites={[
           "You should have sudo privileges.",
-          "Your Ubuntu version's codename should be supported by the PostgreSQL
-          repository."
+          "Your Ubuntu version's codename should be supported by the PostgreSQL repository."
         ]}
       />
 
@@ -76,32 +75,27 @@ sudo apt-get -y install postgresql
           {
             title: "PostgreSQL Apt Repository",
             description:
-              "A dedicated package repository maintained by the PostgreSQL
-              community to deliver up-to-date versions of PostgreSQL for
-              Ubuntu.",
+              "A dedicated package repository maintained by the PostgreSQL\ncommunity to deliver up-to-date versions of PostgreSQL for\nUbuntu.",
             relatedLink:
               "https://www.postgresql.org/download/linux/ubuntu/"
           },
           {
             title: "Repository Signing Key",
             description:
-              "A cryptographic key used to verify the authenticity and integrity
-              of packages downloaded from a repository.",
+              "A cryptographic key used to verify the authenticity and integrity\nof packages downloaded from a repository.",
             relatedLink:
               "https://help.ubuntu.com/community/Repositories/Ubuntu"
           },
           {
             title: "apt-get update",
             description:
-              "Refreshes your local package database with package metadata from
-              configured repositories.",
+              "Refreshes your local package database with package metadata from\nconfigured repositories.",
             relatedLink: "https://manpages.ubuntu.com/manpages/focal/man8/apt-get.8.html"
           },
           {
             title: "apt-get install",
             description:
-              "Installs packages and their dependencies from defined package
-              sources.",
+              "Installs packages and their dependencies from defined package\nsources.",
             relatedLink: "https://manpages.ubuntu.com/manpages/focal/man8/apt-get.8.html"
           }
         ]}
@@ -113,10 +107,7 @@ sudo apt-get -y install postgresql
             stepNumber: 1,
             title: "Add PostgreSQL Apt Repository",
             explanation:
-              "Create a new repository configuration file that points to the
-              official PostgreSQL Apt repository for your Ubuntu version and CPU
-              architecture. The command uses 'lsb_release -cs' to fetch your
-              Ubuntu codename dynamically.",
+              "Create a new repository configuration file that points to the\nofficial PostgreSQL Apt repository for your Ubuntu version and CPU\narchitecture. The command uses 'lsb_release -cs' to fetch your\nUbuntu codename dynamically.",
             code:
               "sudo sh -c 'echo \"deb [arch=amd64] https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main\" > /etc/apt/sources.list.d/pgdg.list'",
             language: "bash"
@@ -125,8 +116,7 @@ sudo apt-get -y install postgresql
             stepNumber: 2,
             title: "Import Repository Signing Key",
             explanation:
-              "Download the PostgreSQL repository signing key and add it to
-              apt's trusted keys to ensure packages are authentic and secure.",
+              "Download the PostgreSQL repository signing key and add it to\napt's trusted keys to ensure packages are authentic and secure.",
             code:
               "wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -\nsudo cp /etc/apt/trusted.gpg /etc/apt/trusted.gpg.d",
             language: "bash"
@@ -135,8 +125,7 @@ sudo apt-get -y install postgresql
             stepNumber: 3,
             title: "Update Package Lists",
             explanation:
-              "Run 'apt-get update' to refresh package metadata to include the
-              newly added PostgreSQL repository.",
+              "Run 'apt-get update' to refresh package metadata to include the\nnewly added PostgreSQL repository.",
             code: "sudo apt-get update",
             language: "bash"
           },
@@ -144,8 +133,7 @@ sudo apt-get -y install postgresql
             stepNumber: 4,
             title: "Install PostgreSQL",
             explanation:
-              "Install the latest PostgreSQL server package from the repository.
-              To install a specific version, modify the package name accordingly.",
+              "Install the latest PostgreSQL server package from the repository.\nTo install a specific version, modify the package name accordingly.",
             code: "sudo apt-get -y install postgresql",
             language: "bash"
           }
@@ -155,23 +143,16 @@ sudo apt-get -y install postgresql
       <Troubleshooting
         items={[
           {
-            problem: "Repository 'https://apt.postgresql.org' not found or
-              unsupported Ubuntu codename.",
-            solution: "Ensure your Ubuntu release is supported. Check the
-              output of 'lsb_release -cs' and verify it matches supported
-              names on PostgreSQL's repository page."
+            problem: "Repository 'https://apt.postgresql.org' not found or\nunsupported Ubuntu codename.",
+            solution: "Ensure your Ubuntu release is supported. Check the\noutput of 'lsb_release -cs' and verify it matches supported\nnames on PostgreSQL's repository page."
           },
           {
             problem: "Packages fail to authenticate after adding the repository.",
-            solution: "Make sure the repository signing key was imported
-              correctly using 'apt-key add' and verify no networking issues
-              occurred during the key download."
+            solution: "Make sure the repository signing key was imported\ncorrectly using 'apt-key add' and verify no networking issues\noccurred during the key download."
           },
           {
             problem: "PostgreSQL does not install or apt-get update errors out.",
-            solution: "Check that your 'pgdg.list' repository file was created
-              correctly and contains the proper format, and try 'sudo apt-get
-              update' again."
+            solution: "Check that your 'pgdg.list' repository file was created\ncorrectly and contains the proper format, and try 'sudo apt-get\nupdate' again."
           }
         ]}
       />

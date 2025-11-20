@@ -99,13 +99,13 @@ export default function SalesInvoiceFieldLength() {
             title: "Identify Field Length Limitation",
             explanation: "Analyze the Sales Invoice DocType fields to find which fields have insufficient length for your use case, such as a custom field that needs to hold more data.",
             code: `# No code needed; use the UI or DocType definition to inspect field properties.
-`,`language: "plaintext"
+\`,\`language: "plaintext"
           },
           {
             stepNumber: 2,
             title: "Decide Customization Approach",
             explanation: "Choose whether to customize via Customize Form (for quick UI changes) or programmatically via Python scripts for version control and packaging.",
-            code: `# Customize Form: UI based
+            code: \`# Customize Form: UI based
 # Programmatic: Use create_custom_field in Python
 `,
             language: "plaintext"

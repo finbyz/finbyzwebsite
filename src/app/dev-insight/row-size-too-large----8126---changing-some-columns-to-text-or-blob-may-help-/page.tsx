@@ -18,7 +18,7 @@ def alter(self):
 			for query_body in query_parts:
 				# FinByz Changes
 				# query_body = ", ".join(query_parts)
-				query = f"ALTER TABLE `{self.table_name}` {query_body}"
+				query = f"ALTER TABLE \`{self.table_name}\` {query_body}"
 				frappe.db.sql(query)
 
 	except Exception as e:
@@ -126,7 +126,7 @@ export default function Page() {
             stepNumber: 2,
             title: "Construct and execute ALTER TABLE query",
             explanation: "Inside nested loop, it constructs a full ALTER TABLE statement referencing the current table and the current query part, then executes it via frappe.db.sql.",
-            code: `query = f"ALTER TABLE `{self.table_name}` {query_body}"\nfrappe.db.sql(query)`,
+            code: `query = f"ALTER TABLE \`{self.table_name}\` {query_body}"\nfrappe.db.sql(query)`,
             language: "python"
           },
           {

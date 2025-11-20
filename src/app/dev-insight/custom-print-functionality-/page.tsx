@@ -65,7 +65,7 @@ export default function CustomPrintFunctionality() {
       />
 
       <KeyConcepts
-        concepts=[
+        concepts={[
           {
             title: "frappe.ui.form.on",
             description:
@@ -89,7 +89,7 @@ export default function CustomPrintFunctionality() {
             description: "Adds buttons inside the report's page area for easy user actions.",
             relatedLink: "https://frappeframework.com/docs/user/en/api/client-scripts#reports"
           }
-        ]
+        ]}
       />
 
       <StepByStepTutorial
