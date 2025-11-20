@@ -89,6 +89,7 @@ import FinbyzGallery from "@/components/sections/FinbyzGallery";
 import FAQ from "@/components/ai_components/FAQ";
 import { getFaqs, getPageData } from "@/lib/getPageData";
 import { fetchFrappeSchemaData } from "@/lib/fetchFrappeSeoData";
+import StructureData from "@/components/seo/StructureData";
 
 import { Metadata } from "next";
 import Script from "next/script";
@@ -108,12 +109,12 @@ export async function generateMetadata(): Promise<Metadata> {
     creator: "FinByz Tech Pvt Ltd",
     publisher: "FinByz Tech Pvt Ltd",
     alternates: {
-      canonical: ${process.env.SITE_URL}/" + pageData?.data?.route || "",
+      canonical: "${process.env.SITE_URL}/" + pageData?.data?.route || "",
     },
     openGraph: {
       title: pageData?.data?.seo_title,
       description: pageData?.data?.meta_description,
-      url: ${process.env.SITE_URL}/" + pageData?.data?.route || "",
+      url: "${process.env.SITE_URL}/" + pageData?.data?.route || "",
       siteName: "Finbyz Tech",
       type: "website",
       locale: "en_US",
@@ -148,18 +149,13 @@ export default async function Layout({ children }: { children: React.ReactNode }
 
   return (
     <>
-      <Script
-        id="structured-data"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
       
       {children}
       {faqsGroup?.faqs.length && <FAQ faqs={faqsGroup.faqs} />}
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }
-      <StructureData name="${id}" type="webpage" />  
+      <StructureData name="${id}" type="${type}" />  
       <BusinessSlider />
     </>
   );
@@ -329,7 +325,7 @@ export async function POST(request: NextRequest) {
     const body: GeneratePageRequest = await request.json();
     
     // Validate request
-    if (!body.slug || !body.name || !body.pageCode || !body.type) {
+    if (!body.slug || !body.pageCode || !body.type) {
       return NextResponse.json(
         {
           success: false,
