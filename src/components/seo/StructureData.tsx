@@ -1,6 +1,6 @@
 import { fetchFrappeSchemaData } from "@/lib/fetchFrappeSeoData";
 
-type PageType = "gallery" | "webpage" | "blog";
+type PageType = "gallery" | "webpage" | "blog" | "code-snippet";
 
 interface FrappeFAQ {
   question: string;
@@ -25,6 +25,7 @@ interface FrappePageData {
   blog_category?: string;
   meta_image?: string;
   meta_description?: string;
+  creation?: string;
 }
 
 // MAKE IT CONFIGURABLE FOR YOUR SITE
@@ -45,6 +46,7 @@ export default async function StructureData({
   const getDoctype = () => {
     if (type === "gallery") return "Gallery";
     if (type === "blog") return "Blog Post";
+    if (type === "code-snippet") return "Code Snippet";
     return "Web Page";
   };
 
@@ -54,11 +56,11 @@ export default async function StructureData({
     name: name
   })
   // Helpers
-  const fullUrl = `${BASE_URL}/${data.route}`;
+  const fullUrl = `${BASE_URL}/${data?.route}`;
   const getImage = () =>
-    data.svg_image ||
-    data.animated_image ||
-    data.meta_image ||
+    data?.svg_image ||
+    data?.animated_image ||
+    data?.meta_image ||
     `${BASE_URL}/files/FinbyzLogo.png`;
 
   // ----------------------------------------------------
@@ -66,11 +68,11 @@ export default async function StructureData({
   // ----------------------------------------------------
   const baseSchema = {
     "@context": "https://schema.org",
-    name: data.seo_title || data.gallery_title || data.title || data.name,
+    name: data?.seo_title || data?.gallery_title || data?.title || data?.name,
     description:
-      data.small_description ||
-      data.meta_description ||
-      data.description?.replace(/<[^>]+>/g, "").substring(0, 200),
+      data?.small_description ||
+      data?.meta_description ||
+      data?.description?.replace(/<[^>]+>/g, "").substring(0, 200),
     url: fullUrl,
     image: getImage()
   };
@@ -110,7 +112,7 @@ export default async function StructureData({
     };
   }
 
-  if (type === "blog") {
+  if (type === "blog" || type === "code-snippet") {
     schema = {
       ...baseSchema,
       "@type": "BlogPosting",
@@ -120,7 +122,7 @@ export default async function StructureData({
         name: data.author || "FinByz Team",
         url: `${process.env.SITE_URL}/blog?blogger=${data.author || "Finbyz Team"}`
       },
-      datePublished: `${data.published_on}T08:00:00+08:00`,
+      datePublished: `${data.published_on || data?.creation}T08:00:00+08:00`,
       publisher: {
         "@type": "Organization",
         name: "FinByz Tech",

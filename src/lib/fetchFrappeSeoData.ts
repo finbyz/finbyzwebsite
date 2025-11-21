@@ -1,4 +1,4 @@
-export type PageType = "gallery" | "webpage" | "blog";
+export type PageType = "gallery" | "webpage" | "blog" | "code-snippet";
 
 export interface FrappeFAQ {
   question: string;
@@ -24,6 +24,7 @@ export interface FrappePageData {
   blog_category?: string;
   meta_image?: string;
   meta_description?: string;
+  creation?: string;
 }
 
 function getAuthHeaders() {
@@ -36,6 +37,7 @@ function getAuthHeaders() {
 const getDoctype = (type: PageType) => {
   if (type === "gallery") return "Gallery";
   if (type === "blog") return "Blog Post";
+  if (type === "code-snippet") return "Code Snippet";
   return "Web Page";
 };
 
