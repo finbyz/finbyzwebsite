@@ -107,7 +107,7 @@ async function handleRequest(
 
     let frappeResponse;
     let retryCount = 0;
-    const maxRetries = 2;
+    const maxRetries = 1;
 
     while (retryCount <= maxRetries) {
       // Create new AbortController for each attempt
