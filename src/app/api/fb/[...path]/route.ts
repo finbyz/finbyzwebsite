@@ -59,8 +59,8 @@ async function handleRequest(
     const url = new URL(request.url);
     const queryString = url.search || '';
     const targetUrl = `${frappeUrl}/${basePath}${queryString}`;
-    const headers: Record<string, string> = {
-    };
+    
+    const headers: Record<string, string> = {};
 
     // Forward cookies if present
     const cookies = request.headers.get('cookie');
@@ -79,72 +79,43 @@ async function handleRequest(
       headers['X-Frappe-Site-Name'] = siteName;
     }
 
+    // Check if this is a multipart/form-data request (file upload)
+    const contentType = request.headers.get('content-type');
+    const isMultipart = contentType?.includes('multipart/form-data');
+
     request.headers.forEach((value, key) => {
       const lower = key.toLowerCase();
-      // Only forward safe headers, exclude problematic ones
+      // Forward more headers for multipart requests, but still exclude problematic ones
       if (lower !== 'host' && 
           lower !== 'cookie' && 
           lower !== 'authorization' &&
           lower !== 'connection' &&
+          lower !== 'keep-alive' &&
           lower !== 'upgrade' &&
           lower !== 'proxy-connection' &&
           lower !== 'te' &&
           lower !== 'trailers' &&
-          lower !== 'transfer-encoding' &&
-          lower !== 'content-encoding' &&
-          lower !== 'content-length') {
-        headers[key] = value as string;
+          lower !== 'transfer-encoding') {
+        // For multipart requests, preserve content-type with boundary
+        // For other requests, still exclude content-encoding and content-length
+        if (isMultipart || (lower !== 'content-encoding' && lower !== 'content-length')) {
+          headers[key] = value as string;
+        }
       }
     });
 
     // Preserve original body for all non-GET/HEAD requests.
-    // Using ArrayBuffer ensures we can retry safely without re-reading the stream.
     let body: ArrayBuffer | undefined;
     if (method !== 'GET' && method !== 'HEAD') {
       body = await request.arrayBuffer();
     }
 
-
-    let frappeResponse;
-    let retryCount = 0;
-    const maxRetries = 1;
-
-    while (retryCount <= maxRetries) {
-      // Create new AbortController for each attempt
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout
-
-      try {
-        frappeResponse = await fetch(targetUrl, {
-          method,
-          headers,
-          body,
-          signal: controller.signal,
-        });
-        clearTimeout(timeoutId);
-        break; // Success, exit retry loop
-      } catch (error: any) {
-        retryCount++;
-        clearTimeout(timeoutId);
-        
-        if (error.name === 'AbortError' || error.code === 'UND_ERR_CONNECT_TIMEOUT') {
-          if (retryCount <= maxRetries) {
-            // Wait before retry (exponential backoff)
-            await new Promise(resolve => setTimeout(resolve, Math.pow(2, retryCount) * 1000));
-            continue;
-          } else {
-            throw new Error(`Request failed after ${maxRetries + 1} attempts: Connection timeout`);
-          }
-        } else {
-          throw error; // Re-throw non-timeout errors
-        }
-      }
-    }
-    
-    // Ensure frappeResponse is defined
-    if (!frappeResponse) {
-      throw new Error('No response received from Frappe server');
-    }
+    // No timeout, let the request take as long as needed
+    const frappeResponse = await fetch(targetUrl, {
+      method,
+      headers,
+      body,
+    });
     
     if (frappeResponse.status === 401 || frappeResponse.status === 403) {
       return NextResponse.json(
@@ -176,11 +147,11 @@ async function handleRequest(
     console.error(`Frappe API error (${method} /${pathSegments.join('/')}):`, error);
     
     // Handle specific timeout errors
-    if (error.message && error.message.includes('Connection timeout')) {
+    if (error.message && error.message.includes('timeout')) {
       return NextResponse.json(
         { 
           error: 'Request timeout - the Frappe server is taking too long to respond. Please try again.',
-          details: 'Connection timeout after multiple retry attempts'
+          details: error.message
         },
         { status: 504 }
       );

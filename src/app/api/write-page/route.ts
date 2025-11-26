@@ -348,7 +348,7 @@ export async function POST(request: NextRequest) {
     }
     
     // Sanitize slug
-    const slug = body.slug.replace(/[^a-z0-9-_]/gi, '-').toLowerCase();
+    const slug = body.slug;
     
     // Check if page already exists
     const baseDir = body.type === 'blog' ? '(blog)' : '(webpages)';
