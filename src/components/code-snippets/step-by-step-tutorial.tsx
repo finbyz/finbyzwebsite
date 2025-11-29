@@ -7,8 +7,8 @@ interface TutorialStep {
   stepNumber: number;
   title: string;
   explanation: string;
-  code: string;
-  language: string;
+  code?: string | null;
+  language?: string | null;
 }
 
 interface StepByStepTutorialProps {
@@ -18,10 +18,15 @@ interface StepByStepTutorialProps {
 export default function StepByStepTutorial({ steps }: StepByStepTutorialProps) {
   const [copiedStep, setCopiedStep] = useState<number | null>(null);
 
-  const handleCopy = async (code: string, stepNumber: number) => {
-    await navigator.clipboard.writeText(code);
-    setCopiedStep(stepNumber);
-    setTimeout(() => setCopiedStep(null), 2000);
+  const handleCopy = async (code: string | null | undefined, stepNumber: number) => {
+    if (!code) return;
+    try {
+      await navigator.clipboard.writeText(code);
+      setCopiedStep(stepNumber);
+      setTimeout(() => setCopiedStep(null), 2000);
+    } catch {
+      // ignore clipboard errors silently
+    }
   };
 
   return (
@@ -42,17 +47,17 @@ export default function StepByStepTutorial({ steps }: StepByStepTutorialProps) {
                 className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow"
               >
                 {/* Step Header */}
-                
+
                 <div className="bg-white border-b border-gray-200 px-6 py-4">
                   <div className="flex items-center gap-3">
-                  <div className="bg-orange-100 text-orange-600 font-bold text-lg rounded-full w-10 h-10 flex items-center justify-center">
-                        {step.stepNumber}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">{step.title}</h3>
+                    <div className="bg-orange-100 text-orange-600 font-bold text-lg rounded-full w-10 h-10 flex items-center justify-center">
+                      {step.stepNumber}
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900">{step.title}</h3>
                   </div>
                 </div>
 
-               
+
 
                 {/* Step Content */}
                 <div className="p-6">
@@ -62,14 +67,15 @@ export default function StepByStepTutorial({ steps }: StepByStepTutorialProps) {
                   </div>
 
                   {/* Code Block */}
-                  <div className="bg-gray-900 rounded-lg overflow-hidden">
+
+                  {step?.code && <div className="bg-gray-900 rounded-lg overflow-hidden">
                     {/* Code Header */}
                     <div className="flex items-center justify-between bg-gray-800 px-4 py-2 border-b border-gray-700">
                       <span className="px-2 py-1 bg-orange-500/20 text-orange-400 text-xs font-medium rounded">
                         {step.language}
                       </span>
                       <button
-                        onClick={() => handleCopy(step.code, step.stepNumber)}
+                        onClick={step.code ? () => handleCopy(step.code, step.stepNumber) : undefined}
                         className="flex items-center gap-2 px-3 py-1 bg-gray-700 hover:bg-gray-600 text-white text-sm rounded transition-colors"
                       >
                         {copiedStep === step.stepNumber ? (
@@ -91,6 +97,7 @@ export default function StepByStepTutorial({ steps }: StepByStepTutorialProps) {
                       <code className="text-sm text-gray-300 font-mono">{step.code}</code>
                     </pre>
                   </div>
+                  }
                 </div>
 
                 {/* Step Footer */}
