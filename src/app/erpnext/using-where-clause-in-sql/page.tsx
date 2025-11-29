@@ -19,7 +19,7 @@ def get_purchase(item, broker_name, supplier_name):
 	where_clause += supplier_name and " and supplier_name = '%s'" % \
 		supplier_name.replace("'", "\\'") or ""
 			
-	return frappe.db.sql("""select name, items, date, lorry_no, bags, rate, gross_wt, net_wt, moisture, amount, tax_amount, after_tax_amount, after_commission_amount from `tabShivshakti Purchases` where status="Pending"
+	return frappe.db.sql("""select name, items, date, lorry_no, bags, rate, gross_wt, net_wt, moisture, amount, tax_amount, after_tax_amount, after_commission_amount from \`tabShivshakti Purchases\` where status="Pending"
 		%s""" % where_clause, as_dict=1)`;
 
   return (
@@ -96,7 +96,7 @@ def get_purchase(item, broker_name, supplier_name):
             stepNumber: 4,
             title: "Execute the Full Query",
             explanation: "Construct the final SQL query by combining the base select statement with your dynamic `where_clause`. Use `frappe.db.sql` to execute it and return the data `as_dict=1`.",
-            code: `return frappe.db.sql("""SELECT name, items, date \nFROM `tabShivshakti Purchases` \nWHERE status="Pending" %s""" % where_clause, as_dict=1)`,
+            code: `return frappe.db.sql("""SELECT name, items, date \nFROM \`tabShivshakti Purchases\` \nWHERE status="Pending" %s""" % where_clause, as_dict=1)`,
             language: "python"
           },
           {

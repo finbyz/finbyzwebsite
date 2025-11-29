@@ -138,25 +138,25 @@ def set_other_values(out, party, party_type):
             stepNumber: 1,
             title: "Create the Python File",
             explanation: "Create a new Python file within your custom Frappe app. A good practice is to place utility scripts in a dedicated folder. For example, `my_app/my_app/utils/party.py`.",
-            code: "# In your custom app, create a file like:
+            code: `# In your custom app, create a file like:
 # my_app/my_app/utils/party.py
 
-# Paste the entire code snippet into this file.",
+# Paste the entire code snippet into this file.`,
             language: "bash",
           },
           {
             stepNumber: 2,
             title: "Import the Function in `__init__.py`",
             explanation: "To make the function easily importable, add it to the `__init__.py` file in the same directory.",
-            code: "# In my_app/my_app/utils/__init__.py
+            code: `# In my_app/my_app/utils/__init__.py
 
-from .party import get_party_details",
+from .party import get_party_details`,
             language: "python",
           },
           {
             stepNumber: 3,
             title: "Call the Method from a Client Script",
-            explanation: "You can now call this whitelisted method from any Client Script using `frappe.call`. This example shows how to fetch details for a specific customer when a field changes.",
+            explanation: "You can now call this whitelisted method from any Client Script using frappe.call. This example shows how to fetch details for a specific customer when a field changes.",
             code: `// Example: Custom Client Script for Sales Order
 frappe.ui.form.on('Sales Order', {
     customer: function(frm) {
@@ -185,8 +185,8 @@ frappe.ui.form.on('Sales Order', {
             stepNumber: 4,
             title: "Test the API Endpoint",
             explanation: "After saving your scripts, run `bench migrate` and `bench restart`. Then, trigger the client script in the UI (e.g., by changing the Customer in a Sales Order) and check the browser's console and the form fields to see the fetched data.",
-            code: "bench migrate
-bench restart",
+            code: `bench migrate
+bench restart`,
             language: "bash",
           },
         ]}

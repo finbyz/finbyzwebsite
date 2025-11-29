@@ -122,7 +122,7 @@ cur_frm.set_query("contact", "escalations", function(doc, cdt, cdn) {
           {
             stepNumber: 4,
             title: "Implement the Python Method (Server-Side)",
-            explanation: "In the specified Python file (e.g., erpnext/controllers/queries.py), create the function. It must be decorated with `@frappe.whitelist()`. The function receives the 'filters' dictionary from the client. Use these filters to build your database query.",
+            explanation: "In the specified Python file (e.g., erpnext/controllers/queries.py), create the function. It must be decorated with @frappe.whitelist(). The function receives the 'filters' dictionary from the client. Use these filters to build your database query.",
             code: `import frappe
 
 @frappe.whitelist()
@@ -137,9 +137,9 @@ def item_query(doctype, txt, searchfield, start, page_len, filters):
     # Example of a simple SQL query construction
     # In production, use frappe.get_list for better permission handling
     return frappe.db.sql(f\"\"\"SELECT name, item_name, description 
-        FROM `tabItem` 
-        WHERE {' AND '.join(conditions)} AND (`tabItem`.`{searchfield}` LIKE %(txt)s) 
-        ORDER BY `tabItem`.`idx` DESC, `tabItem`.`name` ASC
+        FROM \`tabItem\` 
+        WHERE {' AND '.join(conditions)} AND (\`tabItem\`.\`{searchfield}\` LIKE %(txt)s) 
+        ORDER BY \`tabItem\`.\`idx\` DESC, \`tabItem\`.\`name\` ASC
         LIMIT %(page_len)s OFFSET %(start)s\"\"\", {
             'txt': f'%{txt}%',
             'start': start,

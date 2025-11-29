@@ -47,18 +47,18 @@ def get_events(start, end, filters=None):
 	# 	 conditions += f" AND project = '{filters.get('project')}'"
 
 	return frappe.db.sql("""select 
-			`tabTimesheet Detail`.name as name, 
-			`tabTimesheet Detail`.docstatus as status, 
-			`tabTimesheet Detail`.parent as parent,
+			\`tabTimesheet Detail\`.name as name, 
+			\`tabTimesheet Detail\`.docstatus as status, 
+			\`tabTimesheet Detail\`.parent as parent,
 			from_time as start_date, 
 			hours, 
 			activity_type, 
 			project, 
 			to_time as end_date, 
-			CONCAT(`tabTimesheet Detail`.parent, ' (', ROUND(hours,2),' hrs)') as title 
-		from `tabTimesheet Detail`, `tabTimesheet` 
-		where `tabTimesheet Detail`.parent = `tabTimesheet`.name 
-			and `tabTimesheet`.docstatus < 2 
+			CONCAT(\`tabTimesheet Detail\`.parent, ' (', ROUND(hours,2),' hrs)') as title 
+		from \`tabTimesheet Detail\`, \`tabTimesheet\` 
+		where \`tabTimesheet Detail\`.parent = \`tabTimesheet\`.name 
+			and \`tabTimesheet\`.docstatus < 2 
 			and (from_time <= %(end)s and to_time >= %(start)s) {conditions}
 		""".format(conditions=conditions), 
 		{
@@ -110,7 +110,7 @@ def get_events(start, end, filters=None):
           {
             stepNumber: 2,
             title: "Define and Whitelist the get_events Function",
-            explanation: "Add the `get_events` function and decorate it with `@frappe.whitelist()`. The function must accept `start`, `end`, and optional `filters` arguments.",
+            explanation: "Add the get_events function and decorate it with `@frappe.whitelist()`. The function must accept `start`, `end`, and optional `filters` arguments.",
             code: `@frappe.whitelist()
 def get_events(start, end, filters=None):
     pass # We will add the logic next`,
@@ -119,13 +119,13 @@ def get_events(start, end, filters=None):
           {
             stepNumber: 3,
             title: "Implement the SQL Query",
-            explanation: "Use `frappe.db.sql` to fetch your data. Important: You must alias your date fields to `start_date` and `end_date`, and a descriptive field to `title` for the calendar to display them correctly.",
+            explanation: "Use \`frappe.db.sql\` to fetch your data. Important: You must alias your date fields to start_date and end_date, and a descriptive field to title for the calendar to display them correctly.",
             code: `return frappe.db.sql("""SELECT
-        name,
+              name,
         subject as title,
         scheduled_from as start_date,
         scheduled_to as end_date
-    FROM `tabMeeting`
+    FROM \`tabMeeting\`
     WHERE docstatus = 1 AND (scheduled_from <= %(end)s AND scheduled_to >= %(start)s)
     """, {"start": start, "end": end}, as_dict=True)`,
             language: "python",
@@ -134,8 +134,7 @@ def get_events(start, end, filters=None):
             stepNumber: 4,
             title: "Create the Calendar View JavaScript File",
             explanation: "In the same DocType directory, create a new file named `[doctype_name]_calendar.js` (e.g., `meeting_calendar.js`). This file configures the frontend calendar.",
-            code: "// In my_app/my_app/doctype/meeting/meeting_calendar.js\n\n// This file should intentionally be left blank if you only need a basic calendar.
-// Frappe will automatically use the get_events method if it exists.",
+            code: "// In my_app/my_app/doctype/meeting/meeting_calendar.js\n\n// This file should intentionally be left blank if you only need a basic calendar. \n// Frappe will automatically use the get_events method if it exists.",
             language: "javascript",
           },
           {

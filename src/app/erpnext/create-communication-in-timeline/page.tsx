@@ -91,21 +91,21 @@ const CreateCommunicationInTimelinePage = () => {
             stepNumber: 3,
             title: "Adapt the Script Logic",
             explanation: "Copy the provided code into the script editor. You must change the field names (e.g., `self.contact_person`, `self.discussion`, `self.lead`) to match the exact fieldnames in your trigger DocType.",
-            code: "# The 'self' object gives you access to the fields of the trigger document.
+            code: `# The 'self' object gives you access to the fields of the trigger document.
 # Ensure these fieldnames exist in your DocType:
 # self.name: The document's unique ID (usually available by default)
 # self.contact_person: Field for the contact person's name
 # self.meeting_from: A date or datetime field for the meeting time
 # self.discussion: A text field for meeting notes
-# self.lead: A Link field to the associated Lead document",
+# self.lead: A Link field to the associated Lead document`,
             language: "python",
           },
           {
             stepNumber: 4,
             title: "Set the Communication Reference",
             explanation: "Crucially, ensure the `cm.reference_doctype` and `cm.reference_name` fields are set correctly. They tell the system which document's timeline to add this communication to.",
-            code: "cm.reference_doctype = \"Lead\" # The target DocType for the timeline
-cm.reference_name = self.lead   # The specific document's name from the link field",
+            code: `cm.reference_doctype = \"Lead\" # The target DocType for the timeline
+cm.reference_name = self.lead   # The specific document's name from the link field`,
             language: "python",
           },
           {
