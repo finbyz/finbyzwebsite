@@ -66,12 +66,6 @@ async function handleRequest(
     const cookies = request.headers.get('cookie');
     if (cookies) headers['Cookie'] = cookies;
 
-    // Optional token auth fallback
-    const apiKey = process.env.FRAPPE_API_KEY;
-    const apiSecret = process.env.FRAPPE_API_SECRET;
-    if (apiKey && apiSecret) {
-      headers['Authorization'] = `token ${apiKey}:${apiSecret}`;
-    }
 
     // Optional multi-tenant site header
     const siteName = process.env.FRAPPE_SITE;
