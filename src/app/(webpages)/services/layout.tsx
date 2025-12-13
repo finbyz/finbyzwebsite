@@ -3,31 +3,36 @@ import { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "ERP Solutions for Textile Manufacturing & Distribution",
-  description: "Optimize textile manufacturing, supply chain, and operations with tailored ERP solutions. Enhance efficiency, reduce costs, and boost profitability for your textile business.",
-  keywords: "ERP for textile industry, textile manufacturing ERP, textile production software, ERPNext textile solutions, apparel ERP system, garment manufacturing software, textile supply chain management, fabric inventory management, textile business operations, digital transformation textile, textile process automation, ERP customization textile, textile industry challenges, textile enterprise resource planning",
+  title: "Comprehensive Technology Services | FinByz Tech",
+  description:
+    "Transform your business operations with tailored technology solutions including ERPNext implementation, automation, AI integration, custom software development, and continuous support.",
+  keywords:
+    "technology services, ERPNext implementation, AI automation, business automation, custom software development, enterprise solutions, digital transformation, system integration, cloud architecture, ERP customization, process automation",
   authors: [{ name: "FinByz Tech" }],
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://erp.finbyz.tech/erp-for-textile-industry",
+    canonical: "https://finbyz.tech/services",
   },
+
   openGraph: {
-    title: "ERP Solutions for Textile Manufacturing & Distribution",
-    description: "Optimize textile manufacturing, supply chain, and operations with tailored ERP solutions. Enhance efficiency, reduce costs, and boost profitability for your textile business.",
-    url: "https://erp.finbyz.tech/erp-for-textile-industry",
+    title: "Comprehensive Technology Services | FinByz Tech",
+    description:
+      "Optimize operations with ERPNext, automation, AI, and custom-built solutions tailored to your business.",
+    url: "https://finbyz.tech/services",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
-    
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "ERP Solutions for Textile Manufacturing & Distribution",
-    description: "Optimize textile manufacturing, supply chain, and operations with tailored ERP solutions. Enhance efficiency, reduce costs, and boost profitability for your textile business.",
+    title: "Comprehensive Technology Services | FinByz Tech",
+    description:
+      "Modernize your business with ERPNext, automation, AI, and custom-built software solutions.",
     creator: "@finbyztech",
-    
   },
+
   robots: {
     index: true,
     follow: true,
@@ -35,9 +40,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
@@ -46,47 +51,59 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "ERP Solutions for Textile Manufacturing & Distribution",
-    "description": "Optimize textile manufacturing, supply chain, and operations with tailored ERP solutions. Enhance efficiency, reduce costs, and boost profitability for your textile business.",
-    "url": "https://erp.finbyz.tech/erp-for-textile-industry",
-    
-    "keywords": "ERP for textile industry, textile manufacturing ERP, textile production software, ERPNext textile solutions, apparel ERP system, garment manufacturing software, textile supply chain management, fabric inventory management, textile business operations, digital transformation textile, textile process automation, ERP customization textile, textile industry challenges, textile enterprise resource planning",
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
-    "publisher": {
+    name: "Comprehensive Technology Services",
+    description:
+      "Technology solutions including ERPNext implementation, automation, AI integration, custom software development, and ongoing innovation.",
+    url: "https://finbyz.tech/services",
+    keywords:
+      "technology services, ERPNext implementation, automation, AI integration, custom ERP solutions, business optimization, cloud architecture, digital transformation",
+    inLanguage: "en-US",
+    isAccessibleForFree: true,
+
+    publisher: {
       "@type": "Organization",
-      "name": "FinByz Tech",
-      "url": "https://finbyz.tech"
+      name: "FinByz Tech",
+      url: "https://finbyz.tech",
     },
-    "mainEntity": {
+
+    mainEntity: {
       "@type": "Article",
-      "headline": "ERP Solutions for Textile Manufacturing & Distribution",
-      "description": "Optimize textile manufacturing, supply chain, and operations with tailored ERP solutions. Enhance efficiency, reduce costs, and boost profitability for your textile business.",
-      "articleBody": "ERPNext solutions designed for textile manufacturing and distribution processes.",
-      "author": {
+      headline: "Comprehensive Technology Services",
+      description:
+        "Tailored ERPNext, automation, AI, and custom development solutions built for modern business efficiency.",
+      articleBody:
+        "FinByz Tech provides ERPNext implementation, automation, AI integration, custom development, and scalable technology infrastructure.",
+      author: {
         "@type": "Organization",
-        "name": "FinByz Tech"
+        name: "FinByz Tech",
       },
-      "datePublished": "2025-10-28T09:34:00.039Z",
-      "dateModified": "2025-10-28T09:34:00.039Z",
-    }
+      datePublished: new Date().toISOString(),
+      dateModified: new Date().toISOString(),
+    },
   };
 
   return (
     <>
+      {/* Structured Data */}
       <Script
-        id="structured-data"
+        id="structured-data-services"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
+
       <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="ERP Solutions for Textile Manufacturing & Distribution" />
-        <meta itemProp="description" content="Optimize textile manufacturing, supply chain, and operations with tailored ERP solutions. Enhance efficiency, reduce costs, and boost profitability for your textile business." />
+        <meta
+          itemProp="name"
+          content="Comprehensive Technology Services | FinByz Tech"
+        />
+        <meta
+          itemProp="description"
+          content="Enterprise technology services including ERPNext, automation, AI, custom development, and continuous innovation."
+        />
       </article>
-      
+
       {children}
-      
+
       <BusinessSlider />
     </>
   );

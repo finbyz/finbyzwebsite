@@ -48,9 +48,9 @@ export default function CompanyHistoryTimeline({ data }: CompanyHistoryTimelineP
     { date: "2023", title: "Solutions for Metal Casting", description: "Created tools to track rejections and process transparency in multi-stage manufacturing.", icon: Building2, position: 'right', location: "" },
     { date: "2024", title: "Resource Augmentation Model", description: "Launched a flexible model for businesses to hire dedicated tech talent. Also delivered industry-specific ERP for the solar pump sector.", icon: Building2, position: 'left', location: "" },
     { date: "2025", title: "AI-Powered Workflow Automations", description: "Integrated cutting-edge AI tools to solve real-world industry challenges, from production to procurement.", icon: Building2, position: 'right', location: "" },
-    { date: "2026", title: "Placeholder Milestone 1", description: "Description for future milestone 1.", icon: Building2, position: 'left', location: "" },
-    { date: "2027", title: "Placeholder Milestone 2", description: "Description for future milestone 2.", icon: Building2, position: 'right', location: "" },
-    { date: "2028", title: "Placeholder Milestone 3", description: "Description for future milestone 3.", icon: Building2, position: 'left', location: "" },
+  //   { date: "2026", title: "Placeholder Milestone 1", description: "Description for future milestone 1.", icon: Building2, position: 'left', location: "" },
+  //   { date: "2027", title: "Placeholder Milestone 2", description: "Description for future milestone 2.", icon: Building2, position: 'right', location: "" },
+  //   { date: "2028", title: "Placeholder Milestone 3", description: "Description for future milestone 3.", icon: Building2, position: 'left', location: "" },
   ];
 
   const events = data?.events || defaultEvents;

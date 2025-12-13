@@ -7,30 +7,44 @@ import { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Certified ERPNext & Frappe Partner in Ahmedabad, Gujarat | Finbyz Tech",
-  description: "Finbyz Tech, a certified ERPNext and Frappe Partner in Ahmedabad, offers expert ERP implementation, customization, and support services tailored to your business needs.",
-  keywords: "erpnext partner,\nfrappe partner,\nerpnext partner in ahmedabad, gujarat\nerpnext,\nerpnext software,\nerpnext certified partner in india,\nerpnext service providers,erpnext service in uk,\nerpnext service in Canada,	\nerpnext service provider in uk,\nerpnext certified partners,\nerpnext service provider in Canada,\nerpnext partners in uk,\nERP Software, CRM Software, \nAccounting Software, \nManufacturing Software",
+  title:
+    "ERPNext Support Services | AMC, Bug Fixes, Customization & Functional Support",
+  description:
+    "FinByz Tech provides expert ERPNext support including AMC, bug fixing, customizations, functional support, upgrades and performance optimization.",
+  keywords:
+    "erpnext support services, erpnext amc, erpnext bug fixes, erpnext customization, erpnext maintenance, erpnext technical support, erpnext experts",
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://finbyz.tech/erpnext-certified-partner",
+    canonical: "https://finbyz.tech/erpnext-support-services",
   },
   openGraph: {
-    title: "Certified ERPNext & Frappe Partner in Ahmedabad, Gujarat | Finbyz Tech",
-    description: "Finbyz Tech, a certified ERPNext and Frappe Partner in Ahmedabad, offers expert ERP implementation, customization, and support services tailored to your business needs.",
-    url: "https://finbyz.tech/erpnext-certified-partner",
+    title:
+      "ERPNext Support Services | AMC, Bug Fixes, Customization & Maintenance",
+    description:
+      "Reliable ERPNext support for businesses: AMC, customization, performance optimization, bug fixes, version upgrades and functional consultation.",
+    url: "https://finbyz.tech/erpnext-support-services",
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/Frappe-Certified-parnter-Page Design-SVG.svg", width: 1200, height: 630, alt: "Certified ERPNext & Frappe Partner in Ahmedabad, Gujarat | Finbyz Tech" }],
+    images: [
+      {
+        url: "/images/erpnext-support.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "ERPNext Support Services by Finbyz Tech",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Certified ERPNext & Frappe Partner in Ahmedabad, Gujarat | Finbyz Tech",
-    description: "Finbyz Tech, a certified ERPNext and Frappe Partner in Ahmedabad, offers expert ERP implementation, customization, and support services tailored to your business needs.",
+    title:
+      "ERPNext Support Services | AMC, Bug Fixes, Customization & Maintenance",
+    description:
+      "Professional ERPNext support including bug fixes, customizations, upgrades and ongoing maintenance.",
     creator: "@finbyz",
-    images: ["/files/Frappe-Certified-parnter-Page Design-SVG.svg"],
+    images: ["/images/erpnext-support.jpeg"],
   },
   robots: {
     index: true,
@@ -39,79 +53,102 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
-  }
+  },
 };
 
-export default async function Layout({ children }: { children: React.ReactNode }) {
+export default async function Layout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const structuredData = {
-  "@context": "http://www.schema.org",
-  "@type": "ProfessionalService",
-  "name": "Certified ERPNext & Frappe Partner in Ahmedabad, Gujarat | Finbyz Tech",
-  "url": "https://finbyz.tech/erpnext-certified-partner",
-  "logo": "https://finbyz.tech/files/FinbyzLogo.png",
-  "image": "/files/Frappe-Certified-parnter-Page Design-SVG.svg",
-  "description": "Finbyz Tech, a certified ERPNext and Frappe Partner in Ahmedabad, offers expert ERP implementation, customization, and support services tailored to your business needs.",
-  "priceRange": "INR",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
-    "addressLocality": "Ahmedabad",
-    "addressRegion": "Gujarat",
-    "addressCountry": "IN",
-    "postalCode": "380009"
-  },
-  "telephone": "+919925701446",
-  "openingHours": "Mo, Tu, We, Th, Fr, Sa 10.00:00-19:00",
-  "contactPoint": [
-    {
-      "@type": "ContactPoint",
-      "telephone": "+91 7948912428",
-      "contactType": "customer support",
-      "areaServed": [
-        "IN"
-      ],
-      "availableLanguage": [
-        "Hindi",
-        "Gujarati",
-        "English"
-      ]
-    }
-  ],
-  "sameAs": [
-    "https://www.facebook.com/FinByz",
-    "https://twitter.com/FinByz",
-    "https://www.linkedin.com/company/finbyz",
-    "https://www.youtube.com/c/Finbyz",
-    "https://www.instagram.com/finbyz/"
-  ]
-};
-  const data = await getPageData("Web Page","erpnext-support");
-  const faqsGroup = await getFaqs("Web Page","erpnext-support");
-  
+    "@context": "http://www.schema.org",
+    "@type": "ProfessionalService",
+    name: "ERPNext Support Services | Finbyz Tech",
+    url: "https://finbyz.tech/erpnext-support-services",
+    logo: "https://finbyz.tech/files/FinbyzLogo.png",
+    image: "/images/erpnext-support.jpeg",
+    description:
+      "Expert ERPNext support services including AMC, bug fixing, customization, version upgrades, server optimization and ongoing ERP maintenance.",
+    priceRange: "INR",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress:
+        "FinByz Tech Pvt Ltd, 504-Addor Ambition, Nr. Navrang Circle, Navrangpura, Ahmedabad, Gujarat 380009",
+      addressLocality: "Ahmedabad",
+      addressRegion: "Gujarat",
+      addressCountry: "IN",
+      postalCode: "380009",
+    },
+    telephone: "+919925701446",
+    openingHours: "Mo, Tu, We, Th, Fr, Sa 10.00-19:00",
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: "+91 7948912428",
+        contactType: "customer support",
+        areaServed: ["IN"],
+        availableLanguage: ["Hindi", "Gujarati", "English"],
+      },
+    ],
+    sameAs: [
+      "https://www.facebook.com/FinByz",
+      "https://twitter.com/FinByz",
+      "https://www.linkedin.com/company/finbyz",
+      "https://www.youtube.com/c/Finbyz",
+      "https://www.instagram.com/finbyz/",
+    ],
+  };
+
+  const data = await getPageData("Web Page", "erpnext-support-services");
+  const faqsGroup = await getFaqs("Web Page", "erpnext-support-services");
+
   return (
     <>
-      {/* JSON-LD structured data for LLMs */}
+      {/* JSON-LD structured data */}
       <Script
-        id="structured-data"
+        id="structured-data-support"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
       />
-      {/* Semantic HTML wrapper for better content extraction */}
-      <article itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Certified ERPNext & Frappe Partner in Ahmedabad, Gujarat | Finbyz Tech" />
-        <meta itemProp="description" content="Finbyz Tech, a certified ERPNext and Frappe Partner in Ahmedabad, offers expert ERP implementation, customization, and support services tailored to your business needs." />
-      </article>
-      {children}
-      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
-      {
-        (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
-      }
 
-      <span id="erpnext-support"><BusinessSlider /></span>
+      {/* WebPage schema wrapper */}
+      <article
+        itemScope
+        itemType="https://schema.org/WebPage"
+      >
+        <meta
+          itemProp="name"
+          content="ERPNext Support Services | AMC, Bug Fixing & Customization"
+        />
+        <meta
+          itemProp="description"
+          content="Professional ERPNext support including AMC, bug fixes, customization, upgrades and server optimization."
+        />
+      </article>
+
+      {/* Page Content */}
+      {children}
+
+      {/* FAQ Section */}
+      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
+
+      {/* Gallery + Related Reads */}
+      {(data.galleryItems.length > 0 || data.relatedReads.length > 0) && (
+        <FinbyzGallery
+          relatedReads={data.relatedReads}
+          galleryItems={data.galleryItems}
+        />
+      )}
+
+      {/* Business Slider */}
+      <BusinessSlider />
     </>
   );
 }

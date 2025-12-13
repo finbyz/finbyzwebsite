@@ -56,6 +56,7 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
  
     e.preventDefault();
     if (isSubmitting) return; // stop double click
+    // router.push("/thank-you-for-inquiry");
     setIsSubmitting(true);
     
     try {
@@ -97,34 +98,6 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
         body: JSON.stringify(payload),
       });
       
-
-      if (!res.ok) {
-        const raw = await res.text();
-        let message = raw;
-        try {
-          const json = JSON.parse(raw);
-          message = json.message || json._server_messages || json.exc || raw;
-          if (json.exc_type === 'ValidationError') {
-            message = 'Invalid form data. Please check all fields and try again.';
-          } else if (json.exc_type === 'PermissionError') {
-            message = 'You do not have permission to submit this form. Please contact support.';
-          }
-        } catch {}
-        if (res.status === 409) {
-          alert('We already have your inquiry. Thank you!');
-          setFormData({
-            name: '',
-            organization: '',
-            email: '',
-            mobile: ''
-          });
-          setIsSubmitting(false);
-          return;
-        }
-        throw new Error(message || `Request failed with status ${res.status}`);
-      }
-
-      // Success
 
        //  Redirect after successful submit
       router.push("/thank-you-for-inquiry");

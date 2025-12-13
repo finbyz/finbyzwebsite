@@ -898,7 +898,7 @@ useEffect(() => {
                                           (showAllBlogs ? blogPosts : blogPosts.slice(0, 8)).map((post) => (
                                             <Link
                                               key={post.name}
-                                              href={post.route || "/blog-post"}
+                                              href={`/${post.route}` || "/blog-post"}
                                               className="flex items-center space-x-3 px-3 py-2 text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5 cursor-pointer transition-all rounded-lg text-sm"
                                               onClick={() => {
                                                 setHoveredDropdown(null);
@@ -945,7 +945,7 @@ useEffect(() => {
 
                                               <Link
                                                 key={item.name}
-                                                href={item.route || "/gallery"}
+                                                href={`/${item.route}` || "/gallery"}
                                                 className="flex items-center space-x-3 px-3 py-2 text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5 cursor-pointer transition-all rounded-lg text-sm"
                                                 onClick={() => {
                                                   setHoveredDropdown(null);
@@ -989,9 +989,9 @@ useEffect(() => {
                                               ) : codeSnippets.length === 0 ? (
                                                 <div className="text-sm text-gray-500 px-3 py-2">No code snippets found.</div>
                                               ) : (
-                                                (showAllSnippets ? codeSnippets : codeSnippets.slice(0, 8)).map((snippet) => (
+                                                (showAllSnippets ? codeSnippets : codeSnippets.slice(0, 8)).map((snippet,idx) => (
                                                   <Link
-                                                    key={snippet.route}
+                                                    key={`${snippet.route}-${idx}`}
                                                     href={`/dev-insight/${snippet.route}`}
                                                     className="flex items-center space-x-3 px-3 py-2 text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5 cursor-pointer transition-all rounded-lg text-sm"
                                                     onClick={() => {

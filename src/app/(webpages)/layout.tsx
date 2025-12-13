@@ -18,6 +18,7 @@ export default async function MainLayout({
       <Header />
       <main>
         {children}
+       
         <InquiryForm />
       </main>
       <Footer />

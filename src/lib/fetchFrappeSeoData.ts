@@ -54,7 +54,6 @@ export async function fetchFrappeSchemaData({
     next: { revalidate: 3600 }, // ISR (optional)
     headers: { ...getAuthHeaders() }
   });
-  console.log(process.env.FRAPPE_URL)
 
   const { data }: { data: FrappePageData } = await res.json();
 

@@ -27,6 +27,7 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    router.push("/thank-you-for-inquiry");
     setLoading(true);
 
     try {
@@ -60,7 +61,7 @@ const ContactForm: React.FC = () => {
         setForm(initialState);
         
          //  Redirect after successful submit
-        router.push("/thank-you-for-inquiry");
+  
      
        
       } else {

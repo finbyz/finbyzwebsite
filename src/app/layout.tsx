@@ -3,7 +3,6 @@ import { Inter, Roboto_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import "@/styles/components/inquiry-form.css";
-import "@/styles/components/inquiry-form.css";
 import { MobileMenuProvider } from "@/contexts/MobileMenuContext";
 import BreadcrumbSchema from "@/components/seo/BreadCrumbSchema";
 
@@ -13,6 +12,7 @@ export const dynamic = "force-dynamic";
 const interSans = Inter({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Roboto_Mono({

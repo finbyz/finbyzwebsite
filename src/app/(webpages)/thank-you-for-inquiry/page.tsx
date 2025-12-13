@@ -29,10 +29,11 @@ export default function Page() {
         }}
       />
       <Section>
-        <div className="container-custom py-8 flex justify-center">
+        <div className="container-custom py-8 ">
           <ThankYouCard
             title="Thank you for Inquiry"
-            message="Thanks for reaching out! We're excited to assist you. Our team is on it and will get back to you soon."
+            // message="Thanks for reaching out! We're excited to assist you. Our team is on it and will get back to you soon."
+            message="Thanks for reaching out! We're excited to assist you. Our team is on it and will get back to you soon. In the meantime, feel free to explore our resources or reach out if you have any urgent questions. We truly appreciate your interest and look forward to connecting with you!"
             buttonText="Home"
             buttonAction={handleHome}
           />

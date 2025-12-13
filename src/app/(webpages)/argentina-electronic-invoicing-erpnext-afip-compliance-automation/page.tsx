@@ -112,26 +112,28 @@ export default function Page() {
         <div className="text-justify">
           <div className="space-y-3 animate-fade-in-up">
           <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-            1. Para obtener el certificado por primera vez, hay que dar de alta al DN. Para esto hay que presentar una ‘solicitud de certificado’ o ‘Certificate Signing Request’ (CSR).
+            1. To obtain the certificate for the first time, the DN must be registered. To do this, you must submit a ‘certificate request’ or ‘Certificate Signing Request’ (CSR)
             </p>
             <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-            2. El CSR se genera en su computadora, usando la herramienta OpenSSL… Primero hay que generar una clave privada en formato PKCS10 con un mínimo de 2048 bits: openssl genrsa -out MiClavePrivada 2048.
+            2. The CSR is generated on your computer using the OpenSSL tool… First, you must generate a private key in PKCS10 format with a minimum of 2048 bits : openssl genrsa -out MyPrivateKey 2048
             </p>
             <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-              3. Luego hay que generar el CSR propiamente dicho:
+              3. Then you must generate the CSR itself:
               <br />
               openssl req 
               <br />
               -new
               <br />
-              -key MiClavePrivada
+              -key MyPrivateKey
               <br />
               -subj "/C=AR/O=subj_o/CN=subj_cn/serialNumber=CUIT subj_cuit"
               <br />
-              -out MiPedidoCSR
+              -out MyCSRRequest
             </p>
             <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-            4. Observar que en el serialNumber se escribe ‘CUIT’ seguido de un espacio en blanco y a continuación los 11 dígitos de la CUIT sin separadores.
+            4. Note that in the serialNumber field, you must write ‘CUIT’ followed by a blank space and then the 11 digits of the CUIT without separators.
+
+ 
             </p>
 
           </div>
@@ -149,24 +151,26 @@ export default function Page() {
         <div className="text-justify">
           <div className="space-y-3 animate-fade-in-up">
           <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-            1. Opción: ‘Nuevo Certificado’ para acceder al formulario para crear un DN y el certificado inicialmente asociado al mismo.
+            1. Select the option: ‘New Certificate’ to access the form to create a DN and the certificate initially associated with it.
             </p>
             <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-            2. Los campos a ingresar en el formulario son:
+            2. The fields to enter in the form are:
                <br />
-              – Nombre simbólico del DN. 
+               – Symbolic name of the DN.
               <br />
-              – CUIT del contribuyente.
+              – CUIT of the taxpayer.
               <br />
-              – Solicitud de certificado en formato PKCS10.
+              – Certificate request in PKCS10 format.
               <br />
             </p>
             <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-            4. Luego presionar ‘Crear DN y Obtener Certificado’. Si no hay errores, el sistema devuelve un certificado x509 en formato PEM.
+            4. Then click ‘Create DN and Obtain Certificate’. If there are no errors, the system returns an x509 certificate in PEM format.
             </p>
 
             <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-            5. Luego hay que copiarlo y pegarlo en un editor de texto plano, para grabarlo en su disco duro local.
+            5. Then you must copy and paste it into a plain text editor to save it on your local hard drive.
+
+ 
             </p>
 
           </div>
@@ -183,17 +187,17 @@ export default function Page() {
         <div className="text-justify">
           <div className="space-y-3 animate-fade-in-up">
           <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-          Si se necesita crear un archivo PFX se puede usar OpenSSL. Por ejemplo:
+          If you need to create a PFX file, you can use OpenSSL. For example:
                <br />
-               openssl pkcs12 
+               openssl pkcs12   
               <br />
               -export
               <br />
-              -inkey MiClavePrivada
+              -inkey MyPrivateKey
               <br />
-              -in certificado.pem
+              -in certificate.pem
               <br />
-              -out certificado.pfx
+              -out certificate.pfx
             </p>
 
           </div>
@@ -202,29 +206,44 @@ export default function Page() {
 
 
       <Section>
-        <div className="">
+        <div className="text-justify">
+          <div className="space-y-3 animate-fade-in-up">
           <h6 className="text-2xl font-semibold mt-4 flex items-center gap-2 py-8">Production Certificate (ARCA)</h6>
-        </div>
-        <List
-              title=""
-              items={[
-                'Ingresar al portal de ARCA (www.arca.gob.ar) y presionar el botón ‘Iniciar sesión’.',
-                'Ingresar su ‘CUIT / CUIL / CDI’ y ‘clave’ y cliquear en ‘INGRESAR.',
-                'Seleccionar el servicio ‘Administración de Certificados Digitales’.',
-                'Cliquear en ‘Nueva Relación’… Seleccionar el servicio ‘Administración de Certificados Digitales’… Presionar el botón ‘Confirmar’.',
-                'Salir del sistema y volver a ingresar.',
-                'Seleccionar el contribuyente.',
-                'Cliquear en ‘Agregar alias’.',
-                'Elegir un nombre para el alias y subir un CSR.',
-                'Cliquear en ‘Ver’… para poder visualizar y descargar a su PC el certificado.',
+          <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+            1. Go to the ARCA portal (www.arca.gob.ar) and click the ‘Log In’ button.
+            </p>
+            <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+            2. Enter your ‘CUIT / CUIL / CDI’ and ‘password’ and click ‘LOGIN’.
+            </p>
+            <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+            3. Select the service ‘Digital Certificate Administration’.
+            </p>
+            <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+            4. Click ‘New Relationship’… Select the service ‘Digital Certificate Administration’… Press the ‘Confirm’ button.
+            </p>
+            <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+            5. Log out of the system and log back in.
+            </p>
+            <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+            6. Select the taxpayer.
+            </p>
+            <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+            7. Click on ‘Add alias’.
+            </p>
+            <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+            8. Choose a name for the alias and upload a CSR.
+            </p>
+            <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+            9. Click on ‘View’… to visualize and download the certificate to your PC.
+            </p>
 
-              ]}
-            />
+          </div>
+        </div>
       </Section>
      
       <Section>
         <div className="">
-        <h6 className="text-2xl font-semibold mb-2 mt-6 flex items-center gap-2 text-[#1A5276]">Step 2: Configuring AFIP Settings </h6>
+        <h6 className="text-2xl font-semibold mb-2 mt-8 flex items-center gap-2 text-[#1A5276]">Step 2: Configuring AFIP Settings </h6>
         </div>
       </Section>
 
@@ -245,7 +264,7 @@ export default function Page() {
               CUIT Number, 
               Use SandBox Environment: Testing or Production, 
               Certificate File & Private Key : Upload "
-              image="/images/afip_setting.png"
+              image="/images/image (1).png"
               alt="Generate Electronic-Invoice"
             />
             <ProcessStepImageCard
@@ -530,6 +549,9 @@ export default function Page() {
           <div className="text-gray-900 text-lg">
             <p>
             GNU GPL V3. (See <Link href="https://github.com/finbyz/argentina_compliance/blob/version-15/license.txt" className="text-blue-600 underline" target="_blank">license.txt</Link> for more information).
+            </p>
+            <p>
+            The code is licensed under the GNU General Public License (v3), and copyright is owned by FinByz Tech Pvt Ltd. 
             </p>
           </div>
 

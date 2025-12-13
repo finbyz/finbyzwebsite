@@ -19,7 +19,7 @@ export default function Page() {
           alt: 'Career Growth & Innovation at a Leading Tech Company',
           src:'/images/why-join-finbyz.png',
         }}
-        primaryButton={{ text: 'Get Started',action: 'https://finbyz.tech/contact' }}
+        primaryButton={{ text: 'Get Started',action: '/jobs' }}
         secondaryButton={{ text: 'Learn More' ,action: () => {
           const el = document.getElementById('why-join');
           if (el) el.scrollIntoView({ behavior: 'smooth' });

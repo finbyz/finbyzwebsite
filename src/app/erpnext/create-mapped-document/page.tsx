@@ -1,36 +1,16 @@
 import CodeSnippetHero from "@/components/code-snippets/code-snippet-hero";
 import CodeBlock from "@/components/code-snippets/code-block";
-import CodeSnippetInstroduction from "@/components/code-snippets/code-introduction";
 import CodeOverview from "@/components/code-snippets/code-overview";
 import KeyConcepts from "@/components/code-snippets/key-concepts";
 import StepByStepTutorial from "@/components/code-snippets/step-by-step-tutorial";
 import Troubleshooting from "@/components/code-snippets/troubleshooting";
 
-const CreateMappedDocumentPage = () => {
-  return (
-    <main>
-      <CodeSnippetHero
-        title="How to Create a New Document from Another in Frappe using get_mapped_doc?"
-        description="Learn how to use Frappe's get_mapped_doc server-side utility to map fields and create new documents like Sales Orders or Meetings from source DocTypes in Python."
-        snippetName="Create Mapped Document"
-        language="Python"
-        category="Frappe Server Script"
-        accentColor="blue"
-      />
-      <CodeSnippetInstroduction 
-        paragraphs={[
-          "In Frappe and ERPNext, it's a common requirement to create one document from another, for example, creating a Sales Order from a Quotation or a Meeting from a Schedule. The framework provides a powerful utility, `get_mapped_doc`, to streamline this process.",
-          "This snippet demonstrates how to use this server-side mapping function, including basic field-to-field mapping and more advanced scenarios like populating child tables."
-        ]}
-      />
-      <CodeBlock
-        language="python"
-        code={`# Import below library
+const codeSnippet = `// Import below library
 from frappe.model.mapper import get_mapped_doc
-import frappe
 
 @frappe.whitelist()
 def make_meeting(source_name, target_doc=None):
+	
 	doclist = get_mapped_doc("Meeting Schedule", source_name, {
 			"Meeting Schedule":{
 				"doctype": "Meetings",
@@ -43,7 +23,7 @@ def make_meeting(source_name, target_doc=None):
 	
 	return doclist
 
-# Another Example for mapping different field names and child tables
+// Another Example for mapping different field names
 @frappe.whitelist()
 def make_so(source_name, target_doc=None):
 	def set_missing_values(source, target):
@@ -57,8 +37,7 @@ def make_so(source_name, target_doc=None):
 			"qty":source.available_qty,
 			"rate":source.rate
 		})
-
-	doclist = get_mapped_doc("Sauda Details", source_name, {
+doclist = get_mapped_doc("Sauda Details", source_name, {
 			"Sauda Details": {
 				"doctype": "Sales Order",
 				"field_map": {
@@ -67,86 +46,126 @@ def make_so(source_name, target_doc=None):
 				}
 			},
 		}, target_doc, set_missing_values)
+return doclist`;
 
-	return doclist`}
+export default function Page() {
+  return (
+    <>
+      <CodeSnippetHero
+        title="How to Create Mapped Documents in Frappe for ERPNext Customizations?"
+        description="Utilize the Frappe get_mapped_doc API server-side to automate document mapping from source to target DocTypes with custom field maps and value setters."
+        snippetName="Create Mapped Document"
+        language="Python"
+        category="Frappe Server Scripts"
+        accentColor="blue"
       />
+
+      <section className="container-custom">
+        <h2>Introduction</h2>
+        <p>
+          In ERPNext development, automating the creation of documents based on existing records accelerates business workflows and reduces errors. This snippet demonstrates
+          using Frappe's <code>get_mapped_doc</code> function in a server script to map fields from one DocType (such as <em>Meeting Schedule</em> or <em>Sauda Details</em>)
+          to another (e.g., <em>Meetings</em> or <em>Sales Order</em>), handling different field names and custom child table data.
+          This approach is essential when implementing custom buttons or triggers that transform data according to unique business logic within ERPNext.
+        </p>
+      </section>
+
+      <CodeBlock
+        code={codeSnippet}
+        language="python"
+        fileName="server_scripts/create_mapped_doc.py"
+        showLineNumbers={true}
+        allowCopy={true}
+        referenceLink="https://frappeframework.com/docs/v14/user/en/api/model#frappe.model.mapper.get_mapped_doc"
+        referenceLinkText="frappe.model.mapper.get_mapped_doc official documentation"
+      />
+
       <CodeOverview
-        whatItDoes="This script defines two whitelisted Python functions that use get_mapped_doc to create a new target document (e.g., 'Meetings', 'Sales Order') from a source document, automatically mapping specified fields and handling child table data."
-        whenToUse="Use this pattern in server scripts that are triggered by a custom button on a form, a workflow action, or any backend process where you need to create a related document with pre-filled data from a source."
-        prerequisites={[
-          "A basic understanding of Frappe DocTypes and Server Scripts.",
-          "The source and target DocTypes must exist in your Frappe site."
-        ]}
+        whatItDoes="Automates creation of a new DocType document by mapping fields from an existing document using get_mapped_doc. Handles custom field mappings and allows custom logic to set additional values."
+        whenToUse="Use in server-side triggers such as @frappe.whitelist methods called from buttons or API endpoints when data from one DocType needs to be transformed and saved as another."
+        prerequisites={["Frappe server script knowledge", "Understanding of ERPNext DocType relationships", "Basic Python familiarity"]}
       />
+
       <KeyConcepts
         concepts={[
           {
-            title: "The @frappe.whitelist() Decorator",
-            description: "This decorator exposes a Python function to be callable from the client-side (JavaScript). It's essential for functions that will be triggered by UI actions like button clicks.",
-            relatedLink: "https://frappeframework.com/docs/user/en/basics/server-script#whitelisted-functions"
+            title: "get_mapped_doc",
+            description: "Frappe API to map and create new documents based on a source document, specifying field mappings and custom callbacks.",
+            relatedLink: "https://frappeframework.com/docs/v14/user/en/api/model#frappe.model.mapper.get_mapped_doc"
           },
           {
-            title: "frappe.model.mapper.get_mapped_doc",
-            description: "A core Frappe API function that facilitates the creation of a new document from a source document. It takes the source DocType, source document name, a mapping configuration, and an optional post-processing function.",
-            relatedLink: "https://frappeframework.com/docs/user/en/api/model#frappe.model.mapper.get_mapped_doc"
+            title: "DocType",
+            description: "The fundamental data model in ERPNext representing forms and database schema.",
+            relatedLink: "https://frappeframework.com/docs/v14/user/en/basics/documents"
           },
           {
-            title: "Field Mapping Configuration",
-            description: "The 'field_map' dictionary is the heart of the mapping process. It defines which fields in the source document correspond to which fields in the target document. You can map fields with different names.",
-            relatedLink: "https://frappeframework.com/docs/user/en/basics/doctypes/document-links#mapping-fields"
+            title: "@frappe.whitelist",
+            description: "Decorator to expose server-side Python methods for client-side calls or via REST API.",
+            relatedLink: "https://frappeframework.com/docs/v14/user/en/api/server#whitelisted-methods"
           }
         ]}
       />
+
       <StepByStepTutorial
         steps={[
           {
             stepNumber: 1,
-            title: "Create the Python Server Script",
-            explanation: "First, create a new Python file in your custom Frappe app's module directory (e.g., `my_app/my_app/api.py`). This file will contain your whitelisted function.",
-            code: `# my_app/my_app/api.py\nfrom frappe.model.mapper import get_mapped_doc\nimport frappe`,
+            title: "Import get_mapped_doc API",
+            explanation: "Import the helper method from frappe.model.mapper to utilize its powerful document mapping capabilities.",
+            code: "from frappe.model.mapper import get_mapped_doc",
             language: "python"
           },
           {
             stepNumber: 2,
-            title: "Define the Basic Mapping Function",
-            explanation: "Define a whitelisted function that takes the `source_name` as an argument. Inside, call `get_mapped_doc` with the source DocType, source name, and a dictionary defining the target DocType and its `field_map`.",
-            code: `import frappe\nfrom frappe.model.mapper import get_mapped_doc\n\n@frappe.whitelist()\ndef make_meeting(source_name, target_doc=None):\n    doclist = get_mapped_doc(\"Meeting Schedule\", source_name, {\n        \"Meeting Schedule\": {\n            \"doctype\": \"Meetings\",\n            \"field_map\": {\n                \"meeting_from\": \"scheduled_from\",\n                \"meeting_to\": \"scheduled_to\"\n            }\n        }\n    }, target_doc)\n    return doclist`,
+            title: "Define the mapping function",
+            explanation: "Create a whitelisted function that takes a source document name and optionally a target document to populate or create.",
+            code: "@frappe.whitelist()\ndef make_meeting(source_name, target_doc=None):",
             language: "python"
           },
           {
             stepNumber: 3,
-            title: "Handle Complex Mapping with Child Tables",
-            explanation: "For more complex scenarios, like mapping items to a child table, you can pass a post-processing function (`set_missing_values` in this case) to `get_mapped_doc`. This function receives the source and target documents and allows you to programmatically add child table rows.",
-            code: `@frappe.whitelist()\ndef make_so(source_name, target_doc=None):\n    def set_missing_values(source, target):\n        # Logic to map child table items\n        target.append(\"items\", {\n            \"item_code\": source.item,\n            \"item_name\": source.item_name,\n            \"qty\": source.available_qty,\n            # ... other fields\n        })\n\n    doclist = get_mapped_doc(\"Sauda Details\", source_name, {\n        \"Sauda Details\": {\n            \"doctype\": \"Sales Order\",\n            \"field_map\": {\n                \"name\": \"sauda_ref\",\n                \"shipment_to\": \"delivery_date\",\n            }\n        },\n    }, target_doc, set_missing_values)\n    return doclist`,
+            title: "Set up mapping rules",
+            explanation: "Configure the from-to field mapping in a dictionary with the source DocType as key and a mapping with the target DocType and any necessary field maps.",
+            code: `doclist = get_mapped_doc("Meeting Schedule", source_name, {"Meeting Schedule": {"doctype": "Meetings", "field_map": {"meeting_from": "scheduled_from", "meeting_to": "scheduled_to"}}}, target_doc)`,
             language: "python"
           },
           {
             stepNumber: 4,
-            title: "Trigger the Function from a Custom Button",
-            explanation: "Finally, add a custom button to your source DocType's form script (e.g., `Meeting Schedule.js`). This button will call the whitelisted server script function using `frappe.call`, passing the current document's name.",
-            code: `frappe.ui.form.on('Meeting Schedule', {\n    refresh: function(frm) {\n        frm.add_custom_button(__('Create Meeting'), function() {\n            frappe.call({\n                method: 'my_app.my_app.api.make_meeting',\n                args: {\n                    source_name: frm.doc.name\n                },\n                callback: function(r) {\n                    if (r.message) {\n                        frappe.set_route('Form', r.message.doctype, r.message.name);\n                    }\n                }\n            });\n        });\n    }\n});`,
-            language: "javascript"
+            title: "Handle advanced mapping with callbacks",
+            explanation: "For complex transformations like mapping child tables or setting missing values, define a callback function that modifies the target document.",
+            code: `def set_missing_values(source, target):\n    target.append(\"items\", {\n        \"item_code\": source.item,\n        \"item_name\": source.item_name,\n        \"description\": source.item_name,\n        \"uom\": source.uom,\n        \"stock_uom\": source.stock_uom,\n        \"qty\": source.available_qty,\n        \"rate\": source.rate\n    })`,
+            language: "python"
+          },
+          {
+            stepNumber: 5,
+            title: "Return the mapped document",
+            explanation: "Return the mapped document list so it can be saved or further processed.",
+            code: "return doclist",
+            language: "python"
           }
         ]}
       />
+
       <Troubleshooting
         items={[
           {
-            problem: "The frappe.call from the client-side fails with an error indicating the method module cannot be found.",
-            solution: "Ensure the Python method path in your `frappe.call` is correct. It should be in the format 'app_name.path.to.file.function_name'. Also, make sure you have run `bench restart` after adding the new Python file or function to your app."
+            problem: "Mapped document fields not updating as expected.",
+            solution: "Verify that field_map keys correctly match the source document field names and target document field names. Check for typos and naming mismatches."
           },
           {
-            problem: "Some fields from the source document are not appearing in the newly created target document.",
-            solution: "Double-check your `field_map` configuration. The keys should be the fieldnames from the source DocType and the values should be the fieldnames from the target DocType. Also, verify that the field types are compatible between the source and target fields."
+            problem: "Child table entries missing after mapping.",
+            solution: "Use a callback function (e.g., set_missing_values) to manually append child table rows as get_mapped_doc does not automatically map child table fields unless specified."
           },
           {
-            problem: "Child table data is missing.",
-            solution: "Mapping child tables often requires a custom `set_missing_values` function passed as the last argument to `get_mapped_doc`. Ensure your function correctly iterates through source data and uses `target.append('child_table_fieldname', {...})` to create new rows in the target child table."
+            problem: "Permission errors when calling make_meeting from client side.",
+            solution: "Ensure the server function is decorated with @frappe.whitelist and the user has appropriate permissions to access the involved DocTypes."
+          },
+          {
+            problem: "Unexpected data types or missing fields in mapped document.",
+            solution: "Add logging using frappe.logger or print statements in the server function to debug source and target field values during mapping."
           }
         ]}
       />
-    </main>
+    </>
   );
-};
-
-export default CreateMappedDocumentPage;
+}

@@ -1,3 +1,5 @@
+import Footer from "@/components/layout/footer";
+import Header from "@/components/layout/header";
 import BusinessSlider from "@/components/sections/business-slider";
 import { Metadata } from "next";
 import Script from "next/script";
@@ -84,10 +86,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <meta itemProp="name" content="Career Growth & Innovation at a Leading Tech Company" />
         <meta itemProp="description" content="Explore dynamic career opportunities at a top ERPNext & AI automation firm. Join a team passionate about innovation, learning, and making a real business impact." />
       </article>
+      <Header/>
       
       {children}
+      <Footer/>
       
-      <BusinessSlider />
+      {/* <BusinessSlider /> */}
     </>
   );
 }
