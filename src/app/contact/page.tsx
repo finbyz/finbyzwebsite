@@ -92,7 +92,7 @@ export default function Page() {
             text: 'Call Us',
             icon: 'Phone',
             action: () => {
-              window.open('tel:9925701446', '_self');
+              window.open('tel:+919925701446', '_self');
             }
           },
           trustIndicator: {
