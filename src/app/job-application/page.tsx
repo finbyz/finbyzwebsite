@@ -163,13 +163,12 @@ export default function JobApplication() {
       formData.append("data", JSON.stringify(updateData));
 
       if (selectedFile) {
-        console.log("Appending resume file:", selectedFile.name, "Size:", selectedFile.size, "bytes");
+        
         formData.append("resume", selectedFile, selectedFile.name);
       } else {
         console.warn("⚠️ No resume file selected for update");
       }
 
-      console.log("Sending update request to API...");
       const res = await fetch(
         "/web-api/fb/method/finbyz.job_application_api.update_resume_and_cover_letter",
         {
@@ -178,13 +177,11 @@ export default function JobApplication() {
         }
       );
 
-      console.log("=== UPDATE RESPONSE ===");
-      console.log("Response status:", res.status);
-      console.log("Response status text:", res.statusText);
+
 
       if (res.ok) {
         const responseData = await res.json();
-        console.log("✓ Update successful:", responseData);
+  
         alert("Resume and cover letter updated successfully.");
         setShowUpdateModal(false);
         setExistingApplicant(null);
@@ -212,13 +209,9 @@ export default function JobApplication() {
       alert("An error occurred while updating your application. Please try again.");
     } finally {
       setIsSubmitting(false);
-      console.log("=== UPDATE APPLICATION ENDED ===");
+      
     }
   };
-
-
-
-
 
 
   const handleRemoveFile = () => {
@@ -232,9 +225,7 @@ export default function JobApplication() {
   // Function to fetch existing applicant ID based on email and job_title
   const fetchExistingApplicant = async (email: string, jobTitle: string): Promise<string | null> => {
     try {
-      console.log("=== FETCHING EXISTING APPLICANT ===");
-      console.log("Email:", email);
-      console.log("Job Title:", jobTitle);
+    
 
       const url = `/web-api/fb/method/finbyz.job_application_api.get_existing_applicant?email=${encodeURIComponent(email)}&job_title=${encodeURIComponent(jobTitle)}`;
       const response = await fetch(url);
@@ -245,11 +236,9 @@ export default function JobApplication() {
       }
 
       const data = await response.json();
-      console.log("Existing applicant response:", data);
 
       // The response structure might be data.message or data.message.message
       const applicantId = data.message?.applicant_id || data.message?.message?.applicant_id || data.message;
-      console.log("Extracted applicant ID:", applicantId);
 
       return applicantId;
     } catch (error) {
@@ -335,7 +324,7 @@ export default function JobApplication() {
 
           // Check for UniqueValidationError
           if (json.exc_type === "UniqueValidationError") {
-            console.log("✓ UniqueValidationError detected");
+
 
             // Try multiple paths to find the existing applicant ID
             applicantId = json.existing_applicant ||
@@ -414,7 +403,6 @@ export default function JobApplication() {
                 
                 applicantId = messageObj.existing_applicant || messageObj.data?.existing_applicant;
               } catch (e) {
-                console.log("Message is not valid JSON, checking if it contains applicant ID");
                 // Try to extract from string pattern like "existing_applicant: XXXXX"
                 const match = json.message.match(/existing_applicant[:\s]+([A-Z0-9-]+)/i);
                 if (match) {
@@ -426,7 +414,7 @@ export default function JobApplication() {
 
             // Check _server_messages if still not found
             if (!applicantId && json._server_messages) {
-              console.log("Checking _server_messages:", json._server_messages);
+      
               try {
                 const serverMsgs = typeof json._server_messages === 'string'
                   ? JSON.parse(json._server_messages)
@@ -437,7 +425,6 @@ export default function JobApplication() {
                     const msgObj = typeof msg === 'string' ? JSON.parse(msg) : msg;
                     if (msgObj.existing_applicant) {
                       applicantId = msgObj.existing_applicant;
-                      console.log("Found applicant ID in _server_messages:", applicantId);
                       break;
                     }
                   }
@@ -447,7 +434,7 @@ export default function JobApplication() {
               }
             }
 
-            console.log("Final extracted applicant ID from 409/417:", applicantId);
+            
             shouldShowUpdateModal = true;
           }
           else if (json.exc_type === "ValidationError") {
@@ -462,7 +449,7 @@ export default function JobApplication() {
         // Show update modal if duplicate detected
         if (shouldShowUpdateModal) {
           if (applicantId) {
-            console.log("✓ Setting existing applicant and showing modal:", applicantId);
+          
             setExistingApplicant(applicantId);
             setShowUpdateModal(true);
             return;
