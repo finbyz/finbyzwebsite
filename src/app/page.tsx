@@ -9,6 +9,9 @@ import ResponsiveCardGrid from "@/components/sections/responsive-card-grid";
 import BusinessSlider from "@/components/sections/business-slider";
 import InquiryForm from "@/components/ui/InquiryForm";
 import { Metadata } from "next";
+import FAQ from "@/components/ai_components/FAQ";
+import { getFaqs, getPageData } from "@/lib/getPageData";
+
 
 export const metadata: Metadata = {
   title: "Best ERP Software Company in India | FinByz Tech",
@@ -54,7 +57,10 @@ export const metadata: Metadata = {
   }
 };
 
-export default function Home() {
+
+export default async function Home() {
+  const faqsGroup = await getFaqs("Web Page","homepage");
+  console.log(faqsGroup)
   return (
     <div className="min-h-screen">
       <Header />
@@ -154,6 +160,12 @@ export default function Home() {
             submitText: "SUBMIT"
           }}
         />
+
+        {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
+      
+        
+    
+       
 
         {/* Contact form (simple, compact) */}
         {/* If you want this on a separate page, we can move it to /contact */}
