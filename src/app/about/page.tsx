@@ -5,8 +5,8 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import HeroSection from '@/components/sections/dynamic-hero';
 
-import { FAQSection, TimelineCarousel } from "@/components/ui/ComponentShowcase3";
-import CompanyHistoryTimeline from "@/components/ui/CompanyHistoryTimeline";
+// Lazy-loaded heavy components for better performance
+import { LazyFAQSection, LazyCompanyHistoryTimeline } from "@/lib/lazy-components";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
@@ -218,8 +218,8 @@ export default function AboutPage() {
         {/* Timeline Section */}
         
 
-        {/* Company History Timeline */}
-        <CompanyHistoryTimeline />
+        {/* Company History Timeline - Lazy loaded for performance */}
+        <LazyCompanyHistoryTimeline />
 
         {/* Values Section */}
         <section className="py-24 ">
@@ -300,8 +300,8 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <FAQSection />
+        {/* FAQ Section - Lazy loaded for performance */}
+        <LazyFAQSection />
 
         {/* Related Pages */}
         <section className="py-12 bg-gradient-to-br from-gray-50 via-white to-blue-50">

@@ -200,8 +200,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                   width={600} 
                   height={450}
                   className="w-full h-auto rounded-2xl object-contain mx-auto"
-                  loading="lazy"
-                  priority={false}
+                    priority
                 />
               )}
               {/* "w-full h-auto max-h-[520px] rounded-2xl object-contain" */}
