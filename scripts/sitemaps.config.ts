@@ -114,6 +114,15 @@ const config: SitemapConfig[] = [
     priority: 0.6,
     exclude: [],
   },
+  {
+    name: 'dev-insights',
+    type: 'filesystemDir',
+    dir: 'erpnext',
+    routePrefix: '/erpnext/',
+    changefreq: 'weekly',
+    priority: 0.7,
+    exclude: [],
+  },
 ]
 
 export default config
