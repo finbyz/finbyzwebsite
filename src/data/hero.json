@@ -1,11 +1,11 @@
 {
-  "title": "{{ title | default('Empower Your Business with AI & ERP') }}",
-  "subtitle": "{{ subtitle | default('Unlock efficiency, automation, and growth with next-gen technology and expert talent.') }}",
+  "title": "{{ title | default('Certified ERPNext Partner & AI Automation Experts') }}",
+  "subtitle": "{{ subtitle | default('Transform your business with Frappe-powered ERP software, intelligent AI automation, and custom software development. Serving enterprises in New York, London, Dubai, Sydney, and 50+ cities worldwide.') }}",
   "primaryButton": "{{ primary_button | default('Book a Free Consultation') }}",
   "secondaryButton": "{{ secondary_button | default('Contact Us') }}",
   "image": {
     "src": "{{ image.src | default('/Hero Brain 2.png') }}",
-    "alt": "{{ image.alt | default('ERP AI Automation Technology Illustration') }}"
+    "alt": "{{ image.alt | default('ERPNext Implementation and AI Automation Technology by Finbyz Tech') }}"
   },
   "scrollTarget": "{{ scroll_target | default('services') }}"
 }

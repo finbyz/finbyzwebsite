@@ -49,29 +49,46 @@ export default function AboutPage() {
 
   const valuesItems = [
     {
-      icon: Target,
-      title: "Clarity Over Complexity",
-      description: "We untangle complex tech and business challenges into structured, actionable solutions."
+      icon: Cpu,
+      title: "Technology in Genes",
+      description: "Innovative ERPNext and Frappe solutions that work. We leverage advanced technologies to provide ERP software implementations that are easy to adopt and scale."
     },
     {
-      icon: Heart,
-      title: "Ownership with Empathy",
-      description: "We treat your business as our own — always mindful of the people and impact behind every decision."
+      icon: Target,
+      title: "Problem Solving Attitude",
+      description: "Improvise, Adapt, Overcome! Our ERPNext consultants diagnose business operations and provide valuable insights for AI-powered process improvements."
     },
     {
       icon: Award,
-      title: "Precision in Execution",
-      description: "Whether it's a workflow or automation, we aim for excellence, not shortcuts."
+      title: "Domain Expertise",
+      description: "We understand your ERP requirements better. Mixing our industry expertise with Frappe technology, we create innovative automation solutions for businesses worldwide."
     },
     {
-      icon: TrendingUp,
-      title: "Sustainable Growth",
-      description: "We build systems that scale — not just quickly, but wisely and sustainably."
+      icon: Heart,
+      title: "Values at Core",
+      description: "Honesty, Integrity, Respect. These values are the foundation of Finbyz Tech. We never let success supersede the moral values we carry along."
+    }
+  ];
+
+  // Team members data
+  const teamMembers = [
+    {
+      name: "Mukesh Variyani",
+      role: "Managing Director",
+      description: "Mukesh believed professional management practice can help companies outshine peers, and decided to play his role through Finbyz in bringing this change for clientele through IT and Financial expertise.",
+      image: "/images/team/mukesh.jpg"
     },
     {
-      icon: Users,
-      title: "Collaboration is Core",
-      description: "We co-create with our clients, staying agile as business needs evolve."
+      name: "Nishita Variyani",
+      role: "Director",
+      description: "Nishita holds a Master's degree in Computer Science. Building a strong team of developers, she adds value by strengthening the technical foundation for Finbyz Tech.",
+      image: "/images/team/nishita.jpg"
+    },
+    {
+      name: "Ravin Ramoliya",
+      role: "Functional Consultant",
+      description: "He is a key player of the implementation team with expertise in ERPNext. Part of 30+ ERP implementations, he understands customer pain points and builds strong rapport with end users.",
+      image: "/images/team/ravin.jpg"
     }
   ];
 
@@ -100,11 +117,11 @@ export default function AboutPage() {
       <Header />
       <main className="">
         <HeroSection
-        headline="About Finbyz Tech"
-        highlightWords={["Finbyz", "Erp", "Ai","Erpnext"]}
-        description="Where business challenges meet sharp solutions"
+          headline="About Finbyz Tech - Certified ERPNext Partner"
+          highlightWords={["Finbyz", "ERPNext", "AI", "Frappe"]}
+          description="Your trusted ERPNext implementation partner and AI automation experts since 2015"
         heroImage={{
-          alt: 'Timeline and visual roadmap of Finbyz Tech as a business solution provider',
+          alt: 'Finbyz Tech ERPNext Implementation Partner and AI Automation Experts',
           src: '/AboutUs-removebg-preview.png'
         }}
         />
@@ -113,59 +130,54 @@ export default function AboutPage() {
         <section className="py-16">
           <div className="container-custom">
             <p className="text-xl md:text-xl text-gray-700 leading-relaxed">
-              We're not just a tech company — we're your strategic partner in navigating complexity. Since 2015, Finbyz Tech has empowered businesses with tailored digital solutions that unlock clarity, drive efficiency, and accelerate outcomes. From planning to execution, we simplify the road to transformation.
+              As a <strong>certified ERPNext implementation partner</strong> and <strong>Frappe framework experts</strong>, Finbyz Tech has been transforming businesses since 2015. We specialize in <strong>ERP software implementation</strong>, <strong>AI-powered automation</strong>, and <strong>custom software development</strong> for enterprises across New York, London, Dubai, Sydney, and 50+ cities worldwide. From strategic planning to execution, we simplify digital transformation and accelerate business outcomes.
             </p>
           </div>
         </section>
 
         {/* Mission & Vision Section */}
-        <section className="py-8">
+        <section className="py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
           <div className="container-custom">
-            <div className="text-center mb-16">
-              {/* <Badge className="mb-6 bg-gradient-to-r from-green-500 to-blue-600 text-white border-0">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Our Foundation
-              </Badge> */}
-              <h2 className="text-4xl md:text-5xl font-bold text-[#1A5276] mb-6">
-                Our Tagline, Mission, and Vision
               </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                The principles that drive our ERPNext implementations and AI automation solutions
+              </p>
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-700 bg-white/80 backdrop-blur-sm overflow-hidden group hover:scale-105">
-                <CardHeader className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4  rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <Target className="w-8 h-8 text-black" />
-                  </div>
-                  <CardTitle className="text-xl font-bold text-gray-800">Tagline</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-gray-600 leading-relaxed font-semibold text-lg italic">Steer Your Vision</p>
-                </CardContent>
-              </Card>
+              {/* Tagline Card */}
+              <div className="bg-gradient-to-br from-[#1A5276] to-[#2980B9] rounded-2xl p-8 text-center flex flex-col justify-center min-h-[280px] shadow-xl hover:scale-105 transition-all duration-500">
+                <div className="w-16 h-16 mx-auto mb-6 bg-white/20 rounded-full flex items-center justify-center">
+                  <Target className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">Tagline</h3>
+                <p className="text-3xl font-bold text-orange-400 italic">"Steer Your Vision"</p>
+              </div>
               
-              <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-700 bg-white/80 backdrop-blur-sm overflow-hidden group hover:scale-105">
-                <CardHeader className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4  rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <TrendingUp className="w-8 h-8 text-black" />
-                  </div>
-                  <CardTitle className="text-xl font-bold text-gray-800">Vision</CardTitle>
-                </CardHeader>
-                <CardContent className="text-justify">
-                  <p className="text-gray-600 leading-relaxed">To shape a world where every great business idea has a technology partner ready to steer it to success.</p>
-                </CardContent>
-              </Card>
+              {/* Vision Card */}
+              <div className="bg-white rounded-2xl p-8 text-center flex flex-col justify-center min-h-[280px] shadow-xl hover:scale-105 transition-all duration-500">
+                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center">
+                  <TrendingUp className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-[#1A5276] mb-4">Vision</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  To shape a world where every great business idea has a technology partner ready to steer it to success through ERPNext and AI automation.
+                </p>
+              </div>
               
-              <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-700 bg-white/80 backdrop-blur-sm overflow-hidden group hover:scale-105">
-                <CardHeader className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4  rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <Award className="w-8 h-8 text-black" />
-                  </div>
-                  <CardTitle className="text-xl font-bold text-gray-800">Mission</CardTitle>
-                </CardHeader>
-                <CardContent className="text-justify">
-                  <p className="text-gray-600 leading-relaxed">At Finbyz Tech, we partner with ambitious businesses to turn their vision into value. From planning to execution, we simplify complexity and bring clarity to digital transformation. Our team thrives on ownership, agility, and long-term relationships — because when our clients grow, we grow too.</p>
-                </CardContent>
-              </Card>
+              {/* Mission Card */}
+              <div className="bg-gradient-to-br from-[#1A5276] to-[#2980B9] rounded-2xl p-8 text-center flex flex-col justify-center min-h-[280px] shadow-xl hover:scale-105 transition-all duration-500">
+                <div className="w-16 h-16 mx-auto mb-6 bg-white/20 rounded-full flex items-center justify-center">
+                  <Award className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">Mission</h3>
+                <p className="text-gray-200 leading-relaxed text-sm">
+                  We partner with ambitious businesses to turn their vision into value through ERPNext implementation, Frappe development, and AI-powered automation—simplifying complexity and accelerating digital transformation.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -177,14 +189,14 @@ export default function AboutPage() {
               Our Journey
             </Badge> */}
             <h2 className="text-2xl md:text-5xl font-bold text-[#1A5276] mb-6">
-              A Decade of Innovation & Impact
+              A Decade of ERPNext Excellence & Innovation
             </h2>
             <div className="text-xl md:text-xl text-gray-600 leading-relaxed">
               <p className="mb-6">
-                Founded on the belief that technology should empower rather than overwhelm, Finbyz Tech has grown from a consulting firm into a full-fledged technology partner. We serve clients across industries — from manufacturing to finance — with solutions that are as strategic as they are scalable.
+                As a <strong>certified Frappe partner</strong> and <strong>ERPNext implementation experts</strong>, Finbyz Tech has evolved from a consulting firm into a trusted technology partner for enterprises worldwide. We deliver tailored <strong>ERP software solutions</strong> across manufacturing, healthcare, retail, trading, and non-profit sectors—helping businesses in New York, London, Dubai, and beyond achieve digital transformation.
               </p>
               <p className="text-lg text-gray-600">
-                What sets us apart is our commitment to <strong>clarity over complexity</strong>, <strong>precision in execution</strong>, and a <strong>collaborative mindset</strong>. Whether optimizing workflows, building custom applications, or automating decisions, our work helps businesses operate smarter and scale faster.
+                What sets us apart is our commitment to <strong>clarity over complexity</strong>, <strong>precision in execution</strong>, and a <strong>collaborative mindset</strong>. Whether implementing ERPNext, building <strong>AI-powered automation</strong>, or developing custom software, our work helps businesses operate smarter and scale faster.
               </p>
             </div>
           </div>
@@ -224,7 +236,7 @@ export default function AboutPage() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {valuesItems.map((item, index) => {
                 const gradients = [
                   "from-blue-500 to-purple-500",
@@ -250,6 +262,40 @@ export default function AboutPage() {
                   </Card>
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        {/* Team Section */}
+        <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50">
+          <div className="container-custom">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#1A5276] mb-6">
+                Key People Behind Finbyz
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Behind every great achievement, there is a team. Meet the leaders driving ERPNext implementations and AI automation solutions at Finbyz Tech.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {teamMembers.map((member, index) => (
+                <Card
+                  key={index}
+                  className="border-0 shadow-lg hover:shadow-xl transition-all duration-500 bg-white overflow-hidden group hover:scale-105"
+                >
+                  <CardHeader className="text-center pb-4">
+                    <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-gradient-to-br from-[#1A5276] to-[#2980B9] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <Users className="w-16 h-16 text-white" />
+                    </div>
+                    <CardTitle className="text-xl font-bold text-gray-800">{member.name}</CardTitle>
+                    <p className="text-[#1A5276] font-semibold">{member.role}</p>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-gray-600 leading-relaxed text-sm">{member.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </section>

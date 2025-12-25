@@ -68,8 +68,17 @@ export default function RootLayout({
               "url": "https://finbyz.tech/",
               "@id": "https://finbyz.tech/#organization",
               "logo": "https://finbyz.tech/images/FinbyzLogo.png",
-              "description": "Unlock global talent with Finbyz Tech, your strategic partner for IT resource augmentation and offshore development from India. We are expert ERPNext implementation partners and specialists in high-impact AI automation services. We deliver world-class custom software, web, and mobile applications to clients across the US, Europe, UK, and the Gulf.",
+              "image": "https://finbyz.tech/images/FinbyzLogo.png",
+              "description": "Finbyz Tech is a certified ERPNext implementation partner and Frappe framework experts. We deliver AI automation, ERP software solutions, and custom software development for businesses worldwide.",
               "telephone": "+91-9925701446",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "504-Addor Ambition, Nr. Navrang Circle, Navrangpura",
+                "addressLocality": "Ahmedabad",
+                "addressRegion": "Gujarat",
+                "postalCode": "380009",
+                "addressCountry": "IN"
+              },
               "location": {
                 "@type": "Place",
                 "address": {
@@ -91,10 +100,22 @@ export default function RootLayout({
                 "telephone": "+91-9925701446",
                 "contactType": "sales",
                 "areaServed": [
+                  // Country codes
                   "US", "CA", "GB", "AU", "AE", "SA", "QA", "KW", "OM", "BH",
                   "DE", "FR", "ES", "IT", "NL", "CH", "IE", "SE", "NO", "DK", "BE",
                   "ZA", "AR",
-                  "145", "150", "419", "002"
+                  // North America Cities
+                  "New York", "Los Angeles", "Chicago", "Houston", "San Francisco",
+                  "Toronto", "Vancouver", "Montreal",
+                  // Europe Cities
+                  "London", "Manchester", "Berlin", "Munich", "Frankfurt", "Paris",
+                  "Madrid", "Barcelona", "Milan", "Amsterdam", "Zurich", "Dublin",
+                  "Stockholm", "Oslo", "Copenhagen", "Brussels",
+                  // Middle East Cities
+                  "Dubai", "Abu Dhabi", "Riyadh", "Jeddah", "Doha", "Kuwait City",
+                  "Muscat", "Manama",
+                  // Other Regions
+                  "Sydney", "Melbourne", "Johannesburg", "Cape Town", "Buenos Aires"
                 ],
                 "availableLanguage": [
                   "en", "hi", "ar", "es", "gu", "mr", "te", "sd"

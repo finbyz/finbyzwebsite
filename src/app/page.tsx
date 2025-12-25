@@ -14,30 +14,53 @@ import { getFaqs, getPageData } from "@/lib/getPageData";
 
 
 export const metadata: Metadata = {
-  title: "Best ERP Software Company in India | FinByz Tech",
-  description: "Looking for a software development company in Ahmedabad? FinByz Tech offers ERP, custom software, mobile app, and website development services.",
-  keywords: ["ERPNext Implementation", "Software Development", "ERP Software", "Custom Software Development", "Mobile Application", "Website Development", "Ahmedabad", "Gujarat", "India"],
+  title: "Finbyz Tech | ERPNext Partner & AI Automation Experts | ERP Software Development",
+  description: "Finbyz Tech is a certified ERPNext implementation partner and Frappe framework experts. We deliver AI automation, ERP software solutions, and custom software development for businesses in New York, London, Dubai, Sydney, Toronto, and worldwide.",
+  keywords: [
+    // Primary Keywords
+    "ERPNext", "ERPNext Implementation", "ERPNext Partner", "ERPNext Consultant",
+    "Frappe", "Frappe Framework", "Frappe Developer",
+    "ERP Software", "ERP Solutions", "ERP Implementation",
+    "AI Automation", "AI Workflow Automation", "Business Process Automation",
+    "Software Development", "Custom Software Development", "Software Development Company",
+    // North America Cities
+    "ERPNext Partner New York", "ERP Software San Francisco", "AI Automation Los Angeles",
+    "ERPNext Implementation Toronto", "Software Development Chicago", "ERP Solutions Houston",
+    "ERPNext Vancouver", "ERP Montreal",
+    // Europe Cities
+    "ERPNext Partner London", "ERP Software Berlin", "Frappe Developer Paris",
+    "ERPNext Implementation Amsterdam", "AI Automation Dublin", "ERP Solutions Zurich",
+    "Software Development Munich", "ERPNext Stockholm", "ERP Barcelona", "ERP Milan",
+    // Middle East/Gulf Cities
+    "ERPNext Partner Dubai", "ERP Software Abu Dhabi", "ERPNext Implementation Riyadh",
+    "AI Automation Jeddah", "ERP Solutions Doha", "ERPNext Kuwait City",
+    "Software Development Muscat", "ERP Bahrain",
+    // Other Regions
+    "ERPNext Partner Sydney", "ERP Software Melbourne", "ERPNext Johannesburg",
+    "AI Automation Cape Town", "ERP Solutions Buenos Aires"
+  ],
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   openGraph: {
-    title: "FinByz Tech Pvt Ltd - ERPNext Implementation & Software Development Company",
-    description: "Looking for Software developer company in Ahmadabad? Based in Gujarat, India we are one of the best ERP software development company. We also provide services of custom software development, mobile application, website development.",
-    type: "article",
+    title: "Finbyz Tech | ERPNext Implementation Partner & AI Automation Experts",
+    description: "Transform your business with Finbyz Tech - certified ERPNext and Frappe experts. We provide ERP software implementation, AI-powered automation, and custom software development to enterprises in New York, London, Dubai, Sydney, and 50+ cities globally.",
+    type: "website",
     url: "https://finbyz.tech",
-    siteName: "FinByz Tech Pvt Ltd",
+    siteName: "Finbyz Tech",
+    locale: "en_US",
     images: [
       {
-        url: "https://finbyz.tech/files/finbyz-tech.svg",
+        url: "https://finbyz.tech/images/FinbyzLogo.png",
         width: 1200,
         height: 630,
-        alt: "FinByz Tech Pvt Ltd",
+        alt: "Finbyz Tech - ERPNext Partner & AI Automation Experts",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "FinByz Tech Pvt Ltd - ERPNext Implementation & Software Development Company",
-    description: "Looking for Software developer company in Ahmadabad? Based in Gujarat, India we are one of the best ERP software development company.",
-    images: ["https://finbyz.tech/files/finbyz-tech.svg"],
+    title: "Finbyz Tech | ERPNext Partner & AI Automation Experts",
+    description: "Certified ERPNext implementation partner delivering ERP software, AI automation, and custom software development to businesses worldwide.",
+    images: ["https://finbyz.tech/images/FinbyzLogo.png"],
     creator: "@FinByz",
     site: "@FinByz",
   },
@@ -70,8 +93,8 @@ export default async function Home() {
         <div className="[&_h2]:text-[#1A5276]">
           <ResponsiveCardGrid
             data={{
-              title: "Our Services",
-              subtitle: "Discover our comprehensive range of services designed to help your business grow and succeed in the digital world.",
+              title: "ERPNext & AI Automation Services",
+              subtitle: "Partner with certified Frappe and ERPNext experts for comprehensive ERP software implementation, AI-powered automation, and custom software development solutions.",
               variant: "iconCard",
               layout: "standard",
               showImage: false,
@@ -82,47 +105,47 @@ export default async function Home() {
                 {
                   id: 1,
                   title: "ERPNext Implementation",
-                  description: "End to End ERPNext Deployment!",
+                  description: "End-to-end ERPNext deployment by certified Frappe partners. From consulting to go-live, we handle configuration, data migration, and training.",
                   icon: "Cpu",
                   iconBg: "#1A5276",
                   iconColor: "#ffffff"
                 },
                 {
                   id: 2,
-                  title: "AI Automations",
-                  description: "Smarter Workflows , better efficiency.",
+                  title: "AI Automation Solutions",
+                  description: "Intelligent workflow automation powered by AI. Automate business processes, enhance decision-making, and boost operational efficiency.",
                   icon: "TrendingUp",
                   iconBg: "#FF8C00",
                   iconColor: "#ffffff"
                 },
                 {
                   id: 3,
-                  title: "Resource Augmentation",
-                  description: "Skilled Professionals for your Team.",
+                  title: "Frappe Development",
+                  description: "Custom Frappe framework development for tailored ERP solutions. Build powerful business applications with open-source technology.",
                   icon: "Globe",
                   iconBg: "#27AE60",
                   iconColor: "#ffffff"
                 },
                 {
                   id: 4,
-                  title: "Hourly Support",
-                  description: "Flexible support on Demand .",
+                  title: "ERPNext Support & Upgrades",
+                  description: "24/7 ERPNext support, maintenance, and version upgrades. Keep your ERP software running smoothly with expert assistance.",
                   icon: "Target",
                   iconBg: "#8E44AD",
                   iconColor: "#ffffff"
                 },
                 {
                   id: 5,
-                  title: "Data Analytics",
-                  description: "Intelligent automation and predictive analytics solutions.",
+                  title: "ERP Data Analytics",
+                  description: "Custom reports, dashboards, and predictive analytics for ERPNext. Make data-driven decisions with intelligent business insights.",
                   icon: "BarChart3",
                   iconBg: "#FF3333",
                   iconColor: "#ffffff"
                 },
                 {
                   id: 6,
-                  title: "Software Development",
-                  description: "End-to-end software development services",
+                  title: "Custom Software Development",
+                  description: "End-to-end custom software development tailored to your business needs. From web applications to enterprise solutions.",
                   icon: "Cpu",
                   iconBg: "#FFB347",
                   iconColor: "#ffffff"
@@ -138,8 +161,8 @@ export default async function Home() {
         <ClientLogos data={{ useAPI: true, apiEndpoint: '/api/client-logos' }} />
         <CTA
           data={{
-            title: "Ready to Scale with Smart Tech? Let's Talk",
-            highlightText: "Smart Tech?",
+            title: "Ready to Transform Your Business with ERPNext & AI?",
+            highlightText: "ERPNext & AI?",
           }}
         />
 
