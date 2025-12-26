@@ -1,4 +1,4 @@
-import BusinessSlider from "@/components/sections/business-slider";
+import { LazyBusinessSlider } from "@/lib/lazy-components";
 import FinbyzGallery from "@/components/sections/FinbyzGallery";
 import FAQ from "@/components/ai_components/FAQ";
 import { getFaqs, getPageData } from "@/lib/getPageData";
@@ -12,7 +12,7 @@ import Script from "next/script";
 export async function generateMetadata(): Promise<Metadata> {
   const pageData = await fetchFrappeSchemaData({
     name: "SNI-00004",
-    type: "webpage"
+    type: "code-snippet"
   })
 
   return {
@@ -23,12 +23,12 @@ export async function generateMetadata(): Promise<Metadata> {
     creator: "FinByz Tech Pvt Ltd",
     publisher: "FinByz Tech Pvt Ltd",
     alternates: {
-      canonical: "https://web.finbyz.tech/" + pageData?.data?.route || "",
+      canonical: "https://finbyz.tech/" + pageData?.data?.route || "",
     },
     openGraph: {
       title: pageData?.data?.seo_title,
       description: pageData?.data?.meta_description,
-      url: "https://web.finbyz.tech/" + pageData?.data?.route || "",
+      url: "https://finbyz.tech/" + pageData?.data?.route || "",
       siteName: "Finbyz Tech",
       type: "website",
       locale: "en_US",
@@ -70,7 +70,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }
       <StructureData name="SNI-00004" type="code-snippet" />  
-      <BusinessSlider />
+      <LazyBusinessSlider />
     </>
   );
 }

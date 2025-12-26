@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FAQSection } from "@/components/ui/ComponentShowcase3";
+import { LazyFAQSection } from "@/lib/lazy-components";
 import { 
   Users, 
   Lightbulb, 
@@ -355,8 +355,8 @@ export default function AnimatedCareerPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <FAQSection />
+      {/* FAQ Section - Lazy loaded for performance */}
+      <LazyFAQSection />
 
       {/* Related Pages */}
       <section className="py-24  relative overflow-hidden w-full">

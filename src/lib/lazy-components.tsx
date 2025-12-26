@@ -60,3 +60,34 @@ export const LazyBlogGrid = dynamic(
     ssr: false 
   }
 );
+
+// ============================================
+// Blog Layout Components - Used across all blog pages
+// ============================================
+
+// Business Slider - Logo carousel with animations
+export const LazyBusinessSlider = dynamic(
+  () => import('@/components/sections/business-slider'),
+  {
+    loading: () => <LoadingPlaceholder height="py-16" />,
+    ssr: false
+  }
+);
+
+// FAQ Component - Accordion with animations
+export const LazyFAQ = dynamic(
+  () => import('@/components/ai_components/FAQ'),
+  {
+    loading: () => <LoadingPlaceholder />,
+    ssr: false
+  }
+);
+
+// Finbyz Gallery - Image gallery with related reads
+export const LazyFinbyzGallery = dynamic(
+  () => import('@/components/sections/FinbyzGallery'),
+  {
+    loading: () => <LoadingPlaceholder />,
+    ssr: false
+  }
+);

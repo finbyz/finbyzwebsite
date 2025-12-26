@@ -4,7 +4,7 @@ import Section from '@/components/sections/Section'
 import { motion } from 'framer-motion'
 import DynamicHero from '@/components/sections/dynamic-hero'
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid'
-import CompanyHistoryTimeline from "@/components/ui/CompanyHistoryTimeline";
+import { LazyCompanyHistoryTimeline } from "@/lib/lazy-components";
 import CTA from '@/components/sections/cta'
 
 export default function Page() {
@@ -143,8 +143,8 @@ export default function Page() {
       </Section>
 
 
-      {/* --- Our Milestones Timeline --- */}
-      <CompanyHistoryTimeline />
+      {/* Our Milestones Timeline - Lazy loaded for performance */}
+      <LazyCompanyHistoryTimeline />
 
 
       {/* --- Mission & Vision --- */}

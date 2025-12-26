@@ -1,4 +1,4 @@
-import BusinessSlider from "@/components/sections/business-slider";
+import { LazyBusinessSlider } from "@/lib/lazy-components";
 import FinbyzGallery from "@/components/sections/FinbyzGallery";
 import FAQ from "@/components/ai_components/FAQ";
 import StructureData from "@/components/seo/StructureData";
@@ -63,7 +63,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }
-      <BusinessSlider />
+      <LazyBusinessSlider />
       <StructureData name="erp-implementation-phases" type="blog" />
     </>
   );

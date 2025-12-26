@@ -137,8 +137,6 @@ export default function RootLayout({
 
 
 
-
-
 <Script
   id="finbyz-global-brand"
   type="application/ld+json"
@@ -163,9 +161,6 @@ export default function RootLayout({
     })
   }}
 />
-
-
-
 
 
 

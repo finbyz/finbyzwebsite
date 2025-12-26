@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FAQSection } from "@/components/ui/ComponentShowcase3";
+import { LazyFAQSection } from "@/lib/lazy-components";
 import { 
   Users, 
   Lightbulb, 
@@ -489,8 +489,8 @@ export default function AnimatedAboutPage() {
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <FAQSection />
+        {/* FAQ Section - Lazy loaded for performance */}
+        <LazyFAQSection />
 
         {/* Related Pages */}
         <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden w-full">
