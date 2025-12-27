@@ -12,6 +12,7 @@ import FlipCard from '@/components/ai_components/FlipCard';
 import Image from 'next/image';
 import { FaCheckCircle } from 'react-icons/fa';
 
+
 const heroHighlightWords = ["in", "UAE", "Service Provider"];
 
 
