@@ -26,6 +26,5 @@ export const config = {
     '/user-activity/overview',
     '/working_hour_exception',
     '/employee-joining-details',
-    '/'
   ],
 };
