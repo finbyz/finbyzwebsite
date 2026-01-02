@@ -101,7 +101,7 @@ export default function Page() {
                   palette: { iconBg: 'bg-orange-100', iconColor: 'text-orange-500' }
                 }
               ],
-              ctaButton: { text: 'Explore Our Expertise', action: '/services' }
+              ctaButton: { text: 'Explore Our Expertise', action: '/erpnext/services/erpnext-service-provider' }
             }}
           />
         </div>

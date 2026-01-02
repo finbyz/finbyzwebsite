@@ -122,7 +122,7 @@ export default function Page() {
           >
             <BlogParagraph>
               Technology evolves at lightning speed, introducing both opportunities and digital transformation challenges. From building mobile-optimized platforms to integrating AI-powered tools for personalization, staying technologically relevant requires continuous investment. For smaller businesses with limited resources, keeping up can be particularly demanding. Leveraging services like{' '}
-              <Link href="/website-development" className="text-primary underline hover:text-primary/80">website development</Link> can help streamline the process.
+              <Link href="/erpnext/services/website-development-on-erpnext" className="text-primary underline hover:text-primary/80">website development</Link> can help streamline the process.
             </BlogParagraph>
           </BlogSectionWithImage>
 

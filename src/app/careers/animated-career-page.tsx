@@ -92,17 +92,17 @@ export default function AnimatedCareerPage() {
     {
       title: "Life at Finbyz",
       description: "See what makes our culture vibrant and what a typical day looks like at Finbyz.",
-      url: "/life-at-finbyz"
+      url: "/about-us/life-at-finbyz"
     },
     {
       title: "Our Team",
       description: "Meet the minds behind our work. Developers, consultants, thinkers, doers.",
-      url: "/our-team"
+      url: "/about-us/our-story"
     },
     {
       title: "About Us",
       description: "Discover our journey, vision, and what drives us forward.",
-      url: "/about"
+      url: "/about-us"
     }
   ];
 
@@ -333,7 +333,7 @@ export default function AnimatedCareerPage() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/job-application">
+            <Link href="/careers/job-application">
               <Button 
                 size="lg"
                 className="rounded-full  text-white bg-[#f97316] text-lg px-8 py-4 h-auto font-semibold shadow-lg hover:bg-orange-500 hover:shadow-xl transition-all"
@@ -342,7 +342,7 @@ export default function AnimatedCareerPage() {
                 Send Your Resume
               </Button>
             </Link>
-                <Link href="/jobs">
+                <Link href="/careers/job-openings">
               <Button 
                 size="lg"
                 className="rounded-full  text-white bg-[#1A5276] text-lg px-8 py-4 h-auto font-semibold shadow-lg hover:bg-[#1A5276] hover:shadow-xl transition-all"
@@ -418,7 +418,7 @@ export default function AnimatedCareerPage() {
               Let's build something meaningful together.
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <Link href="/job-application">
+              <Link href="/careers/job-application">
                 <Button 
                   size="lg" 
                   className="rounded-full bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white text-lg px-8 py-4 h-auto font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition-all"
@@ -427,7 +427,7 @@ export default function AnimatedCareerPage() {
                   Send Your Resume
                 </Button>
               </Link>
-              <Link href="/jobs">
+              <Link href="/careers/job-openings">
                 <Button 
                   size="lg" 
                   variant="outline" 

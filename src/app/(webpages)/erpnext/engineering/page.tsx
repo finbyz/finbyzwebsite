@@ -14,7 +14,7 @@ export default function Page() {
     window.location.href = '/contact';
   };
   const handleSecondaryCTA = () => {
-    window.location.href = '/erp-software';
+    window.location.href = '/erp/services/erp-software-development';
   };
 
   return (
@@ -40,7 +40,7 @@ export default function Page() {
         <div className="container-custom py-8">
           <h2 className="text-2xl font-bold mb-4 text-center text-[#1A5276]" >ERP Software for Engineering Companies</h2>
           <p className="mb-6 text-gray-700 text-center">
-            Why implement <a href="/erpnext-software" target="_blank" className="text-blue-600 underline">ERP software</a> for engineering companies? ERP software for engineering companies offers benefits such as better project management, cost reduction, real-time calculated information, and a total integrated package. It improves decision making and helps your business grow. Core <a href="/benefits-of-erp" target="_blank" className="text-blue-600 underline">advantages of ERP</a> for engineering include customer-oriented systems, data efficiency, and effective communication.
+            Why implement <a href="/erpnext/" target="_blank" className="text-blue-600 underline">ERP software</a> for engineering companies? ERP software for engineering companies offers benefits such as better project management, cost reduction, real-time calculated information, and a total integrated package. It improves decision making and helps your business grow. Core <a href="/erp/insights/benefits-of-erp" target="_blank" className="text-blue-600 underline">advantages of ERP</a> for engineering include customer-oriented systems, data efficiency, and effective communication.
           </p>
           <QuoteBlock text="The proposed process designs should always be designed within the logic of the ERP systems. - Andera." isHeading={false} />
           <p className="mt-6 text-gray-700" id="engineering"  >
@@ -159,7 +159,7 @@ export default function Page() {
               Finbyz as ERP Service Provider plays a pivotal role in the realm of ERP software for engineering, offering a comprehensive solution tailored to meet the specific needs of the engineering sector. As an ERP Partner, these systems specialize in integrating various critical functions, such as project management, resource planning, and financial tracking, all within a cohesive platform. This integration is essential for engineering projects, where precision and efficiency are paramount.
             </p>
             <p className="mb-4 text-gray-700">
-              ERP software is vital for engineering companies, streamlining complex tasks and operations, and enhancing the design process. For these companies to thrive and boost their operational efficiency and overall productivity, it's essential to adopt a customized ERP system tailored to their unique requirements. Specifically, a <a href="/erp-for-chemical-industry" className="text-blue-600 underline">ERP For Chemical Industry</a> solution, along with <a href="/erp-for-logistics-industry" className="text-blue-600 underline">transport ERP</a>, and <a href="/erp-for-trading-industry" className="text-blue-600 underline">ERP for trading</a>, can be instrumental in addressing the specific challenges and demands of the engineering sector, ensuring more precise management of every critical activity in this industry.
+              ERP software is vital for engineering companies, streamlining complex tasks and operations, and enhancing the design process. For these companies to thrive and boost their operational efficiency and overall productivity, it's essential to adopt a customized ERP system tailored to their unique requirements. Specifically, a <a href="/erpnext/chemical/" className="text-blue-600 underline">ERP For Chemical Industry</a> solution, along with <a href="/erpnext/logistics" className="text-blue-600 underline">transport ERP</a>, and <a href="/erpnext/trading" className="text-blue-600 underline">ERP for trading</a>, can be instrumental in addressing the specific challenges and demands of the engineering sector, ensuring more precise management of every critical activity in this industry.
             </p>
           </div>
           <QuoteBlock text="Improvements in the use of the ERP system are an outcome of improvements in the process.  - Stephen Harwood" isHeading={false} />

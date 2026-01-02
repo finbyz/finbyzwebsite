@@ -57,7 +57,7 @@ export default function Page() {
             }}
           >
             <BlogParagraph>
-              In recent years, businesses have experienced a tremendous evolution in operations. While technological advancements have introduced flexibility and ease, they have also led to increasing complexities. A study by Harvard Business Review reveals that 86% of executives find business processes and decision-making increasingly complicated, hampering growth and competitiveness. This is where <a href="/erp-software" className="text-primary underline" target="_blank" rel="noopener noreferrer">ERP software</a> steps in. One of the significant ERP benefits is its ability to streamline operations and reduce complexity, leading to enhanced productivity and smarter decisions. It acts as a strategic solution to elevate business performance and foster scalable growth.
+              In recent years, businesses have experienced a tremendous evolution in operations. While technological advancements have introduced flexibility and ease, they have also led to increasing complexities. A study by Harvard Business Review reveals that 86% of executives find business processes and decision-making increasingly complicated, hampering growth and competitiveness. This is where <a href="/erp/services/erp-software-development" className="text-primary underline" target="_blank" rel="noopener noreferrer">ERP software</a> steps in. One of the significant ERP benefits is its ability to streamline operations and reduce complexity, leading to enhanced productivity and smarter decisions. It acts as a strategic solution to elevate business performance and foster scalable growth.
             </BlogParagraph>
             <QuoteBlock text="When digital transformation is done right, it is like a caterpillar turn into a butterfly." isHeading={false} />
             <div className="flex justify-end">
@@ -140,7 +140,7 @@ export default function Page() {
               </a>{' '}say that 65% of the business comes from existing customers. 68% of the customers leave you because they perceive you are indifferent to them.
             </BlogParagraph>
             <BlogParagraph>
-              ERP systems provide centralized access to customer data, order status, inventory levels, and payment history. This ensures that every department can deliver consistent and timely service, no matter the customer query. By improving communication and responsiveness, ERP not only boosts your <a href="/crm-software" className="text-primary underline" target="_blank" rel="noopener noreferrer">customer relationship management</a> but also demonstrates how ERP improves business performance by creating a loyal and satisfied customer base.
+              ERP systems provide centralized access to customer data, order status, inventory levels, and payment history. This ensures that every department can deliver consistent and timely service, no matter the customer query. By improving communication and responsiveness, ERP not only boosts your <a href="/erpnext/modules/crm-software" className="text-primary underline" target="_blank" rel="noopener noreferrer">customer relationship management</a> but also demonstrates how ERP improves business performance by creating a loyal and satisfied customer base.
             </BlogParagraph>
           </BlogSectionWithImage>
 
@@ -195,7 +195,7 @@ export default function Page() {
 
           <BlogSection id="employee-satisfaction" title="Employee Satisfaction">
             <BlogParagraph>
-              Employee satisfaction is directly linked to customer satisfaction. A happy, motivated employee reflects positively on customer interactions. ERP enables streamlined <a href="/human-resource-system" className="text-primary underline" target="_blank" rel="noopener noreferrer">human resource management</a> and fosters a work environment where employees feel valued boosting overall business efficiency.
+              Employee satisfaction is directly linked to customer satisfaction. A happy, motivated employee reflects positively on customer interactions. ERP enables streamlined <a href="/erpnext/modules/human-resource-system" className="text-primary underline" target="_blank" rel="noopener noreferrer">human resource management</a> and fosters a work environment where employees feel valued boosting overall business efficiency.
             </BlogParagraph>
           </BlogSection>
 

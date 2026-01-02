@@ -14,7 +14,7 @@ export default function Page() {
       alt: 'Chemical Industry',
       description:
         'Companies in the industry of Chemicals like Dye chem, Paints & Intermediaries face challenges in managing the recipes of the products they supply. Even the consumption of raw material changes each time based on the reaction process. This requires BOM which allows fluctuation and consumption of raw material and production of finished goods.',
-      link: '/erp-for-chemical-industry',
+      link: '/erpnext/chemical/',
     },
     {
       key: 'engineering',
@@ -23,7 +23,7 @@ export default function Page() {
       alt: 'Engineering Industry',
       description:
         'Engineering industry comprises of companies that deal with the manufacturing and designing of machines, complex structures and various kinds of devices. The main functions of this industry are manufacturing, design, processing, and construction of structures. But this industry faces a lot of challenges in terms of complex projects, costs of production and pricing of the structures. It also has to strive in the cutthroat competition in the market.',
-      link: '/erp-for-engineering-industry',
+      link: '/erpnext/engineering',
     },
     {
       key: 'logistics',
@@ -32,7 +32,7 @@ export default function Page() {
       alt: 'Logistics Industry',
       description:
         'Logistics is one of the highly competitive sectors which include complex operations such as supply chain management, freight management, transportation, warehousing and storage and much other variety of functions. Implementation of ERP software in the logistic industry can align business operations such as Trip Management, Truck Maintenance and staff management with accounting and management systems for the logistics industry.',
-      link: '/erp-for-logistics-industry',
+      link: '/erpnext/logistics',
     },
     {
       key: 'manufacturing',
@@ -41,7 +41,7 @@ export default function Page() {
       alt: 'Manufacturing Industry',
       description:
         'A manufacturing concern deals with the creation of products which deals with processing, preparation of goods at every stage. It deals with the conversion of raw material to the ultimate finished goods that comes in the hands of consumers. Manufacturing industry is in itself a vast one that has many sub categories.',
-      link: '/erp-for-manufacturing-industry',
+      link: '/erpnext/manufacturing',
     },
     {
       key: 'agro',
@@ -50,7 +50,7 @@ export default function Page() {
       alt: 'Agro Commodity Industry',
       description:
         'Looking to integrate your business with the ERP solution? Learning the ways to automate the Agro-business is too important as it is the integral sector for any country, as it is what provides the basic need for living beings i.e. food. With the help of data available in the systematic form, the business tends to take effective decisions that benefit them in the long run. ERP provides real-time data and information that connects all the processes and workforce in the organization.',
-      link: '/erp-for-agro-commodity',
+      link: '/erpnext/agro/erp-for-commodity-trading',
     },
     {
       key: 'trading',
@@ -59,7 +59,7 @@ export default function Page() {
       alt: 'Trading Industry',
       description:
         'In this new age information is the key to success. ERP for a Trading business not only helps collect this information, but it converts in knowledge which can convert your quotations to successful sales orders. Trading businesses are said to be the link between the manufacturers or suppliers and the end customers. They deal in one specific good or a few categories of goods that render benefit to them. The main function in the trading business is the management of logistics and distribution of the goods and products. Traditional ways of managing the sales of these goods are very hectic and tedious. The automation of these processes through ERP software can lead to more efficiency and growth in sales and distribution.',
-      link: '/erp-for-trading-industry',
+      link: '/erpnext/trading',
     },
   ];
 
@@ -100,7 +100,7 @@ export default function Page() {
       <Section>
         <div className="container-custom py-8">
           <p className="text-lg text-justify leading-relaxed animate-fade-in">
-            In the realm of <a href="/erp-software" className="text-primary underline hover:text-primary/80 transition-colors">ERP software</a>, tailoring solutions to specific industry needs is crucial for maximizing effectiveness. Industry-specific ERP solutions offer unparalleled flexibility, enabling the seamless addition of features and integration of bespoke customizations tailored to the unique requirements of your business sector. These tailored solutions are crafted to meet the diverse needs of various departments within your organization, providing a cohesive tool that enhances operational efficiency. As a distinguished <a href="/erpnext-certified-partner" className="text-primary underline hover:text-primary/80 transition-colors">ERPNext service provider</a>, we excel in delivering customized ERPNext solutions that cater to the unique demands of your industry. Implementing an industry-specific ERP system within your business streamlines planning and decision-making processes, significantly boosting speed, efficiency, and convenience. Key sectors that benefit from our specialized ERPNext solutions include manufacturing, retail, healthcare, and education, among others. Partner with us to harness the power of ERPNext and propel your business towards streamlined operations and strategic growth.
+            In the realm of <a href="/erp/services/erp-software-development" className="text-primary underline hover:text-primary/80 transition-colors">ERP software</a>, tailoring solutions to specific industry needs is crucial for maximizing effectiveness. Industry-specific ERP solutions offer unparalleled flexibility, enabling the seamless addition of features and integration of bespoke customizations tailored to the unique requirements of your business sector. These tailored solutions are crafted to meet the diverse needs of various departments within your organization, providing a cohesive tool that enhances operational efficiency. As a distinguished <a href="/erpnext/certified-partner" className="text-primary underline hover:text-primary/80 transition-colors">ERPNext service provider</a>, we excel in delivering customized ERPNext solutions that cater to the unique demands of your industry. Implementing an industry-specific ERP system within your business streamlines planning and decision-making processes, significantly boosting speed, efficiency, and convenience. Key sectors that benefit from our specialized ERPNext solutions include manufacturing, retail, healthcare, and education, among others. Partner with us to harness the power of ERPNext and propel your business towards streamlined operations and strategic growth.
           </p>
         </div>
       </Section>

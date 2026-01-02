@@ -60,7 +60,7 @@ async function getFoldersWithPageTsx(baseDir: string, prefix = ''): Promise<stri
       // Skip group folders like (blogs), (webpages), etc. - but scan their contents
       const entryPath = path.join(baseDir, entry)
       const s = await stat(entryPath)
-      if (!s.isDirectory()) continue
+      if (!s.isDirectory() || entry.includes('[') || entry.includes(']')) continue
 
       // Check if this folder has a page.tsx
       try {
@@ -97,8 +97,8 @@ async function getFlatPagesInDir(appRelativeDir: string, options?: { includeRoot
     }
     const entries = await readdir(baseDir)
     for (const entry of entries) {
-      // skip special folders like api, group folders, and segment configs
-      if (entry.startsWith('(') || entry === 'api') continue
+      // skip special folders like api, group folders, dynamic segments and segment configs
+      if (entry.startsWith('(') || entry === 'api' || entry.includes('[') || entry.includes(']')) continue
       const entryPath = path.join(baseDir, entry)
       const s = await stat(entryPath)
       if (!s.isDirectory()) continue

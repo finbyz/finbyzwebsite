@@ -61,21 +61,21 @@ export default function Page() {
               In today’s competitive and technology-driven landscape, Workflow Automation is crucial for streamlining business operations. ERP, or Enterprise Resource Planning, serves as the backbone of this automation, enabling organizations to unify processes and data under one system. ERP connects all functional areas—finance, sales, inventory, HR—on a centralized platform accessible to all stakeholders. It simplifies data management, improves visibility, and supports data-driven decisions through a unified database.
             </BlogParagraph>
             <BlogParagraph>
-              To fully benefit from these advantages, it’s essential to understand how to execute an effective ERP implementation. Following a structured <a href="/erp-software" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">ERP software</a> implementation strategy is the first step toward a seamless transformation. This ERP Implementation Guide outlines key steps that can help ensure success and long-term system optimization.
+              To fully benefit from these advantages, it’s essential to understand how to execute an effective ERP implementation. Following a structured <a href="/erp/services/erp-software-development" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">ERP software</a> implementation strategy is the first step toward a seamless transformation. This ERP Implementation Guide outlines key steps that can help ensure success and long-term system optimization.
             </BlogParagraph>
           </BlogSectionWithImage>
 
           <BlogSection id="step-1" title="Step 1: Why do you need it?">
             <QuoteBlock text="Setting goals is the first step in turning the invisible into the visible – Tony Robbins" isHeading={false} />
             <BlogParagraph>
-              The foundation of any ERP Implementation Guide starts with a clear understanding of why your business needs ERP. Identifying pain points such as manual inefficiencies, lack of integration, or data silos will help define goals for implementing Workflow Automation through ERP. <a href="/how-erp-improves-business-performance" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank">ERP improves business performance</a> by enhancing productivity, improving data accuracy, offering real-time insights, and enabling better cost control.
+              The foundation of any ERP Implementation Guide starts with a clear understanding of why your business needs ERP. Identifying pain points such as manual inefficiencies, lack of integration, or data silos will help define goals for implementing Workflow Automation through ERP. <a href="/erp/insights/how-erp-improves-business-performance" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank">ERP improves business performance</a> by enhancing productivity, improving data accuracy, offering real-time insights, and enabling better cost control.
             </BlogParagraph>
           </BlogSection>
 
           <BlogSection id="step-2" title="Step 2: Assess the scope">
             <QuoteBlock text="Be sure you are right, then go ahead – Davy Crocket" isHeading={false} />
             <BlogParagraph>
-              The next step in any effective ERP Implementation Guide is to evaluate the full scope of your ERP project. Each business is unique, and ERP System Optimization depends on aligning the software features with your operational needs. Begin by assessing standard features of potential ERP solutions and determine how well they match your workflow. <a href="/how-to-choose-the-right-erp-software-for-your-company" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank">Choose the right ERP software for your company</a> to minimize customization, reduce costs, and increase the overall return on investment. A clear scope also sets the foundation for efficient Workflow Automation.
+              The next step in any effective ERP Implementation Guide is to evaluate the full scope of your ERP project. Each business is unique, and ERP System Optimization depends on aligning the software features with your operational needs. Begin by assessing standard features of potential ERP solutions and determine how well they match your workflow. <a href="/erpnext/insights/how-to-choose-the-right-erp-software-for-your-company" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank">Choose the right ERP software for your company</a> to minimize customization, reduce costs, and increase the overall return on investment. A clear scope also sets the foundation for efficient Workflow Automation.
             </BlogParagraph>
           </BlogSection>
 

@@ -69,7 +69,7 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
 
     e.preventDefault();
     if (isSubmitting) return; // stop double click
-    // router.push("/thank-you-for-inquiry");
+    // router.push("/contact/thank-you-for-inquiry");
     setIsSubmitting(true);
 
     try {
@@ -116,7 +116,7 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
 
 
       //  Redirect after successful submit
-      router.push("/thank-you-for-inquiry");
+      router.push("/contact/thank-you-for-inquiry");
       setFormData({
         name: '',
         organization: '',

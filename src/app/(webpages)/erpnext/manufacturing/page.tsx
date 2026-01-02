@@ -139,7 +139,7 @@ export default function Page() {
           </div>
           <div className="mt-6 text-gray-700">
             <div className='mb-4'>
-              <p className='text-justify'><a className="text-blue-600 underline" href="/erpnext-software" target="_blank" rel="noopener noreferrer">Implementation of ERP Software</a> is the answer to many problems related to management in the manufacturing industry. The industry in today’s business environment is very dynamic and innovating rapidly. For being at the same pace as the changing market, latest technology is a must as <a href="/benefits-of-erp" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">ERP Software has various benefits</a>, some of them are as follows:</p>
+              <p className='text-justify'><a className="text-blue-600 underline" href="/erpnext/" target="_blank" rel="noopener noreferrer">Implementation of ERP Software</a> is the answer to many problems related to management in the manufacturing industry. The industry in today’s business environment is very dynamic and innovating rapidly. For being at the same pace as the changing market, latest technology is a must as <a href="/erp/insights/benefits-of-erp" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">ERP Software has various benefits</a>, some of them are as follows:</p>
             </div>
             <ManufacturingBenefitsGrid
               benefits={[

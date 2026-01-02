@@ -48,7 +48,7 @@ export default function Page() {
               cover:true,
             }}>
             <BlogParagraph>
-              ERP and CRM are powerful software solutions designed to address specific business functions. ERP handles core backend operations such as accounting, procurement, supply chain, and inventory management, while CRM focuses on enhancing customer relationships and driving sales growth. Using <a href="/crm-software" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">CRM software</a> alongside ERP can improve individual performance, but the true power lies in ERP and CRM integration. The benefits of ERP and CRM integration include a unified approach to managing business and customer data, eliminating inefficiencies, and fostering collaboration across departments.
+              ERP and CRM are powerful software solutions designed to address specific business functions. ERP handles core backend operations such as accounting, procurement, supply chain, and inventory management, while CRM focuses on enhancing customer relationships and driving sales growth. Using <a href="/erpnext/modules/crm-software" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">CRM software</a> alongside ERP can improve individual performance, but the true power lies in ERP and CRM integration. The benefits of ERP and CRM integration include a unified approach to managing business and customer data, eliminating inefficiencies, and fostering collaboration across departments.
             </BlogParagraph>
           </BlogSectionWithImage>
 
@@ -103,7 +103,7 @@ export default function Page() {
               } isHeading={false} />
               <div className="text-right text-muted-foreground italic mb-2">- Taichi Ohno</div>
               <BlogParagraph>
-                Another key advantage of ERP and CRM integration is the ability to streamline workflows across departments. For instance, when a proposal is generated in the CRM, it can instantly be converted into an order and processed in the <a href="/erp-software" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">ERP software</a>. This seamless integration minimizes manual intervention, accelerates order processing, improves inventory control, and enhances delivery timelines.
+                Another key advantage of ERP and CRM integration is the ability to streamline workflows across departments. For instance, when a proposal is generated in the CRM, it can instantly be converted into an order and processed in the <a href="/erp/services/erp-software-development" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">ERP software</a>. This seamless integration minimizes manual intervention, accelerates order processing, improves inventory control, and enhances delivery timelines.
               </BlogParagraph>
             </div>
 

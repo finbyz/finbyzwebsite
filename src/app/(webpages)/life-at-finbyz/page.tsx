@@ -17,7 +17,7 @@ export default function Page() {
         description="Discover life at Finbyz Tech – where innovation meets growth. Explore our vibrant work culture, values, and commitment to learning, collaboration, and work-life balance."
         primaryButton={{
           text: 'Explore Openings',
-          action: () => window.location.assign('/jobs'),
+          action: () => window.location.assign('/careers/job-openings'),
         }}
         heroImage={{
           alt: 'Life at Finbyz',
@@ -91,7 +91,7 @@ export default function Page() {
               primaryButton: {
                 text: 'Explore Openings',
                 icon: 'ArrowRight',
-                action: () => window.location.assign('/jobs'),
+                action: () => window.location.assign('/careers/job-openings'),
               },
               trustIndicator: {
                 text: 'Trusted by passionate professionals',

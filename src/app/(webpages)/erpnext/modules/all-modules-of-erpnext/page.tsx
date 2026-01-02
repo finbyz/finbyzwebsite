@@ -218,7 +218,7 @@ export default function Page() {
                 icon: 'Download',
                 action: () => {
                   if (typeof window !== 'undefined') {
-                    window.location.href = '/brochure';
+                    window.location.href = '/resources/brochure';
                   }
                 }
               },

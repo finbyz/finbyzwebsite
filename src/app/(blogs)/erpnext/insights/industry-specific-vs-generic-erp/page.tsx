@@ -53,7 +53,7 @@ export default function Page() {
             }}
           >
             <BlogParagraph>
-              When it comes to <a href="/erp-software" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">ERP software</a>, businesses must choose between a generic ERP and an industry specific ERP software. The best choice depends on your unique operational needs and goals. While generic ERP solutions provide standard features applicable to many industries, industry specific ERP is designed to cater to specialized business processes within a particular sector.
+              When it comes to <a href="/erp/services/erp-software-development" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">ERP software</a>, businesses must choose between a generic ERP and an industry specific ERP software. The best choice depends on your unique operational needs and goals. While generic ERP solutions provide standard features applicable to many industries, industry specific ERP is designed to cater to specialized business processes within a particular sector.
             </BlogParagraph>
             <QuoteBlock text={
               "That's a big part of the process: making the right choice from the beginning. Not getting distracted by shiny things. - Marti Noxon"
@@ -80,7 +80,7 @@ export default function Page() {
               A generic ERP system provides universal modules and features suited for most types of businesses. It typically includes finance, HR, inventory, and supply chain management. However, it lacks the flexibility required for niche processes. The software is not flexible enough for deep customization or addition of features. Generic ERPs have pre-built functions that support all the major activities and modules such as finance, accounting, human resource management, supply chain, etc.
             </BlogParagraph>
             <BlogParagraph>
-              The generic ERP is best suited for small holdings or businesses that are not clear about the industry they operate in or about the specific functions they require. Generic ERP is ideal for small businesses or startups seeking cost-effective <a href="/erp-implementation-phases" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">ERP implementation</a> without the need for deep customization.
+              The generic ERP is best suited for small holdings or businesses that are not clear about the industry they operate in or about the specific functions they require. Generic ERP is ideal for small businesses or startups seeking cost-effective <a href="/erp/insights/erp-implementation-phases" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">ERP implementation</a> without the need for deep customization.
             </BlogParagraph>
           </BlogSectionWithImage>
 
@@ -111,7 +111,7 @@ export default function Page() {
           {/* How to Decide Section */}
           <BlogSection id="how-to-decide" title="How to Decide?">
             <BlogParagraph>
-              <a href="/erp-implementation-steps" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">Implementation of ERP</a> can be complex and expensive. Choosing between a generic ERP and an industry specific ERP depends on key business factors. Below are some criteria to help you determine which ERP system fits your company best.
+              <a href="/erp/insights/erp-implementation-steps" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">Implementation of ERP</a> can be complex and expensive. Choosing between a generic ERP and an industry specific ERP depends on key business factors. Below are some criteria to help you determine which ERP system fits your company best.
             </BlogParagraph>
             <div className="flex flex-col md:flex-row gap-6 mt-8">
               <Card className="flex-1 border-none shadow-md hover:shadow-lg transition-shadow duration-300 bg-background/80">
@@ -170,7 +170,7 @@ export default function Page() {
           {/* Conclusion Section */}
           <BlogSection id="conclusion" title="Final Words">
             <BlogParagraph>
-              There is no one-size-fits-all solution. Whether you go with a generic ERP or industry specific ERP software depends on your unique business needs. Evaluate your requirements thoroughly while <a href="/how-to-choose-the-right-erp-software-for-your-company" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">choosing the right ERP software</a>. The ultimate goal is to align your ERP system with your business objectives to improve efficiency, productivity, and decision-making.
+              There is no one-size-fits-all solution. Whether you go with a generic ERP or industry specific ERP software depends on your unique business needs. Evaluate your requirements thoroughly while <a href="/erpnext/insights/how-to-choose-the-right-erp-software-for-your-company" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">choosing the right ERP software</a>. The ultimate goal is to align your ERP system with your business objectives to improve efficiency, productivity, and decision-making.
             </BlogParagraph>
           </BlogSection>
         </BlogContent>

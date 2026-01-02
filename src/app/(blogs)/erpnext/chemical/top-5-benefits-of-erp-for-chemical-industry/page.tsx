@@ -58,7 +58,7 @@ export default function Page() {
               If you're part of the chemical industries whether as a business owner or professional you are likely familiar with the unique challenges of chemical manufacturing. Ensuring safety compliance, strict governance, regulatory adherence, and real-time visibility into R&amp;D and production processes are just a few of the many complexities involved.
             </BlogParagraph>
             <BlogParagraph>
-              It becomes clear that not using a <a href="/erp-software" className="text-primary underline hover:text-primary/80 transition-colors">chemical ERP system</a> is simply not an option if you're serious about running an efficient chemical business. As the size and scope of your chemical manufacturing operations grow, so does the critical need for a dedicated ERP system.
+              It becomes clear that not using a <a href="/erp/services/erp-software-development" className="text-primary underline hover:text-primary/80 transition-colors">chemical ERP system</a> is simply not an option if you're serious about running an efficient chemical business. As the size and scope of your chemical manufacturing operations grow, so does the critical need for a dedicated ERP system.
             </BlogParagraph>
             <BlogParagraph>
               Temporary solutions like spreadsheets or generic management tools only add to the chaos. The growing intricacies of chemical industries demand a purpose-built chemical ERP system for better efficiency and control.
@@ -182,7 +182,7 @@ export default function Page() {
           {/* Conclusion */}
           <BlogSection id="conclusion" title="Conclusion">
             <BlogParagraph>
-              In conclusion, adopting a chemical ERP system is not just about automation—it’s about transforming your chemical manufacturing business into a scalable, competitive force in the chemical industries. To truly unlock its potential, the system must be customized to suit your operations. Know more about our <a href="/erp-software" className="text-primary underline hover:text-primary/80 transition-colors">ERP Software</a> and ERP Implementation Services.
+              In conclusion, adopting a chemical ERP system is not just about automation—it’s about transforming your chemical manufacturing business into a scalable, competitive force in the chemical industries. To truly unlock its potential, the system must be customized to suit your operations. Know more about our <a href="/erp/services/erp-software-development" className="text-primary underline hover:text-primary/80 transition-colors">ERP Software</a> and ERP Implementation Services.
             </BlogParagraph>
           </BlogSection>
         </BlogContent>

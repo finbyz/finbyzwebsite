@@ -16,7 +16,7 @@ const handlePrimary = () => {
   window.location.href = '/contact';
 };
 const handleSecondary = () => {
-  window.location.href = '/erpnext-certified-partner';
+  window.location.href = '/erpnext/certified-partner';
 };
 
 const heroHighlightWords = [ 'Canada', 'Services'];
@@ -234,7 +234,7 @@ export default function Page() {
         <div className="container-custom py-8 flex flex-col gap-6">
           <div className="flex flex-col gap-4 animate-fadeInUp" id="erpnext-canada">
             <p>
-              Welcome to Finbyz Tech, your go-to <a href="/erpnext-certified-partner" className="text-primary underline hover:text-primary/80 transition">ERPNext partner</a> for top-tier ERPNext services in Canada. Specializing in advanced ERP solutions, we enable Canadian businesses to excel in a market that's both challenging and ripe with opportunity. Step into the future with ERPNext's robust features, customized by our experts to align with your distinct business needs.
+              Welcome to Finbyz Tech, your go-to <a href="/erpnext/certified-partner" className="text-primary underline hover:text-primary/80 transition">ERPNext partner</a> for top-tier ERPNext services in Canada. Specializing in advanced ERP solutions, we enable Canadian businesses to excel in a market that's both challenging and ripe with opportunity. Step into the future with ERPNext's robust features, customized by our experts to align with your distinct business needs.
             </p>
             <p>
               ERPNext is a flexible open-source ERP software designed to support a diverse array of sectors, including manufacturing, distribution, retail, trading, services, education, non-profits, and healthcare. Its cloud-based nature, ease of use, and affordability make it an attractive option for Canadian businesses of various sizes.
@@ -275,7 +275,7 @@ export default function Page() {
           />
           <div className="flex flex-col gap-3 mt-4">
             <p>ERPNext is adaptable to cater to the unique requirements of any enterprise, continuously evolving with new features and enhancements to stay ahead of business demands.</p>
-            <p>In Canada, <a href="/erpnext-software" className="text-primary text-justify underline hover:text-primary/80 transition">ERPNext</a> is a preferred choice among businesses for several compelling reasons. Firstly, it provides an all-encompassing solution to manage every facet of a business. Secondly, its user-friendly interface and cost-effectiveness make it accessible to companies of all sizes. Lastly, being cloud-based, it allows for flexible access from any location with an internet connection, aligning with the dynamic needs of Canadian businesses.</p>
+            <p>In Canada, <a href="/erpnext/" className="text-primary text-justify underline hover:text-primary/80 transition">ERPNext</a> is a preferred choice among businesses for several compelling reasons. Firstly, it provides an all-encompassing solution to manage every facet of a business. Secondly, its user-friendly interface and cost-effectiveness make it accessible to companies of all sizes. Lastly, being cloud-based, it allows for flexible access from any location with an internet connection, aligning with the dynamic needs of Canadian businesses.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
             <Card className="border-none bg-gray-50 shadow-sm animate-fadeInUp">

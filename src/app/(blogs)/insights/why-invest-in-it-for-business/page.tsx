@@ -54,14 +54,14 @@ export default function Page() {
             }}
           >
             <BlogParagraph>
-              In today's digital-driven world, investing in IT infrastructure is a strategic move for any organization aiming for sustainable growth. Companies with strong business foresight understand that well-integrated IT Tools like <a href="/erp-software" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">ERP Software</a> offer tangible returns in terms of improved efficiency, reduced costs, and enhanced productivity. Below are some of the core advantages of investing in modern IT solutions.
+              In today's digital-driven world, investing in IT infrastructure is a strategic move for any organization aiming for sustainable growth. Companies with strong business foresight understand that well-integrated IT Tools like <a href="/erp/services/erp-software-development" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">ERP Software</a> offer tangible returns in terms of improved efficiency, reduced costs, and enhanced productivity. Below are some of the core advantages of investing in modern IT solutions.
             </BlogParagraph>
           </BlogSectionWithImage>
 
           {/* Enhanced Sales Performance */}
           <BlogSection id="enhanced-sales-performance" title="Enhanced Sales Performance">
             <BlogParagraph>
-              In today’s competitive environment, the sales process has evolved significantly with the support of IT Tools. The role of a salesperson now extends beyond deal closure, transitioning into a Key Account Manager (KAM) for building long-term relationships. With the implementation of <a href="/crm-software" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">CRM software</a> as part of the IT ecosystem, organizations can gain a competitive edge by:
+              In today’s competitive environment, the sales process has evolved significantly with the support of IT Tools. The role of a salesperson now extends beyond deal closure, transitioning into a Key Account Manager (KAM) for building long-term relationships. With the implementation of <a href="/erpnext/modules/crm-software" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">CRM software</a> as part of the IT ecosystem, organizations can gain a competitive edge by:
             </BlogParagraph>
             <BlogCheckList
               items={[
@@ -79,7 +79,7 @@ export default function Page() {
           {/* Amplified Productivity */}
           <BlogSection id="amplified-productivity" title="Amplified Productivity">
             <BlogParagraph>
-              Every business aspires to improve its productivity metrics with each performance review. Analyzing metrics such as employee hours, cost optimization, and process efficiency reveals the pressing need for smarter operational control. By investing in IT infrastructure and implementing advanced <a href="/erp-software" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">ERP Software</a>, organizations can overcome inefficiencies, increase transparency, and align departmental workflows. Here’s how IT tools drive productivity:
+              Every business aspires to improve its productivity metrics with each performance review. Analyzing metrics such as employee hours, cost optimization, and process efficiency reveals the pressing need for smarter operational control. By investing in IT infrastructure and implementing advanced <a href="/erp/services/erp-software-development" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">ERP Software</a>, organizations can overcome inefficiencies, increase transparency, and align departmental workflows. Here’s how IT tools drive productivity:
             </BlogParagraph>
             <div className="flex flex-col md:flex-row gap-6 mt-8">
               <Card className="flex-1 border-none shadow-md hover:scale-105 transition-transform duration-300 bg-background/80">
@@ -191,7 +191,7 @@ export default function Page() {
           {/* Conclusion */}
           <BlogSection id="conclusion" title="Conclusion">
             <BlogParagraph>
-              Investing in IT systems for your Business is going to be proved as the best investment source you could ever get for your business. You will see how your investment shows you returns to grow your business. If you are still hesitated or confused about investing in IT systems for your business, visit our <a href="/it-consulting" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">IT Consulting</a> page to know more about IT Systems and business softwares.
+              Investing in IT systems for your Business is going to be proved as the best investment source you could ever get for your business. You will see how your investment shows you returns to grow your business. If you are still hesitated or confused about investing in IT systems for your business, visit our <a href="/erpnext/services/it-consulting" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">IT Consulting</a> page to know more about IT Systems and business softwares.
             </BlogParagraph>
           </BlogSection>
         </BlogContent>

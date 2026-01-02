@@ -214,13 +214,13 @@ export default function JobsPage() {
                     {/* Action Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-gray-200">
                       <Link
-                        href={`/jobs/${job.route}`}
+                        href={`/careers/job-openings/${job.route}`}
                         className="flex-1 px-6 py-3 bg-orange-500 text-white hover:bg-orange-600 rounded-xl text-sm font-semibold transition-all duration-200 text-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                       >
                         View More
                       </Link>
                       <Link
-                        href={`/job-application?job_title=${encodeURIComponent(job.job_title || job.title)}`}
+                        href={`/careers/apply?job_title=${encodeURIComponent(job.job_title || job.title)}`}
                         className="flex-1 px-6 py-3 bg-orange-500 text-white hover:bg-orange-600 rounded-xl text-sm font-semibold transition-all duration-200 text-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                       >
                         Apply Now

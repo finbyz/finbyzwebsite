@@ -9,70 +9,70 @@ const industries = [
     title: "Manufacturing",
     icon: "/images/nav-manufacturing.svg",
     number: "01",
-    href: "/erp-for-manufacturing-industry",
+    href: "/erpnext/manufacturing",
     fade: 1
   },
   {
     title: "Chemical",
     icon: "/images/nav-chemical.svg",
     number: "02",
-    href: "/erp-for-chemical-industry",
+    href: "/erpnext/chemical/",
     fade: 2
   },
   {
     title: "Engineering",
     icon: "/images/nav-engineering.svg",
     number: "03",
-    href: "/erp-for-engineering-industry",
+    href: "/erpnext/engineering",
     fade: 3
   },
   {
     title: "Logistics",
     icon: "/images/nav-logistics.svg",
     number: "04",
-    href: "/erp-for-logistics-industry",
+    href: "/erpnext/logistics",
     fade: 4
   },
   {
     title: "Agro Industries",
     icon: "/images/nav-agro.svg",
     number: "05",
-    href: "/erp-for-agro-commodity",
+    href: "/erpnext/agro/erp-for-commodity-trading",
     fade: 5
   },
   {
     title: "Fintech",
     icon: "/images/icon-brokerage-commission.svg",
     number: "06",
-    href: "/fintech-solutions",
+    href: "/erpnext/fintech-solutions",
     fade: 1
   },
   {
     title: "Healthcare",
     icon: "/images/Healthcare.svg",
     number: "07",
-    href: "/erp-healthcare-industry",
+    href: "/erpnext/healthcare",
     fade: 2
   },
   {
     title: "Education",
     icon: "/images/icon-integrated_paperwork_.svg",
     number: "08",
-    href: '/erp-for-education',
+    href: '/erpnext/education',
     fade: 3
   },
   {
     title: "Travel & Hospitality",
     icon: "/images/icon-truck_allocation.svg",
     number: "09",
-    href: "/erp-for-travel-hospitality",
+    href: "/erpnext/hospitality",
     fade: 4
   },
   {
     title: "E-commerce ",
     icon: "/images/E-commerce.svg",
     number: "010",
-    href: "/erp-for-retail-industry",
+    href: "/erpnext/retail",
     fade: 5
   }
 ];

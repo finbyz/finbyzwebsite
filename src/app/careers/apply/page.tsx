@@ -486,7 +486,7 @@ export default function JobApplication() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className={styles.heroContainer}>
               <div className={styles.breadcrumb}>
-                <Link href="/career" className={styles.breadcrumbLink}>
+                <Link href="/careers" className={styles.breadcrumbLink}>
                   <ArrowLeft className={styles.breadcrumbIcon} />
                   Back to Careers
                 </Link>

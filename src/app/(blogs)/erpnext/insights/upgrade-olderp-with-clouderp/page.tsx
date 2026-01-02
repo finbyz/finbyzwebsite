@@ -79,7 +79,7 @@ export default function Page() {
             variant="default"
           >
             <BlogParagraph>
-              Cloud computing has opened a new paradigm for <a href="/erp-software" target="_blank" className="text-blue-600 underline hover:text-blue-800 transition-colors">ERP system implementation</a>. The cloud has proven more reliable than on-premise servers. Improvements in internet speed and web application technology have enabled cloud-hosted ERPs to be as fast or even faster than on-premise ERP. Unlike on-premise software, which can only be accessed from the office, cloud ERP can be accessed from anywhere, at any time. As technology has changed human behavior, clients no longer want to wait for you to be in the office to provide answers. Mobile applications of these ERP systems ensure you always have all the business information at your fingertips.
+              Cloud computing has opened a new paradigm for <a href="/erp/services/erp-software-development" target="_blank" className="text-blue-600 underline hover:text-blue-800 transition-colors">ERP system implementation</a>. The cloud has proven more reliable than on-premise servers. Improvements in internet speed and web application technology have enabled cloud-hosted ERPs to be as fast or even faster than on-premise ERP. Unlike on-premise software, which can only be accessed from the office, cloud ERP can be accessed from anywhere, at any time. As technology has changed human behavior, clients no longer want to wait for you to be in the office to provide answers. Mobile applications of these ERP systems ensure you always have all the business information at your fingertips.
             </BlogParagraph>
             <BlogParagraph>
               Today’s businesses demand immediate access to data. Mobile apps for cloud ERP systems empower you to view real-time business information anytime, keeping you responsive and informed. Cloud ERP also offers scalable infrastructure, allowing businesses to increase or reduce hardware resources based on usage demands. This level of adaptability is not possible with legacy ERP systems, prompting many companies to switch to cloud ERP for improved operational efficiency.
@@ -148,8 +148,8 @@ export default function Page() {
             </BlogParagraph>
             <BlogParagraph>
               Still relying on an old ERP? Thinking about upgrading to a modern and efficient cloud ERP? Visit our{' '}
-              <a href="/erp-software" target="_blank" className="text-blue-600 underline hover:text-blue-800 transition-colors">ERP Implementation page</a> to learn more about our expert{' '}
-              <a href="/erp-software" target="_blank" className="text-blue-600 underline hover:text-blue-800 transition-colors">ERP Implementation services</a>.
+              <a href="/erp/services/erp-software-development" target="_blank" className="text-blue-600 underline hover:text-blue-800 transition-colors">ERP Implementation page</a> to learn more about our expert{' '}
+              <a href="/erp/services/erp-software-development" target="_blank" className="text-blue-600 underline hover:text-blue-800 transition-colors">ERP Implementation services</a>.
             </BlogParagraph>
           </BlogSection>
         </BlogContent>

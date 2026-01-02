@@ -78,7 +78,7 @@ export default function NotFound() {
                   <p className="text-slate-600 mb-4">
                     Explore our comprehensive range of software development, web design, and technology solutions.
                   </p>
-                  <Link href="/services" className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center gap-1">
+                  <Link href="/erpnext/services/erpnext-service-provider" className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center gap-1">
                     View Services
                     <ArrowLeft className="w-4 h-4 rotate-180" />
                   </Link>
@@ -95,7 +95,7 @@ export default function NotFound() {
                   <p className="text-slate-600 mb-4">
                     Learn about our mission, values, and the team behind Finbyz Tech's innovative solutions.
                   </p>
-                  <Link href="/about" className="text-emerald-600 hover:text-emerald-700 font-medium inline-flex items-center gap-1">
+                  <Link href="/about-us" className="text-emerald-600 hover:text-emerald-700 font-medium inline-flex items-center gap-1">
                     About Us
                     <ArrowLeft className="w-4 h-4 rotate-180" />
                   </Link>
@@ -146,7 +146,7 @@ export default function NotFound() {
                   <p className="text-slate-600 mb-4">
                     Join our team of talented professionals and be part of innovative projects.
                   </p>
-                  <Link href="/career" className="text-indigo-600 hover:text-indigo-700 font-medium inline-flex items-center gap-1">
+                  <Link href="/careers" className="text-indigo-600 hover:text-indigo-700 font-medium inline-flex items-center gap-1">
                     View Careers
                     <ArrowLeft className="w-4 h-4 rotate-180" />
                   </Link>

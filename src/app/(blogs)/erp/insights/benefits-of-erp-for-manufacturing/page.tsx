@@ -56,7 +56,7 @@ export default function Page() {
             variant="default"
           >
             <BlogParagraph>
-              The manufacturing sector encounters multiple operational challenges, particularly in smaller setups. Without effective tools, handling everyday tasks becomes complex, hampering efficiency and productivity. In today’s competitive business landscape, ensuring timely deliveries and top-tier product quality is vital for customer retention. This is where <Link href="/erp-for-manufacturing-industry" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">ERP for the manufacturing</Link> industry becomes essential. The best manufacturing ERP software simplifies critical operations and supports end-to-end process integration. These manufacturing ERP solutions empower businesses to gain real-time visibility and streamline workflows. Below are the key benefits of adopting small manufacturing ERP software to optimize operations and stay competitive.
+              The manufacturing sector encounters multiple operational challenges, particularly in smaller setups. Without effective tools, handling everyday tasks becomes complex, hampering efficiency and productivity. In today’s competitive business landscape, ensuring timely deliveries and top-tier product quality is vital for customer retention. This is where <Link href="/erpnext/manufacturing" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">ERP for the manufacturing</Link> industry becomes essential. The best manufacturing ERP software simplifies critical operations and supports end-to-end process integration. These manufacturing ERP solutions empower businesses to gain real-time visibility and streamline workflows. Below are the key benefits of adopting small manufacturing ERP software to optimize operations and stay competitive.
             </BlogParagraph>
           </BlogSectionWithImage>
 
@@ -120,7 +120,7 @@ export default function Page() {
               <h3 className="text-xl font-semibold mb-2">6. Never let down your customers</h3>
               <QuoteBlock text="What is happening inside a company is felt on the outside by the customer.\n\n- Shep Hyken" isHeading={false} />
               <BlogParagraph>
-                Customer satisfaction depends on accurate deliveries and dependable service. Manufacturing ERP solutions enable real-time tracking, improved demand forecasting, and streamlined communication across departments. By using small manufacturing ERP software, businesses can optimize order fulfillment, meet customer expectations, and reduce churn. Enhancing delivery performance and visibility with ERP also <Link href="/crm-software" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">boosts satisfaction</Link> and builds long-term client relationships.
+                Customer satisfaction depends on accurate deliveries and dependable service. Manufacturing ERP solutions enable real-time tracking, improved demand forecasting, and streamlined communication across departments. By using small manufacturing ERP software, businesses can optimize order fulfillment, meet customer expectations, and reduce churn. Enhancing delivery performance and visibility with ERP also <Link href="/erpnext/modules/crm-software" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">boosts satisfaction</Link> and builds long-term client relationships.
               </BlogParagraph>
             </div>
 
@@ -135,7 +135,7 @@ export default function Page() {
 
           <BlogSection id="conclusion" title="Conclusion">
             <BlogParagraph>
-              Adopting the best manufacturing ERP software empowers manufacturers to enhance process efficiency, reduce costs, and stay competitive. Whether it's production, inventory, or financials, manufacturing ERP solutions centralize operations and improve visibility across departments. Small manufacturing ERP software provides growing businesses with scalable tools to improve planning, quality, and customer service. From streamlined workflows to smart decision-making, <Link href="/erp-software" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">ERP Software</Link> is a game-changer for manufacturers aiming for operational excellence.
+              Adopting the best manufacturing ERP software empowers manufacturers to enhance process efficiency, reduce costs, and stay competitive. Whether it's production, inventory, or financials, manufacturing ERP solutions centralize operations and improve visibility across departments. Small manufacturing ERP software provides growing businesses with scalable tools to improve planning, quality, and customer service. From streamlined workflows to smart decision-making, <Link href="/erp/services/erp-software-development" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">ERP Software</Link> is a game-changer for manufacturers aiming for operational excellence.
             </BlogParagraph>
           </BlogSection>
         </BlogContent>

@@ -57,10 +57,10 @@ export default function Page() {
           }}
           >
             <BlogParagraph>
-              Have you encountered various ERP myths while exploring <a href="/erp-implementation-steps" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">ERP implementation</a> for your business? Despite being a powerful tool, ERP for small businesses is often misunderstood. Some still believe it's only suitable for large enterprises or fear it's too costly or complex. In reality, ERP solutions are now more accessible and scalable, enabling small businesses to automate core functions, boost efficiency, and reduce operational costs.
+              Have you encountered various ERP myths while exploring <a href="/erp/insights/erp-implementation-steps" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">ERP implementation</a> for your business? Despite being a powerful tool, ERP for small businesses is often misunderstood. Some still believe it's only suitable for large enterprises or fear it's too costly or complex. In reality, ERP solutions are now more accessible and scalable, enabling small businesses to automate core functions, boost efficiency, and reduce operational costs.
             </BlogParagraph>
             <BlogParagraph>
-              These common misconceptions arise from outdated beliefs and limited awareness of what ERP systems truly offer. For instance, many businesses confuse ERP vs CRM systems, not realizing they serve different but complementary purposes. Understanding the core differences and the real benefits of ERP will empower decision-makers to move past doubts and embrace technology that drives growth. Learning about the truth behind ERP myths and <a href="/how-erp-software-can-change-your-business" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">how ERP software can change your business</a> helps dispel employee concerns and promotes a smoother transition toward digital transformation.
+              These common misconceptions arise from outdated beliefs and limited awareness of what ERP systems truly offer. For instance, many businesses confuse ERP vs CRM systems, not realizing they serve different but complementary purposes. Understanding the core differences and the real benefits of ERP will empower decision-makers to move past doubts and embrace technology that drives growth. Learning about the truth behind ERP myths and <a href="/erp/insights/how-erp-software-can-change-your-business" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">how ERP software can change your business</a> helps dispel employee concerns and promotes a smoother transition toward digital transformation.
             </BlogParagraph>
             <div className="my-6">
               <QuoteBlock text={"Many people are turned off at eating vegetarian because of the misconception that all dishes are just an arrangement of bland vegetables. - Marcus Samuelsson"} isHeading={false} />
@@ -114,7 +114,7 @@ export default function Page() {
               variant="default"
             >
               <BlogParagraph>
-                A common ERP myth is confusing it with other software like supply chain management (SCM) or <a href="/crm-software" className="text-primary underline hover:text-primary/80 transition-colors">customer relationship management</a> (CRM) systems. ERP vs CRM is an important distinction: while CRM focuses on managing customer interactions, ERP integrates various business processes across departments. Each software serves unique purposes, and understanding these differences helps businesses choose the right tools.
+                A common ERP myth is confusing it with other software like supply chain management (SCM) or <a href="/erpnext/modules/crm-software" className="text-primary underline hover:text-primary/80 transition-colors">customer relationship management</a> (CRM) systems. ERP vs CRM is an important distinction: while CRM focuses on managing customer interactions, ERP integrates various business processes across departments. Each software serves unique purposes, and understanding these differences helps businesses choose the right tools.
               </BlogParagraph>
             </BlogSectionWithImage>
 
@@ -133,7 +133,7 @@ export default function Page() {
               variant="default"
             >
               <BlogParagraph>
-                The myth that a single <a href="/erp-software" className="text-primary underline hover:text-primary/80 transition-colors">ERP software</a> fits all companies or functions is not true. Many ERP vendors provide customizable solutions tailored for specific industries or organizational needs. Whether you run a small business or a specialized operation, ERP software can be configured to fit your unique requirements, enhancing usability and efficiency.
+                The myth that a single <a href="/erp/services/erp-software-development" className="text-primary underline hover:text-primary/80 transition-colors">ERP software</a> fits all companies or functions is not true. Many ERP vendors provide customizable solutions tailored for specific industries or organizational needs. Whether you run a small business or a specialized operation, ERP software can be configured to fit your unique requirements, enhancing usability and efficiency.
               </BlogParagraph>
             </BlogSectionWithImage>
 
@@ -235,7 +235,7 @@ export default function Page() {
 
           <BlogSection id="conclusion" title="Conclusion">
             <BlogParagraph>
-              It becomes essential to address the widespread ERP myths and misconceptions that prevent many businesses—especially small businesses—from embracing ERP solutions. By misunderstanding the value or confusing ERP vs CRM, companies often miss out on the real <a href="/benefits-of-erp" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">benefits of ERP implementation</a>. This results in higher costs, inefficiencies, and delayed decision-making that ERP systems are specifically designed to eliminate.
+              It becomes essential to address the widespread ERP myths and misconceptions that prevent many businesses—especially small businesses—from embracing ERP solutions. By misunderstanding the value or confusing ERP vs CRM, companies often miss out on the real <a href="/erp/insights/benefits-of-erp" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">benefits of ERP implementation</a>. This results in higher costs, inefficiencies, and delayed decision-making that ERP systems are specifically designed to eliminate.
             </BlogParagraph>
             <div className="my-6">
               <QuoteBlock text={"A common mistake made by many business leaders is to assume that by building awareness of the need for change they have also created desire. - Jeffrey M. Hiatt."} isHeading={false} />

@@ -201,43 +201,43 @@ useEffect(() => {
             name: "ERPNext Implementation",
             description: "Complete ERPNext setup and configuration",
             icon: Cpu,
-            href: "/hire-erpnext-implementer"
+            href: "/erpnext/hire-developers"
           },
           {
             name: "ERPNext Certified Partner",
             description: "Certified ERPNext partnership services",
             icon: Star,
-            href: "/erpnext-certified-partner"
+            href: "/erpnext/certified-partner"
           },
           {
             name: "ERPNext Service Provider in UAE",
             description: "ERPNext services in United Arab Emirates",
             icon: Landmark,
-            href: "/erpnext-services-in-uae"
+            href: "/erpnext/services/ERPNext-impelementation-in-uae"
           },
           {
             name: "ERPNext Services in Canada",
             description: "ERPNext services in Canada",
             icon: Map,
-            href: "/erpnext-services-in-canada"
+            href: "/erpnext/services/implementation-partner-in-canada"
           },
           {
             name: "ERPNext Partner in Saudi Arabia",
             description: "ERPNext partnership in Saudi Arabia",
             icon: Globe2,
-            href: "/erpnext-partner-in-saudi-arabia"
+            href: "/erpnext/partner-in-saudi-arabia"
           },
           {
             name: "ERPNext Service Provider",
             description: "Professional ERPNext service provider",
             icon: Building2,
-            href: "/erpnext-service-provider"
+            href: "/erpnext/services/erpnext-service-provider"
           },
           {
             name: "Website Development",
             description: "Custom website development services",
             icon: Code,
-            href: "/website-development"
+            href: "/erpnext/services/website-development-on-erpnext"
           }
         ],
         "ERPNext Products & Add-ons": [
@@ -245,61 +245,61 @@ useEffect(() => {
             name: "Productify",
             description: "Product management and cataloging",
             icon: Package,
-            href: "/productify"
+            href: "/solutions/productify"
           },
           {
             name: "Meeting Management",
             description: "Meeting and calendar management",
             icon: Calendar,
-            href: "/meeting-management-erpnext"
+            href: "/erpnext/apps/meeting-management-erpnext"
           },
           {
             name: "FD Management",
             description: "Fixed deposit management system",
             icon: Lock,
-            href: "/fd-management-erpnext"
+            href: "/erpnext/apps/fd-management-erpnext"
           },
           {
             name: "EMD Management",
             description: "Earnest money deposit management",
             icon: DollarSign,
-            href: "/emd-management-erpnext"
+            href: "/erpnext/apps/emd-management-erpnext"
           },
           {
             name: "Forward Contract Management",
             description: "Forward contract and hedging management",
             icon: FileText,
-            href: "/forward-contract-erpnext"
+            href: "/erpnext/apps/forward-contract-erpnext"
           },
           {
             name: "RODTEP Claim",
             description: "Remission of Duties and Taxes on Exported Products",
             icon: ClipboardCheck,
-            href: "/rodtep-claim-erpnext"
+            href: "/erpnext/apps/rodtep-claim-erpnext"
           },
           {
             name: "Investment Portfolio",
             description: "Investment and portfolio management",
             icon: TrendingUp,
-            href: "/investment-portfolio-erpnext"
+            href: "/erpnext/apps/investment-portfolio-erpnext"
           },
           {
             name: "Advanced Authorisation Licence",
             description: "Advanced authorization license management",
             icon: FileCheck,
-            href: "/advanced-authorisation-licence-erpnext"
+            href: "/erpnext/apps/advanced-authorisation-licence-erpnext"
           },
           {
             name: "Workflow Transitions",
             description: "Workflow Transitions management",
             icon: Repeat,
-            href: "/workflow-transition"
+            href: "/erpnext/apps/workflow-transition"
           },
           {
             name: "Argentina E-Invoicing",
             description: "Argentina electronic invoicing compliance",
             icon: Receipt,
-            href: "/argentina-electronic-invoicing-erpnext-afip-compliance-automation"
+            href: "/erpnext/apps/argentina-electronic-invoicing-erpnext-afip-compliance-automation"
           }
         ],
         "ERPNext Solutions": [
@@ -307,49 +307,49 @@ useEffect(() => {
             name: "ERPNext Software Overview",
             description: "Complete overview of ERPNext software",
             icon: Building2,
-            href: "/erpnext-software"
+            href: "/erpnext/"
           },
           {
             name: "CRM Software",
             description: "Customer relationship management software",
             icon: Users,
-            href: "/crm-software"
+            href: "/erpnext/modules/crm-software"
           },
           {
             name: "Human Resource System",
             description: "Comprehensive HR management system",
             icon: UserPlus,
-            href: "/human-resource-system"
+            href: "/erpnext/modules/human-resource-system"
           },
           {
             name: "ERP Software Development",
             description: "Custom ERP software development",
             icon: Code,
-            href: "/erp-software"
+            href: "/erp/services/erp-software-development"
           },
           {
             name: "ERP Modules",
             description: "Comprehensive ERP module overview",
             icon: Package,
-            href: "/modules-of-erp"
+            href: "/erpnext/modules/all-modules-of-erpnext"
           },
           {
             name: "ERPNext Website SEO",
             description: "SEO optimization for ERPNext websites",
             icon: Search,
-            href: "/erpnext-seo"
+            href: "/erpnext/services/erpnext-seo-optimization"
           },
           {
             name: "ERP for Education",
             description: "ERP solutions for educational institutions",
             icon: GraduationCap,
-            href: "/erp-for-education"
+            href: "/erpnext/education"
           },
           {
             name: "Brochure",
             description: "",
             icon: Notebook,
-            href: "/brochure"
+            href: "/resources/brochure"
           }
         ],
       }
@@ -372,19 +372,19 @@ useEffect(() => {
             name: "ERPNext Implementation",
             description: "Complete ERPNext setup",
             icon: Cpu,
-            href: "/hire-erpnext-implementer"
+            href: "/erpnext/hire-developers"
           },
           {
             name: "Custom ERP Development",
             description: "Custom ERP solutions",
             icon: Code,
-            href: "/custom-erp"
+            href: "/erpnext/services/develop-custom-erp-software"
           },
           {
             name: "ERP Migration",
             description: "Data migration services",
             icon: Database,
-            href: "/erp-migration"
+            href: "/erpnext/services/erp-migration"
           }
         ],
         "AI Automation": [
@@ -392,56 +392,56 @@ useEffect(() => {
             name: "Smart Card Scanner",
             description: "Scan and extract business card details instantly.",
             icon: CreditCard,
-            href: "/ai-powered-smart-card-scanner",
+            href: "/erpnext/ai/ai-powered-smart-card-scanner",
           },
           {
             name: "Content Spark Marketing Automation",
             description: "Automate and personalize your marketing campaigns.",
             icon: Sparkles,
-            href: "/content-spark-marketing-automation",
+            href: "/ai-automation/apps/content-spark-marketing-automation",
           },
           {
             name: "Lead Intelligence",
             description: "Gain insights and prioritize your leads with AI.",
             icon: Brain,
-            href: "/lead-intelligence",
+            href: "/erpnext/ai/lead-intelligence",
           },
           {
             name: "AI Outreach & Lead Generation Research",
             description: "Discover and connect with potential leads intelligently.",
             icon: Rocket,
-            href: "/ai-powered-lead-generation-and-email-outreach",
+            href: "/ai-automation/apps/ai-powered-lead-generation-and-email-outreach",
           },
           {
             name: "AI Sales Call Analysis for ERPNext",
             description: "Analyze and summarize sales calls automatically.",
             icon: PhoneCall,
-            href: "/ai-sales-call-recording-and-analysis-in-erpnext",
+            href: "/ai-automation/apps/sales-call-recording-and-analysis-in-erpnext",
           },
           {
             name: "Email Classification",
             description: "Classify and route emails automatically using AI.",
             icon: Mail,
-            href: "/ai-driven-email-classification-for-businesses",
+            href: "/n8n/workflows/ai-driven-email-classification-for-businesses",
           },
           {
             name: "Quote Assistant Overview",
             description: "Streamline quotation creation and management.",
             icon: MessageSquare,
-            href: "/ai-powered-quote-assistant",
+            href: "/erpnext/ai/ai-powered-quote-assistant",
           },
           {
             name: "Follow Up Buddy",
             description: "Automated follow-up reminders and tracking.",
             icon: Users,
-            href: "/ai-powered-follow-up-buddy-automate-your-sales-follow-up-process",
+            href: "/erpnext/ai/ai-powered-follow-up-buddy-automate-your-sales-follow-up-process",
           },
 
           {
             name: "AI Powered Resume Ranker",
             description: "Rank resumes and find the best candidates instantly.",
             icon: FileSearch,
-            href: "/ai-powered-resume-ranker",
+            href: "/erpnext/ai/ai-powered-resume-ranker",
           },
 
         ],
@@ -450,37 +450,37 @@ useEffect(() => {
             name: "Web Applications",
             description: "Custom web development",
             icon: Code,
-            href: "/web-application-development"
+            href: "/erpnext/services/erpnext-service-providerweb-application-development"
           },
           {
             name: "Mobile Apps",
             description: "Mobile application development",
             icon: Smartphone,
-            href: "/mobile-app-development"
+            href: "/erpnext/services/mobile-app-development"
           },
           {
             name: "API Development",
             description: "API and middleware services",
             icon: CodeSquare,
-            href: "/api-development-services"
+            href: "/erpnext/services/api-development-services"
           },
           {
             name: "CRM Software",
             description: "Customer Relationship Management",
             icon: Lightbulb,
-            href: "/crm-software"
+            href: "/erpnext/modules/crm-software"
           },
           {
             name: "Human Resource System",
             description: "Comprehensive HR management system",
             icon: UserPlus,
-            href: "/human-resource-system"
+            href: "/erpnext/modules/human-resource-system"
           },
           {
             name: "Data Analytics",
             description: "",
             icon: Rocket,
-            href: "/data-analytics"
+            href: "/erpnext/services/data-analytics"
           },
         ],
         "Consulting": [
@@ -488,25 +488,25 @@ useEffect(() => {
             name: "Digital Transformation",
             description: "Transform your business digitally",
             icon: Zap,
-            href: "/digital-transformation-services"
+            href: "/ai-automation/services/digital-transformation-services"
           },
           {
             name: "Process Consulting",
             description: "Optimize business processes",
             icon: Target,
-            href: "/process-consulting"
+            href: "/erpnext/services/process-consulting"
           },
           {
             name: "Technology Consulting",
             description: "Technology strategy and planning",
             icon: Cog,
-            href: "/technology-consulting"
+            href: "/erpnext/services/erpnext-service-providertechnology-consulting"
           },
           {
             name: "IT Consulting",
             description: "Expert guidance on technology strategy and IT solutions to drive business growth.",
             icon: Laptop,
-            href: "/it-consulting"
+            href: "/erpnext/services/it-consulting"
           }
         ],
         "Support & Maintenance": [
@@ -514,28 +514,28 @@ useEffect(() => {
             name: "ERPNext Support",
             description: "Round-the-clock technical support",
             icon: Phone,
-            href: "/erpnext-support"
+            href: "/erpnext/services/support-amc"
           },
           {
             name: "ERPNext System Maintenance",
             description: "Regular system maintenance",
             icon: Wrench,
-            href: "/erpnext-system-maintenance"
+            href: "/erpnext/services/system-maintenance-amc"
           },
           {
             name: "ERPNext Performance Optimization",
             description: "Optimize system performance",
             icon: TrendingUp,
-            href: "/erpnext-performance-optimization"
+            href: "/erpnext/services/performance-optimization"
           }
         ],
 
         "Resource Augmentation": [
-          { name: "Hire Python Developer", description: "Hire Python Developer", icon: Wrench, href: "/hire-python-developer" },
-          { name: "Hire Web Application Developers", icon: Handshake, description: "Hire Web Application Developers", href: "/hire-web-application-developers" },
-          { name: "Hire Javascript Developer", icon: Briefcase, description: "Hire Javascript Developer", href: "/hire-javascript-developer" },
-          { name: "Hire Django developer", icon: Globe, description: "Hire Django developer", href: "/hire-django-developer" },
-          { name: "Hire ERPNext Implementer", icon: Laptop, description: "Hire Django developer", href: "/hire-erpnext-implementer" }
+          { name: "Hire Python Developer", description: "Hire Python Developer", icon: Wrench, href: "/staff-augmentation/hire-python-developers" },
+          { name: "Hire Web Application Developers", icon: Handshake, description: "Hire Web Application Developers", href: "/staff-augmentation/web-application-developers" },
+          { name: "Hire Javascript Developer", icon: Briefcase, description: "Hire Javascript Developer", href: "/staff-augmentation/hire-javascript-developers" },
+          { name: "Hire Django developer", icon: Globe, description: "Hire Django developer", href: "/staff-augmentation/django-developer" },
+          { name: "Hire ERPNext Implementer", icon: Laptop, description: "Hire Django developer", href: "/erpnext/hire-developers" }
         ]
 
 
@@ -558,49 +558,49 @@ useEffect(() => {
             name: "Manufacturing",
             description: "Complete ERPNext setup",
             icon: Factory,
-            href: "/erp-for-manufacturing-industry"
+            href: "/erpnext/manufacturing"
           },
           {
             name: "Textile",
             description: "",
             icon: ShoppingCart,
-            href: "/erp-for-textile-industry"
+            href: "/erpnext/textile"
           },
           {
             name: "Chemicals",
             description: "",
             icon: TestTube,
-            href: "/erp-for-chemical-industry"
+            href: "/erpnext/chemical/"
           },
           {
             name: "Dyechem",
             description: "",
             icon: Atom,
-            href: "/erp-software-dyechem-industry"
+            href: "/erpnext/chemical/erp-software-dyechem-industry"
           },
           {
             name: "Electronics",
             description: "",
             icon: Zap,
-            href: "/erp-for-electronics-industry"
+            href: "/erpnext/electronics"
           },
           {
             name: "Mining",
             description: "",
             icon: Hammer,
-            href: "/erp-for-mining-industry"
+            href: "/erpnext/mining"
           },
           {
             name: "Agriculture",
             description: "",
             icon: Leaf,
-            href: "/erp-for-agro-commodity"
+            href: "/erpnext/agro/erp-for-commodity-trading"
           },
           {
             name: "Pharmaceuticals",
             description: "",
             icon: Pill,
-            href: "/erp-for-pharmaceuticals"
+            href: "/erpnext/pharmaceutical"
           }],
         "Operations and Service Management": [
           {
@@ -613,45 +613,45 @@ useEffect(() => {
             name: "Construction",
             description: "",
             icon: Hammer,
-            href: "/erp-for-construction-industry"
+            href: "/erpnext/construction"
           },
           {
             name: "Engineering",
             description: "",
             icon: GraduationCap,
-            href: "/erp-for-engineering-industry"
+            href: "/erpnext/engineering"
           }],
         "Healthcare & Education": [
           {
             name: "Healthcare",
             description: "",
             icon: Heart,
-            href: "/erp-healthcare-industry"
+            href: "/erpnext/healthcare"
           },
           {
             name: "Education",
             description: "",
             icon: GraduationCap,
-            href: "/erp-for-education"
+            href: "/erpnext/education"
           }],
         "E-Commerce & Logistics": [
           {
             name: "Trading & Distribution",
             description: "",
             icon: Truck,
-            href: "/erp-for-trading-industry"
+            href: "/erpnext/trading"
           },
           {
             name: "Retail & eCommerce",
             description: "",
             icon: ShoppingCart,
-            href: "/erp-for-retail-industry"
+            href: "/erpnext/retail"
           },
           {
             name: "Logistics",
             description: "",
             icon: Truck,
-            href: "/erp-for-logistics-industry"
+            href: "/erpnext/logistics"
           },
 
         ]
@@ -665,8 +665,8 @@ useEffect(() => {
       hasDropdown: true,
       icon: BarChart3,
       mainItems: [
-        { name: "Blogs", icon: Wrench, href: "/blog-post" },
-        { name: "Gallery", icon: Handshake, href: "/gallery" },
+        { name: "Blogs", icon: Wrench, href: "/blogs" },
+        { name: "Gallery", icon: Handshake, href: "/" },
         { name: "Dev Insights", icon: Code2, href: "#" },
       ],
 
@@ -676,7 +676,7 @@ useEffect(() => {
             name: "Blogs",
             description: "Learn about our Blogs",
             icon: Wrench,
-            href: "/blog-post"
+            href: "/blogs"
           },
         ],
        
@@ -697,25 +697,25 @@ useEffect(() => {
             name: "About Us",
             description: "Learn about our company",
             icon: Users,
-            href: "/about"
+            href: "/about-us"
           },
           {
             name: "Steer Your Vision",
             description: "Our approach to transformation",
             icon: Target,
-            href: "/steer-your-vision"
+            href: "/about-us/steer-your-vision"
           },
           {
             name: "Life at Finbyz",
             description: "Our work culture",
             icon: Heart,
-            href: "/life-at-finbyz"
+            href: "/about-us/life-at-finbyz"
           },
           {
             name: "Meet the Team",
             description: "Meet our team members",
             icon: Users,
-            href: "/our-team"
+            href: "/about-us/our-story"
           }
         ],
         "Work With Us": [
@@ -723,19 +723,19 @@ useEffect(() => {
             name: "Start Your ERP Journey",
             description: "Begin your ERP transformation",
             icon: Rocket,
-            href: "/start-your-erp-journey"
+            href: "/erpnext/services/start-your-erp-journey"
           },
           {
             name: "Hire Our Experts",
             description: "Hire our experienced professionals",
             icon: Users,
-            href: "/hire-experts"
+            href: "/staff-augmentation/experts"
           },
           {
             name: "Reseller / Strategic Partnerships",
             description: "Partner with us strategically",
             icon: Handshake,
-            href: "/partnership-programs"
+            href: "/about-us/partnership-programs"
           },
           {
             name: "Contact Us",
@@ -749,19 +749,19 @@ useEffect(() => {
             name: "Career Opportunities",
             description: "Explore job opportunities",
             icon: Briefcase,
-            href: "/jobs"
+            href: "/careers/job-openings"
           },
           {
             name: "Why Join Finbyz",
             description: "Benefits of working with us",
             icon: Star,
-            href: "/why-join-finbyz"
+            href: "/careers/why-join-finbyz"
           },
           {
             name: "Apply Now",
             description: "Submit your application",
             icon: Send,
-            href: "/job-application"
+            href: "/careers/job-application"
           }
         ]
       }
@@ -898,7 +898,7 @@ useEffect(() => {
                                           (showAllBlogs ? blogPosts : blogPosts.slice(0, 8)).map((post) => (
                                             <Link
                                               key={post.name}
-                                              href={`/${post.route}` || "/blog-post"}
+                                              href={`/${post.route}` || "/blogs"}
                                               className="flex items-center space-x-3 px-3 py-2 text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5 cursor-pointer transition-all rounded-lg text-sm"
                                               onClick={() => {
                                                 setHoveredDropdown(null);
@@ -920,7 +920,7 @@ useEffect(() => {
                                               {showAllBlogs ? "Show less" : "View more"}
                                             </button>
                                             <Link
-                                              href="/blog-post"
+                                              href="/blogs"
                                               className="text-sm px-3 py-2 rounded-lg text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5"
                                               onClick={() => {
                                                 setHoveredDropdown(null);
@@ -945,7 +945,7 @@ useEffect(() => {
 
                                               <Link
                                                 key={item.name}
-                                                href={`/${item.route}` || "/gallery"}
+                                                href={`/${item.route}` || "/"}
                                                 className="flex items-center space-x-3 px-3 py-2 text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5 cursor-pointer transition-all rounded-lg text-sm"
                                                 onClick={() => {
                                                   setHoveredDropdown(null);
@@ -966,7 +966,7 @@ useEffect(() => {
                                                 {showAllGallery ? "Show less" : "View more"}
                                               </button>
                                               <Link
-                                                href="/gallery"
+                                                href="/"
                                                 className="text-sm px-3 py-2 rounded-lg text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5"
                                                 onClick={() => {
                                                   setHoveredDropdown(null);

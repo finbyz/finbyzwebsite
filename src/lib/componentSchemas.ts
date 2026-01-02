@@ -1039,8 +1039,8 @@ export const componentSchemas: ComponentSchema[] = [
       subtitle: "Navigation breadcrumbs for page hierarchy",
       items: [
         { label: "Home", href: "/" },
-        { label: "Services", href: "/services" },
-        { label: "ERP Implementation", href: "/services/erp" }
+        { label: "Services", href: "/erpnext/services/erpnext-service-provider" },
+        { label: "ERP Implementation", href: "/erpnext/services/erpnext-service-providererp" }
       ]
     }
   },
@@ -2000,7 +2000,7 @@ export const componentSchemas: ComponentSchema[] = [
         },
         secondaryButton: {
           text: "Learn More",
-          href: "/about"
+          href: "/about-us"
         }
       }
     }

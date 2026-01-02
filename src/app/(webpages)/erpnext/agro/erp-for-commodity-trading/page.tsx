@@ -17,7 +17,7 @@ export default function Page() {
   };
   const handleLearnMore = () => {
     if (typeof window !== 'undefined') {
-      window.location.href = '/erp-software';
+      window.location.href = '/erp/services/erp-software-development';
     }
   };
 
@@ -133,7 +133,7 @@ export default function Page() {
           />
           <div className="mt-8">
             <p className="text-gray-700 mb-6">
-              We can help you analyze carefully all the needs and requirements of your business and then suggest you the solution that can help in increasing profits, productivity and control. There are many challenges in Implementing ERP software for agriculture industry, but adopting the latest technology is the only way to grow your business. We provide full hand holding in your journey to adopt <a href="/erpnext-software" className="text-blue-600 underline">ERP software</a> for effective management of procurement, supply chain and distribution of agro-products.
+              We can help you analyze carefully all the needs and requirements of your business and then suggest you the solution that can help in increasing profits, productivity and control. There are many challenges in Implementing ERP software for agriculture industry, but adopting the latest technology is the only way to grow your business. We provide full hand holding in your journey to adopt <a href="/erpnext/" className="text-blue-600 underline">ERP software</a> for effective management of procurement, supply chain and distribution of agro-products.
             </p>
             <QuoteBlock
               text="Without change, performance would never improve. -Marianne Bradford."

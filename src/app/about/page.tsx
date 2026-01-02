@@ -96,17 +96,17 @@ export default function AboutPage() {
     {
       title: "Steer Your Vision",
       description: "Discover our strategic approach to solving complex business challenges.",
-      url: "/steer-your-vision"
+      url: "/about-us/steer-your-vision"
     },
     {
       title: "Our Team",
       description: "Meet the people behind Finbyz — technologists, analysts, and advisors.",
-      url: "/our-team"
+      url: "/about-us/our-story"
     },
     {
       title: "Life at Finbyz",
       description: "Get a glimpse into our culture, values, and what it's like to work with us.",
-      url: "/life-at-finbyz"
+      url: "/about-us/life-at-finbyz"
     }
   ];
 
@@ -358,12 +358,12 @@ export default function AboutPage() {
               Join us in creating innovative solutions that drive business transformation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-             <Link href="/steer-your-vision">
+             <Link href="/about-us/steer-your-vision">
               <button className="bg-[#f97316] text-white px-8 py-4 rounded-full font-semibold hover:scale-105 hover:shadow-xl transition-all text-lg">
               Let's Steer Your Vision
               </button>
               </Link>
-              <Link href="/erpnext-service-provider">
+              <Link href="/erpnext/services/erpnext-service-provider">
                 <button className="border-2 border-gray-300 text-gray-900 bg-transparent hover:bg-gray-300 hover:text-gray-900 px-8 py-4 rounded-full font-semibold transition-all text-lg">
                 Explore Our Services
               </button>

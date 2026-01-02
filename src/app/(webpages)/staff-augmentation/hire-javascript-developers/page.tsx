@@ -233,7 +233,7 @@ export default function Page() {
         secondaryButton={{
           text: 'View Portfolio',
           action: () => {
-            window.location.href = '/portfolio';
+            window.location.href = '/erpnext/case-studies';
           }
         }}
         heroImage={{
@@ -424,7 +424,7 @@ export default function Page() {
                 text: 'See Our Work',
                 icon: 'Eye',
                 action: () => {
-                  window.location.href = '/portfolio';
+                  window.location.href = '/erpnext/case-studies';
                 }
               },
               trustIndicator: {

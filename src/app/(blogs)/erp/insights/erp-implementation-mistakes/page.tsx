@@ -77,7 +77,7 @@ export default function Page() {
           >
             <QuoteBlock text="Good fortune is what happens when opportunity meets with planning.\n- Thomas Edison" isHeading={false} />
             <BlogParagraph>
-              ERP systems significantly reshape how a business operates. A major challenge in implementing an ERP system is the lack of upfront planning. Organizations must determine which <a href="/modules-of-erp" target="_blank" className="text-primary underline">modules of ERP</a> are relevant and define the processes they aim to improve. Budget forecasting must also account for potential unforeseen costs. Rushing the implementation or underestimating the time needed often results in failure. An effective ERP implementation guide always stresses planning as a critical first step to avoid costly ERP implementation mistakes.
+              ERP systems significantly reshape how a business operates. A major challenge in implementing an ERP system is the lack of upfront planning. Organizations must determine which <a href="/erpnext/modules/all-modules-of-erpnext" target="_blank" className="text-primary underline">modules of ERP</a> are relevant and define the processes they aim to improve. Budget forecasting must also account for potential unforeseen costs. Rushing the implementation or underestimating the time needed often results in failure. An effective ERP implementation guide always stresses planning as a critical first step to avoid costly ERP implementation mistakes.
             </BlogParagraph>
           </BlogSectionWithImage>
 
@@ -177,7 +177,7 @@ export default function Page() {
           >
             <QuoteBlock text="Software maintenance is not about keeping it working like before. It is about keeping it being useful in a changing world.\n- Jessica Kerr" isHeading={false} />
             <BlogParagraph>
-              Another critical ERP implementation mistake is neglecting long-term system maintenance. ERP is not a one-time setup; it requires continuous updates, monitoring, and support. Without regular maintenance, your system risks becoming outdated, leading to operational inefficiencies or even failures. Timely and proper maintenance ensures that your <a href="/erp-software" target="_blank" className="text-primary underline">ERP software</a> is up to date, error-free and you are using it to its full potential. Timely updates and support from your vendor can save you from future challenges in implementing ERP system.
+              Another critical ERP implementation mistake is neglecting long-term system maintenance. ERP is not a one-time setup; it requires continuous updates, monitoring, and support. Without regular maintenance, your system risks becoming outdated, leading to operational inefficiencies or even failures. Timely and proper maintenance ensures that your <a href="/erp/services/erp-software-development" target="_blank" className="text-primary underline">ERP software</a> is up to date, error-free and you are using it to its full potential. Timely updates and support from your vendor can save you from future challenges in implementing ERP system.
             </BlogParagraph>
           </BlogSectionWithImage>
 
@@ -224,7 +224,7 @@ export default function Page() {
           <BlogSection id="conclusion" title="Final Words">
             <QuoteBlock text="Let our advance worrying become advance thinking and planning.\n- Winston Churchill" isHeading={false} />
             <BlogParagraph>
-              From large corporations to small and medium businesses, ERP is being recognized as a game-changer. However, understanding and preparing for the challenges in implementing ERP system is just as crucial as choosing the right software. Avoiding common ERP implementation mistakes and following a structured ERP implementation guide will set your organization on the path to long-term growth and efficiency. With the right approach, ERP can become a powerful engine for business transformation. Following the right <a href="/erp-implementation-steps" target="_blank" className="text-primary underline">ERP implementation steps</a> and the correct strategies will ensure that you are ultimately paving your way towards success.
+              From large corporations to small and medium businesses, ERP is being recognized as a game-changer. However, understanding and preparing for the challenges in implementing ERP system is just as crucial as choosing the right software. Avoiding common ERP implementation mistakes and following a structured ERP implementation guide will set your organization on the path to long-term growth and efficiency. With the right approach, ERP can become a powerful engine for business transformation. Following the right <a href="/erp/insights/erp-implementation-steps" target="_blank" className="text-primary underline">ERP implementation steps</a> and the correct strategies will ensure that you are ultimately paving your way towards success.
             </BlogParagraph>
           </BlogSection>
         </BlogContent>

@@ -212,7 +212,7 @@ export default function Page() {
             <BlogParagraph>
               A strong{' '}
               <a
-                href="/how-website-benefits-a-business"
+                href="/erpnext/insights/how-website-benefits-a-business"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary underline hover:text-primary/80 transition-colors"
@@ -221,7 +221,7 @@ export default function Page() {
               </a>{' '}
               is a crucial asset in today's digital era. For a small business website, the focus should be on delivering clear messaging, seamless user experience, and impactful branding. Your website design should reflect your business goals while offering real value to visitors. Enhance your online presence with a professional{' '}
               <a
-                href="/website-development"
+                href="/erpnext/services/website-development-on-erpnext"
                 className="text-primary underline hover:text-primary/80 transition-colors"
               >
                 website design

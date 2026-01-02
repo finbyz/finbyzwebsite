@@ -1,4 +1,3 @@
-import { url } from "inspector";
 
 export const GLOBAL_EXCLUDE: string[] = [
   '/api/',
@@ -69,7 +68,7 @@ const config: SitemapConfig[] = [
   {
     name: 'site',
     type: 'filesystemDir',
-    dir: ['', '/solutions'],
+    dir: ['', '/solutions', '/careers'],
     includeRootIndex: true,
     changefreq: 'weekly',
     priority: 0.8,
@@ -95,7 +94,7 @@ const config: SitemapConfig[] = [
     type: 'frappe',
     doctype: 'Job Opening',
     routeField: 'route',
-    routePrefix: '/jobs/',
+    routePrefix: '/careers/job-openings/',
     filters: [['publish', 'is', 'set']],
     fields: ['route'],
     changefreq: 'daily',

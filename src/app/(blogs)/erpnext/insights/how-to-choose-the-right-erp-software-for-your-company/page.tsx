@@ -56,14 +56,14 @@ export default function Page() {
             imagePosition='top'
           >
             <BlogParagraph>
-              Though business owners have realized the <a href="/benefits-of-erp" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">benefits of implementing ERP</a> system for their organization, it is important to understand that choosing the wrong ERP solutions can result in a significant loss of time and resources. As selecting the <a href="/how-erp-improves-business-performance" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">best ERP system can improve your business performance</a> and drive growth, a poor choice may lead to operational inefficiencies.
+              Though business owners have realized the <a href="/erp/insights/benefits-of-erp" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">benefits of implementing ERP</a> system for their organization, it is important to understand that choosing the wrong ERP solutions can result in a significant loss of time and resources. As selecting the <a href="/erp/insights/how-erp-improves-business-performance" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">best ERP system can improve your business performance</a> and drive growth, a poor choice may lead to operational inefficiencies.
             </BlogParagraph>
           </BlogSectionWithImage>
 
           {/* What to Consider Section */}
           <BlogSection id="considerations" title="What to Consider While Choosing an ERP Software">
             <BlogParagraph>
-              With a variety of ERP solutions available in the market, choosing the Best ERP Software requires a strategic approach. You must evaluate which ERP system fits your current operations and has the scalability to support future growth. The right software will enhance productivity and profitability, while the wrong choice can lead to errors and setbacks. As it’s rightly said, "Nothing worth having comes easy", there will be <a href="/challenges-of-erp-implementation" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">challenges of ERP implementation</a>. The following tips will help you make an informed decision.
+              With a variety of ERP solutions available in the market, choosing the Best ERP Software requires a strategic approach. You must evaluate which ERP system fits your current operations and has the scalability to support future growth. The right software will enhance productivity and profitability, while the wrong choice can lead to errors and setbacks. As it’s rightly said, "Nothing worth having comes easy", there will be <a href="/erp/insights/challenges-of-erp-implementation" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">challenges of ERP implementation</a>. The following tips will help you make an informed decision.
             </BlogParagraph>
             <div className="flex flex-col items-center my-6">
               <QuoteBlock
@@ -131,7 +131,7 @@ export default function Page() {
                 />
                 <h3 className="text-lg font-semibold mb-2 flex items-center gap-2"><LucideUsers className="w-5 h-5 text-primary" />ERP vendors</h3>
                 <p className="text-muted-foreground text-base">
-                  Even the <a href="/erp-software" className="text-primary underline hover:text-primary/80 transition-colors">Best ERP Software</a> can fall short if implemented poorly. It is essential to evaluate the vendor’s expertise and experience with ERP solutions. Ask detailed questions during demos to assess their knowledge. A well-informed vendor can be a long-term partner in your journey toward implementing the best ERP system.
+                  Even the <a href="/erp/services/erp-software-development" className="text-primary underline hover:text-primary/80 transition-colors">Best ERP Software</a> can fall short if implemented poorly. It is essential to evaluate the vendor’s expertise and experience with ERP solutions. Ask detailed questions during demos to assess their knowledge. A well-informed vendor can be a long-term partner in your journey toward implementing the best ERP system.
                 </p>
               </div>
               {/* Analyze the benefits */}
@@ -190,7 +190,7 @@ export default function Page() {
               />
             </div>
             <BlogParagraph>
-              Implementing the Best ERP Software is not a simple task—it involves a structured approach, time investment, and significant costs. A wrong decision can lead to wasted resources and unfavorable business outcomes. Hence, it is crucial to evaluate all potential ERP solutions thoroughly before making a final decision. Spending the right amount of time on selecting the best ERP system for your organization and following the correct <a href="/erp-implementation-steps" className="text-primary underline hover:text-primary/80 transition-colors">ERP implementation steps</a> can save considerable time and effort that would otherwise go into fixing implementation issues later.
+              Implementing the Best ERP Software is not a simple task—it involves a structured approach, time investment, and significant costs. A wrong decision can lead to wasted resources and unfavorable business outcomes. Hence, it is crucial to evaluate all potential ERP solutions thoroughly before making a final decision. Spending the right amount of time on selecting the best ERP system for your organization and following the correct <a href="/erp/insights/erp-implementation-steps" className="text-primary underline hover:text-primary/80 transition-colors">ERP implementation steps</a> can save considerable time and effort that would otherwise go into fixing implementation issues later.
             </BlogParagraph>
           </BlogSection>
 

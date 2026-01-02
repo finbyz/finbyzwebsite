@@ -59,7 +59,7 @@ export default function Page() {
           {/* What is Production ERP Software? */}
           <BlogSection id="what-is-production-erp" title="What is Production ERP Software?">
             <BlogParagraph>
-              <a href="/erp-for-manufacturing-industry" className="text-primary underline hover:text-primary/80 transition-colors">ERP software for manufacturing</a> is a comprehensive solution designed to integrate and optimize every stage of the manufacturing process. From procurement and planning to inventory and quality control, production manufacturing software unifies all essential functions into a single system. The result is improved collaboration, reduced delays, and full visibility across the entire production lifecycle.
+              <a href="/erpnext/manufacturing" className="text-primary underline hover:text-primary/80 transition-colors">ERP software for manufacturing</a> is a comprehensive solution designed to integrate and optimize every stage of the manufacturing process. From procurement and planning to inventory and quality control, production manufacturing software unifies all essential functions into a single system. The result is improved collaboration, reduced delays, and full visibility across the entire production lifecycle.
             </BlogParagraph>
           </BlogSection>
 
@@ -82,7 +82,7 @@ export default function Page() {
                 variant="default"
               >
                 <BlogParagraph>
-                  <a href="/What-is-ERP-software" className="text-primary underline hover:text-primary/80 transition-colors">Production ERP software</a> offers real-time, end-to-end insight into operations from raw material procurement to final product delivery. This level of visibility allows manufacturers to monitor inventory levels, track production progress, and quickly resolve operational issues, ensuring efficiency across the entire production manufacturing software ecosystem.
+                  <a href="/erp/insights/What-is-ERP-software" className="text-primary underline hover:text-primary/80 transition-colors">Production ERP software</a> offers real-time, end-to-end insight into operations from raw material procurement to final product delivery. This level of visibility allows manufacturers to monitor inventory levels, track production progress, and quickly resolve operational issues, ensuring efficiency across the entire production manufacturing software ecosystem.
                 </BlogParagraph>
               </BlogSectionWithImage>
 

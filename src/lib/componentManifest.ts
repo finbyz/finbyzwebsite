@@ -1202,7 +1202,7 @@ export const componentManifest: { [key: string]: ComponentManifest } = {
         },
         secondaryButton: {
           text: "Learn More",
-          action: "/about"
+          action: "/about-us"
         }
       }
     },
@@ -1288,13 +1288,13 @@ export const componentManifest: { [key: string]: ComponentManifest } = {
         subtitle: "Showcasing successful projects and implementations",
         images: [
           {
-            src: "/portfolio/project1.jpg",
+            src: "/erpnext/case-studiesproject1.jpg",
             alt: "ERP Dashboard Implementation",
             caption: "Modern dashboard for manufacturing company",
             category: "ERP"
           },
           {
-            src: "/portfolio/project2.jpg",
+            src: "/erpnext/case-studiesproject2.jpg",
             alt: "AI Analytics Platform",
             caption: "Machine learning insights dashboard",
             category: "AI"
@@ -1924,8 +1924,8 @@ export const componentManifest: { [key: string]: ComponentManifest } = {
       data: {
         items: [
           { label: "Home", href: "/", current: false },
-          { label: "Services", href: "/services", current: false },
-          { label: "ERP Implementation", href: "/services/erp", current: true }
+          { label: "Services", href: "/erpnext/services/erpnext-service-provider", current: false },
+          { label: "ERP Implementation", href: "/erpnext/services/erpnext-service-providererp", current: true }
         ]
       }
     },
@@ -1972,12 +1972,12 @@ export const componentManifest: { [key: string]: ComponentManifest } = {
           },
           {
             label: "Services",
-            href: "/services",
+            href: "/erpnext/services/erpnext-service-provider",
             icon: "Briefcase",
             children: [
-              { label: "ERP Implementation", href: "/services/erp" },
-              { label: "AI Solutions", href: "/services/ai" },
-              { label: "Consulting", href: "/services/consulting" }
+              { label: "ERP Implementation", href: "/erpnext/services/erpnext-service-providererp" },
+              { label: "AI Solutions", href: "/erpnext/services/erpnext-service-providerai" },
+              { label: "Consulting", href: "/erpnext/services/erpnext-service-providerconsulting" }
             ]
           }
         ]
@@ -2026,15 +2026,15 @@ export const componentManifest: { [key: string]: ComponentManifest } = {
           {
             title: "Services",
             links: [
-              { label: "ERP Implementation", href: "/services/erp" },
-              { label: "AI Solutions", href: "/services/ai" },
-              { label: "Consulting", href: "/services/consulting" }
+              { label: "ERP Implementation", href: "/erpnext/services/erpnext-service-providererp" },
+              { label: "AI Solutions", href: "/erpnext/services/erpnext-service-providerai" },
+              { label: "Consulting", href: "/erpnext/services/erpnext-service-providerconsulting" }
             ]
           },
           {
             title: "Company",
             links: [
-              { label: "About Us", href: "/about" },
+              { label: "About Us", href: "/about-us" },
               { label: "Careers", href: "/careers" },
               { label: "Contact", href: "/contact" }
             ]

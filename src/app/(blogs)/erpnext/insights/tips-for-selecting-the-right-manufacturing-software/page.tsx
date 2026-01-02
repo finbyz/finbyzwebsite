@@ -54,7 +54,7 @@ export default function Page() {
             }}
           >
             <BlogParagraph>
-              In today's competitive landscape, having the right <a href="/erp-for-manufacturing-industry" className="text-primary underline hover:text-primary/80 transition-colors">ERP for manufacturing</a> can significantly impact efficiency, scalability, and profitability. Choosing the wrong solution can lead to costly disruptions, inefficiencies, and compliance risks. That's why it's essential to evaluate your options carefully and select the best manufacturing software tailored to your specific operations and industry.
+              In today's competitive landscape, having the right <a href="/erpnext/manufacturing" className="text-primary underline hover:text-primary/80 transition-colors">ERP for manufacturing</a> can significantly impact efficiency, scalability, and profitability. Choosing the wrong solution can lead to costly disruptions, inefficiencies, and compliance risks. That's why it's essential to evaluate your options carefully and select the best manufacturing software tailored to your specific operations and industry.
             </BlogParagraph>
           </BlogSectionWithImage>
 

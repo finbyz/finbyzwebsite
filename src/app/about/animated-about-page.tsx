@@ -167,17 +167,17 @@ export default function AnimatedAboutPage() {
     {
       title: "Steer Your Vision",
       description: "Discover our strategic approach to solving complex business challenges.",
-      url: "/steer-your-vision"
+      url: "/about-us/steer-your-vision"
     },
     {
       title: "Our Team",
       description: "Meet the people behind Finbyz — technologists, analysts, and advisors.",
-      url: "/our-team"
+      url: "/about-us/our-story"
     },
     {
       title: "Life at Finbyz",
       description: "Get a glimpse into our culture, values, and what it's like to work with us.",
-      url: "/life-at-finbyz"
+      url: "/about-us/life-at-finbyz"
     }
   ];
 

@@ -129,14 +129,14 @@ const challengeCards = [
 ];
 
 const industries = [
-  { title: 'Chemical', image: '/images/nav-chemical.svg', alt: 'Chemical', description: '', link: '/erp-for-chemical-industry' },
-  { title: 'Engineering', image: '/images/nav-engineering.svg', alt: 'Engineering', description: '', link: '/erp-for-engineering-industry' },
-  { title: 'Logistics', image: '/images/nav-logistics.svg', alt: 'Logistics', description: '', link: '/erp-for-logistics-industry' },
-  { title: 'Manufacturing', image: '/images/nav-manufacturing.svg', alt: 'Manufacturing', description: '', link: '/erp-for-manufacturing-industry' },
-  { title: 'Agro Commodity', image: '/images/nav-agro.svg', alt: 'Agro Commodity', description: '', link: '/erp-for-agro-commodity' },
-  { title: 'Trading', image: '/images/nav-trading.svg', alt: 'Trading', description: '', link: '/erp-for-trading-industry' },
-  { title: 'Textile', image: '/images/yarn.svg', alt: 'Textile', description: '', link: '/erp-for-textile-industry' },
-  { title: 'Services', image: '/images/nav-services.svg', alt: 'Services', description: '', link: '/erpnext-service-provider' },
+  { title: 'Chemical', image: '/images/nav-chemical.svg', alt: 'Chemical', description: '', link: '/erpnext/chemical/' },
+  { title: 'Engineering', image: '/images/nav-engineering.svg', alt: 'Engineering', description: '', link: '/erpnext/engineering' },
+  { title: 'Logistics', image: '/images/nav-logistics.svg', alt: 'Logistics', description: '', link: '/erpnext/logistics' },
+  { title: 'Manufacturing', image: '/images/nav-manufacturing.svg', alt: 'Manufacturing', description: '', link: '/erpnext/manufacturing' },
+  { title: 'Agro Commodity', image: '/images/nav-agro.svg', alt: 'Agro Commodity', description: '', link: '/erpnext/agro/erp-for-commodity-trading' },
+  { title: 'Trading', image: '/images/nav-trading.svg', alt: 'Trading', description: '', link: '/erpnext/trading' },
+  { title: 'Textile', image: '/images/yarn.svg', alt: 'Textile', description: '', link: '/erpnext/textile' },
+  { title: 'Services', image: '/images/nav-services.svg', alt: 'Services', description: '', link: '/erpnext/services/erpnext-service-provider' },
   { title: 'Real Estate', image: '/images/icon-business-app.svg', alt: 'Real Estate', description: '', link: '' },
   { title: 'Ceramics', image: '/images/Ceramics.svg', alt: 'Ceramics', description: '', link: '' }
 ];
@@ -278,7 +278,7 @@ export default function Page() {
       <Section useGradient>
         <div className="container-custom py-8">
           <h2 className="text-2xl font-bold mb-4 text-[#1A5276]">Why Consider Us As Your ERPNext Implementation Partner?</h2>
-          <p className="mb-8 text-gray-700">We are a trusted <a href="/erpnext-services-in-uae" className="text-primary underline">ERPNext Implementation Company</a> based in Ahmedabad, known for our comprehensive and client-focused ERPNext services. Here's what makes us stand out as preferred ERPNext service providers.</p>
+          <p className="mb-8 text-gray-700">We are a trusted <a href="/erpnext/services/ERPNext-impelementation-in-uae" className="text-primary underline">ERPNext Implementation Company</a> based in Ahmedabad, known for our comprehensive and client-focused ERPNext services. Here's what makes us stand out as preferred ERPNext service providers.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {whyUsFeatures.map((feature, idx) => (
               <FeatureCard
@@ -419,7 +419,7 @@ export default function Page() {
       <Section useGradient>
         <div className="container-custom py-8">
           <h2 className="text-2xl font-bold mb-4 text-center  text-[#1A5276]">We Serve Businesses Across the Globe</h2>
-          <p className="mb-8 text-gray-700 text-center">FinByz is a leading <a href="/erpnext-services-in-uae" className="text-primary underline">ERPNext service provider in UAE</a>, India, Canada, USA, Saudi Arabia, UK, and beyond. As a renowned global <a href="/erpnext-software" className="text-primary underline">ERP implementation</a> partner, we proudly offer our expertise to businesses spanning these regions. Our committed team stands ready to address all your ERP implementation challenges, from consultations to hands-on assistance.You have any questions or need guidance, please don't hesitate to contact us.</p>
+          <p className="mb-8 text-gray-700 text-center">FinByz is a leading <a href="/erpnext/services/ERPNext-impelementation-in-uae" className="text-primary underline">ERPNext service provider in UAE</a>, India, Canada, USA, Saudi Arabia, UK, and beyond. As a renowned global <a href="/erpnext/" className="text-primary underline">ERP implementation</a> partner, we proudly offer our expertise to businesses spanning these regions. Our committed team stands ready to address all your ERP implementation challenges, from consultations to hands-on assistance.You have any questions or need guidance, please don't hesitate to contact us.</p>
           <ClientCountryGrid countries={countries} />
         </div>
       </Section>

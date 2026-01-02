@@ -531,7 +531,7 @@ export default function Page() {
             <h2 className="text-2xl font-bold mb-2 text-[#1A5276]">Conclusion</h2>
           <div className="text-gray-900 text-lg">
             <p>
-              Implementing electronic-invoicing compliance in ERPNext streamlines tax reporting, reduces manual errors, and enhances regulatory adherence. With custom fields, optimized workflows, and security enhancements, businesses can ensure seamless, accurate, and legally compliant invoicing.<br/>Know more about our <Link href="/erpnext-software" className="text-blue-600 underline" target="_blank">ERP Software </Link> and  <Link href="/hire-erpnext-implementer" className="text-blue-600 underline" target="_blank">ERP Implementation Services</Link>.
+              Implementing electronic-invoicing compliance in ERPNext streamlines tax reporting, reduces manual errors, and enhances regulatory adherence. With custom fields, optimized workflows, and security enhancements, businesses can ensure seamless, accurate, and legally compliant invoicing.<br/>Know more about our <Link href="/erpnext/" className="text-blue-600 underline" target="_blank">ERP Software </Link> and  <Link href="/erpnext/hire-developers" className="text-blue-600 underline" target="_blank">ERP Implementation Services</Link>.
             </p>
           </div>
 
@@ -539,7 +539,7 @@ export default function Page() {
           <h2 className="text-2xl font-bold text-[#1A5276]">Documentation </h2>
           <div className="text-gray-900 text-lg">
             <p>
-            Complete documentation for Argentina Electronic Invoicing in ERPNext is available <Link href="/argentina-electronic-invoicing-erpnext-afip-compliance-automation" className="text-blue-600 underline" target="_blank">here</Link>.
+            Complete documentation for Argentina Electronic Invoicing in ERPNext is available <Link href="/erpnext/apps/argentina-electronic-invoicing-erpnext-afip-compliance-automation" className="text-blue-600 underline" target="_blank">here</Link>.
             </p>
           </div>
 

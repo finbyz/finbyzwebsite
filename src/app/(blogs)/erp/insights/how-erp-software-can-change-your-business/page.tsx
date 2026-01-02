@@ -60,7 +60,7 @@ export default function Page() {
               All businesses, regardless of their size or industry, must ensure that operations are streamlined and effectively managed. Without proper systems in place, growth and profitability become difficult to achieve. When correctly implemented, <a href="https://finbyz.tech/erp-implementation-steps" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">Enterprise Resource Planning (ERP)</a> software becomes a powerful tool to centralize and optimize business functions. Initially tailored for large enterprises, ERP solutions are now widely available for small and mid-sized businesses as well. These systems address various critical areas such as production scheduling, planning, inventory control, and overall supply chain management.
             </BlogParagraph>
             <BlogParagraph>
-              A wide range of ERP software options are available in the market, each offering unique capabilities. The <a href="/benefits-of-erp" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">benefits of implementing ERP</a> are numerous and transformative. Here's how a well-designed ERP solution can revolutionize your business operations:
+              A wide range of ERP software options are available in the market, each offering unique capabilities. The <a href="/erp/insights/benefits-of-erp" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">benefits of implementing ERP</a> are numerous and transformative. Here's how a well-designed ERP solution can revolutionize your business operations:
             </BlogParagraph>
           </BlogSectionWithImage>
 
@@ -165,7 +165,7 @@ export default function Page() {
             imageSize="large"
           >
             <BlogParagraph>
-              High-quality customer service is critical to business success. A reliable ERP solution integrated with CRM tools enables customer service teams to instantly access comprehensive client data, streamlining support processes. An <a href="/benefits-of-erp-and-crm-integration" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80 transition-colors">ERP integrated with CRM software</a> improves response time and ensures personalized service based on customer history.
+              High-quality customer service is critical to business success. A reliable ERP solution integrated with CRM tools enables customer service teams to instantly access comprehensive client data, streamlining support processes. An <a href="/erp/insights/benefits-of-erp-and-crm-integration" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80 transition-colors">ERP integrated with CRM software</a> improves response time and ensures personalized service based on customer history.
             </BlogParagraph>
             <BlogParagraph>
               With the right Enterprise Resource Planning (ERP) tools, customer service teams can prioritize key accounts, apply discounts intelligently, and reduce errors in order fulfillment. In supply chain management, ERP ensures accurate tracking and timely delivery, increasing customer satisfaction and loyalty.
@@ -188,7 +188,7 @@ export default function Page() {
 
           <BlogSection id="conclusion" title="ERP Optimizes Business Processes">
             <BlogParagraph>
-              When companies start using an enterprise resource planning software, it makes it easier for them to handle the payments for all the goods and services they render. An efficient ERP system will also streamline your cash flow. Every business manager should be able to handle frequent change and know how to use and connect their systems with various information technology so that the full gain in ERP systems can be harnessed. Find out more information about our <a href="/erp-software" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80 transition-colors">ERP Software</a> here.
+              When companies start using an enterprise resource planning software, it makes it easier for them to handle the payments for all the goods and services they render. An efficient ERP system will also streamline your cash flow. Every business manager should be able to handle frequent change and know how to use and connect their systems with various information technology so that the full gain in ERP systems can be harnessed. Find out more information about our <a href="/erp/services/erp-software-development" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80 transition-colors">ERP Software</a> here.
             </BlogParagraph>
           </BlogSection>
         </BlogContent>

@@ -111,7 +111,7 @@ export default function Page() {
           text: 'View Our Clients',
           action: () => {
             if (typeof window !== 'undefined') {
-              window.open('/clients', '_blank');
+              window.open('/about-us/clients', '_blank');
             }
           }
         }}
@@ -164,7 +164,7 @@ export default function Page() {
         <div className="container-custom py-8">
           <h2 className="text-2xl font-semibold mb-4 text-[#1A5276]">Website Development Company in Ahmedabad, Gujarat, India</h2>
           <p>
-            <Link href="/clients" target="_blank" className="text-primary underline">Our clients</Link> speak for our work. Our passion to develop websites and using expertise and excellence to provide a diverse range of technical services that are customized as per client’s need has helped us achieve the time specific and desired results. We offer powerful design solutions maintaining the utmost quality and speed. Our high-quality service through an extensive and talented team allows us to develop a stunning website for your business. Our experienced developers and testing team help us to deliver our projects in time to the client’s satisfaction. We don’t just build you a website, we create it for you.
+            <Link href="/about-us/clients" target="_blank" className="text-primary underline">Our clients</Link> speak for our work. Our passion to develop websites and using expertise and excellence to provide a diverse range of technical services that are customized as per client’s need has helped us achieve the time specific and desired results. We offer powerful design solutions maintaining the utmost quality and speed. Our high-quality service through an extensive and talented team allows us to develop a stunning website for your business. Our experienced developers and testing team help us to deliver our projects in time to the client’s satisfaction. We don’t just build you a website, we create it for you.
           </p>
           <div className="flex flex-col items-center mt-8">
             <QuoteBlock text="Building a website is easy, designing one takes skill - Paul Scrivens" isHeading={false} />
@@ -193,7 +193,7 @@ export default function Page() {
                 icon: 'Eye',
                 action: () => {
                   if (typeof window !== 'undefined') {
-                    window.open('/clients', '_blank');
+                    window.open('/about-us/clients', '_blank');
                   }
                 }
               },

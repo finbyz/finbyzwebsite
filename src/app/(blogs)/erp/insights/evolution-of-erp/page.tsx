@@ -190,21 +190,21 @@ export default function Page() {
             }}
           >
             <BlogParagraph>
-              <a href="/erpnext-certified-partner" className="text-primary underline hover:text-primary/80 transition-colors">ERP systems</a> have been shaping the way businesses operate for over two decades. The ERP system evolution reflects a shift from basic bookkeeping tools like Tally, QuickBooks, and Microsoft Office to more integrated solutions. As computing technology progressed from bulky desktop machines to modern smartphones, business technology also transformed. Innovations such as the internet, web platforms, and cloud computing have driven the evolution of ERP. Today, ERP applications have become indispensable tools for businesses of all sizes, from local shops to multinational organizations.
+              <a href="/erpnext/certified-partner" className="text-primary underline hover:text-primary/80 transition-colors">ERP systems</a> have been shaping the way businesses operate for over two decades. The ERP system evolution reflects a shift from basic bookkeeping tools like Tally, QuickBooks, and Microsoft Office to more integrated solutions. As computing technology progressed from bulky desktop machines to modern smartphones, business technology also transformed. Innovations such as the internet, web platforms, and cloud computing have driven the evolution of ERP. Today, ERP applications have become indispensable tools for businesses of all sizes, from local shops to multinational organizations.
             </BlogParagraph>
           </BlogSectionWithImage>
 
           {/* Before ERP System */}
           <BlogSection id="before-erp" title="Before ERP System">
             <BlogParagraph>
-              Before the rise of integrated systems, large companies relied on different standalone software to handle various business functions. Legacy systems like Material Requirements Planning (MRP) and Manufacturing Resources Planning (MRP II) focused mainly on inventory and manufacturing processes. However, other departments such as accounting and distribution were still using separate software. The lack of a unified platform led to data duplication and inefficiency. This gap highlighted the need for a unified <a href="/software-development" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">Software Development</a> approach and centralized database, laying the foundation for the evolution of ERP and the emergence of comprehensive ERP applications.
+              Before the rise of integrated systems, large companies relied on different standalone software to handle various business functions. Legacy systems like Material Requirements Planning (MRP) and Manufacturing Resources Planning (MRP II) focused mainly on inventory and manufacturing processes. However, other departments such as accounting and distribution were still using separate software. The lack of a unified platform led to data duplication and inefficiency. This gap highlighted the need for a unified <a href="/erpnext/services/erpnext-service-providersoftware-development" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">Software Development</a> approach and centralized database, laying the foundation for the evolution of ERP and the emergence of comprehensive ERP applications.
             </BlogParagraph>
           </BlogSection>
 
           {/* Early Stage ERP Systems */}
           <BlogSection id="early-erp" title="Early Stage ERP Systems">
             <BlogParagraph>
-              By the late 1990s, early ERP applications emerged to bridge the gap between various business departments such as distribution, accounting, and <a href="/human-resource-system" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank">human resource management</a>. These systems enabled real-time data sharing, enhancing coordination across departments. However, in the early stages of the ERP system evolution, such systems were primarily adopted by large enterprises due to two major reasons:
+              By the late 1990s, early ERP applications emerged to bridge the gap between various business departments such as distribution, accounting, and <a href="/erpnext/modules/human-resource-system" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank">human resource management</a>. These systems enabled real-time data sharing, enhancing coordination across departments. However, in the early stages of the ERP system evolution, such systems were primarily adopted by large enterprises due to two major reasons:
             </BlogParagraph>
             <BlogCheckList
               items={[
@@ -222,14 +222,14 @@ export default function Page() {
           {/* ERPs as Web Application */}
           <BlogSection id="web-erp" title="ERPs as Web Application">
             <BlogParagraph>
-              The next phase in the ERP system evolution came with the rise of web-based platforms. This allowed new-generation ERP applications to become accessible for small and medium-sized businesses. The <a href="/web-application-development" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank">development of web applications</a> simplified infrastructure and lowered costs by eliminating the need for local installations—users could now just log in via a browser. Despite these improvements, high licensing fees, implementation complexity, and server maintenance costs still posed challenges for companies with limited IT budgets. These factors limited widespread adoption to organizations with over 100 employees.
+              The next phase in the ERP system evolution came with the rise of web-based platforms. This allowed new-generation ERP applications to become accessible for small and medium-sized businesses. The <a href="/erpnext/services/erpnext-service-providerweb-application-development" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank">development of web applications</a> simplified infrastructure and lowered costs by eliminating the need for local installations—users could now just log in via a browser. Despite these improvements, high licensing fees, implementation complexity, and server maintenance costs still posed challenges for companies with limited IT budgets. These factors limited widespread adoption to organizations with over 100 employees.
             </BlogParagraph>
           </BlogSection>
 
           {/* Cloud ERPs */}
           <BlogSection id="cloud-erp" title="Cloud ERPs">
             <BlogParagraph>
-              Cloud computing has opened a new era for <a href="/erp-software" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank">ERP software development</a>. Open-source technologies have enabled vendors to offer scalable and cost-effective ERP applications. With data hosted securely on the cloud, businesses benefit from improved safety, enhanced uptime, and reduced infrastructure maintenance. Furthermore, cloud-based ERPs provide mobile access, empowering users to manage operations anytime, anywhere—perfectly aligning with the needs of today’s always-connected workforce. Cloud solutions are now accelerating the evolution of ERP toward more agile, user-friendly platforms.
+              Cloud computing has opened a new era for <a href="/erp/services/erp-software-development" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank">ERP software development</a>. Open-source technologies have enabled vendors to offer scalable and cost-effective ERP applications. With data hosted securely on the cloud, businesses benefit from improved safety, enhanced uptime, and reduced infrastructure maintenance. Furthermore, cloud-based ERPs provide mobile access, empowering users to manage operations anytime, anywhere—perfectly aligning with the needs of today’s always-connected workforce. Cloud solutions are now accelerating the evolution of ERP toward more agile, user-friendly platforms.
             </BlogParagraph>
           </BlogSection>
 

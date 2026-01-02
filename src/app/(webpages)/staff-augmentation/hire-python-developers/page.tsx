@@ -24,7 +24,7 @@ const heroProps = {
   secondaryButton: {
     text: 'View Portfolio',
     action: () => {
-      window.location.href = '/portfolio';
+      window.location.href = '/erpnext/case-studies';
     }
   },
   heroImage: {
@@ -124,7 +124,7 @@ export default function Page() {
           <div className="mt-6 text-gray-700 text-base animate-fade-in">
             <p id="python">
               Welcome to Finbyz Tech Solutions, your
-              <Link href="/erpnext-certified-partner" className="text-primary underline hover:text-primary-700" > ERPNext partner</Link>
+              <Link href="/erpnext/certified-partner" className="text-primary underline hover:text-primary-700" > ERPNext partner</Link>
               {' '}for all things Python. Our team of expert Python developers is dedicated to delivering high-quality, reliable solutions that meet the ever-evolving needs of businesses across industries.<br /><br />
               With a deep understanding of Python and its capabilities, our full-stack developers bring a wealth of experience to the table. We stay ahead of the curve with the latest technologies and techniques, ensuring that our clients have access to the best possible solutions.<br /><br />
               Whether you're looking to develop a custom web design, a data-driven solution, or a complex system, our team has the skills and experience to make it happen. Our focus on excellence and attention to detail has earned us a reputation as one of the leading Python development companies in the industry.
@@ -194,7 +194,7 @@ export default function Page() {
               secondaryButton: {
                 text: 'See Our Work',
                 icon: 'BookOpen',
-                action: () => { window.location.href = '/portfolio'; },
+                action: () => { window.location.href = '/erpnext/case-studies'; },
               },
               trustIndicator: {
                 text: 'Trusted by 100+ businesses',

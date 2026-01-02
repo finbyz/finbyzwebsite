@@ -264,7 +264,7 @@ export default function Page() {
           <BlogSection id="final-words" title="Final Words">
             <QuoteBlock text="A website is a window through which your business says hello to the world." isHeading={false} />
             <BlogParagraph>
-              Having a well-designed website for small business is a crucial element for achieving business success today. It serves as a valuable investment that helps elevate your profits and strengthen your reputation on a global scale. Many small businesses miss out on the importance of website for business and the numerous benefits of a business website. As competition intensifies, if you still don’t have a website, now is the ideal time to invest in <a href="/website-development" target="_blank" className="text-blue-600 underline">website development</a> and capitalize on the advantages a strong online presence can bring.
+              Having a well-designed website for small business is a crucial element for achieving business success today. It serves as a valuable investment that helps elevate your profits and strengthen your reputation on a global scale. Many small businesses miss out on the importance of website for business and the numerous benefits of a business website. As competition intensifies, if you still don’t have a website, now is the ideal time to invest in <a href="/erpnext/services/website-development-on-erpnext" target="_blank" className="text-blue-600 underline">website development</a> and capitalize on the advantages a strong online presence can bring.
             </BlogParagraph>
           </BlogSection>
         </BlogContent>

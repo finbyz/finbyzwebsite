@@ -69,7 +69,7 @@ export default function Page() {
 
           <BlogSection id="traditional-methodology" title="Traditional Methodology">
             <BlogParagraph>
-              The traditional methodology in ERP system implementation involves a phased, systematic approach often based on the System Development Life Cycle (SDLC), Design, and Object-Oriented <a href="/data-analytics" className="text-primary underline hover:text-primary/80 transition-colors">Data Analysis</a>. This methodology has been the backbone of ERP projects across industries and continues to be effective for large, complex implementations. Below are the common phases followed in this methodology:
+              The traditional methodology in ERP system implementation involves a phased, systematic approach often based on the System Development Life Cycle (SDLC), Design, and Object-Oriented <a href="/erpnext/services/data-analytics" className="text-primary underline hover:text-primary/80 transition-colors">Data Analysis</a>. This methodology has been the backbone of ERP projects across industries and continues to be effective for large, complex implementations. Below are the common phases followed in this methodology:
             </BlogParagraph>
             <BlogParagraph>
               <strong>1. Planning:</strong> The scope of the ERP implementation is defined. A core team is allocated, and a detailed roadmap using a chosen ERP implementation methodology is created.
@@ -81,7 +81,7 @@ export default function Page() {
               <strong>3. Configuration:</strong> Business processes are structured, and system settings are configured by vendor consultants. However, the core team remains actively involved.
             </BlogParagraph>
             <BlogParagraph>
-              <strong>4. Conference Room Pilot:</strong> The configured system is tested in real-world scenarios through Conference Room Pilots (CRP) and refined to ensure readiness for production. <a href="/software-development" className="text-primary underline hover:text-primary/80 transition-colors">Software development</a> modifications may also be implemented at this stage.
+              <strong>4. Conference Room Pilot:</strong> The configured system is tested in real-world scenarios through Conference Room Pilots (CRP) and refined to ensure readiness for production. <a href="/erpnext/services/erpnext-service-providersoftware-development" className="text-primary underline hover:text-primary/80 transition-colors">Software development</a> modifications may also be implemented at this stage.
             </BlogParagraph>
             <BlogParagraph>
               <strong>5. Cut-over Activities:</strong> Final data migration and user training are conducted. Vendor consultants support the business in preparing for the go-live.
@@ -148,7 +148,7 @@ export default function Page() {
 
           <BlogSection id="conclusion" title="Conclusion">
             <BlogParagraph>
-              It is very essential to choose the right kind of ERP implementation methodology if you are planning to go for the implementation of <a href="/erp-software" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">ERP software</a> in your business. Selecting the right methodology for your business helps in reducing risks and failures. It also ensures the possibility of completion of the projects on a time-specific basis and with increased efficiency. Depending upon the experience of the use of ERP systems in your business and along with your desired needs and future goals, you must go for the right path for the implementation process.
+              It is very essential to choose the right kind of ERP implementation methodology if you are planning to go for the implementation of <a href="/erp/services/erp-software-development" target="_blank" className="text-primary underline hover:text-primary/80 transition-colors">ERP software</a> in your business. Selecting the right methodology for your business helps in reducing risks and failures. It also ensures the possibility of completion of the projects on a time-specific basis and with increased efficiency. Depending upon the experience of the use of ERP systems in your business and along with your desired needs and future goals, you must go for the right path for the implementation process.
             </BlogParagraph>
             <QuoteBlock text="My methodology is not knowing what I'm doing and making that work for me. - Stone Gossard" isHeading={false} />
           </BlogSection>

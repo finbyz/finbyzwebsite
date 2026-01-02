@@ -19,7 +19,7 @@ export default function Page() {
           alt: 'Career Growth & Innovation at a Leading Tech Company',
           src:'/images/why-join-finbyz.png',
         }}
-        primaryButton={{ text: 'Get Started',action: '/jobs' }}
+        primaryButton={{ text: 'Get Started',action: '/careers/job-openings' }}
         secondaryButton={{ text: 'Learn More' ,action: () => {
           const el = document.getElementById('why-join');
           if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -518,7 +518,7 @@ export default function Page() {
               secondaryButton: {
                 text: 'View Careers',
                 icon: 'BookOpen',
-                action: '/jobs',
+                action: '/careers/job-openings',
               },
               trustIndicator: {
                 text: 'ISO 27001:2013 • ERPNext Certified Partners • 200+ Projects',

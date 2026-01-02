@@ -54,7 +54,7 @@ const productsData = [
     name: 'Lead Intelligence',
     description:
       'Leverages advanced AI to process inquiry emails, transforming them into structured CRM records while preventing duplication and accelerating response times.',
-    slug: '/lead-intelligence',
+    slug: '/erpnext/ai/lead-intelligence',
     icon: Users,
   },
   {
@@ -75,14 +75,14 @@ const productsData = [
     name: 'Content Spark',
     description:
       'Leverages the Frappe Framework for AI-powered content generation tailored to your brand voice, automating the workflow from ideation to publishing.',
-    slug: '/content-spark-marketing-automation',
+    slug: '/ai-automation/apps/content-spark-marketing-automation',
     icon: Sparkles,
   },
   {
     name: 'AI Powered Resume Ranker',
     description:
       'Automates recruitment by extracting key skills from job descriptions and resumes, using a scoring logic for fair and expedited hiring decisions.',
-    slug: '/ai-powered-resume-ranker',
+    slug: '/erpnext/ai/ai-powered-resume-ranker',
     icon: FileSearch,
   },
   {
@@ -96,7 +96,7 @@ const productsData = [
     name: 'Smart Card Scanner',
     description:
       'Transforms business card management with AI and ERPNext integration. Scan cards via a Telegram bot for real-time, validated CRM data extraction.',
-    slug: '/smart-card-scanner-overview',
+    slug: '/erpnext/ai/smart-card-scanner-overview',
     icon: ScanLine,
   },
   {

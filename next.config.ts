@@ -219,6 +219,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/jobs/:slug",
+        destination: "/careers/job-openings/:slug",
+        permanent: true,
+      },
+      {
         source: "/why-join-finbyz",
         destination: "/careers/why-join-finbyz",
         permanent: true,

@@ -179,7 +179,7 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
       // Success
       //  Redirect after successful submit
 
-      router.push("/thank-you-for-inquiry");
+      router.push("/contact/thank-you-for-inquiry");
 
       setFormData({ name: '', organization: '', email: '', mobile: '', countryCode: '+91' });
       setSliderCookie(); // Set cookie to prevent showing again for 1 hour

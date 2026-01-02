@@ -327,7 +327,7 @@ export default function Page() {
           {/* Conclusion */}
           <BlogSection id="conclusion" title="Conclusion">
             <BlogParagraph>
-              In conclusion, <a className="text-blue-600 underline hover:text-blue-800 transition-colors" href="/erp-software">ERP software</a> is not just for large corporations—ERP for small business is a strategic investment that can unlock growth, optimize operations, and build customer loyalty in the competitive manufacturing landscape.
+              In conclusion, <a className="text-blue-600 underline hover:text-blue-800 transition-colors" href="/erp/services/erp-software-development">ERP software</a> is not just for large corporations—ERP for small business is a strategic investment that can unlock growth, optimize operations, and build customer loyalty in the competitive manufacturing landscape.
             </BlogParagraph>
             <BlogParagraph>
               Whether you're seeking cost-efficiency, scalability, or industry-specific features, the best ERP for small business can be tailored to fit your goals. With the right solution, your small manufacturing business can thrive and stay ahead in a dynamic market.

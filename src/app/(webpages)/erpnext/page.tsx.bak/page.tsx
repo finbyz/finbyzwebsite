@@ -47,7 +47,7 @@ export default function Page() {
           <QuoteBlock text="What is ERPNext ?" isHeading={true} />
           <div className="mt-6 text-gray-700 animate-fadeInUp space-y-4">
             <p>
-              ERPNext is an open-source enterprise resource planning (ERP) software that is designed to serve small to medium-sized businesses across various industries. It's a comprehensive suite of applications that manages core business processes in a single system, which can include finance, <a href="/human-resource-system" className="text-primary underline hover:text-primary/80">Human Resource</a>, manufacturing, sales, purchasing, <a href="/crm-software" className="text-primary underline hover:text-primary/80">customer relationship management</a> (CRM), inventory, and more.
+              ERPNext is an open-source enterprise resource planning (ERP) software that is designed to serve small to medium-sized businesses across various industries. It's a comprehensive suite of applications that manages core business processes in a single system, which can include finance, <a href="/erpnext/modules/human-resource-system" className="text-primary underline hover:text-primary/80">Human Resource</a>, manufacturing, sales, purchasing, <a href="/erpnext/modules/crm-software" className="text-primary underline hover:text-primary/80">customer relationship management</a> (CRM), inventory, and more.
             </p>
             <p id="about-erpnext">
               One of the key advantages of ERPNext is its flexibility and ease of use. The software can be customized to fit the unique needs of a business, making it a versatile choice for companies in sectors such as manufacturing, retail, distribution, education, healthcare, agriculture, and services. Its modular design allows businesses to select and implement only the modules they need, with the option to add more functionality as the business grows.
@@ -214,7 +214,7 @@ export default function Page() {
         <div className="container-custom py-8">
           <h2 className="text-2xl font-bold text-center mb-4 animate-fadeInUp text-[#1A5276]">Serving Businesses Worldwide</h2>
           <p className="text-gray-700 text-center animate-fadeInUp">
-            At FinByz, we take pride in serving businesses worldwide as a leading <a href="/hire-erpnext-implementer" className="text-primary underline hover:text-primary/80">ERPNext implementation</a> partner. From India to the USA, Canada, UAE, Saudi Arabia, and the UK, our global footprint ensures that businesses everywhere can benefit from our expertise. Our dedicated team stands ready to assist with all your ERP implementation needs. Whether you have inquiries, require consultations, or need any form of assistance, please don't hesitate to reach out to us. We're here to help your business thrive.
+            At FinByz, we take pride in serving businesses worldwide as a leading <a href="/erpnext/hire-developers" className="text-primary underline hover:text-primary/80">ERPNext implementation</a> partner. From India to the USA, Canada, UAE, Saudi Arabia, and the UK, our global footprint ensures that businesses everywhere can benefit from our expertise. Our dedicated team stands ready to assist with all your ERP implementation needs. Whether you have inquiries, require consultations, or need any form of assistance, please don't hesitate to reach out to us. We're here to help your business thrive.
           </p>
         </div>
       </Section>

@@ -40,7 +40,7 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    router.push("/thank-you-for-inquiry");
+    router.push("/contact/thank-you-for-inquiry");
     setLoading(true);
 
     try {

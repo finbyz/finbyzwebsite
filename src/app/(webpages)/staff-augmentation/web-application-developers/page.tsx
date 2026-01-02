@@ -17,7 +17,7 @@ export default function Page() {
     window.location.href = '/contact';
   };
   const handleLearnMore = () => {
-    window.location.href = '/web-application-development';
+    window.location.href = '/erpnext/services/erpnext-service-providerweb-application-development';
   };
 
   return (
@@ -48,7 +48,7 @@ export default function Page() {
               At Finbyz Tech, we believe in harnessing the power of the internet to create innovative and impactful web applications that drive growth and transformation for our clients. As a trusted partner, we bring cutting-edge technology, deep industry expertise, and a relentless focus on delivering exceptional results to every project we undertake. Our mission is to unlock the full potential of the digital landscape for our clients and help them achieve their business objectives through our tailored web development solutions.
             </p>
             <p>
-              Our <a href="/web-application-development" className="text-primary underline hover:text-primary-700 transition">web application development</a> services cover everything from CMS-enabled websites to the most sophisticated web-based internet applications, e-commerce portals, social networking site development, and more. Whatever your needs may be, we're here to help you achieve your goals.
+              Our <a href="/erpnext/services/erpnext-service-providerweb-application-development" className="text-primary underline hover:text-primary-700 transition">web application development</a> services cover everything from CMS-enabled websites to the most sophisticated web-based internet applications, e-commerce portals, social networking site development, and more. Whatever your needs may be, we're here to help you achieve your goals.
             </p>
             <p>
               We are passionate about using cutting-edge technologies such as PHP, MySQL, and ASP.NET to bring your vision to life. With years of experience and a track record of success, we have the expertise to take on projects of all sizes - from small businesses to large corporations.
@@ -140,7 +140,7 @@ export default function Page() {
         <div className="container-custom py-8">
           <h2 className="text-2xl font-bold mb-4 text-[#1A5276]">What is Web Development?</h2>
           <p>
-            <a href="/website-development" className="text-primary underline hover:text-primary-700 transition">Web development</a> typically involves working with a combination of technologies that may include HTML, CSS, JavaScript, server-side scripting languages like PHP, Python, or Ruby, and various database systems. Web developers use these technologies to build websites that users can access over the internet using web browsers like Chrome, Firefox, or Safari.
+            <a href="/erpnext/services/website-development-on-erpnext" className="text-primary underline hover:text-primary-700 transition">Web development</a> typically involves working with a combination of technologies that may include HTML, CSS, JavaScript, server-side scripting languages like PHP, Python, or Ruby, and various database systems. Web developers use these technologies to build websites that users can access over the internet using web browsers like Chrome, Firefox, or Safari.
           </p>
         </div>
       </Section>

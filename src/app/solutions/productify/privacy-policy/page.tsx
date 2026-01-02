@@ -25,7 +25,7 @@ export default function Page() {
         secondaryButton={{
           text: 'Back to Productify',
           action: () => {
-            window.location.href = '/productify';
+            window.location.href = '/solutions/productify';
           },
         }}
         heroImage={{
@@ -194,7 +194,7 @@ export default function Page() {
                 text: 'Back to Productify',
                 icon: 'ArrowLeft',
                 action: () => {
-                  window.location.href = '/productify';
+                  window.location.href = '/solutions/productify';
                 },
               },
               trustIndicator: {

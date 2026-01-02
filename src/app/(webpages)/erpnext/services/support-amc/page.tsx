@@ -438,7 +438,7 @@ export default function Page() {
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed text-justify">
-              As an <Link href="/erpnext-certified-partner" className="text-primary underline hover:text-primary/80">official Frappe certified partner</Link>, we have direct access to the ERPNext development team, ensuring faster resolution of complex issues and early access to new features. Our support engineers are trained on the latest ERPNext versions and best practices.
+              As an <Link href="/erpnext/certified-partner" className="text-primary underline hover:text-primary/80">official Frappe certified partner</Link>, we have direct access to the ERPNext development team, ensuring faster resolution of complex issues and early access to new features. Our support engineers are trained on the latest ERPNext versions and best practices.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed text-justify">
@@ -446,11 +446,11 @@ export default function Page() {
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed text-justify">
-              Our support extends beyond technical assistance. We provide strategic guidance on <Link href="/erp-software" className="text-primary underline hover:text-primary/80">ERP best practices</Link>, help with <Link href="/human-resource-system" className="text-primary underline hover:text-primary/80">HR system optimization</Link>, and ensure your ERP investment delivers continuous value to your organization.
+              Our support extends beyond technical assistance. We provide strategic guidance on <Link href="/erp/services/erp-software-development" className="text-primary underline hover:text-primary/80">ERP best practices</Link>, help with <Link href="/erpnext/modules/human-resource-system" className="text-primary underline hover:text-primary/80">HR system optimization</Link>, and ensure your ERP investment delivers continuous value to your organization.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed text-justify">
-              Whether you're running ERPNext for <Link href="/erp-for-manufacturing-industry" className="text-primary underline hover:text-primary/80">manufacturing</Link>, <Link href="/erp-for-trading-industry" className="text-primary underline hover:text-primary/80">trading</Link>, <Link href="/erp-for-logistics-industry" className="text-primary underline hover:text-primary/80">logistics</Link>, or any other industry, our specialized support team understands your unique business processes and challenges.
+              Whether you're running ERPNext for <Link href="/erpnext/manufacturing" className="text-primary underline hover:text-primary/80">manufacturing</Link>, <Link href="/erpnext/trading" className="text-primary underline hover:text-primary/80">trading</Link>, <Link href="/erpnext/logistics" className="text-primary underline hover:text-primary/80">logistics</Link>, or any other industry, our specialized support team understands your unique business processes and challenges.
             </p>
           </div>
         </div>
@@ -479,7 +479,7 @@ export default function Page() {
                 text: 'View All Services',
                 icon: 'ArrowRight',
                 action: () => {
-                  window.location.href = '/services';
+                  window.location.href = '/erpnext/services/erpnext-service-provider';
                 },
               },
               trustIndicator: {

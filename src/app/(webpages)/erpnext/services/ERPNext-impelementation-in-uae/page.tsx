@@ -144,7 +144,7 @@ export default function Page() {
           text: "Get Started", 
           action: "#uae"
          }}
-        secondaryButton={{ text: "Our Partnership", action: '/partnership-programs' }}
+        secondaryButton={{ text: "Our Partnership", action: '/about-us/partnership-programs' }}
         heroImage={{
           alt: "ERPNext Service Provider in UAE ",
           src: "/images/Hire-ERPNext-Implementor679475.svg",
@@ -154,10 +154,10 @@ export default function Page() {
         <div className="container-custom py-8">
           <div className="animate-fadeInUp">
             <p>
-              Finbyz Tech, your trusted <a href="/erpnext-certified-partner" className="text-primary underline hover:text-primary/80">ERPNext partner</a> and ERPNext service provider in UAE. Specialized in delivering cutting-edge ERP solutions, we empower businesses to thrive in the competitive and innovative UAE market. Embrace the future with ERPNext’s powerful functionalities tailored by our experts to meet your unique business needs.
+              Finbyz Tech, your trusted <a href="/erpnext/certified-partner" className="text-primary underline hover:text-primary/80">ERPNext partner</a> and ERPNext service provider in UAE. Specialized in delivering cutting-edge ERP solutions, we empower businesses to thrive in the competitive and innovative UAE market. Embrace the future with ERPNext’s powerful functionalities tailored by our experts to meet your unique business needs.
             </p>
             <p className="mt-4">
-              <a href="/erpnext-software" className="text-primary underline hover:text-primary/80" >ERPNext</a> is a versatile open-source ERP software that caters to a wide range of industries, including manufacturing, distribution, retail, trading, services, education, non-profits, and healthcare. It is a cloud-based solution that is easy to use and affordable, making it a popular choice for businesses of all sizes in the UAE.
+              <a href="/erpnext/" className="text-primary underline hover:text-primary/80" >ERPNext</a> is a versatile open-source ERP software that caters to a wide range of industries, including manufacturing, distribution, retail, trading, services, education, non-profits, and healthcare. It is a cloud-based solution that is easy to use and affordable, making it a popular choice for businesses of all sizes in the UAE.
             </p>
           </div>
          
@@ -271,7 +271,7 @@ export default function Page() {
       <Section>
         <div className="container-custom py-8">
           <h2 className="text-2xl text-[#1A5276] font-bold mb-4 text-center">We Serve Businesses Across the Globe</h2>
-          <p className="text-center mb-8">FinByz Tech, a global ERP implementation partner, proudly extends its services to businesses across India, the USA, Canada, the UK, UAE, and Saudi Arabia. Our dedicated team is readily available to cater to all your <a href="/erp-software" className="text-primary underline hover:text-primary/80">ERP implementation</a> requirements. Whether you have inquiries, require consultations, or need any form of assistance, please feel free to contact us. We are committed to serving your ERP needs across these diverse regions.</p>
+          <p className="text-center mb-8">FinByz Tech, a global ERP implementation partner, proudly extends its services to businesses across India, the USA, Canada, the UK, UAE, and Saudi Arabia. Our dedicated team is readily available to cater to all your <a href="/erp/services/erp-software-development" className="text-primary underline hover:text-primary/80">ERP implementation</a> requirements. Whether you have inquiries, require consultations, or need any form of assistance, please feel free to contact us. We are committed to serving your ERP needs across these diverse regions.</p>
           <ClientCountryGrid countries={clientCountries} />
         </div>
       </Section>

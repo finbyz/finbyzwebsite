@@ -38,7 +38,7 @@ export default function UpgradeCloudERPContent() {
         <div className="flex flex-col-reverse md:flex-row items-center gap-8 animate-fade-in">
           <div className="w-full md:w-2/3">
             <BlogParagraph>
-              Cloud computing has open a new paradigm for <a href="/erp-software" target="_blank" className="text-blue-600 underline hover:text-blue-800 transition-colors">ERP system implementation</a>. The clouds have been more reliable than on premise servers. The internet speed and improved web application technology have allowed ERPs hosted on cloud equally or even faster than on-premise ERP. But unlike on-premise software which can be accessed only from office premise, the cloud ERP can be accessed from any place at any time. As technology has changed the human behavior and client no longer want to wait for you to be in office to give them needed answers. Mobile applications of these ERP systems can ensure you always have all the business information on your fingertips.
+              Cloud computing has open a new paradigm for <a href="/erp/services/erp-software-development" target="_blank" className="text-blue-600 underline hover:text-blue-800 transition-colors">ERP system implementation</a>. The clouds have been more reliable than on premise servers. The internet speed and improved web application technology have allowed ERPs hosted on cloud equally or even faster than on-premise ERP. But unlike on-premise software which can be accessed only from office premise, the cloud ERP can be accessed from any place at any time. As technology has changed the human behavior and client no longer want to wait for you to be in office to give them needed answers. Mobile applications of these ERP systems can ensure you always have all the business information on your fingertips.
             </BlogParagraph>
           </div>
           <div className="w-full md:w-1/3 flex justify-center">
@@ -124,7 +124,7 @@ export default function UpgradeCloudERPContent() {
           To sum up, the widespread acceptance of cloud ERP is reshaping how businesses operate. Its advanced features, flexibility, and lower costs make it a strategic choice over outdated on-premise ERP systems.
         </BlogParagraph>
         <BlogParagraph>
-          Still relying on an old ERP? Thinking about upgrading to a modern and efficient cloud ERP? Visit our <a href="/erp-software" target="_blank" className="text-blue-600 underline hover:text-blue-800 transition-colors">ERP Implementation page</a> to learn more about our expert <a href="/erp-software" target="_blank" className="text-blue-600 underline hover:text-blue-800 transition-colors">ERP Implementation services</a>.
+          Still relying on an old ERP? Thinking about upgrading to a modern and efficient cloud ERP? Visit our <a href="/erp/services/erp-software-development" target="_blank" className="text-blue-600 underline hover:text-blue-800 transition-colors">ERP Implementation page</a> to learn more about our expert <a href="/erp/services/erp-software-development" target="_blank" className="text-blue-600 underline hover:text-blue-800 transition-colors">ERP Implementation services</a>.
         </BlogParagraph>
         <div className="mt-8">
           <CTA
@@ -139,14 +139,14 @@ export default function UpgradeCloudERPContent() {
                 text: 'Get Started',
                 icon: 'ArrowRight',
                 action: () => {
-                  window.open('/erp-software', '_blank');
+                  window.open('/erp/services/erp-software-development', '_blank');
                 },
               },
               secondaryButton: {
                 text: 'Learn More',
                 icon: 'BookOpen',
                 action: () => {
-                  window.open('/erp-software', '_blank');
+                  window.open('/erp/services/erp-software-development', '_blank');
                 },
               },
               trustIndicator: {

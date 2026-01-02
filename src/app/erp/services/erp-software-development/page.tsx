@@ -44,14 +44,14 @@ export default function CustomERPDevelopment() {
   
 
   const industries = [
-    { title: 'Chemical', image: '/images/nav-chemical.svg', alt: 'Chemical', description: '', link: '/erp-for-chemical-industry' },
-    { title: 'Engineering', image: '/images/nav-engineering.svg', alt: 'Engineering', description: '', link: '/erp-for-engineering-industry' },
-    { title: 'Logistics', image: '/images/nav-logistics.svg', alt: 'Logistics', description: '', link: '/erp-for-logistics-industry' },
-    { title: 'Manufacturing', image: '/images/nav-manufacturing.svg', alt: 'Manufacturing', description: '', link: '/erp-for-manufacturing-industry' },
-    { title: 'Agro Commodity', image: '/images/nav-agro.svg', alt: 'Agro Commodity', description: '', link: '/erp-for-agro-commodity' },
-    { title: 'Trading', image: '/images/nav-trading.svg', alt: 'Trading', description: '', link: '/erp-for-trading-industry' },
-    { title: 'Textile', image: '/images/yarn.svg', alt: 'Textile', description: '', link: '/erp-for-textile-industry' },
-    { title: 'Services', image: '/images/nav-services.svg', alt: 'Services', description: '', link: '/erpnext-service-provider' },
+    { title: 'Chemical', image: '/images/nav-chemical.svg', alt: 'Chemical', description: '', link: '/erpnext/chemical/' },
+    { title: 'Engineering', image: '/images/nav-engineering.svg', alt: 'Engineering', description: '', link: '/erpnext/engineering' },
+    { title: 'Logistics', image: '/images/nav-logistics.svg', alt: 'Logistics', description: '', link: '/erpnext/logistics' },
+    { title: 'Manufacturing', image: '/images/nav-manufacturing.svg', alt: 'Manufacturing', description: '', link: '/erpnext/manufacturing' },
+    { title: 'Agro Commodity', image: '/images/nav-agro.svg', alt: 'Agro Commodity', description: '', link: '/erpnext/agro/erp-for-commodity-trading' },
+    { title: 'Trading', image: '/images/nav-trading.svg', alt: 'Trading', description: '', link: '/erpnext/trading' },
+    { title: 'Textile', image: '/images/yarn.svg', alt: 'Textile', description: '', link: '/erpnext/textile' },
+    { title: 'Services', image: '/images/nav-services.svg', alt: 'Services', description: '', link: '/erpnext/services/erpnext-service-provider' },
     { title: 'Real Estate', image: '/images/icon-business-app.svg', alt: 'Real Estate', description: '', link: '' },
     { title: 'Ceramics', image: '/images/Ceramics.svg', alt: 'Ceramics', description: '', link: '' }
   ];

@@ -89,7 +89,7 @@ export default function Page() {
                 items={[
                   {
                     description: 'To overcome these challenges, we designed special ERP Software for the chemical industry which allows you to increase your operational efficiency and management.',
-                    link: { href: '/erp-software', text: 'ERP Software ' },
+                    link: { href: '/erp/services/erp-software-development', text: 'ERP Software ' },
                   },
                   {
                     description: 'Define standards in BOM and compare it with actual consumption in each work order.'

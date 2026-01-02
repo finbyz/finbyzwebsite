@@ -75,12 +75,12 @@ export default function Page() {
           >
             <BlogParagraph>
               ERP implementation involves significant organizational change, which is rarely easy. Are you struggling with{' '}
-              <a href="/erp-software" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">ERP software</a>{' '}
+              <a href="/erp/services/erp-software-development" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">ERP software</a>{' '}
               implementation in your business? Here's what you need to know.
             </BlogParagraph>
             <BlogParagraph>
               Implementing ERP has become a common trend across businesses of all sizes. However, many organizations fail to assess their specific needs, leading to poor planning and management. This results in faulty decision-making. To ensure a successful implementation, it’s crucial to avoid common{' '}
-              <a href="/erp-implementation-mistakes" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">ERP implementation mistakes</a>.
+              <a href="/erp/insights/erp-implementation-mistakes" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">ERP implementation mistakes</a>.
             </BlogParagraph>
             <div className="flex items-start gap-4 mt-6 animate-fade-in">
               <QuoteBlock
@@ -100,7 +100,7 @@ export default function Page() {
                 <h3 className="text-xl font-semibold mb-2">1. Finding the right ERP software</h3>
                 <BlogParagraph>
                   Every business wants what is best for its growth and development. But{' '}
-                  <a href="/how-to-choose-the-right-erp-software-for-your-company" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">how to choose the right ERP software for your company</a>{' '}
+                  <a href="/erpnext/insights/how-to-choose-the-right-erp-software-for-your-company" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">how to choose the right ERP software for your company</a>{' '}
                   if there are numerous choices available? This becomes one of the major challenges that organizations face when they decide to automate their operation through ERP. Finding the perfect fit for your organization can be confusing and a complex decision. Nobody would wish to invest in the wrong choice.
                 </BlogParagraph>
               </div>
@@ -169,7 +169,7 @@ export default function Page() {
           <BlogSection id="conclusion" title="Conclusion">
             <BlogParagraph>
               Many businesses rush into ERP implementation without clearly defining their budget, timeline, and goals. This leads to common challenges that can affect project success. Facing these challenges and following proven{' '}
-              <a href="/erp-implementation-steps" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">ERP implementation steps</a>{' '}will significantly increase the chances of success.
+              <a href="/erp/insights/erp-implementation-steps" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">ERP implementation steps</a>{' '}will significantly increase the chances of success.
             </BlogParagraph>
           </BlogSection>
         </BlogContent>

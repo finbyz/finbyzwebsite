@@ -60,12 +60,12 @@ export default function Page() {
           >
             <BlogParagraph>
               Modern, cloud-based Enterprise Resource Planning (ERP) systems provide numerous benefits for small and mid-sized businesses looking to move beyond basic accounting tools. One of the key advantages of ERP systems is their ability to integrate core business functions like Accounting, Sales,{' '}
-              <Link href="/crm-software" className="text-primary underline hover:text-primary/80" target="_blank">Customer Relationship Management (CRM)</Link>, Inventory, Procurement, and{' '}
-              <Link href="/human-resource-system" className="text-primary underline hover:text-primary/80" target="_blank">Human Resource (HR) Management</Link>. By consolidating these functions into a single database, ERP enables seamless data flow and process automation across the entire organization.
+              <Link href="/erpnext/modules/crm-software" className="text-primary underline hover:text-primary/80" target="_blank">Customer Relationship Management (CRM)</Link>, Inventory, Procurement, and{' '}
+              <Link href="/erpnext/modules/human-resource-system" className="text-primary underline hover:text-primary/80" target="_blank">Human Resource (HR) Management</Link>. By consolidating these functions into a single database, ERP enables seamless data flow and process automation across the entire organization.
             </BlogParagraph>
             <BlogParagraph>
               Although ERP implementation can involve initial time and investment, the long-term advantages of ERP far outweigh the costs. With the right strategy, a well-executed{' '}
-              <Link href="/erp-implementation-steps" className="text-primary underline hover:text-primary/80" target="_blank">ERP software implementation</Link> can deliver immediate improvements in productivity, efficiency, and business visibility—making it one of the most impactful investments for growing companies.
+              <Link href="/erp/insights/erp-implementation-steps" className="text-primary underline hover:text-primary/80" target="_blank">ERP software implementation</Link> can deliver immediate improvements in productivity, efficiency, and business visibility—making it one of the most impactful investments for growing companies.
             </BlogParagraph>
           </BlogSectionWithImage>
 
@@ -230,7 +230,7 @@ export default function Page() {
             <BlogParagraph>
               <span className="italic text-muted-foreground block mb-2">Control access and protect sensitive business data!</span>
               Security is a critical advantage of ERP systems. With centralized{' '}
-              <Link href="/upgrade-olderp-with-clouderp" className="text-primary underline hover:text-primary/80" target="_blank">cloud-based ERP</Link> data storage and automated backups, business information is safe from accidental or malicious loss. ERP also allows you to define user permissions, limiting access to sensitive data and reducing risks associated with traditional methods like storing images in unsecured formats such as Excel.
+              <Link href="/erpnext/insights/upgrade-olderp-with-clouderp" className="text-primary underline hover:text-primary/80" target="_blank">cloud-based ERP</Link> data storage and automated backups, business information is safe from accidental or malicious loss. ERP also allows you to define user permissions, limiting access to sensitive data and reducing risks associated with traditional methods like storing images in unsecured formats such as Excel.
             </BlogParagraph>
           </BlogSectionWithImage>
 
