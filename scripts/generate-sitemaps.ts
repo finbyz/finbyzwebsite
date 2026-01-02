@@ -202,7 +202,7 @@ async function main() {
       const allRoutes: string[] = [];
 
       for (const dir of dirs) {
-        // If dir is something like '(webpages)/services', we might want to prefix with '/services'
+        // If dir is something like '(webpages)/services', we might want to prefix with '/erpnext/services/erpnext-service-provider'
         // unless explicitly overridden by routePrefix.
         let effectivePrefix = item.routePrefix;
         if (effectivePrefix === undefined) {
