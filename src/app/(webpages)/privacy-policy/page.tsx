@@ -3,10 +3,7 @@
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
-import CTA from '@/components/sections/cta';
 import ContactDetailsBlock from '@/components/ai_components/ContactDetailsBlock';
-import { ShieldCheck, Cloud, UserCheck, Mail, Cookie, RefreshCw, Users, Lock, Link2, FileText } from 'lucide-react';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import React from 'react';
 
 export default function Page() {

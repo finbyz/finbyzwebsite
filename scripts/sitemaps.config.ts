@@ -27,7 +27,7 @@ export type SitemapConfig =
   | {
     name: string
     type: 'filesystemDir'
-    dir: '' | string // relative to src/app
+    dir: string | string[] // relative to src/app
     routePrefix?: string // prefix for produced routes (default '/')
     includeRootIndex?: boolean // if dir is '' and root page.tsx exists, include '/'
     changefreq?: string
@@ -69,11 +69,11 @@ const config: SitemapConfig[] = [
   {
     name: 'site',
     type: 'filesystemDir',
-    dir: '',
+    dir: ['', '/solutions'],
     includeRootIndex: true,
     changefreq: 'weekly',
     priority: 0.8,
-    exclude: ['/contact-old','/page-builder','/user-activity'],
+    exclude: ['/contact-old', '/page-builder', '/user-activity', '/user-activity/employee'],
     transform: ({ urls }) => {
       return urls.map(url => {
         let priority = 0.4;

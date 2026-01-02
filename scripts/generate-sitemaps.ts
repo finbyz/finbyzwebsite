@@ -89,7 +89,7 @@ async function getFlatPagesInDir(appRelativeDir: string, options?: { includeRoot
   const baseDir = path.join(process.cwd(), 'src', 'app', appRelativeDir)
   const routes: string[] = []
   try {
-    if (options?.includeRootIndex && appRelativeDir === '') {
+    if (options?.includeRootIndex) {
       try {
         const p = await stat(path.join(baseDir, 'page.tsx'))
         if (p.isFile()) routes.push('')
@@ -110,7 +110,10 @@ async function getFlatPagesInDir(appRelativeDir: string, options?: { includeRoot
     }
   } catch { }
   const prefix = (options?.routePrefix || '/')
-  return routes.map(r => (r ? `${prefix}${r}` : '/'))
+  return routes.map(r => {
+    if (!r) return prefix;
+    return `${prefix}/${r}`.replace(/\/+/g, '/');
+  })
 }
 
 async function writeSitemap(filename: string, urls: SitemapUrl[]) {
@@ -195,13 +198,35 @@ async function main() {
       refs.push(buildSitemapRef(`${SITE_URL}/${filename}`))
       
     } else if (item.type === 'filesystemDir') {
-      const routes = await getFlatPagesInDir(item.dir, { 
-        includeRootIndex: item.includeRootIndex, 
-        routePrefix: item.routePrefix 
-      })
-      
+      const dirs = Array.isArray(item.dir) ? item.dir : [item.dir];
+      const allRoutes: string[] = [];
+
+      for (const dir of dirs) {
+        // If dir is something like '(webpages)/services', we might want to prefix with '/services'
+        // unless explicitly overridden by routePrefix.
+        let effectivePrefix = item.routePrefix;
+        if (effectivePrefix === undefined) {
+          if (dir === '') {
+            effectivePrefix = '/';
+          } else {
+            // strip group folder parens from prefix calculation
+            const parts = dir.split('/').filter(p => !p.startsWith('('));
+            effectivePrefix = parts.length > 0 ? `/${parts.join('/')}/` : '/';
+          }
+        }
+
+        const routes = await getFlatPagesInDir(dir, {
+          includeRootIndex: item.includeRootIndex,
+          routePrefix: effectivePrefix
+        });
+        allRoutes.push(...routes);
+      }
+
+      // De-duplicate routes and fix double slashes
+      const uniqueRoutes = Array.from(new Set(allRoutes.map(r => r.replace(/\/+/g, '/'))));
+
       const filename = `${item.name}-sitemap.xml`
-      let urls: SitemapUrl[] = routes.map(route => ({
+      let urls: SitemapUrl[] = uniqueRoutes.map(route => ({
         loc: `${SITE_URL}${route}`,
         changefreq: item.changefreq,
         priority: item.priority,

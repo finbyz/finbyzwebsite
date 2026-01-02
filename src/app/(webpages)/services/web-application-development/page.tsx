@@ -4,7 +4,6 @@ import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import FeatureCard from '@/components/ai_components/FeatureCard';
-import List from '@/components/sections/list';
 import CTA from '@/components/sections/cta';
 import AdvantageList from '@/components/ai_components/AdvantageList';
 import Image from 'next/image';
@@ -126,7 +125,7 @@ export default function Page() {
                 icon: 'MonitorSmartphone',
               },
               title: 'Let’s Build Your Next Web App',
-              highlightText:"Web App",
+              highlightText: "Web App",
               description: 'Finbyz is a leading provider of advanced web application development services customized for your specific needs. Our team of knowledgeable web app developers is committed to making your ideas a reality and giving your audience a perfect online experience.',
               primaryButton: {
                 text: 'Request a Consultation',
