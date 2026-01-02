@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { X, Download, User, Mail, Phone, Building2, CheckCircle } from "lucide-react";
+import { PhoneField } from "../ui/PhoneField";
+import { useGeoLocation } from "@/hooks/useGeoLocation";
 
 interface DownloadFormModalProps {
   open: boolean;
@@ -13,27 +15,36 @@ const DownloadFormModal: React.FC<DownloadFormModalProps> = ({ open, onClose, fi
     name: "",
     email: "",
     mobile: "",
+    countryCode: "+91",
     organization: "",
   });
   const [submitting, setSubmitting] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
+  const geoLocation = useGeoLocation('+91');
+
   useEffect(() => {
     if (open) {
       const storedFormData = localStorage.getItem("formData");
       if (storedFormData) {
-        setForm(JSON.parse(storedFormData));
+        setForm(prev => ({ ...prev, ...JSON.parse(storedFormData) }));
       }
     }
   }, [open]);
 
   useEffect(() => {
+    if (!geoLocation.loading && geoLocation.dialCode) {
+      setForm(prev => ({ ...prev, countryCode: geoLocation.dialCode }));
+    }
+  }, [geoLocation.loading, geoLocation.dialCode, open]);
+
+  useEffect(() => {
     if (!open) {
-      setForm({ name: "", email: "", mobile: "", organization: "" });
+      setForm({ name: "", email: "", mobile: "", countryCode: geoLocation.dialCode || "+91", organization: "" });
       setSubmitting(false);
       setErrors({});
     }
-  }, [open]);
+  }, [open, geoLocation.dialCode]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -68,8 +79,9 @@ const DownloadFormModal: React.FC<DownloadFormModalProps> = ({ open, onClose, fi
     
     if (validateForm()) {
       setSubmitting(true);
+      const fullMobile = `${form.countryCode}${form.mobile.replace(/\D/g, '')}`;
       localStorage.setItem("formData", JSON.stringify(form));
-      onSubmit({ ...form, fileUrl });
+      onSubmit({ ...form, mobile: fullMobile, fileUrl });
     }
   };
 
@@ -159,24 +171,16 @@ const DownloadFormModal: React.FC<DownloadFormModalProps> = ({ open, onClose, fi
 
           {/* Mobile Field */}
           <div>
-            <div className="relative">
-              <Phone className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
-              <input
-                name="mobile"
-                type="tel"
-                placeholder="Mobile Number"
-                value={form.mobile}
-                onChange={handleChange}
-                className={`w-full pl-11 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all ${
-                  errors.mobile 
-                    ? "border-red-300 focus:ring-red-200" 
-                    : "border-gray-200 focus:ring-blue-200 focus:border-blue-400"
-                }`}
-              />
-              {form.mobile && !errors.mobile && (
-                <CheckCircle className="absolute right-3 top-1/2 -translate-y-1/2 text-green-500" size={20} />
-              )}
-            </div>
+            <PhoneField
+              countryCode={form.countryCode}
+              phoneNumber={form.mobile}
+              onCountryCodeChange={(value: string) => setForm(prev => ({ ...prev, countryCode: value }))}
+              onPhoneNumberChange={(value: string) => setForm(prev => ({ ...prev, mobile: value }))}
+              required
+              showIcon={true}
+              placeholder="Mobile Number"
+              className="h-[46px]"
+            />
             {errors.mobile && <p className="text-red-500 text-xs mt-1 ml-1">{errors.mobile}</p>}
           </div>
 

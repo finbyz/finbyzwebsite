@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import { useRouter } from "next/navigation";
+import { PhoneField } from "@/components/ui/PhoneField";
+import { useGeoLocation } from "@/hooks/useGeoLocation";
 
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -12,6 +14,7 @@ const initialState = {
   lead_name: '',
   email_id: '',
   mobile_no: '',
+  country_code: '+91',
   company_name: '',
   notes: ''
 };
@@ -19,7 +22,17 @@ const initialState = {
 const ContactForm: React.FC = () => {
     const [form, setForm] = useState(initialState);
     const [loading, setLoading] = useState(false);
-   const router = useRouter(); // ✅ Initialize router
+  const router = useRouter(); // ✅ Initialize router
+
+  // Auto-detect country code
+  const geoLocation = useGeoLocation('+91');
+
+  // Update country code when detected
+  React.useEffect(() => {
+    if (!geoLocation.loading && geoLocation.dialCode) {
+      setForm(prev => ({ ...prev, country_code: geoLocation.dialCode }));
+    }
+  }, [geoLocation.loading, geoLocation.dialCode]);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       setForm({ ...form, [e.target.name]: e.target.value });
@@ -34,7 +47,7 @@ const ContactForm: React.FC = () => {
       const data = {
         name1: form.lead_name,
         email: form.email_id,
-        subject: form.mobile_no,
+        subject: `${form.country_code}${form.mobile_no}`,
         message: form.notes,
         doctype: "Contact Us",
         web_form_name: "contact",
@@ -99,13 +112,12 @@ const ContactForm: React.FC = () => {
             required
             aria-label="Email Address"
           />
-          <Input
-            name="mobile_no"
-            placeholder="Mobile No."
-            value={form.mobile_no}
-            onChange={handleChange}
+          <PhoneField
+            countryCode={form.country_code}
+            phoneNumber={form.mobile_no}
+            onCountryCodeChange={(value: string) => setForm(prev => ({ ...prev, country_code: value }))}
+            onPhoneNumberChange={(value: string) => setForm(prev => ({ ...prev, mobile_no: value }))}
             required
-            aria-label="Mobile No."
           />
           <Input
             name="company_name"

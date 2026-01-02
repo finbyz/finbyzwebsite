@@ -94,6 +94,7 @@
   background-color: white;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   border-left: 1px solid #f3f4f6;
+  border-radius: 1rem 0 0 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -140,16 +141,18 @@
 
 .form-field {
   width: 100%;
-  padding: 0.5rem 0.75rem;
-  background-color: white;
-  border-bottom: 2px solid #e5e7eb;
+  padding: 0.75rem 1rem;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
   transition: all 0.3s ease;
-  color: #6b7280;
-  font-size: 1rem;
+  color: #1e293b;
+    font-size: 0.9375rem;
 }
 
 .form-field:focus {
-  border-bottom-color: #1A5276;
+  border-color: #60a5fa;
+    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.1);
   outline: none;
 }
 
@@ -231,4 +234,15 @@
 
 .submit-button:hover .button-text {
   color: white;
+}
+
+/* Mobile field with country code dropdown */
+.mobile-field-wrapper {
+  display: flex;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+
+.form-field--mobile {
+  flex: 1;
 }

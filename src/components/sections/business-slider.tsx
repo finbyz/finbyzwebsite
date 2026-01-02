@@ -39,12 +39,15 @@ import Image from "next/image";
 import { Send, X, MessageCircle, Info } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
+import { PhoneField } from "@/components/ui/PhoneField";
+import { useGeoLocation } from "@/hooks/useGeoLocation";
 
 interface FormData {
   name: string;
   organization: string;
   email: string;
   mobile: string;
+  countryCode: string;
 }
 
 export default function BusinessSlider({ data = {} }: { data?: Record<string, any> }) {
@@ -53,16 +56,27 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
     ...otherData
   } = data;
 
+  // Auto-detect country code (uses Cloudflare, cached in localStorage)
+  const geoLocation = useGeoLocation('+91');
+
   const [formData, setFormData] = useState<FormData>({
     name: "",
     organization: "",
     email: "",
-    mobile: ""
+    mobile: "",
+    countryCode: "+91"
   });
   const [open, setOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const formRef = useRef<HTMLDivElement>(null);
   const router = useRouter(); // ✅ Initialize router
+
+  // Update country code when detected
+  useEffect(() => {
+    if (!geoLocation.loading && geoLocation.dialCode) {
+      setFormData(prev => ({ ...prev, countryCode: geoLocation.dialCode }));
+    }
+  }, [geoLocation.loading, geoLocation.dialCode]);
 
   // Function to set cookie for 1 hour
   const setSliderCookie = () => {
@@ -77,11 +91,11 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
     const cookieValue = document.cookie
       .split('; ')
       .find(row => row.startsWith(`${cookieName}=`));
-    
+
     if (!cookieValue) {
       return 0;
     }
-    
+
     const count = parseInt(cookieValue.split('=')[1]) || 0;
     return count;
   };
@@ -111,13 +125,14 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
     }));
   };
 
-  
+
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (isSubmitting) return; // stop double click
-    
-    
+
+
     setIsSubmitting(true);
     try {
       // Basic client-side validation
@@ -136,16 +151,19 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
         setIsSubmitting(false);
         return;
       }
-      if (!formData.mobile.match(/^\+?\d{10,15}$/)) {
-        alert("Please enter a valid mobile number.");
+      if (!formData.mobile.match(/^\d{6,15}$/)) {
+        alert("Please enter a valid mobile number (digits only, without country code).");
         setIsSubmitting(false);
         return;
       }
 
+      // Combine country code with mobile number
+      const fullMobileNumber = `${formData.countryCode}${formData.mobile}`;
+
       const payload = {
         lead_name: formData.name,
         company_name: formData.organization,
-        mobile_no: formData.mobile,
+        mobile_no: fullMobileNumber,
         title: typeof window !== "undefined" ? window.location.href : "Website Inquiry",
         email: formData.email,
       };
@@ -160,10 +178,10 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
 
       // Success
       //  Redirect after successful submit
-  
+
       router.push("/thank-you-for-inquiry");
 
-      setFormData({ name: '', organization: '', email: '', mobile: '' });
+      setFormData({ name: '', organization: '', email: '', mobile: '', countryCode: '+91' });
       setSliderCookie(); // Set cookie to prevent showing again for 1 hour
       resetOpenCount(); // Reset the open count since user completed the form
       setOpen(false);
@@ -198,17 +216,17 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
       const cookieValue = document.cookie
         .split('; ')
         .find(row => row.startsWith(`${cookieName}=`));
-      
+
       if (!cookieValue) {
         // Check open count
         const openCount = getOpenCount();
-        
+
         if (openCount >= 3) {
           // Has been opened 3 times without being closed, set cookie to prevent showing
           setSliderCookie();
           return;
         }
-        
+
         // Increment open count and show the slider
         incrementOpenCount();
         const timer = setTimeout(() => setOpen(true), 400);
@@ -298,25 +316,22 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
                     required
                   />
                 </div>
-                <div>
-                  <input
-                    type="tel"
-                    name="mobile"
-                    placeholder="Mobile No"
-                    value={formData.mobile}
-                    onChange={handleInputChange}
-                    className="form-field"
-                    required
-                  />
-                </div>
-                <Button   disabled={isSubmitting} type="submit" className="submit-button">
+                <PhoneField
+                  countryCode={formData.countryCode}
+                  phoneNumber={formData.mobile}
+                  onCountryCodeChange={(value: string) => setFormData(prev => ({ ...prev, countryCode: value }))}
+                  onPhoneNumberChange={(value: string) => setFormData(prev => ({ ...prev, mobile: value }))}
+                  required
+                  placeholder="Phone Number"
+                />
+                <Button disabled={isSubmitting} type="submit" className="submit-button">
                   <div className="button-left-animation"></div>
                   <div className="button-right-animation"></div>
-                   <div className="button-content">
-                      {isSubmitting ? (
-                        <>
-                          <span
-                            className="
+                  <div className="button-content">
+                    {isSubmitting ? (
+                      <>
+                        <span
+                          className="
                               w-4 h-4
                               border-2 border-white 
                               border-t-transparent 
@@ -324,17 +339,17 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
                               mr-2 
                               animate-spin
                             "
-                          ></span>
-                          <span className="button-text">PLEASE WAIT...</span>
+                        ></span>
+                        <span className="button-text">PLEASE WAIT...</span>
 
-                        </>
-                      ) : (
-                        <>
-                          <Send className="button-icon" />
-                          <span className="button-text">SUBMIT</span>
-                        </>
-                      )}
-                    </div>
+                      </>
+                    ) : (
+                      <>
+                        <Send className="button-icon" />
+                        <span className="button-text">SUBMIT</span>
+                      </>
+                    )}
+                  </div>
                 </Button>
               </form>
             </div>

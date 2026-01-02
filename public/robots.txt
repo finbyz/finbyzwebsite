@@ -2,6 +2,22 @@
 User-agent: *
 Allow: /
 
+Disallow: /employee-joining-details
+Disallow: /working_hour_exception
+
+Disallow: /about/demo
+Disallow: /api-development
+Disallow: /career-new
+Disallow: /coming-soon
+Disallow: /components
+Disallow: /dynamic-page
+Disallow: /page-builder
+Disallow: /term-of-services
+Disallow: /use-cases
+Disallow: /user-activity
+Disallow: /user-activity/employee
+Disallow: /user-activity/overview
+
 # Host
 Host: https://finbyz.tech
 

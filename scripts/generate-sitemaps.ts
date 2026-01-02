@@ -51,19 +51,33 @@ function buildSitemapRef(loc: string, lastmod?: string) {
   return parts.join('')
 }
 
-async function getFoldersWithPageTsx(baseDir: string): Promise<string[]> {
+async function getFoldersWithPageTsx(baseDir: string, prefix = ''): Promise<string[]> {
   try {
     const entries = await readdir(baseDir)
     const routes: string[] = []
+
     for (const entry of entries) {
+      // Skip group folders like (blogs), (webpages), etc. - but scan their contents
       const entryPath = path.join(baseDir, entry)
       const s = await stat(entryPath)
       if (!s.isDirectory()) continue
+
+      // Check if this folder has a page.tsx
       try {
         const pagePath = path.join(entryPath, 'page.tsx')
         const p = await stat(pagePath)
-        if (p.isFile()) routes.push(entry)
+        if (p.isFile()) {
+          const route = prefix ? `${prefix}/${entry}` : entry
+          routes.push(route)
+        }
       } catch { }
+
+      // Recursively scan subdirectories (but skip group folders at root)
+      if (!entry.startsWith('(')) {
+        const nestedPrefix = prefix ? `${prefix}/${entry}` : entry
+        const nestedRoutes = await getFoldersWithPageTsx(entryPath, nestedPrefix)
+        routes.push(...nestedRoutes)
+      }
     }
     return routes
   } catch {

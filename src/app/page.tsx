@@ -14,7 +14,9 @@ import { getFaqs, getPageData } from "@/lib/getPageData";
 
 
 export const metadata: Metadata = {
-  title: "Finbyz Tech | ERPNext Partner & AI Automation Experts | ERP Software Development",
+  title: "Finbyz Tech (Finbyz®) | Official Website – ERPNext & AI Automation Experts",
+  // description: "Finbyz Tech (commonly known as Finbyz) is a global ERPNext implementation partner and AI automation company. This is the official website of Finbyz Tech Pvt Ltd, serving the UK, USA, India, and worldwide.",
+
   description: "Finbyz Tech is a certified ERPNext implementation partner and Frappe framework experts. We deliver AI automation, ERP software solutions, and custom software development for businesses in New York, London, Dubai, Sydney, Toronto, and worldwide.",
   keywords: [
     // Primary Keywords
@@ -86,7 +88,6 @@ export default async function Home() {
   console.log(faqsGroup)
   return (
     <div className="min-h-screen">
-      <Header />
       <main >
         <Hero />
         <Benefits />

@@ -1,11 +1,13 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Input } from './input';
 import { Button } from './button';
 import { cn } from '@/lib/utils';
 import { Mail, Phone, Building, User } from 'lucide-react';
 import { useRouter } from "next/navigation";
+import { PhoneField } from './PhoneField';
+import { useGeoLocation } from '@/hooks/useGeoLocation';
 
 interface InquiryFormProps {
   data?: any;
@@ -13,12 +15,23 @@ interface InquiryFormProps {
 }
 
 export function InquiryForm({ data, className }: InquiryFormProps) {
+  // Auto-detect country code (uses Cloudflare, cached in localStorage)
+  const geoLocation = useGeoLocation('+91');
+
   const [formData, setFormData] = useState({
     name: '',
     organization: '',
     email: '',
-    mobile: ''
+    mobile: '',
+    countryCode: '+91'
   });
+
+  // Update country code when detected
+  useEffect(() => {
+    if (!geoLocation.loading && geoLocation.dialCode) {
+      setFormData(prev => ({ ...prev, countryCode: geoLocation.dialCode }));
+    }
+  }, [geoLocation.loading, geoLocation.dialCode]);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const router = useRouter(); // ✅ Initialize router
@@ -26,7 +39,7 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
   const defaultData = {
     component_type: "Form",
     title: "Book a Free Consultation",
-    highlightText: "", 
+    highlightText: "",
     description: "Get started with your free demo today and discover how our solutions can transform your business",
     fields: {
       name: "Name",
@@ -53,12 +66,12 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
- 
+
     e.preventDefault();
     if (isSubmitting) return; // stop double click
     // router.push("/thank-you-for-inquiry");
     setIsSubmitting(true);
-    
+
     try {
       // Basic client-side validation
       if (!formData.name.trim()) {
@@ -76,16 +89,19 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
         setIsSubmitting(false);
         return;
       }
-      if (!formData.mobile.match(/^\+?\d{10,15}$/)) {
-        alert("Please enter a valid mobile number.");
+      if (!formData.mobile.match(/^\d{6,15}$/)) {
+        alert("Please enter a valid mobile number (digits only, without country code).");
         setIsSubmitting(false);
         return;
       }
 
+      // Combine country code with mobile number
+      const fullMobileNumber = `${formData.countryCode}${formData.mobile}`;
+
       const payload = {
         lead_name: formData.name,
         company_name: formData.organization,
-        mobile_no: formData.mobile,
+        mobile_no: fullMobileNumber,
         title: typeof window !== "undefined" ? window.location.href : "Website Inquiry",
         email: formData.email,
       };
@@ -97,15 +113,16 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
-      
 
-       //  Redirect after successful submit
+
+      //  Redirect after successful submit
       router.push("/thank-you-for-inquiry");
       setFormData({
         name: '',
         organization: '',
         email: '',
-        mobile: ''
+        mobile: '',
+        countryCode: '+91'
       });
       setIsSubmitting(false);
     } catch (error) {
@@ -121,7 +138,7 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
       <div className="container-custom">
         <div className="inquiry-form__inner">
           <div className="inquiry-form__grid">
-            
+
             {/* Left Section - Content */}
             <div className="inquiry-form__content">
               <div className="inquiry-form__content-wrapper">
@@ -129,54 +146,54 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
                 {/* <div className="inquiry-form__type">
                   Component Type: {component_type}
                 </div> */}
-                
+
                 <h2 className="inquiry-form__title">
                   {formConfig.title}
                 </h2>
-                
+
                 <p className="inquiry-form__desc">
                   {formConfig.description}
                 </p>
-                
-                {/* Feature Icons */}
-                  <div className="inquiry-form__feature-grid">
-                    {/* Quick Response */}
-                    <div
-                      className="inquiry-form__feature-card cursor-pointer"
-                      onClick={() =>
-                        window.open(
-                          "mailto:info@finbyz.tech",
-                          "_blank"
-                        )
-                      }
-                    >
-                      <div
-                        className="inquiry-form__icon-circle"
-                        style={{ backgroundColor: "#1A5276" }}
-                      >
-                        <Mail className="w-5 h-5 text-white" />
-                      </div>
-                      <span className="inquiry-form__feature-text">Quick Response</span>
-                    </div>
 
-                    {/* Free Consultation */}
+                {/* Feature Icons */}
+                <div className="inquiry-form__feature-grid">
+                  {/* Quick Response */}
+                  <div
+                    className="inquiry-form__feature-card cursor-pointer"
+                    onClick={() =>
+                      window.open(
+                        "mailto:info@finbyz.tech",
+                        "_blank"
+                      )
+                    }
+                  >
                     <div
-                      className="inquiry-form__feature-card cursor-pointer"
-                      onClick={() => window.open("tel:+919925701446")}
+                      className="inquiry-form__icon-circle"
+                      style={{ backgroundColor: "#1A5276" }}
                     >
-                      <div
-                        className="inquiry-form__icon-circle"
-                        style={{ backgroundColor: "#1A5276" }}
-                      >
-                        <Phone className="w-5 h-5 text-white" />
-                      </div>
-                      <span className="inquiry-form__feature-text">Free Consultation</span>
+                      <Mail className="w-5 h-5 text-white" />
                     </div>
+                    <span className="inquiry-form__feature-text">Quick Response</span>
                   </div>
 
+                  {/* Free Consultation */}
+                  <div
+                    className="inquiry-form__feature-card cursor-pointer"
+                    onClick={() => window.open("tel:+919925701446")}
+                  >
+                    <div
+                      className="inquiry-form__icon-circle"
+                      style={{ backgroundColor: "#1A5276" }}
+                    >
+                      <Phone className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="inquiry-form__feature-text">Free Consultation</span>
+                  </div>
                 </div>
+
               </div>
-            
+            </div>
+
             {/* Right Section - Form */}
             <div className="inquiry-form__form-section">
               <div className="w-full">
@@ -184,11 +201,11 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
                   <h3 className="inquiry-form__form-title">Get Started Today</h3>
                   <p className="inquiry-form__form-subtitle">Fill out the form below and we'll get back to you within 24 hours</p>
                 </div>
-                
+
                 <form onSubmit={handleSubmit} className="inquiry-form__form">
                   {/* Hidden Component Type Field */}
                   <input type="hidden" name="component_type" value={component_type} />
-                  
+
                   {/* Name Field */}
                   <div className="inquiry-form__field">
                     <label className="inquiry-form__label">
@@ -206,7 +223,7 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
                       />
                     </div>
                   </div>
-                  
+
                   {/* Organization Field */}
                   <div className="inquiry-form__field">
                     <label className="inquiry-form__label">
@@ -224,7 +241,7 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
                       />
                     </div>
                   </div>
-                  
+
                   {/* Email Field */}
                   <div className="inquiry-form__field">
                     <label className="inquiry-form__label">
@@ -242,25 +259,22 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
                       />
                     </div>
                   </div>
-                  
+
                   {/* Mobile Field */}
                   <div className="inquiry-form__field">
                     <label className="inquiry-form__label">
                       {formConfig.fields?.mobile}
                     </label>
-                    <div className="inquiry-form__input-wrapper">
-                      <Phone className="inquiry-form__input-icon" />
-                      <Input
-                        type="tel"
-                        placeholder={`Enter your ${formConfig.fields?.mobile?.toLowerCase()}`}
-                        value={formData.mobile}
-                        onChange={(e) => handleInputChange('mobile', e.target.value)}
-                        className="inquiry-form__input"
-                        required
-                      />
-                    </div>
+                    <PhoneField
+                      countryCode={formData.countryCode}
+                      phoneNumber={formData.mobile}
+                      onCountryCodeChange={(value: string) => handleInputChange('countryCode', value)}
+                      onPhoneNumberChange={(value: string) => handleInputChange('mobile', value)}
+                      required
+                      placeholder="Enter your phone number"
+                    />
                   </div>
-                  
+
                   {/* Submit Button */}
                   <Button
                     type="submit"
@@ -277,7 +291,7 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
                     )}
                   </Button>
                 </form>
-                
+
                 {/* Privacy Notice */}
                 <p className="inquiry-form__privacy">
                   By submitting this form, you agree to our privacy policy and terms of service.

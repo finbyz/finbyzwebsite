@@ -86,7 +86,6 @@ export default function JobsPage() {
 
   return (
     <>
-      <Header />
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <HeroSection

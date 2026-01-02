@@ -114,7 +114,6 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen">
-      <Header />
       <main className="">
         <HeroSection
           headline="About Finbyz Tech - Certified ERPNext Partner"

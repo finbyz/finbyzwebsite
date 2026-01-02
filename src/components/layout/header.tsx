@@ -771,7 +771,7 @@ useEffect(() => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${isScrolled
+        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 z-300 ${isScrolled
           ? "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 backdrop-blur-md shadow-lg"
           : "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 backdrop-blur-sm"
           }`}
@@ -992,7 +992,7 @@ useEffect(() => {
                                                 (showAllSnippets ? codeSnippets : codeSnippets.slice(0, 8)).map((snippet,idx) => (
                                                   <Link
                                                     key={`${snippet.route}-${idx}`}
-                                                    href={`/erpnext/${snippet.route}`}
+                                                    href={`/erpnext/wiki/${snippet.route}`}
                                                     className="flex items-center space-x-3 px-3 py-2 text-[#1A5276] hover:text-[#FF8C00] hover:bg-[#1A5276]/5 cursor-pointer transition-all rounded-lg text-sm"
                                                     onClick={() => {
                                                       setHoveredDropdown(null);

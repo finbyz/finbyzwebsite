@@ -5,6 +5,8 @@ import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { PhoneField } from "@/components/ui/PhoneField";
+import { useGeoLocation } from "@/hooks/useGeoLocation";
 import styles from "./contact-form.module.css";
 
 interface ContactFormProps {
@@ -20,8 +22,17 @@ export default function ContactFormSection(props: ContactFormProps = {}) {
     name: "",
     email: "",
     mobile: "",
+    countryCode: "+91",
     message: "",
   });
+
+  const geoLocation = useGeoLocation('+91');
+
+  React.useEffect(() => {
+    if (!geoLocation.loading && geoLocation.dialCode) {
+      setFormData(prev => ({ ...prev, countryCode: geoLocation.dialCode }));
+    }
+  }, [geoLocation.loading, geoLocation.dialCode]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -34,7 +45,7 @@ export default function ContactFormSection(props: ContactFormProps = {}) {
     const payload = {
       lead_name: formData.name,
       company_name: "Website",
-      mobile_no: formData.mobile,
+      mobile_no: `${formData.countryCode}${formData.mobile.replace(/\D/g, '')}`,
       title: "Contact Form Submission",
       email: formData.email,
       notes: formData.message,
@@ -59,7 +70,7 @@ export default function ContactFormSection(props: ContactFormProps = {}) {
         );
 
         // Reset state instead of form.reset()
-        setFormData({ name: "", email: "", mobile: "", message: "" });
+        setFormData({ name: "", email: "", mobile: "", countryCode: geoLocation.dialCode || "+91", message: "" });
       } else {
         alert(
           `Unable to submit your inquiry.\nReason: Something went wrong while creating your lead.`
@@ -100,12 +111,13 @@ export default function ContactFormSection(props: ContactFormProps = {}) {
           </div>
           <div className={styles.group}>
             <label className={styles.label}>Mobile *</label>
-            <Input
-              name="mobile"
-              placeholder="Enter your mobile"
-              value={formData.mobile}
-              onChange={handleChange}
+            <PhoneField
+              countryCode={formData.countryCode}
+              phoneNumber={formData.mobile}
+              onCountryCodeChange={(value: string) => setFormData(prev => ({ ...prev, countryCode: value }))}
+              onPhoneNumberChange={(value: string) => setFormData(prev => ({ ...prev, mobile: value }))}
               required
+              placeholder="Enter your mobile"
             />
           </div>
           <div className={styles.group}>

@@ -10,8 +10,7 @@ export default function NotFound() {
   return (
     <>
     
-     <div className="min-h-screen">
-      <Header />
+      <div className="min-h-screen">
       <main className="pt-4">
         {/* 404 Hero Section */}
         <section className="relative bg-gradient-to-br from-slate-50 to-blue-50 py-20 lg:py-32">

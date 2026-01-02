@@ -15,7 +15,6 @@ export default async function MainLayout({
 
   return (
     <>
-      <Header />
       <main>
         {children}
        

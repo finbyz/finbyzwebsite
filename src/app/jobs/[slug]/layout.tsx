@@ -9,7 +9,6 @@ export default async function JobLayout({
 }) {
   return (
     <main className="py-12 md:py-16">
-      <Header />
       {children}
       <Footer />
     </main>

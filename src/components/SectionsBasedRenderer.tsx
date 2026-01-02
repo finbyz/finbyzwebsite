@@ -245,7 +245,6 @@ export const SectionsBasedRenderer: React.FC<SectionsBasedRendererProps> = ({
       </div>
 
       {/* Standard Header - Automatically Added */}
-      <Header />
 
       {/* Page Content */}
       <main className="page-content">

@@ -12,8 +12,7 @@ export default async function MainLayout({
   
   return (
     <main className="py-12 md:py-16">
-        <Header />
-        {children}
+      {children}
         <Footer />
     </main>
   );

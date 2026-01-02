@@ -116,13 +116,13 @@ export default async function StructureData({
     schema = {
       ...baseSchema,
       "@type": "BlogPosting",
-      headline: data.seo_title || data.title,
+      headline: data?.seo_title || data?.title,
       author: {
         "@type": "Person",
-        name: data.author || "FinByz Team",
-        url: `${process.env.SITE_URL}/blog?blogger=${data.author || "Finbyz Team"}`
+        name: data?.author || "FinByz Team",
+        url: `${process.env.SITE_URL}/blog?blogger=${data?.author || "Finbyz Team"}`
       },
-      datePublished: `${data.published_on || data?.creation}T08:00:00+08:00`,
+      datePublished: `${data?.published_on || data?.creation}T08:00:00+08:00`,
       publisher: {
         "@type": "Organization",
         name: "FinByz Tech",
@@ -132,13 +132,13 @@ export default async function StructureData({
         }
       },
       mainEntityOfPage: { "@type": "WebPage", "@id": fullUrl },
-      keywords: data.keywords,
-      articleSection: data.blog_category || data.gallery_category,
-      ...(data.faqs?.length
+      keywords: data?.keywords,
+      articleSection: data?.blog_category || data?.gallery_category,
+      ...(data?.faqs?.length
         ? {
             hasPart: {
               "@type": "FAQPage",
-              mainEntity: data.faqs.map(f => ({
+            mainEntity: data?.faqs.map(f => ({
                 "@type": "Question",
                 name: f.question,
                 acceptedAnswer: { "@type": "Answer", text: f.answer }
@@ -155,8 +155,8 @@ export default async function StructureData({
       "@type": "WebPage",
       mainEntity: {
         "@type": "ProfessionalService",
-        name: data.seo_title || data.title,
-        description: data?.description || data?.small_description || data.meta_description,
+        name: data?.seo_title || data?.title,
+        description: data?.description || data?.small_description || data?.meta_description,
         url: fullUrl,
         logo: `${BASE_URL}/files/FinbyzLogo.png`,
         address: {

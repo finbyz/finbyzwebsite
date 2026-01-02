@@ -3,13 +3,10 @@ import { Inter, Roboto_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import "@/styles/components/inquiry-form.css";
-import FAQ from "@/components/ai_components/FAQ";
-import FinbyzGallery from "@/components/sections/FinbyzGallery";
-import StructureData from "@/components/seo/StructureData";
-import BusinessSlider from "@/components/sections/business-slider";
-import { getFaqs, getPageData } from "@/lib/getPageData";
+import "@/styles/components/country-code-select.css";
 import { MobileMenuProvider } from "@/contexts/MobileMenuContext";
 import BreadcrumbSchema from "@/components/seo/BreadCrumbSchema";
+import Header from "@/components/layout/header";
 
 
 export const dynamic = "force-dynamic";
@@ -137,41 +134,42 @@ export default function RootLayout({
 
 
 
-<Script
-  id="finbyz-global-brand"
-  type="application/ld+json"
-  strategy="afterInteractive"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Corporation",
-      "@id": "https://finbyz.tech/#corporation",
-      "name": "FinByz",
-      "legalName": "FinByz Technologies Pvt Ltd",
-      "url": "https://finbyz.tech",
-      "logo": "https://finbyz.tech/images/FinbyzLogo.png",
-      "foundingDate": "2017",
-      "areaServed": "Worldwide",
-      "sameAs": [
-        "https://www.linkedin.com/company/finbyz/",
-        "https://www.crunchbase.com/organization/finbyz",
-        "https://clutch.co/profile/finbyz",
-        "https://www.goodfirms.co/company/finbyz"
-      ]
-    })
-  }}
-/>
+        <Script
+          id="finbyz-global-brand"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Corporation",
+              "@id": "https://finbyz.tech/#corporation",
+              "name": "FinByz",
+              "legalName": "FinByz Technologies Pvt Ltd",
+              "url": "https://finbyz.tech",
+              "logo": "https://finbyz.tech/images/FinbyzLogo.png",
+              "foundingDate": "2017",
+              "areaServed": "Worldwide",
+              "sameAs": [
+                "https://www.linkedin.com/company/finbyz/",
+                "https://www.crunchbase.com/organization/finbyz",
+                "https://clutch.co/profile/finbyz",
+                "https://www.goodfirms.co/company/finbyz"
+              ]
+            })
+          }}
+        />
 
 
 
 
-        <BreadcrumbSchema baseUrl={ process.env.SITE_URL || ""} />
+        <BreadcrumbSchema baseUrl={process.env.SITE_URL || ""} />
       </head>
       <body
         className={`${interSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning={true}
       >
         <MobileMenuProvider>
+          <Header />
           {children}
         </MobileMenuProvider>
       </body>

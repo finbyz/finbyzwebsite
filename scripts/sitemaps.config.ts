@@ -18,7 +18,7 @@ export type SitemapConfig =
   | {
     name: string;
     type: 'filesystem';
-    groupDir: '(webpages)' | '(blogs)';
+    groupDir: '(webpages)' | '(blogs)' | '(dev-insights)';
     changefreq?: string;
     priority?: number;
     exclude?: string[];
@@ -116,9 +116,8 @@ const config: SitemapConfig[] = [
   },
   {
     name: 'dev-insights',
-    type: 'filesystemDir',
-    dir: 'erpnext',
-    routePrefix: '/erpnext/',
+    type: 'filesystem',
+    groupDir: '(dev-insights)',
     changefreq: 'weekly',
     priority: 0.7,
     exclude: [],
