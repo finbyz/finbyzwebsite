@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import Script from "next/script";
 import Header from "@/components/layout/header";
 
-import InquiryForm from "@/components/ui/InquiryForm";
+
 
 export const metadata: Metadata = {
   title: "Fintech ERPNext & Custom Software Solutions for Financial Tech",
@@ -92,7 +92,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {children}
 
         <BusinessSlider />
-        <InquiryForm />
+
       </main>
 
     </>

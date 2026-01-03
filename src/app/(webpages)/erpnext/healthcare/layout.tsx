@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import Script from "next/script";
 import Header from "@/components/layout/header";
 
-import InquiryForm from "@/components/ui/InquiryForm";
+
 
 export const metadata: Metadata = {
   title: "ERP Solutions for Healthcare Providers Streamline Operations",
@@ -92,7 +92,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
 
         {children}
         <BusinessSlider />
-        <InquiryForm />
+
       </main>
 
     </>

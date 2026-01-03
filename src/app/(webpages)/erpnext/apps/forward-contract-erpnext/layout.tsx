@@ -7,7 +7,7 @@ import { getFaqs, getPageData } from "@/lib/getPageData";
 import { Metadata } from "next";
 import Header from "@/components/layout/header";
 
-import InquiryForm from "@/components/ui/InquiryForm";
+
 
 export async function generateMetadata(): Promise<Metadata> {
   const pageData = await fetchFrappeSchemaData({
@@ -69,7 +69,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
         }
         <BusinessSlider />
         <StructureData name="forward-contract-in-erpnext" type="webpage" />
-        <InquiryForm />
+
       </main>
 
     </>

@@ -4,7 +4,7 @@ import FAQ from "@/components/ai_components/FAQ";
 import { getFaqs, getPageData } from "@/lib/getPageData";
 import Header from "@/components/layout/header";
 
-import InquiryForm from "@/components/ui/InquiryForm";
+
 
 import { Metadata } from "next";
 import Script from "next/script";
@@ -144,7 +144,7 @@ export default async function Layout({
 
         {/* Business Customers Slider */}
         <BusinessSlider />
-        <InquiryForm />
+
       </main>
 
     </>

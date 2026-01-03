@@ -5,9 +5,8 @@ import StructureData from "@/components/seo/StructureData";
 import { fetchFrappeSchemaData } from "@/lib/fetchFrappeSeoData";
 import { getFaqs, getPageData } from "@/lib/getPageData";
 import { Metadata } from "next";
-import Header from "@/components/layout/header";
 
-import InquiryForm from "@/components/ui/InquiryForm";
+
 
 export async function generateMetadata(): Promise<Metadata> {
   const pageData = await fetchFrappeSchemaData({
@@ -69,7 +68,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
         }
         <LazyBusinessSlider />
         <StructureData name="ais-revolutionizing-global-communication-a-hint-of-change" type="blog" />
-        <InquiryForm />
+
       </main>
 
     </>
