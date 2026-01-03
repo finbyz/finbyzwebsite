@@ -1,15 +1,10 @@
-import BusinessSlider from "@/components/sections/business-slider";
-import FinbyzGallery from "@/components/sections/FinbyzGallery";
-import FAQ from "@/components/ai_components/FAQ";
-import { getFaqs, getPageData } from "@/lib/getPageData";
-
 import { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "AI-Powered Automation for ERPNext | Finbyz Tech",
   description:
-    "Automate workflows, enhance decision-making, and scale faster with Finbyz Tech’s AI-Powered Automation. Seamlessly integrate Artificial Intelligence with ERPNext for business growth.",
+    "Automate workflows, enhance decision-making, and scale faster with Finbyz Tech's AI-Powered Automation. Seamlessly integrate Artificial Intelligence with ERPNext for business growth.",
   keywords:
     "AI Automation, ERPNext Automation, Business Process Automation, AI in ERP, Artificial Intelligence ERP, Workflow Automation, Finbyz Tech Automation, AI Solutions, Automation Software",
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
@@ -21,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI-Powered Automation for ERPNext | Finbyz Tech",
     description:
-      "Discover Finbyz Tech’s AI automation solutions to boost efficiency, eliminate manual processes, and make smarter business decisions with ERPNext.",
+      "Discover Finbyz Tech's AI automation solutions to boost efficiency, eliminate manual processes, and make smarter business decisions with ERPNext.",
     url: "https://finbyz.tech/ai-automation",
     siteName: "Finbyz Tech",
     type: "website",
@@ -71,7 +66,7 @@ export default async function Layout({
     logo: "https://finbyz.tech/files/FinbyzLogo.png",
     image: "/images/ai-automation.jpeg",
     description:
-      "Automate workflows and drive business growth with Finbyz Tech’s AI-Powered Automation for ERPNext. Enhance efficiency, reduce costs, and scale smarter.",
+      "Automate workflows and drive business growth with Finbyz Tech's AI-Powered Automation for ERPNext. Enhance efficiency, reduce costs, and scale smarter.",
     priceRange: "INR",
     address: {
       "@type": "PostalAddress",
@@ -102,10 +97,6 @@ export default async function Layout({
     ],
   };
 
-  // ✅ Fetch dynamic content (if connected to backend)
-  const data = await getPageData("Web Page", "ai-automation");
-  const faqsGroup = await getFaqs("Web Page", "ai-automation");
-
   return (
     <>
       {/* JSON-LD Structured Data for SEO */}
@@ -123,26 +114,12 @@ export default async function Layout({
         />
         <meta
           itemProp="description"
-          content="Automate workflows, enhance decision-making, and scale faster with Finbyz Tech’s AI-Powered Automation integrated with ERPNext."
+          content="Automate workflows, enhance decision-making, and scale faster with Finbyz Tech's AI-Powered Automation integrated with ERPNext."
         />
       </article>
 
       {/* Render main page content */}
       {children}
-
-      {/* Conditional FAQ Section */}
-      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
-
-      {/* Finbyz Gallery / Related Reads */}
-      {(data.galleryItems.length > 0 || data.relatedReads.length > 0) && (
-        <FinbyzGallery
-          relatedReads={data.relatedReads}
-          galleryItems={data.galleryItems}
-        />
-      )}
-
-      {/* Global business slider */}
-      <BusinessSlider />
     </>
   );
 }

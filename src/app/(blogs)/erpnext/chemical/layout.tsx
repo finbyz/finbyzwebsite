@@ -1,13 +1,5 @@
-import BusinessSlider from "@/components/sections/business-slider";
-import FinbyzGallery from "@/components/sections/FinbyzGallery";
-import FAQ from "@/components/ai_components/FAQ";
-import StructureData from "@/components/seo/StructureData";
 import { fetchFrappeSchemaData } from "@/lib/fetchFrappeSeoData";
-import { getFaqs, getPageData } from "@/lib/getPageData";
 import { Metadata } from "next";
-import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
-import InquiryForm from "@/components/ui/InquiryForm";
 
 export async function generateMetadata(): Promise<Metadata> {
   const pageData = await fetchFrappeSchemaData({
@@ -55,23 +47,7 @@ export async function generateMetadata(): Promise<Metadata> {
     }
   }
 }
+
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Web Page", "erp-for-chemical-industry");
-  const faqsGroup = await getFaqs("Web Page", "erp-for-chemical-industry");
-
-  return (
-    <>
-      <main>
-        {children}
-        {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
-        {
-          (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
-        }
-        <BusinessSlider />
-        <StructureData name="erp-for-chemical" type="webpage" />
-        <InquiryForm />
-      </main>
-
-    </>
-  );
+  return <>{children}</>;
 }

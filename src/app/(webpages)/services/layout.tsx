@@ -1,4 +1,3 @@
-import BusinessSlider from "@/components/sections/business-slider";
 import { Metadata } from "next";
 import Script from "next/script";
 
@@ -103,8 +102,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </article>
 
       {children}
-
-      <BusinessSlider />
     </>
   );
 }
