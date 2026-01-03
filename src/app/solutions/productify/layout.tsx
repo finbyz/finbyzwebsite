@@ -71,7 +71,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
         <StructureData name="productify" type="webpage" />
         <InquiryForm />
       </main>
-      <Footer />
+
     </>
   );
 }

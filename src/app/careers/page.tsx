@@ -25,7 +25,7 @@ export default function CareerPage() {
         />
         <AnimatedCareerPage />
       </main>
-      <Footer />
+
     </div>
   );
 } 

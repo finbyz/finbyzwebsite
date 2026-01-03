@@ -6,7 +6,7 @@ import { fetchFrappeSchemaData } from "@/lib/fetchFrappeSeoData";
 import { getFaqs, getPageData } from "@/lib/getPageData";
 import { Metadata } from "next";
 import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
+
 import InquiryForm from "@/components/ui/InquiryForm";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -71,7 +71,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
         <StructureData name="investment-portfolio" type="webpage" />
         <InquiryForm />
       </main>
-      <Footer />
+
     </>
   );
 }

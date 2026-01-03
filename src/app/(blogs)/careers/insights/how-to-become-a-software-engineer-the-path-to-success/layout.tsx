@@ -72,7 +72,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
         <StructureData name="how-to-become-a-software-engineer-the-path-to-success" type="blog" />
         <InquiryForm />
       </main>
-      <Footer />
+
     </>
   );
 }

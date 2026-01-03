@@ -1,7 +1,7 @@
 import BusinessSlider from "@/components/sections/business-slider";
 import { Metadata } from "next";
 import Script from "next/script";
-import Footer from "@/components/layout/footer";
+
 import InquiryForm from "@/components/ui/InquiryForm";
 
 export const metadata: Metadata = {
@@ -99,7 +99,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <BusinessSlider />
           <InquiryForm />
         </main>
-        <Footer />
+
     </>
   );
   

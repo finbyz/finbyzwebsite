@@ -259,7 +259,7 @@ export const SectionsBasedRenderer: React.FC<SectionsBasedRendererProps> = ({
       </main>
 
       {/* Standard Footer - Automatically Added */}
-      <Footer />
+
     </div>
   );
 };

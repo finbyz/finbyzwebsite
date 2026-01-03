@@ -3,7 +3,7 @@ import FinbyzGallery from "@/components/sections/FinbyzGallery";
 import FAQ from "@/components/ai_components/FAQ";
 import { getFaqs, getPageData } from "@/lib/getPageData";
 import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
+
 import InquiryForm from "@/components/ui/InquiryForm";
 
 import { Metadata } from "next";
@@ -146,7 +146,7 @@ export default async function Layout({
         <BusinessSlider />
         <InquiryForm />
       </main>
-      <Footer />
+
     </>
   );
 }

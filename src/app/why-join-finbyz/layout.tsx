@@ -89,7 +89,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Header/>
       
       {children}
-      <Footer/>
+
       
       {/* <BusinessSlider /> */}
     </>

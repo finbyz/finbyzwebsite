@@ -7,7 +7,7 @@ import "@/styles/components/country-code-select.css";
 import { MobileMenuProvider } from "@/contexts/MobileMenuContext";
 import BreadcrumbSchema from "@/components/seo/BreadCrumbSchema";
 import Header from "@/components/layout/header";
-
+import Footer from "@/components/layout/footer";
 
 export const dynamic = "force-dynamic";
 
@@ -171,6 +171,7 @@ export default function RootLayout({
         <MobileMenuProvider>
           <Header />
           {children}
+          <Footer />
         </MobileMenuProvider>
       </body>
     </html>

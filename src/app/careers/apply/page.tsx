@@ -849,7 +849,7 @@ export default function JobApplication() {
         )}
 
       </main>
-      <Footer />
+
     </div>
   );
 };

@@ -233,7 +233,7 @@ export default function JobsPage() {
           </div>
         </section>
       </div>
-      <Footer />
+
     </>
   );
 }

@@ -17,7 +17,7 @@ export default function ClientsPage() {
           <ClientLogos data={{ title: 'Some of The Loyal Clients of FinByz', subtitle: 'Trusted by leading companies worldwide', useAPI: true, apiEndpoint: '/api/client-logos' }} />
         </section>
       </main>
-      <Footer />
+
     </div>
   );
 }

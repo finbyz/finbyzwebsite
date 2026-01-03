@@ -110,7 +110,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }
-      <Footer />
+
       <BusinessSlider />
     </>
   );

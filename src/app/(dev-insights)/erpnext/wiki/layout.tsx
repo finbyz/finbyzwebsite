@@ -14,7 +14,7 @@ export default async function MainLayout({
   return (
     <>
       {children}
-      <Footer />
+
     </>
   );
 }

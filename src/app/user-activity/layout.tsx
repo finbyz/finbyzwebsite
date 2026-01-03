@@ -17,7 +17,7 @@ export default function UserActivityLayout({
                     {children}
                 </div>
             </main>
-            <Footer />
+
         </div>
     )
 }

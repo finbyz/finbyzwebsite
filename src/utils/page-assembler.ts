@@ -364,7 +364,7 @@ export function generateSamplePageData(): PageData {
           },
           secondaryButton: {
             text: "Learn More",
-            url: "/about",
+            url: "/about-us",
             icon: "Info"
           },
           image: {
