@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { usePathname } from 'next/navigation';
+import Script from 'next/script';
 
 interface BreadcrumbItem {
   position: number;
@@ -86,7 +87,7 @@ export default function BreadcrumbSchema({
   };
 
   return (
-    <script
+    <Script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />

@@ -1,4 +1,5 @@
 import { fetchFrappeSchemaData } from "@/lib/fetchFrappeSeoData";
+import Script from "next/script";
 
 type PageType = "gallery" | "webpage" | "blog" | "code-snippet";
 
@@ -197,7 +198,7 @@ export default async function StructureData({
   const cleaned = JSON.parse(JSON.stringify(schema));
 
   return (
-    <script
+    <Script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(cleaned, null, 2) }}
     />
