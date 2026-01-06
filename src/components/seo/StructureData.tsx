@@ -56,6 +56,11 @@ export default async function StructureData({
     type: type,
     name: name
   })
+
+  // Early return if no data available
+  if (!data) {
+    return null;
+  }
   // Helpers
   const fullUrl = `${BASE_URL}/${data?.route}`;
   const getImage = () =>
