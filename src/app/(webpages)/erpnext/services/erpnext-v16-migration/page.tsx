@@ -27,7 +27,7 @@ export default function Page() {
                 }}
                 heroImage={{
                     alt: 'ERPNext Migration Services',
-                    src: '/images/erp-migration-hero.svg',
+                    src: '/images/erpnext v16.jpeg',
                 }}
             />
 
@@ -123,7 +123,7 @@ export default function Page() {
                             </div>
                         </div>
                         <div className="flex justify-center">
-                            <img src="/images/migration-process.svg" alt="Migration Process" className="w-full max-w-md rounded-lg shadow-xl" />
+                            <img src="/images/erp_migration_flow.jpeg" alt="Migration Process" className="w-full max-w-md rounded-lg shadow-xl" />
                         </div>
                     </div>
                 </div>
