@@ -761,7 +761,7 @@ useEffect(() => {
             name: "Apply Now",
             description: "Submit your application",
             icon: Send,
-            href: "/careers/job-application"
+            href: "/careers/apply"
           }
         ]
       }

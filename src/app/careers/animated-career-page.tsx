@@ -333,7 +333,7 @@ export default function AnimatedCareerPage() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/careers/job-application">
+            <Link href="/careers/apply">
               <Button 
                 size="lg"
                 className="rounded-full  text-white bg-[#f97316] text-lg px-8 py-4 h-auto font-semibold shadow-lg hover:bg-orange-500 hover:shadow-xl transition-all"
@@ -418,7 +418,7 @@ export default function AnimatedCareerPage() {
               Let's build something meaningful together.
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <Link href="/careers/job-application">
+              <Link href="/careers/apply">
                 <Button 
                   size="lg" 
                   className="rounded-full bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white text-lg px-8 py-4 h-auto font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition-all"

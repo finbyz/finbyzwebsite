@@ -91,7 +91,7 @@ export default function BlogSectionWithImage({
                 src={image.src}
                 alt={image.alt}
                 title={image.title || image.alt}
-                width={image.width || 1200}
+                width={image.width || 800}
                 height={image.height || 400}
                 className="object-cover rounded-xl aspect-video"
               />

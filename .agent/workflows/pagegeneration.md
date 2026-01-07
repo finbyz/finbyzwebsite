@@ -30,18 +30,18 @@ description: Generates a Next.js page while maximizing the reuse of existing com
       }
     }
     ```
-*   **Verification**: **Stop and report the Document ID to the user.** If the call fails, explain why and wait for instructions. **DO NOT generate the file yet.**
+*   **Note**: use only frappe mcp tool to create blog Post or Web Page document, do not use any other method to create document.
+*   **Verification**: Check if the document is created in the ERP.
 
-**3. Component Audit & Draft Architecture**
-*   *Only execute if Step 2 succeeded.*
-*   Scan `@/components` and the designated Template paths (`src/app/(blogs)/careers/...` or `src/app/(webpages)/erpnext/...`).
-*   **Output**: Present a Markdown outline and a list of components to be reused. 
-*   **Visual Assets**: For all images, use Unsplash URLs.
-Format: https://images.unsplash.com/photo-[ID]?auto=format&fit=crop&q=80&w=1200 or a topic-based placeholder: https://source.unsplash.com/featured/?{topic}.
-*   **Confirmation**: Ask: "I have registered the page in the ERP (ID: [ID]). Proceed with code generation?"
 
-**4. Code Generation & Verification**
-*   Create the folder structure and `page.tsx`.
-*   Ensure SEO `metadata` matches the ERP registration details exactly.
-*   **Quality Check**: Run `npx next lint` and `npx tsc --noEmit` via terminal MCP.
-*   **Final Report**: Provide the file path and the local development URL.
+3. **Code Generation (Blueprint Implementation)**:
+    - **layout.tsx**: Implement the Server Component matching the Blueprint from `@nextjs-blueprints.md`. Ensure the slug is passed correctly to `fetchFrappeSchemaData`.
+    - **page.tsx**: Implement the Client Component.
+        - **If Webpage**: Build sections using `HeroSection`, `Section`, and `CTA`.
+        - **If Blog**: Build the grid layout using `BlogHero`, `BlogTableOfContents`, and `BlogSectionWithImage`.
+    - **Crucial**: Use only existing components from `@/components/...`. Do not create new UI components unless absolutely necessary.`
+
+4. **Verification**:
+    - Run `npx next lint --file [path]`.
+    - open the page in the browser and check if the page is loading. domain web.finbyz.tech
+    - Report the successful file creation and the Frappe Document ID.
