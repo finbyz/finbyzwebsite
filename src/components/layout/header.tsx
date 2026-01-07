@@ -27,6 +27,7 @@ import { Globe2 } from "lucide-react";
 import { Map } from "lucide-react";
 import { Atom } from "lucide-react"
 import { Notebook } from "lucide-react";
+import { Workflow, Server } from "lucide-react";
 import { MediaViewer } from "../ai_components/gallery/MediaViewer";
 
 
@@ -238,6 +239,12 @@ useEffect(() => {
             description: "Custom website development services",
             icon: Code,
             href: "/erpnext/services/website-development-on-erpnext"
+          },
+          {
+            name: "ERPNext v16 Migration",
+            description: "Upgrade to ERPNext v16",
+            icon: Rocket,
+            href: "/erpnext/services/erpnext-v16-migration"
           }
         ],
         "ERPNext Products & Add-ons": [
@@ -667,6 +674,8 @@ useEffect(() => {
       mainItems: [
         { name: "Blogs", icon: Wrench, href: "/blogs" },
         { name: "Gallery", icon: Handshake, href: "/" },
+        { name: "n8n Insights", icon: Workflow, href: "#" },
+        { name: "ERPNext Insights", icon: Zap, href: "#" },
         { name: "Dev Insights", icon: Code2, href: "#" },
       ],
 
@@ -679,7 +688,40 @@ useEffect(() => {
             href: "/blogs"
           },
         ],
-       
+        "n8n Insights": [
+          {
+            name: "n8n AI Agent Orchestration",
+            description: "Orchestrate AI agents with n8n",
+            icon: Brain,
+            href: "/n8n/insights/n8n-ai-agent-orchestration"
+          },
+          {
+            name: "n8n vs Zapier vs Make",
+            description: "Comparison of top automation tools",
+            icon: Target,
+            href: "/n8n/insights/n8n-vs-zapier-vs-make-comparison"
+          },
+          {
+            name: "Self-Hosting n8n Guide",
+            description: "Enterprise guide for self-hosting n8n",
+            icon: Server,
+            href: "/n8n/insights/self-hosting-n8n-enterprise-guide"
+          }
+        ],
+        "ERPNext Insights": [
+          {
+            name: "ERPNext v16 Performance",
+            description: "Frappe Caffeine Performance Guide",
+            icon: Zap,
+            href: "/erpnext/insights/erpnext-v16-frappe-caffeine-performance-guide"
+          },
+          {
+            name: "What's New in v16",
+            description: "New features in ERPNext v16",
+            icon: Sparkles,
+            href: "/erpnext/insights/whats-new-erpnext-version-16"
+          }
+        ]
       },
     },
     {
