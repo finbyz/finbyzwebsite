@@ -70,25 +70,37 @@ export default async function StructureData({
     `${BASE_URL}/files/FinbyzLogo.png`;
 
   // ----------------------------------------------------
-  // Generate SCHEMA
+  // Generate FAQPage Schema (if FAQs exist)
   // ----------------------------------------------------
-  const baseSchema = {
-    "@context": "https://schema.org",
-    name: data?.seo_title || data?.gallery_title || data?.title || data?.name,
-    description:
-      data?.small_description ||
-      data?.meta_description ||
-      data?.description?.replace(/<[^>]+>/g, "").substring(0, 200),
-    url: fullUrl,
-    image: getImage()
-  };
+  const faqSchema = data.faqs?.length
+    ? {
+      "@type": "FAQPage",
+      mainEntity: data.faqs.map(f => ({
+        "@type": "Question",
+        name: f.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: f.answer
+        }
+      }))
+    }
+    : null;
 
-  let schema: any = baseSchema;
+  // ----------------------------------------------------
+  // Generate Main Page Schema
+  // ----------------------------------------------------
+  let mainSchema: any;
 
   if (type === "gallery") {
-    schema = {
-      ...baseSchema,
+    mainSchema = {
       "@type": "ImageGallery",
+      name: data?.seo_title || data?.gallery_title || data?.title || data?.name,
+      description:
+        data?.small_description ||
+        data?.meta_description ||
+        data?.description?.replace(/<[^>]+>/g, "").substring(0, 200),
+      url: fullUrl,
+      image: getImage(),
       headline: data.gallery_title || data.title,
       datePublished: `${data.published_on}T08:00:00+08:00`,
       keywords: data.keywords,
@@ -99,29 +111,18 @@ export default async function StructureData({
           "@type": "ImageObject",
           url: `${BASE_URL}/files/FinbyzLogo.png`
         }
-      },
-      ...(data.faqs?.length
-        ? {
-            mainEntity: {
-              "@type": "FAQPage",
-              mainEntity: data.faqs.map(f => ({
-                "@type": "Question",
-                name: f.question,
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: f.answer
-                }
-              }))
-            }
-          }
-        : {})
+      }
     };
-  }
-
-  if (type === "blog" || type === "code-snippet") {
-    schema = {
-      ...baseSchema,
+  } else if (type === "blog" || type === "code-snippet") {
+    mainSchema = {
       "@type": "BlogPosting",
+      name: data?.seo_title || data?.gallery_title || data?.title || data?.name,
+      description:
+        data?.small_description ||
+        data?.meta_description ||
+        data?.description?.replace(/<[^>]+>/g, "").substring(0, 200),
+      url: fullUrl,
+      image: getImage(),
       headline: data?.seo_title || data?.title,
       author: {
         "@type": "Person",
@@ -139,26 +140,19 @@ export default async function StructureData({
       },
       mainEntityOfPage: { "@type": "WebPage", "@id": fullUrl },
       keywords: data?.keywords,
-      articleSection: data?.blog_category || data?.gallery_category,
-      ...(data?.faqs?.length
-        ? {
-            hasPart: {
-              "@type": "FAQPage",
-            mainEntity: data?.faqs.map(f => ({
-                "@type": "Question",
-                name: f.question,
-                acceptedAnswer: { "@type": "Answer", text: f.answer }
-              }))
-            }
-          }
-        : {})
+      articleSection: data?.blog_category || data?.gallery_category
     };
-  }
-
-  if (type === "webpage") {
-    schema = {
-      ...baseSchema,
+  } else {
+    // type === "webpage"
+    mainSchema = {
       "@type": "WebPage",
+      name: data?.seo_title || data?.gallery_title || data?.title || data?.name,
+      description:
+        data?.small_description ||
+        data?.meta_description ||
+        data?.description?.replace(/<[^>]+>/g, "").substring(0, 200),
+      url: fullUrl,
+      image: getImage(),
       mainEntity: {
         "@type": "ProfessionalService",
         name: data?.seo_title || data?.title,
@@ -183,24 +177,31 @@ export default async function StructureData({
           "https://www.youtube.com/c/Finbyz",
           "https://www.instagram.com/finbyz/"
         ]
-      },
-      ...(data.faqs?.length
-        ? {
-            hasPart: {
-              "@type": "FAQPage",
-              mainEntity: data.faqs.map(f => ({
-                "@type": "Question",
-                name: f.question,
-                acceptedAnswer: { "@type": "Answer", text: f.answer }
-              }))
-            }
-          }
-        : {})
+      }
+    };
+  }
+
+  // ----------------------------------------------------
+  // Build final schema with @graph if FAQs exist
+  // ----------------------------------------------------
+  let finalSchema: any;
+
+  if (faqSchema) {
+    // Use @graph array to output multiple top-level schemas
+    finalSchema = {
+      "@context": "https://schema.org",
+      "@graph": [mainSchema, faqSchema]
+    };
+  } else {
+    // Single schema with @context
+    finalSchema = {
+      "@context": "https://schema.org",
+      ...mainSchema
     };
   }
 
   // Cleanup → remove undefined values
-  const cleaned = JSON.parse(JSON.stringify(schema));
+  const cleaned = JSON.parse(JSON.stringify(finalSchema));
 
   return (
     <Script
