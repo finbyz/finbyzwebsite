@@ -14,12 +14,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://erp.finbyz.tech/erp-healthcare-industry",
+    canonical: "https://finbyz.tech/erp-healthcare-industry",
   },
   openGraph: {
     title: "ERP Solutions for Healthcare Providers Streamline Operations",
     description: "Transform healthcare operations with robust ERP solutions. Enhance patient care, streamline billing, manage inventory, and ensure compliance with Finbyz Tech\'s tailored ERPNext implementations.",
-    url: "https://erp.finbyz.tech/erp-healthcare-industry",
+    url: "https://finbyz.tech/erp-healthcare-industry",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -52,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
     "@type": "WebPage",
     "name": "ERP Solutions for Healthcare Providers Streamline Operations",
     "description": "Transform healthcare operations with robust ERP solutions. Enhance patient care, streamline billing, manage inventory, and ensure compliance with Finbyz Tech\'s tailored ERPNext implementations.",
-    "url": "https://erp.finbyz.tech/erp-healthcare-industry",
+    "url": "https://finbyz.tech/erp-healthcare-industry",
 
     "keywords": "ERP for Healthcare, Healthcare Management System, Hospital ERP Software, Clinic Management System, ERPNext Healthcare Solutions, Patient Management Software, Medical Billing System, Healthcare Inventory Management, Digital Transformation Healthcare, Healthcare IT Solutions, Hospital Operations Management, Clinical Workflow Optimization, Healthcare Compliance Software, Finbyz Tech Healthcare ERP",
     "inLanguage": "en-US",

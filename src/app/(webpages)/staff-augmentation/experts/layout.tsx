@@ -15,13 +15,13 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://web.finbyz.tech/hire-developers",
+    canonical: "https://finbyz.tech/staff-augmentation/experts",
   },
   openGraph: {
     title: "Hire Expert Developers | Finbyz Tech",
     description:
       "Hire top remote developers skilled in Python, JavaScript, Django, ERPNext, and Web App Development. Scale your business with flexible hiring from Finbyz Tech.",
-    url: "https://web.finbyz.tech/hire-experts",
+    url: "https://finbyz.tech/staff-augmentation/experts",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -54,7 +54,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     name: "Hire Expert Developers | Finbyz Tech",
     description:
       "Hire Python, JavaScript, Django, ERPNext, and Web App developers from Finbyz Tech. Build your tech team faster with vetted experts and flexible engagement options.",
-    url: "https://web.finbyz.tech/hire-experts",
+    url: "https://finbyz.tech/staff-augmentation/experts",
     keywords:
       "hire python developer, hire javascript developer, hire django developer, hire erpnext implementer, hire web app developer, remote developer India, offshore developer team, IT staffing Finbyz, hire software developers",
     inLanguage: "en-US",

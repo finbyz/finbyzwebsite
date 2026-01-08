@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://erp.finbyz.tech/partnership-programs",
+    canonical: "https://finbyz.tech/partnership-programs",
   },
   openGraph: {
     title: "Grow Your Business Strategic Technology Partnership Programs",
     description: "Unlock new opportunities and expand your reach by partnering with a leading IT consulting and software development firm. Explore our collaboration programs for mutual growth.",
-    url: "https://erp.finbyz.tech/partnership-programs",
+    url: "https://finbyz.tech/partnership-programs",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -48,7 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "Grow Your Business Strategic Technology Partnership Programs",
     "description": "Unlock new opportunities and expand your reach by partnering with a leading IT consulting and software development firm. Explore our collaboration programs for mutual growth.",
-    "url": "https://erp.finbyz.tech/partnership-programs",
+    "url": "https://finbyz.tech/partnership-programs",
     
     "keywords": "technology partnership programs, IT consulting partnerships, software development collaboration, ERPNext partner program, AI automation partnerships, business collaboration opportunities, referral partner program, reseller program technology, strategic alliances IT, custom software partnerships, digital transformation partners, channel partner program, technology solutions partnerships, mutual growth business, finbyz tech partnerships",
     "inLanguage": "en-US",

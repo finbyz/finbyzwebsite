@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://erp.finbyz.tech/erp-for-travel-hospitality",
+    canonical: "https://finbyz.tech/erp-for-travel-hospitality",
   },
   openGraph: {
     title: "ERPNext for Hotels Resorts Travel Agencies Hospitality",
     description: "Streamline hospitality operations with tailored ERPNext solutions. Manage bookings, guests, inventory, and finance efficiently for hotels, resorts, and travel agencies.",
-    url: "https://erp.finbyz.tech/erp-for-travel-hospitality",
+    url: "https://finbyz.tech/erp-for-travel-hospitality",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -51,7 +51,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "ERPNext for Hotels Resorts Travel Agencies Hospitality",
     "description": "Streamline hospitality operations with tailored ERPNext solutions. Manage bookings, guests, inventory, and finance efficiently for hotels, resorts, and travel agencies.",
-    "url": "https://erp.finbyz.tech/erp-for-travel-hospitality",
+    "url": "https://finbyz.tech/erp-for-travel-hospitality",
 
     "keywords": "ERP for Hospitality, ERPNext Hospitality, Travel Agency ERP, Hotel Management Software, Resort ERP System, Guest Management System, Booking Management Software, Tourism ERP Solution, F&B ERP System, Integrated Hospitality Software, Travel Tech Solutions, Hospitality Operations Management, ERP Implementation Hospitality",
     "inLanguage": "en-US",

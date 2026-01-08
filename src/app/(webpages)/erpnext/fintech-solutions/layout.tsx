@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://erp.finbyz.tech/fintech-solutions",
+    canonical: "https://finbyz.tech/fintech-solutions",
   },
   openGraph: {
     title: "Fintech ERPNext & Custom Software Solutions for Financial Tech",
     description: "Empower your FinTech business with robust ERPNext and custom software solutions. We deliver AI automation, secure platforms, and expert consulting for financial technology growth.",
-    url: "https://erp.finbyz.tech/fintech-solutions",
+    url: "https://finbyz.tech/fintech-solutions",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -51,7 +51,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "Fintech ERPNext & Custom Software Solutions for Financial Tech",
     "description": "Empower your FinTech business with robust ERPNext and custom software solutions. We deliver AI automation, secure platforms, and expert consulting for financial technology growth.",
-    "url": "https://erp.finbyz.tech/fintech-solutions",
+    "url": "https://finbyz.tech/fintech-solutions",
 
     "keywords": "Fintech solutions, ERPNext FinTech, custom financial software, FinTech automation, AI in FinTech, financial technology ERP, FinTech IT consulting, secure FinTech solutions, digital transformation finance, financial software development, FinTech innovation, financial operations software, payment gateway integration, regulatory compliance software",
     "inLanguage": "en-US",

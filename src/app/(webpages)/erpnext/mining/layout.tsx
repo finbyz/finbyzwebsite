@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://erp.finbyz.tech/erp-for-mining-industry",
+    canonical: "https://finbyz.tech/erp-for-mining-industry",
   },
   openGraph: {
     title: "Mining ERP Solutions Efficient Operations Streamlined",
     description: "Streamline your mining operations with specialized ERP solutions. Finbyz Tech offers tailored ERPNext for inventory, logistics, and compliance, ensuring efficient mine-to-market processes and profitability.",
-    url: "https://erp.finbyz.tech/erp-for-mining-industry",
+    url: "https://finbyz.tech/erp-for-mining-industry",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -51,7 +51,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "Mining ERP Solutions Efficient Operations Streamlined",
     "description": "Streamline your mining operations with specialized ERP solutions. Finbyz Tech offers tailored ERPNext for inventory, logistics, and compliance, ensuring efficient mine-to-market processes and profitability.",
-    "url": "https://erp.finbyz.tech/erp-for-mining-industry",
+    "url": "https://finbyz.tech/erp-for-mining-industry",
     "image": "/files/FinByz (11).gif",
     "keywords": "ERP for mining, mining ERP solutions, ERPNext mining, mining software, mine management system, mining operations management, inventory management mining, logistics mining, compliance mining, mining industry digitalization, resource management mining, mine-to-market ERP, mining supply chain, heavy equipment management ERP, mining asset management",
     "inLanguage": "en-US",

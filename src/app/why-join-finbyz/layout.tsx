@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://erp.finbyz.tech/why-join-finbyz",
+    canonical: "https://finbyz.tech/why-join-finbyz",
   },
   openGraph: {
     title: "Career Growth & Innovation at a Leading Tech Company",
     description: "Explore dynamic career opportunities at a top ERPNext & AI automation firm. Join a team passionate about innovation, learning, and making a real business impact.",
-    url: "https://erp.finbyz.tech/why-join-finbyz",
+    url: "https://finbyz.tech/why-join-finbyz",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -50,7 +50,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "Career Growth & Innovation at a Leading Tech Company",
     "description": "Explore dynamic career opportunities at a top ERPNext & AI automation firm. Join a team passionate about innovation, learning, and making a real business impact.",
-    "url": "https://erp.finbyz.tech/why-join-finbyz",
+    "url": "https://finbyz.tech/why-join-finbyz",
     
     "keywords": "career opportunities, tech jobs, Finbyz careers, ERPNext jobs, AI automation careers, software development jobs, IT consulting careers, Ahmedabad jobs, professional growth, tech innovation, company culture, employee development, digital transformation jobs, Finbyz recruitment, join our team",
     "inLanguage": "en-US",

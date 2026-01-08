@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://erp.finbyz.tech/api-development-services",
+    canonical: "https://finbyz.tech/api-development-services",
   },
   openGraph: {
     title: "Custom API Development for Seamless Business Integration",
     description: "Unlock seamless data flow and process automation with custom API development services. Integrate ERPNext with your enterprise applications for enhanced efficiency.",
-    url: "https://erp.finbyz.tech/api-development-services",
+    url: "https://finbyz.tech/api-development-services",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -51,7 +51,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "Custom API Development for Seamless Business Integration",
     "description": "Unlock seamless data flow and process automation with custom API development services. Integrate ERPNext with your enterprise applications for enhanced efficiency.",
-    "url": "https://erp.finbyz.tech/api-development-services",
+    "url": "https://finbyz.tech/api-development-services",
 
     "keywords": "API development services, custom API solutions, ERPNext API integration, enterprise application integration, business system connectivity, data synchronization, RESTful API development, secure API, web service development, automation APIs, Finbyz Tech API, digital transformation APIs",
     "inLanguage": "en-US",

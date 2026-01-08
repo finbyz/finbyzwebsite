@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://erp.finbyz.tech/erp-for-textile-industry",
+    canonical: "https://finbyz.tech/erp-for-textile-industry",
   },
   openGraph: {
     title: "ERP Solutions for Textile Manufacturing & Distribution",
     description: "Optimize textile manufacturing, supply chain, and operations with tailored ERP solutions. Enhance efficiency, reduce costs, and boost profitability for your textile business.",
-    url: "https://erp.finbyz.tech/erp-for-textile-industry",
+    url: "https://finbyz.tech/erp-for-textile-industry",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -51,7 +51,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "ERP Solutions for Textile Manufacturing & Distribution",
     "description": "Optimize textile manufacturing, supply chain, and operations with tailored ERP solutions. Enhance efficiency, reduce costs, and boost profitability for your textile business.",
-    "url": "https://erp.finbyz.tech/erp-for-textile-industry",
+    "url": "https://finbyz.tech/erp-for-textile-industry",
 
     "keywords": "ERP for textile industry, textile manufacturing ERP, textile production software, ERPNext textile solutions, apparel ERP system, garment manufacturing software, textile supply chain management, fabric inventory management, textile business operations, digital transformation textile, textile process automation, ERP customization textile, textile industry challenges, textile enterprise resource planning",
     "inLanguage": "en-US",

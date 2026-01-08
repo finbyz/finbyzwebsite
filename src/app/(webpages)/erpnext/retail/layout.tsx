@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://erp.finbyz.tech/erp-for-retail-industry",
+    canonical: "https://finbyz.tech/erp-for-retail-industry",
   },
   openGraph: {
     title: "Retail ERP Solutions Streamline Operations & Boost Sales",
     description: "Transform your retail business with ERPNext solutions. Optimize inventory, POS, supply chain, and customer experience for enhanced efficiency and growth.",
-    url: "https://erp.finbyz.tech/erp-for-retail-industry",
+    url: "https://finbyz.tech/erp-for-retail-industry",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -51,7 +51,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "Retail ERP Solutions Streamline Operations & Boost Sales",
     "description": "Transform your retail business with ERPNext solutions. Optimize inventory, POS, supply chain, and customer experience for enhanced efficiency and growth.",
-    "url": "https://erp.finbyz.tech/erp-for-retail-industry",
+    "url": "https://finbyz.tech/erp-for-retail-industry",
 
     "keywords": "retail ERP solutions, ERPNext for retail, retail inventory management, POS system retail, retail supply chain management, e-commerce integration retail, multi-channel retail ERP, retail business automation, warehouse management retail, retail CRM solutions, finbyz tech retail, retail operations optimization, erp consulting retail, digital transformation retail",
     "inLanguage": "en-US",

@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://erp.finbyz.tech/erpnext-use-cases",
+    canonical: "https://finbyz.tech/erpnext-use-cases",
   },
   openGraph: {
     title: "ERPNext Real-World Use Cases Industry-Specific Solutions",
     description: "Discover how ERPNext transforms operations across diverse industries. Explore real-world use cases in manufacturing, EXIM, logistics, and more with expert implementation from a certified partner.",
-    url: "https://erp.finbyz.tech/erpnext-use-cases",
+    url: "https://finbyz.tech/erpnext-use-cases",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -50,7 +50,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "ERPNext Real-World Use Cases Industry-Specific Solutions",
     "description": "Discover how ERPNext transforms operations across diverse industries. Explore real-world use cases in manufacturing, EXIM, logistics, and more with expert implementation from a certified partner.",
-    "url": "https://erp.finbyz.tech/erpnext-use-cases",
+    "url": "https://finbyz.tech/erpnext-use-cases",
 
     "keywords": "ERPNext use cases, ERPNext industry solutions, ERPNext implementation success stories, manufacturing ERPNext, EXIM ERPNext solutions, logistics ERPNext, chemical industry ERPNext, metal casting ERPNext, custom ERPNext development, AI automation ERPNext, business process transformation, Finbyz Tech ERPNext, ERP consulting India, ERPNext partner, digital transformation",
     "inLanguage": "en-US",

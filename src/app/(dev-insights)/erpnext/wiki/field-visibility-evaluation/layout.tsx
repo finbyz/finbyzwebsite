@@ -32,14 +32,14 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "Finbyz Tech",
       type: "website",
       locale: "en_US",
-      images: [{ url: "https://erp.finbyz.tech/", width: 1200, height: 630, alt: pageData?.data?.seo_title }],
+      images: [{ url: "https://finbyz.tech/", width: 1200, height: 630, alt: pageData?.data?.seo_title }],
     },
     twitter: {
       card: "summary_large_image",
       title: pageData?.data?.seo_title,
       description: pageData?.data?.small_description,
       creator: "@finbyz",
-      images: ["https://erp.finbyz.tech/" + pageData?.data?.title || ""],
+      images: ["https://finbyz.tech/" + pageData?.data?.title || ""],
     },
     robots: {
       index: true,

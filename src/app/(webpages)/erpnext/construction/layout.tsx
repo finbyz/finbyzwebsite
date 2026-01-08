@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://erp.finbyz.tech/erp-for-construction-industry",
+    canonical: "https://finbyz.tech/erp-for-construction-industry",
   },
   openGraph: {
     title: "Construction ERP Software Solutions for Project Management",
     description: "Streamline construction projects, resources, and finances with advanced ERPNext solutions. Optimize operations, reduce costs, and boost efficiency in the building industry.",
-    url: "https://erp.finbyz.tech/erp-for-construction-industry",
+    url: "https://finbyz.tech/erp-for-construction-industry",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -51,7 +51,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "Construction ERP Software Solutions for Project Management",
     "description": "Streamline construction projects, resources, and finances with advanced ERPNext solutions. Optimize operations, reduce costs, and boost efficiency in the building industry.",
-    "url": "https://erp.finbyz.tech/erp-for-construction-industry",
+    "url": "https://finbyz.tech/erp-for-construction-industry",
 
     "keywords": "construction ERP, ERPNext construction, construction management software, project management ERP, construction resource planning, construction accounting software, building industry ERP, construction project tracking, custom ERP construction, construction business solutions, construction operations management, ERP implementation construction, digital transformation construction",
     "inLanguage": "en-US",

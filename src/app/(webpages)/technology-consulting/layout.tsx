@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://erp.finbyz.tech/technology-consulting",
+    canonical: "https://finbyz.tech/technology-consulting",
   },
   openGraph: {
     title: "Expert Technology Consulting & Digital Transformation Strategy",
     description: "Unlock growth with Finbyz Tech\'s expert technology consulting. We guide businesses through digital transformation, ERPNext adoption, and IT strategy for measurable success.",
-    url: "https://erp.finbyz.tech/technology-consulting",
+    url: "https://finbyz.tech/technology-consulting",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -48,7 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "Expert Technology Consulting & Digital Transformation Strategy",
     "description": "Unlock growth with Finbyz Tech\'s expert technology consulting. We guide businesses through digital transformation, ERPNext adoption, and IT strategy for measurable success.",
-    "url": "https://erp.finbyz.tech/technology-consulting",
+    "url": "https://finbyz.tech/technology-consulting",
     
     "keywords": "technology consulting, IT consulting services, digital transformation strategy, ERPNext consulting, business IT advisory, IT strategy consulting firm, custom software consulting, AI automation strategy, cloud strategy consulting, data analytics consulting, business process optimization, IT advisory services, technology roadmap, digital transformation company, enterprise technology consulting",
     "inLanguage": "en-US",

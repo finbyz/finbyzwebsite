@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://erp.finbyz.tech/process-consulting",
+    canonical: "https://finbyz.tech/process-consulting",
   },
   openGraph: {
     title: "Optimize Business Processes with Expert Consulting & ERPNext",
     description: "Streamline operations, boost efficiency, and maximize ERPNext with expert process consulting. Finbyz Tech offers tailored solutions for sustainable business growth.",
-    url: "https://erp.finbyz.tech/process-consulting",
+    url: "https://finbyz.tech/process-consulting",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -51,7 +51,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "Optimize Business Processes with Expert Consulting & ERPNext",
     "description": "Streamline operations, boost efficiency, and maximize ERPNext with expert process consulting. Finbyz Tech offers tailored solutions for sustainable business growth.",
-    "url": "https://erp.finbyz.tech/process-consulting",
+    "url": "https://finbyz.tech/process-consulting",
 
     "keywords": "process consulting, business process optimization, workflow efficiency, ERPNext process consulting, operational excellence, business transformation, process improvement strategy, ERP implementation consulting, digital transformation advisory, workflow automation, business process analysis, manufacturing process optimization, supply chain process improvement, finbyz tech consulting",
     "inLanguage": "en-US",

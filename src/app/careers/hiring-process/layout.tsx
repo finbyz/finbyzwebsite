@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://erp.finbyz.tech/hiring-process",
+    canonical: "https://finbyz.tech/hiring-process",
   },
   openGraph: {
     title: "Transparent Hiring Process & Career Opportunities",
     description: "Discover Finbyz Tech\'s structured and transparent hiring process. Learn how we recruit top talent for ERPNext, AI automation, and IT roles, ensuring a fair and engaging selection experience.",
-    url: "https://erp.finbyz.tech/hiring-process",
+    url: "https://finbyz.tech/hiring-process",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -48,7 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "Transparent Hiring Process & Career Opportunities",
     "description": "Discover Finbyz Tech\'s structured and transparent hiring process. Learn how we recruit top talent for ERPNext, AI automation, and IT roles, ensuring a fair and engaging selection experience.",
-    "url": "https://erp.finbyz.tech/hiring-process",
+    "url": "https://finbyz.tech/hiring-process",
     
     "keywords": "hiring process, recruitment process, Finbyz Tech careers, job application steps, selection process, IT hiring, ERPNext jobs, AI automation careers, talent acquisition, interview process, Finbyz Tech recruitment, job openings, career opportunities, HR process, tech jobs India",
     "inLanguage": "en-US",

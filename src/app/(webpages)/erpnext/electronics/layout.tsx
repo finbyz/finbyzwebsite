@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://erp.finbyz.tech/erp-for-electronics-industry",
+    canonical: "https://finbyz.tech/erp-for-electronics-industry",
   },
   openGraph: {
     title: "ERP Solutions for Electronics Manufacturing & Supply Chain",
     description: "Optimize electronics manufacturing, inventory, and global supply chains with powerful ERP solutions. Streamline production, enhance quality, and reduce costs. Get a demo today!",
-    url: "https://erp.finbyz.tech/erp-for-electronics-industry",
+    url: "https://finbyz.tech/erp-for-electronics-industry",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -51,7 +51,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "ERP Solutions for Electronics Manufacturing & Supply Chain",
     "description": "Optimize electronics manufacturing, inventory, and global supply chains with powerful ERP solutions. Streamline production, enhance quality, and reduce costs. Get a demo today!",
-    "url": "https://erp.finbyz.tech/erp-for-electronics-industry",
+    "url": "https://finbyz.tech/erp-for-electronics-industry",
 
     "keywords": "ERP for electronics industry, electronics manufacturing ERP, ERPNext electronics, electronics supply chain management, inventory management electronics, BOM management electronics, quality control electronics, electronics production planning, discrete manufacturing ERP, electronics software solutions, ERP implementation electronics, finbyz tech electronics, circuit board manufacturing software, component tracking ERP, electronics industry challenges",
     "inLanguage": "en-US",
