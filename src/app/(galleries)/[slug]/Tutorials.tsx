@@ -120,47 +120,117 @@ const Tutorials = ({ data }: TutorialsProps) => {
     );
   }
 
+  // Extract YouTube video ID from URL
+  const getVideoId = (url?: string): string | null => {
+    if (!url) return null;
+    const patterns = [
+      /(?:v=)([\w-]{11})/,
+      /youtu\.be\/([\w-]{11})/,
+      /youtube\.com\/embed\/([\w-]{11})/
+    ];
+    for (const p of patterns) {
+      const m = url.match(p);
+      if (m && m[1]) return m[1];
+    }
+    return null;
+  };
+
+  const videoId = getVideoId(data.parent.youtube_link);
+  const hasVideo = !!videoId;
+
+  // Generate structured data with BOTH BlogPosting and VideoObject when video exists
+  const generateStructuredData = () => {
+    // BlogPosting schema (always generated)
+    const blogPostingSchema = {
+      "@type": "BlogPosting",
+      "name": data.parent.seo_title || data.parent.gallery_title || data.parent.title || "Learning Hub",
+      "headline": data.parent.seo_title || data.parent.gallery_title || data.parent.title || "Learning Hub",
+      "description": data.parent.small_description || data.parent.description?.replace(/<[^>]+>/g, '').substring(0, 500) || "Explore our comprehensive collection of tutorials and resources",
+      "author": {
+        "@type": "Person",
+        "name": "FinByz Tech Pvt Ltd",
+        "url": "https://finbyz.tech"
+      },
+      "datePublished": data.parent.creation ? new Date(data.parent.creation).toISOString() : undefined,
+      "dateModified": data.parent.modified ? new Date(data.parent.modified).toISOString() : undefined,
+      "image": data.parent.svg_image ? `https://finbyz.tech/web-api/fb/n${data.parent.svg_image}` : "https://finbyz.tech/images/FinbyzLogo.png",
+      "publisher": {
+        "@type": "Organization",
+        "name": "FinByz Tech Pvt Ltd",
+        "sameAs": "https://finbyz.tech",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://finbyz.tech/images/FinbyzLogo.png",
+          "height": "300",
+          "width": "300"
+        }
+      },
+      "keywords": data.parent.keywords.split(',').map(k => k.trim()).filter(Boolean) || "",
+      "url": `https://finbyz.tech/${data.parent.route || ''}`,
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `https://finbyz.tech/${data.parent.route || ''}`
+      }
+    };
+
+    // If video exists, return BOTH schemas using @graph
+    if (hasVideo) {
+      const videoObjectSchema = {
+        "@type": "VideoObject",
+        "name": data.parent.seo_title || data.parent.gallery_title || data.parent.title || "Video Tutorial",
+        "description": data.parent.small_description || data.parent.description?.replace(/<[^>]+>/g, '').substring(0, 500) || "Watch this video tutorial",
+        "thumbnailUrl": [
+          `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
+          `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
+          `https://img.youtube.com/vi/${videoId}/sddefault.jpg`
+        ],
+        "uploadDate": data.parent.creation ? new Date(data.parent.creation).toISOString() : new Date().toISOString(),
+        "duration": data.parent.video_duration || "PT10M",
+        "contentUrl": data.parent.youtube_link || `https://www.youtube.com/watch?v=${videoId}`,
+        "embedUrl": `https://www.youtube.com/embed/${videoId}`,
+        "author": {
+          "@type": "Person",
+          "name": "FinByz Tech Pvt Ltd",
+          "url": "https://finbyz.tech"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "FinByz Tech Pvt Ltd",
+          "sameAs": "https://finbyz.tech",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://finbyz.tech/images/FinbyzLogo.png",
+            "height": "300",
+            "width": "300"
+          }
+        },
+        "keywords": data.parent.keywords ? data.parent.keywords.split(",").map((keyword: string) => keyword.trim()) : []
+      };
+
+      // Return @graph with BOTH schemas
+      return {
+        "@context": "https://schema.org",
+        "@graph": [blogPostingSchema, videoObjectSchema]
+      };
+    }
+
+    // No video - return only BlogPosting
+    return {
+      "@context": "https://schema.org",
+      ...blogPostingSchema
+    };
+  };
+
   return (
     <div className="min-h-screen bg-background w-full mx-auto container-custom">
-      {/* Structured Data */}
+      {/* Structured Data - BlogPosting + VideoObject for videos, BlogPosting only for articles */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "http://schema.org",
-            "@type": "BlogPosting",
-            "name": data.parent.seo_title || data.parent.gallery_title || data.parent.title || "Learning Hub",
-            "headline": data.parent.small_description || data.parent.description || "Explore our comprehensive collection of tutorials and resources",
-            "author": {
-              "@type": "Person",
-              "name": "FinByz Tech Pvt Ltd"
-            },
-            "datePublished": data.parent.creation,
-            "dateModified": data.parent.modified,
-            "image": data.parent.svg_image ? `/web-api/fb/n${data.parent.svg_image}` : "/images/FinbyzLogo.png",
-            "publisher": {
-              "@type": "Organization",
-              "name": "FinByz Tech Pvt Ltd",
-              "sameAs": "https://finbyz.tech",
-              "email": "info@finbyz.com",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "/images/FinbyzLogo.png",
-                "height": "300px",
-                "width": "300px"
-              }
-            },
-            "description": data.parent.description || data.parent.small_description || "Explore our comprehensive collection of tutorials and resources",
-            "keywords": data.parent.keywords || "",
-            "url": `https://finbyz.tech/${data.parent.route || ''}`,
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": `https://finbyz.tech/${data.parent.route || ''}`
-            }
-          })
+          __html: JSON.stringify(generateStructuredData())
         }}
       />
-      
+
       {/* Header */}
       <motion.header
         className="border-b border-border top-12 z-40 bg-white"
@@ -220,7 +290,7 @@ const Tutorials = ({ data }: TutorialsProps) => {
                             <Link href={item.route} className="cursor-pointer">
                               <MediaListItem
                                 item={toMediaItem(item)}
-                                onClick={() => {}}
+                                onClick={() => { }}
                                 isActive={false}
                               />
                             </Link>
@@ -287,7 +357,7 @@ const Tutorials = ({ data }: TutorialsProps) => {
                               <SidebarMediaItem
                                 key={item.name}
                                 item={toMediaItem(item)}
-                                onClick={() => {}}
+                                onClick={() => { }}
                                 isActive={selectedItem?.name === item.name}
                               />
                             ))}

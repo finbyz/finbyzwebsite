@@ -27,6 +27,9 @@ interface FrappePageData {
   meta_image?: string;
   meta_description?: string;
   creation?: string;
+  youtube_link?: string;
+  youtube_video_id?: string;
+  video_duration?: string;
 }
 
 // MAKE IT CONFIGURABLE FOR YOUR SITE
@@ -182,18 +185,94 @@ export default async function StructureData({
   }
 
   // ----------------------------------------------------
-  // Build final schema with @graph if FAQs exist
+  // Helper: Extract YouTube Video ID
+  // ----------------------------------------------------
+  const extractVideoId = (url?: string): string | null => {
+    if (!url) return null;
+    const patterns = [
+      /(?:v=)([\w-]{11})/,
+      /youtu\.be\/([\w-]{11})/,
+      /youtube\.com\/embed\/([\w-]{11})/
+    ];
+    for (const p of patterns) {
+      const m = url.match(p);
+      if (m && m[1]) return m[1];
+    }
+    return null;
+  };
+
+  // Check if YouTube video exists
+  const videoId = data.youtube_video_id || extractVideoId(data.youtube_link);
+  const hasVideo = !!videoId;
+
+  // ----------------------------------------------------
+  // Generate VideoObject Schema (if YouTube video exists)
+  // ----------------------------------------------------
+  const videoSchema = hasVideo
+    ? {
+      "@type": "VideoObject",
+      name: data?.seo_title || data?.gallery_title || data?.title || data?.name,
+      description:
+        data?.small_description ||
+        data?.meta_description ||
+        data?.description?.replace(/<[^>]+>/g, "").substring(0, 500) ||
+        "Watch this video",
+      thumbnailUrl: [
+        `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
+        `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
+        `https://img.youtube.com/vi/${videoId}/sddefault.jpg`
+      ],
+      uploadDate: data?.creation
+        ? new Date(data.creation).toISOString()
+        : new Date().toISOString(),
+      duration: data?.video_duration || "PT10M",
+      contentUrl: data?.youtube_link || `https://www.youtube.com/watch?v=${videoId}`,
+      embedUrl: `https://www.youtube.com/embed/${videoId}`,
+      author: {
+        "@type": "Person",
+        name: data?.author || "FinByz Team",
+        url: `${BASE_URL}`
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "FinByz Tech",
+        sameAs: `${BASE_URL}`,
+        logo: {
+          "@type": "ImageObject",
+          url: `${BASE_URL}/images/FinbyzLogo.png`,
+          height: "300",
+          width: "300"
+        }
+      },
+      keywords: data?.keywords
+    }
+    : null;
+
+  // ----------------------------------------------------
+  // Build final schema with @graph for multiple schemas
   // ----------------------------------------------------
   let finalSchema: any;
 
+  // Collect all schemas to include in @graph
+  const schemas: any[] = [mainSchema];
+
+  // Add VideoObject if video exists (for blog/code-snippet pages)
+  if (videoSchema && (type === "blog" || type === "code-snippet")) {
+    schemas.push(videoSchema);
+  }
+
+  // Add FAQ schema if FAQs exist
   if (faqSchema) {
-    // Use @graph array to output multiple top-level schemas
+    schemas.push(faqSchema);
+  }
+
+  // Use @graph if we have multiple schemas, otherwise single schema
+  if (schemas.length > 1) {
     finalSchema = {
       "@context": "https://schema.org",
-      "@graph": [mainSchema, faqSchema]
+      "@graph": schemas
     };
   } else {
-    // Single schema with @context
     finalSchema = {
       "@context": "https://schema.org",
       ...mainSchema
@@ -205,6 +284,7 @@ export default async function StructureData({
 
   return (
     <Script
+      id={`structured-data-${type}-${name}`}
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(cleaned, null, 2) }}
     />

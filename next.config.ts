@@ -216,7 +216,7 @@ const nextConfig = {
       },
       {
         source: "/job-application",
-        destination: "/careers/job-application",
+        destination: "/careers/apply",
         permanent: true,
       },
       {
@@ -550,7 +550,7 @@ const nextConfig = {
       // ERPNext Hire Developers
       {
         source: "/hire-erpnext-implementer",
-        destination: "/erpnext/hire-developers",
+        destination: "/erpnext/services/hire-erpnext-implementer",
         permanent: true,
       },
 
@@ -783,7 +783,7 @@ const nextConfig = {
       },
       {
         source: "/erpnext/add-or-replace-a-ssh-key-pair-for-your-instance",
-        destination: "/hosting/wiki/add-or-replace-a-ssh-key-pair-for-your-instance",
+        destination: "/erpnext/wiki/add-or-replace-a-ssh-key-pair-for-your-instance",
         permanent: true,
       },
 
@@ -961,7 +961,7 @@ const nextConfig = {
       },
       {
         source: "/erpnext-implementer",
-        destination: "/erpnext/hire-developers",
+        destination: "/erpnext/services/hire-erpnext-implementer",
         permanent: true,
       },
       {

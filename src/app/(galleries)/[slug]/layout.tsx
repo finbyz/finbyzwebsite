@@ -1,7 +1,3 @@
-import Footer from "@/components/layout/footer";
-import Header from "@/components/layout/header";
-import {getPageData} from "@/lib/getPageData";
-import { headers } from "next/headers";
 // This will be different for each page at build time
 
 export default async function MainLayout({

@@ -18,11 +18,12 @@ interface Gallery {
     route: string;
     description: string;
     youtube_link: string;
+    video_duration?: string;
     svg_image: string;
     animated_image?: string;
-    quote?:string;
-    modified?:string;
-    creation?:string;
+    quote?: string;
+    modified?: string;
+    creation?: string;
     gallery_sidebar?: GallerySidebarItem[];
 }
 
