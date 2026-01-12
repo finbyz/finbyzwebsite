@@ -25,6 +25,10 @@ export interface FrappePageData {
   meta_image?: string;
   meta_description?: string;
   creation?: string;
+  modified?: string;
+  youtube_link?: string;
+  youtube_video_id?: string;
+  video_duration?: string;
 }
 
 function getAuthHeaders() {

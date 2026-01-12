@@ -5,7 +5,6 @@ import StructureData from "@/components/seo/StructureData";
 import { fetchFrappeSchemaData } from "@/lib/fetchFrappeSeoData";
 import { getFaqs, getPageData } from "@/lib/getPageData";
 import { Metadata } from "next";
-import Header from "@/components/layout/header";
 
 
 
