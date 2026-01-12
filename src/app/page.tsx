@@ -1,5 +1,3 @@
-import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
 import Hero from "@/components/sections/hero";
 import Benefits from "@/components/sections/benefits";
 import Testimonials from "@/components/sections/testimonials";
@@ -10,12 +8,11 @@ import BusinessSlider from "@/components/sections/business-slider";
 import InquiryForm from "@/components/ui/InquiryForm";
 import { Metadata } from "next";
 import FAQ from "@/components/ai_components/FAQ";
-import { getFaqs, getPageData } from "@/lib/getPageData";
-
+import { getFaqs } from "@/lib/getPageData";
+import CooprtaionSchema from "@/components/seo/CorporationSchema";
 
 export const metadata: Metadata = {
-  title: "Finbyz Tech (Finbyz®) | Official Website – ERPNext & AI Automation Experts",
-  // description: "Finbyz Tech (commonly known as Finbyz) is a global ERPNext implementation partner and AI automation company. This is the official website of Finbyz Tech Pvt Ltd, serving the UK, USA, India, and worldwide.",
+  title: "Finbyz Tech (Finbyz®) | Official Website - ERPNext & AI Automation Experts",
 
   description: "Finbyz Tech is a certified ERPNext implementation partner and Frappe framework experts. We deliver AI automation, ERP software solutions, and custom software development for businesses in New York, London, Dubai, Sydney, Toronto, and worldwide.",
   keywords: [
@@ -88,6 +85,7 @@ export default async function Home() {
   console.log(faqsGroup)
   return (
     <div className="min-h-screen">
+      <CooprtaionSchema />
       <main >
         <Hero />
         <Benefits />

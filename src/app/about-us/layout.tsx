@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import CorporationSchema from "@/components/seo/CorporationSchema";
 
 export const metadata: Metadata = {
   title: "Finbyz Tech | ERP, AI, Software, and Dedicated Talent – All in One Partner",
@@ -74,5 +75,10 @@ export default function AboutLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      <CorporationSchema />
+      {children}
+    </>
+  );
 }

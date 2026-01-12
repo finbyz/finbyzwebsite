@@ -6,7 +6,7 @@ import "@/styles/components/inquiry-form.css";
 import "@/styles/components/country-code-select.css";
 import { MobileMenuProvider } from "@/contexts/MobileMenuContext";
 import BreadcrumbSchema from "@/components/seo/BreadCrumbSchema";
-import Header from "@/components/layout/new-header";
+import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 
 export const dynamic = "force-dynamic";
@@ -52,115 +52,6 @@ export default function RootLayout({
             });
           `}
         </Script>
-        <Script
-          id="prod-structured-data"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Finbyz Tech Pvt Ltd",
-              "alternateName": ["Finbyz", "FinbyzTech"],
-              "url": "https://finbyz.tech/",
-              "@id": "https://finbyz.tech/#organization",
-              "logo": "https://finbyz.tech/images/FinbyzLogo.png",
-              "image": "https://finbyz.tech/images/FinbyzLogo.png",
-              "description": "Finbyz Tech is a certified ERPNext implementation partner and Frappe framework experts. We deliver AI automation, ERP software solutions, and custom software development for businesses worldwide.",
-              "telephone": "+91-9925701446",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "504-Addor Ambition, Nr. Navrang Circle, Navrangpura",
-                "addressLocality": "Ahmedabad",
-                "addressRegion": "Gujarat",
-                "postalCode": "380009",
-                "addressCountry": "IN"
-              },
-              "location": {
-                "@type": "Place",
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "504-Addor Ambition, Nr. Navrang Circle, Navrangpura",
-                  "addressLocality": "Ahmedabad",
-                  "addressRegion": "Gujarat",
-                  "postalCode": "380009",
-                  "addressCountry": "IN"
-                },
-                "geo": {
-                  "@type": "GeoCoordinates",
-                  "latitude": 23.046477,
-                  "longitude": 72.558351
-                }
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+91-9925701446",
-                "contactType": "sales",
-                "areaServed": [
-                  // Country codes
-                  "US", "CA", "GB", "AU", "AE", "SA", "QA", "KW", "OM", "BH",
-                  "DE", "FR", "ES", "IT", "NL", "CH", "IE", "SE", "NO", "DK", "BE",
-                  "ZA", "AR",
-                  // North America Cities
-                  "New York", "Los Angeles", "Chicago", "Houston", "San Francisco",
-                  "Toronto", "Vancouver", "Montreal",
-                  // Europe Cities
-                  "London", "Manchester", "Berlin", "Munich", "Frankfurt", "Paris",
-                  "Madrid", "Barcelona", "Milan", "Amsterdam", "Zurich", "Dublin",
-                  "Stockholm", "Oslo", "Copenhagen", "Brussels",
-                  // Middle East Cities
-                  "Dubai", "Abu Dhabi", "Riyadh", "Jeddah", "Doha", "Kuwait City",
-                  "Muscat", "Manama",
-                  // Other Regions
-                  "Sydney", "Melbourne", "Johannesburg", "Cape Town", "Buenos Aires"
-                ],
-                "availableLanguage": [
-                  "en", "hi", "ar", "es", "gu", "mr", "te", "sd"
-                ]
-              },
-              "sameAs": [
-                "https://www.youtube.com/Finbyz",
-                "https://www.linkedin.com/company/finbyz",
-                "https://maps.app.goo.gl/6uk8D86abe6cQTBb9",
-                "https://www.facebook.com/FinByz",
-                "https://twitter.com/FinByz",
-                "https://github.com/finbyz/",
-                "https://www.indiamart.com/finbyz-tech-private-limited/",
-              ]
-            })
-          }}
-        />
-
-
-
-
-        <Script
-          id="finbyz-global-brand"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Corporation",
-              "@id": "https://finbyz.tech/#corporation",
-              "name": "FinByz",
-              "legalName": "FinByz Technologies Pvt Ltd",
-              "url": "https://finbyz.tech",
-              "logo": "https://finbyz.tech/images/FinbyzLogo.png",
-              "foundingDate": "2017",
-              "areaServed": "Worldwide",
-              "sameAs": [
-                "https://www.linkedin.com/company/finbyz/",
-                "https://www.crunchbase.com/organization/finbyz",
-                "https://clutch.co/profile/finbyz",
-                "https://www.goodfirms.co/company/finbyz"
-              ]
-            })
-          }}
-        />
-
-
-
 
         <BreadcrumbSchema baseUrl={process.env.SITE_URL || ""} />
       </head>
