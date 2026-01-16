@@ -214,7 +214,7 @@ export default function ERPNextPageContent() {
         <div className="container-custom py-8">
           <h2 className="text-2xl font-bold text-center mb-4 animate-fadeInUp text-[#1A5276]">Serving Businesses Worldwide</h2>
           <p className="text-gray-700 text-center animate-fadeInUp">
-            At FinByz, we take pride in serving businesses worldwide as a leading <a href="/erpnext/hire-developers" className="text-primary underline hover:text-primary/80">ERPNext implementation</a> partner. From India to the USA, Canada, UAE, Saudi Arabia, and the UK, our global footprint ensures that businesses everywhere can benefit from our expertise. Our dedicated team stands ready to assist with all your ERP implementation needs. Whether you have inquiries, require consultations, or need any form of assistance, please don't hesitate to reach out to us. We're here to help your business thrive.
+            At FinByz, we take pride in serving businesses worldwide as a leading <a href="/erpnext/services/hire-erpnext-implementer" className="text-primary underline hover:text-primary/80">ERPNext implementation</a> partner. From India to the USA, Canada, UAE, Saudi Arabia, and the UK, our global footprint ensures that businesses everywhere can benefit from our expertise. Our dedicated team stands ready to assist with all your ERP implementation needs. Whether you have inquiries, require consultations, or need any form of assistance, please don't hesitate to reach out to us. We're here to help your business thrive.
           </p>
         </div>
       </Section>

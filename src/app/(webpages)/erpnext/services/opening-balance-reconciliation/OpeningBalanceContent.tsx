@@ -2,6 +2,7 @@
 
 import React from 'react';
 import HeroSection from '@/components/sections/dynamic-hero';
+import Link from 'next/link';
 import Section from '@/components/sections/Section';
 
 
@@ -35,7 +36,7 @@ export default function OpeningBalanceContent() {
                 }}
                 secondaryButton={{
                     text: "Contact Us",
-                    action: "https://finbyz.tech/contact"
+                    action: "/contact"
                 }}
                 heroImage={{
                     alt: "ERPNext Opening Balance Reconciliation Service",
@@ -48,7 +49,7 @@ export default function OpeningBalanceContent() {
             <Section id="challenge" className="container-custom py-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-[#1A5276] mb-6">The Critical Challenge of Opening Balances</h2>
                 <p className="text-slate-700 text-base md:text-lg mb-6 text-justify leading-relaxed">
-                    Implementing ERPNext is a transformative step for your business, but the transition often hits a critical roadblock: <span className="font-semibold text-gray-900">The Opening Balance</span>.
+                    <Link href="/erpnext/services/start-your-erp-journey" className="text-blue-600 hover:underline">Implementing ERPNext</Link> is a transformative step for your business, but the transition often hits a critical roadblock: <span className="font-semibold text-gray-900">The Opening Balance</span>.
                 </p>
                 <p className="text-slate-700 text-base md:text-lg mb-6 text-justify leading-relaxed">
                     Your financial reports are only as good as the data you start with. If the opening Balance Sheet in ERPNext doesn't match your legacy system down to the last cent, every subsequent report—from P&L to Balance Sheet—will be inaccurate.

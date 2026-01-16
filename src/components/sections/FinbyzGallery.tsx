@@ -25,8 +25,10 @@ interface FinbyzGalleryProps {
 
 
 const FinbyzGallery = ({ galleryItems = [], relatedReads = [] }: FinbyzGalleryProps) => {
+  if (galleryItems.length === 0 && relatedReads.length === 0) return null;
+
   return (
-    <div className="min-h-screen bg-gray-50 py-12 container-custom mx-auto">
+    <div className="bg-gray-50 py-12 container-custom mx-auto">
       <div className="mx-auto">
         {/* Related Reads Section */}
         {relatedReads.length > 0 ?

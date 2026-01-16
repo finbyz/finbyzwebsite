@@ -197,10 +197,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 <Image
                   src={heroImage.poster || heroImage.src || ""}
                   alt={heroImage.alt || "Hero image"}
-                  width={600} 
+                  width={600}
                   height={450}
                   className="w-full h-auto rounded-2xl object-contain mx-auto"
-                    priority
+                  priority
                 />
               )}
               {/* "w-full h-auto max-h-[520px] rounded-2xl object-contain" */}

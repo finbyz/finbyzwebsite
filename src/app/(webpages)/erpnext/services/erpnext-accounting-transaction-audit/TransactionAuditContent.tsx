@@ -2,6 +2,7 @@
 
 import React from 'react';
 import HeroSection from '@/components/sections/dynamic-hero';
+import Link from 'next/link';
 import Section from '@/components/sections/Section';
 import {
     Lock,
@@ -44,7 +45,7 @@ export default function TransactionAuditContent() {
                 }}
                 secondaryButton={{
                     text: "Contact Us",
-                    action: "https://finbyz.tech/contact"
+                    action: "/contact"
                 }}
                 heroImage={{
                     alt: "ERPNext Transaction Audit Service",
@@ -58,7 +59,7 @@ export default function TransactionAuditContent() {
                 <h2 className="text-3xl md:text-4xl font-bold text-[#1A5276] mb-6 text-center">Don't Let Data Entry Errors Derail Your ERP Success</h2>
 
                 <p className="text-slate-700 text-base md:text-lg mb-6 text-justify leading-relaxed">
-                    You successfully implemented ERPNext. Your team has started entering transactions. But as the months roll by, you start noticing things aren't quite adding up.
+                    You successfully <Link href="/erpnext/services/start-your-erp-journey" className="text-blue-600 hover:underline">implemented ERPNext</Link>. Your team has started entering transactions. But as the months roll by, you start noticing things aren't quite adding up.
                 </p>
 
                 <ul className="list-disc pl-5 space-y-2 text-slate-700 text-base md:text-lg mb-6">

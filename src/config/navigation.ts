@@ -93,7 +93,11 @@ const navigationItems: NavNode[] = [
             {
                 name: "Services",
                 icon: Wrench,
+                href: "/erpnext/services",
                 children: [
+                    { name: "Hire ERPNext Accountant", icon: DollarSign, href: "/erpnext/services/hire-erpnext-accountant", description: "Hire dedicated ERPNext accountants" },
+                    { name: "Opening Balance Reconciliation", icon: Scale, href: "/erpnext/services/opening-balance-reconciliation", description: "Opening balance reconciliation services" },
+                    { name: "Accounting Transaction Audit", icon: ClipboardCheck, href: "/erpnext/services/erpnext-accounting-transaction-audit", description: "ERPNext transaction audit services" },
                     { name: "API Development Services", icon: CodeSquare, href: "/erpnext/services/api-development-services", description: "ERPNext API development" },
                     { name: "Data Analytics", icon: BarChart3, href: "/erpnext/services/data-analytics", description: "Data analytics services" },
                     { name: "Custom CMS Development", icon: Code, href: "/erpnext/services/develop-custom-erp-software", description: "Develop custom ERP software" },
@@ -102,11 +106,8 @@ const navigationItems: NavNode[] = [
                     { name: "ERPNext Implementation in UAE", icon: Building2, href: "/erpnext/services/ERPNext-impelementation-in-uae", description: "Implementation services in UAE" },
                     { name: "ERPNext SEO Optimization", icon: Search, href: "/erpnext/services/erpnext-seo-optimization", description: "SEO optimization" },
                     { name: "ERPNext Service Provider", icon: Briefcase, href: "/erpnext/services/erpnext-service-provider", description: "Full-service ERPNext provider" },
-                    { name: "Accounting Transaction Audit", icon: ClipboardCheck, href: "/erpnext/services/erpnext-accounting-transaction-audit", description: "ERPNext transaction audit services" },
-                    { name: "Hire ERPNext Accountant", icon: DollarSign, href: "/erpnext/services/hire-erpnext-accountant", description: "Hire dedicated ERPNext accountants" },
                     { name: "Hire ERPNext Implementer", icon: UserPlus, href: "/erpnext/services/hire-erpnext-implementer", description: "Hire dedicated implementers" },
                     { name: "Implementation Partner in Canada", icon: Globe, href: "/erpnext/services/implementation-partner-in-canada", description: "Partner services in Canada" },
-                    { name: "Opening Balance Reconciliation", icon: Scale, href: "/erpnext/services/opening-balance-reconciliation", description: "Opening balance reconciliation services" },
                     { name: "IT Consulting", icon: Lightbulb, href: "/erpnext/services/it-consulting", description: "Strategic IT consulting" },
                     { name: "Mobile App Development", icon: Tablet, href: "/erpnext/services/mobile-app-development", description: "Mobile apps for ERPNext" },
                     { name: "Performance Optimization", icon: Zap, href: "/erpnext/services/performance-optimization", description: "Optimize ERPNext performance" },

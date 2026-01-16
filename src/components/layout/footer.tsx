@@ -342,11 +342,6 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-6">
               <span className="text-slate-400 text-sm">&copy; 2025 Finbyz tech Pvt Ltd All rights reserved.</span>
-              <div className="flex items-center space-x-4">
-                <a href="/privacy-policy" className="text-slate-400 hover:text-white transition-colors text-sm">Privacy Policy</a>
-                <span className="text-slate-600">•</span>
-                <a href="/terms-of-service" className="text-slate-400 hover:text-white transition-colors text-sm">Terms of Service</a>
-              </div>
             </div>
 
             {/* Contact Info */}

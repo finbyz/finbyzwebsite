@@ -42,20 +42,42 @@ export default function Layout({
 }: {
     children: React.ReactNode;
 }) {
-    const jsonLd = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "ERPNext Opening Balance Reconciliation Service",
-        "provider": {
+    const jsonLd = [
+        {
+            "@context": "https://schema.org",
             "@type": "Organization",
             "name": "FinByz Tech",
-            "url": "https://finbyz.tech"
+            "url": "https://web.finbyz.tech",
+            "logo": "https://web.finbyz.tech/files/finbyz-logo.png",
+            "description": "ERPNext implementation and consulting services",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ahmedabad",
+                "addressRegion": "Gujarat",
+                "postalCode": "380001",
+                "addressCountry": "IN"
+            }
         },
-        "description": "Struggling with ERPNext opening balances? We handle complex data migration, legacy transaction matching, and stock reconciliation so you can focus on the future. Get a clean financial slate today.",
-        "url": "https://finbyz.tech/erpnext/services/opening-balance-reconciliation",
-        "serviceType": "ERPNext Reconciliation",
-        "areaServed": "Worldwide"
-    };
+        {
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "Opening Balance Reconciliation Service",
+            "description": "Expert ERPNext opening balance reconciliation and data migration services",
+            "provider": {
+                "@type": "Organization",
+                "name": "FinByz Tech"
+            },
+            "areaServed": ["AE", "SA", "US", "GB", "EU", "IN"],
+            "serviceType": "ERPNext Services",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ahmedabad",
+                "addressRegion": "Gujarat",
+                "postalCode": "380001",
+                "addressCountry": "IN"
+            }
+        }
+    ];
 
     return (
         <>

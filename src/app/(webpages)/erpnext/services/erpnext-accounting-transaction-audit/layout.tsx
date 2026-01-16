@@ -53,20 +53,42 @@ export default function Layout({
 }: {
     children: React.ReactNode;
 }) {
-    const jsonLd = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "ERPNext Transaction Audit & Accounting Health Check Service",
-        "provider": {
+    const jsonLd = [
+        {
+            "@context": "https://schema.org",
             "@type": "Organization",
             "name": "FinByz Tech",
-            "url": "https://finbyz.tech"
+            "url": "https://web.finbyz.tech",
+            "logo": "https://web.finbyz.tech/files/finbyz-logo.png",
+            "description": "ERPNext implementation and consulting services",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ahmedabad",
+                "addressRegion": "Gujarat",
+                "postalCode": "380001",
+                "addressCountry": "IN"
+            }
         },
-        "description": "Eliminate ERPNext accounting errors and ensure GSTR/TDS compliance. Our Transaction Audit service validates your data, corrects COGS, and trains your team for accurate financial reporting.",
-        "url": "https://finbyz.tech/erpnext/services/erpnext-accounting-transaction-audit",
-        "serviceType": "ERPNext Audit",
-        "areaServed": "Worldwide"
-    };
+        {
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "ERPNext Accounting Transaction Audit Service",
+            "description": "Professional ERPNext accounting transaction audit and validation services",
+            "provider": {
+                "@type": "Organization",
+                "name": "FinByz Tech"
+            },
+            "areaServed": ["AE", "SA", "US", "GB", "EU", "IN"],
+            "serviceType": "ERPNext Services",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ahmedabad",
+                "addressRegion": "Gujarat",
+                "postalCode": "380001",
+                "addressCountry": "IN"
+            }
+        }
+    ];
 
     return (
         <>

@@ -202,7 +202,7 @@ useEffect(() => {
             name: "ERPNext Implementation",
             description: "Complete ERPNext setup and configuration",
             icon: Cpu,
-            href: "/erpnext/hire-developers"
+            href: "/erpnext/services/hire-erpnext-implementer"
           },
           {
             name: "ERPNext Certified Partner",
@@ -379,7 +379,7 @@ useEffect(() => {
             name: "ERPNext Implementation",
             description: "Complete ERPNext setup",
             icon: Cpu,
-            href: "/erpnext/hire-developers"
+            href: "/erpnext/services/hire-erpnext-implementer"
           },
           {
             name: "Custom ERP Development",
@@ -457,7 +457,7 @@ useEffect(() => {
             name: "Web Applications",
             description: "Custom web development",
             icon: Code,
-            href: "/erpnext/services/erpnext-service-providerweb-application-development"
+            href: "/erpnext/services/web-application-development"
           },
           {
             name: "Mobile Apps",
@@ -507,7 +507,7 @@ useEffect(() => {
             name: "Technology Consulting",
             description: "Technology strategy and planning",
             icon: Cog,
-            href: "/erpnext/services/erpnext-service-providertechnology-consulting"
+            href: "/erpnext/services/technology-consulting"
           },
           {
             name: "IT Consulting",
@@ -542,7 +542,7 @@ useEffect(() => {
           { name: "Hire Web Application Developers", icon: Handshake, description: "Hire Web Application Developers", href: "/staff-augmentation/web-application-developers" },
           { name: "Hire Javascript Developer", icon: Briefcase, description: "Hire Javascript Developer", href: "/staff-augmentation/hire-javascript-developers" },
           { name: "Hire Django developer", icon: Globe, description: "Hire Django developer", href: "/staff-augmentation/django-developer" },
-          { name: "Hire ERPNext Implementer", icon: Laptop, description: "Hire Django developer", href: "/erpnext/hire-developers" }
+          { name: "Hire ERPNext Implementer", icon: Laptop, description: "Hire Django developer", href: "/erpnext/services/hire-erpnext-implementer" }
         ]
 
 
