@@ -1,5 +1,11 @@
+import BusinessSlider from "@/components/sections/business-slider";
+import FinbyzGallery from "@/components/sections/FinbyzGallery";
+import FAQ from "@/components/ai_components/FAQ";
+import { getFaqs, getPageData } from "@/lib/getPageData";
 import { Metadata } from 'next';
-import React from 'react';
+import Script from "next/script";
+
+const PAGE_SLUG = "erpnext/services/opening-balance-reconciliation";
 
 export const metadata: Metadata = {
     title: "ERPNext Opening Balance Reconciliation Service | Fix Mismatched Accounts & Stock",
@@ -37,7 +43,7 @@ export const metadata: Metadata = {
     },
 };
 
-export default function Layout({
+export default async function Layout({
     children,
 }: {
     children: React.ReactNode;
@@ -47,8 +53,8 @@ export default function Layout({
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "FinByz Tech",
-            "url": "https://web.finbyz.tech",
-            "logo": "https://web.finbyz.tech/files/finbyz-logo.png",
+            "url": "https://finbyz.tech",
+            "logo": "https://finbyz.tech/files/finbyz-logo.png",
             "description": "ERPNext implementation and consulting services",
             "address": {
                 "@type": "PostalAddress",
@@ -79,13 +85,34 @@ export default function Layout({
         }
     ];
 
+    const data = await getPageData("Web Page", PAGE_SLUG);
+    const faqsGroup = await getFaqs("Web Page", PAGE_SLUG);
+
     return (
         <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            />
-            {children}
+            <main>
+                <Script
+                    id="structured-data-opening-balance"
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                />
+
+                {children}
+
+                {/* FAQ Section */}
+                {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
+
+                {/* Gallery + Related Reads */}
+                {(data.galleryItems.length > 0 || data.relatedReads.length > 0) && (
+                    <FinbyzGallery
+                        relatedReads={data.relatedReads}
+                        galleryItems={data.galleryItems}
+                    />
+                )}
+
+                {/* Business Slider */}
+                <BusinessSlider />
+            </main>
         </>
     );
 }
