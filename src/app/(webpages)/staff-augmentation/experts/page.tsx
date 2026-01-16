@@ -44,7 +44,7 @@ export default function Page() {
       skills: ["React", "Angular", "Vue.js", "Node.js", "HTML5/CSS3", "TypeScript"],
       experience: "4+ years average experience",
       availability: "Full-time, Part-time, Contract",
-      link:"https://finbyz.tech/staff-augmentation/hire-web-application-developers"
+      link: "https://finbyz.tech/staff-augmentation/staff-augmentation/web-application-developers"
     },
     {
       icon: <Code className="w-12 h-12" />,
