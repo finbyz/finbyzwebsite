@@ -5,7 +5,7 @@ import StructureData from "@/components/seo/StructureData";
 import { getFaqs, getPageData } from "@/lib/getPageData";
 import { Metadata } from "next";
 
-const PAGE_SLUG = "self-hosting-n8n-enterprise-guide";
+const PAGE_SLUG = "n8n/insights/self-hosting-n8n-enterprise-guide";
 const PAGE_ROUTE = "ai-automation/insights/self-hosting-n8n-enterprise-guide";
 
 export const metadata: Metadata = {

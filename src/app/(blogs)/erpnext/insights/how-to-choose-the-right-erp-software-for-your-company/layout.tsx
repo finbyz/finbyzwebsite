@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","how-to-choose-the-right-erp-software-for-your-company");
+const faqsGroup = await getFaqs("Blog Post", "erpnext/insights/how-to-choose-the-right-erp-software-for-your-company");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","how-to-choose-the-right-erp-software-for-your-company");
+  const data = await getPageData("Blog Post", "erpnext/insights/how-to-choose-the-right-erp-software-for-your-company");
 
   return (
     <>

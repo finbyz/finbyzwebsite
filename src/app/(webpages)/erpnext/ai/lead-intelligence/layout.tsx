@@ -89,8 +89,8 @@ export default async function Layout({ children }: { children: React.ReactNode }
     "https://www.instagram.com/finbyz/"
   ]
 };
-  const data = await getPageData("Web Page","lead-intelligence");
-  const faqsGroup = await getFaqs("Web Page","lead-intelligence");
+  const data = await getPageData("Web Page", "erpnext/ai/lead-intelligence");
+  const faqsGroup = await getFaqs("Web Page", "erpnext/ai/lead-intelligence");
   
   return (
     <>

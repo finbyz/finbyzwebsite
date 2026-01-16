@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","how-erp-improves-business-performance");
+const faqsGroup = await getFaqs("Blog Post", "erp/insights/how-erp-improves-business-performance");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","how-erp-improves-business-performance");
+  const data = await getPageData("Blog Post", "erp/insights/how-erp-improves-business-performance");
 
   return (
     <>

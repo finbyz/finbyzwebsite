@@ -54,10 +54,10 @@ export async function generateMetadata(): Promise<Metadata> {
     }
   }
 }
-const faqsGroup = await getFaqs("Blog Post", "how-to-become-a-software-engineer-the-path-to-success");
+const faqsGroup = await getFaqs("Blog Post", "careers/insights/how-to-become-a-software-engineer-the-path-to-success");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post", "how-to-become-a-software-engineer-the-path-to-success");
+  const data = await getPageData("Blog Post", "careers/insights/how-to-become-a-software-engineer-the-path-to-success");
 
   return (
     <>

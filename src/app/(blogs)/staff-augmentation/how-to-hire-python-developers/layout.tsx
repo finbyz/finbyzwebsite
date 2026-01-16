@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","how-to-hire-python-developers");
+const faqsGroup = await getFaqs("Blog Post", "staff-augmentation/how-to-hire-python-developers");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","how-to-hire-python-developers");
+  const data = await getPageData("Blog Post", "staff-augmentation/how-to-hire-python-developers");
 
   return (
     <>

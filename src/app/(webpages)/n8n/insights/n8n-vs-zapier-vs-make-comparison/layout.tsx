@@ -5,7 +5,7 @@ import StructureData from "@/components/seo/StructureData";
 import { getFaqs, getPageData } from "@/lib/getPageData";
 import { Metadata } from "next";
 
-const PAGE_SLUG = "n8n-vs-zapier-vs-make-comparison";
+const PAGE_SLUG = "n8n/insights/n8n-vs-zapier-vs-make-comparison";
 const PAGE_ROUTE = "ai-automation/insights/n8n-vs-zapier-vs-make-comparison";
 
 export const metadata: Metadata = {

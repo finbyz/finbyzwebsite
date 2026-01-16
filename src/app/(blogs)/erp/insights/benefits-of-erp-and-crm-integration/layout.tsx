@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","benefits-of-erp-and-crm-integration");
+const faqsGroup = await getFaqs("Blog Post", "erp/insights/benefits-of-erp-and-crm-integration");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","benefits-of-erp-and-crm-integration");
+  const data = await getPageData("Blog Post", "erp/insights/benefits-of-erp-and-crm-integration");
 
   return (
     <>

@@ -62,7 +62,7 @@ export default function Page() {
       skills: ["Django", "Django REST", "PostgreSQL", "Celery", "Redis", "Docker"],
       experience: "5+ years average experience",
       availability: "Full-time, Part-time, Contract",
-      link: "https://finbyz.tech/staff-augmentation/hire-django-developer"
+      link: "/staff-augmentation/django-developer"
     },
     {
       icon: <Wrench className="w-12 h-12" />,

@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","blog/business/common-myths-of-erp");
+const faqsGroup = await getFaqs("Blog Post", "erp/insights/common-myths-of-erp");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","blog/business/common-myths-of-erp");
+  const data = await getPageData("Blog Post", "erp/insights/common-myths-of-erp");
 
   return (
     <>

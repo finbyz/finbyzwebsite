@@ -6,7 +6,7 @@ import { fetchFrappeSchemaData } from "@/lib/fetchFrappeSeoData";
 import { getFaqs, getPageData } from "@/lib/getPageData";
 import { Metadata } from "next";
 
-const PAGE_SLUG = "erpnext-v16-migration";
+const PAGE_SLUG = "erpnext/services/erpnext-v16-migration";
 const PAGE_ROUTE = "erpnext/services/erpnext-v16-migration";
 
 export async function generateMetadata(): Promise<Metadata> {

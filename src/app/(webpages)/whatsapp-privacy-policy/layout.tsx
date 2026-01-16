@@ -53,8 +53,8 @@ return {
 }
 }
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Web Page","whatsapp-privacy-policy");
-  const faqsGroup = await getFaqs("Web Page","whatsapp-privacy-policy");
+  const data = await getPageData("Web Page", "whatsapp-privacy-policy");
+  const faqsGroup = await getFaqs("Web Page", "whatsapp-privacy-policy");
   
   return (
     <>

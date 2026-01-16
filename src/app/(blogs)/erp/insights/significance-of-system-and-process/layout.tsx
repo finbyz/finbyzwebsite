@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","significance-of-system-and-process");
+const faqsGroup = await getFaqs("Blog Post", "erp/insights/significance-of-system-and-process");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","significance-of-system-and-process");
+  const data = await getPageData("Blog Post", "erp/insights/significance-of-system-and-process");
 
   return (
     <>

@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","What-is-ERP-software");
+const faqsGroup = await getFaqs("Blog Post", "erp/insights/What-is-ERP-software");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","What-is-ERP-software");
+  const data = await getPageData("Blog Post", "erp/insights/What-is-ERP-software");
 
   return (
     <>

@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","erp-options-for-trading-commodities-using-insight-and-efficiency");
+const faqsGroup = await getFaqs("Blog Post", "erpnext/trading/erp-for-commodities-trading-business");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","erp-options-for-trading-commodities-using-insight-and-efficiency");
+  const data = await getPageData("Blog Post", "erpnext/trading/erp-for-commodities-trading-business");
 
   return (
     <>

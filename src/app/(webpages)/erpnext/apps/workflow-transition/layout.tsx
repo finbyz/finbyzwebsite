@@ -56,8 +56,8 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Web Page", "workflow-transition");
-  const faqsGroup = await getFaqs("Web Page", "workflow-transition");
+  const data = await getPageData("Web Page", "erpnext/apps/workflow-transition");
+  const faqsGroup = await getFaqs("Web Page", "erpnext/apps/workflow-transition");
 
   return (
     <>

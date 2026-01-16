@@ -89,8 +89,8 @@ export default async function Layout({ children }: { children: React.ReactNode }
     "https://www.instagram.com/finbyz/"
   ]
 };
-  const data = await getPageData("Web Page","ai-powered-follow-up-buddy-automate-your-sales-follow-up-process");
-  const faqsGroup = await getFaqs("Web Page","ai-powered-follow-up-buddy-automate-your-sales-follow-up-process");
+  const data = await getPageData("Web Page", "erpnext/ai/ai-powered-follow-up-buddy-automate-your-sales-follow-up-process");
+  const faqsGroup = await getFaqs("Web Page", "erpnext/ai/ai-powered-follow-up-buddy-automate-your-sales-follow-up-process");
   
   return (
     <>

@@ -107,8 +107,8 @@ export default async function Layout({
     ],
   };
 
-  const data = await getPageData("Web Page", "erpnext-support-services");
-  const faqsGroup = await getFaqs("Web Page", "erpnext-support-services");
+  const data = await getPageData("Web Page", "erpnext/services/support-amc");
+  const faqsGroup = await getFaqs("Web Page", "erpnext/services/support-amc");
 
   return (
     <>

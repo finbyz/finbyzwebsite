@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","website-design-tips-for-small-business");
+const faqsGroup = await getFaqs("Blog Post", "insights/website-design-tips-for-small-business");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","website-design-tips-for-small-business");
+  const data = await getPageData("Blog Post", "insights/website-design-tips-for-small-business");
 
   return (
     <>

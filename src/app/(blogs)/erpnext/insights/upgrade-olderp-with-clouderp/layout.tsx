@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","upgrade-olderp-with-clouderp");
+const faqsGroup = await getFaqs("Blog Post", "erpnext/insights/upgrade-olderp-with-clouderp");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","upgrade-olderp-with-clouderp");
+  const data = await getPageData("Blog Post", "erpnext/insights/upgrade-olderp-with-clouderp");
 
   return (
     <>

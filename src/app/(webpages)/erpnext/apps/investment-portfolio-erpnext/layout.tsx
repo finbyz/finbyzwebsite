@@ -56,8 +56,8 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Web Page", "investment-portfolio-erpnext");
-  const faqsGroup = await getFaqs("Web Page", "investment-portfolio-erpnext");
+  const data = await getPageData("Web Page", "erpnext/apps/investment-portfolio-erpnext");
+  const faqsGroup = await getFaqs("Web Page", "erpnext/apps/investment-portfolio-erpnext");
 
   return (
     <>

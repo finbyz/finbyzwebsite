@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","the-top-10-erp-software-companies-revolutionizing-business-operations");
+const faqsGroup = await getFaqs("Blog Post", "erp/insights/the-top-10-erp-software-companies-revolutionizing-business-operations");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","the-top-10-erp-software-companies-revolutionizing-business-operations");
+  const data = await getPageData("Blog Post", "erp/insights/the-top-10-erp-software-companies-revolutionizing-business-operations");
 
   return (
     <>

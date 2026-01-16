@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","how-erp-software-can-change-your-business");
+const faqsGroup = await getFaqs("Blog Post", "erp/insights/how-erp-software-can-change-your-business");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","how-erp-software-can-change-your-business");
+  const data = await getPageData("Blog Post", "erp/insights/how-erp-software-can-change-your-business");
 
   return (
     <>

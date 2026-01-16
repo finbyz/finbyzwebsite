@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","why-invest-in-it-for-business");
+const faqsGroup = await getFaqs("Blog Post", "insights/why-invest-in-it-for-business");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","why-invest-in-it-for-business");
+  const data = await getPageData("Blog Post", "insights/why-invest-in-it-for-business");
 
   return (
     <>

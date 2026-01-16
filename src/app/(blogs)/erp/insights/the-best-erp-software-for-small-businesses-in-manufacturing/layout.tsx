@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","the-best-erp-software-for-small-businesses-in-manufacturing-in-2024");
+const faqsGroup = await getFaqs("Blog Post", "erp/insights/the-best-erp-software-for-small-businesses-in-manufacturing");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","the-best-erp-software-for-small-businesses-in-manufacturing-in-2024");
+  const data = await getPageData("Blog Post", "erp/insights/the-best-erp-software-for-small-businesses-in-manufacturing");
 
   return (
     <>

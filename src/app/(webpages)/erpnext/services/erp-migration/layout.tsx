@@ -104,8 +104,8 @@ export default async function Layout({
     ],
   };
 
-  const data = await getPageData("Web Page", "erp-migration");
-  const faqsGroup = await getFaqs("Web Page", "erp-migration");
+  const data = await getPageData("Web Page", "erpnext/services/erp-migration");
+  const faqsGroup = await getFaqs("Web Page", "erpnext/services/erp-migration");
 
   return (
     <>

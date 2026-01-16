@@ -8,7 +8,7 @@ import { Metadata } from "next";
 import Header from "@/components/layout/header";
 import InquiryForm from "@/components/ui/InquiryForm";
 
-const PAGE_SLUG = 'erpnext-v16-frappe-caffeine-performance-optimization-guide';
+const PAGE_SLUG = "erpnext/insights/erpnext-v16-frappe-caffeine-performance-guide";
 const PAGE_ROUTE = `erpnext/insights/${PAGE_SLUG}`;
 
 export async function generateMetadata(): Promise<Metadata> {

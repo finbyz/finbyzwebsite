@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","cost-benefit-analysis-of-erp-investments-in-the-chemical-sector");
+const faqsGroup = await getFaqs("Blog Post", "erpnext/chemical/cost-benefit-analysis-of-erp-investments-in-the-chemical-sector");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","cost-benefit-analysis-of-erp-investments-in-the-chemical-sector");
+  const data = await getPageData("Blog Post", "erpnext/chemical/cost-benefit-analysis-of-erp-investments-in-the-chemical-sector");
 
   return (
     <>

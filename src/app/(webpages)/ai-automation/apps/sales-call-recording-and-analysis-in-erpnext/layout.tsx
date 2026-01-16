@@ -50,8 +50,8 @@ export const metadata: Metadata = {
 };
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Web Page", "ai-sales-call-recording-and-analysis-in-erpnext");
-  const faqsGroup = await getFaqs("Web Page", "ai-sales-call-recording-and-analysis-in-erpnext");
+  const data = await getPageData("Web Page", "ai-automation/apps/sales-call-recording-and-analysis-in-erpnext");
+  const faqsGroup = await getFaqs("Web Page", "ai-automation/apps/sales-call-recording-and-analysis-in-erpnext");
 
   return (
     <>

@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","tips-for-selecting-the-right-manufacturing-software");
+const faqsGroup = await getFaqs("Blog Post", "erpnext/insights/tips-for-selecting-the-right-manufacturing-software");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","tips-for-selecting-the-right-manufacturing-software");
+  const data = await getPageData("Blog Post", "erpnext/insights/tips-for-selecting-the-right-manufacturing-software");
 
   return (
     <>

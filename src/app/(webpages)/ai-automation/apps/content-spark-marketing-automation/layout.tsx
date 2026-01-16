@@ -50,8 +50,8 @@ export const metadata: Metadata = {
 };
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Web Page", "content-spark-marketing-automation");
-  const faqsGroup = await getFaqs("Web Page", "content-spark-marketing-automation");
+  const data = await getPageData("Web Page", "ai-automation/apps/content-spark-marketing-automation");
+  const faqsGroup = await getFaqs("Web Page", "ai-automation/apps/content-spark-marketing-automation");
 
   return (
     <>

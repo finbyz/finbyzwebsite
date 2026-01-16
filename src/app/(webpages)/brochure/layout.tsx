@@ -53,8 +53,8 @@ return {
 }
 }
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Web Page","brochure");
-  const faqsGroup = await getFaqs("Web Page","brochure");
+  const data = await getPageData("Web Page", "brochure");
+  const faqsGroup = await getFaqs("Web Page", "brochure");
   
   return (
     <>

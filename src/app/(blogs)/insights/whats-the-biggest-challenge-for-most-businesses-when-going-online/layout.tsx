@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","whats-the-biggest-challenge-for-most-businesses-when-going-online");
+const faqsGroup = await getFaqs("Blog Post", "insights/whats-the-biggest-challenge-for-most-businesses-when-going-online");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","whats-the-biggest-challenge-for-most-businesses-when-going-online");
+  const data = await getPageData("Blog Post", "insights/whats-the-biggest-challenge-for-most-businesses-when-going-online");
 
   return (
     <>

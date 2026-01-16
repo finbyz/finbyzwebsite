@@ -56,8 +56,8 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Web Page", "hire-django-developer");
-  const faqsGroup = await getFaqs("Web Page", "hire-django-developer");
+  const data = await getPageData("Web Page", "staff-augmentation/django-developer");
+  const faqsGroup = await getFaqs("Web Page", "staff-augmentation/django-developer");
 
   return (
     <>

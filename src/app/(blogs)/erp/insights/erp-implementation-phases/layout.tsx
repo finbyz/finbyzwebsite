@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","erp-implementation-phases");
+const faqsGroup = await getFaqs("Blog Post", "erp/insights/erp-implementation-phases");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","erp-implementation-phases");
+  const data = await getPageData("Blog Post", "erp/insights/erp-implementation-phases");
 
   return (
     <>

@@ -261,7 +261,7 @@ export default function Page() {
                             secondaryButton: {
                                 text: 'View Case Studies',
                                 icon: 'Code',
-                                action: "/case-studies"
+                                action: "/erpnext/case-studies"
                             },
                             trustIndicator: {
                                 text: 'Silver Tier Frappe Partner • 100% Success Rate',

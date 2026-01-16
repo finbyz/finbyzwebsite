@@ -53,8 +53,8 @@ return {
 }
 }
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Web Page","working_hour_exception");
-  const faqsGroup = await getFaqs("Web Page","working_hour_exception");
+  const data = await getPageData("Web Page", "working_hour_exception");
+  const faqsGroup = await getFaqs("Web Page", "working_hour_exception");
   
   return (
     <>

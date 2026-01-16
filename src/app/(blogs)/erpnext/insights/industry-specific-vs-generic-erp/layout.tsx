@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","industry-specific-vs-generic-erp");
+const faqsGroup = await getFaqs("Blog Post", "erpnext/insights/industry-specific-vs-generic-erp");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","industry-specific-vs-generic-erp");
+  const data = await getPageData("Blog Post", "erpnext/insights/industry-specific-vs-generic-erp");
 
   return (
     <>

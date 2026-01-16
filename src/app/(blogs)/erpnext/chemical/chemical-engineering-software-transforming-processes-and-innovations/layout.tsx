@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","chemical-engineering-software-transforming-processes-and-innovations");
+const faqsGroup = await getFaqs("Blog Post", "erpnext/chemical/chemical-engineering-software-transforming-processes-and-innovations");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","chemical-engineering-software-transforming-processes-and-innovations");
+  const data = await getPageData("Blog Post", "erpnext/chemical/chemical-engineering-software-transforming-processes-and-innovations");
 
   return (
     <>

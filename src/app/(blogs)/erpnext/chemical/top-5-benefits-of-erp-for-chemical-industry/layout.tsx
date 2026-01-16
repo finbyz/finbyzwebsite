@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","top-5-benefits-of-erp-for-chemical-industry");
+const faqsGroup = await getFaqs("Blog Post", "erpnext/chemical/top-5-benefits-of-erp-for-chemical-industry");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","top-5-benefits-of-erp-for-chemical-industry");
+  const data = await getPageData("Blog Post", "erpnext/chemical/top-5-benefits-of-erp-for-chemical-industry");
 
   return (
     <>

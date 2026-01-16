@@ -103,8 +103,8 @@ export default async function Layout({
     ],
   };
 
-  const data = await getPageData("Web Page", "custom-erp-development");
-  const faqsGroup = await getFaqs("Web Page", "custom-erp-development");
+  const data = await getPageData("Web Page", "erpnext/services/develop-custom-erp-software");
+  const faqsGroup = await getFaqs("Web Page", "erpnext/services/develop-custom-erp-software");
 
   return (
     <>

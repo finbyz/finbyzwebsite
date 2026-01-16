@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","how-website-benefits-a-business");
+const faqsGroup = await getFaqs("Blog Post", "erpnext/insights/how-website-benefits-a-business");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","how-website-benefits-a-business");
+  const data = await getPageData("Blog Post", "erpnext/insights/how-website-benefits-a-business");
 
   return (
     <>

@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","what-is-a-master-production-schedule");
+const faqsGroup = await getFaqs("Blog Post", "erp/insights/what-is-a-master-production-schedule");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","what-is-a-master-production-schedule");
+  const data = await getPageData("Blog Post", "erp/insights/what-is-a-master-production-schedule");
 
   return (
     <>

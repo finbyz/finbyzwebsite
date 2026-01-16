@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","defining-the-best-hr-software-options-for-indian-companies");
+const faqsGroup = await getFaqs("Blog Post", "erp/insights/defining-the-best-hr-software-options-for-indian-companies");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","defining-the-best-hr-software-options-for-indian-companies");
+  const data = await getPageData("Blog Post", "erp/insights/defining-the-best-hr-software-options-for-indian-companies");
 
   return (
     <>

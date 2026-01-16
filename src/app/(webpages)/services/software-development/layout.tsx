@@ -56,8 +56,8 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Web Page", "software-development");
-  const faqsGroup = await getFaqs("Web Page", "software-development");
+  const data = await getPageData("Web Page", "services/software-development");
+  const faqsGroup = await getFaqs("Web Page", "services/software-development");
 
   return (
     <>

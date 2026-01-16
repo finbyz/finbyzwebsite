@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","certificate-of-analysis-in-2024-definition-key-requirements");
+const faqsGroup = await getFaqs("Blog Post", "erpnext/chemical/certificate-of-analysis-coa-pharma-chemicals");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","certificate-of-analysis-in-2024-definition-key-requirements");
+  const data = await getPageData("Blog Post", "erpnext/chemical/certificate-of-analysis-coa-pharma-chemicals");
 
   return (
     <>

@@ -60,8 +60,8 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Web Page", "ai-automation/services/n8n-ai-agent-orchestration");
-  const faqsGroup = await getFaqs("Web Page", "ai-automation/services/n8n-ai-agent-orchestration");
+  const data = await getPageData("Web Page", "n8n/insights/n8n-ai-agent-orchestration");
+  const faqsGroup = await getFaqs("Web Page", "n8n/insights/n8n-ai-agent-orchestration");
 
   // Structured Data for AI Agent Orchestration Service
   const structuredData = {

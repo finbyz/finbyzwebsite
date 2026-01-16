@@ -51,10 +51,10 @@ return {
   }
 }
 }
-const faqsGroup = await getFaqs("Blog Post","blog/Business/ultimate-erp-go-live-plan");
+const faqsGroup = await getFaqs("Blog Post", "erpnext/insights/ultimate-erp-go-live-plan");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post","blog/Business/ultimate-erp-go-live-plan");
+  const data = await getPageData("Blog Post", "erpnext/insights/ultimate-erp-go-live-plan");
 
   return (
     <>
