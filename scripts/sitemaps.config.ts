@@ -37,7 +37,7 @@ export type SitemapConfig =
   | {
     name: string
     type: 'frappe'
-    doctype: 'Job Opening' | 'Gallery'
+    doctype: 'Job Opening' | 'Gallery' | 'Code Snippet'
     routeField: 'route'
     routePrefix?: string
     filters: any[][]
@@ -115,12 +115,16 @@ const config: SitemapConfig[] = [
   },
   {
     name: 'dev-insights',
-    type: 'filesystem',
-    groupDir: '(dev-insights)',
-    changefreq: 'weekly',
+    type: 'frappe',
+    doctype: 'Code Snippet',
+    routeField: 'route',
+    routePrefix: '/',
+    filters: [['published', '=', 1]],
+    fields: ['route'],
+    changefreq: 'daily',
     priority: 0.7,
     exclude: [],
-  },
+  }
 ]
 
 export default config
