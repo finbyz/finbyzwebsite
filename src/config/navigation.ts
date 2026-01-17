@@ -62,7 +62,7 @@ async function getWikiPages(): Promise<NavNode[]> {
         return items.map((item: any) => ({
             name: item.title,
             icon: BookOpen,
-            href: `/erpnext/wiki/${item.route}`,
+            href: `/${item.route}`,
             description: item.description
         }));
     } catch (e) {

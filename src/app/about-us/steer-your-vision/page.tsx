@@ -3,40 +3,40 @@ import HeroSection from '@/components/sections/dynamic-hero';
 
 export default function Page() {
   const heroProps = {
-    headline: 'Steer Your Vision',
-    highlightWords: ['Steer','Your'],
+    headline: "Steer Your Vision",
+    highlightWords: ['Steer', 'Your'],
     description:
-      '“Steer Your Vision” is our signature approach to your digital transformation.',
+      "“Steer Your Vision” is our signature approach to your digital transformation.",
     heroImage: {
-      alt: 'Software Development',
-      src: 'images/Steer_Your_Vision_Mobile.svg',
+      alt: "Software Development",
+      src: "/images/Steer_Your_Vision_Mobile.svg",
     },
   };
 
   const ctaData = {
     subheading: {
-      text: 'Ready to Transform Your Business?',
-      icon: 'Rocket',
+      text: "Ready to Transform Your Business?",
+      icon: "Rocket",
     },
-    title: 'Let’s Get It Started',
+    title: "Let's Get It Started",
     description:
-      'Partner with a leading software development company with years of experience in delivering world-class custom software development. Let’s explore how our solutions can be crafted to meet your specific needs and unlock new opportunities for your business.',
+      "Partner with a leading software development company with years of experience in delivering world-class custom software development. Let's explore how our solutions can be crafted to meet your specific needs and unlock new opportunities for your business.",
     primaryButton: {
-      text: 'Request a Consultation',
+      text: "Request a Consultation",
       icon: 'ArrowRight',
       action: () => {
         window.location.href = '/contact';
       },
     },
     secondaryButton: {
-      text: 'See Our Work',
+      text: "See Our Work",
       icon: 'Eye',
       action: () => {
         window.location.href = '/erpnext/case-studies';
       },
     },
     trustIndicator: {
-      text: 'Trusted by 100+ Businesses',
+      text: "Trusted by 100+ Businesses",
       icon: 'CheckCircle',
     },
   };
