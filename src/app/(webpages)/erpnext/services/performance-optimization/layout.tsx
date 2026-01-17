@@ -10,12 +10,12 @@ export const metadata: Metadata = {
     creator: "FinByz Tech",
     publisher: "FinByz Tech",
     alternates: {
-        canonical: "https://erp.finbyz.tech/erpnext-performance-optimization",
+        canonical: "https://finbyz.tech/erpnext-performance-optimization",
     },
     openGraph: {
         title: "ERPNext Performance Optimization for Speed & Efficiency",
         description: "Enhance your ERPNext system\'s speed, efficiency, and reliability with expert performance optimization. Finbyz Tec ensures scalable, high-performing ERP solutions for your business success.",
-        url: "https://erp.finbyz.tech/erpnext-performance-optimization",
+        url: "https://finbyz.tech/erpnext-performance-optimization",
         siteName: "FinByz Tech",
         type: "website",
         locale: "en_US",
@@ -48,7 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         "@type": "WebPage",
         "name": "ERPNext Performance Optimization for Speed & Efficiency",
         "description": "Enhance your ERPNext system\'s speed, efficiency, and reliability with expert performance optimization. Finbyz Tec ensures scalable, high-performing ERP solutions for your business success.",
-        "url": "https://erp.finbyz.tech/erpnext-performance-optimization",
+        "url": "https://finbyz.tech/erpnext-performance-optimization",
 
         "keywords": "ERPNext performance optimization, optimize ERPNext speed, ERPNext efficiency, ERPNext scalability, ERPNext reliability, ERPNext system tuning, ERPNext performance issues, slow ERPNext solution, ERPNext database optimization, ERPNext server optimization, ERPNext consulting, Finbyz Tec ERPNext, ERP system performance, Frappe performance, ERPNext expert",
         "inLanguage": "en-US",

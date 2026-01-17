@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://erp.finbyz.tech/erpnext-resource-augmentation",
+    canonical: "https://finbyz.tech/erpnext-resource-augmentation",
   },
   openGraph: {
     title: "ERPNext Resource Augmentation Hire Expert Developers",
     description: "Bridge skill gaps and accelerate projects with expert ERPNext resource augmentation. Access certified consultants, developers, and functional experts for flexible, scalable team expansion.",
-    url: "https://erp.finbyz.tech/erpnext-resource-augmentation",
+    url: "https://finbyz.tech/erpnext-resource-augmentation",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -48,7 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "ERPNext Resource Augmentation Hire Expert Developers",
     "description": "Bridge skill gaps and accelerate projects with expert ERPNext resource augmentation. Access certified consultants, developers, and functional experts for flexible, scalable team expansion.",
-    "url": "https://erp.finbyz.tech/erpnext-resource-augmentation",
+    "url": "https://finbyz.tech/erpnext-resource-augmentation",
     
     "keywords": "ERPNext resource augmentation, hire ERPNext developers, ERPNext consultants for hire, outsource ERPNext development, ERPNext functional experts, scalable IT resources, remote ERPNext team, ERPNext project acceleration, IT staff augmentation India, ERPNext talent pool, flexible IT staffing, ERPNext implementation support, digital transformation resources, business process automation experts",
     "inLanguage": "en-US",

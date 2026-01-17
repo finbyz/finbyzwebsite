@@ -4,9 +4,7 @@ import FAQ from "@/components/ai_components/FAQ";
 import { getFaqs, getPageData } from "@/lib/getPageData";
 import { fetchFrappeSchemaData } from "@/lib/fetchFrappeSeoData";
 import StructureData from "@/components/seo/StructureData";
-
 import { Metadata } from "next";
-import Script from "next/script";
 
 
 export async function generateMetadata(): Promise<Metadata> {

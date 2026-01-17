@@ -46,7 +46,7 @@ const FinbyzGallery = ({ galleryItems = [], relatedReads = [] }: FinbyzGalleryPr
                 >
                   <div className="h-40 bg-gray-100 flex items-center justify-center relative overflow-hidden">
                     <img
-                      src={`/web-api/fb/n/${read.image}`}
+                      src={`/web-api/fb/n${read.image}`}
                       alt={read.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />

@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://erp.finbyz.tech/start-your-erp-journey",
+    canonical: "https://finbyz.tech/start-your-erp-journey",
   },
   openGraph: {
     title: "Begin Your Digital Transformation Journey with ERPNext Adoption",
     description: "Unlock business growth with expert ERPNext adoption and digital transformation services. Guided implementation for every stage of your business journey.",
-    url: "https://erp.finbyz.tech/start-your-erp-journey",
+    url: "https://finbyz.tech/start-your-erp-journey",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -48,7 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "Begin Your Digital Transformation Journey with ERPNext Adoption",
     "description": "Unlock business growth with expert ERPNext adoption and digital transformation services. Guided implementation for every stage of your business journey.",
-    "url": "https://erp.finbyz.tech/start-your-erp-journey",
+    "url": "https://finbyz.tech/start-your-erp-journey",
     
     "keywords": "ERPNext adoption, digital transformation, ERP implementation, business growth solutions, customized ERP, ERP consulting, software development services, business process automation, ERP integration, cloud ERP solutions, industry-specific ERP, AI automation, Finbyz Tech ERP, enterprise resource planning",
     "inLanguage": "en-US",

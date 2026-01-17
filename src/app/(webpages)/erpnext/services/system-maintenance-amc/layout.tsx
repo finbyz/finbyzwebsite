@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://erp.finbyz.tech/erpnext-system-maintenance",
+    canonical: "https://finbyz.tech/erpnext-system-maintenance",
   },
   openGraph: {
     title: "ERPNext System Maintenance Updates Performance Optimization",
     description: "Ensure your ERPNext system runs flawlessly with Finbyz Tech\'s comprehensive maintenance services. Get updates, performance optimization, and proactive support for peak business efficiency and security.",
-    url: "https://erp.finbyz.tech/erpnext-system-maintenance",
+    url: "https://finbyz.tech/erpnext-system-maintenance",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -48,7 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "ERPNext System Maintenance Updates Performance Optimization",
     "description": "Ensure your ERPNext system runs flawlessly with Finbyz Tech\'s comprehensive maintenance services. Get updates, performance optimization, and proactive support for peak business efficiency and security.",
-    "url": "https://erp.finbyz.tech/erpnext-system-maintenance",
+    "url": "https://finbyz.tech/erpnext-system-maintenance",
     
     "keywords": "ERPNext maintenance, ERP system updates, performance optimization, ERP support services, software security management, data backup and recovery, proactive ERP monitoring, ERPNext upgrades, IT consulting for ERP, business continuity ERP, Finbyz Tech services, ERP solutions reliability, system health checks",
     "inLanguage": "en-US",

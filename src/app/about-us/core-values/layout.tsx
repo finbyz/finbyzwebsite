@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://erp.finbyz.tech/core-values",
+    canonical: "https://finbyz.tech/core-values",
   },
   openGraph: {
     title: "Our Core Values Driving Innovation for Business Success",
     description: "Discover the foundational values that define our approach to IT consulting, ERPNext implementation, and AI automation. Experience innovation, integrity, and client success.",
-    url: "https://erp.finbyz.tech/core-values",
+    url: "https://finbyz.tech/core-values",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -48,7 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "Our Core Values Driving Innovation for Business Success",
     "description": "Discover the foundational values that define our approach to IT consulting, ERPNext implementation, and AI automation. Experience innovation, integrity, and client success.",
-    "url": "https://erp.finbyz.tech/core-values",
+    "url": "https://finbyz.tech/core-values",
     
     "keywords": "company core values, business principles, innovation, integrity, collaboration, domain expertise, agile digital transformation, client success, ethical IT services, ERPNext partner values, Finbyz Tech culture, IT consulting values, software development ethics, sustainable growth principles",
     "inLanguage": "en-US",

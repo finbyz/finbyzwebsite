@@ -6,7 +6,8 @@ import {
     Cog, Hammer, GraduationCap, Zap, Heart, Truck, ShoppingCart, Lightbulb,
     Globe, BookOpen, Globe2, Code2, Bot, MailPlus, Sparkles, PhoneCall, Scale,
     Puzzle, Box, HeartHandshake, ClipboardList, Send, Compass, MessageSquareQuote,
-    Handshake, Briefcase, LucideIcon, Search, Pill, Mail, Atom, Image, Tablet, Headphones, ShieldCheck
+    Handshake, Briefcase, LucideIcon, Search, Pill, Mail, Atom, Image, Tablet, Headphones, ShieldCheck,
+    PenTool, Radio, TreeDeciduous, MessageCircle, UserCheck
 } from "lucide-react";
 
 export type NavNode = {
@@ -95,7 +96,6 @@ const navigationItems: NavNode[] = [
                 icon: Wrench,
                 href: "/erpnext/services",
                 children: [
-                    { name: "Hire ERPNext Accountant", icon: DollarSign, href: "/erpnext/services/hire-erpnext-accountant", description: "Hire dedicated ERPNext accountants" },
                     { name: "Opening Balance Reconciliation", icon: Scale, href: "/erpnext/services/opening-balance-reconciliation", description: "Opening balance reconciliation services" },
                     { name: "Accounting Transaction Audit", icon: ClipboardCheck, href: "/erpnext/services/erpnext-accounting-transaction-audit", description: "ERPNext transaction audit services" },
                     { name: "API Development Services", icon: CodeSquare, href: "/erpnext/services/api-development-services", description: "ERPNext API development" },
@@ -106,7 +106,6 @@ const navigationItems: NavNode[] = [
                     { name: "ERPNext Implementation in UAE", icon: Building2, href: "/erpnext/services/ERPNext-impelementation-in-uae", description: "Implementation services in UAE" },
                     { name: "ERPNext SEO Optimization", icon: Search, href: "/erpnext/services/erpnext-seo-optimization", description: "SEO optimization" },
                     { name: "ERPNext Service Provider", icon: Briefcase, href: "/erpnext/services/erpnext-service-provider", description: "Full-service ERPNext provider" },
-                    { name: "Hire ERPNext Implementer", icon: UserPlus, href: "/erpnext/services/hire-erpnext-implementer", description: "Hire dedicated implementers" },
                     { name: "Implementation Partner in Canada", icon: Globe, href: "/erpnext/services/implementation-partner-in-canada", description: "Partner services in Canada" },
                     { name: "IT Consulting", icon: Lightbulb, href: "/erpnext/services/it-consulting", description: "Strategic IT consulting" },
                     { name: "Mobile App Development", icon: Tablet, href: "/erpnext/services/mobile-app-development", description: "Mobile apps for ERPNext" },
@@ -117,6 +116,7 @@ const navigationItems: NavNode[] = [
                     { name: "Support", icon: Headphones, href: "/erpnext/services/support", description: "ERPNext support services" },
                     { name: "Support AMC", icon: ShieldCheck, href: "/erpnext/services/support-amc", description: "Annual maintenance contracts" },
                     { name: "System Maintenance AMC", icon: Wrench, href: "/erpnext/services/system-maintenance-amc", description: "System maintenance services" },
+                    { name: "ERPNext v16 Migration", icon: TrendingUp, href: "/erpnext/services/erpnext-v16-migration", description: "Upgrade from ERPNext v15 to v16 safely" },
                     { name: "Website Development", icon: Globe, href: "/erpnext/services/website-development-on-erpnext", description: "ERPNext website development" }
                 ]
             },
@@ -188,12 +188,15 @@ const navigationItems: NavNode[] = [
                 name: "Insights",
                 icon: Lightbulb,
                 children: [
+                    { name: "What's New in ERPNext v16", icon: Sparkles, href: "/erpnext/insights/whats-new-erpnext-version-16", description: "Features, improvements & updates in ERPNext Version 16" },
+                    { name: "ERPNext v16 Performance Guide", icon: Zap, href: "/erpnext/insights/erpnext-v16-frappe-caffeine-performance-guide", description: "Frappe Caffeine performance improvements explained" },
                     { name: "How to Choose ERP Software", icon: FileText, href: "/erpnext/insights/how-to-choose-the-right-erp-software-for-your-company" },
                     { name: "How Website Benefits Business", icon: Globe, href: "/erpnext/insights/how-website-benefits-a-business" },
                     { name: "Industry-specific vs Generic ERP", icon: BarChart3, href: "/erpnext/insights/industry-specific-vs-generic-erp" },
                     { name: "Manufacturing Software Selection", icon: Factory, href: "/erpnext/insights/tips-for-selecting-the-right-manufacturing-software" },
                     { name: "ERP Go-Live Plan", icon: Rocket, href: "/erpnext/insights/ultimate-erp-go-live-plan" },
                     { name: "Upgrade Old ERP to Cloud", icon: TrendingUp, href: "/erpnext/insights/upgrade-olderp-with-clouderp" },
+                    { name: "Create BOM Without Operations", icon: ListChecks, href: "/how-to-create-bill-of-materials-without-operations-in-erpnext", description: "Step-by-step guide to create BOM without operations" },
                 ]
             },
 
@@ -301,6 +304,15 @@ const navigationItems: NavNode[] = [
                 children: [
                     { name: "Privacy Policy", icon: BookOpen, href: "/solutions/productify/privacy-policy", description: "Privacy policy for Productify" }
                 ]
+            },
+            {
+                name: "EMS Software",
+                icon: Radio,
+                description: "Emergency Management System solutions",
+                children: [
+                    { name: "Two-Way Communication", icon: MessageCircle, href: "/two-way-communication-in-ems", description: "EMS software with two-way communication features" },
+                    { name: "Volunteer Tree Structure", icon: TreeDeciduous, href: "/volunteer-tree-structure-in-ems", description: "Manage EMS volunteers with tree-based hierarchy" }
+                ]
             }
         ]
     },
@@ -317,18 +329,21 @@ const navigationItems: NavNode[] = [
             { name: "Life at Finbyz", icon: Users, href: "/about-us/life-at-finbyz", description: "Work culture and life at Finbyz" },
             { name: "Clients", icon: Building2, href: "/about-us/clients", description: "Our clients and success stories" },
             { name: "Testimonials", icon: MessageSquareQuote, href: "/about-us/testimonials", description: "What our clients say about us" },
-            { name: "Partnership Programs", icon: Handshake, href: "/about-us/partnership-programs", description: "Partner with Finbyz for mutual growth" }
+            { name: "Partnership Programs", icon: Handshake, href: "/about-us/partnership-programs", description: "Partner with Finbyz for mutual growth" },
+            { name: "WhatsApp Privacy Policy", icon: ShieldCheck, href: "/whatsapp-privacy-policy", description: "WhatsApp data usage and privacy policy" }
         ]
     },
 
 
 
     {
-        name: "Careers",
+        name: "Company",
         icon: Briefcase,
         href: "/careers",
         children: [
 
+
+            { name: "Blogs", icon: PenTool, href: "/blogs", description: "ERPNext, AI, software & technology blogs" },
             { name: "Why Join Finbyz", icon: HeartHandshake, href: "/careers/why-join-finbyz", description: "Why Finbyz is a great place to grow your career" },
             { name: "Hiring Process", icon: Workflow, href: "/careers/hiring-process", description: "Step-by-step hiring process at Finbyz" },
 
@@ -357,11 +372,41 @@ const navigationItems: NavNode[] = [
                 href: "/careers/job-application",
                 description: "Submit your job application",
                 children: [
-                    { name: "Apply Now", icon: Send, href: "/careers/job-openings/apply", description: "Apply for open positions" }
+                    { name: "Apply Now", icon: Send, href: "/careers/apply", description: "Apply for open positions" }
                 ]
-            }
+            },
+
+            {
+                name: "Login",
+                icon: Lock,
+                href: "/login",
+                description: "Login to your account"
+            },
         ]
     },
+
+    // ================= HIRE TEAM =================
+    {
+        name: "Hire Team",
+        icon: UserCheck,
+        href: "/staff-augmentation/experts",
+        children: [
+            { name: "Hire Expert Developers", icon: Users, href: "/staff-augmentation/experts", description: "Hire skilled developers for ERP, AI, web, and software projects" },
+            { name: "Hire ERPNext Accountant", icon: UserPlus, href: "/erpnext/services/hire-erpnext-accountant", description: "Hire dedicated ERPNext accountants" },
+            { name: "Hire ERPNext Implementer", icon: UserPlus, href: "/erpnext/services/hire-erpnext-implementer", description: "Hire dedicated implementers" },
+            { name: "Hire JavaScript Developer", icon: UserPlus, href: "/staff-augmentation/hire-javascript-developers", description: "Hire dedicated javascript developers" },
+            { name: "Hire ERPNext Implementer", icon: UserPlus, href: "/erpnext/services/hire-erpnext-implementer", description: "Hire dedicated implementers" },
+            { name: "Hire Web Application Developers", icon: UserPlus, href: "/staff-augmentation/web-application-developers", description: "Hire dedicated web app developers" },
+        ]
+    },
+
+    // ================= BLOGS =================
+    // {
+    //     name: "Blogs",
+    //     icon: PenTool,
+    //     href: "/blogs",
+    //     description: "ERPNext, AI, software & technology blogs"
+    // },
 ];
 
 export function getNavigationItems(): NavNode[] {
