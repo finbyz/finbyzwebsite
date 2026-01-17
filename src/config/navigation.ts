@@ -9,6 +9,7 @@ import {
     Handshake, Briefcase, LucideIcon, Search, Pill, Mail, Atom, Image, Tablet, Headphones, ShieldCheck,
     PenTool, Radio, TreeDeciduous, MessageCircle, UserCheck
 } from "lucide-react";
+import { FaPhotoFilm } from "react-icons/fa6";
 
 export type NavNode = {
     name: string;
@@ -42,11 +43,11 @@ async function getGalleryItems(): Promise<NavNode[]> {
     try {
         const res = await fetch(`/web-api/gallery`);
         const data = await res.json();
-        const items = data.message || []; // Assuming data.message contains the array of gallery items
+        const items = data.data || [];
         return items.map((item: any) => ({
             name: item.title,
-            icon: Image, // Using Image icon for gallery items
-            href: `/gallery/${item.route}`, // Adjust route as per actual gallery item URL structure
+            icon: Image,
+            href: `/${item.route}`,
             description: item.description
         }));
     } catch (e) {
@@ -68,6 +69,24 @@ async function getWikiPages(): Promise<NavNode[]> {
         }));
     } catch (e) {
         console.error("Failed to fetch wiki pages", e);
+        return [];
+    }
+}
+
+async function getBlogPosts(): Promise<NavNode[]> {
+    try {
+        const res = await fetch(`/web-api/blog-posts`);
+        const data = await res.json();
+        const items = data.data || [];
+        console.log(items);
+        return items.map((item: any) => ({
+            name: item.title,
+            icon: BookOpen,
+            href: `/${item.route}`,
+            description: item.description
+        }));
+    } catch (e) {
+        console.error("Failed to fetch blogs", e);
         return [];
     }
 }
@@ -343,7 +362,22 @@ const navigationItems: NavNode[] = [
         children: [
 
 
-            { name: "Blogs", icon: PenTool, href: "/blogs", description: "ERPNext, AI, software & technology blogs" },
+            {
+                name: "Blogs",
+                icon: PenTool, href: "/blogs",
+                description: "ERPNext, AI, software & technology blogs",
+                childGenerator: getBlogPosts
+            },
+
+            {
+                name: "Gallery",
+                icon: Image,
+                href: "/gallery",
+                description: "",
+                childGenerator: getGalleryItems
+
+            },
+
             { name: "Why Join Finbyz", icon: HeartHandshake, href: "/careers/why-join-finbyz", description: "Why Finbyz is a great place to grow your career" },
             { name: "Hiring Process", icon: Workflow, href: "/careers/hiring-process", description: "Step-by-step hiring process at Finbyz" },
 
@@ -395,7 +429,7 @@ const navigationItems: NavNode[] = [
             { name: "Hire ERPNext Accountant", icon: UserPlus, href: "/erpnext/services/hire-erpnext-accountant", description: "Hire dedicated ERPNext accountants" },
             { name: "Hire ERPNext Implementer", icon: UserPlus, href: "/erpnext/services/hire-erpnext-implementer", description: "Hire dedicated implementers" },
             { name: "Hire JavaScript Developer", icon: UserPlus, href: "/staff-augmentation/hire-javascript-developers", description: "Hire dedicated javascript developers" },
-            { name: "Hire ERPNext Implementer", icon: UserPlus, href: "/erpnext/services/hire-erpnext-implementer", description: "Hire dedicated implementers" },
+            { name: "Hire Python Developer", icon: UserPlus, href: "/staff-augmentation/hire-python-developers", description: "Hire dedicated python developers" },
             { name: "Hire Web Application Developers", icon: UserPlus, href: "/staff-augmentation/web-application-developers", description: "Hire dedicated web app developers" },
         ]
     },

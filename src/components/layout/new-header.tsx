@@ -427,13 +427,7 @@ export default function Header() {
 
                 <Button onClick={GotoInquiryForm} className="ml-4 bg-gradient-to-r from-orange-400 to-orange-500 text-white rounded-full px-6">
                   Book Consultation
-                </Button>
-
-                <Link href="/login">
-                  <Button variant="ghost" className="ml-2 text-gray-300 hover:text-orange-400">
-                    <LogIn className="w-4 h-4 mr-2" /> Login
-                  </Button>
-                </Link>
+                </Button>               
               </div>
 
               {/* ================= MOBILE HAMBURGER (RIGHT) ================= */}
