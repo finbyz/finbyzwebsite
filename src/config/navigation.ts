@@ -121,7 +121,7 @@ const navigationItems: NavNode[] = [
                     { name: "Data Analytics", icon: BarChart3, href: "/erpnext/services/data-analytics", description: "Data analytics services" },
                     { name: "Custom CMS Development", icon: Code, href: "/erpnext/services/develop-custom-erp-software", description: "Develop custom ERP software" },
                     { name: "ERP Migration", icon: Database, href: "/erpnext/services/erp-migration", description: "ERPNext data migration" },
-                    { name: "ERP Software Developers", icon: Code2, href: "/erpnext/services/erp-software-development", description: "Hire expert ERP developers" },
+                    { name: "ERP Software Developers", icon: Code2, href: "/erp/services/erp-software-development", description: "Hire expert ERP developers" },
                     { name: "ERPNext Implementation in UAE", icon: Building2, href: "/erpnext/services/ERPNext-impelementation-in-uae", description: "Implementation services in UAE" },
                     { name: "ERPNext SEO Optimization", icon: Search, href: "/erpnext/services/erpnext-seo-optimization", description: "SEO optimization" },
                     { name: "ERPNext Service Provider", icon: Briefcase, href: "/erpnext/services/erpnext-service-provider", description: "Full-service ERPNext provider" },
@@ -335,24 +335,20 @@ const navigationItems: NavNode[] = [
             }
         ]
     },
-
-
+    // ================= HIRE TEAM =================
     {
-        name: "About Us",
-        icon: Info,
-        href: "/about-us",
+        name: "Hire Team",
+        icon: UserCheck,
+        href: "/staff-augmentation/experts",
         children: [
-            { name: "Our Story", icon: BookOpen, href: "/about-us/our-story", description: "The journey, vision, and evolution of Finbyz" },
-            { name: "Steer Your Vision", icon: Compass, href: "/about-us/steer-your-vision", description: "Helping businesses steer their long-term vision" },
-            { name: "Core Values", icon: Heart, href: "/about-us/core-values", description: "Our core values and culture" },
-            { name: "Life at Finbyz", icon: Users, href: "/about-us/life-at-finbyz", description: "Work culture and life at Finbyz" },
-            { name: "Clients", icon: Building2, href: "/about-us/clients", description: "Our clients and success stories" },
-            { name: "Testimonials", icon: MessageSquareQuote, href: "/about-us/testimonials", description: "What our clients say about us" },
-            { name: "Partnership Programs", icon: Handshake, href: "/about-us/partnership-programs", description: "Partner with Finbyz for mutual growth" },
-            { name: "WhatsApp Privacy Policy", icon: ShieldCheck, href: "/whatsapp-privacy-policy", description: "WhatsApp data usage and privacy policy" }
+            { name: "Hire Expert Developers", icon: Users, href: "/staff-augmentation/experts", description: "Hire skilled developers for ERP, AI, web, and software projects" },
+            { name: "Hire ERPNext Accountant", icon: UserPlus, href: "/erpnext/services/hire-erpnext-accountant", description: "Hire dedicated ERPNext accountants" },
+            { name: "Hire ERPNext Implementer", icon: UserPlus, href: "/erpnext/services/hire-erpnext-implementer", description: "Hire dedicated implementers" },
+            { name: "Hire JavaScript Developer", icon: UserPlus, href: "/staff-augmentation/hire-javascript-developers", description: "Hire dedicated javascript developers" },
+            { name: "Hire Python Developer", icon: UserPlus, href: "/staff-augmentation/hire-python-developers", description: "Hire dedicated python developers" },
+            { name: "Hire Web Application Developers", icon: UserPlus, href: "/staff-augmentation/web-application-developers", description: "Hire dedicated web app developers" },
         ]
     },
-
 
 
     {
@@ -361,7 +357,21 @@ const navigationItems: NavNode[] = [
         href: "/careers",
         children: [
 
-
+            {
+                name: "About Us",
+                icon: Info,
+                href: "/about-us",
+                children: [
+                    { name: "Our Story", icon: BookOpen, href: "/about-us/our-story", description: "The journey, vision, and evolution of Finbyz" },
+                    { name: "Steer Your Vision", icon: Compass, href: "/about-us/steer-your-vision", description: "Helping businesses steer their long-term vision" },
+                    { name: "Core Values", icon: Heart, href: "/about-us/core-values", description: "Our core values and culture" },
+                    { name: "Life at Finbyz", icon: Users, href: "/about-us/life-at-finbyz", description: "Work culture and life at Finbyz" },
+                    { name: "Clients", icon: Building2, href: "/about-us/clients", description: "Our clients and success stories" },
+                    { name: "Testimonials", icon: MessageSquareQuote, href: "/about-us/testimonials", description: "What our clients say about us" },
+                    { name: "Partnership Programs", icon: Handshake, href: "/about-us/partnership-programs", description: "Partner with Finbyz for mutual growth" },
+                    { name: "WhatsApp Privacy Policy", icon: ShieldCheck, href: "/whatsapp-privacy-policy", description: "WhatsApp data usage and privacy policy" }
+                ]
+            },
             {
                 name: "Blogs",
                 icon: PenTool, href: "/blogs",
@@ -378,35 +388,30 @@ const navigationItems: NavNode[] = [
 
             },
 
-            { name: "Why Join Finbyz", icon: HeartHandshake, href: "/careers/why-join-finbyz", description: "Why Finbyz is a great place to grow your career" },
-            { name: "Hiring Process", icon: Workflow, href: "/careers/hiring-process", description: "Step-by-step hiring process at Finbyz" },
-
-            // Career Insights
+            // ================= CAREER =================
             {
-                name: "Career Insights",
-                icon: Lightbulb,
+                name: "Career",
+                icon: Briefcase,
+                href: "/careers",
+                description: "Join the Finbyz team",
                 children: [
-                    { name: "How to Become a Software Engineer", icon: Code2, href: "/careers/insights/how-to-become-a-software-engineer-the-path-to-success", description: "Career roadmap to become a successful software engineer" }
-                ]
-            },
-
-            // Job Openings (Listing only)
-            {
-                name: "Job Openings",
-                icon: ClipboardList,
-                href: "/careers/job-openings",
-                description: "Explore current job openings at Finbyz",
-                childGenerator: getOpenPositions
-            },
-
-            // Job Application (Apply flow)
-            {
-                name: "Job Application",
-                icon: FileText,
-                href: "/careers/job-application",
-                description: "Submit your job application",
-                children: [
-                    { name: "Apply Now", icon: Send, href: "/careers/apply", description: "Apply for open positions" }
+                    {
+                        name: "Job Openings",
+                        icon: ClipboardList,
+                        href: "/careers/job-openings",
+                        description: "Explore current job openings at Finbyz",
+                        childGenerator: getOpenPositions
+                    },
+                    { name: "Apply Now", icon: Send, href: "/careers/apply", description: "Apply for open positions" },
+                    { name: "Why Join Finbyz", icon: HeartHandshake, href: "/careers/why-join-finbyz", description: "Why Finbyz is a great place to grow your career" },
+                    { name: "Hiring Process", icon: Workflow, href: "/careers/hiring-process", description: "Step-by-step hiring process at Finbyz" },
+                    {
+                        name: "Career Insights",
+                        icon: Lightbulb,
+                        children: [
+                            { name: "How to Become a Software Engineer", icon: Code2, href: "/careers/insights/how-to-become-a-software-engineer-the-path-to-success", description: "Career roadmap to become a successful software engineer" }
+                        ]
+                    }
                 ]
             },
 
@@ -419,20 +424,6 @@ const navigationItems: NavNode[] = [
         ]
     },
 
-    // ================= HIRE TEAM =================
-    {
-        name: "Hire Team",
-        icon: UserCheck,
-        href: "/staff-augmentation/experts",
-        children: [
-            { name: "Hire Expert Developers", icon: Users, href: "/staff-augmentation/experts", description: "Hire skilled developers for ERP, AI, web, and software projects" },
-            { name: "Hire ERPNext Accountant", icon: UserPlus, href: "/erpnext/services/hire-erpnext-accountant", description: "Hire dedicated ERPNext accountants" },
-            { name: "Hire ERPNext Implementer", icon: UserPlus, href: "/erpnext/services/hire-erpnext-implementer", description: "Hire dedicated implementers" },
-            { name: "Hire JavaScript Developer", icon: UserPlus, href: "/staff-augmentation/hire-javascript-developers", description: "Hire dedicated javascript developers" },
-            { name: "Hire Python Developer", icon: UserPlus, href: "/staff-augmentation/hire-python-developers", description: "Hire dedicated python developers" },
-            { name: "Hire Web Application Developers", icon: UserPlus, href: "/staff-augmentation/web-application-developers", description: "Hire dedicated web app developers" },
-        ]
-    },
 
     // ================= BLOGS =================
     // {

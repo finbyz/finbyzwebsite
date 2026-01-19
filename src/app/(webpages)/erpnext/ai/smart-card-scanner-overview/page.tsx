@@ -193,7 +193,7 @@ const ctaData = {
   title: 'Turn business cards into qualified CRM data in seconds',
   description: 'Adopt the Smart Card Scanner to streamline capture, enrich contacts, and keep ERPNext clean and current—without extra effort.',
   primaryButton: { text: 'Request a Demo', icon: 'Play', action: '/contact' },
-  secondaryButton: { text: 'Learn More', icon: 'BookOpen', action: '/resources' },
+  secondaryButton: { text: 'Learn More', icon: 'BookOpen', action: '/resources/brochure' },
   trustIndicator: {
     text: 'Secure by design • ERPNext-native • 24/7 intake',
     icon: 'Shield',

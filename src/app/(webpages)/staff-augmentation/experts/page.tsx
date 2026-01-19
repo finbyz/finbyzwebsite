@@ -53,7 +53,7 @@ export default function Page() {
       skills: ["React.js", "Node.js", "Vue.js", "Express", "Next.js", "JavaScript ES6+"],
       experience: "4+ years average experience",
       availability: "Full-time, Part-time, Contract",
-      link: "https://finbyz.tech/staff-augmentation/hire-javascript-developer"
+      link: "https://finbyz.tech/staff-augmentation/hire-javascript-developers"
     },
     {
       icon: <Database className="w-12 h-12" />,
@@ -71,7 +71,7 @@ export default function Page() {
       skills: ["ERPNext", "Frappe Framework", "Custom Apps", "Integration", "Training",],
       experience: "6+ years average experience",
       availability: "Full-time, Part-time, Project-based",
-      link:"https://finbyz.tech/staff-augmentation/hire-erpnext-implementer"
+      link: "https://finbyz.tech/hire-erpnext-implementer"
     },
     {
       icon: <Database className="w-12 h-12" />,

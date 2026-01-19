@@ -61,7 +61,7 @@ const productsData = [
     name: 'Follow Up Buddy',
     description:
       'An AI-driven tool that streamlines sales by identifying stale opportunities, analyzing context, and crafting personalized follow-up emails to nurture every lead.',
-    slug: '/follow-up-buddy',
+    slug: '/erpnext/ai/ai-powered-follow-up-buddy-automate-your-sales-follow-up-process',
     icon: MessageCircle,
   },
   {
@@ -89,7 +89,7 @@ const productsData = [
     name: 'AI Sales Call Analysis',
     description:
       'An AI tool that transforms sales calls into coaching opportunities by providing transcripts, tone analysis, actionable feedback, and optimized scripts.',
-    slug: '/ai-sales-call-analysis-erpnext',
+    slug: '/ai-automation/apps/sales-call-recording-and-analysis-in-erpnext',
     icon: Mic,
   },
   {
