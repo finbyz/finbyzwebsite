@@ -79,23 +79,12 @@ const Breadcrumbs = () => {
   return (
     <div className="absolute top-20 left-0 right-0 z-40 container-custom pointer-events-none">
       <nav aria-label="Breadcrumb" className="w-full pointer-events-auto">
-        <ol
-          className="flex flex-wrap items-center text-xs md:text-sm text-gray-400 font-medium py-1"
-          itemScope
-          itemType="https://schema.org/BreadcrumbList"
-        >
+        <ol className="flex flex-wrap items-center text-xs md:text-sm text-gray-400 font-medium py-1">
           {/* Home Item */}
-          <li
-            className="flex items-center hover:text-red-500 transition-colors"
-            itemProp="itemListElement"
-            itemScope
-            itemType="https://schema.org/ListItem"
-          >
+          <li className="flex items-center hover:text-red-500 transition-colors">
             <Link href="/" className="flex items-center" title="Home">
-              <span itemProp="name">Home</span>
+              <span>Home</span>
             </Link>
-            <meta itemProp="position" content="1" />
-            <meta itemProp="item" content="/" />
           </li>
 
           {/* Separator & Items */}
@@ -103,29 +92,19 @@ const Breadcrumbs = () => {
             const isLast = index === breadcrumbs.length - 1;
 
             return (
-              <li
-                key={crumb.item}
-                className="flex items-center"
-                itemProp="itemListElement"
-                itemScope
-                itemType="https://schema.org/ListItem"
-              >
+              <li key={crumb.item} className="flex items-center">
                 <span className="mx-2 text-gray-500/50">/</span>
 
                 {isLast ? (
                   <span className="text-white font-semibold" aria-current="page">
-                    <span itemProp="name">{crumb.name}</span>
-                    <meta itemProp="position" content={String(crumb.position)} />
-                    <meta itemProp="item" content={crumb.item} />
+                    <span>{crumb.name}</span>
                   </span>
                 ) : (
                   <Link
                     href={crumb.item}
                     className="hover:text-red-500 transition-colors"
                   >
-                    <span itemProp="name">{crumb.name}</span>
-                    <meta itemProp="position" content={String(crumb.position)} />
-                    <meta itemProp="item" content={crumb.item} />
+                      <span>{crumb.name}</span>
                   </Link>
                 )}
               </li>
