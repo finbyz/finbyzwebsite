@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Script from 'next/script';
 import { Metadata } from 'next';
+import Breadcrumbs from '@/components/sections/BreadCrumbs';
 
 type PageProps = {
     params: Promise<{ slug: string }>;
@@ -424,8 +425,8 @@ export default async function JobOpeningPage({ params }: PageProps) {
                     strategy="afterInteractive"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jobPosting) }}
                 />
-
-                <div className="mb-6">
+                <Breadcrumbs />
+                <div className="mb-6 mt-2">
                     <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
                         {job.job_title || job.name}
                     </h1>

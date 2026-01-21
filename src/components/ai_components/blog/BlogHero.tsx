@@ -1,5 +1,6 @@
 import { Calendar, Clock, Tag } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import Breadcrumbs from "@/components/sections/BreadCrumbs";
 
 interface BlogHeroProps {
   title: string;
@@ -28,6 +29,12 @@ const BlogHero = ({
     <div className="container-custom mx-auto">
       <div className="py-12 md:py-16">
         <div className="space-y-6">
+          <Breadcrumbs
+            textColor="text-gray-600"
+            currentTextColor="text-gray-900"
+            hoverColor="hover:text-orange-600"
+            separatorColor="text-gray-400"
+          />
           <div className="flex flex-wrap gap-3">
             <Badge variant="default" className="rounded-full">
               <Tag className="mr-1 h-3 w-3" />

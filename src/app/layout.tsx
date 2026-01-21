@@ -8,7 +8,6 @@ import { MobileMenuProvider } from "@/contexts/MobileMenuContext";
 import BreadcrumbSchema from "@/components/seo/BreadCrumbSchema";
 import Header from "@/components/layout/new-header";
 import Footer from "@/components/layout/footer";
-import Breadcrumbs from "@/components/sections/BreadCrumbs";
 
 
 export const dynamic = "force-dynamic";
@@ -63,7 +62,6 @@ export default function RootLayout({
       >
         <MobileMenuProvider>
           <Header />
-          <Breadcrumbs />
           {children}
           <Footer />
         </MobileMenuProvider>

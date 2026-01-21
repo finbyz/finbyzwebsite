@@ -12,6 +12,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { MediaItem, MediaCategory } from '@/types/media';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/sections/BreadCrumbs';
 
 interface TutorialsProps {
   data: Galleries | null;
@@ -230,7 +231,12 @@ const Tutorials = ({ data }: TutorialsProps) => {
           __html: JSON.stringify(generateStructuredData())
         }}
       />
-
+      <Breadcrumbs
+        textColor="text-gray-600"
+        currentTextColor="text-gray-900"
+        hoverColor="hover:text-orange-600"
+        separatorColor="text-gray-400"
+      />
       {/* Header */}
       <motion.header
         className="border-b border-border top-12 z-40 bg-white"

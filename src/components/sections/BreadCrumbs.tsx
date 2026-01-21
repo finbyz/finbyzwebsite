@@ -11,7 +11,19 @@ interface BreadcrumbItem {
   item: string;
 }
 
-const Breadcrumbs = () => {
+interface BreadcrumbsProps {
+  textColor?: string;
+  currentTextColor?: string;
+  hoverColor?: string;
+  separatorColor?: string;
+}
+
+const Breadcrumbs = ({
+  textColor = "text-gray-400",
+  currentTextColor = "text-white",
+  hoverColor = "hover:text-orange-600",
+  separatorColor = "text-gray-500/50"
+}: BreadcrumbsProps = {}) => {
   const pathname = usePathname();
 
   // Create a lookup map for URL paths to Labels from the NAV config
@@ -77,11 +89,11 @@ const Breadcrumbs = () => {
   if (!breadcrumbs.length) return null;
 
   return (
-    <div className="absolute top-20 left-0 right-0 z-40 container-custom pointer-events-none">
+    <div className="hidden md:block z-40 pt-2 pointer-events-none">
       <nav aria-label="Breadcrumb" className="w-full pointer-events-auto">
-        <ol className="flex flex-wrap items-center text-xs md:text-sm text-gray-400 font-medium py-1">
+        <ol className={`flex flex-wrap items-center text-xs md:text-sm font-medium py-1 ${textColor}`}>
           {/* Home Item */}
-          <li className="flex items-center hover:text-red-500 transition-colors">
+          <li className={`flex items-center ${hoverColor} transition-colors`}>
             <Link href="/" className="flex items-center" title="Home">
               <span>Home</span>
             </Link>
@@ -93,16 +105,16 @@ const Breadcrumbs = () => {
 
             return (
               <li key={crumb.item} className="flex items-center">
-                <span className="mx-2 text-gray-500/50">/</span>
+                <span className={`mx-2 ${separatorColor}`}>/</span>
 
                 {isLast ? (
-                  <span className="text-white font-semibold" aria-current="page">
+                  <span className={`${currentTextColor} font-semibold`} aria-current="page">
                     <span>{crumb.name}</span>
                   </span>
                 ) : (
                   <Link
                     href={crumb.item}
-                    className="hover:text-red-500 transition-colors"
+                      className={`${hoverColor} transition-colors`}
                   >
                       <span>{crumb.name}</span>
                   </Link>

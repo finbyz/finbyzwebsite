@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight, Users, Code, Clock } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/sections/BreadCrumbs';
 
 type ColorKey = 'orange' | 'blue' | 'green';
 
@@ -118,6 +119,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     <div className={`container-custom min-h-screen ${backgroundColor} text-white mt-12`}>
       {/* Main Hero Section */}
       <div className="mx-auto">
+        <Breadcrumbs
+          textColor="text-white/90"
+          currentTextColor="text-white"
+          hoverColor="hover:text-orange-600"
+          separatorColor="text-white/40"
+        />
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Left Content */}
           <div className="space-y-6">
