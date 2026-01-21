@@ -17,7 +17,6 @@ export type NavNode = {
     href?: string;
     description?: string;
     children?: NavNode[];
-    childGenerator?: () => Promise<NavNode[]>;
 };
 
 // Generator Functions
@@ -223,7 +222,7 @@ const navigationItems: NavNode[] = [
             {
                 name: "Wiki",
                 icon: BookOpen,
-                childGenerator: getWikiPages
+                children: [] // Will be populated by getNavigationItems
             },
             {
                 name: "Case Studies",
@@ -376,7 +375,7 @@ const navigationItems: NavNode[] = [
                 name: "Blogs",
                 icon: PenTool, href: "/blogs",
                 description: "ERPNext, AI, software & technology blogs",
-                childGenerator: getBlogPosts
+                children: [] // Will be populated by getNavigationItems
             },
 
             {
@@ -384,8 +383,7 @@ const navigationItems: NavNode[] = [
                 icon: Image,
                 href: "/gallery",
                 description: "",
-                childGenerator: getGalleryItems
-
+                children: [] // Will be populated by getNavigationItems
             },
 
             // ================= CAREER =================
@@ -400,7 +398,7 @@ const navigationItems: NavNode[] = [
                         icon: ClipboardList,
                         href: "/careers/job-openings",
                         description: "Explore current job openings at Finbyz",
-                        childGenerator: getOpenPositions
+                        children: [] // Will be populated by getNavigationItems
                     },
                     { name: "Apply Now", icon: Send, href: "/careers/apply", description: "Apply for open positions" },
                     { name: "Why Join Finbyz", icon: HeartHandshake, href: "/careers/why-join-finbyz", description: "Why Finbyz is a great place to grow your career" },
@@ -434,8 +432,57 @@ const navigationItems: NavNode[] = [
     // },
 ];
 
-export function getNavigationItems(): NavNode[] {
-    // This function can be expanded to return dynamic links based on arguments
-    // For now it returns the static list
+// Helper to find and update a node by path
+function findAndUpdateNode(nodes: NavNode[], path: string[], children: NavNode[]): void {
+    if (path.length === 0) return;
+
+    const [current, ...rest] = path;
+    const node = nodes.find(n => n.name === current);
+
+    if (!node) return;
+
+    if (rest.length === 0) {
+        // Found the target node, update its children
+        node.children = [...(node.children || []), ...children];
+    } else if (node.children) {
+        findAndUpdateNode(node.children, rest, children);
+    }
+}
+
+// Async function to get navigation items with all dynamic children resolved
+export async function getNavigationItems(): Promise<NavNode[]> {
+    // Deep clone the navigation items to avoid mutating the original
+    const items: NavNode[] = JSON.parse(JSON.stringify(navigationItems));
+
+    // Restore icon references (lost during JSON stringify)
+    const restoreIcons = (nodes: NavNode[], originals: NavNode[]) => {
+        nodes.forEach((node, i) => {
+            node.icon = originals[i].icon;
+            if (node.children && originals[i].children) {
+                restoreIcons(node.children, originals[i].children);
+            }
+        });
+    };
+    restoreIcons(items, navigationItems);
+
+    // Fetch all dynamic data in parallel
+    const [wikiPages, blogPosts, galleryItems, openPositions] = await Promise.all([
+        getWikiPages(),
+        getBlogPosts(),
+        getGalleryItems(),
+        getOpenPositions()
+    ]);
+
+    // Update navigation with fetched data
+    findAndUpdateNode(items, ["ERPNext", "Wiki"], wikiPages);
+    findAndUpdateNode(items, ["Company", "Blogs"], blogPosts);
+    findAndUpdateNode(items, ["Company", "Gallery"], galleryItems);
+    findAndUpdateNode(items, ["Company", "Career", "Job Openings"], openPositions);
+
+    return items;
+}
+
+// Sync version that returns static navigation (for initial render)
+export function getStaticNavigationItems(): NavNode[] {
     return navigationItems;
 }

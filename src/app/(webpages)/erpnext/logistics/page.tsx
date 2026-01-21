@@ -7,8 +7,6 @@ import FeatureCard from '@/components/ai_components/FeatureCard';
 import BenefitCard from '@/components/ai_components/BenefitCard';
 import ProcessPhasesTabs from '@/components/ai_components/ProcessPhasesTabs';
 import CTA from '@/components/sections/cta';
-import Image from 'next/image';
-import { FaArrowRight } from 'react-icons/fa6';
 
 const heroHighlightWords = [ "Logistics", "Industry"];
 

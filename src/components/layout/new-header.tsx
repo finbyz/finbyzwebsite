@@ -9,16 +9,14 @@ import {
   ChevronRight,
   LogIn,
 } from "lucide-react";
-import { getNavigationItems, NavNode } from "@/config/navigation";
+import { getNavigationItems, getStaticNavigationItems, NavNode } from "@/config/navigation";
 
-
-const initialNavigationItems = getNavigationItems();
+// Use static items for initial render (no dynamic data)
+const initialNavigationItems = getStaticNavigationItems();
 
 import { useMobileMenu } from "@/contexts/MobileMenuContext";
 import Link from "next/link";
 import Image from "next/image";
-
-
 
 
 
@@ -36,57 +34,93 @@ interface CodeSnippet {
 
 export default function Header() {
   const [navItems, setNavItems] = useState<NavNode[]>(initialNavigationItems);
-  const [thirdLevelPosition, setThirdLevelPosition] = useState<{ top: number, left: number } | null>(null);
-  const [activeThirdLevel, setActiveThirdLevel] = useState<string | null>(null);
+  // Tree path: array of selected node names at each level [level1Name, level2Name, level3Name, ...]
+  const [treePath, setTreePath] = useState<string[]>([]);
+  // Expanded nodes in the right panel tree view
+  const [expandedNodes, setExpandedNodes] = useState<Set<string>>(new Set());
   const [isScrolled, setIsScrolled] = useState(false);
   const { isOpen, toggleMenu } = useMobileMenu();
   const [expandedMobileItems, setExpandedMobileItems] = useState<string[]>([]);
   const [mobileNavStack, setMobileNavStack] = useState<MobileNavStackItem[]>([]);
   const [navAnimation, setNavAnimation] = useState<'slide-in' | 'slide-out' | null>(null);
   const [isGoingBack, setIsGoingBack] = useState(false);
-  const [hoveredService, setHoveredService] = useState<string | null>(null);
   const [hoveredDropdown, setHoveredDropdown] = useState<string | null>(null);
-  const [blogPosts, setBlogPosts] = useState<Array<{ name: string; title: string; route?: string; image?: string }>>([]);
-  const [blogsLoading, setBlogsLoading] = useState(false);
-  const [showAllBlogs, setShowAllBlogs] = useState(false);
-  const [galleryItems, setGalleryItems] = useState<Array<{ name: string; title: string; route?: string; animated_image?: string; svg_image?: string }>>([]);
-  const [galleryLoading, setGalleryLoading] = useState(false);
-  const [showAllGallery, setShowAllGallery] = useState(false);
 
-  const [codeSnippets, setCodeSnippets] = useState<CodeSnippet[]>([]);
-  const [snippetsLoading, setSnippetsLoading] = useState(false);
-  const [showAllSnippets, setShowAllSnippets] = useState(false);
+  // Toggle node expansion
+  const toggleNode = (nodeName: string) => {
+    setExpandedNodes(prev => {
+      const next = new Set(prev);
+      if (next.has(nodeName)) {
+        next.delete(nodeName);
+      } else {
+        next.add(nodeName);
+      }
+      return next;
+    });
+  };
 
-  const level3Refs = useRef<Map<string, HTMLDivElement>>(new Map());
+  // Helper: Get node at a specific path
+  const getNodeAtPath = (nodes: NavNode[], path: string[]): NavNode | null => {
+    if (path.length === 0) return null;
+    const [first, ...rest] = path;
+    const node = nodes.find(n => n.name === first);
+    if (!node) return null;
+    if (rest.length === 0) return node;
+    if (!node.children) return null;
+    return getNodeAtPath(node.children, rest);
+  };
+
+  // Helper: Build initial tree path by auto-selecting first children with children
+  const buildAutoPath = (nodes: NavNode[] | undefined, currentPath: string[] = []): string[] => {
+    if (!nodes || nodes.length === 0) return currentPath;
+    // Find first node that has children
+    const firstWithChildren = nodes.find(n => n.children && n.children.length > 0);
+    if (firstWithChildren) {
+      const newPath = [...currentPath, firstWithChildren.name];
+      return buildAutoPath(firstWithChildren.children, newPath);
+    }
+    return currentPath;
+  };
+
+  // Get columns to render based on current tree path
+  const getColumns = (): { nodes: NavNode[], selectedName: string | null, level: number }[] => {
+    if (!hoveredDropdown) return [];
+
+    const rootItem = navItems.find(n => n.name === hoveredDropdown);
+    if (!rootItem?.children) return [];
+
+    const columns: { nodes: NavNode[], selectedName: string | null, level: number }[] = [];
+
+    // First column: direct children of hovered dropdown
+    columns.push({
+      nodes: rootItem.children,
+      selectedName: treePath[0] || null,
+      level: 0
+    });
+
+    // Add columns for each level in the path
+    let currentNodes = rootItem.children;
+    for (let i = 0; i < treePath.length; i++) {
+      const selectedNode = currentNodes.find(n => n.name === treePath[i]);
+      if (selectedNode?.children && selectedNode.children.length > 0) {
+        columns.push({
+          nodes: selectedNode.children,
+          selectedName: treePath[i + 1] || null,
+          level: i + 1
+        });
+        currentNodes = selectedNode.children;
+      } else {
+        break;
+      }
+    }
+
+    return columns;
+  };
 
 
-
-  // Dynamic Child Loading
+  // Load navigation items with dynamic children on mount
   useEffect(() => {
-    const loadDynamicChildren = async () => {
-      const traverseAndLoad = async (nodes: NavNode[]): Promise<NavNode[]> => {
-        return Promise.all(nodes.map(async (node) => {
-          let newNode = { ...node };
-          if (newNode.childGenerator) {
-            try {
-              const generatedChildren = await newNode.childGenerator();
-              newNode.children = [...(newNode.children || []), ...generatedChildren];
-            } catch (error) {
-              console.error(`Failed to load dynamic children for ${newNode.name}`, error);
-            }
-          }
-          if (newNode.children) {
-            newNode.children = await traverseAndLoad(newNode.children);
-          }
-          return newNode;
-        }));
-      };
-
-      const updatedItems = await traverseAndLoad(initialNavigationItems);
-      setNavItems(updatedItems);
-    };
-
-    loadDynamicChildren();
+    getNavigationItems().then(setNavItems).catch(console.error);
   }, []);
 
 
@@ -101,75 +135,38 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Load blogs when hovering Insights → Blogs
+
+  // Auto-build tree path when dropdown opens
   useEffect(() => {
-    const shouldFetch = hoveredDropdown === "Insights" && hoveredService === "Blogs" && !blogsLoading && blogPosts.length === 0;
-    if (!shouldFetch) return;
-    setBlogsLoading(true);
-    fetch("/web-api/blog-posts")
-      .then(r => r.json())
-      .then(j => setBlogPosts(Array.isArray(j?.data) ? j.data : []))
-      .catch(() => setBlogPosts([]))
-      .finally(() => setBlogsLoading(false));
-  }, [hoveredDropdown, hoveredService, blogsLoading, blogPosts.length]);
+    if (hoveredDropdown) {
+      const rootItem = navItems.find(n => n.name === hoveredDropdown);
+      if (rootItem?.children) {
+        const autoPath = buildAutoPath(rootItem.children);
+        setTreePath(autoPath);
+      }
+    } else {
+      setTreePath([]);
+      setExpandedNodes(new Set());
+    }
+  }, [hoveredDropdown, navItems]);
 
-  // Load gallery when hovering Insights → Gallery
+  // Auto-expand first child with children in the right panel
   useEffect(() => {
-    const shouldFetch = hoveredDropdown === "Insights" && hoveredService === "Gallery" && !galleryLoading && galleryItems.length === 0;
-    if (!shouldFetch) return;
-    setGalleryLoading(true);
-    fetch("/web-api/gallery")
-      .then(r => r.json())
-      .then(j => setGalleryItems(Array.isArray(j?.data) ? j.data : []))
-      .catch(() => setGalleryItems([]))
-      .finally(() => setGalleryLoading(false));
-  }, [hoveredDropdown, hoveredService, galleryLoading, galleryItems.length]);
+    if (treePath.length > 0 && hoveredDropdown) {
+      const rootItem = navItems.find(n => n.name === hoveredDropdown);
+      const selectedService = rootItem?.children?.find(n => n.name === treePath[0]);
 
-
-  // Auto-select first Level 3 item if it has children
-  useEffect(() => {
-    if (hoveredDropdown && hoveredService) {
-      const navItem = navItems.find(i => i.name === hoveredDropdown);
-      const serviceNode = navItem?.children?.find(n => n.name === hoveredService);
-
-      if (serviceNode?.children) {
-        // Find the first child that has its own children (Level 4)
-        const firstChildWithChildren = serviceNode.children.find(c => c.children && c.children.length > 0);
-
-        if (firstChildWithChildren) {
-          const key = `${hoveredDropdown}-${firstChildWithChildren.name}`;
-          // Small timeout to allow render to update refs
-          setTimeout(() => {
-            const el = level3Refs.current.get(key);
-            if (el) {
-              const rect = el.getBoundingClientRect();
-              setThirdLevelPosition({
-                top: rect.top,
-                left: rect.right + 8
-              });
-              setActiveThirdLevel(firstChildWithChildren.name);
-            }
-          }, 0);
+      if (selectedService?.children) {
+        // Find first child that has children
+        const firstWithChildren = selectedService.children.find(n => n.children && n.children.length > 0);
+        if (firstWithChildren) {
+          setExpandedNodes(new Set([firstWithChildren.name]));
+        } else {
+          setExpandedNodes(new Set());
         }
       }
     }
-  }, [hoveredDropdown, hoveredService, navItems]);
-
-
-  // Load code snippets when hovering Insights → Code Snippet
-  useEffect(() => {
-    const shouldFetch = hoveredDropdown === "Insights" && hoveredService === "Dev Insights" && !snippetsLoading && codeSnippets.length === 0;
-
-    if (!shouldFetch) return;
-    setSnippetsLoading(true);
-    fetch("/web-api/code-snippets")
-      .then(r => r.json())
-      .then(j => setCodeSnippets(Array.isArray(j?.data) ? j.data : []))
-      .catch(() => setCodeSnippets([]))
-      .finally(() => setSnippetsLoading(false));
-
-
-  }, [hoveredDropdown, hoveredService, snippetsLoading, codeSnippets.length]);
+  }, [treePath, hoveredDropdown, navItems]);
 
 
 
@@ -242,7 +239,7 @@ export default function Header() {
       >
         <div className="container-custom">
           <div className="w-full">
-            <div className="flex justify-between items-center h-12 lg:h-14 w-full">
+            <div className="flex justify-between items-center h-10 lg:h-12 w-full">
               {/* ================= LOGO (LEFT) ================= */}
               <div className="flex-shrink-0">
                 <Link href="/" className="flex items-center">
@@ -257,22 +254,16 @@ export default function Header() {
                   const leftNodes = item.children ?? [];
                   const hasDropdown = leftNodes.length > 0;
 
-                  const hasRightPanel = leftNodes.some(node => node.children && node.children.length > 0);
-
                   return (
                     <div
                       key={item.name}
                       className="relative"
                       onMouseEnter={() => {
                         setHoveredDropdown(item.name);
-                        const firstWithChildren = leftNodes.find(node => node.children && node.children.length > 0);
-                        if (firstWithChildren) {
-                          setHoveredService(firstWithChildren.name);
-                        }
                       }}
                       onMouseLeave={() => {
                         setHoveredDropdown(null);
-                        setHoveredService(null);
+                        setTreePath([]);
                       }}
                     >
                       <Button
@@ -286,144 +277,193 @@ export default function Header() {
                         {hasDropdown && <ChevronDown className="w-3 h-3" />}
                       </Button>
 
-                      {hasDropdown && (
-                        <div
-                          className={`z-[200] bg-white border shadow-2xl rounded-3xl overflow-hidden transition-all duration-200 ${hoveredDropdown === item.name ? "opacity-100 visible scale-100" : "opacity-0 invisible scale-95"
-                            } ${hasRightPanel
-                              ? "fixed top-[56px] left-1/2 -translate-x-1/2"
-                              : "absolute top-full left-1/2 -translate-x-1/2"
-                            }`}
-                          style={{ width: hasRightPanel ? "1100px" : "auto", maxWidth: "96vw", minWidth: "300px" }}
-                        >
+                      {hasDropdown && (() => {
+                        const hasRightPanel = leftNodes.some(node => node.children && node.children.length > 0);
 
+                        // Recursive tree renderer with indentation and collapsible nodes
+                        const renderTree = (nodes: NavNode[], depth: number = 0, parentPath: string = ''): React.ReactNode => {
+                          return nodes.map((node) => {
+                            const hasChildren = node.children && node.children.length > 0;
+                            const isLink = node.href && node.href !== "#";
+                            const paddingLeft = depth * 16; // 16px per level
+                            const nodeKey = parentPath ? `${parentPath}-${node.name}` : node.name;
+                            const isExpanded = expandedNodes.has(nodeKey);
 
-                          <div className={`grid ${hasRightPanel ? "grid-cols-2" : "grid-cols-1"}`}>
+                            const itemClasses = `flex items-center justify-between gap-2 py-2 rounded-lg cursor-pointer transition-all hover:bg-slate-100 text-[#1A5276]`;
 
-                            {/* LEFT PANEL */}
-                            <div className={`p-6 bg-slate-50/50 font-['Inter','Segoe UI','system-ui'] ${hasRightPanel ? "border-r border-slate-200" : ""}`}>
-                              <h3 className="text-lg font-semibold text-[#1A5276] mb-6">{item.name}</h3>
-                              {leftNodes.map((main) => {
-                                const isLink = main.href && main.href !== "#";
-                                const content = (
-                                  <>
-                                    <main.icon className="w-5 h-5" />
-                                    <span className="text-sm font-medium">{main.name}</span>
-                                  </>
-                                );
-                                const itemClasses = `flex items-center gap-3 px-4 py-3 rounded-xl cursor-pointer ${hoveredService === main.name
-                                  ? "bg-white shadow text-orange-500"
-                                  : "hover:bg-white text-[#1A5276]"
-                                  }`;
+                            const handleToggle = (e: React.MouseEvent) => {
+                              if (hasChildren) {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                toggleNode(nodeKey);
+                              }
+                            };
 
-                                return isLink ? (
-                                  <Link
-                                    key={main.name}
-                                    href={main.href!}
-                                    onMouseEnter={() => setHoveredService(main.name)}
-                                    className={itemClasses}
-                                    onClick={() => {
-                                      setHoveredDropdown(null);
-                                      setHoveredService(null);
-                                    }}
-                                  >
-                                    {content}
-                                  </Link>
+                            // Expand on hover
+                            const handleHover = () => {
+                              if (hasChildren && !isExpanded) {
+                                setExpandedNodes(prev => new Set([...prev, nodeKey]));
+                              }
+                            };
+
+                            const content = (
+                              <>
+                                <div className="flex items-center gap-2 min-w-0">
+                                  <node.icon className="w-4 h-4 shrink-0 text-orange-500" />
+                                  <div className="min-w-0">
+                                    <div className="font-medium text-sm truncate">{node.name}</div>
+                                    {node.description && depth === 0 && (
+                                      <div className="text-xs text-slate-500 truncate">{node.description}</div>
+                                    )}
+                                  </div>
+                                </div>
+                                {hasChildren && (
+                                  <ChevronRight
+                                    className={`w-3 h-3 text-slate-400 shrink-0 transition-transform duration-200 ${isExpanded ? 'rotate-90' : ''}`}
+                                  />
+                                )}
+                              </>
+                            );
+
+                            return (
+                              <div key={node.name}>
+                                {isLink ? (
+                                  <div className="flex">
+                                    {hasChildren && (
+                                      <button
+                                        onClick={handleToggle}
+                                        className="px-2 hover:bg-slate-200 rounded-l-lg"
+                                        style={{ marginLeft: `${paddingLeft}px` }}
+                                      >
+                                        <ChevronRight
+                                          className={`w-3 h-3 text-slate-400 transition-transform duration-200 ${isExpanded ? 'rotate-90' : ''}`}
+                                        />
+                                      </button>
+                                    )}
+                                    <Link
+                                      href={node.href!}
+                                      style={{ paddingLeft: hasChildren ? '4px' : `${paddingLeft + 12}px`, paddingRight: '12px' }}
+                                      className={`${itemClasses} flex-1`}
+                                      onMouseEnter={handleHover}
+                                      onClick={() => {
+                                        setHoveredDropdown(null);
+                                        setTreePath([]);
+                                        setExpandedNodes(new Set());
+                                      }}
+                                    >
+                                      <div className="flex items-center gap-2 min-w-0">
+                                        <node.icon className="w-4 h-4 shrink-0 text-orange-500" />
+                                        <div className="min-w-0">
+                                          <div className="font-medium text-sm truncate">{node.name}</div>
+                                          {node.description && depth === 0 && (
+                                            <div className="text-xs text-slate-500 truncate">{node.description}</div>
+                                          )}
+                                        </div>
+                                      </div>
+                                    </Link>
+                                  </div>
                                 ) : (
                                   <div
-                                    key={main.name}
-                                    onMouseEnter={() => setHoveredService(main.name)}
+                                    style={{ paddingLeft: `${paddingLeft + 12}px`, paddingRight: '12px' }}
+                                    className={itemClasses}
+                                    onMouseEnter={handleHover}
+                                    onClick={handleToggle}
+                                  >
+                                    {content}
+                                  </div>
+                                )}
+                                {/* Render children if expanded */}
+                                {hasChildren && isExpanded && renderTree(node.children!, depth + 1, nodeKey)}
+                              </div>
+                            );
+                          });
+                        };
+
+                        // Get selected service's children for right panel
+                        const selectedService = leftNodes.find(n => n.name === treePath[0]);
+
+                        return (
+                          <div
+                            className={`z-[200] bg-white border shadow-2xl rounded-3xl overflow-hidden transition-all duration-200 ${hoveredDropdown === item.name ? "opacity-100 visible scale-100" : "opacity-0 invisible scale-95"
+                              } ${hasRightPanel
+                                ? "fixed top-[56px] left-1/2 -translate-x-1/2"
+                                : "absolute top-full left-1/2 -translate-x-1/2"
+                              }`}
+                            style={{ width: hasRightPanel ? "1000px" : "auto", maxWidth: "96vw", minWidth: "300px" }}
+                          >
+                            <div className={`grid ${hasRightPanel ? "grid-cols-2" : "grid-cols-1"}`}>
+                              {/* LEFT PANEL - First level children */}
+                              <div className={`p-6 bg-slate-50/50 font-['Inter','Segoe UI','system-ui'] ${hasRightPanel ? "border-r border-slate-200" : ""}`}>
+                                <h3 className="text-lg font-semibold text-[#1A5276] mb-4">{item.name}</h3>
+                                {leftNodes.map((main) => {
+                                  const isLink = main.href && main.href !== "#";
+                                  const isSelected = treePath[0] === main.name;
+                                  const hasChildren = main.children && main.children.length > 0;
+
+                                  const content = (
+                                    <>
+                                      <div className="flex items-center gap-3">
+                                        <main.icon className="w-5 h-5" />
+                                        <span className="text-sm font-medium">{main.name}</span>
+                                      </div>
+                                      {hasChildren && <ChevronRight className="w-4 h-4 text-slate-400" />}
+                                    </>
+                                  );
+
+                                  const itemClasses = `flex items-center justify-between gap-3 px-4 py-3 rounded-xl cursor-pointer ${isSelected
+                                    ? "bg-white shadow text-orange-500"
+                                    : "hover:bg-white text-[#1A5276]"
+                                  }`;
+
+                                  const handleHover = () => {
+                                    if (hasChildren) {
+                                      setTreePath([main.name]);
+                                    } else {
+                                      setTreePath([]);
+                                    }
+                                  };
+
+                                  return isLink ? (
+                                    <Link
+                                      key={main.name}
+                                      href={main.href!}
+                                      onMouseEnter={handleHover}
+                                      className={itemClasses}
+                                      onClick={() => {
+                                        setHoveredDropdown(null);
+                                        setTreePath([]);
+                                      }}
+                                    >
+                                      {content}
+                                    </Link>
+                                  ) : (
+                                    <div
+                                      key={main.name}
+                                        onMouseEnter={handleHover}
                                       className={itemClasses}
                                     >
                                       {content}
                                     </div>
-                                );
-                              })}
-                            </div>
-
-
-
-                            {/* {RIGHT PANEL} */}
-                            {hasRightPanel && (
-                              <div className="p-6 space-y-1 max-h-[600px] overflow-y-auto font-['Inter','Segoe UI','system-ui']">
-                                {leftNodes
-                                  .find(x => x.name === hoveredService)
-                                  ?.children?.map(node => (
-                                    <div
-                                      key={node.name}
-                                      ref={(el) => {
-                                        const key = `${item.name}-${node.name}`;
-                                        if (el) level3Refs.current.set(key, el);
-                                        else level3Refs.current.delete(key);
-                                      }}
-                                      className="relative group"
-                                      onMouseEnter={(e) => {
-                                        if (node.children) {
-                                          const rect = e.currentTarget.getBoundingClientRect();
-                                          setThirdLevelPosition({
-                                            top: rect.top,
-                                            left: rect.right + 8
-                                          });
-                                          setActiveThirdLevel(node.name);
-                                        }
-                                      }}
-                                      onMouseLeave={() => {
-                                        setActiveThirdLevel(null);
-                                      }}
-                                    >
-                                      <Link
-                                        href={node.href || "#"}
-                                        className="flex items-center justify-between gap-3 px-4 py-2 rounded-lg hover:bg-slate-50 hover:text-[#FF8C00] transition font-medium"
-                                      >
-                                        <div className="flex items-start gap-3">
-                                          <node.icon className="w-4 h-4 shrink-0 text-orange-500 mt-1" />
-                                          <div>
-                                            <div className="font-semibold text-sm text-[#1A5276]  hover:text-[#FF8C00]">{node.name}</div>
-                                            <div className="text-xs text-slate-500">{node.description}</div>
-                                          </div>
-                                        </div>
-                                        {node.children && <ChevronRight className="w-4 h-4 text-gray-400 shrink-0" />}
-                                      </Link>
-
-                                      {/* FLOATING 3RD LEVEL */}
-                                      {node.children && activeThirdLevel === node.name && thirdLevelPosition && (
-                                        <div
-                                          style={{
-                                            top: `${thirdLevelPosition.top}px`,
-                                            left: `${thirdLevelPosition.left}px`
-                                          }}
-                                          onMouseEnter={() => setActiveThirdLevel(node.name)}
-                                          onMouseLeave={() => setActiveThirdLevel(null)}
-                                        >
-                                          {node.children.map(leaf => (
-                                            <Link
-                                              key={leaf.href}
-                                              href={leaf.href!}
-                                              className="flex items-center gap-1 px-4 py-3 pl-9 text-xs rounded-lg  hover:bg-orange-50 transition whitespace-nowrap"
-                                              onClick={() => {
-                                                setHoveredDropdown(null);
-                                                setHoveredService(null);
-                                                setActiveThirdLevel(null);
-                                              }}
-                                            >
-                                              <leaf.icon className="w-3 h-3 shrink-0 text-orange-500" />
-                                              {leaf.name}
-                                            </Link>
-                                          ))}
-                                        </div>
-                                      )}
-                                    </div>
-                                  ))}
+                                  );
+                                })}
                               </div>
-                            )}
 
-
-
+                              {/* RIGHT PANEL - Tree view with indentation */}
+                              {hasRightPanel && selectedService?.children && (
+                                <div className="p-4 max-h-[500px] overflow-y-auto font-['Inter','Segoe UI','system-ui']">
+                                  <h4 className="text-md font-semibold text-[#1A5276] mb-3 px-3">{selectedService.name}</h4>
+                                  {renderTree(selectedService.children)}
+                                </div>
+                              )}
+                            </div>
                           </div>
-                        </div>
-                      )}
+                        );
+                      })()}
+
                     </div>
                   );
                 })}
+
 
                 <Button onClick={GotoInquiryForm} className="ml-4 bg-gradient-to-r from-orange-400 to-orange-500 text-white rounded-full px-6">
                   Book Consultation
