@@ -89,7 +89,7 @@ const Breadcrumbs = ({
   if (!breadcrumbs.length) return null;
 
   return (
-    <div className="hidden md:block z-40 pt-2 pointer-events-none">
+    <div className="z-40 pt-2 pointer-events-none">
       <nav aria-label="Breadcrumb" className="w-full pointer-events-auto">
         <ol className={`flex flex-wrap items-center text-xs md:text-sm font-medium py-1 ${textColor}`}>
           {/* Home Item */}

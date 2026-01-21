@@ -222,12 +222,20 @@ export default async function StructureData({
         `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
         `https://img.youtube.com/vi/${videoId}/sddefault.jpg`
       ],
-      uploadDate: data?.creation
+      uploadDate: data?.published_on
+        ? `${data.published_on}T08:00:00+08:00`
+        : data?.creation
         ? new Date(data.creation).toISOString()
         : new Date().toISOString(),
-      duration: data?.video_duration || "PT10M",
+      // Only include duration if we have real data (not fake fallback)
+      ...(data?.video_duration && { duration: data.video_duration }),
       contentUrl: data?.youtube_link || `https://www.youtube.com/watch?v=${videoId}`,
       embedUrl: `https://www.youtube.com/embed/${videoId}`,
+      // CRITICAL: mainEntityOfPage tells Google this is a watch page
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": fullUrl
+      },
       author: {
         "@type": "Person",
         name: data?.author || "FinByz Team",
@@ -239,7 +247,7 @@ export default async function StructureData({
         sameAs: `${BASE_URL}`,
         logo: {
           "@type": "ImageObject",
-          url: `${BASE_URL}/images/FinbyzLogo.png`,
+          url: `${BASE_URL}/files/FinbyzLogo.png`,
           height: "300",
           width: "300"
         }
