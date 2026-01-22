@@ -1,6 +1,8 @@
 'use client';
 
 import { Code, Tag, BookOpen } from 'lucide-react';
+import Breadcrumbs from '@/components/sections/BreadCrumbs';
+
 
 interface CodeSnippetHeroProps {
   title: string;
@@ -28,6 +30,7 @@ export default function CodeSnippetHero({
   return (
     <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-20 px-4">
       <div className="container-custom">
+        <Breadcrumbs />
         <div className="mx-auto text-center">
           {/* Category Badge */}
           <div className="flex items-center justify-center gap-2 mb-6">

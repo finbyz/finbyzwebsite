@@ -7,8 +7,6 @@ import BlogParagraph from '@/components/ai_components/blog/BlogParagraph';
 import BlogTableOfContents from '@/components/ai_components/blog/BlogTableOfContents';
 import BlogContent from '@/components/ai_components/blog/BlogContent';
 import BlogCheckList from '@/components/ai_components/blog/BlogCheckList';
-import Image from 'next/image';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 
 const blogID = "evolution-of-erp";
 
