@@ -107,23 +107,16 @@ echo -e "${BLUE}  Docker Build & Version Script${NC}"
 echo -e "${BLUE}================================${NC}"
 echo ""
 
-# Check if current commit has a tag
-CURRENT_TAG=$(git describe --exact-match --tags HEAD 2>/dev/null || echo "")
+# Always increment from the latest tag, never reuse the current tag on HEAD
+LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
 
-if [ -n "$CURRENT_TAG" ]; then
-    VERSION="$CURRENT_TAG"
-    echo -e "${GREEN}✓ Using current Git tag: $VERSION${NC}"
+if [ -n "$LATEST_TAG" ]; then
+    VERSION=$(increment_version "$LATEST_TAG" "$INCREMENT_TYPE")
+    echo -e "${GREEN}✓ Last Git tag: $LATEST_TAG${NC}"
+    echo -e "${GREEN}✓ Auto-incremented ($INCREMENT_TYPE): $VERSION${NC}"
 else
-    LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
-    
-    if [ -n "$LATEST_TAG" ]; then
-        VERSION=$(increment_version "$LATEST_TAG" "$INCREMENT_TYPE")
-        echo -e "${GREEN}✓ Last Git tag: $LATEST_TAG${NC}"
-        echo -e "${GREEN}✓ Auto-incremented ($INCREMENT_TYPE): $VERSION${NC}"
-    else
-        VERSION="v0.0.1"
-        echo -e "${YELLOW}⚠ No Git tags found. Starting with: $VERSION${NC}"
-    fi
+    VERSION="v0.0.1"
+    echo -e "${YELLOW}⚠ No Git tags found. Starting with: $VERSION${NC}"
 fi
 
 # Check for uncommitted changes
