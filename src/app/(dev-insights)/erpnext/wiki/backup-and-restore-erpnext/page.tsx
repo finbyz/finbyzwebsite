@@ -22,6 +22,50 @@ export default function BackupAndRestorePage() {
           "Properly backing up and restoring your ERPNext site is a critical administrative task for disaster recovery, server migration, or creating staging environments. The Frappe Bench Command Line Interface (CLI) provides a powerful and straightforward set of tools to manage this process. This guide covers the end-to-end workflow for creating a complete site backup and restoring it successfully."
         ]}
       />
+
+      {/* Quick Reference Table */}
+      <div className="my-8 overflow-hidden rounded-lg border bg-background shadow-sm hover:shadow-md transition-shadow">
+        <div className="bg-slate-50 dark:bg-slate-900/50 px-6 py-4 border-b">
+          <h2 className="text-lg font-semibold flex items-center gap-2">
+            ⚡ Quick Command Reference
+          </h2>
+          <p className="text-sm text-muted-foreground mt-1">
+            Copy these commonly used commands for immediate use.
+          </p>
+        </div>
+        <div className="p-0 overflow-x-auto">
+          <table className="w-full text-sm text-left">
+            <thead className="bg-muted/50 text-muted-foreground uppercase text-xs">
+              <tr>
+                <th className="px-6 py-3 whitespace-nowrap">Task</th>
+                <th className="px-6 py-3 whitespace-nowrap">Command</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-border">
+              <tr className="hover:bg-muted/50">
+                <td className="px-6 py-4 font-medium">Backup Everything</td>
+                <td className="px-6 py-4"><code className="bg-muted px-2 py-1 rounded text-primary">bench backup --with-files</code></td>
+              </tr>
+              <tr className="hover:bg-muted/50">
+                <td className="px-6 py-4 font-medium">Backup DB Only</td>
+                <td className="px-6 py-4"><code className="bg-muted px-2 py-1 rounded text-primary">bench backup</code></td>
+              </tr>
+              <tr className="hover:bg-muted/50">
+                <td className="px-6 py-4 font-medium">Restore Site</td>
+                <td className="px-6 py-4"><code className="bg-muted px-2 py-1 rounded text-primary">bench restore /path/to/backup.sql.gz</code></td>
+              </tr>
+              <tr className="hover:bg-muted/50">
+                <td className="px-6 py-4 font-medium">Update Schema</td>
+                <td className="px-6 py-4"><code className="bg-muted px-2 py-1 rounded text-primary">bench migrate</code></td>
+              </tr>
+              <tr className="hover:bg-muted/50">
+                <td className="px-6 py-4 font-medium">Access DB Console</td>
+                <td className="px-6 py-4"><code className="bg-muted px-2 py-1 rounded text-primary">bench mysql</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
       <CodeBlock
         code={`// 1. Select the site you want to back up
 bench use your_site_name.com

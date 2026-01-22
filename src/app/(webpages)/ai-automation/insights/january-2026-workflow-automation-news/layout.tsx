@@ -5,15 +5,15 @@ import StructureData from "@/components/seo/StructureData";
 import { getFaqs, getPageData } from "@/lib/getPageData";
 import { Metadata } from "next";
 
-const PAGE_SLUG = "n8n/insights/n8n-vs-zapier-vs-make-comparison";
-const PAGE_ROUTE = "ai-automation/insights/n8n-vs-zapier-vs-make-comparison";
+const PAGE_SLUG = "ai-automation/insights/january-2026-workflow-automation-news";
+const PAGE_ROUTE = "ai-automation/insights/january-2026-workflow-automation-news";
 
 export const metadata: Metadata = {
-    title: "n8n vs Zapier vs Make: The 2026 Workflow Automation Showdown | Reviews & Pricing",
+    title: "Workflow Automation News: Zapier AI, n8n 2.0 & Make Updates (January 2026)",
     description:
-        "Updated Jan 2026: Compare n8n, Zapier, and Make. New pricing analysis, AI agent features, and self-hosting guide. Find the best workflow automation tool.",
+        "Breaking: Zapier launches AI Agents, n8n 2.0 adds Autosave & LangChain support, and Make introduces Enterprise Grid. Read the full January 2026 report.",
     keywords:
-        "n8n vs zapier, n8n vs make, zapier vs make, workflow automation comparison 2026, n8n review, zapier alternatives, make automation, best workflow automation tool, workflow automation news, n8n 2.0, zapier ai agents",
+        "zapier news today, zapier new features january 2026, n8n updates, n8n 2.0, make.com new features, workflow automation news, zapier ai updates, n8n autosave, n8n langchain",
     authors: [{ name: "FinByz Tech Pvt Ltd" }],
     creator: "FinByz Tech Pvt Ltd",
     publisher: "FinByz Tech Pvt Ltd",
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
         canonical: `https://finbyz.tech/${PAGE_ROUTE}`,
     },
     openGraph: {
-        title: "n8n vs Zapier vs Make: The 2026 Workflow Automation Showdown",
+        title: "Workflow Automation News: Zapier AI, n8n 2.0 & Make Updates (January 2026)",
         description:
-            "In-depth comparison of n8n, Zapier, and Make. Learn about AI agent orchestration, self-hosting, pricing models, and which platform fits your automation needs.",
+            "Get the latest January 2026 updates on Zapier, n8n, and Make. New features, pricing changes, and AI capabilities explained.",
         url: `https://finbyz.tech/${PAGE_ROUTE}`,
         siteName: "Finbyz Tech",
         type: "article",
@@ -33,15 +33,15 @@ export const metadata: Metadata = {
                 url: "/images/ai-automation.jpeg",
                 width: 1200,
                 height: 630,
-                alt: "n8n vs Zapier vs Make Comparison 2026",
+                alt: "January 2026 Workflow Automation News",
             },
         ],
     },
     twitter: {
         card: "summary_large_image",
-        title: "n8n vs Zapier vs Make: The 2026 Workflow Automation Showdown",
+        title: "Workflow Automation News: Zapier AI, n8n 2.0 & Make Updates",
         description:
-            "Compare the top workflow automation platforms. n8n open-source power vs Zapier integrations vs Make visual logic.",
+            "Breaking news on Zapier, n8n, and Make. January 2026 updates inside.",
         creator: "@finbyz",
         images: ["/images/ai-automation.jpeg"],
     },
@@ -85,4 +85,3 @@ export default async function Layout({
         </>
     );
 }
-

@@ -68,7 +68,7 @@ export default function JobApplication() {
   useEffect(() => {
     async function fetchApplicantTypes() {
       try {
-        const url = `/api/fb/method/finbyz.job_application_api.get_applicant_types`
+        const url = `/web-api/fb/method/finbyz.job_application_api.get_applicant_types`
         const response = await fetch(
           url
         );
@@ -170,7 +170,7 @@ export default function JobApplication() {
       }
 
       const res = await fetch(
-        "/api/fb/method/finbyz.job_application_api.update_resume_and_cover_letter",
+        "/web-api/fb/method/finbyz.job_application_api.update_resume_and_cover_letter",
         {
           method: "POST",
           body: formData
@@ -227,7 +227,7 @@ export default function JobApplication() {
     try {
 
 
-      const url = `/api/fb/method/finbyz.job_application_api.get_existing_applicant?email=${encodeURIComponent(email)}&job_title=${encodeURIComponent(jobTitle)}`;
+      const url = `/web-api/fb/method/finbyz.job_application_api.get_existing_applicant?email=${encodeURIComponent(email)}&job_title=${encodeURIComponent(jobTitle)}`;
       const response = await fetch(url);
 
       if (!response.ok) {
@@ -301,7 +301,7 @@ export default function JobApplication() {
       // Log the data being sent to API for debugging
 
 
-      const url = `/api/fb/method/finbyz.job_application_api.set_form_job_applicant`
+      const url = `/web-api/fb/method/finbyz.job_application_api.set_form_job_applicant`
       const res = await fetch(url, {
         method: "POST",
         body: formData,
@@ -483,7 +483,7 @@ export default function JobApplication() {
     <div className={styles.container}>
       <main className={styles.main}>
         <section className={styles.heroSection}>
-          <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className={styles.heroContainer}>
               <div className={styles.breadcrumb}>
                 <Link href="/careers" className={styles.breadcrumbLink}>
@@ -502,7 +502,7 @@ export default function JobApplication() {
         </section>
 
         <section className={styles.formSection}>
-          <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className={styles.formContainer}>
               <form className={styles.applicationForm} onSubmit={handleSubmit}>
                 <div className={styles.formSectionHeader}>

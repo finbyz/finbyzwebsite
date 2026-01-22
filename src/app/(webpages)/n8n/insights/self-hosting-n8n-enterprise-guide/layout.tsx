@@ -11,9 +11,9 @@ const PAGE_ROUTE = "ai-automation/insights/self-hosting-n8n-enterprise-guide";
 export const metadata: Metadata = {
   title: "Self-Hosting n8n in 2026: The Complete Enterprise Guide to Data Sovereignty | Finbyz Tech",
   description:
-    "Learn how to self-host n8n for complete data sovereignty. Covers Docker deployment, Kubernetes setup, GDPR/HIPAA compliance, security hardening, and cost analysis vs cloud platforms.",
+    "Learn how to self-host n8n for complete data sovereignty. Covers Docker deployment strategies (including Coolify), GDPR/HIPAA compliance, security hardening, and 2026 pricing analysis vs cloud platforms.",
   keywords:
-    "self-host n8n, n8n self-hosted setup, n8n docker, n8n kubernetes, n8n data privacy, n8n GDPR, n8n enterprise, n8n on-premise, n8n security",
+    "self-host n8n, n8n self-hosted setup, n8n docker, n8n kubernetes, n8n data privacy, n8n GDPR, n8n enterprise features, n8n pricing 2026, n8n security best practices, host n8n on coolify, n8n digital ocean",
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",

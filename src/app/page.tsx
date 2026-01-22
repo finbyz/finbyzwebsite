@@ -12,16 +12,23 @@ import { getFaqs } from "@/lib/getPageData";
 import CooprtaionSchema from "@/components/seo/CorporationSchema";
 
 export const metadata: Metadata = {
-  title: "Finbyz Tech (Finbyz®) | Official Website - ERPNext & AI Automation Experts",
+  title: "ERP Solution Provider & AI Automation Experts | ERPNext Implementation | Finbyz Tech",
 
-  description: "Finbyz Tech is a certified ERPNext implementation partner and Frappe framework experts. We deliver AI automation, ERP software solutions, and custom software development for businesses in New York, London, Dubai, Sydney, Toronto, and worldwide.",
+  description: "Leading ERP solution provider specializing in ERPNext implementation, AI automation, and custom ERP development. Certified Frappe partner serving 100+ businesses globally. Get enterprise-grade ERP software solutions tailored to your industry.",
   keywords: [
-    // Primary Keywords
-    "ERPNext", "ERPNext Implementation", "ERPNext Partner", "ERPNext Consultant",
-    "Frappe", "Frappe Framework", "Frappe Developer",
-    "ERP Software", "ERP Solutions", "ERP Implementation",
-    "AI Automation", "AI Workflow Automation", "Business Process Automation",
-    "Software Development", "Custom Software Development", "Software Development Company",
+    // Primary High-Intent Keywords
+    "ERP Solution Provider", "ERP Implementation Company", "Custom ERP Development",
+    "ERPNext Partner", "ERPNext Implementation", "ERPNext Consultant", "ERPNext Expert",
+    "Frappe Framework Development", "Frappe Developer", "Frappe Partner",
+    "ERP Software Solutions", "Enterprise ERP", "Cloud ERP Solutions",
+    "AI Automation Services", "Business Process Automation", "AI Workflow Automation",
+    "Custom Software Development", "Enterprise Software Development",
+    // Industry-Specific
+    "Pharma ERP Software", "Chemical ERP Solutions", "Manufacturing ERP", "Trading ERP",
+    "Fintech Software Development", "Healthcare ERP Solutions",
+    // Service-Focused
+    "ERP Consulting Services", "ERP Migration Services", "ERP Support and Maintenance",
+    "ERP Data Analytics", "ERP Integration Services", "ERP Training",
     // North America Cities
     "ERPNext Partner New York", "ERP Software San Francisco", "AI Automation Los Angeles",
     "ERPNext Implementation Toronto", "Software Development Chicago", "ERP Solutions Houston",
@@ -40,8 +47,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   openGraph: {
-    title: "Finbyz Tech | ERPNext Implementation Partner & AI Automation Experts",
-    description: "Transform your business with Finbyz Tech - certified ERPNext and Frappe experts. We provide ERP software implementation, AI-powered automation, and custom software development to enterprises in New York, London, Dubai, Sydney, and 50+ cities globally.",
+    title: "Leading ERP Solution Provider | ERPNext & AI Automation | Finbyz Tech",
+    description: "Trusted by 100+ businesses worldwide for enterprise ERP implementation and AI automation. Certified ERPNext partner delivering custom ERP solutions, business process automation, and seamless digital transformation.",
     type: "website",
     url: "https://finbyz.tech",
     siteName: "Finbyz Tech",
@@ -57,8 +64,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Finbyz Tech | ERPNext Partner & AI Automation Experts",
-    description: "Certified ERPNext implementation partner delivering ERP software, AI automation, and custom software development to businesses worldwide.",
+    title: "Leading ERP Solution Provider | ERPNext Implementation & AI Automation",
+    description: "Enterprise ERP solutions and AI automation for growing businesses. Certified ERPNext partner with 100+ successful implementations globally. Free consultation available.",
     images: ["https://finbyz.tech/images/FinbyzLogo.png"],
     creator: "@FinByz",
     site: "@FinByz",
@@ -160,8 +167,13 @@ export default async function Home() {
         <ClientLogos data={{ useAPI: true, apiEndpoint: '/api/client-logos' }} />
         <CTA
           data={{
-            title: "Ready to Transform Your Business with ERPNext & AI?",
-            highlightText: "ERPNext & AI?",
+            title: "Ready to Transform Your Business with ERP & AI?",
+            highlightText: "ERP & AI?",
+            description: "Join 100+ growing businesses worldwide. Get a free consultation and custom roadmap for your digital transformation.",
+            subheading: { text: "Limited Consultation Slots Available", icon: "CalendarCheck" },
+            primaryButton: { text: "Book Free Demo", icon: "CalendarCheck", action: '/contact' },
+            secondaryButton: { text: "Get Custom Quote", icon: "FileText", action: '/contact' },
+            trustIndicator: { text: "✓ 100+ Successful Implementations | ✓ 24/7 Support | ✓ Free Consultation", icon: "CalendarCheck" }
           }}
         />
 
@@ -169,17 +181,16 @@ export default async function Home() {
         {/* Inquiry Form */}
         <InquiryForm
           data={{
-            // component_type: "Form",  
-            title: "Book a Free Consultation",
-            highlightText: "Book a Free Consultation",
-            description: "Get started with your free demo today and discover how our solutions can transform your business",
+            title: "Get Your Free ERP Consultation",
+            highlightText: "Free ERP Consultation",
+            description: "Schedule a 30-minute consultation with our ERP experts. Get a custom roadmap and ROI analysis tailored to your business. No obligation, no commitment.",
             fields: {
               name: "Name",
               organization: "Organization Name",
               email: "Email",
               mobile: "Mobile No"
             },
-            submitText: "SUBMIT"
+            submitText: "BOOK MY FREE CONSULTATION"
           }}
         />
 

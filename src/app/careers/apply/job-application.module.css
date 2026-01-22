@@ -10,7 +10,7 @@
 }
 
 .heroSection {
-  background: linear-gradient(135deg, #111827 0%, #1f3a8a 60%, #312e81 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #334155 100%);
   color: #ffffff;
   padding: 3.5rem 0;
   position: relative;
@@ -30,16 +30,23 @@
   display: inline-flex;
   align-items: center;
   gap: .5rem;
-  color: rgba(255,255,255,.9);
+  color: rgba(255, 255, 255, .9);
   text-decoration: none;
   font-weight: 500;
 }
 
-.breadcrumbLink:hover { text-decoration: underline; }
+.breadcrumbLink:hover {
+  text-decoration: underline;
+}
 
-.breadcrumbIcon { width: 18px; height: 18px; }
+.breadcrumbIcon {
+  width: 18px;
+  height: 18px;
+}
 
-.heroContent { max-width: 900px; }
+.heroContent {
+  max-width: 900px;
+}
 
 .heroTitle {
   font-size: clamp(2rem, 4vw, 3rem);
@@ -50,7 +57,7 @@
 
 .heroDescription {
   font-size: 1.05rem;
-  color: rgba(255,255,255,.85);
+  color: rgba(255, 255, 255, .85);
   margin: 0;
 }
 
@@ -66,12 +73,16 @@
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   padding: 2rem;
-  box-shadow: 0 12px 24px rgba(0,0,0,.06);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, .06);
 }
 
-.applicationForm { width: 100%; }
+.applicationForm {
+  width: 100%;
+}
 
-.formSectionHeader { margin-bottom: 1rem; }
+.formSectionHeader {
+  margin-bottom: 1rem;
+}
 
 .sectionTitle {
   font-size: 1.25rem;
@@ -85,7 +96,9 @@
   margin: 0 0 1rem 0;
 }
 
-.formGroup { margin-bottom: 1rem; }
+.formGroup {
+  margin-bottom: 1rem;
+}
 
 .formLabel {
   display: block;
@@ -94,7 +107,9 @@
   color: #111827;
 }
 
-.required { color: #ef4444; }
+.required {
+  color: #ef4444;
+}
 
 .selectInput,
 .textInput,
@@ -112,11 +127,14 @@
 .selectInput:focus,
 .textInput:focus,
 .textareaInput:focus {
-  border-color: #1A5276;
-  box-shadow: 0 0 0 3px rgba(26, 82, 118, .15);
+  border-color: #FF8C00;
+  box-shadow: 0 0 0 3px rgba(255, 140, 0, .15);
 }
 
-.textareaInput { min-height: 120px; resize: vertical; }
+.textareaInput {
+  min-height: 120px;
+  resize: vertical;
+}
 
 /* File upload */
 .fileUploadContainer {
@@ -127,13 +145,20 @@
 }
 
 .attachButton {
-  border-color: #1A5276 !important;
-  color: #1A5276 !important;
+  border-color: #FF8C00 !important;
+  color: #FF8C00 !important;
   background: #ffffff !important;
 }
-.attachButton:hover { background: #f0f9ff !important; }
 
-.uploadIcon { width: 18px; height: 18px; margin-right: .5rem; }
+.attachButton:hover {
+  background: #fff7ed !important;
+}
+
+.uploadIcon {
+  width: 18px;
+  height: 18px;
+  margin-right: .5rem;
+}
 
 .fileInfo {
   display: flex;
@@ -142,22 +167,48 @@
   gap: 1rem;
 }
 
-.fileDetails { display: flex; align-items: center; gap: .5rem; }
-.fileIcon { color: #1A5276; width: 18px; height: 18px; }
-.fileName { word-break: break-all; color: #111827; }
+.fileDetails {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.fileIcon {
+  color: #FF8C00;
+  width: 18px;
+  height: 18px;
+}
+
+.fileName {
+  word-break: break-all;
+  color: #111827;
+}
 
 .removeButton {
   border-color: #ef4444 !important;
   color: #ef4444 !important;
   background: #ffffff !important;
 }
-.removeButton:hover { background: #fee2e2 !important; }
 
-.buttonIcon { width: 16px; height: 16px; margin-right: .375rem; }
+.removeButton:hover {
+  background: #fee2e2 !important;
+}
 
-.fileInput { display: none; }
+.buttonIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: .375rem;
+}
 
-.fileNote { color: #6b7280; font-size: .85rem; margin-top: .5rem; }
+.fileInput {
+  display: none;
+}
+
+.fileNote {
+  color: #6b7280;
+  font-size: .85rem;
+  margin-top: .5rem;
+}
 
 .actionButtons {
   display: flex;
@@ -171,12 +222,19 @@
   color: #374151 !important;
   background: #ffffff !important;
 }
-.discardButton:hover { background: #f3f4f6 !important; }
+
+.discardButton:hover {
+  background: #f3f4f6 !important;
+}
 
 .saveButton {
-  background: #f97316 !important; /* orange-500 */
+  background: linear-gradient(135deg, #FF8C00, #FFA500) !important;
   color: #ffffff !important;
+  border: none !important;
 }
-.saveButton:hover { background: #ea580c !important; }
 
-
+.saveButton:hover {
+  background: linear-gradient(135deg, #FFA500, #FFB84D) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
+}

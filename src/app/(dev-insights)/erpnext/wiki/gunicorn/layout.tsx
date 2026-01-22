@@ -32,7 +32,7 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "Finbyz Tech",
       type: "website",
       locale: "en_US",
-      images: [{ url: "https://finbyz.tech/", width: 1200, height: 630, alt: pageData?.data?.seo_title }],
+      images: [{ url:"https://finbyz.tech/", width: 1200, height: 630, alt: pageData?.data?.seo_title }],
     },
     twitter: {
       card: "summary_large_image",

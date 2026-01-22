@@ -26,6 +26,9 @@ interface RelatedLinksData {
     title: string
     seo_title: string
     image: string
+    image_seo?: string
+    meta_image?: string
+    blog_intro_image?: string
     animated_image?: string
     video?: string
 }

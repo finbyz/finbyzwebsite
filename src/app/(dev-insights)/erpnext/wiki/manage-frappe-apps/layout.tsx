@@ -5,30 +5,31 @@ import { getFaqs, getPageData } from "@/lib/getPageData";
 import StructureData from "@/components/seo/StructureData";
 
 import { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "ERPNext Backup & Restore Cheat Sheet: Bench Commands, Files & Migration",
-  description: "Quick guide for `bench backup --with-files`, `bench restore` (SQL & Files), and `bench migrate`. Complete cheat sheet for ERPNext administrators.",
-  keywords: "bench restore command, erpnext backup, bench backup with files, bench migrate command, erpnext restore backup, bench backup command, erpnext database backup",
+  title: "Bench App Management Cheat Sheet: Install, Remove & Get Apps",
+  description: "Quick listing of bench commands: `bench get-app`, `bench install-app`, `bench remove-app`, and `bench uninstall-app`. Complete guide for managing Frappe apps.",
+  keywords: "bench remove app, bench uninstall app, bench install app, bench get-app, bench create app, frappe remove app, bench new-app, frappe install custom app",
   authors: [{ name: "FinByz Tech Pvt Ltd" }],
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://finbyz.tech/erpnext/wiki/backup-and-restore-erpnext",
+    canonical: "https://finbyz.tech/erpnext/wiki/manage-frappe-apps",
   },
   openGraph: {
-    title: "ERPNext Backup & Restore Cheat Sheet",
-    description: "Master bench backup and restore commands. Includes --with-files and migration steps.",
-    url: "https://finbyz.tech/erpnext/wiki/backup-and-restore-erpnext",
+    title: "Bench App Management Cheat Sheet",
+    description: "Install, Uninstall, and Manage Frappe Apps with Bench.",
+    url: "https://finbyz.tech/erpnext/wiki/manage-frappe-apps",
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "https://finbyz.tech/images/finbyz-banner.png", width: 1200, height: 630, alt: "ERPNext Backup Cheat Sheet" }],
+    images: [{ url: "https://finbyz.tech/images/finbyz-banner.png", width: 1200, height: 630, alt: "Bench App Commands" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ERPNext Backup & Restore Cheat Sheet",
-    description: "Quick guide for bench backup and restore.",
+    title: "Bench App Management Cheat Sheet",
+    description: "Quick guide for bench app commands.",
     creator: "@finbyz",
     images: ["https://finbyz.tech/images/finbyz-banner.png"],
   },
@@ -48,18 +49,18 @@ export const metadata: Metadata = {
 
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Code Snippet", "backup-&-restore-erpnext");
-  const faqsGroup = await getFaqs("Code Snippet", "backup-&-restore-erpnext");
+  const data = await getPageData("Code Snippet", "create-install/-uninstall-app");
+  const faqsGroup = await getFaqs("Code Snippet", "create-install/-uninstall-app");
 
   return (
     <>
-      
+
       {children}
       {faqsGroup?.faqs.length && <FAQ faqs={faqsGroup.faqs} />}
       {
         (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
       }
-      <StructureData name="SNI-00063" type="code-snippet" />  
+      <StructureData name="SNI-00072" type="code-snippet" />
       <LazyBusinessSlider />
     </>
   );

@@ -22,6 +22,50 @@ const CreateInstallUninstallAppPage = () => {
           "Managing custom applications is a core part of extending the Frappe Framework. The Bench Command Line Interface (CLI) is the essential tool for handling the entire lifecycle of an app, from its creation or retrieval from a version control system to its installation on a specific Frappe site, and its eventual removal. These commands are fundamental for both development and production environments.",
         ]}
       />
+
+      {/* Quick Reference Table */}
+      <div className="my-8 overflow-hidden rounded-lg border bg-background shadow-sm hover:shadow-md transition-shadow">
+        <div className="bg-orange-50 dark:bg-orange-900/20 px-6 py-4 border-b border-orange-100 dark:border-orange-800">
+          <h2 className="text-lg font-semibold flex items-center gap-2 text-orange-900 dark:text-orange-100">
+            ⚡ Quick Command Reference
+          </h2>
+          <p className="text-sm text-orange-800 dark:text-orange-200 mt-1">
+            Common commands for managing Frappe Apps.
+          </p>
+        </div>
+        <div className="p-0 overflow-x-auto">
+          <table className="w-full text-sm text-left">
+            <thead className="bg-muted/50 text-muted-foreground uppercase text-xs">
+              <tr>
+                <th className="px-6 py-3 whitespace-nowrap">Goal</th>
+                <th className="px-6 py-3 whitespace-nowrap">Command</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-border">
+              <tr className="hover:bg-muted/50">
+                <td className="px-6 py-4 font-medium">Download App</td>
+                <td className="px-6 py-4"><code className="bg-muted px-2 py-1 rounded text-primary">bench get-app [repo_url]</code></td>
+              </tr>
+              <tr className="hover:bg-muted/50">
+                <td className="px-6 py-4 font-medium">Install on Site</td>
+                <td className="px-6 py-4"><code className="bg-muted px-2 py-1 rounded text-primary">bench --site [site] install-app [app]</code></td>
+              </tr>
+              <tr className="hover:bg-muted/50">
+                <td className="px-6 py-4 font-medium">Remove from Site</td>
+                <td className="px-6 py-4"><code className="bg-muted px-2 py-1 rounded text-primary">bench --site [site] uninstall-app [app]</code></td>
+              </tr>
+              <tr className="hover:bg-muted/50">
+                <td className="px-6 py-4 font-medium">Delete App Code</td>
+                <td className="px-6 py-4"><code className="bg-muted px-2 py-1 rounded text-primary">bench remove-app [app]</code></td>
+              </tr>
+              <tr className="hover:bg-muted/50">
+                <td className="px-6 py-4 font-medium">Create New App</td>
+                <td className="px-6 py-4"><code className="bg-muted px-2 py-1 rounded text-primary">bench new-app [app_name]</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
       <CodeBlock
         language="bash"
         allowCopy={true}

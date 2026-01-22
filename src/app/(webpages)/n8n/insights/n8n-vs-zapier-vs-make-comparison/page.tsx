@@ -32,6 +32,7 @@ const tocItems = [
     { id: 'feature-comparison', title: 'Feature-by-Feature Comparison' },
     { id: 'pricing-showdown', title: 'Pricing Showdown' },
     { id: 'which-to-choose', title: 'Which Should You Choose?' },
+    { id: 'faq', title: 'Frequently Asked Questions' },
     { id: 'conclusion', title: 'Conclusion' },
 ];
 
@@ -53,6 +54,21 @@ export default function Page() {
                             cover: true,
                         }}
                     >
+                        <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-6">
+                            <h4 className="flex items-center gap-2 font-semibold text-blue-800 dark:text-blue-200 mb-1">
+                                <span className="text-xl">📢</span> Latest Updates (January 2026)
+                            </h4>
+                            <p className="text-sm text-blue-700 dark:text-blue-300 mb-2">
+                                Major updates just released! Zapier AI Agents, n8n 2.0 autosave, and Make's new Enterprise Grid.
+                            </p>
+                            <Link
+                                href="/ai-automation/insights/january-2026-workflow-automation-news"
+                                className="text-sm font-medium text-primary hover:underline inline-flex items-center gap-1"
+                            >
+                                Read the full January 2026 News Report →
+                            </Link>
+                        </div>
+
                         <BlogParagraph>
                             In 2026, workflow automation is not just a nice-to-have—it is the backbone of competitive business operations. Whether you are a startup founder automating customer onboarding or an enterprise IT team orchestrating AI agents, the platform you choose matters more than ever.
                         </BlogParagraph>
@@ -291,7 +307,10 @@ export default function Page() {
                             <div className="bg-card p-6 rounded-lg border shadow-sm">
                                 <h4 className="font-semibold text-lg mb-2">🔗 Integration Ecosystem</h4>
                                 <BlogParagraph>
-                                    <strong>Zapier dominates</strong> with 8,000+ pre-built integrations. If you need to connect niche SaaS tools quickly, Zapier likely has it covered. Make offers 2,000+ solid integrations, while n8n&apos;s 400+ nodes can be extended with custom HTTP requests and code.
+                                    <strong>Zapier dominates</strong> with 8,000+ pre-built integrations. If you need to connect niche SaaS tools quickly, Zapier likely has it covered.
+                                </BlogParagraph>
+                                <BlogParagraph>
+                                    However, if you are searching for <strong>"platforms without integration"</strong>—tools that can connect to <em>any</em> API even if a pre-built node doesn't exist—<strong>n8n is superior</strong>. Its generic "HTTP Request" node allows you to connect to any service using REST/GraphQL, handle custom authentication (OAuth2, API Key), and parse complex JSON responses. Make also supports this, but n8n's developer-friendliness makes it easier to debug these custom connections.
                                 </BlogParagraph>
                             </div>
 
@@ -405,6 +424,32 @@ export default function Page() {
                                         'Work in marketing, e-commerce, or agencies',
                                     ]}
                                 />
+                            </div>
+                        </div>
+                    </BlogSection>
+
+                    {/* Frequently Asked Questions */}
+                    <BlogSection id="faq" title="Frequently Asked Questions (2026 Update)">
+                        <div className="space-y-6 my-6">
+                            <div className="bg-card p-6 rounded-lg border shadow-sm">
+                                <h4 className="font-semibold text-lg mb-2">Q: Is n8n a good Zapier alternative?</h4>
+                                <BlogParagraph>
+                                    <strong>Yes, absolutely.</strong> n8n is often touted as the "fair-code" alternative to Zapier. It is significantly cheaper for high-volume workflows because it charges by <em>execution</em> (workflow run) rather than by <em>task</em> (individual action). If you have technical skills or can hire a developer, n8n offers far more power and flexibility than Zapier for a fraction of the cost.
+                                </BlogParagraph>
+                            </div>
+
+                            <div className="bg-card p-6 rounded-lg border shadow-sm">
+                                <h4 className="font-semibold text-lg mb-2">Q: Can I connect to platforms without an integration?</h4>
+                                <BlogParagraph>
+                                    This is a common pain point with Zapier—if the "Zap" doesn't exist, you are stuck. <strong>n8n and Make excel here.</strong> Both platforms allow you to use generic "HTTP Request" nodes to connect to <em>any</em> service with an API. n8n specifically makes this easy by allowing you to import cURL commands directly into the editor to generate the connection setup instantly.
+                                </BlogParagraph>
+                            </div>
+
+                            <div className="bg-card p-6 rounded-lg border shadow-sm">
+                                <h4 className="font-semibold text-lg mb-2">Q: Which tool is best for AI Agents?</h4>
+                                <BlogParagraph>
+                                    As of January 2026, <strong>n8n 2.0</strong> has the most advanced native support for "Agentic" workflows. With features like the "Tool Node", persistent memory, and native LangChain integration, you can build autonomous agents that can plan and execute multi-step tasks. Zapier and Make have added AI features, but n8n's implementation gives you more control over the "brain" of the agent.
+                                </BlogParagraph>
                             </div>
                         </div>
                     </BlogSection>

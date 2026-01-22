@@ -33,6 +33,7 @@ const tocItems = [
   { id: 'maintenance', title: 'Maintenance & Monitoring' },
   { id: 'cost-analysis', title: 'Cost Analysis' },
   { id: 'when-not-to', title: 'When NOT to Self-Host' },
+  { id: 'faq', title: 'Frequently Asked Questions' },
   { id: 'conclusion', title: 'Conclusion' },
 ];
 
@@ -54,6 +55,21 @@ export default function Page() {
               cover: true,
             }}
           >
+            <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-6">
+              <h4 className="flex items-center gap-2 font-semibold text-blue-800 dark:text-blue-200 mb-1">
+                <span className="text-xl">📢</span> 2026 Hosting Updates
+              </h4>
+              <p className="text-sm text-blue-700 dark:text-blue-300 mb-2">
+                Updated for n8n 2.0! New security best practices, reliable Coolify deployment strategies, and updated cloud vs self-hosted pricing comparisons.
+              </p>
+              <Link
+                href="/ai-automation/insights/january-2026-workflow-automation-news"
+                className="text-sm font-medium text-primary hover:underline inline-flex items-center gap-1"
+              >
+                See all 2026 Workflow Automation News →
+              </Link>
+            </div>
+
             <BlogParagraph>
               In an era where data breaches make headlines daily and regulations like GDPR impose heavy penalties, enterprises are rethinking where their automation data lives. Self-hosting n8n is not just a technical choice—it is a strategic decision about data ownership, compliance, and long-term cost control.
             </BlogParagraph>
@@ -129,35 +145,42 @@ export default function Page() {
                 <tbody className="divide-y divide-border">
                   <tr className="hover:bg-muted/50 transition-colors">
                     <td className="p-4 font-medium">Docker Compose</td>
-                    <td className="p-4">Small-medium teams, quick setup</td>
+                    <td className="p-4">Standard VPS deployment (Hetzner/DigitalOcean)</td>
                     <td className="p-4 text-green-600 dark:text-green-400">Low</td>
                     <td className="p-4">Single server</td>
                   </tr>
                   <tr className="hover:bg-muted/50 transition-colors">
                     <td className="p-4 font-medium">Kubernetes (K8s)</td>
-                    <td className="p-4">Enterprise, high availability</td>
+                    <td className="p-4">Enterprise, high availability & auto-scaling</td>
                     <td className="p-4 text-red-500">High</td>
-                    <td className="p-4">Horizontal scaling</td>
+                    <td className="p-4">Horizontal scaling (multi-node)</td>
                   </tr>
                   <tr className="hover:bg-muted/50 transition-colors">
-                    <td className="p-4 font-medium">Coolify / CapRover</td>
-                    <td className="p-4">Teams wanting PaaS experience</td>
-                    <td className="p-4 text-yellow-600 dark:text-yellow-400">Medium</td>
-                    <td className="p-4">Single server + easy deploys</td>
+                    <td className="p-4 font-medium">Coolify (PaaS)</td>
+                    <td className="p-4">Teams wanting a "Heroku-like" experience on own VPS</td>
+                    <td className="p-4 text-green-600 dark:text-green-400">Very Low</td>
+                    <td className="p-4">Single server + 1-click updates</td>
                   </tr>
                   <tr className="hover:bg-muted/50 transition-colors">
-                    <td className="p-4 font-medium">Cloud VPS (manual)</td>
-                    <td className="p-4">Full control, custom setups</td>
-                    <td className="p-4 text-yellow-600 dark:text-yellow-400">Medium</td>
-                    <td className="p-4">Vertical scaling</td>
+                    <td className="p-4 font-medium">CapRover</td>
+                    <td className="p-4">Simple, lightweight app management</td>
+                    <td className="p-4 text-yellow-600 dark:text-yellow-400">Low</td>
+                    <td className="p-4">Single server</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
             <BlogParagraph>
-              <strong>Our recommendation:</strong> Start with Docker Compose on a cloud VPS. It provides the fastest path to production with minimal complexity. Migrate to Kubernetes only when you need horizontal scaling or have existing K8s infrastructure.
+              <strong>Our recommendation for 2026:</strong>
             </BlogParagraph>
+            <BlogCheckList
+              items={[
+                'For most teams: Use Docker Compose on a standard VPS (DigitalOcean Droplet or Hetzner Cloud). It gives you full control with minimal overhead.',
+                'For ease of use: Use Coolify. It manages the Docker containers for you, provides a UI for environment variables, and handles SSL certificates automatically.',
+                'For large enterprises: Kubernetes is the only choice for true high-availability (HA) setups.',
+              ]}
+            />
           </BlogSection>
 
           {/* Infrastructure Requirements */}
@@ -402,9 +425,9 @@ volumes:
           </BlogSection>
 
           {/* Cost Analysis */}
-          <BlogSection id="cost-analysis" title="Cost Analysis: Cloud vs Self-Hosted">
+          <BlogSection id="cost-analysis" title="Cost Analysis: Cloud vs Self-Hosted (2026)">
             <BlogParagraph>
-              Let us compare the true cost of ownership over 12 months:
+              Let us compare the true cost of ownership over 12 months with updated 2026 pricing:
             </BlogParagraph>
 
             <div className="overflow-x-auto my-6">
@@ -412,8 +435,8 @@ volumes:
                 <thead>
                   <tr className="bg-primary text-primary-foreground">
                     <th className="p-4 text-left font-semibold">Scenario</th>
-                    <th className="p-4 text-right font-semibold">n8n Cloud</th>
-                    <th className="p-4 text-right font-semibold">Self-Hosted</th>
+                    <th className="p-4 text-right font-semibold">n8n Cloud (2026)</th>
+                    <th className="p-4 text-right font-semibold">Self-Hosted (Est.)</th>
                     <th className="p-4 text-right font-semibold">Savings</th>
                   </tr>
                 </thead>
@@ -472,6 +495,31 @@ volumes:
             <BlogParagraph>
               For teams in this situation, consider our <Link href="/ai-automation/insights/n8n-vs-zapier-vs-make-comparison" className="text-primary underline hover:text-primary/80 transition-colors">n8n vs Zapier vs Make comparison</Link> to explore cloud alternatives.
             </BlogParagraph>
+          </BlogSection>
+
+          <BlogSection id="faq" title="Frequently Asked Questions (2026)">
+            <div className="space-y-6 my-6">
+              <div className="bg-card p-6 rounded-lg border shadow-sm">
+                <h4 className="font-semibold text-lg mb-2">Q: Is n8n HIPAA compliant?</h4>
+                <BlogParagraph>
+                  The n8n software itself is HIPAA compliant when self-hosted, as it allows you to configure encryption-at-rest and access controls. However, compliance depends on <em>your</em> infrastructure security (encryption, BAAs with hosting providers). n8n Cloud Enterprise also offers HIPAA compliance.
+                </BlogParagraph>
+              </div>
+
+              <div className="bg-card p-6 rounded-lg border shadow-sm">
+                <h4 className="font-semibold text-lg mb-2">Q: What is the cost of n8n Enterprise Self-Hosted?</h4>
+                <BlogParagraph>
+                  The "Community Edition" is free for internal business use. However, if you need features like SSO, Audit Logs, or advanced IAM, you need an Enterprise license. Pricing is custom but typically starts around $5k-$10k/year depending on requirements.
+                </BlogParagraph>
+              </div>
+
+              <div className="bg-card p-6 rounded-lg border shadow-sm">
+                <h4 className="font-semibold text-lg mb-2">Q: DigitalOcean vs n8n Cloud?</h4>
+                <BlogParagraph>
+                  DigitalOcean is cheaper ($10-20/mo fixed cost) but requires you to manage updates, security, and backups. n8n Cloud is managed but costs more as you scale. We recommend DigitalOcean + Coolify for teams who want cost savings without high complexity.
+                </BlogParagraph>
+              </div>
+            </div>
           </BlogSection>
 
           {/* Conclusion */}
