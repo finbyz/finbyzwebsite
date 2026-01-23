@@ -66,13 +66,13 @@ export default function Page() {
         <BlogContent>
           {/* What is CoA */}
           <BlogSectionWithImage
-          id="what-is-coa"
-          title="Certificate of Analysis (CoA): What It Is and Why It Matters"
-          image={{
-            src:"/images/coa.PNG",
-            alt:"Certificate of Analysis (CoA): What It Is and Why It Matters",
-            cover:true
-          }}
+            id="what-is-coa"
+            title="Certificate of Analysis (CoA): What It Is and Why It Matters"
+            image={{
+              src: "/images/coa.PNG",
+              alt: "Certificate of Analysis (CoA): What It Is and Why It Matters",
+              cover: true
+            }}
           >
             <BlogParagraph>
               A Certificate of Analysis (CoA) is a verified document confirming that a product meets specific quality and safety standards. It is widely used across regulated industries such as pharmaceuticals, chemicals, food and beverages, and biotechnology. A CoA provides a detailed summary of lab test results compared against pre-set standards, offering transparency, trust, and compliance assurance.
@@ -269,9 +269,9 @@ export default function Page() {
               id="step-2"
               title="2. Define Product Specifications"
               image={{
-                src: "/images/Create the Product's Specifications.png",
+                src: "/images/Create-the-Products-Specifications.png",
                 alt: 'Create the Product Specifications',
-                title: "Create-the-Product's-Specifications",
+                title: "Create-the-Products-Specifications",
                 width: 150,
                 height: 150,
               }}
@@ -321,14 +321,15 @@ export default function Page() {
                 Compile all test data and do an analysis to make sure it complies with your product's requirements. This data has to be precise, dependable, and repeatable. Before moving forward, any deviations need to be looked at and fixed.
               </BlogParagraph>
             </BlogSectionWithImage>
+
             {/* Step 5 */}
             <BlogSectionWithImage
               id="step-5"
               title="5. Collect Essential Documentation"
               image={{
-                src: "/images/Collect the Information That's Needed.png",
+                src: "/images/Collect-the-Information-Thats-Needed.png",
                 alt: "Collect the Information That's Needed",
-                title: "Collect-the-Information-That's-Needed",
+                title: "Collect-the-Information-Thats-Needed",
                 width: 150,
                 height: 150,
               }}

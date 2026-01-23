@@ -45,14 +45,14 @@ export default function Page() {
         <BlogContent>
           {/* Introduction */}
           <BlogSectionWithImage
-          id="introduction"
-          title="Introduction"
-          image={{
-            src: '/images/chemical-banner.svg',
-            alt: 'Top 5 Benefits of ERP for Chemical Industry',
-            title: 'Top 5 Benefits of ERP for Chemical Industry',
-            cover:true
-          }}
+            id="introduction"
+            title="Introduction"
+            image={{
+              src: '/images/chemical-banner.svg',
+              alt: 'Top 5 Benefits of ERP for Chemical Industry',
+              title: 'Top 5 Benefits of ERP for Chemical Industry',
+              cover: true
+            }}
           >
             <BlogParagraph>
               If you're part of the chemical industries whether as a business owner or professional you are likely familiar with the unique challenges of chemical manufacturing. Ensuring safety compliance, strict governance, regulatory adherence, and real-time visibility into R&amp;D and production processes are just a few of the many complexities involved.
@@ -95,7 +95,7 @@ export default function Page() {
             id="improved-operations"
             title="2. Improved Operations & Team Collaborations"
             image={{
-              src: '/images/Improved-Operations-&%20Team-Collaborations.svg',
+              src: '/images/Improved-Operations-And-Team-Collaborations.svg',
               alt: 'Improved Operations & Team Collaborations',
               title: 'Improved Operations & Team Collaborations',
               width: 200,

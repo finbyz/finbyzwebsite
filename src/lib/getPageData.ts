@@ -1,7 +1,7 @@
 
-export async function getPageData(doctype:string,route: string): Promise<FinbyzGalleryProps> {
+export async function getPageData(doctype: string, route: string): Promise<FinbyzGalleryProps> {
     const links = await getLinks(doctype, route)
-   
+
     const webpages = await getWebpages(
         links.related_links
             .filter(item => item.reference_doctype === "Web Page")
@@ -44,11 +44,11 @@ export async function getPageData(doctype:string,route: string): Promise<FinbyzG
             title: blog.title
         })
     }
-    
+
     return {
         galleryItems,
         relatedReads,
-        
+
     }
 }
 
@@ -64,11 +64,11 @@ async function getLinks(doctype: string, route: string): Promise<Links> {
         cache: 'force-cache'
     });
     const jsonData = await response.json();
-    if(!response.ok || jsonData?.data?.length == 0){
+    if (!response.ok || jsonData?.data?.length == 0) {
         return {
-            related_links:[],
-            gallery_links:[],
-        
+            related_links: [],
+            gallery_links: [],
+
         }
     }
     const ID = jsonData.data?.[0]['name'] || '';
@@ -83,8 +83,8 @@ async function getLinks(doctype: string, route: string): Promise<Links> {
     const doc = docJson['data']
     return {
         related_links: doc.related_links || [],
-        gallery_links: doc.gallery_links || [],   
-       
+        gallery_links: doc.gallery_links || [],
+
     }
 }
 
@@ -93,7 +93,7 @@ async function getWebpages(names: string[]): Promise<RelatedLinksData[]> {
 
     const webpagePayload = `${process.env.FRAPPE_URL}/api/resource/Web Page?filters=${encodeURIComponent(JSON.stringify([
         ["name", "in", names]
-    ]))}&fields=${encodeURIComponent(JSON.stringify(["name", "route", "title", "seo_title", "image", "video"]))}`;
+    ]))}&fields=${encodeURIComponent(JSON.stringify(["name", "route", "title", "seo_title", "image", "video", "meta_image"]))}`;
 
     const webpagesResponse = await fetch(webpagePayload, {
         headers: {
@@ -110,7 +110,7 @@ async function getWebpages(names: string[]): Promise<RelatedLinksData[]> {
             route: webpage.route,
             title: webpage.title,
             seo_title: webpage.seo_title,
-            image: webpage.image,
+            image: webpage.image || webpage.meta_image || '',
             video: webpage.video
         }
     })
@@ -174,51 +174,51 @@ async function getGalleries(names: string[]): Promise<RelatedLinksData[]> {
 
 
 export async function getFaqs(doctype: string, route: string): Promise<FAQGroup | null> {
-  try {
-    const frappeUrl = process.env.FRAPPE_URL;
+    try {
+        const frappeUrl = process.env.FRAPPE_URL;
 
-    const docResponse = await fetch(
-      `${frappeUrl}/api/resource/${doctype}?filters=${encodeURIComponent(
-        JSON.stringify([["route", "=", route]])
-      )}`,
-      {
-        headers: {
-            "Authorization": `token ${process.env.FRAPPE_API_KEY}:${process.env.FRAPPE_API_SECRET}`,
-        },
-      }
-    );
+        const docResponse = await fetch(
+            `${frappeUrl}/api/resource/${doctype}?filters=${encodeURIComponent(
+                JSON.stringify([["route", "=", route]])
+            )}`,
+            {
+                headers: {
+                    "Authorization": `token ${process.env.FRAPPE_API_KEY}:${process.env.FRAPPE_API_SECRET}`,
+                },
+            }
+        );
 
-    const docJson = await docResponse.json();
-    const docData = docJson.data?.[0];
-    if (!docData) return null;
+        const docJson = await docResponse.json();
+        const docData = docJson.data?.[0];
+        if (!docData) return null;
 
-    const fullDocResponse = await fetch(
-      `${frappeUrl}/api/resource/${doctype}/${docData.name}`,
-      {
-        headers: {
-            "Authorization": `token ${process.env.FRAPPE_API_KEY}:${process.env.FRAPPE_API_SECRET}`,
-        },
-      }
-    );
+        const fullDocResponse = await fetch(
+            `${frappeUrl}/api/resource/${doctype}/${docData.name}`,
+            {
+                headers: {
+                    "Authorization": `token ${process.env.FRAPPE_API_KEY}:${process.env.FRAPPE_API_SECRET}`,
+                },
+            }
+        );
 
-    const fullDocJson = await fullDocResponse.json();
-    const data = fullDocJson.data;
+        const fullDocJson = await fullDocResponse.json();
+        const data = fullDocJson.data;
 
-    if (!data) return null;
+        if (!data) return null;
 
-    const faqs = (data.faqs || []).map((faq: any): FAQ => ({
-      id: faq.idx,
-      name: faq.name,
-      question: faq.question,
-      answer: faq.answer,
-    }));
+        const faqs = (data.faqs || []).map((faq: any): FAQ => ({
+            id: faq.idx,
+            name: faq.name,
+            question: faq.question,
+            answer: faq.answer,
+        }));
 
-    return {
-      name: data.name,
-      faqs: faqs,
-    };
-  } catch (error) {
-    console.error("FAQ fetch error:", error);
-    return null;
-  }
+        return {
+            name: data.name,
+            faqs: faqs,
+        };
+    } catch (error) {
+        console.error("FAQ fetch error:", error);
+        return null;
+    }
 }

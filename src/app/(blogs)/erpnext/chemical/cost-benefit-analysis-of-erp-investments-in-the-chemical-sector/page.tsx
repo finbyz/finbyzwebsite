@@ -87,7 +87,7 @@ export default function Page() {
             id="implementation-costs"
             title="Implementation Costs"
             image={{
-              src: '/images/Price of Implementation.png',
+              src: '/images/Precision.svg',
               alt: 'Price-of-Implementation',
               title: 'Price-of-Implementation',
               width: 150,

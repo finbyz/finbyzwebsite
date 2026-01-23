@@ -51,7 +51,7 @@ export default function Page() {
             id="introduction"
             title="Introduction"
             image={{
-              src: '/images/Line Banner-37.png',
+              src: '/images/Line Banner-41 (2)_11zon.png',
               alt: 'The Ultimate ERP Go Live Plan',
               title: 'The Ultimate ERP Go Live Plan',
               cover: true,

@@ -51,7 +51,7 @@ export default function Page() {
             id="introduction"
             title="Introduction"
             image={{
-              src:"files/how-erp-improves-business.svg",
+              src:"/images/how-erp-improves-business.svg",
               alt:"How ERP Enhances Business Performance",
               cover:true
             }}

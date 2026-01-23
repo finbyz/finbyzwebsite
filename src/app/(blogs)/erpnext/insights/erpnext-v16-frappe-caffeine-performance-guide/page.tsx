@@ -43,7 +43,7 @@ export default function Page() {
             id="introduction"
             title="Introduction"
             image={{
-              src: "/images/erpnext-logo.svg",
+              src: "/images/ERPNext-logo1.png",
               alt: "ERPNext Version 16 Performance",
               cover: true
             }}
@@ -79,7 +79,7 @@ export default function Page() {
             id="redis-architecture"
             title="Redis Caching Architecture"
             image={{
-              src: "/images/speed-optimization.svg",
+              src: "/images/speed.svg",
               alt: "Redis Caching Architecture",
               title: "Optimized Redis Logic",
               width: 200,

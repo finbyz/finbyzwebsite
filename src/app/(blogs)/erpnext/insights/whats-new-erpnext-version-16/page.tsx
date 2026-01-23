@@ -46,7 +46,7 @@ export default function Page() {
             id="introduction"
             title="Introduction"
             image={{
-              src: "/images/erpnext-logo.svg",
+              src: "/images/ERPNext-logo1.png",
               alt: "ERPNext Version 16",
               cover: true
             }}
@@ -64,7 +64,7 @@ export default function Page() {
             id="frappe-caffeine"
             title="Performance Revolution: Frappe Caffeine"
             image={{
-              src: '/images/speed-optimization.svg',
+              src: '/images/speed.svg',
               alt: 'Frappe Caffeine Performance Architecture',
               title: 'Frappe Caffeine delivers 2x faster performance',
               width: 200,
@@ -96,7 +96,7 @@ export default function Page() {
             id="redesigned-ui"
             title="Redesigned User Interface"
             image={{
-              src: '/images/ui-design.svg',
+              src: '/images/UI (1).svg',
               alt: 'ERPNext v16 Modern Interface',
               title: 'Modern, intuitive interface design',
               width: 200,
@@ -126,7 +126,7 @@ export default function Page() {
             id="stock-reservation"
             title="Stock Reservation System"
             image={{
-              src: '/images/inventory-management.svg',
+              src: '/images/inventory.svg',
               alt: 'Stock Reservation System',
               title: 'Advanced inventory reservation capabilities',
               width: 200,
@@ -159,7 +159,7 @@ export default function Page() {
             id="mrp-manufacturing"
             title="MRP & Manufacturing Enhancements"
             image={{
-              src: '/images/manufacturing.svg',
+              src: '/images/module-manufacturing.svg',
               alt: 'Manufacturing Planning Improvements',
               title: 'Enhanced production planning capabilities',
               width: 200,
@@ -192,7 +192,7 @@ export default function Page() {
             id="hrms-v16"
             title="HRMS v16 Features"
             image={{
-              src: '/images/hr-management.svg',
+              src: '/images/module-hr.svg',
               alt: 'HRMS v16 Human Resources',
               title: 'Comprehensive HR management features',
               width: 200,

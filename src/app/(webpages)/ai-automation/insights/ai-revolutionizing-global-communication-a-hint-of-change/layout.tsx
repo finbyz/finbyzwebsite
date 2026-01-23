@@ -53,10 +53,10 @@ export async function generateMetadata(): Promise<Metadata> {
     }
   }
 }
-const faqsGroup = await getFaqs("Blog Post", "ai-revolutionizing-global-communication-a-hint-of-change");
+const faqsGroup = await getFaqs("Blog Post", "ai-automation/insights/ai-revolutionizing-global-communication-a-hint-of-change");
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Blog Post", "ai-revolutionizing-global-communication-a-hint-of-change");
+  const data = await getPageData("Blog Post", "ai-automation/insights/ai-revolutionizing-global-communication-a-hint-of-change");
 
   return (
     <>

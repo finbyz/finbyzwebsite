@@ -307,7 +307,7 @@ export default function Page() {
             id="vendor-support"
             title="Vendor Support and Reputation"
             image={{
-              src: '/images/Improved-Operations-&%20Team-Collaborations.svg',
+              src: '/images/Improved-Operations-And-Team-Collaborations.svg',
               alt: 'Vendor Support and Reputation',
               title: 'Vendor Support and Reputation',
             }}

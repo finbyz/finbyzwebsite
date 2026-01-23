@@ -501,7 +501,7 @@ export default async function JobOpeningPage({ params }: PageProps) {
 
                 <div className="mt-10 py-6 border-t border-gray-200">
                     <a
-                        href={`/job-application?job_title=${encodeURIComponent(
+                        href={`careers/apply?job_title=${encodeURIComponent(
                             job.job_title || job.name
                         )}`}
                         className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-orange-500 text-white hover:bg-orange-600 transition-colors shadow"

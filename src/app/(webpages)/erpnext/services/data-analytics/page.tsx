@@ -52,10 +52,10 @@ export default function Page() {
       description:
         'Empower every team member with real-time, accurate insights using our advanced data analytics solutions. Leverage sophisticated data discovery, visualization tools, and intuitive UX to make faster, informed decisions. Gain a 360-degree understanding of your business, customers, and market trends.',
       // icon: <BarChart3 className="w-8 h-8 text-primary mb-2" />
-      src: "Business Intelligence.png"
+      src: "/Business Intelligence.png"
     },
     {
-      title: 'Data Visualizations',
+      title: '/Data Visualizations.png',
       description:
         'Powerful data visualizations are at the heart of effective data analytics. Our custom dashboards and visuals highlight key metrics, reveal emerging patterns, and enhance CRM analytics for better customer understanding. Drive collaboration, insights, and strategic actions through clear, interactive visual narratives.',
       // icon: <AreaChart className="w-8 h-8 text-primary mb-2" />
@@ -66,7 +66,7 @@ export default function Page() {
       description:
         'Build a forward-looking data strategy with Finbyz — your partner in intelligent growth. Our consultants provide unbiased, platform-agnostic guidance to align analytics with your business vision. From CRM analytics integration to enterprise-wide solutions, we help you plan, prioritize, and implement initiatives that deliver measurable impact.',
       // icon: <Route className="w-8 h-8 text-primary mb-2" />
-      src: "Strategy.png"
+      src: "/Strategy.png"
 
     }
   ];

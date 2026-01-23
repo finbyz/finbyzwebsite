@@ -27,7 +27,7 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'Investment Portfolio Management in ERPNext',
-          src: 'portfolio management1.svg',
+          src: '/portfolio management1.svg',
 
         }}
       />
