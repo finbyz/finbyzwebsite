@@ -38,11 +38,13 @@ function createJobPostingData(job: any) {
         if (Array.isArray(skills)) {
             return skills
                 .map((s) => (typeof s === 'string' ? s : ''))
-                .map((s) => s.trim())
+                .map((s) => s.replace(/<[^>]+>/g, '').trim()) // Strip HTML tags
                 .filter(Boolean);
         }
         if (typeof skills === 'string') {
-            return skills
+            // First remove HTML tags, then split by common delimiters
+            const cleanedSkills = skills.replace(/<[^>]+>/g, ' '); // Replace HTML tags with space
+            return cleanedSkills
                 .split(/[,\n]+/)
                 .map((s) => s.trim())
                 .filter(Boolean);
@@ -393,11 +395,13 @@ export default async function JobOpeningPage({ params }: PageProps) {
         if (Array.isArray(skills)) {
             return skills
                 .map((s) => (typeof s === 'string' ? s : ''))
-                .map((s) => s.trim())
+                .map((s) => s.replace(/<[^>]+>/g, '').trim()) // Strip HTML tags
                 .filter(Boolean);
         }
         if (typeof skills === 'string') {
-            return skills
+            // First remove HTML tags, then split by common delimiters
+            const cleanedSkills = skills.replace(/<[^>]+>/g, ' '); // Replace HTML tags with space
+            return cleanedSkills
                 .split(/[,\n]+/)
                 .map((s) => s.trim())
                 .filter(Boolean);
