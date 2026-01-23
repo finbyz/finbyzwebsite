@@ -295,7 +295,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     const jobTitle = job.job_title || job.name;
     const siteUrl = 'https://finbyz.tech';
-    const jobUrl = `${siteUrl}/jobs/${slug}`;
+    const jobUrl = `${siteUrl}/careers/job-openings/${slug}`;
     const imageUrl = job.image
         ? job.image.startsWith('http')
             ? job.image
