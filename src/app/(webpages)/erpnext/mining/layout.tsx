@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://finbyz.tech/erp-for-mining-industry",
+    canonical: "https://finbyz.tech/erpnext/mining",
   },
   openGraph: {
     title: "Mining ERP Solutions Efficient Operations Streamlined",
     description: "Streamline your mining operations with specialized ERP solutions. Finbyz Tech offers tailored ERPNext for inventory, logistics, and compliance, ensuring efficient mine-to-market processes and profitability.",
-    url: "https://finbyz.tech/erp-for-mining-industry",
+    url: "https://finbyz.tech/erpnext/mining",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",

@@ -14,12 +14,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://finbyz.tech/ai-powered-resume-ranker",
+    canonical: "https://finbyz.tech/erpnext/ai/ai-powered-resume-ranker",
   },
   openGraph: {
     title: "AI-Powered Resume Ranker | Smart Candidate Scoring & Recruitment Automation by FinByz Tech",
     description: "Streamline recruitment with an AI-powered resume ranking system that enhances candidate evaluation and decision-making.",
-    url: "https://finbyz.tech/ai-powered-resume-ranker",
+    url: "https://finbyz.tech/erpnext/ai/ai-powered-resume-ranker",
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",

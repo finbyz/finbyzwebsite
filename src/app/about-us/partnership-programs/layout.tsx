@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://finbyz.tech/partnership-programs",
+    canonical: "https://finbyz.tech/about-us/partnership-programs",
   },
   openGraph: {
     title: "Grow Your Business Strategic Technology Partnership Programs",
     description: "Unlock new opportunities and expand your reach by partnering with a leading IT consulting and software development firm. Explore our collaboration programs for mutual growth.",
-    url: "https://finbyz.tech/partnership-programs",
+    url: "https://finbyz.tech/about-us/partnership-programs",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",

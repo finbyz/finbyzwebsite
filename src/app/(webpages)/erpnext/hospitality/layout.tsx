@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://finbyz.tech/erp-for-travel-hospitality",
+    canonical: "https://finbyz.tech/erpnext/hospitality",
   },
   openGraph: {
     title: "ERPNext for Hotels Resorts Travel Agencies Hospitality",
     description: "Streamline hospitality operations with tailored ERPNext solutions. Manage bookings, guests, inventory, and finance efficiently for hotels, resorts, and travel agencies.",
-    url: "https://finbyz.tech/erp-for-travel-hospitality",
+    url: "https://finbyz.tech/erpnext/hospitality",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",

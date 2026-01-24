@@ -14,12 +14,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://finbyz.tech/erp-healthcare-industry",
+    canonical: "https://finbyz.tech/erpnext/healthcare",
   },
   openGraph: {
     title: "ERP Solutions for Healthcare Providers Streamline Operations",
     description: "Transform healthcare operations with robust ERP solutions. Enhance patient care, streamline billing, manage inventory, and ensure compliance with Finbyz Tech\'s tailored ERPNext implementations.",
-    url: "https://finbyz.tech/erp-healthcare-industry",
+    url: "https://finbyz.tech/erpnext/healthcare",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",

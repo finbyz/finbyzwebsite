@@ -11,6 +11,7 @@ const pageData = await fetchFrappeSchemaData({
     name: "web-app-development",
     type: "webpage"
 })
+  console.log(`${process.env.FRAPPE_URL}/${pageData?.data?.meta_image || pageData?.data?.svg_image || pageData?.data?.image || pageData?.data?.animated_image}`)
 
 return {
   title: pageData?.data?.title,
@@ -29,7 +30,7 @@ return {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-      images: [{ url: `${process.env.FRAPPE_URL}/${pageData?.data?.meta_image}`, width: 1200, height: 630, alt: pageData?.data?.seo_title }],
+    images: [{ url: `${process.env.FRAPPE_URL}/${pageData?.data?.meta_image || pageData?.data?.svg_image || pageData?.data?.image || pageData?.data?.animated_image}`, width: 1200, height: 630, alt: pageData?.data?.seo_title }],
   },
   twitter: {
     card: "summary_large_image",

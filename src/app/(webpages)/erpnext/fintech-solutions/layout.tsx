@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://finbyz.tech/fintech-solutions",
+    canonical: "https://finbyz.tech/erpnext/fintech-solutions",
   },
   openGraph: {
     title: "Fintech ERPNext & Custom Software Solutions for Financial Tech",
     description: "Empower your FinTech business with robust ERPNext and custom software solutions. We deliver AI automation, secure platforms, and expert consulting for financial technology growth.",
-    url: "https://finbyz.tech/fintech-solutions",
+    url: "https://finbyz.tech/erpnext/fintech-solutions",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",

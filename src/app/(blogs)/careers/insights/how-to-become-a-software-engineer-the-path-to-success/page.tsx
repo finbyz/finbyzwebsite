@@ -55,7 +55,7 @@ export default function Page() {
             }}
           >
             <BlogParagraph>
-              Wondering how to become a software engineer? It's one of the most sought-after careers in today’s technology-driven world. Software engineers are at the forefront of innovation, creating applications that shape how we live and work. While the path may seem challenging, with the right mindset and persistence, you can succeed. This guide walks you through the key steps to mastering <a href="/erpnext/services/erpnext-service-providersoftware-development" className="text-primary underline hover:text-primary/80 transition-colors">software development</a>.
+              Wondering how to become a software engineer? It's one of the most sought-after careers in today’s technology-driven world. Software engineers are at the forefront of innovation, creating applications that shape how we live and work. While the path may seem challenging, with the right mindset and persistence, you can succeed. This guide walks you through the key steps to mastering <a href="/erpnext/services/erpnext-service-provider" className="text-primary underline hover:text-primary/80 transition-colors">software development</a>.
             </BlogParagraph>
           </BlogSectionWithImage>
 

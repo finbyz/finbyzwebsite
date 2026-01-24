@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://finbyz.tech/erp-for-pharmaceuticals",
+    canonical: "https://finbyz.tech/erpnext/pharmaceutical",
   },
   openGraph: {
     title: "ERP for Pharmaceuticals Streamline Operations & Compliance",
     description: "Transform your pharmaceutical operations with tailored ERPNext solutions. Manage production, inventory, and ensure regulatory compliance efficiently. Boost efficiency and reduce costs.",
-    url: "https://finbyz.tech/erp-for-pharmaceuticals",
+    url: "https://finbyz.tech/erpnext/pharmaceutical",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",

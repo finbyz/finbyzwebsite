@@ -81,7 +81,7 @@ export default function Page() {
               <strong>3. Configuration:</strong> Business processes are structured, and system settings are configured by vendor consultants. However, the core team remains actively involved.
             </BlogParagraph>
             <BlogParagraph>
-              <strong>4. Conference Room Pilot:</strong> The configured system is tested in real-world scenarios through Conference Room Pilots (CRP) and refined to ensure readiness for production. <a href="/erpnext/services/erpnext-service-providersoftware-development" className="text-primary underline hover:text-primary/80 transition-colors">Software development</a> modifications may also be implemented at this stage.
+              <strong>4. Conference Room Pilot:</strong> The configured system is tested in real-world scenarios through Conference Room Pilots (CRP) and refined to ensure readiness for production. <a href="/erpnext/services/erpnext-service-provider" className="text-primary underline hover:text-primary/80 transition-colors">Software development</a> modifications may also be implemented at this stage.
             </BlogParagraph>
             <BlogParagraph>
               <strong>5. Cut-over Activities:</strong> Final data migration and user training are conducted. Vendor consultants support the business in preparing for the go-live.

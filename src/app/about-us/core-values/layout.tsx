@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://finbyz.tech/core-values",
+    canonical: "https://finbyz.tech/about-us/core-values",
   },
   openGraph: {
     title: "Our Core Values Driving Innovation for Business Success",
     description: "Discover the foundational values that define our approach to IT consulting, ERPNext implementation, and AI automation. Experience innovation, integrity, and client success.",
-    url: "https://finbyz.tech/core-values",
+    url: "https://finbyz.tech/about-us/core-values",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",

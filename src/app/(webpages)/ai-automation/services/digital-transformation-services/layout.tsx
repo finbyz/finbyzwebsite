@@ -15,12 +15,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://finbyz.tech/digital-transformation-services",
+    canonical: "https://finbyz.tech/ai-automation/services/digital-transformation-services",
   },
   openGraph: {
     title: "Digital Transformation Solutions ERPNext & AI Automation",
     description: "Unlock growth with comprehensive digital transformation services. Finbyz Tech specializes in ERPNext, AI automation, custom software, and strategic IT consulting to modernize your business operations.",
-    url: "https://finbyz.tech/digital-transformation-services",
+    url: "https://finbyz.tech/ai-automation/services/digital-transformation-services",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",

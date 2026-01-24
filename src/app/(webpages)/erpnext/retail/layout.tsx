@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://finbyz.tech/erp-for-retail-industry",
+    canonical: "https://finbyz.tech/erpnext/retail",
   },
   openGraph: {
     title: "Retail ERP Solutions Streamline Operations & Boost Sales",
     description: "Transform your retail business with ERPNext solutions. Optimize inventory, POS, supply chain, and customer experience for enhanced efficiency and growth.",
-    url: "https://finbyz.tech/erp-for-retail-industry",
+    url: "https://finbyz.tech/erpnext/retail",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",

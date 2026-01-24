@@ -19,13 +19,13 @@ export const metadata: Metadata = {
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://finbyz.tech/erp-migration",
+    canonical: "https://finbyz.tech/erpnext/services/erp-migration",
   },
   openGraph: {
     title: "ERP Migration to ERPNext | SAP, Oracle, Tally Migration Experts",
     description:
       "Specialized ERP migration services ensuring 100% data accuracy, minimal downtime, and seamless transition to ERPNext.",
-    url: "https://finbyz.tech/erp-migration",
+    url: "https://finbyz.tech/erpnext/services/erp-migration",
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",

@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://finbyz.tech/process-consulting",
+    canonical: "https://finbyz.tech/erpnext/services/process-consulting",
   },
   openGraph: {
     title: "Optimize Business Processes with Expert Consulting & ERPNext",
     description: "Streamline operations, boost efficiency, and maximize ERPNext with expert process consulting. Finbyz Tech offers tailored solutions for sustainable business growth.",
-    url: "https://finbyz.tech/process-consulting",
+    url: "https://finbyz.tech/erpnext/services/process-consulting",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",

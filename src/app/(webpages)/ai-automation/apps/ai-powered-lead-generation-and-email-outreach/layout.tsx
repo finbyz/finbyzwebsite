@@ -18,12 +18,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://finbyz.tech/ai-powered-lead-generation-and-email-outreach",
+    canonical: "https://finbyz.tech/ai-automation/apps/ai-powered-lead-generation-and-email-outreach",
   },
   openGraph: {
     title: "AI-Powered Lead Generation and Email Outreach",
     description: "Streamline your lead generation and outreach with AI-driven research and automated email drafting for higher conversion rates",
-    url: "https://finbyz.tech/ai-powered-lead-generation-and-email-outreach",
+    url: "https://finbyz.tech/ai-automation/apps/ai-powered-lead-generation-and-email-outreach",
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",

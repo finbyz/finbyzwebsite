@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://finbyz.tech/why-join-finbyz",
+    canonical: "https://finbyz.tech/careers/why-join-finbyz",
   },
   openGraph: {
     title: "Career Growth & Innovation at a Leading Tech Company",
     description: "Explore dynamic career opportunities at a top ERPNext & AI automation firm. Join a team passionate about innovation, learning, and making a real business impact.",
-    url: "https://finbyz.tech/why-join-finbyz",
+    url: "https://finbyz.tech/careers/why-join-finbyz",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",

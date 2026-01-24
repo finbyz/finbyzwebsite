@@ -22,7 +22,7 @@ const heroData = {
   heroImage: {
     alt: 'Smart Card Scanner Overview',
     // FIX: Replaced 'undefined' with the correctly transformed image URL to prevent the error.
-    src: '/api/fb/n/files/ChatGPT%20Image%20Oct%2014,%202025,%2003_00_34%20PM.png',
+    src: '/web-api/fb/n/files/ChatGPT%20Image%20Oct%2014,%202025,%2003_00_34%20PM.png',
   },
   features: [
     {

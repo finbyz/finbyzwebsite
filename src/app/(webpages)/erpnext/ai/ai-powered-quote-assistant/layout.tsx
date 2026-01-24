@@ -14,12 +14,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://finbyz.tech/ai-powered-quote-assistant",
+    canonical: "https://finbyz.tech/erpnext/ai/ai-powered-quote-assistant",
   },
   openGraph: {
     title: "Quote Assistant: Automate Sales Quotations with AI-Powered Efficiency",
     description: "Quote Assistant by FinByz Tech revolutionizes the sales quotation process through AI-driven automation. It intelligently reads customer inquiries, extracts relevant data from emails and attachments, and generates accurate draft quotations within ERPNext. The system auto-maps items, analyzes historical purchase data, and assists sales teams in crafting precise and timely responses — ensuring faster turnaround, higher conversion rates, and improved sales efficiency",
-    url: "https://finbyz.tech/ai-powered-quote-assistant",
+    url: "https://finbyz.tech/erpnext/ai/ai-powered-quote-assistant",
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",

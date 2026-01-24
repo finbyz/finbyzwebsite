@@ -17,7 +17,7 @@ export default function Page() {
     window.location.href = '/contact';
   };
   const handleLearnMore = () => {
-    window.location.href = '/erpnext/services/erpnext-service-providerweb-application-development';
+    window.location.href = '/services/web-application-development';
   };
 
   return (
@@ -48,7 +48,7 @@ export default function Page() {
               At Finbyz Tech, we believe in harnessing the power of the internet to create innovative and impactful web applications that drive growth and transformation for our clients. As a trusted partner, we bring cutting-edge technology, deep industry expertise, and a relentless focus on delivering exceptional results to every project we undertake. Our mission is to unlock the full potential of the digital landscape for our clients and help them achieve their business objectives through our tailored web development solutions.
             </p>
             <p>
-              Our <a href="/erpnext/services/erpnext-service-providerweb-application-development" className="text-primary underline hover:text-primary-700 transition">web application development</a> services cover everything from CMS-enabled websites to the most sophisticated web-based internet applications, e-commerce portals, social networking site development, and more. Whatever your needs may be, we're here to help you achieve your goals.
+              Our <a href="/services/web-application-development" className="text-primary underline hover:text-primary-700 transition">web application development</a> services cover everything from CMS-enabled websites to the most sophisticated web-based internet applications, e-commerce portals, social networking site development, and more. Whatever your needs may be, we're here to help you achieve your goals.
             </p>
             <p>
               We are passionate about using cutting-edge technologies such as PHP, MySQL, and ASP.NET to bring your vision to life. With years of experience and a track record of success, we have the expertise to take on projects of all sizes - from small businesses to large corporations.

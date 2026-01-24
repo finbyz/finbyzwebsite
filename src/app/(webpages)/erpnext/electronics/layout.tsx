@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://finbyz.tech/erp-for-electronics-industry",
+    canonical: "https://finbyz.tech/erpnext/electronics",
   },
   openGraph: {
     title: "ERP Solutions for Electronics Manufacturing & Supply Chain",
     description: "Optimize electronics manufacturing, inventory, and global supply chains with powerful ERP solutions. Streamline production, enhance quality, and reduce costs. Get a demo today!",
-    url: "https://finbyz.tech/erp-for-electronics-industry",
+    url: "https://finbyz.tech/erpnext/electronics",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",

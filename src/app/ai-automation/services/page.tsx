@@ -18,7 +18,7 @@ export default function AIServicesPage() {
 
   const services = [
     { title: 'AI Consulting', icon: Users, href: '/ai-automation/services/ai-consulting', description: 'Expert guidance to help you identify high-impact AI opportunities' },
-    { title: 'Workflow Automation', icon: Zap, href: '/ai-automation/services/workflow-automation', description: 'Streamline repetitive tasks with custom automated workflows' },
+    { title: 'Workflow Automation', icon: Zap, href: '/ai-automation/apps', description: 'Streamline repetitive tasks with custom automated workflows' },
     { title: 'Custom AI Development', icon: Cog, href: '/ai-automation/services/custom-ai-development', description: 'Tailor-made AI solutions designed for your specific business needs' },
     { title: 'Data Analytics & Insights', icon: BarChart3, href: '/ai-automation/services/data-analytics', description: 'Turn raw data into actionable intelligence with AI-powered analytics' },
     { title: 'AI Implementation', icon: Wrench, href: '/ai-automation/services/implementation', description: 'End-to-end deployment and integration of AI systems' }

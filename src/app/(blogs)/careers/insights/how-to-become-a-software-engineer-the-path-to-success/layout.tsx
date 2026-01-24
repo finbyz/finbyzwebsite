@@ -6,7 +6,6 @@ import { fetchFrappeSchemaData } from "@/lib/fetchFrappeSeoData";
 import { getFaqs, getPageData } from "@/lib/getPageData";
 import { Metadata } from "next";
 import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
 import InquiryForm from "@/components/ui/InquiryForm";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -14,6 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
     name: "how-to-become-a-software-engineer-the-path-to-success",
     type: "blog"
   })
+  console.log(`${process.env.FRAPPE_URL}/${pageData?.data?.meta_image}`)
   return {
     title: pageData?.data?.title,
     description: pageData?.data?.description,
@@ -31,7 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "Finbyz Tech",
       type: "website",
       locale: "en_US",
-      images: [{ url: `${process.env.FRAPPE_URL}/${pageData?.data?.meta_image}`, width: 1200, height: 630, alt: pageData?.data?.seo_title }],
+      images: [{ url: `/images/engggpng.PNG`, width: 1200, height: 630, alt: pageData?.data?.seo_title }],
     },
     twitter: {
       card: "summary_large_image",

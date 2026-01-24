@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://finbyz.tech/erp-for-textile-industry",
+    canonical: "https://finbyz.tech/erpnext/textile",
   },
   openGraph: {
     title: "ERP Solutions for Textile Manufacturing & Distribution",
     description: "Optimize textile manufacturing, supply chain, and operations with tailored ERP solutions. Enhance efficiency, reduce costs, and boost profitability for your textile business.",
-    url: "https://finbyz.tech/erp-for-textile-industry",
+    url: "https://finbyz.tech/erpnext/textile",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",

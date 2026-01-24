@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://finbyz.tech/start-your-erp-journey",
+    canonical: "https://finbyz.tech/erpnext/services/start-your-erp-journey",
   },
   openGraph: {
     title: "Begin Your Digital Transformation Journey with ERPNext Adoption",
     description: "Unlock business growth with expert ERPNext adoption and digital transformation services. Guided implementation for every stage of your business journey.",
-    url: "https://finbyz.tech/start-your-erp-journey",
+    url: "https://finbyz.tech/erpnext/services/start-your-erp-journey",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",

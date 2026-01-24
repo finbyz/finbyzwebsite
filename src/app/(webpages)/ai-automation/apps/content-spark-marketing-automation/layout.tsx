@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://finbyz.tech/content-spark-marketing-automation",
+    canonical: "https://finbyz.tech/ai-automation/apps/content-spark-marketing-automation",
   },
   openGraph: {
     title: "Content Spark | Streamline Marketing Automation with AI-Powered Content Creation",
     description: "Content Spark is an AI-powered marketing automation platform that helps teams create, plan, and publish content faster. Maintain brand consistency, automate content ideation, and scale marketing effortlessly with AI.",
-    url: "https://finbyz.tech/content-spark-marketing-automation",
+    url: "https://finbyz.tech/ai-automation/apps/content-spark-marketing-automation",
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",

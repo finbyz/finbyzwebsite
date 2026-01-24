@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://finbyz.tech/erpnext-use-cases",
+    canonical: "https://finbyz.tech/erpnext/case-studies",
   },
   openGraph: {
     title: "ERPNext Real-World Use Cases Industry-Specific Solutions",
     description: "Discover how ERPNext transforms operations across diverse industries. Explore real-world use cases in manufacturing, EXIM, logistics, and more with expert implementation from a certified partner.",
-    url: "https://finbyz.tech/erpnext-use-cases",
+    url: "https://finbyz.tech/erpnext/case-studies",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",

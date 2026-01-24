@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://finbyz.tech/ai-sales-call-recording-and-analysis-in-erpnext",
+    canonical: "https://finbyz.tech/ai-automation/apps/sales-call-recording-and-analysis-in-erpnext",
   },
   openGraph: {
     title: "AI Sales Call Recording & Analysis in ERPNext | Automate Transcripts & Feedback with AI",
     description: "Record and analyze sales calls in ERPNext with AI. Get automated transcripts, actionable feedback, and improved outreach scripts to boost sales performance and coaching efficiency.",
-    url: "https://finbyz.tech/ai-sales-call-recording-and-analysis-in-erpnext",
+    url: "https://finbyz.tech/ai-automation/apps/sales-call-recording-and-analysis-in-erpnext",
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",

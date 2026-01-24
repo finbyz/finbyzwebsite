@@ -10,12 +10,12 @@ export const metadata: Metadata = {
     creator: "FinByz Tech",
     publisher: "FinByz Tech",
     alternates: {
-        canonical: "https://finbyz.tech/erpnext-performance-optimization",
+        canonical: "https://finbyz.tech/erpnext/services/performance-optimization",
     },
     openGraph: {
         title: "ERPNext Performance Optimization for Speed & Efficiency",
         description: "Enhance your ERPNext system\'s speed, efficiency, and reliability with expert performance optimization. Finbyz Tec ensures scalable, high-performing ERP solutions for your business success.",
-        url: "https://finbyz.tech/erpnext-performance-optimization",
+        url: "https://finbyz.tech/erpnext/services/performance-optimization",
         siteName: "FinByz Tech",
         type: "website",
         locale: "en_US",

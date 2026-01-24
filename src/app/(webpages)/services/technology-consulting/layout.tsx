@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://finbyz.tech/technology-consulting",
+    canonical: "https://finbyz.tech/services/technology-consulting",
   },
   openGraph: {
     title: "Expert Technology Consulting & Digital Transformation Strategy",
     description: "Unlock growth with Finbyz Tech\'s expert technology consulting. We guide businesses through digital transformation, ERPNext adoption, and IT strategy for measurable success.",
-    url: "https://finbyz.tech/technology-consulting",
+    url: "https://finbyz.tech/services/technology-consulting",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",

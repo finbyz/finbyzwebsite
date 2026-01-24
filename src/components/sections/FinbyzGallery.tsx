@@ -1,5 +1,5 @@
 "use client"
-import React from 'react';
+import React, { useState } from 'react';
 
 interface GalleryItem {
   name: string
@@ -22,7 +22,27 @@ interface FinbyzGalleryProps {
   relatedReads: RelatedRead[]
 }
 
+const getImageUrl = (path: string | null | undefined) => {
+  if (!path) return '/images/FinbyzLogo.png';
+  if (path.startsWith('http')) return path;
 
+  // Ensure path starts with / if it doesn't
+  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+  return `/web-api/fb/n${cleanPath}`;
+};
+
+const ImageWithFallback = ({ src, alt, className }: { src: string, alt: string, className?: string }) => {
+  const [imgSrc, setImgSrc] = useState(getImageUrl(src));
+
+  return (
+    <img
+      src={imgSrc}
+      alt={alt}
+      className={className}
+      onError={() => setImgSrc('/images/FinbyzLogo.png')}
+    />
+  );
+};
 
 const FinbyzGallery = ({ galleryItems = [], relatedReads = [] }: FinbyzGalleryProps) => {
   if (galleryItems.length === 0 && relatedReads.length === 0) return null;
@@ -45,8 +65,8 @@ const FinbyzGallery = ({ galleryItems = [], relatedReads = [] }: FinbyzGalleryPr
                   className="group bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 cursor-pointer transform hover:-translate-y-1 block"
                 >
                   <div className="h-40 bg-gray-100 flex items-center justify-center relative overflow-hidden">
-                    <img
-                      src={`/web-api/fb/n${read.image}`}
+                    <ImageWithFallback
+                      src={read.image}
                       alt={read.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
@@ -93,17 +113,20 @@ const FinbyzGallery = ({ galleryItems = [], relatedReads = [] }: FinbyzGalleryPr
                           <div className="h-48 flex items-center justify-center relative overflow-hidden">
 
                             {/* Static image */}
-                            <img
-                              src={`/web-api/fb/n${item.image}`}
+                            <ImageWithFallback
+                              src={item.image}
                               alt={item.title}
                               className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
                             />
 
                             {/* Animated image */}
                             <img
-                              src={`/web-api/fb/n${item.animated_gif || item.image}`}
+                              src={getImageUrl(item.animated_gif || item.image)}
                               alt={item.title}
                               className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                              onError={(e) => {
+                                (e.target as HTMLImageElement).src = '/images/FinbyzLogo.png';
+                              }}
                             />
 
                             <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>

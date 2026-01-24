@@ -7,7 +7,7 @@ import {
     Globe, BookOpen, Globe2, Code2, Bot, MailPlus, Sparkles, PhoneCall, Scale,
     Puzzle, Box, HeartHandshake, ClipboardList, Send, Compass, MessageSquareQuote,
     Handshake, Briefcase, LucideIcon, Search, Pill, Mail, Atom, Image, Tablet, Headphones, ShieldCheck,
-    PenTool, Radio, TreeDeciduous, MessageCircle, UserCheck
+    PenTool, Radio, TreeDeciduous, MessageCircle, UserCheck, CreditCard, FileSearch, MessageSquare, Brain
 } from "lucide-react";
 import { FaPhotoFilm } from "react-icons/fa6";
 
@@ -255,6 +255,21 @@ const navigationItems: NavNode[] = [
                 icon: Zap,
                 children: [
                     {
+                        name: "Apps",
+                        icon: Package,
+                        children: [
+                            { name: "Smart Card Scanner", icon: CreditCard, href: "/erpnext/ai/ai-powered-smart-card-scanner", description: "Scan and extract business card details instantly." },
+                            { name: "Content Spark Marketing Automation", icon: Sparkles, href: "/ai-automation/apps/content-spark-marketing-automation", description: "Automate and personalize your marketing campaigns." },
+                            { name: "Lead Intelligence", icon: Brain, href: "/erpnext/ai/lead-intelligence", description: "Gain insights and prioritize your leads with AI." },
+                            { name: "AI Outreach & Lead Generation Research", icon: Rocket, href: "/ai-automation/apps/ai-powered-lead-generation-and-email-outreach", description: "Discover and connect with potential leads intelligently." },
+                            { name: "AI Sales Call Analysis for ERPNext", icon: PhoneCall, href: "/ai-automation/apps/sales-call-recording-and-analysis-in-erpnext", description: "Analyze and summarize sales calls automatically." },
+                            { name: "Email Classification", icon: Mail, href: "/n8n/workflows/ai-driven-email-classification-for-businesses", description: "Classify and route emails automatically using AI." },
+                            { name: "Quote Assistant Overview", icon: MessageSquare, href: "/erpnext/ai/ai-powered-quote-assistant", description: "Streamline quotation creation and management." },
+                            { name: "Follow Up Buddy", icon: Users, href: "/erpnext/ai/ai-powered-follow-up-buddy-automate-your-sales-follow-up-process", description: "Automated follow-up reminders and tracking." },
+                            { name: "AI Powered Resume Ranker", icon: FileSearch, href: "/erpnext/ai/ai-powered-resume-ranker", description: "Rank resumes and find the best candidates instantly." }
+                        ]
+                    },
+                    {
                         name: "Workflows",
                         icon: Factory,
                         children: [
@@ -286,7 +301,7 @@ const navigationItems: NavNode[] = [
     {
         name: "Solutions",
         icon: Puzzle,
-        href: "/solutions",
+        href: "/solutions/erp",
         children: [
             // ================= ERP =================
             {

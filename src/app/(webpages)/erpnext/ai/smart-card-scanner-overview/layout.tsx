@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://finbyz.tech/smart-card-scanner-overview",
+    canonical: "https://finbyz.tech/erpnext/ai/smart-card-scanner-overview",
   },
   openGraph: {
     title: "Smart Card Scanner Overview",
     description: "Discover the Smart Card Scanner, an AI-driven tool for efficient business card management integrating with ERPNext for automated contact data extraction.",
-    url: "https://finbyz.tech/smart-card-scanner-overview",
+    url: "https://finbyz.tech/erpnext/ai/smart-card-scanner-overview",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
@@ -48,7 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "WebPage",
     "name": "Smart Card Scanner Overview",
     "description": "Discover the Smart Card Scanner, an AI-driven tool for efficient business card management integrating with ERPNext for automated contact data extraction.",
-    "url": "https://finbyz.tech/smart-card-scanner-overview",
+    "url": "https://finbyz.tech/erpnext/ai/smart-card-scanner-overview",
     "image": "/files/ChatGPT Image Oct 14, 2025, 03_00_34 PM.png",
     "keywords": "Smart Card Scanner, business card management, ERPNext, AI extraction, contact information, Telegram bot, data validation, lead generation, CRM, data hygiene, duplicate prevention",
     "inLanguage": "en-US",

@@ -14,12 +14,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://finbyz.tech/ai-powered-follow-up-buddy-automate-your-sales-follow-up-process",
+    canonical: "https://finbyz.tech/erpnext/ai/ai-powered-follow-up-buddy-automate-your-sales-follow-up-process",
   },
   openGraph: {
     title: "Effective Sales Follow-Up Automation Tool | Follow Up Buddy by FinByz Tech",
     description: "Follow Up Buddy automates your entire sales follow-up process with AI. It identifies inactive leads, crafts personalized email responses, and helps sales teams maintain consistent communication without manual effort. Improve lead nurturing, customer engagement, and conversion rates seamlessly.",
-    url: "https://finbyz.tech/ai-powered-follow-up-buddy-automate-your-sales-follow-up-process",
+    url: "https://finbyz.tech/erpnext/ai/ai-powered-follow-up-buddy-automate-your-sales-follow-up-process",
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",

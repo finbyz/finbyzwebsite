@@ -23,6 +23,7 @@ export interface FrappePageData {
   author?: string;
   blog_category?: string;
   meta_image?: string;
+  image?: string;
   meta_description?: string;
   creation?: string;
   modified?: string;

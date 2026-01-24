@@ -14,12 +14,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://finbyz.tech/lead-intelligence",
+    canonical: "https://finbyz.tech/erpnext/ai/lead-intelligence",
   },
   openGraph: {
     title: "Lead Intelligence: Revolutionizing Inquiry Processing with AI ",
     description: "Lead Intelligence by FinByz Tech leverages AI to automate inquiry email capture, classification, and CRM data creation. It intelligently extracts customer details, prevents duplicates, and ensures every lead is tracked within ERPNext. Empower your sales team with real-time insights, improved data accuracy, and complete pipeline visibility — all driven by intelligent automation.",
-    url: "https://finbyz.tech/lead-intelligence",
+    url: "https://finbyz.tech/erpnext/ai/lead-intelligence",
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",

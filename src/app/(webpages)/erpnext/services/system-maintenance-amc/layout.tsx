@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://finbyz.tech/erpnext-system-maintenance",
+    canonical: "https://finbyz.tech/erpnext/services/system-maintenance-amc",
   },
   openGraph: {
     title: "ERPNext System Maintenance Updates Performance Optimization",
     description: "Ensure your ERPNext system runs flawlessly with Finbyz Tech\'s comprehensive maintenance services. Get updates, performance optimization, and proactive support for peak business efficiency and security.",
-    url: "https://finbyz.tech/erpnext-system-maintenance",
+    url: "https://finbyz.tech/erpnext/services/system-maintenance-amc",
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",

@@ -16,13 +16,13 @@ export const metadata: Metadata = {
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://finbyz.tech/our-story",
+    canonical: "https://finbyz.tech/about-us/our-story",
   },
   openGraph: {
     title: "Our Story | Finbyz Tech",
     description:
       "Explore how Finbyz Tech grew from a small team in 2016 to a global leader in ERPNext, AI, and business automation.",
-    url: "https://finbyz.tech/our-story",
+    url: "https://finbyz.tech/about-us/our-story",
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",

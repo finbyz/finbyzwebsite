@@ -12,7 +12,7 @@ const InventiveCRMSection: React.FC = () => (
           {/* <Image src="/images/61.svg" alt="Custom-Software-Solution" width={150} height={50} className="mb-4" /> */}
            <Image src="/Innovative CRM Software Solutions.svg" alt="Custom-Software-Solution" width={150} height={50} className="mb-4" />
           <p>
-            At Finbyz, we specialize in <a href="/erpnext/services/erpnext-service-providersoftware-development" className="text-primary underline">software development</a>, crafting advanced CRM systems designed to enhance customer-business interactions. Our solutions use the latest technology to streamline customer relationship management, ensuring businesses can efficiently track, analyze, and respond to customer needs.
+            At Finbyz, we specialize in <a href="/erpnext/services/erpnext-service-provider" className="text-primary underline">software development</a>, crafting advanced CRM systems designed to enhance customer-business interactions. Our solutions use the latest technology to streamline customer relationship management, ensuring businesses can efficiently track, analyze, and respond to customer needs.
           </p>
         </div>
         <div className="flex flex-col items-center text-center">
