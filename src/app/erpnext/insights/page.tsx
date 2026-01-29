@@ -46,6 +46,7 @@ export default function ERPNextInsightsPage() {
           src: '/erpnext-insights-hero.jpg'
         }}
       />
+      
 
       <main id="insights-content" className="container-custom mx-auto px-4 py-16">
         <Section className="py-12">

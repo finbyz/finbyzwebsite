@@ -170,7 +170,7 @@ export default function Page() {
     description:
       'Plug into ERPNext, parse resumes automatically, and get explainable candidate scores for faster, fairer shortlisting.',
     primaryButton: { text: 'Request a Demo', icon: 'Rocket', action: '/contact' },
-    secondaryButton: { text: 'See How It Works', icon: 'Play', action: '/resume-ranker' },
+    secondaryButton: { text: 'See How It Works', icon: 'Play', action: '/erpnext/ai/ai-powered-resume-ranker' },
     trustIndicator: { text: 'GDPR-ready • ERPNext integration', icon: 'ShieldCheck' }
   }
 
