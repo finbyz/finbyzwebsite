@@ -32,7 +32,7 @@ export default function ERPSolutionsPage() {
         }}
         heroImage={{
           alt: 'ERP Solutions - Comprehensive business management',
-          src: '/erp-solutions-hero.jpg'
+          src: '/erp-solutions-hero.png'
         }}
       />
 

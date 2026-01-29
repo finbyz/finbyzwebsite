@@ -48,7 +48,7 @@ export default function ERPInsightsPage() {
         }}
         heroImage={{
           alt: 'ERP Insights - comprehensive guide to enterprise resource planning',
-          src: '/erp-insights-hero.jpg'
+          src: '/erp-insights-hero.png'
         }}
       />
 

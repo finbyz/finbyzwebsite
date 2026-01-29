@@ -251,6 +251,15 @@ const navigationItems: NavNode[] = [
                 ]
             },
             {
+                name: "Guides",
+                icon: BookOpen,
+                children: [
+                    { name: "Proactive AI Assistant - Moltbot", icon: Bot, href: "/ai-automation/guides/proactive-ai-assistant-moltbot", description: "Complete guide to Moltbot AI assistant" },
+                    { name: "How to Install Clawdbot", icon: BookOpen, href: "/ai-automation/guides/how-to-install-clawdbot", description: "Step-by-step Clawdbot installation guide" },
+                    { name: "Moltbot vs Claude Code", icon: Code2, href: "/ai-automation/guides/moltbot-vs-claude-code", description: "Comprehensive comparison between Moltbot and Claude Code" }
+                ]
+            },
+            {
                 name: "n8n",
                 icon: Zap,
                 children: [
@@ -275,6 +284,13 @@ const navigationItems: NavNode[] = [
                         children: [
                             { name: "AI-driven Email Classification for Businesses", icon: Mail, href: "/n8n/workflows/ai-driven-email-classification-for-businesses", description: "Automate email classification using AI-driven workflows in n8n" }
                         ]
+                    },
+                    {
+                        name: "Insights",
+                        icon: Lightbulb,
+                        children: [
+                            { name: "n8n 2.0 Langchain Agentic Workflows", icon: Brain, href: "/n8n/insights/n8n-2-0-langchain-agentic-workflows", description: "Building agentic workflows with n8n 2.0 and Langchain" }
+                        ]
                     }
                 ]
             },
@@ -283,7 +299,8 @@ const navigationItems: NavNode[] = [
                 icon: Lightbulb,
                 children: [
                     { name: "AI Revolutionizing Global Communication", icon: Globe2, href: "/ai-automation/insights/ai-revolutionizing-global-communication-a-hint-of-change", description: "How AI is transforming global communication" },
-                    { name: "Google's AI Paywall Debate", icon: Scale, href: "/ai-automation/insights/googles-potential-paywall-balancing-innovation-and-access", description: "Balancing AI innovation and access in Google's paywall strategy" }
+                    { name: "Google's AI Paywall Debate", icon: Scale, href: "/ai-automation/insights/googles-potential-paywall-balancing-innovation-and-access", description: "Balancing AI innovation and access in Google's paywall strategy" },
+                    { name: "January 2026 Workflow Automation News", icon: Sparkles, href: "/ai-automation/insights/january-2026-workflow-automation-news", description: "Latest workflow automation trends and updates" }
                 ]
             },
             {
@@ -383,7 +400,9 @@ const navigationItems: NavNode[] = [
                     { name: "Clients", icon: Building2, href: "/about-us/clients", description: "Our clients and success stories" },
                     { name: "Testimonials", icon: MessageSquareQuote, href: "/about-us/testimonials", description: "What our clients say about us" },
                     { name: "Partnership Programs", icon: Handshake, href: "/about-us/partnership-programs", description: "Partner with Finbyz for mutual growth" },
-                    { name: "WhatsApp Privacy Policy", icon: ShieldCheck, href: "/whatsapp-privacy-policy", description: "WhatsApp data usage and privacy policy" }
+                    { name: "WhatsApp Privacy Policy", icon: ShieldCheck, href: "/whatsapp-privacy-policy", description: "WhatsApp data usage and privacy policy" },
+                    { name: "ERP Solutions in Ahmedabad", icon: Building2, href: "/erp-solutions-ahmedabad", description: "ERP solutions and services in Ahmedabad" },
+                    { name: "IT Services in Ahmedabad", icon: Cpu, href: "/it-services-ahmedabad", description: "IT services and consulting in Ahmedabad" }
                 ]
             },
             {

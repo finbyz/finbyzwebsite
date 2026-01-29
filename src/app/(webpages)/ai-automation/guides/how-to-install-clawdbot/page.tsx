@@ -13,6 +13,10 @@ export default function Page() {
         highlightWords={['Clawdbot', '30 Minutes']}
         description="Set up your own 24/7 AI assistant that actually does the work—not just answers questions. Clawdbot runs continuously on a server, handling inbox cleanup, research, scheduling, and content creation automatically through Telegram or WhatsApp."
         accentColor="orange"
+        heroImage={{
+          src: '/images/clawdbot-installation-hero.jpg',
+          alt: 'Clawdbot Installation Guide Hero',
+        }}
         primaryButton={{
           text: 'Start Installation',
           action: () => {

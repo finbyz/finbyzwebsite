@@ -4,22 +4,26 @@ import { LazyBusinessSlider } from '@/lib/lazy-components';
 import { getFaqs, getPageData } from '@/lib/getPageData';
 import FAQ from '@/components/ai_components/FAQ';
 import FinbyzGallery from '@/components/sections/FinbyzGallery';
+import { fetchFrappeSchemaData } from '@/lib/fetchFrappeSeoData';
 
 const PAGE_SLUG = 'ai-automation/guides/proactive-ai-assistant-moltbot';
 
 export async function generateMetadata(): Promise<Metadata> {
-    const pageData = await getPageData('Web Page', PAGE_SLUG);
+    const pageData = await fetchFrappeSchemaData({
+        name: PAGE_SLUG,
+        type: "webpage"
+    })
 
     const metadata: Metadata = {
-        title: pageData?.seo_title || pageData?.title || 'Proactive AI Personal Assistant | Moltbot - Ultimate Life Organizer',
-        description: pageData?.small_description || 'Discover how proactive AI assistants like Moltbot eliminate decision fatigue through predictive scheduling, seamless integration, and contextual awareness.',
-        keywords: pageData?.keywords || 'proactive AI assistant, Moltbot, Clawdbot, AI life organizer, self-hosted AI agent',
+        title: pageData?.data?.seo_title || pageData?.data?.title || 'Proactive AI Personal Assistant | Moltbot - Ultimate Life Organizer',
+        description: pageData?.data?.small_description || 'Discover how proactive AI assistants like Moltbot eliminate decision fatigue through predictive scheduling, seamless integration, and contextual awareness.',
+        keywords: pageData?.data?.keywords || 'proactive AI assistant, Moltbot, Clawdbot, AI life organizer, self-hosted AI agent',
         alternates: {
             canonical: `https://finbyz.tech/${PAGE_SLUG}`,
         },
         openGraph: {
-            title: pageData?.seo_title || pageData?.title || 'Proactive AI Personal Assistant | Moltbot',
-            description: pageData?.small_description || 'Discover the future of intelligent life automation with Moltbot',
+            title: pageData?.data?.seo_title || pageData?.data?.title || 'Proactive AI Personal Assistant | Moltbot',
+            description: pageData?.data?.small_description || 'Discover the future of intelligent life automation with Moltbot',
             url: `https://finbyz.tech/${PAGE_SLUG}`,
             type: 'website',
             images: [
@@ -31,10 +35,10 @@ export async function generateMetadata(): Promise<Metadata> {
                 },
             ],
         },
-        twitter: {
+        twitter: {  
             card: 'summary_large_image',
-            title: pageData?.seo_title || pageData?.title || 'Proactive AI Personal Assistant | Moltbot',
-            description: pageData?.small_description || 'Discover the future of intelligent life automation',
+            title: pageData?.data?.seo_title || pageData?.data?.title || 'Proactive AI Personal Assistant | Moltbot',
+            description: pageData?.data?.small_description || 'Discover the future of intelligent life automation',
         },
     };
 

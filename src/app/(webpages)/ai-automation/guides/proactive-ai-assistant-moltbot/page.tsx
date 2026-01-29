@@ -10,7 +10,11 @@ export default function ProactiveAIAssistantPage() {
             <DynamicHero
                 headline="Proactive AI Personal Assistant The Future of Life Management"
                 highlightWords={['Proactive', 'AI Personal Assistant', 'Future']}
-                description="Stop managing your tools. Let intelligent AI manage your life. Discover how proactive assistants like Moltbot eliminate decision fatigue, automate mundane tasks, and reclaim your time through predictive intelligence and contextual awareness."
+                description="Stop managing your tools. Let intelligent AI manage your life. Discover how proactive assistants like Moltbot eliminate decision fatigue, automate mundane tasks, and reclaimed your time through predictive intelligence and contextual awareness."
+                heroImage={{
+                    src: '/images/proactive-ai-assistant-hero.jpg',
+                    alt: 'Proactive AI Assistant Life Organizer',
+                }}
                 primaryButton={{
                     text: 'Explore Moltbot',
                     action: () => {

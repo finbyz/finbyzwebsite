@@ -61,7 +61,7 @@ export default function Page() {
             id="what-is-clawdbot"
             title="What is ClawdBot (Now MoltBot)?"
             image={{
-              src: '/images/ai-assistant-interface.svg',
+              src: '/images/ai-assistant-interface.png',
               alt: 'AI Assistant Interface',
               title: 'Modern AI Assistant',
               cover: true
@@ -102,7 +102,7 @@ export default function Page() {
             id="trademark-issue"
             title="The Trademark Issue with Anthropic"
             image={{
-              src: '/images/legal-compliance.svg',
+              src: '/images/legal-compliance.png',
               alt: 'Trademark and Legal Considerations',
               title: 'Legal Compliance in AI',
               width: 200,
@@ -161,7 +161,7 @@ export default function Page() {
             id="what-changes"
             title="What Changes for Users?"
             image={{
-              src: '/images/seamless-transition.svg',
+              src: '/images/seamless-transition.png',
               alt: 'Seamless User Experience',
               title: 'Smooth Transition',
               width: 200,

@@ -44,7 +44,7 @@ export default function ERPNextAppsPage() {
         }}
         heroImage={{
           alt: 'ERPNext Apps - Extensions and Plugins',
-          src: '/erpnext-apps-hero.jpg'
+          src: '/erpnext-apps-hero.png'
         }}
       />
 

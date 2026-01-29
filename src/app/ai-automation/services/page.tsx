@@ -40,7 +40,7 @@ export default function AIServicesPage() {
         }}
         heroImage={{
           alt: 'AI Services - Professional AI consulting and development',
-          src: '/ai-services-hero.jpg'
+          src: '/ai-services-hero.png'
         }}
       />
 

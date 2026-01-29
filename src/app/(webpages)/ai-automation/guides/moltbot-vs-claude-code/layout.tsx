@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech",
   publisher: "FinByz Tech",
   alternates: {
-    canonical: "https://finbyz.tech/ai-automation/services/moltbot-vs-claude-code",
+    canonical: "https://finbyz.tech/ai-automation/guides/moltbot-vs-claude-code",
   },
   openGraph: {
     title: "Moltbot vs Claude Code: Complete Comparison Guide 2026 | FinByz Tech",
     description: "Comprehensive comparison of Moltbot (formerly Claudebot) and Claude Code. Expert analysis of 8 key metrics including setup, cost, security, ROI, and real-world use cases.",
-    url: "https://finbyz.tech/ai-automation/services/moltbot-vs-claude-code",
+    url: "https://finbyz.tech/ai-automation/guides/moltbot-vs-claude-code",
     siteName: "FinByz Tech",
     type: "article",
     locale: "en_US",
