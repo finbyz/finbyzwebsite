@@ -71,13 +71,13 @@ export default function Page() {
         <BlogTableOfContents items={tocItems} />
         <BlogContent>
           <BlogSectionWithImage
-          id="introduction"
-          title="Introduction"
-          image={{
-            src:"/images/how-website-benefits-business.svg",
-            cover:true,
-            alt:"How a Website Benefits a Business"
-          }}
+            id="introduction"
+            title="Introduction"
+            image={{
+              src: "/images/how-website-benefits-business.svg",
+              cover: true,
+              alt: "How a Website Benefits a Business"
+            }}
           >
             <BlogParagraph>
               In today’s digital-first world, having a website for small business is no longer optional—it’s essential. People expect instant access to information, and the Internet has replaced traditional directories like the yellow pages. With Google handling trillions of searches daily, many users are actively searching for services and products online. If your business lacks a website, you’re likely missing out on a major opportunity to grow. The importance of a website for business lies in how it helps you reach new customers, build trust, and compete effectively in any industry. Let’s explore the key benefits of a business website that can accelerate your success in today’s market.
@@ -98,7 +98,7 @@ export default function Page() {
             </BlogParagraph>
             <BlogParagraph>
               <i>
-                A <a href="https://blog.verisign.com/getting-online/verisign-2015-online-survey-97-percent-of-smbs-would-recommend-having-a-website-to-other-smbs/" target="_blank" className="text-blue-600 underline">Verisign survey</a> revealed that 84% of consumers trust a business with a website more than one that only has social media presence. That proves the importance of website for business in gaining customer confidence.
+                A <a href="https://blog.verisign.com/getting-online/verisign-2015-online-survey-97-percent-of-smbs-would-recommend-having-a-website-to-other-smbs/" target="_blank" className="text-orange-600 underline">Verisign survey</a> revealed that 84% of consumers trust a business with a website more than one that only has social media presence. That proves the importance of website for business in gaining customer confidence.
               </i>
             </BlogParagraph>
             <div className="flex flex-col gap-6 mt-6">
@@ -237,7 +237,7 @@ export default function Page() {
             </BlogParagraph>
             <BlogParagraph>
               <i>
-                90% of the smartphone users would continue shopping at a particular website provided they get good user experience. (Source: <a href="https://www.toptal.com/designers/ux/ux-statistics-insights-infographic" target="_blank" className="text-blue-600 underline">Topal</a>)
+                90% of the smartphone users would continue shopping at a particular website provided they get good user experience. (Source: <a href="https://www.toptal.com/designers/ux/ux-statistics-insights-infographic" target="_blank" className="text-orange-600 underline">Topal</a>)
               </i>
             </BlogParagraph>
             <BlogParagraph>
@@ -264,7 +264,7 @@ export default function Page() {
           <BlogSection id="final-words" title="Final Words">
             <QuoteBlock text="A website is a window through which your business says hello to the world." isHeading={false} />
             <BlogParagraph>
-              Having a well-designed website for small business is a crucial element for achieving business success today. It serves as a valuable investment that helps elevate your profits and strengthen your reputation on a global scale. Many small businesses miss out on the importance of website for business and the numerous benefits of a business website. As competition intensifies, if you still don’t have a website, now is the ideal time to invest in <a href="/erpnext/services/website-development-on-erpnext" target="_blank" className="text-blue-600 underline">website development</a> and capitalize on the advantages a strong online presence can bring.
+              Having a well-designed website for small business is a crucial element for achieving business success today. It serves as a valuable investment that helps elevate your profits and strengthen your reputation on a global scale. Many small businesses miss out on the importance of website for business and the numerous benefits of a business website. As competition intensifies, if you still don’t have a website, now is the ideal time to invest in <a href="/erpnext/services/website-development-on-erpnext" target="_blank" className="text-orange-600 underline">website development</a> and capitalize on the advantages a strong online presence can bring.
             </BlogParagraph>
           </BlogSection>
         </BlogContent>

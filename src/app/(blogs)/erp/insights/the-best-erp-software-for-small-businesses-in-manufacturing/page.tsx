@@ -51,11 +51,11 @@ export default function Page() {
               src: '/images/16-04-24.svg',
               alt: 'the-best-erp-software-for-small-businesses-in-manufacturing-in-2024',
               title: 'the-best-erp-software-for-small-businesses-in-manufacturing-in-2024',
-              cover:true
+              cover: true
             }}
           >
             <BlogParagraph>
-              Small manufacturers face unique challenges in today's competitive business environment. From optimizing production processes to inventory control and supply chain management, staying efficient and agile is crucial. This is where <a className="text-blue-600 underline hover:text-blue-800 transition-colors" href="https://finbyz.tech/What-is-ERP-software" target="_blank" rel="noopener noreferrer">Enterprise Resource Planning (ERP) software</a> comes into play, revolutionizing how small manufacturers operate and grow. In this blog, we’ll explore the best ERP for small business tailored to meet the needs of manufacturing companies.
+              Small manufacturers face unique challenges in today's competitive business environment. From optimizing production processes to inventory control and supply chain management, staying efficient and agile is crucial. This is where <a className="text-orange-600 underline hover:text-blue-800 transition-colors" href="https://finbyz.tech/What-is-ERP-software" target="_blank" rel="noopener noreferrer">Enterprise Resource Planning (ERP) software</a> comes into play, revolutionizing how small manufacturers operate and grow. In this blog, we’ll explore the best ERP for small business tailored to meet the needs of manufacturing companies.
             </BlogParagraph>
           </BlogSectionWithImage>
 
@@ -132,7 +132,7 @@ export default function Page() {
               imageSize="small"
             >
               <BlogParagraph>
-                <a className="text-blue-600 underline hover:text-blue-800 transition-colors" href="https://finbyz.tech/erpnext-software" target="_blank" rel="noopener noreferrer">ERPNext</a> is a powerful ERP for small business offering comprehensive features at a low cost. As an open-source platform, it supports production planning, CRM, inventory, and more making it a reliable manufacturing software for small business.
+                <a className="text-orange-600 underline hover:text-blue-800 transition-colors" href="https://finbyz.tech/erpnext-software" target="_blank" rel="noopener noreferrer">ERPNext</a> is a powerful ERP for small business offering comprehensive features at a low cost. As an open-source platform, it supports production planning, CRM, inventory, and more making it a reliable manufacturing software for small business.
               </BlogParagraph>
             </BlogSectionWithImage>
             {/* Odoo */}
@@ -229,7 +229,7 @@ export default function Page() {
               imageSize="small"
             >
               <BlogParagraph>
-                With real-time <a className="text-blue-600 underline hover:text-blue-800 transition-colors" href="https://finbyz.tech/data-analytics" target="_blank" rel="noopener noreferrer">data analytics</a> capabilities, ERP for small business empowers manufacturers to make timely and accurate decisions. Whether optimizing inventory or adjusting production schedules, access to current data supports strategic planning.
+                With real-time <a className="text-orange-600 underline hover:text-blue-800 transition-colors" href="https://finbyz.tech/data-analytics" target="_blank" rel="noopener noreferrer">data analytics</a> capabilities, ERP for small business empowers manufacturers to make timely and accurate decisions. Whether optimizing inventory or adjusting production schedules, access to current data supports strategic planning.
               </BlogParagraph>
             </BlogSectionWithImage>
             {/* Enhanced Customer Satisfaction */}
@@ -327,7 +327,7 @@ export default function Page() {
           {/* Conclusion */}
           <BlogSection id="conclusion" title="Conclusion">
             <BlogParagraph>
-              In conclusion, <a className="text-blue-600 underline hover:text-blue-800 transition-colors" href="/erp/services/erp-software-development">ERP software</a> is not just for large corporations—ERP for small business is a strategic investment that can unlock growth, optimize operations, and build customer loyalty in the competitive manufacturing landscape.
+              In conclusion, <a className="text-orange-600 underline hover:text-blue-800 transition-colors" href="/erp/services/erp-software-development">ERP software</a> is not just for large corporations—ERP for small business is a strategic investment that can unlock growth, optimize operations, and build customer loyalty in the competitive manufacturing landscape.
             </BlogParagraph>
             <BlogParagraph>
               Whether you're seeking cost-efficiency, scalability, or industry-specific features, the best ERP for small business can be tailored to fit your goals. With the right solution, your small manufacturing business can thrive and stay ahead in a dynamic market.

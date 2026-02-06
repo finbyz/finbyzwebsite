@@ -33,14 +33,14 @@ export async function generateMetadata(): Promise<Metadata> {
             siteName: "Finbyz Tech",
             type: "article",
             locale: "en_US",
-            images: [{ url: `${process.env.FRAPPE_URL}/${pageData?.data?.meta_image}`, width: 1200, height: 630, alt: "ERPNext Version 16 Features" }],
+            images: [{ url: `${process.env.NEXT_PUBLIC_ERP_URL}/web-api/fb/n/${pageData?.data?.meta_image}` || `${process.env.SITE_URL}/images/ERPNext-logo1.png`, width: 1200, height: 630, alt: "ERPNext Version 16 Features" }],
         },
         twitter: {
             card: "summary_large_image",
             title: pageData?.data?.seo_title || "What's New in ERPNext Version 16",
             description: pageData?.data?.small_description || "Complete guide to ERPNext v16 features and improvements",
             creator: "@finbyz",
-            images: [`${process.env.FRAPPE_URL}/${pageData?.data?.meta_image}`],
+            images: [`${process.env.NEXT_PUBLIC_ERP_URL}/web-api/fb/n/${pageData?.data?.meta_image}`],
         },
         robots: {
             index: true,
@@ -57,9 +57,8 @@ export async function generateMetadata(): Promise<Metadata> {
     };
 }
 
-const faqsGroup = await getFaqs("Blog Post", PAGE_SLUG);
-
 export default async function Layout({ children }: { children: React.ReactNode }) {
+    const faqsGroup = await getFaqs("Blog Post", PAGE_SLUG);
     const data = await getPageData("Blog Post", PAGE_SLUG);
 
     return (

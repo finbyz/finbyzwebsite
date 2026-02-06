@@ -13,7 +13,6 @@ export async function generateMetadata(): Promise<Metadata> {
     name: "how-to-become-a-software-engineer-the-path-to-success",
     type: "blog"
   })
-  console.log(`${process.env.FRAPPE_URL}/${pageData?.data?.meta_image}`)
   return {
     title: pageData?.data?.title,
     description: pageData?.data?.description,
@@ -31,14 +30,14 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "Finbyz Tech",
       type: "website",
       locale: "en_US",
-      images: [{ url: `/images/engggpng.PNG`, width: 1200, height: 630, alt: pageData?.data?.seo_title }],
+      images: [{ url: `${process.env.NEXT_PUBLIC_ERP_URL}/web-api/fb/n/${pageData?.data?.meta_image}` || `${process.env.SITE_URL}/images/engggpng.PNG`, width: 1200, height: 630, alt: pageData?.data?.seo_title }],
     },
     twitter: {
       card: "summary_large_image",
       title: pageData?.data?.seo_title,
       description: pageData?.data?.small_description,
       creator: "@finbyz",
-      images: [`${process.env.FRAPPE_URL}/${pageData?.data?.meta_image}`],
+      images: [`${process.env.NEXT_PUBLIC_ERP_URL}/web-api/fb/n/${pageData?.data?.meta_image}`],
     },
     robots: {
       index: true,
@@ -54,9 +53,8 @@ export async function generateMetadata(): Promise<Metadata> {
     }
   }
 }
-const faqsGroup = await getFaqs("Blog Post", "careers/insights/how-to-become-a-software-engineer-the-path-to-success");
-
 export default async function Layout({ children }: { children: React.ReactNode }) {
+  const faqsGroup = await getFaqs("Blog Post", "careers/insights/how-to-become-a-software-engineer-the-path-to-success");
   const data = await getPageData("Blog Post", "careers/insights/how-to-become-a-software-engineer-the-path-to-success");
 
   return (

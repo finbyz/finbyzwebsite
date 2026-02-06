@@ -27,7 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
             type: 'article',
             images: [
                 {
-                    url: pageData?.data?.meta_image ? `${process.env.FRAPPE_URL}/${pageData.data.meta_image}` : '/images/og-default.jpg',
+                    url: pageData?.data?.meta_image ? `${process.env.NEXT_PUBLIC_ERP_URL}/web-api/fb/n/${pageData.data.meta_image}` : `${process.env.SITE_URL}/images/ERPNext-logo1.webp`,
                     width: 1200,
                     height: 630,
                     alt: pageData?.data?.title,

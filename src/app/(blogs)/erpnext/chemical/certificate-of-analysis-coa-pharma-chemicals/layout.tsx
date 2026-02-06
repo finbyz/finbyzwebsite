@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "article",
     locale: "en_US",
-    images: [{ url: "/images/coa.PNG", width: 1200, height: 630, alt: "Certificate of Analysis COA Guide" }],
+    images: [{ url: "${process.env.NEXT_PUBLIC_ERP_URL}/${pageData?.data?.meta_image}` || `${process.env.SITE_URL}/images/coa.PNG", width: 1200, height: 630, alt: "Certificate of Analysis COA Guide" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -46,9 +46,8 @@ export const metadata: Metadata = {
     },
   }
 }
-const faqsGroup = await getFaqs("Blog Post", "erpnext/chemical/certificate-of-analysis-coa-pharma-chemicals");
-
 export default async function Layout({ children }: { children: React.ReactNode }) {
+  const faqsGroup = await getFaqs("Blog Post", "erpnext/chemical/certificate-of-analysis-coa-pharma-chemicals");
   const data = await getPageData("Blog Post", "erpnext/chemical/certificate-of-analysis-coa-pharma-chemicals");
 
   return (

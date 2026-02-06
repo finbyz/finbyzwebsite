@@ -51,7 +51,7 @@ export default function Page() {
       />
 
       {/* Quick COA Definition Box */}
-      <div className="bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-600 p-6 my-8 container-custom">
+      <div className="bg-orange-50 dark:bg-blue-950/30 border-l-4 border-blue-600 p-6 my-8 container-custom">
         <h2 className="text-2xl font-bold text-blue-900 dark:text-blue-100 mb-3">What is COA? (Certificate of Analysis)</h2>
         <p className="text-lg text-blue-800 dark:text-blue-200 mb-2">
           <strong>COA Full Form:</strong> Certificate of Analysis
