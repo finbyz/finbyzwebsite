@@ -18,8 +18,8 @@ interface RelatedRead {
 }
 
 interface FinbyzGalleryProps {
-  galleryItems: GalleryItem[]
-  relatedReads: RelatedRead[]
+  galleryItems?: GalleryItem[]
+  relatedReads?: RelatedRead[]
 }
 
 const getImageUrl = (path: string | null | undefined) => {
@@ -81,7 +81,7 @@ const FinbyzGallery = ({ galleryItems = [], relatedReads = [] }: FinbyzGalleryPr
                     </p>
 
                     <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                      <span className="text-blue-600 font-semibold text-sm group-hover:translate-x-2 transition-transform inline-flex items-center">
+                      <span className="text-orange-600 font-semibold text-sm group-hover:translate-x-2 transition-transform inline-flex items-center">
                         View More
                         <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

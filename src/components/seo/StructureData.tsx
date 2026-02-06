@@ -39,12 +39,17 @@ const API_URL = process.env.FRAPPE_URL
 // ----------------------------------------------------
 // Component
 // ----------------------------------------------------
+// ----------------------------------------------------
+// Component
+// ----------------------------------------------------
 export default async function StructureData({
   type,
-  name
+  name,
+  data: manualData
 }: {
   type: PageType;
-  name: string;
+  name?: string;
+  data?: Partial<FrappePageData>;
 }) {
   // Map page type → Frappe Doctype
   const getDoctype = () => {
@@ -54,11 +59,17 @@ export default async function StructureData({
     return "Web Page";
   };
 
+  let data: FrappePageData | undefined;
 
-  const { data }: { data: FrappePageData } = await fetchFrappeSchemaData({
-    type: type,
-    name: name
-  })
+  if (manualData) {
+    data = manualData as FrappePageData;
+  } else if (name) {
+    const res = await fetchFrappeSchemaData({
+      type: type,
+      name: name
+    });
+    data = res.data;
+  }
 
   // Early return if no data available
   if (!data) {
@@ -225,8 +236,8 @@ export default async function StructureData({
       uploadDate: data?.published_on
         ? `${data.published_on}T08:00:00+08:00`
         : data?.creation
-        ? new Date(data.creation).toISOString()
-        : new Date().toISOString(),
+          ? new Date(data.creation).toISOString()
+          : new Date().toISOString(),
       // Only include duration if we have real data (not fake fallback)
       ...(data?.video_duration && { duration: data.video_duration }),
       contentUrl: data?.youtube_link || `https://www.youtube.com/watch?v=${videoId}`,

@@ -91,7 +91,7 @@ const palette = [
 interface Testimonial {
   quote: string;
   author: string;
-  name:string;
+  name: string;
   company: string;
   initials: string;
   rating: string | number;
@@ -153,7 +153,7 @@ interface ClientLogo {
  * ```
  */
 export default function Testimonials({ data = {} }: { data?: Record<string, any> }) {
-  
+
   // Render the template with provided data
   const renderedData = renderTemplateObject(testimonialsData, data);
 
@@ -174,14 +174,14 @@ export default function Testimonials({ data = {} }: { data?: Record<string, any>
             {renderedData.subtitle}
           </p>
         </div>
-        
+
         {/* Testimonial Cards */}
         <div className="testimonials-grid">
           {renderedData.testimonials.map((testimonial: Testimonial, index: number) => (
             <div
               key={`${testimonial.author}-${testimonial.company}`}
               className={`testimonial-card-wrapper`}
-              style={{ 
+              style={{
                 transitionDelay: `${index * 0.2}s`,
                 animationDelay: `${index * 0.2}s`
               }}
@@ -190,7 +190,7 @@ export default function Testimonials({ data = {} }: { data?: Record<string, any>
                 className="testimonial-card group"
                 style={{ borderTop: `4px solid ${testimonial.palette.color}` }}
               >
-                
+
                 <CardContent className="testimonial-card-content">
                   {/* Author Info */}
                   <div className="testimonial-author-section">
@@ -200,29 +200,29 @@ export default function Testimonials({ data = {} }: { data?: Record<string, any>
                       </AvatarFallback>
                     </Avatar>
                     <div className="testimonial-author-info">
-                    <p className="testimonial-author-name">{testimonial.name}</p>
+                      <p className="testimonial-author-name">{testimonial.name}</p>
                       <p className="testimonial-author-name text-black">{testimonial.author}</p>
                       <p className="testimonial-company">{testimonial.company}</p>
                     </div>
                   </div>
-                  
+
                   {/* Rating Stars */}
                   <div className="testimonial-rating mt-4">
                     {[...Array(Number(testimonial.rating))].map((_, i) => (
                       <Star key={i} className="testimonial-star" style={{ color: "#FF8C00" }} fill="#FF8C00" />
                     ))}
                   </div>
-                  
+
                   {/* Quote Text */}
                   <p className="testimonial-quote-text">
                     {testimonial.quote}
                   </p>
-                  
+
                   {/* Review Link */}
-                  <a 
+                  <a
                     href={testimonial.url}
                     target="_blank"
-                     className="testimonial-review-link !no-underline text-blue-600 hover:text-blue-800"
+                    className="testimonial-review-link !no-underline text-orange-600 hover:text-blue-800"
                   >
                     View Review
                   </a>
@@ -231,33 +231,32 @@ export default function Testimonials({ data = {} }: { data?: Record<string, any>
             </div>
           ))}
         </div>
-        
+
         {/* Bottom CTA */}
         {renderedData.ctaButton && renderedData.ctaButton.trim() !== "" && (
-        <div className={`testimonials-cta`}>
-          <Button 
-            size="lg"
-            className="testimonials-cta-button"
-          >
-            {renderedData.ctaButton}
-          </Button>
-          
-          {/* Trust Indicators */}
-          <div className={`testimonials-trust-indicators`}>
-            {renderedData.trustIndicators.map((indicator: any, index: number) => (
-              <div key={index} className="trust-indicator">
-                <div 
-                  className={`trust-indicator-dot ${
-                    indicator.color === '#1A5276' ? 'trust-indicator-dot-primary' :
-                    indicator.color === '#FF8C00' ? 'trust-indicator-dot-secondary' :
-                    'trust-indicator-dot-accent'
-                  }`}
-                ></div>
-                <span>{indicator.text}</span>
-              </div>
-            ))}
+          <div className={`testimonials-cta`}>
+            <Button
+              size="lg"
+              className="testimonials-cta-button"
+            >
+              {renderedData.ctaButton}
+            </Button>
+
+            {/* Trust Indicators */}
+            <div className={`testimonials-trust-indicators`}>
+              {renderedData.trustIndicators.map((indicator: any, index: number) => (
+                <div key={index} className="trust-indicator">
+                  <div
+                    className={`trust-indicator-dot ${indicator.color === '#1A5276' ? 'trust-indicator-dot-primary' :
+                        indicator.color === '#FF8C00' ? 'trust-indicator-dot-secondary' :
+                          'trust-indicator-dot-accent'
+                      }`}
+                  ></div>
+                  <span>{indicator.text}</span>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
         )}
       </div>
     </section>

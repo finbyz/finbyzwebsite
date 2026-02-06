@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/sections/BreadCrumbs';
 
-type ColorKey = 'orange' | 'blue' | 'green';
+type ColorKey = 'orange' | 'blue' | 'green' | 'purple';
 
 type IconComponentType = React.ComponentType<{ className?: string }>
 
@@ -36,6 +36,9 @@ interface HeroSectionProps {
   features?: FeatureItem[];
   backgroundColor?: string;
   accentColor?: ColorKey;
+  imageClassName?: string;
+  minHeight?: string;
+  className?: string;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
@@ -52,7 +55,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     poster: undefined
   },
   backgroundColor = "bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900",
-  accentColor = "orange"
+  accentColor = "orange",
+  imageClassName = "w-full h-auto rounded-2xl object-contain mx-auto",
+  minHeight = "min-h-[80vh]",
+  className = "mt-12"
 }) => {
   // Dynamic color classes based on accentColor prop
   const colorClasses: Record<ColorKey, {
@@ -73,11 +79,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     },
     blue: {
       text: "text-blue-500",
-      bg: "bg-blue-500",
-      bgHover: "hover:bg-blue-600",
+      bg: "bg-orange-500",
+      bgHover: "hover:bg-orange-600",
       border: "border-blue-500",
-      bgOpacity: "bg-blue-500/10",
-      bgOpacityHover: "hover:bg-blue-500/20"
+      bgOpacity: "bg-orange-500/10",
+      bgOpacityHover: "hover:bg-orange-500/20"
     },
     green: {
       text: "text-green-500",
@@ -86,6 +92,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       border: "border-green-500",
       bgOpacity: "bg-green-500/10",
       bgOpacityHover: "hover:bg-green-500/20"
+    },
+    purple: {
+      text: "text-purple-500",
+      bg: "bg-purple-500",
+      bgHover: "hover:bg-purple-600",
+      border: "border-purple-500",
+      bgOpacity: "bg-purple-500/10",
+      bgOpacityHover: "hover:bg-purple-500/20"
     }
   };
 
@@ -116,7 +130,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   };
 
   return (
-    <div className={`container-custom min-h-screen ${backgroundColor} text-white mt-12`}>
+    <div className={`container-custom min-h-screen ${backgroundColor} text-white ${className}`}>
       {/* Main Hero Section */}
       <div className="mx-auto">
         <Breadcrumbs
@@ -125,7 +139,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           hoverColor="hover:text-orange-600"
           separatorColor="text-white/40"
         />
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+        <div className={`grid lg:grid-cols-2 gap-12 items-center ${minHeight}`}>
           {/* Left Content */}
           <div className="space-y-6">
 
@@ -206,7 +220,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                   alt={heroImage.alt || "Hero image"}
                   width={600}
                   height={450}
-                  className="w-full h-auto rounded-2xl object-contain mx-auto"
+                    className={imageClassName}
                   priority
                 />
               )}
@@ -214,7 +228,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
               {/* Decorative floating elements */}
               <div className={`absolute -top-4 -right-4 w-8 h-8 ${colors.bg} rounded-full opacity-80 animate-pulse`}></div>
-              <div className="absolute -bottom-6 -left-6 w-6 h-6 bg-blue-500 rounded-full opacity-60 animate-bounce"></div>
+              <div className="absolute -bottom-6 -left-6 w-6 h-6 bg-orange-500 rounded-full opacity-60 animate-bounce"></div>
               <div className={`absolute top-1/2 -right-8 w-4 h-4 ${colors.bg} opacity-70 rounded-full hidden md:block`}></div>
             </div>
           </div>
@@ -224,7 +238,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       {/* Background decorative elements */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <div className={`absolute top-1/4 left-1/4 w-64 h-64 ${colors.bg}/5 rounded-full blur-3xl`}></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl"></div>
       </div>
     </div>
   );

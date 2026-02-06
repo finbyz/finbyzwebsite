@@ -32,6 +32,9 @@ const FrappeImage: React.FC<FrappeImageProps> = ({
         if (!fileUrl) return ''
         // Absolute URLs: use as-is
         if (/^https?:\/\//i.test(fileUrl)) return fileUrl
+        // Already proxied through our API
+        if (fileUrl.startsWith('/web-api/')) return fileUrl
+        if (fileUrl.startsWith('web-api/')) return `/${fileUrl}`
 
         // Keep ERPNext '/file/{hash}/{filename}' as requested; just prepend the base domain
         if (fileUrl.startsWith('/file/')) {

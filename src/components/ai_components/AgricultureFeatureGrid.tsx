@@ -5,7 +5,7 @@ import React from "react";
 
 const icons = [
   <LucideLeaf className="w-8 h-8 text-green-600" />, // Agricultural Data
-  <LucideTrendingUp className="w-8 h-8 text-blue-600" />, // Agricultural Sales
+  <LucideTrendingUp className="w-8 h-8 text-orange-600" />, // Agricultural Sales
   <LucideSettings className="w-8 h-8 text-yellow-600" />, // Managing Processes
   <LucideShieldCheck className="w-8 h-8 text-emerald-600" /> // Government Compliance
 ];

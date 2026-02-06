@@ -23,7 +23,7 @@ export default function CodeSnippetHero({
 }: CodeSnippetHeroProps) {
   const accentColors = {
     orange: 'bg-orange-500 text-white',
-    blue: 'bg-blue-500 text-white',
+    blue: 'bg-orange-500 text-white',
     green: 'bg-green-500 text-white',
   };
 
@@ -64,7 +64,7 @@ export default function CodeSnippetHero({
 
       {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl" />
     </div>
   );
 }

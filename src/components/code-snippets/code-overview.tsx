@@ -34,7 +34,7 @@ export default function CodeOverview({
             {/* When To Use */}
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
               <div className="flex items-start gap-3 mb-4">
-                <AlertCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                <AlertCircle className="w-6 h-6 text-orange-600 flex-shrink-0 mt-1" />
                 <h3 className="text-xl font-bold text-gray-900">When To Use</h3>
               </div>
               <p className="text-gray-700 leading-relaxed">{whenToUse}</p>

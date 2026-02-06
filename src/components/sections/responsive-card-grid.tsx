@@ -1,10 +1,12 @@
- 
+import Link from "next/link";
+import React from 'react';
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 import "@/styles/components/responsive-card-grid.css";
-import { Award, TrendingUp, Globe, Target, BarChart3, Zap, Shield, Cpu,Monitor,Truck,HardHat,ShieldCheck,Users,Layers,Box,Settings2,BarChart2,ClipboardCheck,Eye,Trophy,Rocket,Building,Repeat,SearchCheck,UserPlus,LifeBuoy,Medal,UserCheck2,CalendarRange,ActivitySquare,WandSparkles ,Handshake,Timer,Frown,PieChart,TrendingDown,Activity,DollarSign,CalendarClock,MessageSquare,Database,AlertTriangle,Share2,Search,Server,Code,UserCheck,MessageCircle,ClipboardList,CheckCircle2,Star,FileCheck,BarChart,ShoppingCart,FileText,Wallet,PackageCheck,Calculator,Users2,Wrench,Contact,FilePlus2,Warehouse,Network,FileStack,FileCheck2,FileBarChart,Bot,CheckCircle,HelpCircle,Book,KeyRound,Phone,Gavel,FileWarning,ServerCog,Brain,Code2,Lightbulb,FlaskConical,Cross,Hammer,CupSoda,
-GraduationCap,HeartPulse,Scissors,Leaf,Square,Coins,Factory,PackageOpen,Smartphone,LayoutDashboard,Building2,ShoppingBag,BookOpenCheck,Globe2,MapPinned,LayoutGrid,Puzzle,Briefcase,HeartHandshake,BadgeCheck,Ship,Stethoscope,Recycle,Hospital,PackageX,Package,ArrowLeftRight,CreditCard,RefreshCcw,Settings,Boxes,Sliders,FileBadge,LineChart,Send,Plug,Bell,Lock,Cloud,Workflow,Repeat2,Heart,Store,BarChartHorizontal,RotateCw,BookUser,UserCircle,BedDouble,PackageSearch,LayoutList,Folders,Layers3,ListChecks,Compass,Sprout,TestTube2,Mic,FileSearch,UserCog,PenTool,Sparkles,BookOpen,Pill,TabletSmartphone,BeakerIcon,RefreshCw,Gauge,CloudUpload,Smile,Calendar,Mail
+import {
+  Award, TrendingUp, Globe, Target, BarChart3, Zap, Shield, Cpu, Monitor, Truck, HardHat, ShieldCheck, Users, Layers, Box, Settings2, BarChart2, ClipboardCheck, Eye, Trophy, Rocket, Building, Repeat, SearchCheck, UserPlus, LifeBuoy, Medal, UserCheck2, CalendarRange, ActivitySquare, WandSparkles, Handshake, Timer, Frown, PieChart, TrendingDown, Activity, DollarSign, CalendarClock, MessageSquare, Database, AlertTriangle, Share2, Search, Server, Code, UserCheck, MessageCircle, ClipboardList, CheckCircle2, Star, FileCheck, BarChart, ShoppingCart, FileText, Wallet, PackageCheck, Calculator, Users2, Wrench, Contact, FilePlus2, Warehouse, Network, FileStack, FileCheck2, FileBarChart, Bot, CheckCircle, HelpCircle, Book, KeyRound, Phone, Gavel, FileWarning, ServerCog, Brain, Code2, Lightbulb, FlaskConical, Cross, Hammer, CupSoda,
+  GraduationCap, HeartPulse, Scissors, Leaf, Square, Coins, Factory, PackageOpen, Smartphone, LayoutDashboard, Building2, ShoppingBag, BookOpenCheck, Globe2, MapPinned, LayoutGrid, Puzzle, Briefcase, HeartHandshake, BadgeCheck, Ship, Stethoscope, Recycle, Hospital, PackageX, Package, ArrowLeftRight, CreditCard, RefreshCcw, Settings, Boxes, Sliders, FileBadge, LineChart, Send, Plug, Bell, Lock, Cloud, Workflow, Repeat2, Heart, Store, BarChartHorizontal, RotateCw, BookUser, UserCircle, BedDouble, PackageSearch, LayoutList, Folders, Layers3, ListChecks, Compass, Sprout, TestTube2, Mic, FileSearch, UserCog, PenTool, Sparkles, BookOpen, Pill, TabletSmartphone, BeakerIcon, RefreshCw, Gauge, CloudUpload, Smile, Calendar, Mail, Laptop
 } from "lucide-react";
 
 // ============================================================================
@@ -18,9 +20,11 @@ export interface CardItem {
   image?: string;
   imageAlt?: string;
   className?: string;
-  icon?: string; // lucide-react icon name
+  icon: string; // lucide-react icon name
   iconColor?: string;
   iconBg?: string;
+  link?: string;
+  showArrow?: boolean;
 }
 
 export interface ResponsiveCardGridData {
@@ -115,8 +119,9 @@ export default function ResponsiveCardGrid({ data = { cards: [] }, className }: 
     Search,
     Server,
     Code,
+    Laptop,
     UserCheck,
-    MessageCircle ,
+    MessageCircle,
     ClipboardList,
     CheckCircle2,
     Star,
@@ -134,7 +139,7 @@ export default function ResponsiveCardGrid({ data = { cards: [] }, className }: 
     Warehouse,
     Network,
     FileStack,
-    FileCheck2 ,
+    FileCheck2,
     FileBarChart,
     Bot,
     CheckCircle,
@@ -198,17 +203,17 @@ export default function ResponsiveCardGrid({ data = { cards: [] }, className }: 
     Heart,
     RotateCw,
     RefreshCcw,
-    BookUser,UserCircle,BedDouble,PackageSearch,LayoutList,
-    Folders,Layers3,ListChecks,Compass,Sprout,TestTube2,Mic,FileSearch,UserCog,
-    PenTool,Sparkles,BookOpen,Pill,TabletSmartphone,BeakerIcon,Smile
-    ,Gauge,CloudUpload,Calendar,Mail
+    BookUser, UserCircle, BedDouble, PackageSearch, LayoutList,
+    Folders, Layers3, ListChecks, Compass, Sprout, TestTube2, Mic, FileSearch, UserCog,
+    PenTool, Sparkles, BookOpen, Pill, TabletSmartphone, BeakerIcon, Smile
+    , Gauge, CloudUpload, Calendar, Mail
 
 
 
-    
 
 
-    
+
+
   };
 
   // Dynamic color palette assignment based on number of cards
@@ -220,7 +225,7 @@ export default function ResponsiveCardGrid({ data = { cards: [] }, className }: 
     "#8E44AD", // purple
     "#FF3333", // red
     "#FFB347", //light-orange
-    
+
 
   ];
 
@@ -286,82 +291,94 @@ export default function ResponsiveCardGrid({ data = { cards: [] }, className }: 
           )}
           data-cards={cards.length <= 8 ? cards.length.toString() : "default"}
         >
-          {cards.map((card, index) => (
-            <div
-              key={card.id}
-              className={cn(
-                "responsive-card",
-                layout === 'compact' ? 'compact' : '',
-                variant === 'iconCard' ? 'icon-card' : '',
-                card.className
-              )}
-              style={{
-                animationDelay: `${index * 0.1}s`
-              }}
-            >
-              {variant === 'iconCard' ? (
-                <>
-                  <div className="icon-card-media">
-                    {card.icon && iconMap[card.icon] ? (
-                      <div
-                        className="icon-badge"
-                        style={{
-                          ['--icon-bg' as any]: (card.iconBg || palette[index % palette.length] || "#1A5276"),
-                          ['--icon-fg' as any]: (card.iconColor || "#fff"),
-                          ['--icon-bg-hover' as any]: darken(card.iconBg || palette[index % palette.length] || "#1A5276", 0.12),
-                          ['--icon-fg-hover' as any]: '#ffffff',
-                        } as any}
-                      >
-                        {(() => {
-                          const Icon = iconMap[card.icon];
-                          return Icon ? <Icon size={36} /> : null;
-                        })()}
-                      </div>
-                    ) : (
-                      showImage && card.image && (
+          {cards.map((card, index) => {
+            const CardContent = (
+              <div
+                className={cn(
+                  "responsive-card",
+                  layout === 'compact' ? 'compact' : '',
+                  variant === 'iconCard' ? 'icon-card' : '',
+                  card.className
+                )}
+                style={{
+                  animationDelay: `${index * 0.1}s`,
+                  cursor: card.link ? 'pointer' : 'default'
+                }}
+              >
+                {variant === 'iconCard' ? (
+                  <>
+                    <div className="icon-card-media">
+                      {card.icon && iconMap[card.icon] ? (
+                        <div
+                          className="icon-badge"
+                          style={{
+                            ['--icon-bg' as any]: (card.iconBg || palette[index % palette.length] || "#1A5276"),
+                            ['--icon-fg' as any]: (card.iconColor || "#fff"),
+                            ['--icon-bg-hover' as any]: darken(card.iconBg || palette[index % palette.length] || "#1A5276", 0.12),
+                            ['--icon-fg-hover' as any]: '#ffffff',
+                          } as any}
+                        >
+                          {(() => {
+                            const Icon = iconMap[card.icon];
+                            return Icon ? <Icon size={36} /> : null;
+                          })()}
+                        </div>
+                      ) : (
+                        showImage && card.image && (
+                          <Image
+                            src={card.image}
+                            alt={card.imageAlt || card.title}
+                            width={120}
+                            height={120}
+                            className="icon-card-image"
+                            priority={index < 3}
+                          />
+                        )
+                      )}
+                    </div>
+                    {card.icon && iconMap[card.icon] && <div className="icon-card-separator" />}
+                    <div className="icon-card-content">
+                      <h3 className="icon-card-title">{card.title}</h3>
+                      <p className="icon-card-description">{card.description}</p>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    {/* Card Image */}
+                    {showImage && card.image && (
+                      <div className="responsive-card-image-container">
                         <Image
                           src={card.image}
                           alt={card.imageAlt || card.title}
-                          width={120}
-                          height={120}
-                          className="icon-card-image"
+                          width={imageWidth}
+                          height={imageHeight}
+                          className="responsive-card-image"
                           priority={index < 3}
                         />
-                      )
+                      </div>
                     )}
-                  </div>
-                  {card.icon && iconMap[card.icon] && <div className="icon-card-separator" />} 
-                  <div className="icon-card-content">
-                    <h3 className="icon-card-title">{card.title}</h3>
-                    <p className="icon-card-description">{card.description}</p>
-                  </div>
-                </>
-              ) : (
-                <>
-                  {/* Card Image */}
-                  {showImage && card.image && (
-                    <div className="responsive-card-image-container">
-                      <Image
-                        src={card.image}
-                        alt={card.imageAlt || card.title}
-                        width={imageWidth}
-                        height={imageHeight}
-                        className="responsive-card-image"
-                        priority={index < 3}
-                      />
+                    {/* Card Content */}
+                    <div className="responsive-card-content">
+                      <div>
+                        <h3 className="responsive-card-title">{card.title}</h3>
+                        <p className="responsive-card-description">{card.description}</p>
+                      </div>
                     </div>
-                  )}
-                  {/* Card Content */}
-                  <div className="responsive-card-content">
-                    <div>
-                      <h3 className="responsive-card-title">{card.title}</h3>
-                      <p className="responsive-card-description">{card.description}</p>
-                    </div>
-                  </div>
-                </>
-              )}
-            </div>
-          ))}
+                  </>
+                )}
+              </div>
+            );
+
+            return card.link ? (
+              <Link href={card.link} key={card.id} className="block h-full">
+                {CardContent}
+              </Link>
+            ) : (
+              <React.Fragment key={card.id}>
+                {CardContent}
+              </React.Fragment>
+            );
+          })}
         </div>
 
         {/* Debug Info (optional) */}

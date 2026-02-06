@@ -52,7 +52,7 @@ export default function CodeBlock({
                 href={referenceLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded transition-colors text-sm"
+                className="flex items-center gap-2 px-3 py-1.5 bg-orange-600 hover:bg-orange-700 text-white rounded transition-colors text-sm"
               >
                 <ExternalLink className="w-4 h-4" />
                 <span>{referenceLinkText}</span>

@@ -49,7 +49,7 @@ export default function OpeningBalanceContent() {
             <Section id="challenge" className="container-custom py-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-[#1A5276] mb-6">The Critical Challenge of Opening Balances</h2>
                 <p className="text-slate-700 text-base md:text-lg mb-6 text-justify leading-relaxed">
-                    <Link href="/erpnext/services/start-your-erp-journey" className="text-blue-600 hover:underline">Implementing ERPNext</Link> is a transformative step for your business, but the transition often hits a critical roadblock: <span className="font-semibold text-gray-900">The Opening Balance</span>.
+                    <Link href="/erpnext/services/start-your-erp-journey" className="text-orange-600 hover:underline">Implementing ERPNext</Link> is a transformative step for your business, but the transition often hits a critical roadblock: <span className="font-semibold text-gray-900">The Opening Balance</span>.
                 </p>
                 <p className="text-slate-700 text-base md:text-lg mb-6 text-justify leading-relaxed">
                     Your financial reports are only as good as the data you start with. If the opening Balance Sheet in ERPNext doesn't match your legacy system down to the last cent, every subsequent report—from P&L to Balance Sheet—will be inaccurate.
@@ -169,7 +169,7 @@ export default function OpeningBalanceContent() {
                 <div className="space-y-8 max-w-5xl mx-auto">
                     {/* Phase 1 (Blue theme) */}
                     <div className="relative pl-8 border-l-4 border-blue-500">
-                        <div className="absolute -left-4 top-0 bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">1</div>
+                        <div className="absolute -left-4 top-0 bg-orange-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">1</div>
                         <h3 className="text-2xl font-bold text-[#1A5276] mb-3">Phase 1: Structure & Mapping</h3>
                         <ul className="space-y-2 text-slate-700">
                             <li className="flex items-start"><span className="text-blue-500 mr-2">•</span> <span className="mr-1"><strong>Chart of Accounts (CoA) Correction:</strong></span> We review your ERPNext CoA structure to ensure it mirrors your legacy system effectively.</li>

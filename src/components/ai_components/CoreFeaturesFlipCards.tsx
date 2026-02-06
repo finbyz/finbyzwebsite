@@ -26,7 +26,7 @@ const CoreFeaturesFlipCards: React.FC = () => (
     <div className="container-custom px-4 py-16 md:py-20">
       {/* Header Section */}
       <div className="max-w-3xl mx-auto text-center mb-12">
-        <span className="inline-block px-4 py-1.5 mb-4 text-sm font-semibold  text-[#1A5276] bg-blue-50 rounded-full">
+        <span className="inline-block px-4 py-1.5 mb-4 text-sm font-semibold  text-[#1A5276] bg-orange-50 rounded-full">
           Core Features
         </span>
         <h2 className="text-4xl md:text-5xl font-bold text-[#1A5276]">
