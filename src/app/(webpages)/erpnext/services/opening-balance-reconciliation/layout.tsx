@@ -21,6 +21,14 @@ export const metadata: Metadata = {
         type: "website",
         locale: "en_US",
         siteName: "FinByz Tech",
+        images: [
+            {
+                url: `${process.env.SITE_URL}/web-api/fb/n/files/opening-balance-reconciliation-hero.webp`,
+                width: 1200,
+                height: 630,
+                alt: "ERPNext Opening Balance Reconciliation Service | Fix Mismatched Accounts & Stock",
+            },
+        ],
     },
     twitter: {
         card: "summary_large_image",

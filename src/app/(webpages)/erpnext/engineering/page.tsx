@@ -21,13 +21,13 @@ export default function Page() {
     <>
       <HeroSection
         headline="ERPNext for the Engineering Industry"
-        highlightWords={[ "Engineering Industry"]}
+        highlightWords={["Engineering Industry"]}
         description="FinByz Tech delivers ERPNext-based engineering ERP software solutions. Streamline engineering and software engineering operations with integrated project, inventory, and financial management."
         primaryButton={{ text: 'Get Free Consultation', action: handlePrimaryCTA }}
-        secondaryButton={{ 
-          text: 'Learn More', 
+        secondaryButton={{
+          text: 'Learn More',
           action: "#engineering"
-         }}
+        }}
         heroImage={{
           alt: 'ERPNext for the Engineering Industry',
           src: '/images/Engineeringaced93.svg',
@@ -40,18 +40,18 @@ export default function Page() {
         <div className="container-custom py-8">
           <h2 className="text-2xl font-bold mb-4 text-center text-[#1A5276]" >ERP Software for Engineering Companies</h2>
           <p className="mb-6 text-gray-700 text-center">
-            Why implement <a href="/erpnext/" target="_blank" className="text-blue-600 underline">ERP software</a> for engineering companies? ERP software for engineering companies offers benefits such as better project management, cost reduction, real-time calculated information, and a total integrated package. It improves decision making and helps your business grow. Core <a href="/erp/insights/benefits-of-erp" target="_blank" className="text-blue-600 underline">advantages of ERP</a> for engineering include customer-oriented systems, data efficiency, and effective communication.
+            Why implement <a href="/erpnext/" target="_blank" className="text-orange-600 underline">ERP software</a> for engineering companies? ERP software for engineering companies offers benefits such as better project management, cost reduction, real-time calculated information, and a total integrated package. It improves decision making and helps your business grow. Core <a href="/erp/insights/benefits-of-erp" target="_blank" className="text-orange-600 underline">advantages of ERP</a> for engineering include customer-oriented systems, data efficiency, and effective communication.
           </p>
           <QuoteBlock text="The proposed process designs should always be designed within the logic of the ERP systems. - Andera." isHeading={false} />
           <p className="mt-6 text-gray-700" id="engineering"  >
             Engineering industry companies deal with manufacturing and designing machines, complex structures, and various devices. The main functions are manufacturing, design, processing, and construction. This industry faces challenges like complex projects, production costs, and pricing. ERP helps manage operations systematically and standardizes processes. It automates business processes, integrates all departments, and simplifies complex elements (like 3D designs) for professionals. ERP also solves inventory tracking and management challenges for engineering companies.
           </p>
         </div>
-    
+
       </Section>
 
       {/* Features Section */}
-      
+
       <Section useGradient>
         <div className="container-custom py-8" id="engineering"  >
           <h2 className="text-2xl font-bold mb-4 text-center  text-[#1A5276]">Key Features of Engineering ERP Software</h2>
@@ -159,7 +159,7 @@ export default function Page() {
               Finbyz as ERP Service Provider plays a pivotal role in the realm of ERP software for engineering, offering a comprehensive solution tailored to meet the specific needs of the engineering sector. As an ERP Partner, these systems specialize in integrating various critical functions, such as project management, resource planning, and financial tracking, all within a cohesive platform. This integration is essential for engineering projects, where precision and efficiency are paramount.
             </p>
             <p className="mb-4 text-gray-700">
-              ERP software is vital for engineering companies, streamlining complex tasks and operations, and enhancing the design process. For these companies to thrive and boost their operational efficiency and overall productivity, it's essential to adopt a customized ERP system tailored to their unique requirements. Specifically, a <a href="/erpnext/chemical/" className="text-blue-600 underline">ERP For Chemical Industry</a> solution, along with <a href="/erpnext/logistics" className="text-blue-600 underline">transport ERP</a>, and <a href="/erpnext/trading" className="text-blue-600 underline">ERP for trading</a>, can be instrumental in addressing the specific challenges and demands of the engineering sector, ensuring more precise management of every critical activity in this industry.
+              ERP software is vital for engineering companies, streamlining complex tasks and operations, and enhancing the design process. For these companies to thrive and boost their operational efficiency and overall productivity, it's essential to adopt a customized ERP system tailored to their unique requirements. Specifically, a <a href="/erpnext/chemical/" className="text-orange-600 underline">ERP For Chemical Industry</a> solution, along with <a href="/erpnext/logistics" className="text-orange-600 underline">transport ERP</a>, and <a href="/erpnext/trading" className="text-orange-600 underline">ERP for trading</a>, can be instrumental in addressing the specific challenges and demands of the engineering sector, ensuring more precise management of every critical activity in this industry.
             </p>
           </div>
           <QuoteBlock text="Improvements in the use of the ERP system are an outcome of improvements in the process.  - Stephen Harwood" isHeading={false} />
@@ -176,7 +176,7 @@ export default function Page() {
                 icon: 'settings',
               },
               title: 'Get a Free ERP Consultation for Your Engineering Company',
-              highlightText:"Engineering Company",
+              highlightText: "Engineering Company",
               description: 'Discover how ERPNext can streamline your engineering business. Contact us for a free consultation and see how we can tailor a solution for your needs.',
               primaryButton: {
                 text: 'Book Consultation',

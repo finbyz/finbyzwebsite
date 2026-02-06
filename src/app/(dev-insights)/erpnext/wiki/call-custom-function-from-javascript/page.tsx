@@ -79,10 +79,10 @@ export default function Page() {
         category="Frappe Client Scripting"
         accentColor="orange"
       />
-      <CodeSnippetInstroduction 
+      <CodeSnippetInstroduction
         paragraphs={[
-            "In Frappe and ERPNext, `cur_frm.set_query` is a powerful client-side method used to apply dynamic filters to Link and Dynamic Link fields. However, its query parameter can only point to a server method and cannot pass dynamic arguments directly from the form.",
-            "This code snippet demonstrates a common and effective pattern to overcome this limitation. It uses `frappe.call` to execute a preparatory server-side Python function with dynamic arguments (like the current document's name). This function processes the required logic and stores the results. The `set_query` then points to a second, simpler Python function that retrieves and returns these prepared results, effectively creating a dynamic, context-aware filter."
+          "In Frappe and ERPNext, `cur_frm.set_query` is a powerful client-side method used to apply dynamic filters to Link and Dynamic Link fields. However, its query parameter can only point to a server method and cannot pass dynamic arguments directly from the form.",
+          "This code snippet demonstrates a common and effective pattern to overcome this limitation. It uses `frappe.call` to execute a preparatory server-side Python function with dynamic arguments (like the current document's name). This function processes the required logic and stores the results. The `set_query` then points to a second, simpler Python function that retrieves and returns these prepared results, effectively creating a dynamic, context-aware filter."
         ]}
       />
 

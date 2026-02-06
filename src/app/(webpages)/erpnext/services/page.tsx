@@ -35,7 +35,7 @@ const ServiceCard = ({ title, link, icon: Icon, description }: { title: string, 
     <Link href={link} className="group block h-full">
         <div className="h-full border border-gray-200 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-all duration-300 hover:border-[#1A5276] flex flex-col">
             <div className="flex items-start justify-between mb-4">
-                <div className="p-3 rounded-lg bg-blue-50 text-[#1A5276] group-hover:bg-[#1A5276] group-hover:text-white transition-colors">
+                <div className="p-3 rounded-lg bg-orange-50 text-[#1A5276] group-hover:bg-[#1A5276] group-hover:text-white transition-colors">
                     <Icon size={24} />
                 </div>
                 <ArrowRight size={20} className="text-gray-400 group-hover:text-[#1A5276] transform group-hover:translate-x-1 transition-all" />
@@ -285,7 +285,7 @@ export default function ServicesPage() {
                                     "Ceramics & Plastics", "Electronics & Solar", "Furniture"
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-center gap-2 text-gray-700">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+                                        <div className="w-1.5 h-1.5 rounded-full bg-orange-500"></div>
                                         {item}
                                     </li>
                                 ))}
@@ -301,7 +301,7 @@ export default function ServicesPage() {
                                     "Technology & IT", "Hospitality", "Healthcare", "Education"
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-center gap-2 text-gray-700">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+                                        <div className="w-1.5 h-1.5 rounded-full bg-orange-500"></div>
                                         {item}
                                     </li>
                                 ))}

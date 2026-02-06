@@ -2,10 +2,10 @@
 
 
 'use client';
-import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import FrappeImage from "@/components/Common/FrappeImage";
 
 
 const ALL_CATEGORIES = ["Technology", "Business", "General"];
@@ -45,41 +45,48 @@ function CategoryPill({
 }
 
 function BlogCard({ post }: { post: BlogPost }) {
-  return (
-    <Link href={post.route || ""} >
+  const href = (() => {
+    if (!post.route) return "";
+    if (/^https?:\/\//i.test(post.route)) return post.route;
+    return post.route.startsWith("/") ? post.route : `/${post.route}`;
+  })();
 
-      <div className="group overflow-hidden rounded-xl bg-card hover:shadow-xl transition-shadow">
-        <div className="relative h-48 w-full overflow-hidden">
-          {post.image ? (
-            <Image
-              src={`/web-api/fb/n${post.image}`}
-              alt={post.title}
-              fill
-              className="object-cover group-hover:scale-[1.03] transition-transform duration-300"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-          ) : (
-            <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-              <span className="text-gray-400 text-sm">No Image</span>
-            </div>
-          )}
-          <Badge variant="default" className="absolute top-3 left-3">
-            {post.category}
-          </Badge>
-        </div>
-        <div className="p-5 space-y-2">
-          <h3 className="text-lg font-semibold leading-snug">{post.title}</h3>
-          <p className="text-sm text-muted-foreground line-clamp-2">
-            {post.description}
-          </p>
-          <div className="pt-2 text-xs text-muted-foreground flex items-center gap-3">
-            <span>{post.date ? new Date(post.date).toLocaleDateString("en-IN") : "N/A"}</span>
-            <span>•</span>
-            <span>{post.read_time || "5 min read"}</span>
+  const hasImage = Boolean(post.image && post.image.trim());
+  const card = (
+    <div className="group overflow-hidden rounded-xl bg-card hover:shadow-xl transition-shadow">
+      <div className="relative h-48 w-full overflow-hidden">
+        {hasImage ? (
+          <FrappeImage
+            fileUrl={post.image as string}
+            alt={post.title}
+            className="h-full w-full object-cover group-hover:scale-[1.03] transition-transform duration-300"
+            // defaultImage="/images/3.png"
+          />
+        ) : (
+          <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+            <span className="text-gray-400 text-sm">No Image</span>
           </div>
+        )}
+        <Badge variant="default" className="absolute top-3 left-3">
+          {post.category}
+        </Badge>
+      </div>
+      <div className="p-5 space-y-2">
+        <h3 className="text-lg font-semibold leading-snug">{post.title}</h3>
+        <p className="text-sm text-muted-foreground line-clamp-2">
+          {post.description}
+        </p>
+        <div className="pt-2 text-xs text-muted-foreground flex items-center gap-3">
+          <span>{post.date ? new Date(post.date).toLocaleDateString("en-IN") : "N/A"}</span>
+          <span>•</span>
+          <span>{post.read_time || "5 min read"}</span>
         </div>
       </div>
-    </Link>
+    </div>
+  );
+
+  return (
+    href ? <Link href={href}>{card}</Link> : card
   );
 }
 
@@ -205,7 +212,7 @@ export default function BlogPostPage() {
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post) => (
-              <BlogCard key={post.name} post={post} />
+              <BlogCard key={post.name || post.route || post.title} post={post} />
             ))}
           </div>
         )}

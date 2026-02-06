@@ -93,22 +93,35 @@ export default function JobApplication() {
 
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      // Validate file size (5MB limit)
-      if (file.size > 5 * 1024 * 1024) {
-        alert("File size exceeds 5MB limit. Please upload a smaller file.");
-        return;
-      }
-      // Validate file type
-      const allowedTypes = ["application/pdf", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
-      if (!allowedTypes.includes(file.type)) {
-        alert("Please upload a file in PDF, DOC, or DOCX format.");
-        return;
-      }
-      setSelectedFile(file);
-      setFileName(file.name);
+    const files = event.target.files;
+    if (!files || files.length === 0) return;
+
+    if (files.length > 1) {
+      alert("Please upload only one resume file.");
+      if (fileInputRef.current) fileInputRef.current.value = "";
+      return;
     }
+
+    const file = files[0];
+    const maxSize = 5 * 1024 * 1024;
+
+    // Validate file size (max 5MB)
+    if (file.size > maxSize) {
+      alert("File size exceeds 5MB limit. Please upload a smaller file.");
+      if (fileInputRef.current) fileInputRef.current.value = "";
+      return;
+    }
+
+    // Validate file type
+    const allowedTypes = ["application/pdf", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
+    if (!allowedTypes.includes(file.type)) {
+      alert("Please upload a file in PDF, DOC, or DOCX format.");
+      if (fileInputRef.current) fileInputRef.current.value = "";
+      return;
+    }
+
+    setSelectedFile(file);
+    setFileName(file.name);
   };
 
   const handleAttachClick = () => {
@@ -839,7 +852,7 @@ export default function JobApplication() {
                 <Button
                   onClick={handleUpdateYes}
                   disabled={isSubmitting}
-                  className="bg-blue-600 hover:bg-blue-700"
+                  className="bg-orange-600 hover:bg-orange-700"
                 >
                   {isSubmitting ? "Updating..." : "Yes, Update"}
                 </Button>

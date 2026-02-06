@@ -26,13 +26,13 @@ export default function Page() {
         headline="ERPNext for Manufacturing"
         highlightWords={["for", "Manufacturing"]}
         description="FinByz Tech’s ERPNext manufacturing ERP software streamlines production and inventory management, reducing costs and improving efficiency."
-        primaryButton={{ 
-          text: 'Get Started', 
+        primaryButton={{
+          text: 'Get Started',
           action: () => {
             const el = document.getElementById('manufacturing');
             if (el) el.scrollIntoView({ behavior: 'smooth' });
           }
-         }}
+        }}
         secondaryButton={{ text: 'Request Demo', action: handleSecondary }}
         heroImage={{
           alt: 'ERPNext for Manufacturing',
@@ -44,7 +44,7 @@ export default function Page() {
       {/* Introduction Section */}
       <Section>
         <div className="container-custom py-8">
-          <h2 className="text-2xl font-bold text-[#1A5276] mb-6 text-center scroll-mt-20" id ="manufacturing">ERP software for Manufacturing industry</h2>
+          <h2 className="text-2xl font-bold text-[#1A5276] mb-6 text-center scroll-mt-20" id="manufacturing">ERP software for Manufacturing industry</h2>
           <div className="flex flex-col md:flex-row md:items-center md:gap-8">
             <div className="md:w-1/12 flex justify-center mb-4 md:mb-0">
               {/* <Image src="/images/Quotation_marks.svg" alt="Quotation marks" width={40} height={40} className="opacity-80" /> */}
@@ -64,34 +64,34 @@ export default function Page() {
 
       {/* Why ERP is Crucial Section */}
       <Section useGradient>
-  <div className="container-custom py-12">
-    <h2 className="text-2xl font-bold mb-6 text-center text-[#1A5276]">Why ERP is Crucial for Modern Manufacturing ?</h2>
+        <div className="container-custom py-12">
+          <h2 className="text-2xl font-bold mb-6 text-center text-[#1A5276]">Why ERP is Crucial for Modern Manufacturing ?</h2>
 
-    {/* Bold Intro Line with larger font, centered */}
-    <p className="text-center text-lg sm:text-xl font-semibold mb-6">
-      "Continuous learning and smart process automation are the minimum requirements for success in modern manufacturing - Brian Tracy"
-    </p>
-    
+          {/* Bold Intro Line with larger font, centered */}
+          <p className="text-center text-lg sm:text-xl font-semibold mb-6">
+            "Continuous learning and smart process automation are the minimum requirements for success in modern manufacturing - Brian Tracy"
+          </p>
 
-    {/* Description with Bullet Points */}
-    <div className="text-gray-700 space-y-6 max-w-4xl mx-auto">
-      <p>
-        Manufacturing processes involve many interconnected activities: procurement, production planning, shop floor control, inventory tracking, and delivery. Without an ERP system, these processes often operate in silos, leading to delays, miscommunication, and inefficiencies. A robust manufacturing ERP system bridges these gaps by:
-      </p>
 
-      <ul className="list-disc list-inside space-y-2">
-        <li><strong>Unifying Departments:</strong> Connects production, finance, inventory, sales, and HR into one system.</li>
-        <li><strong>Real-Time Visibility:</strong> Tracks operations live from raw materials to finished goods.</li>
-        <li><strong>Automated Workflows:</strong> Reduces manual effort by automating tasks like material requests, production scheduling, and billing.</li>
-        <li><strong>Improved Decision-Making:</strong> Managers access up-to-date information instantly, helping them make informed decisions.</li>
-      </ul>
+          {/* Description with Bullet Points */}
+          <div className="text-gray-700 space-y-6 max-w-4xl mx-auto">
+            <p>
+              Manufacturing processes involve many interconnected activities: procurement, production planning, shop floor control, inventory tracking, and delivery. Without an ERP system, these processes often operate in silos, leading to delays, miscommunication, and inefficiencies. A robust manufacturing ERP system bridges these gaps by:
+            </p>
 
-      <p className="mt-4">
-        An effective manufacturing ERP is a game-changer. It optimizes every aspect of production—from inventory management and scheduling to quality control and supply chain logistics. With real-time insights and automation, ERP helps manufacturers make informed decisions, reduce production costs, minimize waste, and improve overall productivity.
-      </p>
-    </div>
-  </div>
-</Section>
+            <ul className="list-disc list-inside space-y-2">
+              <li><strong>Unifying Departments:</strong> Connects production, finance, inventory, sales, and HR into one system.</li>
+              <li><strong>Real-Time Visibility:</strong> Tracks operations live from raw materials to finished goods.</li>
+              <li><strong>Automated Workflows:</strong> Reduces manual effort by automating tasks like material requests, production scheduling, and billing.</li>
+              <li><strong>Improved Decision-Making:</strong> Managers access up-to-date information instantly, helping them make informed decisions.</li>
+            </ul>
+
+            <p className="mt-4">
+              An effective manufacturing ERP is a game-changer. It optimizes every aspect of production—from inventory management and scheduling to quality control and supply chain logistics. With real-time insights and automation, ERP helps manufacturers make informed decisions, reduce production costs, minimize waste, and improve overall productivity.
+            </p>
+          </div>
+        </div>
+      </Section>
 
 
 
@@ -139,7 +139,7 @@ export default function Page() {
           </div>
           <div className="mt-6 text-gray-700">
             <div className='mb-4'>
-              <p className='text-justify'><a className="text-blue-600 underline" href="/erpnext/" target="_blank" rel="noopener noreferrer">Implementation of ERP Software</a> is the answer to many problems related to management in the manufacturing industry. The industry in today’s business environment is very dynamic and innovating rapidly. For being at the same pace as the changing market, latest technology is a must as <a href="/erp/insights/benefits-of-erp" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">ERP Software has various benefits</a>, some of them are as follows:</p>
+              <p className='text-justify'><a className="text-orange-600 underline" href="/erpnext/" target="_blank" rel="noopener noreferrer">Implementation of ERP Software</a> is the answer to many problems related to management in the manufacturing industry. The industry in today’s business environment is very dynamic and innovating rapidly. For being at the same pace as the changing market, latest technology is a must as <a href="/erp/insights/benefits-of-erp" target="_blank" rel="noopener noreferrer" className="text-orange-600 underline">ERP Software has various benefits</a>, some of them are as follows:</p>
             </div>
             <ManufacturingBenefitsGrid
               benefits={[
@@ -181,22 +181,22 @@ export default function Page() {
             </div>
           </div>
           <div className="mt-6 text-gray-700">
-  <p className="mb-4">
-    The key benefits of implementing an ERP system in the manufacturing industry include:
-  </p>
-  
-  <List
-    title=""
-    items={[
-      'Reduces operating costs',
-      'Standardizes business processes',
-      'Improves supply chain management',
-      'Aligns operations with strategic business goals',
-      'Maintains product quality',
-      'Enhances overall efficiency'
-    ]}
-  />
-</div>
+            <p className="mb-4">
+              The key benefits of implementing an ERP system in the manufacturing industry include:
+            </p>
+
+            <List
+              title=""
+              items={[
+                'Reduces operating costs',
+                'Standardizes business processes',
+                'Improves supply chain management',
+                'Aligns operations with strategic business goals',
+                'Maintains product quality',
+                'Enhances overall efficiency'
+              ]}
+            />
+          </div>
 
         </div>
       </Section>
@@ -213,16 +213,16 @@ export default function Page() {
             </div>
             <div className="md:w-11/12">
               <div className="md:w-11/12 text-[#1A5276]">
-              <p>
-                <b>"Almost all quality improvements come via simplification of design, manufacturing, layout, processes, and procedures - Tom Peters"</b>
-              </p>
-            </div>
+                <p>
+                  <b>"Almost all quality improvements come via simplification of design, manufacturing, layout, processes, and procedures - Tom Peters"</b>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </Section>
 
-      
+
       <Section>
         <div className="py-8">
           <CTA
@@ -232,7 +232,7 @@ export default function Page() {
                 icon: 'Factory',
               },
               title: 'Get Started with ERPNext for Manufacturing',
-              highlightText:"ERPNext for Manufacturing",
+              highlightText: "ERPNext for Manufacturing",
               description: 'Contact us today to schedule a personalized demo or consultation and see how ERPNext can streamline your production, inventory, and business processes.',
               primaryButton: {
                 text: 'Request a Demo',

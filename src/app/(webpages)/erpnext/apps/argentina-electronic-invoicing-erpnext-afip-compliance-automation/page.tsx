@@ -44,7 +44,7 @@ export default function Page() {
       {/* Introduction & Compliance Overview */}
       <Section>
         <div className="container-custom py-8 flex flex-col gap-8">
-        <h3 className="text-3xl font-semibold mb-2 flex items-center gap-2 text-[#1A5276]">Introduction</h3>
+          <h3 className="text-3xl font-semibold mb-2 flex items-center gap-2 text-[#1A5276]">Introduction</h3>
           <div className="text-justify animate-fadeinup">
             <p className="text-lg text-gray-700">
               ERPNext is a versatile open-source ERP system that allows businesses to manage various operations efficiently. Implementing electronic-invoicing compliance in ERPNext ensures seamless integration with government tax regulations. It automates invoice generation, validation, and real-time reporting to tax authorities. This customization reduces manual errors, enhances accuracy, and streamlines financial operations. Businesses benefit from improved efficiency and compliance with legal standards.
@@ -58,10 +58,10 @@ export default function Page() {
         <div className="container-custom py-8 items-center">
           <div>
             <h3 className="text-3xl font-semibold mb-2 flex items-center gap-2">
-            <span className='text-[#1A5276]'>Setup</span>
+              <span className='text-[#1A5276]'>Setup</span>
             </h3>
             <p className="text-gray-700 mb-4">
-            Follow these steps to set up the Argentina Compliance doctype and enable electronic-invoicing features in ERPNext: 
+              Follow these steps to set up the Argentina Compliance doctype and enable electronic-invoicing features in ERPNext:
             </p>
             <List
               title="1. Prerequisites"
@@ -95,242 +95,242 @@ export default function Page() {
             <List
               title="4. Initial Configuration"
               items={[
-                
+
               ]}
             />
 
-            
-
-      <Section>
-        <div className="">
-        <h6 className="text-2xl font-semibold mb-2 flex items-center gap-2 text-[#1A5276]">Step 1: Create Required file</h6>
-          <h6 className="text-2xl font-semibold mb-2 flex items-center gap-2 py-4">CSR (Certificate Signing Request)</h6>
-        </div>
-      </Section>
-
-      <Section>
-        <div className="text-justify">
-          <div className="space-y-3 animate-fade-in-up">
-          <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-            1. To obtain the certificate for the first time, the DN must be registered. To do this, you must submit a ‘certificate request’ or ‘Certificate Signing Request’ (CSR)
-            </p>
-            <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-            2. The CSR is generated on your computer using the OpenSSL tool… First, you must generate a private key in PKCS10 format with a minimum of 2048 bits : openssl genrsa -out MyPrivateKey 2048
-            </p>
-            <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-              3. Then you must generate the CSR itself:
-              <br />
-              openssl req 
-              <br />
-              -new
-              <br />
-              -key MyPrivateKey
-              <br />
-              -subj "/C=AR/O=subj_o/CN=subj_cn/serialNumber=CUIT subj_cuit"
-              <br />
-              -out MyCSRRequest
-            </p>
-            <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-            4. Note that in the serialNumber field, you must write ‘CUIT’ followed by a blank space and then the 11 digits of the CUIT without separators.
-
- 
-            </p>
-
-          </div>
-        </div>
-      </Section>
 
 
-      <Section>
-        <div className="">
-          <h6 className="text-2xl font-semibold mt-4 flex items-center gap-2 py-8">Creating the Certificate in AFIP </h6>
-        </div>
-      </Section>
+            <Section>
+              <div className="">
+                <h6 className="text-2xl font-semibold mb-2 flex items-center gap-2 text-[#1A5276]">Step 1: Create Required file</h6>
+                <h6 className="text-2xl font-semibold mb-2 flex items-center gap-2 py-4">CSR (Certificate Signing Request)</h6>
+              </div>
+            </Section>
 
-      <Section>
-        <div className="text-justify">
-          <div className="space-y-3 animate-fade-in-up">
-          <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-            1. Select the option: ‘New Certificate’ to access the form to create a DN and the certificate initially associated with it.
-            </p>
-            <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-            2. The fields to enter in the form are:
-               <br />
-               – Symbolic name of the DN.
-              <br />
-              – CUIT of the taxpayer.
-              <br />
-              – Certificate request in PKCS10 format.
-              <br />
-            </p>
-            <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-            4. Then click ‘Create DN and Obtain Certificate’. If there are no errors, the system returns an x509 certificate in PEM format.
-            </p>
-
-            <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-            5. Then you must copy and paste it into a plain text editor to save it on your local hard drive.
-
- 
-            </p>
-
-          </div>
-        </div>
-      </Section>
-
-      <Section>
-        <div className="">
-          <h6 className="text-2xl font-semibold mt-4 flex items-center gap-2 py-8">PFX Creation </h6>
-        </div>
-      </Section>
-
-      <Section>
-        <div className="text-justify">
-          <div className="space-y-3 animate-fade-in-up">
-          <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-          If you need to create a PFX file, you can use OpenSSL. For example:
-               <br />
-               openssl pkcs12   
-              <br />
-              -export
-              <br />
-              -inkey MyPrivateKey
-              <br />
-              -in certificate.pem
-              <br />
-              -out certificate.pfx
-            </p>
-
-          </div>
-        </div>
-      </Section>
+            <Section>
+              <div className="text-justify">
+                <div className="space-y-3 animate-fade-in-up">
+                  <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+                    1. To obtain the certificate for the first time, the DN must be registered. To do this, you must submit a ‘certificate request’ or ‘Certificate Signing Request’ (CSR)
+                  </p>
+                  <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+                    2. The CSR is generated on your computer using the OpenSSL tool… First, you must generate a private key in PKCS10 format with a minimum of 2048 bits : openssl genrsa -out MyPrivateKey 2048
+                  </p>
+                  <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+                    3. Then you must generate the CSR itself:
+                    <br />
+                    openssl req
+                    <br />
+                    -new
+                    <br />
+                    -key MyPrivateKey
+                    <br />
+                    -subj "/C=AR/O=subj_o/CN=subj_cn/serialNumber=CUIT subj_cuit"
+                    <br />
+                    -out MyCSRRequest
+                  </p>
+                  <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+                    4. Note that in the serialNumber field, you must write ‘CUIT’ followed by a blank space and then the 11 digits of the CUIT without separators.
 
 
-      <Section>
-        <div className="text-justify">
-          <div className="space-y-3 animate-fade-in-up">
-          <h6 className="text-2xl font-semibold mt-4 flex items-center gap-2 py-8">Production Certificate (ARCA)</h6>
-          <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-            1. Go to the ARCA portal (www.arca.gob.ar) and click the ‘Log In’ button.
-            </p>
-            <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-            2. Enter your ‘CUIT / CUIL / CDI’ and ‘password’ and click ‘LOGIN’.
-            </p>
-            <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-            3. Select the service ‘Digital Certificate Administration’.
-            </p>
-            <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-            4. Click ‘New Relationship’… Select the service ‘Digital Certificate Administration’… Press the ‘Confirm’ button.
-            </p>
-            <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-            5. Log out of the system and log back in.
-            </p>
-            <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-            6. Select the taxpayer.
-            </p>
-            <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-            7. Click on ‘Add alias’.
-            </p>
-            <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-            8. Choose a name for the alias and upload a CSR.
-            </p>
-            <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
-            9. Click on ‘View’… to visualize and download the certificate to your PC.
-            </p>
+                  </p>
 
-          </div>
-        </div>
-      </Section>
-     
-      <Section>
-        <div className="">
-        <h6 className="text-2xl font-semibold mb-2 mt-8 flex items-center gap-2 text-[#1A5276]">Step 2: Configuring AFIP Settings </h6>
-        </div>
-      </Section>
+                </div>
+              </div>
+            </Section>
 
-      <Section>
-        <div className="text-justify space">
-          <div className="space-y-3 animate-fade-in-up">
-          <p className="text-lg font-semibold py-4">
-            1. Go to: Accounting -- Argentina Integration -- AFIP Settings 
-            </p>
-            <p className="text-lg font-semibold py-4">
-            2. Go to Credentials Tab.
-            </p>
-            <ProcessStepImageCard
-              step="3"
-              title="Fill in the following details in the row: "
-              description="
+
+            <Section>
+              <div className="">
+                <h6 className="text-2xl font-semibold mt-4 flex items-center gap-2 py-8">Creating the Certificate in AFIP </h6>
+              </div>
+            </Section>
+
+            <Section>
+              <div className="text-justify">
+                <div className="space-y-3 animate-fade-in-up">
+                  <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+                    1. Select the option: ‘New Certificate’ to access the form to create a DN and the certificate initially associated with it.
+                  </p>
+                  <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+                    2. The fields to enter in the form are:
+                    <br />
+                    – Symbolic name of the DN.
+                    <br />
+                    – CUIT of the taxpayer.
+                    <br />
+                    – Certificate request in PKCS10 format.
+                    <br />
+                  </p>
+                  <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+                    4. Then click ‘Create DN and Obtain Certificate’. If there are no errors, the system returns an x509 certificate in PEM format.
+                  </p>
+
+                  <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+                    5. Then you must copy and paste it into a plain text editor to save it on your local hard drive.
+
+
+                  </p>
+
+                </div>
+              </div>
+            </Section>
+
+            <Section>
+              <div className="">
+                <h6 className="text-2xl font-semibold mt-4 flex items-center gap-2 py-8">PFX Creation </h6>
+              </div>
+            </Section>
+
+            <Section>
+              <div className="text-justify">
+                <div className="space-y-3 animate-fade-in-up">
+                  <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+                    If you need to create a PFX file, you can use OpenSSL. For example:
+                    <br />
+                    openssl pkcs12
+                    <br />
+                    -export
+                    <br />
+                    -inkey MyPrivateKey
+                    <br />
+                    -in certificate.pem
+                    <br />
+                    -out certificate.pfx
+                  </p>
+
+                </div>
+              </div>
+            </Section>
+
+
+            <Section>
+              <div className="text-justify">
+                <div className="space-y-3 animate-fade-in-up">
+                  <h6 className="text-2xl font-semibold mt-4 flex items-center gap-2 py-8">Production Certificate (ARCA)</h6>
+                  <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+                    1. Go to the ARCA portal (www.arca.gob.ar) and click the ‘Log In’ button.
+                  </p>
+                  <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+                    2. Enter your ‘CUIT / CUIL / CDI’ and ‘password’ and click ‘LOGIN’.
+                  </p>
+                  <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+                    3. Select the service ‘Digital Certificate Administration’.
+                  </p>
+                  <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+                    4. Click ‘New Relationship’… Select the service ‘Digital Certificate Administration’… Press the ‘Confirm’ button.
+                  </p>
+                  <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+                    5. Log out of the system and log back in.
+                  </p>
+                  <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+                    6. Select the taxpayer.
+                  </p>
+                  <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+                    7. Click on ‘Add alias’.
+                  </p>
+                  <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+                    8. Choose a name for the alias and upload a CSR.
+                  </p>
+                  <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
+                    9. Click on ‘View’… to visualize and download the certificate to your PC.
+                  </p>
+
+                </div>
+              </div>
+            </Section>
+
+            <Section>
+              <div className="">
+                <h6 className="text-2xl font-semibold mb-2 mt-8 flex items-center gap-2 text-[#1A5276]">Step 2: Configuring AFIP Settings </h6>
+              </div>
+            </Section>
+
+            <Section>
+              <div className="text-justify space">
+                <div className="space-y-3 animate-fade-in-up">
+                  <p className="text-lg font-semibold py-4">
+                    1. Go to: Accounting -- Argentina Integration -- AFIP Settings
+                  </p>
+                  <p className="text-lg font-semibold py-4">
+                    2. Go to Credentials Tab.
+                  </p>
+                  <ProcessStepImageCard
+                    step="3"
+                    title="Fill in the following details in the row: "
+                    description="
               Comapny, 
               CUIT Number, 
               Use SandBox Environment: Testing or Production, 
               Certificate File & Private Key : Upload "
-              image="/images/image (1).png"
-              alt="Generate Electronic-Invoice"
-            />
-            <ProcessStepImageCard
-              step="4"
-              title="Click Generate Token  button and it will Validate Connection to ensure the credentials are correct. "
-              description=""
-              image="/images/token.jpeg"
-              alt="Generate Electronic-Invoice"
-            />
-            <ProcessStepImageCard
-              step="5"
-              title="Save the DOC."
-              description=""
-              image="/images/save.png"
-              alt="Generate Electronic-Invoice"
-            />
-          </div>
-        </div>
-      </Section>
+                    image="/images/image (1).png"
+                    alt="Generate Electronic-Invoice"
+                  />
+                  <ProcessStepImageCard
+                    step="4"
+                    title="Click Generate Token  button and it will Validate Connection to ensure the credentials are correct. "
+                    description=""
+                    image="/images/token.jpeg"
+                    alt="Generate Electronic-Invoice"
+                  />
+                  <ProcessStepImageCard
+                    step="5"
+                    title="Save the DOC."
+                    description=""
+                    image="/images/save.png"
+                    alt="Generate Electronic-Invoice"
+                  />
+                </div>
+              </div>
+            </Section>
 
-      <Section>
-        <div className="">
-        <h6 className="text-2xl font-semibold mb-2 mt-6 flex items-center gap-2 py-8 text-[#1A5276]">Step 3: Set Company VAT and Fiscal Information </h6>
-        </div>
-      </Section>
+            <Section>
+              <div className="">
+                <h6 className="text-2xl font-semibold mb-2 mt-6 flex items-center gap-2 py-8 text-[#1A5276]">Step 3: Set Company VAT and Fiscal Information </h6>
+              </div>
+            </Section>
 
-      <Section>
-        <div className="text-justify space">
-          <div className="space-y-3 animate-fade-in-up">
-          <p className="text-lg font-semibold py-4">
-            1. Go to: Accounting -- Company  
-            </p>
-           
-            <ProcessStepImageCard
-              step="2"
-              title="Under the Argentina Compliance section, configure the following: "
-              description="
+            <Section>
+              <div className="text-justify space">
+                <div className="space-y-3 animate-fade-in-up">
+                  <p className="text-lg font-semibold py-4">
+                    1. Go to: Accounting -- Company
+                  </p>
+
+                  <ProcessStepImageCard
+                    step="2"
+                    title="Under the Argentina Compliance section, configure the following: "
+                    description="
               Center your VAT Category (e.g., Responsable Inscripto / Monotributista) and Confirm your Tax ID (CUIT)"
-              image="/images/confirm_tax.png"
-              alt="Generate Electronic-Invoice"
-            />
-          </div>
-        </div>
-      </Section>
+                    image="/images/confirm_tax.png"
+                    alt="Generate Electronic-Invoice"
+                  />
+                </div>
+              </div>
+            </Section>
 
-      <Section>
-        <div className="">
-        <h6 className="text-2xl font-semibold mb-2 mt-6 flex items-center gap-2 py-8 text-[#1A5276]">Step 4:  Sales Invoice Configuration</h6>
-        </div>
-      </Section>
+            <Section>
+              <div className="">
+                <h6 className="text-2xl font-semibold mb-2 mt-6 flex items-center gap-2 py-8 text-[#1A5276]">Step 4:  Sales Invoice Configuration</h6>
+              </div>
+            </Section>
 
-      <p className="text-lg font-semibold py-4">
-        1. Go to AFIP setting and Details Tab. 
-      </p>
+            <p className="text-lg font-semibold py-4">
+              1. Go to AFIP setting and Details Tab.
+            </p>
 
-      <p className="text-lg font-semibold py-4">
-         2. In the Table row Select the Naming Series of the Sales Invoice for the Point of Sale created on the AFIP Portal.      
-      </p>
+            <p className="text-lg font-semibold py-4">
+              2. In the Table row Select the Naming Series of the Sales Invoice for the Point of Sale created on the AFIP Portal.
+            </p>
 
-      <p className="text-lg font-semibold py-4">
-         3. Enter the POS Number (Recieved from AFIP portal )  corresponding to the Naming Series. 
-      </p>
+            <p className="text-lg font-semibold py-4">
+              3. Enter the POS Number (Recieved from AFIP portal )  corresponding to the Naming Series.
+            </p>
 
-      <p className="text-lg font-semibold py-4">
-         4. Save the Document
-      </p>        
+            <p className="text-lg font-semibold py-4">
+              4. Save the Document
+            </p>
 
           </div>
         </div>
@@ -342,7 +342,7 @@ export default function Page() {
           <div>
             <h3 className="text-3xl font-semibold mb-2 flex items-center gap-2">
               {/* <HiOutlineDocumentText className="text-blue-500" size={28} /> */}
-            <span className='text-[#1A5276]'>Custom Fields to Support Legal Compliance</span>
+              <span className='text-[#1A5276]'>Custom Fields to Support Legal Compliance</span>
             </h3>
             <p className="text-gray-700 mb-4">
               To ensure seamless electronic-invoicing compliance within ERPNext, custom fields are introduced to meet regulatory requirements and facilitate tax reporting.
@@ -365,12 +365,12 @@ export default function Page() {
       <Section>
         <div className="container-custom py-8 grid  gap-8 items-center">
           <div>
-          <h3 className="text-3xl font-semibold mb-2 flex items-center gap-2">
+            <h3 className="text-3xl font-semibold mb-2 flex items-center gap-2">
               {/* <HiOutlineDocumentText className="text-blue-500" size={28} /> */}
-            <span className='text-[#1A5276]'>Enhanced Form Organization </span>
+              <span className='text-[#1A5276]'>Enhanced Form Organization </span>
             </h3>
             <p className="text-gray-700 mb-4">
-            To improve user experience and ensure a structured layout, form enhancements are implemented in ERPNext: 
+              To improve user experience and ensure a structured layout, form enhancements are implemented in ERPNext:
             </p>
             <List
               title=""
@@ -388,9 +388,9 @@ export default function Page() {
       <Section useGradient>
         <div className="container-custom py-8" id="invoice">
           <div className="mb-8">
-          <h3 className="text-3xl font-semibold mb-2 flex items-center gap-2">
+            <h3 className="text-3xl font-semibold mb-2 flex items-center gap-2">
               {/* <HiOutlineDocumentText className="text-blue-500" size={28} /> */}
-            <span className='text-[#1A5276]'>Process Flow for Sales Invoice with Electronic-Invoice Generation</span>
+              <span className='text-[#1A5276]'>Process Flow for Sales Invoice with Electronic-Invoice Generation</span>
             </h3>
             <p className="text-gray-700">
               A streamlined process flow is established to integrate electronic-invoicing into the sales invoice workflow:
@@ -405,7 +405,7 @@ export default function Page() {
               className="rounded-xl shadow-lg w-full h-[320px] md:h-[420px]"
             />
           </div>
-         {/* md:grid-cols-2 */}
+          {/* md:grid-cols-2 */}
           <div className="grid  gap-8">
             <ProcessStepImageCard
               step="1"
@@ -457,9 +457,9 @@ export default function Page() {
       <Section>
         <div className="container-custom py-8 items-center">
           <div>
-          <h3 className="text-3xl font-semibold mb-2 flex items-center gap-2">
+            <h3 className="text-3xl font-semibold mb-2 flex items-center gap-2">
               {/* <HiOutlineDocumentText className="text-blue-500" size={28} /> */}
-            <span className='text-[#1A5276]'>Support for Various Business Scenarios</span>
+              <span className='text-[#1A5276]'>Support for Various Business Scenarios</span>
             </h3>
             <p className="text-gray-700 mb-4">
               ERPNext customizations cater to different business models and regulatory requirements:
@@ -528,34 +528,34 @@ export default function Page() {
       {/* Conclusion & CTA */}
       <Section>
         <div className="container-custom py-8 flex flex-col gap-6">
-            <h2 className="text-2xl font-bold mb-2 text-[#1A5276]">Conclusion</h2>
+          <h2 className="text-2xl font-bold mb-2 text-[#1A5276]">Conclusion</h2>
           <div className="text-gray-900 text-lg">
             <p>
-              Implementing electronic-invoicing compliance in ERPNext streamlines tax reporting, reduces manual errors, and enhances regulatory adherence. With custom fields, optimized workflows, and security enhancements, businesses can ensure seamless, accurate, and legally compliant invoicing.<br />Know more about our <Link href="/erpnext/" className="text-blue-600 underline" target="_blank">ERP Software </Link> and  <Link href="/erpnext/services/hire-erpnext-implementer" className="text-blue-600 underline" target="_blank">ERP Implementation Services</Link>.
+              Implementing electronic-invoicing compliance in ERPNext streamlines tax reporting, reduces manual errors, and enhances regulatory adherence. With custom fields, optimized workflows, and security enhancements, businesses can ensure seamless, accurate, and legally compliant invoicing.<br />Know more about our <Link href="/erpnext/" className="text-orange-600 underline" target="_blank">ERP Software </Link> and  <Link href="/erpnext/services/hire-erpnext-implementer" className="text-orange-600 underline" target="_blank">ERP Implementation Services</Link>.
             </p>
           </div>
 
-          
+
           <h2 className="text-2xl font-bold text-[#1A5276]">Documentation </h2>
           <div className="text-gray-900 text-lg">
             <p>
-            Complete documentation for Argentina Electronic Invoicing in ERPNext is available <Link href="/erpnext/apps/argentina-electronic-invoicing-erpnext-afip-compliance-automation" className="text-blue-600 underline" target="_blank">here</Link>.
+              Complete documentation for Argentina Electronic Invoicing in ERPNext is available <Link href="/erpnext/apps/argentina-electronic-invoicing-erpnext-afip-compliance-automation" className="text-orange-600 underline" target="_blank">here</Link>.
             </p>
           </div>
 
-          
+
           <h2 className="text-2xl font-bold text-[#1A5276]">License </h2>
-          
+
           <div className="text-gray-900 text-lg">
             <p>
-            GNU GPL V3. (See <Link href="https://github.com/finbyz/argentina_compliance/blob/version-15/license.txt" className="text-blue-600 underline" target="_blank">license.txt</Link> for more information).
+              GNU GPL V3. (See <Link href="https://github.com/finbyz/argentina_compliance/blob/version-15/license.txt" className="text-orange-600 underline" target="_blank">license.txt</Link> for more information).
             </p>
             <p>
-            The code is licensed under the GNU General Public License (v3), and copyright is owned by FinByz Tech Pvt Ltd. 
+              The code is licensed under the GNU General Public License (v3), and copyright is owned by FinByz Tech Pvt Ltd.
             </p>
           </div>
 
-          
+
 
 
           <div className="mt-6">

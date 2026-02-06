@@ -273,7 +273,7 @@ export default function ProactiveAIAssistantPage() {
                         </table>
                     </div>
 
-                    <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg mb-8">
+                    <div className="bg-orange-50 border-l-4 border-blue-500 p-6 rounded-r-lg mb-8">
                         <p className="text-sm text-blue-900">
                             <strong>SEO Tip:</strong> Incorporating terms like <em>&quot;Self-hosted AI agent,&quot;</em> <em>&quot;Local-first AI,&quot;</em> and{' '}
                             <em>&quot;Open-source personal assistant&quot;</em> alongside <strong>Moltbot</strong> will help capture high-intent traffic

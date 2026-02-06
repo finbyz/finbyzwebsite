@@ -115,10 +115,10 @@ export default function Page() {
 
       {/* Benefits List Section */}
       <Section useGradient>
-        <div  className="container-custom py-8">
+        <div className="container-custom py-8">
           <h2 className="text-2xl text-[#1A5276] font-bold text-center mb-6">Benefits of Implementing ERPNext in Agriculture</h2>
           <p className="text-gray-700 text-center mb-6">
-            Above the general <a href="https://finbyz.tech/benefits-of-erp" target="_blank" className="text-blue-600 underline">benefits of ERP Software</a>, there are various benefits, specific for Agro-Industry, some of them are as below
+            Above the general <a href="https://finbyz.tech/benefits-of-erp" target="_blank" className="text-orange-600 underline">benefits of ERP Software</a>, there are various benefits, specific for Agro-Industry, some of them are as below
           </p>
           <List
             title=""
@@ -133,7 +133,7 @@ export default function Page() {
           />
           <div className="mt-8">
             <p className="text-gray-700 mb-6">
-              We can help you analyze carefully all the needs and requirements of your business and then suggest you the solution that can help in increasing profits, productivity and control. There are many challenges in Implementing ERP software for agriculture industry, but adopting the latest technology is the only way to grow your business. We provide full hand holding in your journey to adopt <a href="/erpnext/" className="text-blue-600 underline">ERP software</a> for effective management of procurement, supply chain and distribution of agro-products.
+              We can help you analyze carefully all the needs and requirements of your business and then suggest you the solution that can help in increasing profits, productivity and control. There are many challenges in Implementing ERP software for agriculture industry, but adopting the latest technology is the only way to grow your business. We provide full hand holding in your journey to adopt <a href="/erpnext/" className="text-orange-600 underline">ERP software</a> for effective management of procurement, supply chain and distribution of agro-products.
             </p>
             <QuoteBlock
               text="Without change, performance would never improve. -Marianne Bradford."

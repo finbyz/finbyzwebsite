@@ -59,7 +59,7 @@ export default function Page() {
         <div className="container-custom py-8">
           <Card className="border-none bg-white/90 shadow-md hover:shadow-lg transition-shadow duration-300">
             <CardHeader className="flex flex-row items-center gap-4">
-              <FileText className="text-blue-600 w-8 h-8" />
+              <FileText className="text-orange-600 w-8 h-8" />
               <div>
                 <CardTitle className="text-lg font-semibold">Information Covered by this Privacy Policy</CardTitle>
                 <CardDescription>
@@ -89,7 +89,7 @@ export default function Page() {
               </div>
             </CardHeader>
             <CardContent className="pt-2 text-gray-700 space-y-4">
-            <h2 className="text-2xl font-bold mb-4 text-[#1A5276]">Types of Information Collected</h2>
+              <h2 className="text-2xl font-bold mb-4 text-[#1A5276]">Types of Information Collected</h2>
               <List
                 title=""
                 items={[
@@ -117,7 +117,7 @@ export default function Page() {
               </div>
             </CardHeader>
             <CardContent className="pt-2 text-gray-700">
-            <h2 className="text-2xl font-bold mb-4 text-[#1A5276]">Purposes for Processing Your Data</h2>
+              <h2 className="text-2xl font-bold mb-4 text-[#1A5276]">Purposes for Processing Your Data</h2>
               <List
                 title=""
                 items={[
@@ -181,7 +181,7 @@ export default function Page() {
         <div className="container-custom py-8 grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card className="border-none bg-white/90 shadow-md flex flex-col h-full">
             <CardHeader className="flex flex-row items-center gap-4">
-              <Globe className="text-blue-600 w-8 h-8" />
+              <Globe className="text-orange-600 w-8 h-8" />
               <div>
                 <CardTitle className="text-lg font-semibold">Third Party Websites</CardTitle>
                 <CardDescription>
@@ -267,7 +267,7 @@ export default function Page() {
         <div className="container-custom py-8">
           <Card className="border-none bg-white/90 shadow-md hover:shadow-lg transition-shadow duration-300">
             <CardHeader className="flex flex-row items-center gap-4">
-              <UserPlus className="text-blue-600 w-8 h-8" />
+              <UserPlus className="text-orange-600 w-8 h-8" />
               <div>
                 <CardTitle className="text-lg font-semibold"><h2 className='text-[#1A5276]'>Your Rights</h2></CardTitle>
                 <CardDescription>
@@ -277,7 +277,7 @@ export default function Page() {
             </CardHeader>
             <CardContent className="pt-2 text-gray-700 space-y-2">
               <p>
-                Some rights are complex and may require you to consult relevant laws for full details. You may exercise your rights by written notice to us at <a href="mailto:support@finbyz.tech" className="text-blue-600 underline">support@finbyz.tech</a>.
+                Some rights are complex and may require you to consult relevant laws for full details. You may exercise your rights by written notice to us at <a href="mailto:support@finbyz.tech" className="text-orange-600 underline">support@finbyz.tech</a>.
               </p>
               <UserRightsList />
               <p>
@@ -344,7 +344,7 @@ export default function Page() {
             </CardHeader>
             <CardContent className="pt-2 text-gray-700">
               <p>
-                Email: <a href="mailto:support@finbyz.tech" className="text-blue-600 underline">support@finbyz.tech</a>
+                Email: <a href="mailto:support@finbyz.tech" className="text-orange-600 underline">support@finbyz.tech</a>
               </p>
             </CardContent>
           </Card>
@@ -360,7 +360,7 @@ export default function Page() {
             </CardHeader>
             <CardContent className="pt-2 text-gray-700">
               <p>
-                Email: <a href="mailto:info@finbyz.tech" className="text-blue-600 underline">info@finbyz.tech</a>
+                Email: <a href="mailto:info@finbyz.tech" className="text-orange-600 underline">info@finbyz.tech</a>
               </p>
             </CardContent>
           </Card>

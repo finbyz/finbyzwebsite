@@ -17,7 +17,7 @@ const CreateCommunicationInTimelinePage = () => {
         category="Frappe Server Scripting"
         accentColor="orange"
       />
-      <CodeSnippetInstroduction 
+      <CodeSnippetInstroduction
         paragraphs={[
           "In ERPNext and the Frappe Framework, maintaining a clear history of interactions is crucial for CRM and other business processes. The 'Communication' DocType is the standard way to log activities like meetings, calls, and comments against other documents, such as Leads or Customers.",
           "This server script demonstrates how to automate this process. When triggered by an event (e.g., submitting a 'Lead Meeting' document), it programmatically creates a new Communication entry, formats the relevant details, and links it to the appropriate Lead. This ensures that the document's timeline is always up-to-date without manual intervention."

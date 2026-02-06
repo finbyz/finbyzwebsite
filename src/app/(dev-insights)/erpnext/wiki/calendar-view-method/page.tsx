@@ -17,10 +17,10 @@ const CalendarViewMethodPage = () => {
         category="Frappe Server Scripting"
         accentColor="blue"
       />
-      <CodeSnippetInstroduction 
+      <CodeSnippetInstroduction
         paragraphs={[
-            "In the Frappe framework, Calendar and Gantt views are powerful tools for visualizing time-based data. These views are not magic; they are powered by a dedicated server-side Python method that fetches and formats the necessary event data. This method is typically named `get_events`.",
-            "This snippet demonstrates the standard structure of a `get_events` function. It's a whitelisted server script that accepts start and end date parameters from the calendar UI, executes a custom SQL query to retrieve relevant records, and returns them in a format that the calendar component can render."
+          "In the Frappe framework, Calendar and Gantt views are powerful tools for visualizing time-based data. These views are not magic; they are powered by a dedicated server-side Python method that fetches and formats the necessary event data. This method is typically named `get_events`.",
+          "This snippet demonstrates the standard structure of a `get_events` function. It's a whitelisted server script that accepts start and end date parameters from the calendar UI, executes a custom SQL query to retrieve relevant records, and returns them in a format that the calendar component can render."
         ]}
       />
       <CodeBlock

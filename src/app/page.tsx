@@ -10,6 +10,7 @@ import { Metadata } from "next";
 import FAQ from "@/components/ai_components/FAQ";
 import { getFaqs } from "@/lib/getPageData";
 import CooprtaionSchema from "@/components/seo/CorporationSchema";
+import ModulesSection from "@/components/sections/modules-erp";
 
 export const metadata: Metadata = {
   title: "ERP Solution Provider & AI Automation Experts | ERPNext Implementation | Finbyz Tech",
@@ -99,8 +100,8 @@ export default async function Home() {
         <div className="[&_h2]:text-[#1A5276]">
           <ResponsiveCardGrid
             data={{
-              title: "ERPNext & AI Automation Services",
-              subtitle: "Partner with certified Frappe and ERPNext experts for comprehensive ERP software implementation, AI-powered automation, and custom software development solutions.",
+              title: "ERPNext Implementation & AI Automation Services",
+              subtitle: "With over 10+ years of IT business solutions experience, FinByz Tech has technology in our genes. As certified Frappe and ERPNext experts, we provide innovative ERP solutions and AI-powered automation that work for all industries. We're adept at fitting an ERP solution that exactly meets your business goals.",
               variant: "iconCard",
               layout: "standard",
               showImage: false,
@@ -111,7 +112,7 @@ export default async function Home() {
                 {
                   id: 1,
                   title: "ERPNext Implementation",
-                  description: "End-to-end ERPNext deployment by certified Frappe partners. From consulting to go-live, we handle configuration, data migration, and training.",
+                  description: "End-to-end ERPNext deployment by certified Frappe partners. We help you adapt to digital transformation by understanding your current processes and suggesting the best ERP software. We don't just act as ERP suppliers - we provide comprehensive training for efficient usage.",
                   icon: "Cpu",
                   iconBg: "#1A5276",
                   iconColor: "#ffffff"
@@ -119,7 +120,7 @@ export default async function Home() {
                 {
                   id: 2,
                   title: "AI Automation Solutions",
-                  description: "Intelligent workflow automation powered by AI. Automate business processes, enhance decision-making, and boost operational efficiency.",
+                  description: "Intelligent workflow automation powered by AI. Automate business processes, enhance decision-making, and boost operational efficiency. We create innovative solutions mixing domain expertise with cutting-edge technology to automate your business functioning.",
                   icon: "TrendingUp",
                   iconBg: "#FF8C00",
                   iconColor: "#ffffff"
@@ -127,15 +128,15 @@ export default async function Home() {
                 {
                   id: 3,
                   title: "Frappe Development",
-                  description: "Custom Frappe framework development for tailored ERP solutions. Build powerful business applications with open-source technology.",
-                  icon: "Globe",
+                  description: "Custom Frappe framework development for tailored ERP solutions. Build powerful business applications with open-source technology. We create robust, scalable solutions designed as per your business processes to make workflow easier and more efficient.",
+                  icon: "Code",
                   iconBg: "#27AE60",
                   iconColor: "#ffffff"
                 },
                 {
                   id: 4,
                   title: "ERPNext Support & Upgrades",
-                  description: "24/7 ERPNext support, maintenance, and version upgrades. Keep your ERP software running smoothly with expert assistance.",
+                  description: "24/7 ERPNext support, maintenance, and version upgrades. Keep your ERP software running smoothly with expert assistance. We provide ongoing support from initial consultation to post-implementation maintenance.",
                   icon: "Target",
                   iconBg: "#8E44AD",
                   iconColor: "#ffffff"
@@ -143,7 +144,7 @@ export default async function Home() {
                 {
                   id: 5,
                   title: "ERP Data Analytics",
-                  description: "Custom reports, dashboards, and predictive analytics for ERPNext. Make data-driven decisions with intelligent business insights.",
+                  description: "Cutting-edge Data Analytics can unlock business values hidden in your data. Our Data Scientists expertly apply advanced methods to develop business insights and solve problems that go past conventional Business Intelligence. Convert scattered data into knowledge!",
                   icon: "BarChart3",
                   iconBg: "#FF3333",
                   iconColor: "#ffffff"
@@ -151,9 +152,25 @@ export default async function Home() {
                 {
                   id: 6,
                   title: "Custom Software Development",
-                  description: "End-to-end custom software development tailored to your business needs. From web applications to enterprise solutions.",
-                  icon: "Cpu",
+                  description: "We provide customized Software Development services to meet your unique business needs. Create tailored software solutions to solve specific problems designed as per your business processes to satisfy your exclusive needs.",
+                  icon: "Laptop",
                   iconBg: "#FFB347",
+                  iconColor: "#ffffff"
+                },
+                {
+                  id: 7,
+                  title: "IT Consulting",
+                  description: "Technology is evolving rapidly. With our IT expertise and in-depth understanding of the industry, we help you develop or update strategies and refine goals to maximize your chances of success. It's about your company, your business & your success.",
+                  icon: "Lightbulb",
+                  iconBg: "#3498DB",
+                  iconColor: "#ffffff"
+                },
+                {
+                  id: 8,
+                  title: "Website Development",
+                  description: "Your website is the first impression people get when they search for your company. We build dynamic websites with advanced technology and development experts as per your company needs - the most interesting and informative part of your business.",
+                  icon: "Globe",
+                  iconBg: "#E74C3C",
                   iconColor: "#ffffff"
                 }
               ]
@@ -162,18 +179,20 @@ export default async function Home() {
 
         <BusinessSlider />
 
+        <ModulesSection />
         <Testimonials />
+        
 
         <ClientLogos data={{ useAPI: true, apiEndpoint: '/api/client-logos' }} />
         <CTA
           data={{
             title: "Ready to Transform Your Business with ERP & AI?",
             highlightText: "ERP & AI?",
-            description: "Join 100+ growing businesses worldwide. Get a free consultation and custom roadmap for your digital transformation.",
+            description: "Join 100+ growing businesses worldwide. We believe technology can be the lighthouse to navigate towards your goals. Using latest technology, we steer our clients from where they are to where their Vision aspires them to be. Get a free consultation and custom roadmap for your digital transformation.",
             subheading: { text: "Limited Consultation Slots Available", icon: "CalendarCheck" },
             primaryButton: { text: "Book Free Demo", icon: "CalendarCheck", action: '/contact' },
             secondaryButton: { text: "Get Custom Quote", icon: "FileText", action: '/contact' },
-            trustIndicator: { text: "✓ 100+ Successful Implementations | ✓ 24/7 Support | ✓ Free Consultation", icon: "CalendarCheck" }
+            trustIndicator: { text: "✓ 100+ Successful Implementations | ✓ 24/7 Support | ✓ 10+ Years Experience", icon: "CalendarCheck" }
           }}
         />
 
@@ -183,7 +202,7 @@ export default async function Home() {
           data={{
             title: "Get Your Free ERP Consultation",
             highlightText: "Free ERP Consultation",
-            description: "Schedule a 30-minute consultation with our ERP experts. Get a custom roadmap and ROI analysis tailored to your business. No obligation, no commitment.",
+            description: "Need a solid software foundation for your business? Custom Enterprise software serves your unique business needs. Your business needs a reliable enterprise software solution to support many operations. Schedule a 30-minute consultation with our ERP experts. Get a custom roadmap and ROI analysis. No obligation required.",
             fields: {
               name: "Name",
               organization: "Organization Name",

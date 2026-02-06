@@ -28,7 +28,7 @@ export async function generateMetadata(): Promise<Metadata> {
             type: 'website',
             images: [
                 {
-                    url: 'https://finbyz.tech/images/ai-automation-og.jpg',
+                    url: `${process.env.SITE_URL}/images/ai-automation.jpeg`,
                     width: 1200,
                     height: 630,
                     alt: 'Proactive AI Personal Assistant',

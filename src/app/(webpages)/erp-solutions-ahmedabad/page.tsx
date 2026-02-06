@@ -1,7 +1,6 @@
 'use client';
 
-import CTA from "@/components/sections/cta";
-import InquiryForm from "@/components/ui/InquiryForm";
+
 import ResponsiveCardGrid from "@/components/sections/responsive-card-grid";
 import { Building2, Users, Award, HeadphonesIcon, CheckCircle2, TrendingUp } from "lucide-react";
 
@@ -214,35 +213,6 @@ export default function ERPSolutionsAhmedabadPage() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <CTA
-        data={{
-          title: "Ready to Transform Your Business with ERP?",
-          highlightText: "Transform Your Business",
-          description: "Schedule a free consultation with our ERP experts. Get a custom roadmap and ROI analysis tailored to your Ahmedabad business.",
-          subheading: { text: "Free Consultation for Ahmedabad Businesses", icon: "CalendarCheck" },
-          primaryButton: { text: "Book Free Demo", icon: "CalendarCheck", action: '/contact' },
-          secondaryButton: { text: "Call: +91-9925701446", icon: "Phone", action: "tel:+919925701446" },
-          trustIndicator: { text: "✓ 50+ Ahmedabad Clients | ✓ Local Support Team | ✓ No Obligation", icon: "CalendarCheck" }
-        }}
-      />
-
-      {/* Inquiry Form */}
-      <InquiryForm
-        data={{
-          title: "Get Your Free ERP Consultation in Ahmedabad",
-          highlightText: "Free ERP Consultation",
-          description: "Fill out the form below and our Ahmedabad-based ERP consultant will contact you within 24 hours to discuss your requirements.",
-          fields: {
-            name: "Name",
-            organization: "Organization Name",
-            email: "Email",
-            mobile: "Mobile No"
-          },
-          submitText: "SCHEDULE MY CONSULTATION"
-        }}
-      />
     </div>
   );
 }

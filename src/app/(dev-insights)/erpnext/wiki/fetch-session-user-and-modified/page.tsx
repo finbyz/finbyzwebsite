@@ -17,13 +17,13 @@ const Page = () => {
         category="Frappe Jinja Templates"
         accentColor="orange"
       />
-      <CodeSnippetInstroduction 
+      <CodeSnippetInstroduction
         paragraphs={[
           "In the Frappe framework, Jinja templating is a powerful feature used for creating dynamic content in Print Formats, Custom HTML fields, and Web Pages. A common requirement is to display information related to the current user or the users who have interacted with a document. This collection of snippets provides a practical guide to fetching various user details directly within your Jinja templates.",
           "These examples leverage built-in Frappe API methods that are safely exposed to the Jinja rendering context, allowing you to perform simple database queries and access session information without writing complex server scripts."
         ]}
       />
-      <CodeBlock 
+      <CodeBlock
         code={`// Get the ID of the current session user
 {{ frappe.user }}
 
@@ -41,11 +41,11 @@ const Page = () => {
 `}
         language="jinja"
       />
-      <CodeOverview 
+      <CodeOverview
         whatItDoes="This collection of Jinja snippets demonstrates various methods to retrieve user-related information within a Frappe Framework template. It covers fetching the current session user, the user who last modified a document, and related details like full name or designation from linked DocTypes."
         whenToUse="Use these snippets in any Frappe context that supports Jinja templating. This is most common in custom Print Formats, custom HTML fields on a Form, or in web pages to display user-specific information dynamically without needing a separate server script."
       />
-      <KeyConcepts 
+      <KeyConcepts
         concepts={[
           {
             title: "Session User Variables",
@@ -64,7 +64,7 @@ const Page = () => {
           }
         ]}
       />
-      <StepByStepTutorial 
+      <StepByStepTutorial
         steps={[
           {
             stepNumber: 1,
@@ -96,7 +96,7 @@ const Page = () => {
           }
         ]}
       />
-      <Troubleshooting 
+      <Troubleshooting
         items={[
           {
             problem: "The Jinja snippet doesn't display any value, and no error is shown.",

@@ -30,14 +30,14 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "Finbyz Tech",
       type: "website",
       locale: "en_US",
-      images: [{ url: `${process.env.FRAPPE_URL}/${pageData?.data?.meta_image || pageData?.data?.svg_image || pageData?.data?.image || pageData?.data?.animated_image}`, width: 1200, height: 630, alt: pageData?.data?.seo_title }],
+      images: [{ url: `${process.env.NEXT_PUBLIC_ERP_URL}/web-api/fb/n/${pageData?.data?.meta_image || pageData?.data?.svg_image || pageData?.data?.image || pageData?.data?.animated_image}`, width: 1200, height: 630, alt: pageData?.data?.seo_title }],
     },
     twitter: {
       card: "summary_large_image",
       title: pageData?.data?.seo_title,
       description: pageData?.data?.small_description,
       creator: "@finbyz",
-      images: [`${process.env.FRAPPE_URL}/${pageData?.data?.meta_image}`],
+      images: [`${process.env.NEXT_PUBLIC_ERP_URL}/web-api/fb/n/${pageData?.data?.meta_image}`],
     },
     robots: {
       index: true,
@@ -53,9 +53,8 @@ export async function generateMetadata(): Promise<Metadata> {
     }
   }
 }
-const faqsGroup = await getFaqs("Blog Post", "ai-automation/insights/ai-revolutionizing-global-communication-a-hint-of-change");
-
 export default async function Layout({ children }: { children: React.ReactNode }) {
+  const faqsGroup = await getFaqs("Blog Post", "ai-automation/insights/ai-revolutionizing-global-communication-a-hint-of-change");
   const data = await getPageData("Blog Post", "ai-automation/insights/ai-revolutionizing-global-communication-a-hint-of-change");
 
   return (

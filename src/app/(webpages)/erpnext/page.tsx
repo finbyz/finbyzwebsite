@@ -1,10 +1,11 @@
-import ERPNextPageContent from './ERPNextPageContent';
+import Content from './ERPNextPageContent';
 import PageFooter from '@/components/sections/PageFooter';
 
+// Main ERPNext Landing Page
 export default async function Page() {
   return (
     <>
-      <ERPNextPageContent />
+      <Content />
       <PageFooter
         doctype="Web Page"
         docname="erpnext-software"

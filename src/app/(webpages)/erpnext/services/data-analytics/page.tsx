@@ -55,11 +55,11 @@ export default function Page() {
       src: "/Business Intelligence.png"
     },
     {
-      title: '/Data Visualizations.png',
+      title: 'Data Visualizations',
       description:
         'Powerful data visualizations are at the heart of effective data analytics. Our custom dashboards and visuals highlight key metrics, reveal emerging patterns, and enhance CRM analytics for better customer understanding. Drive collaboration, insights, and strategic actions through clear, interactive visual narratives.',
       // icon: <AreaChart className="w-8 h-8 text-primary mb-2" />
-      src: "Data Visualizations.png"
+      src: "/Data Visualizations.png"
     },
     {
       title: 'Strategy',
@@ -78,9 +78,9 @@ export default function Page() {
         highlightWords={["Data", "Analytics"]}
         description="Unlock business intelligence with Finbyz Tech’s data analytics solutions. We deliver CRM analytics, real-time dashboards, and predictive insights to drive growth."
         primaryButton={{ text: 'Request Demo', action: handleContact }}
-        secondaryButton={{ 
-          text: 'Learn More', 
-          action:"#data" 
+        secondaryButton={{
+          text: 'Learn More',
+          action: "#data"
         }}
         heroImage={{
           alt: 'Data Analytics',
