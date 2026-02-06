@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/files/ChatGPT Image Oct 14, 2025, 03_00_34 PM.png", width: 1200, height: 630, alt: "Smart Card Scanner Overview" }],
+    images: [{ url: `${process.env.NEXT_PUBLIC_BASE_URL}/files/ChatGPT Image Oct 14, 2025, 03_00_34 PM.png`, width: 1200, height: 630, alt: "Smart Card Scanner Overview" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Smart Card Scanner Overview",
     description: "Discover the Smart Card Scanner, an AI-driven tool for efficient business card management integrating with ERPNext for automated contact data extraction.",
     creator: "@finbyztech",
-    images: ["/files/ChatGPT Image Oct 14, 2025, 03_00_34 PM.png"],
+    images: [`${process.env.NEXT_PUBLIC_BASE_URL}/files/ChatGPT Image Oct 14, 2025, 03_00_34 PM.png`],
   },
   robots: {
     index: true,
@@ -79,14 +79,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
+
       <article itemScope itemType="https://schema.org/WebPage">
         <meta itemProp="name" content="Smart Card Scanner Overview" />
         <meta itemProp="description" content="Discover the Smart Card Scanner, an AI-driven tool for efficient business card management integrating with ERPNext for automated contact data extraction." />
       </article>
-      
+
       {children}
-      
+
       <BusinessSlider />
     </>
   );

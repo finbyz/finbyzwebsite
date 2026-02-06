@@ -29,7 +29,7 @@ export default function Page() {
           'Secure, policy-compliant processing'
         ],
         duration: 'Real-time',
-        iconColor: 'text-blue-600',
+        iconColor: 'text-orange-600',
         iconBg: 'bg-blue-100'
       },
       {
@@ -247,7 +247,7 @@ export default function Page() {
         highlightWords={seo.highlightwords}
         description={seo.description || undefined}
         heroImage={{ alt: seo.title, src: "/images/email_classifiaction.gif" }}
-        primaryButton={{ text: 'Get a Demo', action:'/contact' }}
+        primaryButton={{ text: 'Get a Demo', action: '/contact' }}
 
       />
 

@@ -56,7 +56,7 @@ const DownloadFormModal: React.FC<DownloadFormModalProps> = ({ open, onClose, fi
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
-    
+
     if (!form.name.trim()) newErrors.name = "Name is required";
     if (!form.email.trim()) {
       newErrors.email = "Email is required";
@@ -76,7 +76,7 @@ const DownloadFormModal: React.FC<DownloadFormModalProps> = ({ open, onClose, fi
 
   const handleSubmit = () => {
     if (!fileUrl) return;
-    
+
     if (validateForm()) {
       setSubmitting(true);
       const fullMobile = `${form.countryCode}${form.mobile.replace(/\D/g, '')}`;
@@ -91,11 +91,11 @@ const DownloadFormModal: React.FC<DownloadFormModalProps> = ({ open, onClose, fi
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Backdrop */}
-      <div 
+      <div
         className="absolute inset-0 bg-black/60 backdrop-blur-sm"
         onClick={onClose}
       />
-      
+
       {/* Modal */}
       <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md transform transition-all">
         {/* Header with gradient */}
@@ -103,14 +103,14 @@ const DownloadFormModal: React.FC<DownloadFormModalProps> = ({ open, onClose, fi
         <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-t-2xl p-6 relative overflow-hidden">
           {/* <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -mr-20 -mt-20" /> */}
           {/* <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full -ml-16 -mb-16" /> */}
-          
+
           <button
             onClick={onClose}
             className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors z-10"
           >
             <X size={24} />
           </button>
-          
+
           <div className="relative">
             <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4">
               <Download className="text-white" size={28} />
@@ -132,11 +132,10 @@ const DownloadFormModal: React.FC<DownloadFormModalProps> = ({ open, onClose, fi
                 placeholder="Full Name"
                 value={form.name}
                 onChange={handleChange}
-                className={`w-full pl-11 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all ${
-                  errors.name 
-                    ? "border-red-300 focus:ring-red-200" 
+                className={`w-full pl-11 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all ${errors.name
+                    ? "border-red-300 focus:ring-red-200"
                     : "border-gray-200 focus:ring-blue-200 focus:border-blue-400"
-                }`}
+                  }`}
                 autoFocus
               />
               {form.name && !errors.name && (
@@ -156,11 +155,10 @@ const DownloadFormModal: React.FC<DownloadFormModalProps> = ({ open, onClose, fi
                 placeholder="Email Address"
                 value={form.email}
                 onChange={handleChange}
-                className={`w-full pl-11 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all ${
-                  errors.email 
-                    ? "border-red-300 focus:ring-red-200" 
+                className={`w-full pl-11 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all ${errors.email
+                    ? "border-red-300 focus:ring-red-200"
                     : "border-gray-200 focus:ring-blue-200 focus:border-blue-400"
-                }`}
+                  }`}
               />
               {form.email && !errors.email && /\S+@\S+\.\S+/.test(form.email) && (
                 <CheckCircle className="absolute right-3 top-1/2 -translate-y-1/2 text-green-500" size={20} />
@@ -194,11 +192,10 @@ const DownloadFormModal: React.FC<DownloadFormModalProps> = ({ open, onClose, fi
                 placeholder="Organization"
                 value={form.organization}
                 onChange={handleChange}
-                className={`w-full pl-11 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all ${
-                  errors.organization 
-                    ? "border-red-300 focus:ring-red-200" 
+                className={`w-full pl-11 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all ${errors.organization
+                    ? "border-red-300 focus:ring-red-200"
                     : "border-gray-200 focus:ring-blue-200 focus:border-blue-400"
-                }`}
+                  }`}
               />
               {form.organization && !errors.organization && (
                 <CheckCircle className="absolute right-3 top-1/2 -translate-y-1/2 text-green-500" size={20} />
@@ -208,7 +205,7 @@ const DownloadFormModal: React.FC<DownloadFormModalProps> = ({ open, onClose, fi
           </div>
 
           {/* Privacy Note */}
-          <div className="bg-blue-50 border border-blue-100 rounded-lg p-3">
+          <div className="bg-orange-50 border border-blue-100 rounded-lg p-3">
             <p className="text-xs text-blue-800">
               🔒 Your information is secure and will only be used to provide you with the requested resource.
             </p>

@@ -59,13 +59,12 @@ export const metadata: Metadata = {
     },
 };
 
-const faqsGroup = await getFaqs("Blog Post", PAGE_SLUG);
-
 export default async function Layout({
     children,
 }: {
     children: React.ReactNode;
 }) {
+  const faqsGroup = await getFaqs("Blog Post", PAGE_SLUG);
     const data = await getPageData("Blog Post", PAGE_SLUG);
 
     return (

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Custom Mobile App Development Business & ERPNext Solutions",
     description: "Unlock efficiency with custom mobile app development. Finbyz Tech builds powerful applications for ERPNext and unique business needs, ensuring seamless workflows and real-time access. Transform your operations today.",
-    url: "https://finbyz.tech/erpnext/services/mobile-app-development",
+    url: `${process.env.SITE_URL}/erpnext/services/mobile-app-development`,
     siteName: "FinByz Tech",
     type: "website",
     locale: "en_US",

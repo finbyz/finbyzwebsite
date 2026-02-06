@@ -69,8 +69,8 @@ export default function N8nPage() {
               <p className="text-sm text-gray-600">Drag-and-drop interface to design your workflows visually.</p>
             </div>
             <div className="p-6 border border-gray-200 rounded-lg bg-white text-center hover:shadow-lg hover:border-[#1A5276] transition-all">
-              <div className="w-12 h-12 mx-auto mb-4 bg-blue-50 rounded-full flex items-center justify-center">
-                <Network className="w-6 h-6 text-blue-600" />
+              <div className="w-12 h-12 mx-auto mb-4 bg-orange-50 rounded-full flex items-center justify-center">
+                <Network className="w-6 h-6 text-orange-600" />
               </div>
               <h3 className="text-lg font-bold mb-2 text-[#1A5276]">Any App Integration</h3>
               <p className="text-sm text-gray-600">Connect to any API or service with HTTP Request nodes.</p>

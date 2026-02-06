@@ -54,7 +54,7 @@ export default function Page() {
                             cover: true,
                         }}
                     >
-                        <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-6">
+                        <div className="bg-orange-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-6">
                             <h4 className="flex items-center gap-2 font-semibold text-blue-800 dark:text-blue-200 mb-1">
                                 <span className="text-xl">📢</span> Latest Updates (January 2026)
                             </h4>

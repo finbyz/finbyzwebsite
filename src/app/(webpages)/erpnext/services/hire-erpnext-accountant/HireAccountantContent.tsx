@@ -55,7 +55,7 @@ export default function HireAccountantContent() {
                             You end up spending months training them on the software, paying for their learning curve while your books fall behind.
                         </p>
                         <p className="text-slate-700 text-base md:text-lg font-semibold text-justify leading-relaxed">
-                            We offer a different approach. When you <Link href="/erpnext/services/start-your-erp-journey" className="text-blue-600 hover:underline">hire from us</Link>, you aren't just getting an accountant; you are getting a professional backed by a company that has lived and breathed ERPNext for over 10 years. We don't need training; we need access.
+                            We offer a different approach. When you <Link href="/erpnext/services/start-your-erp-journey" className="text-orange-600 hover:underline">hire from us</Link>, you aren't just getting an accountant; you are getting a professional backed by a company that has lived and breathed ERPNext for over 10 years. We don't need training; we need access.
                         </p>
                     </div>
                 </div>
@@ -67,7 +67,7 @@ export default function HireAccountantContent() {
                     <h2 className="text-3xl md:text-4xl font-bold text-[#1A5276] mb-6 text-center">The "Techno-Functional" Advantage: Why We Are Different</h2>
                     <p className="text-slate-700 text-base md:text-lg mb-12 text-center max-w-3xl mx-auto">
                         Most outsourcing firms offer you a standalone data entry clerk. We offer you an Accountant supported by a Technical Legacy. <br />
-                        Because our firm has 10+ years of experience <Link href="/erpnext/services/start-your-erp-journey" className="text-blue-600 hover:underline">implementing ERPNext</Link>, our accountants work within a proven framework of best practices. They understand the machinery behind the numbers because they are trained and supervised by ERPNext veterans.
+                        Because our firm has 10+ years of experience <Link href="/erpnext/services/start-your-erp-journey" className="text-orange-600 hover:underline">implementing ERPNext</Link>, our accountants work within a proven framework of best practices. They understand the machinery behind the numbers because they are trained and supervised by ERPNext veterans.
                     </p>
 
                     <div className="grid md:grid-cols-3 gap-8">
@@ -200,29 +200,29 @@ export default function HireAccountantContent() {
                                 <tr className="bg-slate-100 text-[#1A5276]">
                                     <th className="p-4 md:p-6 font-bold text-lg border-b border-slate-200 w-1/4">Feature</th>
                                     <th className="p-4 md:p-6 font-bold text-lg border-b border-slate-200 w-1/3">The "Generalist" Accountant</th>
-                                    <th className="p-4 md:p-6 font-bold text-lg border-b border-slate-200 bg-blue-50 w-1/3 text-blue-800">Our ERPNext Expert Team</th>
+                                    <th className="p-4 md:p-6 font-bold text-lg border-b border-slate-200 bg-orange-50 w-1/3 text-blue-800">Our ERPNext Expert Team</th>
                                 </tr>
                             </thead>
                             <tbody className="text-slate-700">
                                 <tr className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
                                     <td className="p-4 md:p-6 font-semibold">Onboarding Time</td>
                                     <td className="p-4 md:p-6 text-red-600">3-6 Months. You pay them while you teach them the software.</td>
-                                    <td className="p-4 md:p-6 font-semibold text-green-600 bg-blue-50/30">Zero. We log in and start working on Day 1.</td>
+                                    <td className="p-4 md:p-6 font-semibold text-green-600 bg-orange-50/30">Zero. We log in and start working on Day 1.</td>
                                 </tr>
                                 <tr className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
                                     <td className="p-4 md:p-6 font-semibold">Support System</td>
                                     <td className="p-4 md:p-6 text-red-600">None. They are on their own when issues arise.</td>
-                                    <td className="p-4 md:p-6 font-semibold text-green-600 bg-blue-50/30">High. Backed by 10+ years of firm-level expertise.</td>
+                                    <td className="p-4 md:p-6 font-semibold text-green-600 bg-orange-50/30">High. Backed by 10+ years of firm-level expertise.</td>
                                 </tr>
                                 <tr className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
                                     <td className="p-4 md:p-6 font-semibold">Cost Efficiency</td>
                                     <td className="p-4 md:p-6 text-red-600">High fixed salary, benefits, and recruitment fees.</td>
-                                    <td className="p-4 md:p-6 font-semibold text-green-600 bg-blue-50/30">A predictable, flat monthly fee that scales with you.</td>
+                                    <td className="p-4 md:p-6 font-semibold text-green-600 bg-orange-50/30">A predictable, flat monthly fee that scales with you.</td>
                                 </tr>
                                 <tr className="hover:bg-slate-50 transition-colors">
                                     <td className="p-4 md:p-6 font-semibold">Reliability</td>
                                     <td className="p-4 md:p-6 text-red-600">Vulnerable to sick days, holidays, and turnover.</td>
-                                    <td className="p-4 md:p-6 font-semibold text-green-600 bg-blue-50/30">Continuous coverage by a team that never "quits."</td>
+                                    <td className="p-4 md:p-6 font-semibold text-green-600 bg-orange-50/30">Continuous coverage by a team that never "quits."</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -241,7 +241,7 @@ export default function HireAccountantContent() {
                                 Let's Get Your <span className="text-orange-500">Books in Order</span>
                             </h2>
                             <p className="text-slate-700 text-lg mb-8 leading-relaxed">
-                                You invested in <Link href="/erpnext" className="text-blue-600 hover:underline">ERPNext</Link> to streamline your business. Don't let the accounting hold you back. Let us handle the ledger so you can focus on growing the business.
+                                You invested in <Link href="/erpnext" className="text-orange-600 hover:underline">ERPNext</Link> to streamline your business. Don't let the accounting hold you back. Let us handle the ledger so you can focus on growing the business.
                             </p>
                             <p className="text-slate-600 text-base mb-6 font-medium">
                                 Tell us about your current setup, and let's see if we're a good fit.

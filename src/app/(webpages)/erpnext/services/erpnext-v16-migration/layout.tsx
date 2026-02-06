@@ -32,14 +32,14 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "Finbyz Tech",
       type: "website",
       locale: "en_US",
-      images: [{ url: `${process.env.FRAPPE_URL}/${pageData?.data?.meta_image || pageData?.data?.svg_image || pageData?.data?.image || pageData?.data?.animated_image}`, width: 1200, height: 630, alt: "ERPNext Migration Services" }],
+      images: [{ url: `${process.env.NEXT_PUBLIC_ERP_URL}/web-api/fb/n/${pageData?.data?.meta_image || pageData?.data?.svg_image || pageData?.data?.image || pageData?.data?.animated_image}`, width: 1200, height: 630, alt: "ERPNext Migration Services" }],
     },
     twitter: {
       card: "summary_large_image",
       title: pageData?.data?.seo_title || "ERPNext v16 Migration Services",
       description: pageData?.data?.small_description || "Expert help for upgrading to ERPNext v16.",
       creator: "@finbyz",
-      images: [`${process.env.FRAPPE_URL}/${pageData?.data?.meta_image}`],
+      images: [`${process.env.NEXT_PUBLIC_ERP_URL}/web-api/fb/n/${pageData?.data?.meta_image}`],
     },
     robots: {
       index: true,

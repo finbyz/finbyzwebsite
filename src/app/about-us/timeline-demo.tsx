@@ -9,10 +9,10 @@ import YearFilterTimeline from "@/components/ui/YearFilterTimeline";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Grid3X3, 
-  ArrowRight, 
-  Clock, 
+import {
+  Grid3X3,
+  ArrowRight,
+  Clock,
   Palette,
   Layout,
   MousePointer,
@@ -79,21 +79,19 @@ export default function TimelineDemo() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {timelineOptions.map((option) => (
-            <Card 
+            <Card
               key={option.id}
-              className={`cursor-pointer transition-all duration-300 ${
-                activeTimeline === option.id
-                  ? 'border-blue-500 bg-blue-50 shadow-lg scale-105'
+              className={`cursor-pointer transition-all duration-300 ${activeTimeline === option.id
+                  ? 'border-blue-500 bg-orange-50 shadow-lg scale-105'
                   : 'hover:shadow-md hover:scale-102'
-              }`}
+                }`}
               onClick={() => setActiveTimeline(option.id as any)}
             >
               <CardHeader className="text-center">
-                <div className={`w-16 h-16 mx-auto mb-4 rounded-xl flex items-center justify-center ${
-                  activeTimeline === option.id
+                <div className={`w-16 h-16 mx-auto mb-4 rounded-xl flex items-center justify-center ${activeTimeline === option.id
                     ? 'bg-gradient-to-br from-blue-500 to-purple-600 text-white'
                     : 'bg-slate-100 text-slate-600'
-                }`}>
+                  }`}>
                   <option.icon className="w-8 h-8" />
                 </div>
                 <CardTitle className="text-xl font-bold text-slate-800">

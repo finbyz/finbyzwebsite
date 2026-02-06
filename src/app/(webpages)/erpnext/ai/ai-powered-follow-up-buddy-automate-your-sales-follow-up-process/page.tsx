@@ -9,16 +9,16 @@ import CTA from '@/components/sections/cta'
 export default function Page() {
   const heroProps = {
     headline: 'Effective Sales Follow-Up Automation Tool',
-    highlightWords:['Automation','Effective Sales'],
+    highlightWords: ['Automation', 'Effective Sales'],
     description:
       'Follow Up Buddy automates the sales process by generating personalized follow-up emails and identifying inactive leads, saving time and enhancing customer relationships.',
-    primaryButton: { text: 'Get a Demo' ,action:'/contact' },
+    primaryButton: { text: 'Get a Demo', action: '/contact' },
     // secondaryButton: { text: 'Learn More', action: () => {
     //   const el = document.getElementById('follow-up');
     //   if (el) el.scrollIntoView({ behavior: 'smooth' });
     // } },
-    heroImage: { alt: 'Effective Sales Follow-Up Automation Tool', src:"/images/Followup Buddy.gif" },
-    
+    heroImage: { alt: 'Effective Sales Follow-Up Automation Tool', src: "/images/Followup Buddy.gif" },
+
   }
 
   const introTextData = {
@@ -46,8 +46,8 @@ export default function Page() {
           'Real-time detection with zero manual checks',
         ],
         duration: 'Continuous',
-        iconColor: 'text-blue-600',
-        iconBg: 'bg-blue-50',
+        iconColor: 'text-orange-600',
+        iconBg: 'bg-orange-50',
       },
       {
         step: '02',
@@ -203,14 +203,16 @@ export default function Page() {
     description:
       'Deploy Follow Up Buddy to identify stale opportunities, craft on-brand outreach, and send perfectly timed follow-ups — automatically.',
     primaryButton: { text: 'Get a Demo', icon: 'Send', action: '/contact' },
-    secondaryButton: { text: 'See how it works', icon: 'Play', action: () => {
-      const el = document.getElementById('follow-up');
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-    } },
+    secondaryButton: {
+      text: 'See how it works', icon: 'Play', action: () => {
+        const el = document.getElementById('follow-up');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }
+    },
     trustIndicator: { text: 'Secure by design • ERPNext-ready', icon: 'ShieldCheck' },
   }
 
- 
+
   return (
     <>
       {/* 1️⃣ Hero Section (Required - First) */}

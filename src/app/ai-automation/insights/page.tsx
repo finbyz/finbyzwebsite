@@ -65,11 +65,11 @@ export default function AIInsightsPage() {
                   className="group block p-6 border border-gray-200 rounded-lg hover:shadow-xl transition-all duration-300 hover:border-[#1A5276] bg-white"
                 >
                   <div className="flex items-start gap-4 mb-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center group-hover:bg-[#1A5276] transition-colors">
+                    <div className="flex-shrink-0 w-12 h-12 bg-orange-50 rounded-lg flex items-center justify-center group-hover:bg-[#1A5276] transition-colors">
                       <Icon className="w-6 h-6 text-[#1A5276] group-hover:text-white transition-colors" />
                     </div>
                     <div className="flex-1">
-                      <span className="inline-block px-2 py-1 text-xs font-semibold text-[#1A5276] bg-blue-50 rounded mb-2">
+                      <span className="inline-block px-2 py-1 text-xs font-semibold text-[#1A5276] bg-orange-50 rounded mb-2">
                         {insight.category}
                       </span>
                     </div>

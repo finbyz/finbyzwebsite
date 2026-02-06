@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "https://finbyz.tech/images/AboutUs.png",
+        url: `${process.env.SITE_URL}/images/AboutUs.png`,
         width: 1200,
         height: 630,
         alt: "About Finbyz Tech - ERPNext Implementation Partner",

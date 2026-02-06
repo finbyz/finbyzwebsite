@@ -30,23 +30,23 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const { parent } = galleries;
     const title = parent.seo_title || parent.gallery_title || parent.title || 'Learning Hub';
     const description = parent.small_description || parent.description || 'Explore our comprehensive collection of tutorials and resources';
-    const keywords = parent.keywords || '';
+    const keywords = parent.keywords.split(',').map(k => k.trim()).filter(Boolean) || '';
     const image = parent.svg_image ? `/web-api/fb/n${parent.svg_image}` : '/images/FinbyzLogo.png';
 
     return {
       title,
       description,
-      keywords: keywords.split(',').map(k => k.trim()).filter(Boolean),
+      keywords: keywords,
       authors: [{ name: 'FinByz Tech Pvt Ltd' }],
       openGraph: {
         title,
         description,
         type: 'article',
-        url: `https://finbyz.tech/${slug}`,
+        url: `${process.env.SITE_URL}/${slug}`,
         siteName: 'FinByz Tech Pvt Ltd',
         images: [
           {
-            url: image,
+            url: `${process.env.SITE_URL}${image}`,
             width: 1200,
             height: 630,
             alt: title,

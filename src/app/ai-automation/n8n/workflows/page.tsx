@@ -93,7 +93,7 @@ export default function N8nWorkflowsPage() {
                         <div className="grid md:grid-cols-3 gap-6">
                             <div className="text-center p-4">
                                 <div className="w-12 h-12 mx-auto mb-3 bg-blue-100 rounded-full flex items-center justify-center">
-                                    <GitBranch className="w-6 h-6 text-blue-600" />
+                                    <GitBranch className="w-6 h-6 text-orange-600" />
                                 </div>
                                 <h3 className="text-lg font-bold mb-1 text-[#1A5276]">Customizable</h3>
                                 <p className="text-sm text-gray-600">Modify any workflow to match your exact business logic</p>

@@ -75,8 +75,8 @@ const workflowData = {
       icon: 'Mic',
       details: ['Start/stop recording in ERPNext', 'Upload MP3/WAV/M4A files'],
       duration: 'Instant',
-      iconColor: 'text-blue-600',
-      iconBg: 'bg-blue-50',
+      iconColor: 'text-orange-600',
+      iconBg: 'bg-orange-50',
     },
     {
       step: '2',
@@ -155,7 +155,7 @@ const benefitsData = {
       header: 'Improves Sales Skills',
       icon: 'Waveform',
       description: 'Sales reps learn from detailed call breakdowns to improve performance over time.',
-      palette: { iconBg: 'bg-blue-50', iconColor: 'text-blue-600' },
+      palette: { iconBg: 'bg-orange-50', iconColor: 'text-orange-600' },
     },
     {
       number: 2,

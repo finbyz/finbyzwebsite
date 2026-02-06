@@ -1,6 +1,16 @@
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
+import {
+  Wallet,
+  Users,
+  Package,
+  ShoppingCart,
+  Settings,
+  Briefcase,
+  Headphones,
+  Globe,
+  Building
+} from "lucide-react";
 
 type ModuleKey =
   | "account"
@@ -17,20 +27,20 @@ type ModuleKey =
 interface ModuleDef {
   key: ModuleKey;
   title: string;
-  icon: React.ReactNode; // or image path
+  icon: React.ReactNode;
 }
 
 const modules: ModuleDef[] = [
-  { key: "account", title: "Account", icon: <Image src="/icons/account.svg" alt="Account" width={24} height={24} /> },
-  { key: "crm", title: "CRM", icon: <Image src="/icons/crm.svg" alt="CRM" width={24} height={24} /> },
-  { key: "inventory", title: "Inventory", icon: <Image src="/icons/inventory.svg" alt="Inventory" width={24} height={24} /> },
-  { key: "purchase", title: "Purchase", icon: <Image src="/icons/purchase.svg" alt="Purchase" width={24} height={24} /> },
-  { key: "manufacturing", title: "Manufacturing", icon: <Image src="/icons/manufacturing.svg" alt="Manufacturing" width={24} height={24} /> },
-  { key: "human_resource", title: "Human Resource", icon: <Image src="/icons/hr.svg" alt="Human Resource" width={24} height={24} /> },
-  { key: "asset", title: "Asset", icon: <Image src="/icons/asset.svg" alt="Asset" width={24} height={24} /> },
-  { key: "project", title: "Project", icon: <Image src="/icons/project.svg" alt="Project" width={24} height={24} /> },
-  { key: "support", title: "Support", icon: <Image src="/icons/support.svg" alt="Support" width={24} height={24} /> },
-  { key: "exim", title: "Exim", icon: <Image src="/icons/exim.svg" alt="Exim" width={24} height={24} /> },
+  { key: "account", title: "Account", icon: <Wallet className="w-5 h-5" /> },
+  { key: "crm", title: "CRM", icon: <Users className="w-5 h-5" /> },
+  { key: "inventory", title: "Inventory", icon: <Package className="w-5 h-5" /> },
+  { key: "purchase", title: "Purchase", icon: <ShoppingCart className="w-5 h-5" /> },
+  { key: "manufacturing", title: "Manufacturing", icon: <Settings className="w-5 h-5" /> },
+  { key: "human_resource", title: "HR", icon: <Users className="w-5 h-5" /> },
+  { key: "asset", title: "Asset", icon: <Building className="w-5 h-5" /> },
+  { key: "project", title: "Project", icon: <Briefcase className="w-5 h-5" /> },
+  { key: "support", title: "Support", icon: <Headphones className="w-5 h-5" /> },
+  { key: "exim", title: "Exim", icon: <Globe className="w-5 h-5" /> },
 ];
 
 // Content data for each module
@@ -108,8 +118,8 @@ export default function ErpModulesTabs() {
                 value={mod.key}
                 className={cn(
                   "flex items-center px-4 py-2 space-x-2 text-sm font-medium transition",
-                  "data-[state=active]:text-white data-[state=active]:bg-blue-600 data-[state=active]:border-transparent",
-                  "hover:bg-blue-50 data-[state=inactive]:text-gray-600"
+                  "data-[state=active]:text-white data-[state=active]:bg-orange-600 data-[state=active]:border-transparent",
+                  "hover:bg-orange-50 data-[state=inactive]:text-gray-600"
                 )}
               >
                 {/* {mod.icon} */}

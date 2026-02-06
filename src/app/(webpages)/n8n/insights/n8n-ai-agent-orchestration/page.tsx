@@ -231,11 +231,7 @@ export default function Page() {
             <Section>
                 <div className="container-custom py-12">
                     <div className="max-w-4xl mx-auto text-center space-y-6">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 font-medium text-sm">
-                            <Sparkles className="w-4 h-4" />
-                            <span>The Future of Enterprise Automation</span>
-                        </div>
-                        <h2 className="text-3xl md:text-4xl font-bold text-[#1A5276]">
+                        <h2 className="text-2xl md:text-4xl font-bold text-[#1A5276]">
                             What is AI Agent Orchestration?
                         </h2>
                         <p className="text-lg text-muted-foreground leading-relaxed">
@@ -293,7 +289,7 @@ export default function Page() {
             <Section>
                 <div className="container-custom py-12" id="use-cases">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold text-[#1A5276] mb-4">
+                        <h2 className="text-2xl md:text-2xl font-bold text-[#1A5276] mb-4">
                             Industry Applications
                         </h2>
                         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -322,7 +318,7 @@ export default function Page() {
             </Section>
 
             {/* Process Workflow */}
-            <Section useGradient>
+            <Section>
                 <ProcessWorkflow
                     data={{
                         title: "Implementation Methodology",
@@ -333,7 +329,7 @@ export default function Page() {
             </Section>
 
             {/* Stats Showcase */}
-            <Section>
+            {/* <Section>
                 <StatsShowcase
                     data={{
                         title: "Proven Results",
@@ -341,7 +337,7 @@ export default function Page() {
                         stats: successStats
                     }}
                 />
-            </Section>
+            </Section> */}
 
             {/* Why Choose Finbyz Section */}
             <Section useGradient>

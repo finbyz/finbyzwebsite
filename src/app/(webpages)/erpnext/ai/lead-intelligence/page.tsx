@@ -26,7 +26,7 @@ export default function Page() {
           'Enable fetching for targeted folders only'
         ],
         duration: '≈ 10 min',
-        iconColor: 'text-blue-600',
+        iconColor: 'text-orange-600',
         iconBg: 'bg-blue-100'
       },
       {
@@ -160,12 +160,13 @@ export default function Page() {
     description:
       'Turn unstructured emails into clean, actionable CRM records with AI-powered classification, extraction, and deduplication.',
     primaryButton: { text: 'Request a demo', icon: 'Sparkles', action: '/contact' },
-    secondaryButton: { text: 'See How it Works', 
-      icon: 'Phone', 
+    secondaryButton: {
+      text: 'See How it Works',
+      icon: 'Phone',
       action: () => {
         const el = document.getElementById('lead');
         if (el) el.scrollIntoView({ behavior: 'smooth' });
-      } 
+      }
     },
     trustIndicator: { text: 'No lock-in • Secure • Auditable', icon: 'ShieldCheck' }
   };
@@ -178,9 +179,9 @@ export default function Page() {
         description={seoDescription}
         heroImage={{ alt: seoTitle, src: "/images/Lead Intelligence.gif" }}
         highlightWords={["Lead Intelligence"]}
-        primaryButton={{ text: 'Get a Demo', action:'/contact' }}
+        primaryButton={{ text: 'Get a Demo', action: '/contact' }}
 
-        // accentColor="blue"
+      // accentColor="blue"
       />
 
       {/* 2️⃣ OVERVIEW SECTION (Required) */}

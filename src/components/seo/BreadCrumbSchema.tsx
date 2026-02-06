@@ -33,7 +33,7 @@ interface BreadcrumbSchema {
 export default function BreadcrumbSchema({ 
   homeLabel = "Home", 
   customLabels = {},
-  baseUrl = process.env.SITE_URL || ''
+  baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://finbyz.tech'
 }: BreadcrumbSchemaProps) {
   const pathname = usePathname();
 

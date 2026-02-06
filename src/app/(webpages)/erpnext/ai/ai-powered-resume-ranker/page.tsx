@@ -26,8 +26,8 @@ export default function Page() {
           'Workflow initiated automatically'
         ],
         duration: 'Instant',
-        iconColor: 'text-blue-600',
-        iconBg: 'bg-blue-50'
+        iconColor: 'text-orange-600',
+        iconBg: 'bg-orange-50'
       },
       {
         step: '02',
@@ -120,7 +120,7 @@ export default function Page() {
         header: 'Automated parsing & matching',
         description: 'Save recruiter hours by automating resume parsing and JD matching.',
         icon: 'Timer',
-        palette: { iconBg: 'bg-blue-50', iconColor: 'text-blue-600' }
+        palette: { iconBg: 'bg-orange-50', iconColor: 'text-orange-600' }
       },
       {
         number: 100,
@@ -182,7 +182,7 @@ export default function Page() {
         highlightWords={["Resume Ranker"]}
         description={seoDescription}
         heroImage={{ src: "/AI_Powered_Resume_Ranker.gif", alt: seoTitle }}
-        primaryButton={{ text: 'Get a Demo', action:'/contact' }}
+        primaryButton={{ text: 'Get a Demo', action: '/contact' }}
 
       />
 

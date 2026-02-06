@@ -169,7 +169,7 @@ export default function Page() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                        <div className="bg-orange-50 p-4 rounded-lg border border-blue-200">
                             <p className="font-semibold text-blue-900">🏆 Winner: Moltbot for immediate impact and accessibility</p>
                         </div>
                     </div>
@@ -226,7 +226,7 @@ export default function Page() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                        <div className="bg-orange-50 p-4 rounded-lg border border-blue-200">
                             <p className="font-semibold text-blue-900">🏆 Winner: Claude Code for ease of setup</p>
                             <p className="text-sm text-gray-600 mt-1">Current Standings: Claude Code 15, Moltbot 15 (TIE)</p>
                         </div>
@@ -291,7 +291,7 @@ export default function Page() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                        <div className="bg-orange-50 p-4 rounded-lg border border-blue-200">
                             <p className="font-semibold text-blue-900">🏆 Winner: Claude Code for cost predictability</p>
                             <p className="text-sm text-gray-600 mt-1">Current Standings: Claude Code 23, Moltbot 21</p>
                         </div>
@@ -345,7 +345,7 @@ export default function Page() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                        <div className="bg-orange-50 p-4 rounded-lg border border-blue-200">
                             <p className="font-semibold text-blue-900">🏆 Winner: Moltbot for breadth of capabilities</p>
                             <p className="text-sm text-gray-600 mt-1">Current Standings: Claude Code 30, Moltbot 31</p>
                         </div>
@@ -413,7 +413,7 @@ export default function Page() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                        <div className="bg-orange-50 p-4 rounded-lg border border-blue-200">
                             <p className="font-semibold text-blue-900">🏆 Winner: Claude Code for security</p>
                             <p className="text-sm text-gray-600 mt-1">Current Standings: Claude Code 37, Moltbot 34</p>
                         </div>
@@ -485,7 +485,7 @@ export default function Page() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                        <div className="bg-orange-50 p-4 rounded-lg border border-blue-200">
                             <p className="font-semibold text-blue-900">🏆 Winner: Moltbot for accessibility and convenience</p>
                             <p className="text-sm text-gray-600 mt-1">Current Standings: Claude Code 43, Moltbot 43 (TIE)</p>
                         </div>
@@ -549,7 +549,7 @@ export default function Page() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                        <div className="bg-orange-50 p-4 rounded-lg border border-blue-200">
                             <p className="font-semibold text-blue-900">🏆 Winner: Claude Code for proven results</p>
                             <p className="text-sm text-gray-600 mt-1">Current Standings: Claude Code 51.5, Moltbot 49</p>
                         </div>
@@ -568,9 +568,9 @@ export default function Page() {
                         <div className="grid md:grid-cols-2 gap-8">
                             <div className="text-center">
                                 <div className="bg-white p-6 rounded-lg shadow-md border-4 border-blue-500">
-                                    <Code2 className="w-12 h-12 mx-auto mb-3 text-blue-600" />
+                                    <Code2 className="w-12 h-12 mx-auto mb-3 text-orange-600" />
                                     <h3 className="text-2xl font-bold text-[#1A5276] mb-2">Claude Code</h3>
-                                    <div className="text-6xl font-bold text-blue-600 mb-2">51.5</div>
+                                    <div className="text-6xl font-bold text-orange-600 mb-2">51.5</div>
                                     <p className="text-sm text-gray-600">Total Score</p>
                                     <div className="mt-4 text-xs text-left space-y-1">
                                         <p>✓ Out of Box: 7/10</p>
@@ -603,7 +603,7 @@ export default function Page() {
                         </div>
                         <div className="mt-8 text-center">
                             <p className="text-lg font-semibold text-gray-700">
-                                🏆 Winner: <span className="text-blue-600">Claude Code</span> by 2.5 points
+                                🏆 Winner: <span className="text-orange-600">Claude Code</span> by 2.5 points
                             </p>
                             <p className="text-sm text-gray-600 mt-2">
                                 But the best choice depends on your specific needs and use case
@@ -624,7 +624,7 @@ export default function Page() {
                         {/* Claude Code ICP */}
                         <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-lg shadow-lg border-2 border-blue-200">
                             <div className="flex items-center gap-3 mb-4">
-                                <Code2 className="w-8 h-8 text-blue-600" />
+                                <Code2 className="w-8 h-8 text-orange-600" />
                                 <h3 className="text-2xl font-bold text-[#1A5276]">Choose Claude Code If You:</h3>
                             </div>
                             <ul className="space-y-3 text-gray-700">

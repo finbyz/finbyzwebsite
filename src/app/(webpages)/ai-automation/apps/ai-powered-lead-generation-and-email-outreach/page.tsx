@@ -21,7 +21,7 @@ export default function Page() {
         highlightWords={["Lead Generation", "Email Outreach"]}
         description={seoDescription}
         heroImage={{ src: "/AI_Powered_Resume_Ranker.gif", alt: 'AI_Powered_Resume_Ranker' }}
-        primaryButton={{ text: 'Get a Demo', action:'/contact' }}
+        primaryButton={{ text: 'Get a Demo', action: '/contact' }}
 
       // secondaryButton={{ text: 'See Workflow' }}
       />
@@ -58,7 +58,7 @@ export default function Page() {
                   description:
                     'Upload an Excel or Google Sheet of target companies. Click “Get Companies” to fetch decision-makers and relevant titles from Apollo.',
                   icon: 'Upload',
-                  iconColor: 'text-blue-600',
+                  iconColor: 'text-orange-600',
                   iconBg: 'bg-blue-100'
                 },
                 {
@@ -97,7 +97,7 @@ export default function Page() {
                     'Auto-qualify leads aligned to campaign goals'
                   ],
                   duration: 'Minutes',
-                  iconColor: 'text-blue-600',
+                  iconColor: 'text-orange-600',
                   iconBg: 'bg-blue-100'
                 },
                 {
@@ -137,7 +137,7 @@ export default function Page() {
       </Section>
 
       {/* Features as Icon Cards */}
-    
+
 
       {/* Benefits as List Points */}
       <Section className='container-custom'>

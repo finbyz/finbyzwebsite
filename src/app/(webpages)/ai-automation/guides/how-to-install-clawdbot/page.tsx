@@ -113,7 +113,7 @@ export default function Page() {
             </div>
             <div className="bg-white p-5 rounded-lg border shadow-sm">
               <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-3">
-                <Server className="w-6 h-6 text-blue-600" />
+                <Server className="w-6 h-6 text-orange-600" />
               </div>
               <h3 className="font-semibold mb-2">Free AWS Tier</h3>
               <p className="text-sm text-slate-600">Free server works perfectly for most users</p>
@@ -387,7 +387,7 @@ export default function Page() {
               ],
             }}
           />
-          <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg mt-6">
+          <div className="bg-orange-50 border-l-4 border-blue-500 p-6 rounded-r-lg mt-6">
             <p className="text-blue-900 font-medium">
               💡 If those three tests work, everything else will too.
             </p>
@@ -485,7 +485,7 @@ export default function Page() {
               </p>
             </div>
 
-            <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
+            <div className="bg-orange-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
               <h3 className="font-bold text-blue-900 mb-2 flex items-center gap-2">
                 <CheckCircle className="w-5 h-5" />
                 Claude Code Token Conflict
@@ -591,7 +591,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg mt-6">
+          <div className="bg-orange-50 border-l-4 border-blue-500 p-6 rounded-r-lg mt-6">
             <h4 className="font-semibold text-blue-900 mb-2">
               💡 Pro Tip: Use Voice Notes
             </h4>

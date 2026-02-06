@@ -59,7 +59,7 @@ export default function TransactionAuditContent() {
                 <h2 className="text-3xl md:text-4xl font-bold text-[#1A5276] mb-6 text-center">Don't Let Data Entry Errors Derail Your ERP Success</h2>
 
                 <p className="text-slate-700 text-base md:text-lg mb-6 text-justify leading-relaxed">
-                    You successfully <Link href="/erpnext/services/start-your-erp-journey" className="text-blue-600 hover:underline">implemented ERPNext</Link>. Your team has started entering transactions. But as the months roll by, you start noticing things aren't quite adding up.
+                    You successfully <Link href="/erpnext/services/start-your-erp-journey" className="text-orange-600 hover:underline">implemented ERPNext</Link>. Your team has started entering transactions. But as the months roll by, you start noticing things aren't quite adding up.
                 </p>
 
                 <ul className="list-disc pl-5 space-y-2 text-slate-700 text-base md:text-lg mb-6">
@@ -146,7 +146,7 @@ export default function TransactionAuditContent() {
 
                 <div className="grid md:grid-cols-3 gap-8">
                     <div className="p-6 border border-slate-200 rounded-xl hover:shadow-lg transition-shadow bg-white">
-                        <div className="h-2 w-12 bg-blue-600 rounded mb-4"></div>
+                        <div className="h-2 w-12 bg-orange-600 rounded mb-4"></div>
                         <h3 className="text-xl font-bold text-[#1A5276] mb-3">1. The Framework</h3>
                         <p className="text-slate-700 leading-relaxed">
                             We bring a robust audit framework and specific validation checklists tailored to your industry.
@@ -200,7 +200,7 @@ export default function TransactionAuditContent() {
 
                     {/* Area 2: Purchase & Asset Management (Blue) */}
                     <div className="border border-blue-200 rounded-xl overflow-hidden shadow-sm">
-                        <div className="bg-blue-50 px-6 py-4 border-b border-blue-200">
+                        <div className="bg-orange-50 px-6 py-4 border-b border-blue-200">
                             <h3 className="text-xl font-bold text-[#1A5276]">Purchase & Asset Management</h3>
                             <p className="text-blue-700 text-sm">Verifying that your costs and assets are truly represented</p>
                         </div>

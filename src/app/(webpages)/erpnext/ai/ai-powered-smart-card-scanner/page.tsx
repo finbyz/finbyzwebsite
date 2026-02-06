@@ -72,8 +72,8 @@ const workflowData = {
       icon: 'Scan',
       details: ['Mobile-friendly interface', 'Immediate submission from any device', 'User-friendly workflow'],
       duration: '~10s',
-      iconColor: 'text-blue-600',
-      iconBg: 'bg-blue-50',
+      iconColor: 'text-orange-600',
+      iconBg: 'bg-orange-50',
     },
     {
       step: '2',
@@ -135,7 +135,7 @@ const benefitsData = {
       header: 'Drastically Reduces Time',
       description: 'Removes the necessity for manual typing, enabling near-instantaneous capture and CRM updates.',
       icon: 'Clock',
-      palette: { iconBg: 'bg-blue-50', iconColor: 'text-blue-600' },
+      palette: { iconBg: 'bg-orange-50', iconColor: 'text-orange-600' },
     },
     {
       number: 2,

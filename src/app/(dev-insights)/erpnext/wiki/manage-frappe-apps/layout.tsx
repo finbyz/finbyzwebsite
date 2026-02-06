@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    images: [{ url: "https://finbyz.tech/images/finbyz-banner.png", width: 1200, height: 630, alt: "Bench App Commands" }],
+    images: [{ url: `${process.env.SITE_URL}/images/FinbyzLogo.png`, width: 1200, height: 630, alt: "Bench App Commands" }],
   },
   twitter: {
     card: "summary_large_image",

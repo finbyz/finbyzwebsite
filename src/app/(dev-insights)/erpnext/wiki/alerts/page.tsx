@@ -1,5 +1,7 @@
 import CodeSnippetHero from "@/components/code-snippets/code-snippet-hero";
 import CodeSnippetInstroduction from "@/components/code-snippets/code-introduction";
+import CodeBlock from "@/components/code-snippets/code-block";
+import CodeOverview from "@/components/code-snippets/code-overview";
 import KeyConcepts from "@/components/code-snippets/key-concepts";
 import StepByStepTutorial from "@/components/code-snippets/step-by-step-tutorial";
 import Troubleshooting from "@/components/code-snippets/troubleshooting";
@@ -22,11 +24,43 @@ export default function AlertsPage() {
                 ]}
             />
 
+            <CodeBlock
+                code={`# Example: High Value Order Alert
+# Trigger: On Submit of Sales Order
+# Condition: Grand Total > 10000
+
+subject: High Value Order: {{ doc.name }}
+recipients:
+  - role: Sales Manager
+  - email: ceo@example.com
+
+message: |
+  A new high-value order has been submitted.
+  Customer: {{ doc.customer_name }}
+  Amount: {{ doc.grand_total }}
+`}
+                language="yaml"
+                showLineNumbers={true}
+                allowCopy={true}
+                referenceLink="https://docs.erpnext.com/docs/user/manual/en/notification"
+                referenceLinkText="Official Documentation"
+            />
+
+            <CodeOverview
+                whatItDoes="Automatically sends emails, SMS, or Slack messages when specific events occur in the system (like creating, saving, or submitting a document)."
+                whenToUse="Use alerts to keep stakeholders informed about critical updates without manual intervention, such as approval requests, high-value transactions, or stock level warnings."
+                prerequisites={[
+                    "System Manager role to configure.",
+                    "Configured Email Account for sending emails.",
+                    "Slack/SMS settings configured if using those channels."
+                ]}
+            />
+
             <KeyConcepts
                 concepts={[
                     {
                         title: "Triggers",
-                        description: "Events that start the notification process. Common triggers include 'New' (document creation), 'Submit' (document finalization), 'Cancel', 'Save', or value changes in specific fields.",
+                        description: "Events that start the notification process. Common triggers include 'New' (document creation), 'Submit' (document finalization), 'Cancel', 'Save', or 'Value Change' (critical for security monitoring).",
                         relatedLink: "https://docs.erpnext.com/docs/user/manual/en/notification"
                     },
                     {
@@ -82,6 +116,39 @@ export default function AlertsPage() {
                 ]}
             />
 
+            {/* Security & Audit Alerts Section */}
+            <CodeSnippetInstroduction
+                paragraphs={[
+                    "Beyond operational updates, Notifications are a powerful tool for Security and Audit trails. You can monitor sensitive changes in the system to ensure compliance and prevent unauthorized access."
+                ]}
+            />
+
+            <StepByStepTutorial
+                steps={[
+                    {
+                        stepNumber: 1,
+                        title: "Monitor Sensitive Fields",
+                        explanation: "Want to know if someone changes a User's Role Profile? Set a notification on the 'User' document triggered by 'Value Change' on the 'role_profile_name' field.",
+                        code: "Document Type: User\nSend Alert On: Value Change\nValue Changed: role_profile_name",
+                        language: "yaml"
+                    },
+                    {
+                        stepNumber: 2,
+                        title: "Alert on Permission Changes",
+                        explanation: "Receive an immediate email if a 'Role Permission Manager' document is modified or deleted. This is crucial for maintaining system integrity.",
+                        code: "Document Type: Custom DocPerm\nSend Alert On: Save",
+                        language: "yaml"
+                    },
+                    {
+                        stepNumber: 3,
+                        title: "Restricted Access Attempts",
+                        explanation: "While you can't alert on 'view' attempts easily, you can alert if a user tries to 'Cancel' a key document. This serves as a warning for potentially destructive actions.",
+                        code: "Document Type: Purchase Order\nSend Alert On: Cancel\nCondition: doc.status == 'Compromised'",
+                        language: "python"
+                    }
+                ]}
+            />
+
             <Troubleshooting
                 items={[
                     {
@@ -95,6 +162,10 @@ export default function AlertsPage() {
                     {
                         problem: "Dynamic values not showing in email",
                         solution: "Ensure you are using the correct Jinja syntax `{{ doc.field_name }}`. Verify the field name in the Customize Form view."
+                    },
+                    {
+                        problem: "Security Alert not firing",
+                        solution: "For 'Value Change' alerts, ensure the field is actually changing. Some changes (like child table updates) might not trigger the parent document's 'Value Change' event in older versions."
                     }
                 ]}
             />

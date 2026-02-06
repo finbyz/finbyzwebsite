@@ -67,7 +67,7 @@ export default function AIServicesPage() {
                   className="group block p-6 border border-gray-200 rounded-lg hover:shadow-xl transition-all duration-300 hover:border-[#1A5276] bg-white"
                 >
                   <div className="flex items-start gap-4 mb-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center group-hover:bg-[#1A5276] transition-colors">
+                    <div className="flex-shrink-0 w-12 h-12 bg-orange-50 rounded-lg flex items-center justify-center group-hover:bg-[#1A5276] transition-colors">
                       <Icon className="w-6 h-6 text-[#1A5276] group-hover:text-white transition-colors" />
                     </div>
                   </div>
@@ -99,7 +99,7 @@ export default function AIServicesPage() {
               </div>
               <div className="text-center p-4">
                 <div className="w-12 h-12 mx-auto mb-3 bg-blue-100 rounded-full flex items-center justify-center">
-                  <MonitorPlay className="w-6 h-6 text-blue-600" />
+                  <MonitorPlay className="w-6 h-6 text-orange-600" />
                 </div>
                 <h3 className="text-lg font-bold mb-1 text-[#1A5276]">Development</h3>
                 <p className="text-sm text-gray-600">Agile development of custom AI models and automation workflows</p>

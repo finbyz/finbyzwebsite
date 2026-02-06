@@ -55,11 +55,11 @@ export default function Page() {
               cover: true,
             }}
           >
-            <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-6">
-              <h4 className="flex items-center gap-2 font-semibold text-blue-800 dark:text-blue-200 mb-1">
+            <div className="dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-6">
+              <h4 className="flex items-center gap-2 font-semibold text-[#1A5276] dark:text-blue-200 mb-1">
                 <span className="text-xl">📢</span> 2026 Hosting Updates
               </h4>
-              <p className="text-sm text-blue-700 dark:text-blue-300 mb-2">
+              <p className="text-sm text-gray mb-2">
                 Updated for n8n 2.0! New security best practices, reliable Coolify deployment strategies, and updated cloud vs self-hosted pricing comparisons.
               </p>
               <Link
@@ -259,7 +259,7 @@ export default function Page() {
           <BlogSection id="setup-steps" title="">
             <div className="bg-zinc-900 text-zinc-100 p-6 rounded-lg my-4 overflow-x-auto">
               <pre className="text-sm">
-{`# docker-compose.yml
+                {`# docker-compose.yml
 version: '3.8'
 
 services:
@@ -337,7 +337,7 @@ volumes:
                 />
               </div>
 
-              <div className="bg-blue-50 dark:bg-blue-950/30 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
+              <div className="bg-orange-50 dark:bg-blue-950/30 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
                 <h4 className="font-semibold text-blue-700 dark:text-blue-300 mb-3">Application Security</h4>
                 <BlogCheckList
                   items={[
@@ -534,7 +534,7 @@ volumes:
               At Finbyz Tech, we help enterprises deploy and maintain production-ready n8n instances. Whether you need assistance with initial setup, security hardening, or ongoing managed services, our team has the expertise to ensure your self-hosted n8n runs smoothly.
             </BlogParagraph>
 
-            <div className="mt-8 p-6 bg-primary/5 rounded-lg border border-primary/20 text-center">
+            {/* <div className="mt-8 p-6 bg-primary/5 rounded-lg border border-primary/20 text-center">
               <h4 className="font-bold text-xl mb-2">Need Help Self-Hosting n8n?</h4>
               <p className="text-muted-foreground mb-4">
                 Our DevOps and automation experts can handle your n8n deployment, security, and maintenance.
@@ -545,7 +545,7 @@ volumes:
               >
                 Talk to Our n8n Experts →
               </Link>
-            </div>
+            </div> */}
           </BlogSection>
         </BlogContent>
       </div>

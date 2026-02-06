@@ -22,7 +22,7 @@ export default function Page() {
         highlightWords={highlightWords}
         description={seoDescription}
         heroImage={{ alt: seoTitle, src: "/images/Quote Assistant.gif" }}
-        primaryButton={{ text: 'Get a Demo', action:'/contact' }}
+        primaryButton={{ text: 'Get a Demo', action: '/contact' }}
 
         features={[
           {
@@ -79,8 +79,8 @@ export default function Page() {
                   'Sets context for quote generation'
                 ],
                 duration: 'Instant',
-                iconColor: 'text-blue-600',
-                iconBg: 'bg-blue-50'
+                iconColor: 'text-orange-600',
+                iconBg: 'bg-orange-50'
               },
               {
                 step: '02',
@@ -232,7 +232,7 @@ export default function Page() {
                 description:
                   'Tailored quotations increase alignment with expectations and improve closure rates.',
                 icon: 'Users',
-                palette: { iconBg: 'bg-blue-50', iconColor: 'text-blue-600' }
+                palette: { iconBg: 'bg-orange-50', iconColor: 'text-orange-600' }
               },
               {
                 number: 4,

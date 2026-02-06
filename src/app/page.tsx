@@ -89,8 +89,7 @@ export const metadata: Metadata = {
 
 
 export default async function Home() {
-  const faqsGroup = await getFaqs("Web Page","homepage");
-  console.log(faqsGroup)
+  const faqsGroup = await getFaqs("Web Page", "homepage");
   return (
     <div className="min-h-screen">
       <CooprtaionSchema />
