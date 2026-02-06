@@ -89,7 +89,7 @@ export const DynamicPageRenderer: React.FC<DynamicPageRendererProps> = ({
    */
   const renderSection = (section: SectionData, index: number): React.ReactElement | null => {
     const Component = componentMap[section.type];
-    
+
     if (!Component) {
       console.warn(`Unknown section type: ${section.type}`);
       return null;
@@ -152,7 +152,7 @@ export const DynamicPageRenderer: React.FC<DynamicPageRendererProps> = ({
 
       {/* Render all sections */}
       <main className="page-content">
-        {pageData.sections.map((section, index) => 
+        {pageData.sections.map((section, index) =>
           <div key={`section-${index}-${section.type}`}>
             {renderSection(section, index)}
           </div>
@@ -221,7 +221,7 @@ export class DynamicPageErrorBoundary extends React.Component<
             </p>
             <button
               onClick={() => this.setState({ hasError: false })}
-              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+              className="px-4 py-2 bg-orange-600 text-white rounded hover:bg-orange-700"
             >
               Try Again
             </button>

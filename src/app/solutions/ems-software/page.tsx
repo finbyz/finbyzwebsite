@@ -106,7 +106,7 @@ export default function EMSSoftwarePage() {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center p-6">
               <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
-                <Siren className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+                <Siren className="w-8 h-8 text-orange-600 dark:text-blue-400" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">Rapid Response</h3>
               <p className="text-gray-600 dark:text-gray-400">Minimize response times with automated workflows and alerts</p>

@@ -11,7 +11,7 @@ const ChemFeatureCheckboxGrid: React.FC<ChemFeatureCheckboxGridProps> = ({ featu
       {features.map((feature, idx) => (
         <div
           key={feature.label + idx}
-          className="flex items-center gap-3 bg-white/70 rounded-lg shadow-sm px-4 py-3 hover:bg-blue-50 transition-colors border border-gray-100"
+          className="flex items-center gap-3 bg-white/70 rounded-lg shadow-sm px-4 py-3 hover:bg-orange-50 transition-colors border border-gray-100"
         >
           <CheckCircle className="text-primary shrink-0" size={22} />
           <span className="font-medium text-gray-800">{feature.label}</span>

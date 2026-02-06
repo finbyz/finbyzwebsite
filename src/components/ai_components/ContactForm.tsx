@@ -20,8 +20,8 @@ const initialState = {
 };
 
 const ContactForm: React.FC = () => {
-    const [form, setForm] = useState(initialState);
-    const [loading, setLoading] = useState(false);
+  const [form, setForm] = useState(initialState);
+  const [loading, setLoading] = useState(false);
   const router = useRouter(); // ✅ Initialize router
 
   // Auto-detect country code
@@ -34,9 +34,9 @@ const ContactForm: React.FC = () => {
     }
   }, [geoLocation.loading, geoLocation.dialCode]);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-      setForm({ ...form, [e.target.name]: e.target.value });
-    };
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -72,11 +72,11 @@ const ContactForm: React.FC = () => {
 
       if (res.ok) {
         setForm(initialState);
-        
-         //  Redirect after successful submit
-  
-     
-       
+
+        //  Redirect after successful submit
+
+
+
       } else {
         alert("Something went wrong. Please try again.");
       }
@@ -136,7 +136,7 @@ const ContactForm: React.FC = () => {
           />
         </CardContent>
         <CardFooter className="flex justify-center pt-2">
-          <Button type="submit" disabled={loading} className="w-full bg-[#1A5276] hover:bg-blue-600 text-white">
+          <Button type="submit" disabled={loading} className="w-full bg-[#1A5276] hover:bg-orange-600 text-white">
             {loading ? 'Submitting...' : 'Submit'}
           </Button>
         </CardFooter>

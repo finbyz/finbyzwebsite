@@ -105,7 +105,7 @@ export default function TeamExpertise({ data = {} }: { data?: Record<string, any
   return (
     <section className="team-expertise-section">
       {/* Background Pattern removed */}
-      
+
       <div className="team-expertise-container">
         <div className={`team-expertise-header`}>
           <h2 className="team-expertise-title">
@@ -115,13 +115,13 @@ export default function TeamExpertise({ data = {} }: { data?: Record<string, any
             {subtitle}
           </p>
         </div>
-        
+
         <div className="team-expertise-grid">
           {customTeam.map((member: any, index: number) => (
             <div
               key={member.category || member.name || index}
               className={`team-expertise-card`}
-              style={{ 
+              style={{
                 transitionDelay: `${index * 0.1}s`,
                 animationDelay: `${index * 0.1}s`
               }}
@@ -129,9 +129,9 @@ export default function TeamExpertise({ data = {} }: { data?: Record<string, any
               <div className="flex items-center justify-between mb-4">
                 <div className="team-expertise-area-icon-container">
                   {member.avatar ? (
-                    <img 
-                      src={member.avatar} 
-                      alt={member.name} 
+                    <img
+                      src={member.avatar}
+                      alt={member.name}
                       className="w-16 h-16 rounded-full object-cover"
                     />
                   ) : (
@@ -145,7 +145,7 @@ export default function TeamExpertise({ data = {} }: { data?: Record<string, any
                   <div className="text-xs text-gray-500">Expert{member.experts !== 1 ? 's' : ''}</div>
                 </div>
               </div>
-              
+
               <div className="flex-1">
                 <h3 className="text-xl lg:text-2xl font-bold mb-2 text-[#1A5276] leading-tight">
                   {member.name || member.category}
@@ -153,7 +153,7 @@ export default function TeamExpertise({ data = {} }: { data?: Record<string, any
                 <p className="text-gray-600 text-sm lg:text-base mb-4 leading-relaxed">
                   {member.bio || member.description}
                 </p>
-                
+
                 {member.expertise && (
                   <div className="mt-4">
                     <h4 className="text-sm font-semibold text-gray-700 mb-2">Expertise:</h4>
@@ -174,12 +174,12 @@ export default function TeamExpertise({ data = {} }: { data?: Record<string, any
                     </div>
                   </div>
                 )}
-                
+
                 {member.linkedin && (
                   <div className="mt-4">
-                    <a 
-                      href={member.linkedin} 
-                      target="_blank" 
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-[#1A5276] hover:text-[#0F3D5C] text-sm font-medium"
                     >
@@ -191,11 +191,11 @@ export default function TeamExpertise({ data = {} }: { data?: Record<string, any
             </div>
           ))}
         </div>
-        
+
         {/* Stats Section */}
         <div className={`mt-16 grid md:grid-cols-4 gap-8 transition-all duration-1000`}>
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-600 mb-2">50+</div>
+            <div className="text-3xl font-bold text-orange-600 mb-2">50+</div>
             <div className="text-gray-600">Team Members</div>
           </div>
           <div className="text-center">

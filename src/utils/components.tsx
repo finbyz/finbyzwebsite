@@ -83,7 +83,7 @@ export function Card({ title, description, date = new Date().getFullYear().toStr
       <p className="text-gray-600 leading-relaxed">{description}</p>
       <div className="mt-4 flex justify-between items-center">
         <span className="text-sm text-gray-500">{date}</span>
-        <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200">
+        <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200">
           {buttonText}
         </button>
       </div>
@@ -98,11 +98,11 @@ export function Banner({ headline, subtext, primaryButton, secondaryButton }: Ba
         <h1 className="text-3xl font-bold mb-4">{headline}</h1>
         <p className="text-xl opacity-90 mb-6">{subtext}</p>
         <div className="flex justify-center space-x-4">
-          <button className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors duration-200">
+          <button className="bg-white text-orange-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors duration-200">
             {primaryButton}
           </button>
           {secondaryButton && (
-            <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-lg font-semibold transition-colors duration-200">
+            <button className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-6 py-3 rounded-lg font-semibold transition-colors duration-200">
               {secondaryButton}
             </button>
           )}
@@ -118,14 +118,14 @@ export function Feature({ icon, title, description, link, linkText = 'Learn More
       <div className="flex items-start space-x-4">
         <div className="flex-shrink-0">
           <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-            <span className="text-blue-600 text-xl">{icon}</span>
+            <span className="text-orange-600 text-xl">{icon}</span>
           </div>
         </div>
         <div className="flex-1">
           <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
           <p className="text-gray-600 leading-relaxed">{description}</p>
           <div className="mt-4">
-            <a href={link} className="text-blue-600 hover:text-blue-800 font-medium text-sm">
+            <a href={link} className="text-orange-600 hover:text-blue-800 font-medium text-sm">
               {linkText} →
             </a>
           </div>
@@ -164,7 +164,7 @@ export function Testimonial({ avatar, rating, quote, author, company }: Testimon
 export function Stats({ value, label, description }: StatsProps) {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 text-center">
-      <div className="text-3xl font-bold text-blue-600 mb-2">{value}</div>
+      <div className="text-3xl font-bold text-orange-600 mb-2">{value}</div>
       <div className="text-gray-600 font-medium">{label}</div>
       <div className="text-sm text-gray-500 mt-1">{description}</div>
     </div>
@@ -180,18 +180,18 @@ export function Hero({ title, highlight, description, primaryButton, secondaryBu
             <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
               {title}
               {highlight && (
-                <span className="hero-highlight text-blue-600 block"> {highlight}</span>
+                <span className="hero-highlight text-orange-600 block"> {highlight}</span>
               )}
             </h1>
             <p className="hero-description text-xl text-gray-600 mb-8 leading-relaxed">
               {description}
             </p>
             <div className="hero-buttons flex flex-col sm:flex-row gap-4">
-              <button className="hero-primary-button bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors duration-200">
+              <button className="hero-primary-button bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors duration-200">
                 {primaryButton}
               </button>
               {secondaryButton && (
-                <button className="hero-secondary-button border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors duration-200">
+                <button className="hero-secondary-button border-2 border-blue-600 text-orange-600 hover:bg-orange-600 hover:text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors duration-200">
                   {secondaryButton}
                 </button>
               )}
@@ -257,7 +257,7 @@ export function Services({ title, subtitle, ctaText, services }: ServicesProps) 
         </div>
         {ctaText && (
           <div className="text-center mt-12">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors duration-200">
+            <button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors duration-200">
               {ctaText}
             </button>
           </div>
@@ -269,16 +269,16 @@ export function Services({ title, subtitle, ctaText, services }: ServicesProps) 
 
 export function CTA({ title, description, primaryButton, secondaryButton }: CTAProps) {
   return (
-    <section className="cta-section py-20 bg-blue-600">
+    <section className="cta-section py-20 bg-orange-600">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{title}</h2>
         <p className="text-xl text-blue-100 mb-8">{description}</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold text-lg transition-colors duration-200">
+          <button className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold text-lg transition-colors duration-200">
             {primaryButton}
           </button>
           {secondaryButton && (
-            <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold text-lg transition-colors duration-200">
+            <button className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-lg font-semibold text-lg transition-colors duration-200">
               {secondaryButton}
             </button>
           )}

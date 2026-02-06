@@ -114,18 +114,18 @@ function ComponentRenderer({ componentData }: { componentData: ComponentData }) 
     'ResponsiveCardGrid': ResponsiveCardGrid,
     'ContentIllustrationLeft': ContentIllustrationLeft,
     'ContentIllustrationRight': ContentIllustrationRight,
-    
+
     'TechnologyStack': TechnologyStack,
     'BusinessSlider': BusinessSlider,
     'FileUpload': FileUpload,
     'ERPModules': ERPModules,
     // Add more component mappings as needed
     'Banner': ({ data }: any) => (
-      <div className="bg-blue-600 text-white p-4 text-center">
+      <div className="bg-orange-600 text-white p-4 text-center">
         <h3 className="text-lg font-semibold">{data.headline}</h3>
         <p className="text-blue-100">{data.subtext}</p>
         <div className="mt-3 space-x-3">
-          <button className="bg-white text-blue-600 px-4 py-2 rounded font-medium">
+          <button className="bg-white text-orange-600 px-4 py-2 rounded font-medium">
             {data.primaryButton}
           </button>
           <button className="border border-white text-white px-4 py-2 rounded font-medium">
@@ -163,7 +163,7 @@ function ComponentRenderer({ componentData }: { componentData: ComponentData }) 
         <h3 className="text-xl font-semibold mb-3">{data.title}</h3>
         <p className="text-gray-600 mb-4">{data.description}</p>
         <div className="text-sm text-gray-500 mb-4">{data.date}</div>
-        <button className="bg-blue-600 text-white px-4 py-2 rounded font-medium">
+        <button className="bg-orange-600 text-white px-4 py-2 rounded font-medium">
           {data.buttonText}
         </button>
       </div>
@@ -173,14 +173,14 @@ function ComponentRenderer({ componentData }: { componentData: ComponentData }) 
         <div className="text-3xl mb-3">{data.icon}</div>
         <h3 className="text-lg font-semibold mb-2">{data.title}</h3>
         <p className="text-gray-600 mb-3">{data.description}</p>
-        <a href={data.link} className="text-blue-600 hover:underline text-sm">
+        <a href={data.link} className="text-orange-600 hover:underline text-sm">
           {data.linkText}
         </a>
       </div>
     ),
     'Stats': ({ data }: any) => (
       <div className="text-center">
-        <div className="text-4xl font-bold text-blue-600 mb-2">{data.value}</div>
+        <div className="text-4xl font-bold text-orange-600 mb-2">{data.value}</div>
         <div className="text-lg font-semibold mb-1">{data.label}</div>
         <div className="text-gray-600 text-sm">{data.description}</div>
       </div>
@@ -188,7 +188,7 @@ function ComponentRenderer({ componentData }: { componentData: ComponentData }) 
     'Testimonial': ({ data }: any) => (
       <div className="bg-white p-6 rounded-lg shadow-md">
         <div className="flex items-center mb-4">
-          <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold mr-3">
+          <div className="w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center font-semibold mr-3">
             {data.avatar}
           </div>
           <div>
@@ -207,7 +207,7 @@ function ComponentRenderer({ componentData }: { componentData: ComponentData }) 
     'Pricing': ({ data }: any) => (
       <div className="bg-white p-6 rounded-lg shadow-md border-2 border-gray-200">
         <h3 className="text-xl font-semibold mb-3">{data.planName}</h3>
-        <div className="text-3xl font-bold text-blue-600 mb-1">{data.price}</div>
+        <div className="text-3xl font-bold text-orange-600 mb-1">{data.price}</div>
         <div className="text-gray-600 mb-4">{data.period}</div>
         <ul className="mb-6 space-y-2">
           {data.features?.map((feature: string, index: number) => (
@@ -217,18 +217,18 @@ function ComponentRenderer({ componentData }: { componentData: ComponentData }) 
             </li>
           ))}
         </ul>
-        <button className="w-full bg-blue-600 text-white py-2 rounded font-medium">
+        <button className="w-full bg-orange-600 text-white py-2 rounded font-medium">
           {data.buttonText}
         </button>
       </div>
     ),
 
     'CTA': ({ data }: any) => (
-      <div className="bg-blue-600 text-white py-12 text-center">
+      <div className="bg-orange-600 text-white py-12 text-center">
         <h2 className="text-3xl font-bold mb-4">{data.title}</h2>
         <p className="text-xl text-blue-100 mb-8">{data.description}</p>
         <div className="space-x-4">
-          <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold text-lg">
+          <button className="bg-white text-orange-600 px-6 py-3 rounded-lg font-semibold text-lg">
             {data.primaryButton}
           </button>
           <button className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold text-lg">

@@ -54,7 +54,7 @@ export default function ERPSolutionsPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800">
               <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-4">
-                <DollarSign className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                <DollarSign className="w-6 h-6 text-orange-600 dark:text-blue-400" />
               </div>
               <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">Financial Management</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
@@ -122,7 +122,7 @@ export default function ERPSolutionsPage() {
             </p>
             <Link
               href="/solutions/erp/insights"
-              className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700 transition-colors"
             >
               Explore ERP Insights
             </Link>

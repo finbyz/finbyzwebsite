@@ -1155,7 +1155,7 @@ export const componentSchemas: ComponentSchema[] = [
       subtitle: "Social media link components",
       socialLinks: [
         { name: "Twitter", icon: "𝕏", href: "#", color: "hover:text-blue-400" },
-        { name: "LinkedIn", icon: "in", href: "#", color: "hover:text-blue-600" }
+        { name: "LinkedIn", icon: "in", href: "#", color: "hover:text-orange-600" }
       ]
     }
   },
