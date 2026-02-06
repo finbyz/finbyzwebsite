@@ -120,7 +120,7 @@ const navigationItems: NavNode[] = [
                     { name: "Data Analytics", icon: BarChart3, href: "/erpnext/services/data-analytics", description: "Data analytics services" },
                     { name: "Custom CMS Development", icon: Code, href: "/erpnext/services/develop-custom-erp-software", description: "Develop custom ERP software" },
                     { name: "ERP Migration", icon: Database, href: "/erpnext/services/erp-migration", description: "ERPNext data migration" },
-                    { name: "ERP Software Developers", icon: Code2, href: "/erp/services/erp-software-development", description: "Hire expert ERP developers" },
+                    { name: "ERP Software Developers", icon: Code2, href: "/erpnext/services/erp-software-development", description: "Hire expert ERP developers" },
                     { name: "ERPNext Implementation in UAE", icon: Building2, href: "/erpnext/services/ERPNext-impelementation-in-uae", description: "Implementation services in UAE" },
                     { name: "ERPNext SEO Optimization", icon: Search, href: "/erpnext/services/erpnext-seo-optimization", description: "SEO optimization" },
                     { name: "ERPNext Service Provider", icon: Briefcase, href: "/erpnext/services/erpnext-service-provider", description: "Full-service ERPNext provider" },
@@ -156,6 +156,22 @@ const navigationItems: NavNode[] = [
                 ]
             },
 
+            // ================= AI =================
+            {
+                name: "AI",
+                icon: Brain,
+                href: "/erpnext/ai",
+                description: "AI-powered features for ERPNext",
+                children: [
+                    { name: "Smart Card Scanner", icon: CreditCard, href: "/erpnext/ai/ai-powered-smart-card-scanner", description: "Scan and extract business card details instantly" },
+                    { name: "Lead Intelligence", icon: Brain, href: "/erpnext/ai/lead-intelligence", description: "Gain insights and prioritize your leads with AI" },
+                    { name: "Quote Assistant", icon: MessageSquare, href: "/erpnext/ai/ai-powered-quote-assistant", description: "Streamline quotation creation and management" },
+                    { name: "Follow Up Buddy", icon: Users, href: "/erpnext/ai/ai-powered-follow-up-buddy-automate-your-sales-follow-up-process", description: "Automated follow-up reminders and tracking" },
+                    { name: "Resume Ranker", icon: FileSearch, href: "/erpnext/ai/ai-powered-resume-ranker", description: "Rank resumes and find the best candidates instantly" },
+                    { name: "Content Spark Marketing Automation", icon: Sparkles, href: "/erpnext/ai/content-spark-marketing-automation", description: "AI-powered content and marketing automation" }
+                ]
+            },
+
             // ================= INDUSTRIES =================
             {
                 name: "Industries",
@@ -179,7 +195,7 @@ const navigationItems: NavNode[] = [
                     },
 
                     { name: "Construction", icon: Hammer, href: "/erpnext/construction" },
-                    { name: "Education", icon: GraduationCap, href: "/erpnext/education" },
+                    { name: "Education", icon: GraduationCap, href: "/erpnext/erp-education" },
                     { name: "Electronics", icon: Zap, href: "/erpnext/electronics" },
                     { name: "Engineering", icon: Cog, href: "/erpnext/engineering" },
                     { name: "Fintech", icon: DollarSign, href: "/erpnext/fintech" },
@@ -246,7 +262,7 @@ const navigationItems: NavNode[] = [
                 icon: Package,
                 children: [
                     { name: "AI-powered Lead Generation & Email Outreach", icon: MailPlus, href: "/ai-automation/apps/ai-powered-lead-generation-and-email-outreach", description: "AI-driven lead generation and automated email outreach" },
-                    { name: "Content Spark Marketing Automation", icon: Sparkles, href: "/ai-automation/apps/content-spark-marketing-automation", description: "AI-powered content and marketing automation" },
+                    { name: "Content Spark Marketing Automation", icon: Sparkles, href: "/erpnext/ai/content-spark-marketing-automation", description: "AI-powered content and marketing automation" },
                     { name: "Sales Call Recording & Analysis", icon: PhoneCall, href: "/ai-automation/apps/sales-call-recording-and-analysis-in-erpnext", description: "AI-based sales call recording and analysis in ERPNext" }
                 ]
             },
@@ -268,7 +284,7 @@ const navigationItems: NavNode[] = [
                         icon: Package,
                         children: [
                             { name: "Smart Card Scanner", icon: CreditCard, href: "/erpnext/ai/ai-powered-smart-card-scanner", description: "Scan and extract business card details instantly." },
-                            { name: "Content Spark Marketing Automation", icon: Sparkles, href: "/ai-automation/apps/content-spark-marketing-automation", description: "Automate and personalize your marketing campaigns." },
+                            { name: "Content Spark Marketing Automation", icon: Sparkles, href: "/erpnext/ai/content-spark-marketing-automation", description: "Automate and personalize your marketing campaigns." },
                             { name: "Lead Intelligence", icon: Brain, href: "/erpnext/ai/lead-intelligence", description: "Gain insights and prioritize your leads with AI." },
                             { name: "AI Outreach & Lead Generation Research", icon: Rocket, href: "/ai-automation/apps/ai-powered-lead-generation-and-email-outreach", description: "Discover and connect with potential leads intelligently." },
                             { name: "AI Sales Call Analysis for ERPNext", icon: PhoneCall, href: "/ai-automation/apps/sales-call-recording-and-analysis-in-erpnext", description: "Analyze and summarize sales calls automatically." },

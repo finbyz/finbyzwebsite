@@ -50,8 +50,8 @@ export default function Page() {
               details: ['Voice & tone presets', 'Style and vocabulary guidelines', 'Reusable brand profile'],
               duration: 'One-time setup',
               icon: 'GraduationCap',
-              iconColor: 'text-blue-600',
-              iconBg: 'bg-blue-50',
+              iconColor: 'text-orange-600',
+              iconBg: 'bg-orange-50',
             },
             {
               step: '02',
@@ -143,7 +143,7 @@ export default function Page() {
               description:
                 'Compress brainstorming, drafting, and design into minutes with AI-driven workflows.',
               icon: 'Timer',
-              palette: { iconBg: 'bg-blue-50', iconColor: 'text-blue-600' },
+              palette: { iconBg: 'bg-orange-50', iconColor: 'text-orange-600' },
             },
             {
               number: 2,

@@ -23,7 +23,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    
+    images: [
+      {
+        url: "https://finbyz.tech/images/email-to-opportunity.png",
+        width: 1200,
+        height: 630,
+        alt: "Lead Intelligence: Revolutionizing Inquiry Processing with AI",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

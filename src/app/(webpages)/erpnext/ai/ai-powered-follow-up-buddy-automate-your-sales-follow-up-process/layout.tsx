@@ -23,7 +23,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    
+    images: [
+      {
+        url: "https://finbyz.tech/images/follow-up-buddy.png",
+        width: 1200,
+        height: 630,
+        alt: "Follow Up Buddy: AI Sales Follow-Up Automation",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

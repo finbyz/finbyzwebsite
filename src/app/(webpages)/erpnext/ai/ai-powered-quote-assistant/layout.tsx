@@ -23,7 +23,14 @@ export const metadata: Metadata = {
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",
-    
+    images: [
+      {
+        url: "https://finbyz.tech/images/quote-assistant.png",
+        width: 1200,
+        height: 630,
+        alt: "Quote Assistant: AI-Powered Sales Quotations",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
