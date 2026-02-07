@@ -4,6 +4,7 @@ import FAQ from "@/components/ai_components/FAQ";
 import StructureData from "@/components/seo/StructureData";
 import InquiryForm from "@/components/ui/InquiryForm";
 import { getFaqs, getPageData } from "@/lib/getPageData";
+import 'server-only';
 
 interface PageFooterProps {
   doctype: "Web Page" | "Blog Post";

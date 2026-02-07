@@ -1,5 +1,3 @@
-"use client";
-
 import N8nOrchestrationContent from "./N8nOrchestrationContent";
 import PageFooter from "@/components/sections/PageFooter";
 

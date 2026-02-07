@@ -1,5 +1,3 @@
-"use client";
-
 import AIConsultingContent from "./AIConsultingContent";
 import PageFooter from "@/components/sections/PageFooter";
 
