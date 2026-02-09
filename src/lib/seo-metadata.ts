@@ -25,8 +25,15 @@ export async function fetchNextJSPage(slug: string): Promise<NextJSPageData | nu
   try {
     // We use filters to find the page by route because fetching by name directly fails 
     // when the name starts with '/' or contains slashes due to server/proxy configuration.
-    // Requesting fields=["*"] ensures we get all data in a single request.
-    const filters = JSON.stringify([["route", "=", slug]]);
+    // We check both with and without leading slash to be robust.
+    const possibleRoutes = [slug];
+    if (slug.startsWith('/') && slug !== '/') {
+      possibleRoutes.push(slug.substring(1));
+    } else if (!slug.startsWith('/')) {
+      possibleRoutes.push(`/${slug}`);
+    }
+
+    const filters = JSON.stringify([["route", "in", possibleRoutes]]);
     const fields = JSON.stringify(["*"]);
     const query = `filters=${filters}&fields=${fields}&limit=1`;
 
@@ -60,14 +67,11 @@ export async function fetchNextJSPage(slug: string): Promise<NextJSPageData | nu
 /**
  * Get SEO metadata for a page
  */
-export async function getSEOMeta(slug: string): Promise<SEOMeta> {
+export async function getSEOMeta(slug: string): Promise<SEOMeta | null> {
   const page = await fetchNextJSPage(slug);
 
   if (!page) {
-    return {
-      title: 'FinByz Tech',
-      description: 'ERP, AI, Software, and Dedicated Talent - All in One Partner',
-    };
+    return null;
   }
 
   return transformToSEOMeta(page);
@@ -78,6 +82,7 @@ export async function getSEOMeta(slug: string): Promise<SEOMeta> {
  */
 export async function generateSEOMetadata(slug: string): Promise<Metadata> {
   const meta = await getSEOMeta(slug);
+  if (!meta) return {};
   return transformToNextMetadata(meta);
 }
 
@@ -102,10 +107,7 @@ export async function generateAutoMetadata(): Promise<Metadata> {
     return await generateSEOMetadata(route);
   } catch (error) {
     console.error(`Auto metadata failed for ${pathname}: `, error);
-    return {
-      title: 'FinByz Tech',
-      description: 'ERP, AI, Software, and Dedicated Talent - All in One Partner',
-    };
+    return {};
   }
 }
 

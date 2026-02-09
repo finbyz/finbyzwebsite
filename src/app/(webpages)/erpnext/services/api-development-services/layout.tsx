@@ -3,48 +3,6 @@ import { Metadata } from "next";
 import Script from "next/script";
 import Header from "@/components/layout/header";
 
-
-
-export const metadata: Metadata = {
-  title: "Custom API Development for Seamless Business Integration",
-  description: "Unlock seamless data flow and process automation with custom API development services. Integrate ERPNext with your enterprise applications for enhanced efficiency.",
-  keywords: "API development services, custom API solutions, ERPNext API integration, enterprise application integration, business system connectivity, data synchronization, RESTful API development, secure API, web service development, automation APIs, Finbyz Tech API, digital transformation APIs",
-  authors: [{ name: "FinByz Tech" }],
-  creator: "FinByz Tech",
-  publisher: "FinByz Tech",
-  alternates: {
-    canonical: "https://finbyz.tech/api-development-services",
-  },
-  openGraph: {
-    title: "Custom API Development for Seamless Business Integration",
-    description: "Unlock seamless data flow and process automation with custom API development services. Integrate ERPNext with your enterprise applications for enhanced efficiency.",
-    url: "https://finbyz.tech/api-development-services",
-    siteName: "FinByz Tech",
-    type: "website",
-    locale: "en_US",
-
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Custom API Development for Seamless Business Integration",
-    description: "Unlock seamless data flow and process automation with custom API development services. Integrate ERPNext with your enterprise applications for enhanced efficiency.",
-    creator: "@finbyztech",
-
-  },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: false,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
-
 export default function Layout({ children }: { children: React.ReactNode }) {
   const structuredData = {
     "@context": "https://schema.org",

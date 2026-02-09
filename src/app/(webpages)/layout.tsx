@@ -1,6 +1,10 @@
 
 import InquiryForm from "@/components/ui/InquiryForm";
+import { generateAutoMetadata } from "@/lib/seo-metadata";
 
+export async function generateMetadata() {
+  return generateAutoMetadata();
+}
 
 export default async function MainLayout({
   children,
