@@ -8,6 +8,8 @@ import { MobileMenuProvider } from "@/contexts/MobileMenuContext";
 import BreadcrumbSchema from "@/components/seo/BreadCrumbSchema";
 import Header from "@/components/layout/new-header";
 import Footer from "@/components/layout/footer";
+import { AutoPageSchemas } from "@/components/schema/PageSchemas";
+
 
 
 export const dynamic = "force-dynamic";
@@ -77,6 +79,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <AutoPageSchemas />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-W37WLG9D8M"
           strategy="afterInteractive"

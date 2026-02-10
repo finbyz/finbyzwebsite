@@ -77,7 +77,6 @@ async function getBlogPosts(): Promise<NavNode[]> {
         const res = await fetch(`/web-api/blog-posts`);
         const data = await res.json();
         const items = data.data || [];
-        console.log(items);
         return items.map((item: any) => ({
             name: item.title,
             icon: BookOpen,

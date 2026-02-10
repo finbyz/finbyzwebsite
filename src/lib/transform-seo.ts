@@ -92,7 +92,7 @@ export function transformToNextMetadata(meta: SEOMeta): Metadata {
     openGraph: meta.openGraph ? {
       title: meta.openGraph.title,
       description: meta.openGraph.description,
-      type: meta.openGraph.type,
+      type: meta.openGraph.type as any,
       url: meta.openGraph.url,
       siteName: meta.openGraph.siteName,
       images: meta.openGraph.images.map(img => ({

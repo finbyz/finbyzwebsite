@@ -20,28 +20,57 @@ function getAuthHeaders() {
 
 /**
  * Fetch a NextJS Page from Frappe by route/slug
+ * Uses two-step process: 1) Filter by route to get name, 2) Fetch full doc by name
  */
 export async function fetchNextJSPage(slug: string): Promise<NextJSPageData | null> {
   try {
-    // We use filters to find the page by route because fetching by name directly fails 
-    // when the name starts with '/' or contains slashes due to server/proxy configuration.
-    // We check both with and without leading slash to be robust.
-    const possibleRoutes = [slug];
-    if (slug.startsWith('/') && slug !== '/') {
-      possibleRoutes.push(slug.substring(1));
-    } else if (!slug.startsWith('/')) {
-      possibleRoutes.push(`/${slug}`);
+    // Normalize the route: ensure it starts with / and remove trailing slash
+    const route = slug === '/' ? '/' : (slug.startsWith('/') ? slug : `/${slug}`).replace(/\/$/, '');
+
+    // Step 1: Filter by route to get the document name
+    const listRes = await fetch(
+      `${FRAPPE_URL}/api/resource/NextJS Page?filters=${encodeURIComponent(
+        JSON.stringify([["route", "=", route]])
+      )}&fields=${encodeURIComponent(JSON.stringify(["name"]))}&limit=1`,
+      {
+        method: 'GET',
+        next: { revalidate: 3600 },
+        headers: {
+          ...getAuthHeaders(),
+        }
+      }
+    );
+
+    if (!listRes.ok) {
+      if (listRes.status === 404) return null;
+      console.error(`Error filtering NextJS Page by route: ${listRes.status} ${listRes.statusText}`);
+      return null;
     }
 
-    const filters = JSON.stringify([["route", "in", possibleRoutes]]);
-    const fields = JSON.stringify(["*"]);
-    const query = `filters=${filters}&fields=${fields}&limit=1`;
+    const listResponse = await listRes.json();
 
+    // Check if any document was found
+    if (!listResponse.data || listResponse.data.length === 0) {
+      return null;
+    }
+
+    const docName = listResponse.data[0].name;
+
+    // Step 2: Fetch full document by name using frappe.client.get
+    // This automatically includes all child tables
     const res = await fetch(
-      `${FRAPPE_URL}/api/resource/NextJS Page?${query}`,
+      `${FRAPPE_URL}/api/method/frappe.client.get`,
       {
+        method: 'POST',
         next: { revalidate: 3600 },
-        headers: { ...getAuthHeaders() }
+        headers: {
+          ...getAuthHeaders(),
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          doctype: 'NextJS Page',
+          name: docName
+        })
       }
     );
 
@@ -51,13 +80,14 @@ export async function fetchNextJSPage(slug: string): Promise<NextJSPageData | nu
       return null;
     }
 
-    const { data } = await res.json() as { data: NextJSPageData[] };
+    const response = await res.json();
 
-    if (!data || data.length === 0) {
+    // frappe.client.get returns { message: { ...document data } }
+    if (!response.message) {
       return null;
     }
 
-    return data[0];
+    return response.message as NextJSPageData;
   } catch (error) {
     console.error(`Failed to fetch NextJS Page: ${slug}`, error);
     return null;
