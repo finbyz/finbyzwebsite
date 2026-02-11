@@ -44,22 +44,14 @@ export interface NextJSPageData {
   meta_description?: string;
   keywords?: string;
   
-  // Canonical & Indexing
+  // Navigation
+  navigation_title?: string;
+  navigation_image?: string;
+  hide_from_navigation: 0 | 1;
+
+  // Canonical
   canonical_url?: string;
-  no_index: 0 | 1;
-  no_follow: 0 | 1;
-  
-  // Open Graph
-  og_type?: 'website' | 'article' | 'product';
-  og_title?: string;
-  og_description?: string;
-  og_image?: string;
-  
-  // Twitter Cards
-  twitter_card_type?: 'summary' | 'summary_large_image';
-  twitter_title?: string;
-  twitter_description?: string;
-  twitter_image?: string;
+
   
   // Related data (child tables)
   nextjs_page_schema?: NextJSPageSchema[];

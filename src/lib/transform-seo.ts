@@ -37,27 +37,27 @@ export function transformToSEOMeta(page: NextJSPageData): SEOMeta {
   const title = page.meta_title || page.title;
   const description = page.meta_description || '';
   const keywords = page.keywords?.split(',').map(k => k.trim()).filter(Boolean) || [];
-  const canonical = page.canonical_url || `${SITE_URL}/${page.route}`;
+  const canonical = page.canonical_url || `${SITE_URL}${page.route === '/' ? '' : page.route}`;
   
-  // Use explicit OG fields if available, fallback to basic SEO
-  const ogTitle = page.og_title || title;
-  const ogDescription = page.og_description || description;
-  const ogImage = buildImage(page.og_image || page.image, ogTitle);
-  const ogType = page.og_type || 'website';
+  // Use generic fields for Open Graph
+  const ogTitle = title;
+  const ogDescription = description;
+  const ogImage = buildImage(page.image, ogTitle);
+  const ogType = 'website';
   
-  // Use explicit Twitter fields if available
-  const twitterTitle = page.twitter_title || title;
-  const twitterDescription = page.twitter_description || description;
-  const twitterImage = buildImageUrl(page.twitter_image || page.og_image || page.image);
-  const twitterCard = page.twitter_card_type || 'summary_large_image';
+  // Use generic fields for Twitter
+  const twitterTitle = title;
+  const twitterDescription = description;
+  const twitterImage = buildImageUrl(page.image);
+  const twitterCard = 'summary_large_image';
 
   return {
     title,
     description,
     keywords,
     canonical,
-    noIndex: page.no_index === 1,
-    noFollow: page.no_follow === 1,
+    noIndex: false, // Default to false as field is removed
+    noFollow: false, // Default to false as field is removed
     image: buildImage(page.image, title),
     openGraph: {
       title: ogTitle,

@@ -5,7 +5,6 @@ import "./globals.css";
 import "@/styles/components/inquiry-form.css";
 import "@/styles/components/country-code-select.css";
 import { MobileMenuProvider } from "@/contexts/MobileMenuContext";
-import BreadcrumbSchema from "@/components/seo/BreadCrumbSchema";
 import Header from "@/components/layout/new-header";
 import Footer from "@/components/layout/footer";
 import { AutoPageSchemas } from "@/components/schema/PageSchemas";

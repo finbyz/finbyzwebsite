@@ -21,6 +21,7 @@ export function PageSchemas({ schemas }: PageSchemasProps) {
     <>
       {schemas.map((schema, index) => (
         <Script
+          key={`structured-data-${schema.type}-${index}`}
           id={`structured-data-${schema.type}-${index}`}
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema.json, null, 2) }}
