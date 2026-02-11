@@ -1,4 +1,3 @@
-
 import InquiryForm from "@/components/ui/InquiryForm";
 import { generateAutoMetadata } from "@/lib/seo-metadata";
 
@@ -11,15 +10,13 @@ export default async function MainLayout({
 }: {
   children: React.ReactNode;
 }) {
-
   return (
     <>
       <main>
         {children}
-       
+
         <InquiryForm />
       </main>
-
     </>
   );
 }
