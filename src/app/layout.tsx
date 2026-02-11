@@ -95,7 +95,6 @@ export default function RootLayout({
           `}
         </Script>
 
-        <BreadcrumbSchema baseUrl={process.env.NEXT_PUBLIC_SITE_URL || "https://finbyz.tech"} />
       </head>
       <body
         className={`${interSans.variable} ${geistMono.variable} antialiased`}
