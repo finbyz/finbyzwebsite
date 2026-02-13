@@ -1,6 +1,4 @@
-import BusinessSlider from "@/components/sections/business-slider";
-import FinbyzGallery from "@/components/sections/FinbyzGallery";
-import FAQ from "@/components/ai_components/FAQ";
+import FooterSection from "@/components/sections/FooterSection";
 import { getFaqs, getPageData } from "@/lib/getPageData";
 
 export default async function Layout({
@@ -14,14 +12,7 @@ export default async function Layout({
   return (
     <>
       {children}
-      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
-      {data.galleryItems.length > 0 || data.relatedReads.length > 0 ? (
-        <FinbyzGallery
-          relatedReads={data.relatedReads}
-          galleryItems={data.galleryItems}
-        />
-      ) : null}
-      <BusinessSlider />
+      <FooterSection doctype="Web Page" docname="brochure" />
     </>
   );
 }

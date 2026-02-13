@@ -4,13 +4,11 @@ import Testimonials from "@/components/sections/testimonials";
 import CTA from "@/components/sections/cta";
 import ClientLogos from "@/components/sections/client-logos";
 import ResponsiveCardGrid from "@/components/sections/responsive-card-grid";
-import BusinessSlider from "@/components/sections/business-slider";
 import InquiryForm from "@/components/ui/InquiryForm";
 import { Metadata } from "next";
-import FAQ from "@/components/ai_components/FAQ";
-import { getFaqs } from "@/lib/getPageData";
 import CooprtaionSchema from "@/components/seo/CorporationSchema";
 import ModulesSection from "@/components/sections/modules-erp";
+import FooterSection from "@/components/sections/FooterSection";
 
 export const metadata: Metadata = {
   title: "ERP Solution Provider & AI Automation Experts | ERPNext Implementation | Finbyz Tech",
@@ -89,7 +87,6 @@ export const metadata: Metadata = {
 
 
 export default async function Home() {
-  const faqsGroup = await getFaqs("Web Page", "homepage");
   return (
     <div className="min-h-screen">
       <CooprtaionSchema />
@@ -176,8 +173,6 @@ export default async function Home() {
             }}
           /></div>
 
-        <BusinessSlider />
-
         <ModulesSection />
         <Testimonials />
         
@@ -212,16 +207,7 @@ export default async function Home() {
           }}
         />
 
-        {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
-      
-        
-    
-       
-
-        {/* Contact form (simple, compact) */}
-        {/* If you want this on a separate page, we can move it to /contact */}
-        {/* import ContactFormSection at top if you want to render here */}
-
+        <FooterSection doctype="Web Page" docname="homepage" showInquiryForm={false} />
 
       </main>
 

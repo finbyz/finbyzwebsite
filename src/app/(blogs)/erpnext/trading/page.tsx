@@ -1,17 +1,17 @@
 import TradingPageContent from './TradingPageContent';
-import PageFooter from '@/components/sections/PageFooter';
+import FooterSection from "@/components/sections/FooterSection";
+import StructureData from "@/components/seo/StructureData";
 
 export default async function Page() {
   return (
     <>
       <TradingPageContent />
-      <PageFooter
+      <FooterSection
         doctype="Web Page"
         docname="erp-for-trading-industry"
-        structureDataName="erp-for-trading"
-        structureDataType="webpage"
         showInquiryForm={true}
       />
+      <StructureData name="erp-for-trading" type="webpage" />
     </>
   );
 }

@@ -1,11 +1,9 @@
-import { LazyBusinessSlider } from "@/lib/lazy-components";
-import FinbyzGallery from "@/components/sections/FinbyzGallery";
-import FAQ from "@/components/ai_components/FAQ";
 import { getFaqs, getPageData } from "@/lib/getPageData";
 import StructureData from "@/components/seo/StructureData";
 
 import { Metadata } from "next";
 import Script from "next/script";
+import FooterSection from "@/components/sections/FooterSection";
 
 export const metadata: Metadata = {
   title: "Bench App Management Cheat Sheet: Install, Remove & Get Apps",
@@ -47,7 +45,6 @@ export const metadata: Metadata = {
   }
 };
 
-
 export default async function Layout({ children }: { children: React.ReactNode }) {
   const data = await getPageData("Code Snippet", "create-install/-uninstall-app");
   const faqsGroup = await getFaqs("Code Snippet", "create-install/-uninstall-app");
@@ -56,12 +53,10 @@ export default async function Layout({ children }: { children: React.ReactNode }
     <>
 
       {children}
-      {faqsGroup?.faqs.length && <FAQ faqs={faqsGroup.faqs} />}
-      {
-        (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
-      }
+
       <StructureData name="SNI-00072" type="code-snippet" />
-      <LazyBusinessSlider />
+      
+    <FooterSection doctype="Code Snippet" docname="create-install/-uninstall-app" />
     </>
   );
 }

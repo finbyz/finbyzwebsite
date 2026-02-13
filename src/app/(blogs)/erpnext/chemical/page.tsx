@@ -1,17 +1,17 @@
 import ChemicalPageContent from './ChemicalPageContent';
-import PageFooter from '@/components/sections/PageFooter';
+import FooterSection from "@/components/sections/FooterSection";
+import StructureData from "@/components/seo/StructureData";
 
 export default async function Page() {
   return (
     <>
       <ChemicalPageContent />
-      <PageFooter
+      <FooterSection
         doctype="Web Page"
         docname="erp-for-chemical-industry"
-        structureDataName="erp-for-chemical"
-        structureDataType="webpage"
         showInquiryForm={true}
       />
+      <StructureData name="erp-for-chemical" type="webpage" />
     </>
   );
 }

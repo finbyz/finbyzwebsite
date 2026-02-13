@@ -1,7 +1,5 @@
-import BusinessSlider from "@/components/sections/business-slider";
-import FinbyzGallery from "@/components/sections/FinbyzGallery";
-import FAQ from "@/components/ai_components/FAQ";
 import { getFaqs, getPageData } from "@/lib/getPageData";
+import FooterSection from "@/components/sections/FooterSection";
 
 const PAGE_SLUG = "erpnext/services/opening-balance-reconciliation";
 
@@ -57,7 +55,7 @@ export default async function Layout({
         {children}
 
         {/* FAQ Section */}
-        {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
+        
 
         {/* Gallery + Related Reads */}
         {(data.galleryItems.length > 0 || data.relatedReads.length > 0) && (
@@ -68,8 +66,9 @@ export default async function Layout({
         )}
 
         {/* Business Slider */}
-        <BusinessSlider />
+        
       </main>
+    <FooterSection doctype="Web Page" docname="erpnext/services/opening-balance-reconciliation" />
     </>
   );
 }

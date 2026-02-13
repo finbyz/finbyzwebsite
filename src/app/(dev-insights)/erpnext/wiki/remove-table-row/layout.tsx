@@ -1,11 +1,8 @@
-import { LazyBusinessSlider } from "@/lib/lazy-components";
-import FinbyzGallery from "@/components/sections/FinbyzGallery";
-import FAQ from "@/components/ai_components/FAQ";
 import { getFaqs, getPageData } from "@/lib/getPageData";
 import { fetchFrappeSchemaData } from "@/lib/fetchFrappeSeoData";
 import StructureData from "@/components/seo/StructureData";
 import { Metadata } from "next";
-
+import FooterSection from "@/components/sections/FooterSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const pageData = await fetchFrappeSchemaData({
@@ -54,7 +51,6 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-
 export default async function Layout({ children }: { children: React.ReactNode }) {
   const data = await getPageData("Code Snippet", "remove-table-row");
   const faqsGroup = await getFaqs("Code Snippet", "remove-table-row");
@@ -63,12 +59,10 @@ export default async function Layout({ children }: { children: React.ReactNode }
     <>
       
       {children}
-      {faqsGroup?.faqs.length && <FAQ faqs={faqsGroup.faqs} />}
-      {
-        (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
-      }
+
       <StructureData name="SNI-00082" type="code-snippet" />  
-      <LazyBusinessSlider />
+      
+    <FooterSection doctype="Code Snippet" docname="remove-table-row" />
     </>
   );
 }

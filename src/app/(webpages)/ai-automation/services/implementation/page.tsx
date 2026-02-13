@@ -1,17 +1,11 @@
 import ImplementationContent from "./ImplementationContent";
-import PageFooter from "@/components/sections/PageFooter";
+import StructureData from "@/components/seo/StructureData";
 
 export default function Page() {
     return (
         <>
             <ImplementationContent />
-            <PageFooter
-                doctype="Web Page"
-                docname="ai-implementation-services"
-                showInquiryForm={false}
-                structureDataName="ai-implementation"
-                structureDataType="webpage"
-            />
+            <StructureData name="ai-implementation" type="webpage" />
         </>
     );
 }

@@ -1,8 +1,7 @@
-import BusinessSlider from "@/components/sections/business-slider";
-import FinbyzGallery from "@/components/sections/FinbyzGallery";
-import FAQ from "@/components/ai_components/FAQ";
 import { getFaqs, getPageData } from "@/lib/getPageData";
 import InquiryForm from "@/components/ui/InquiryForm";
+import FooterSection from "@/components/sections/FooterSection";
+import FinbyzGallery from "@/components/sections/FinbyzGallery";
 
 export default async function Layout({
   children,
@@ -21,7 +20,7 @@ export default async function Layout({
         {children}
 
         {/* FAQ Section */}
-        {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
+
 
         {/* Gallery + Related Reads */}
         {(data.galleryItems.length > 0 || data.relatedReads.length > 0) && (
@@ -32,9 +31,10 @@ export default async function Layout({
         )}
 
         {/* Business Customers Slider */}
-        <BusinessSlider />
+
         <InquiryForm />
       </main>
+      <FooterSection doctype="Web Page" docname="custom-erp-development" />
     </>
   );
 }

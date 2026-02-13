@@ -1,13 +1,10 @@
-import { LazyBusinessSlider } from "@/lib/lazy-components";
-import FinbyzGallery from "@/components/sections/FinbyzGallery";
-import FAQ from "@/components/ai_components/FAQ";
 import { getFaqs, getPageData } from "@/lib/getPageData";
 import { fetchFrappeSchemaData } from "@/lib/fetchFrappeSeoData";
 import StructureData from "@/components/seo/StructureData";
 
 import { Metadata } from "next";
 import Script from "next/script";
-
+import FooterSection from "@/components/sections/FooterSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const pageData = await fetchFrappeSchemaData({
@@ -56,7 +53,6 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-
 export default async function Layout({ children }: { children: React.ReactNode }) {
   const data = await getPageData("Code Snippet", "create-mapped-document");
   const faqsGroup = await getFaqs("Code Snippet", "create-mapped-document");
@@ -65,12 +61,10 @@ export default async function Layout({ children }: { children: React.ReactNode }
     <>
       
       {children}
-      {faqsGroup?.faqs.length && <FAQ faqs={faqsGroup.faqs} />}
-      {
-        (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
-      }
+
       <StructureData name="SNI-00094" type="code-snippet" />  
-      <LazyBusinessSlider />
+      
+    <FooterSection doctype="Code Snippet" docname="create-mapped-document" />
     </>
   );
 }

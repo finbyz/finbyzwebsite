@@ -1,4 +1,4 @@
-import { LazyBusinessSlider } from "@/lib/lazy-components";
+import FooterSection from "@/components/sections/FooterSection";
 
 export default async function Layout({
   children,
@@ -8,7 +8,7 @@ export default async function Layout({
   return (
     <main>
       {children}
-      <LazyBusinessSlider />
+      <FooterSection doctype="Web Page" docname="custom-erp-development" />
     </main>
   );
 }

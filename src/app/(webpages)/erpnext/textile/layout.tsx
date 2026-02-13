@@ -1,4 +1,4 @@
-import BusinessSlider from "@/components/sections/business-slider";
+import FooterSection from "@/components/sections/FooterSection";
 import Header from "@/components/layout/header";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -7,7 +7,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <main>
         {children}
 
-        <BusinessSlider />
+        <FooterSection doctype="Web Page" docname="erpnext/textile" />
       </main>
     </>
   );

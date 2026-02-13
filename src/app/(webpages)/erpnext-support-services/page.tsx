@@ -1,17 +1,11 @@
 import ERPNextPageContent from './ERPNextSupportContent';
-import PageFooter from '@/components/sections/PageFooter';
+import StructureData from "@/components/seo/StructureData";
 
 export default async function Page() {
   return (
     <>
       <ERPNextPageContent />
-      <PageFooter
-        doctype="Web Page"
-        docname="erpnext-support-services"
-        structureDataName="erpnext-support-services"
-        structureDataType="webpage"
-        showInquiryForm={false}
-      />
+      <StructureData name="erpnext-support-services" type="webpage" />
     </>
   );
 }

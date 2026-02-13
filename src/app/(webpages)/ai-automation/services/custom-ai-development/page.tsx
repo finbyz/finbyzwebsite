@@ -1,17 +1,11 @@
 import CustomAIDevelopmentContent from "./CustomAIDevelopmentContent";
-import PageFooter from "@/components/sections/PageFooter";
+import StructureData from "@/components/seo/StructureData";
 
 export default function Page() {
     return (
         <>
             <CustomAIDevelopmentContent />
-            <PageFooter
-                doctype="Web Page"
-                docname="custom-ai-development"
-                showInquiryForm={false}
-                structureDataName="custom-ai-development"
-                structureDataType="webpage"
-            />
+            <StructureData name="custom-ai-development" type="webpage" />
         </>
     );
 }

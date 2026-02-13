@@ -1,8 +1,10 @@
+import FooterSection from "@/components/sections/FooterSection";
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      {/* Structured Data */}
       {children}
+      <FooterSection doctype="Web Page" docname="services" />
     </>
   );
 }

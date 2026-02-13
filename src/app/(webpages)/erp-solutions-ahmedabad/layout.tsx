@@ -1,8 +1,27 @@
+// import type { Metadata } from "next";
+// import FooterSection from "@/components/sections/FooterSection";
+
+// const PAGE_SLUG = "erp-solutions-ahmedabad";
+
+// export default async function Layout({
+//   children,
+// }: {
+//   children: React.ReactNode;
+// }) {
+//   const data = await getPageData("Web Page", PAGE_SLUG);
+//   const faqsGroup = await getFaqs("Web Page", PAGE_SLUG);
+
+//   return (
+//     <main>
+//       <FooterSection doctype="Web Page" docname={PAGE_SLUG} />
+//     </main>
+//   );
+// }
+
+
 import type { Metadata } from "next";
-import FAQ from "@/components/ai_components/FAQ";
-import { getFaqs, getPageData } from "@/lib/getPageData";
-import BusinessSlider from "@/components/sections/business-slider";
-import FinbyzGallery from "@/components/sections/FinbyzGallery";
+import FooterSection from "@/components/sections/FooterSection";
+import { getPageData, getFaqs } from "@/lib/getPageData";
 
 const PAGE_SLUG = "erp-solutions-ahmedabad";
 
@@ -11,20 +30,13 @@ export default async function Layout({
 }: {
   children: React.ReactNode;
 }) {
-  const data = await getPageData("Web Page", PAGE_SLUG);
-  const faqsGroup = await getFaqs("Web Page", PAGE_SLUG);
+  const data = await getPageData("NextJS Page", PAGE_SLUG);
+  const faqsGroup = await getFaqs("NextJS Page", PAGE_SLUG);
 
   return (
     <main>
       {children}
-      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
-      {data?.galleryItems?.length > 0 || data?.relatedReads?.length > 0 ? (
-        <FinbyzGallery
-          relatedReads={data.relatedReads}
-          galleryItems={data.galleryItems}
-        />
-      ) : null}
-      <BusinessSlider />
+      <FooterSection doctype="NextJS Page" docname={PAGE_SLUG} />
     </main>
   );
 }
