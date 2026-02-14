@@ -1,14 +1,10 @@
-import { getFaqs, getPageData } from "@/lib/getPageData";
-import Header from "@/components/layout/header";
 import FooterSection from "@/components/sections/FooterSection";
 
 export default async function Layout({
   children,
 }: {
   children: React.ReactNode;
-}) {
-  const data = await getPageData("Web Page", "erpnext/services/erp-migration");
-  const faqsGroup = await getFaqs("Web Page", "erpnext/services/erp-migration");
+  }) {
 
   return (
     <>
@@ -29,21 +25,8 @@ export default async function Layout({
         {/* Page Content */}
         {children}
 
-        {/* FAQ Section */}
-        
-
-        {/* Gallery + Related Reads */}
-        {(data.galleryItems.length > 0 || data.relatedReads.length > 0) && (
-          <FinbyzGallery
-            relatedReads={data.relatedReads}
-            galleryItems={data.galleryItems}
-          />
-        )}
-
-        {/* Business Slider */}
-        
       </main>
-    <FooterSection doctype="Web Page" docname="erpnext/services/erp-migration" />
+    <FooterSection docname="/erpnext/services/erp-migration" />
     </>
   );
 }

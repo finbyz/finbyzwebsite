@@ -7,7 +7,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <main>
         {children}
 
-        <FooterSection doctype="Web Page" docname="erpnext/hospitality" />
+        <FooterSection docname="/erpnext/hospitality" />
       </main>
     </>
   );

@@ -1,4 +1,3 @@
-import { getFaqs, getPageData } from "@/lib/getPageData";
 import StructureData from "@/components/seo/StructureData";
 
 import { Metadata } from "next";
@@ -46,9 +45,6 @@ export const metadata: Metadata = {
 };
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Code Snippet", "create-install/-uninstall-app");
-  const faqsGroup = await getFaqs("Code Snippet", "create-install/-uninstall-app");
-
   return (
     <>
 
@@ -56,7 +52,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
 
       <StructureData name="SNI-00072" type="code-snippet" />
       
-    <FooterSection doctype="Code Snippet" docname="create-install/-uninstall-app" />
+    <FooterSection docname="/create-install/-uninstall-app" />
     </>
   );
 }

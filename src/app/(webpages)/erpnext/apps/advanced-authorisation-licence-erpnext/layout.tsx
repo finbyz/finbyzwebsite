@@ -1,4 +1,3 @@
-import { getFaqs, getPageData } from "@/lib/getPageData";
 import Header from "@/components/layout/header";
 import FooterSection from "@/components/sections/FooterSection";
 
@@ -7,15 +6,6 @@ export default async function Layout({
 }: {
   children: React.ReactNode;
 }) {
-  const data = await getPageData(
-    "Web Page",
-    "erpnext/apps/advanced-authorisation-licence-erpnext",
-  );
-  const faqsGroup = await getFaqs(
-    "Web Page",
-    "erpnext/apps/advanced-authorisation-licence-erpnext",
-  );
-
   return (
     <>
       <main>
@@ -24,7 +14,7 @@ export default async function Layout({
         
         
       </main>
-    <FooterSection doctype="Web Page" docname="erpnext/apps/advanced-authorisation-licence-erpnext" />
+    <FooterSection docname="/erpnext/apps/advanced-authorisation-licence-erpnext" />
     </>
   );
 }

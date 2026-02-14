@@ -1,6 +1,6 @@
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-    let StructuredData = {
+    const StructuredData = {
         "@context": "https://schema.org",
         "@graph": [
           {

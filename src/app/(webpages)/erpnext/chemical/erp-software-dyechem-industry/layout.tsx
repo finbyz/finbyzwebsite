@@ -1,4 +1,3 @@
-import { getFaqs, getPageData } from "@/lib/getPageData";
 import FooterSection from "@/components/sections/FooterSection";
 
 export default async function Layout({
@@ -6,22 +5,13 @@ export default async function Layout({
 }: {
   children: React.ReactNode;
 }) {
-  const data = await getPageData(
-    "Web Page",
-    "erpnext/chemical/erp-software-dyechem-industry",
-  );
-  const faqsGroup = await getFaqs(
-    "Web Page",
-    "erpnext/chemical/erp-software-dyechem-industry",
-  );
-
   return (
     <>
       {children}
       
       
       
-    <FooterSection doctype="Web Page" docname="erpnext/chemical/erp-software-dyechem-industry" />
+    <FooterSection docname="/erpnext/chemical/erp-software-dyechem-industry" />
     </>
   );
 }

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
     // Fetch FAQs if applicable
-    const faqs = await getFaqs("Web Page", "resources");
+    const faqs = await getFaqs("resources");
 
     return (
         <main>

@@ -6,9 +6,7 @@ export default async function Page() {
   return (
     <>
       <TradingPageContent />
-      <FooterSection
-        doctype="Web Page"
-        docname="erp-for-trading-industry"
+      <FooterSection docname="/erp-for-trading-industry"
         showInquiryForm={true}
       />
       <StructureData name="erp-for-trading" type="webpage" />

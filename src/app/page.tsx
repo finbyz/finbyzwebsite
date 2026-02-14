@@ -207,7 +207,7 @@ export default async function Home() {
           }}
         />
 
-        <FooterSection doctype="Web Page" docname="homepage" showInquiryForm={false} />
+        <FooterSection docname="/homepage" showInquiryForm={false} />
 
       </main>
 

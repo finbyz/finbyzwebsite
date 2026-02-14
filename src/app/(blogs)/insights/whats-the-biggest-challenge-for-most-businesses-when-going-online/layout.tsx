@@ -11,7 +11,7 @@ export default async function Layout({
   return (
     <>
       {children}
-      <FooterSection doctype="Blog Post" docname="insights/whats-the-biggest-challenge-for-most-businesses-when-going-online" />
+      <FooterSection docname="/insights/whats-the-biggest-challenge-for-most-businesses-when-going-online" />
     </>
   );
 }

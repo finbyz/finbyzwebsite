@@ -6,7 +6,6 @@ import { getFaqs, getPageData } from "@/lib/getPageData";
 import 'server-only';
 
 interface FooterSectionProps {
-  doctype: "NextJS Page" | "Web Page" | "Blog Post" | "Code Snippet";
   docname: string;
   showInquiryForm?: boolean;
 }
@@ -15,15 +14,14 @@ interface FooterSectionProps {
  * Server component that renders the standard page footer section
  * including FAQ, Gallery, BusinessSlider, and optional InquiryForm.
  * 
- * This component fetches its own data and should be used at the end of page content.
+ * Uses "NextJS Page" doctype internally. Pass the route (with preceding /) as docname.
  */
 export default async function FooterSection({
-  doctype,
   docname,
   showInquiryForm = false,
 }: FooterSectionProps) {
-  const data = await getPageData(doctype, docname);
-  const faqsGroup = await getFaqs(doctype, docname);
+  const data = await getPageData(docname);
+  const faqsGroup = await getFaqs(docname);
 
   return (
     <>

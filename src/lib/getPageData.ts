@@ -1,5 +1,8 @@
-export async function getPageData(doctype: string, route: string): Promise<FinbyzGalleryProps> {
-    const links = await getLinks(doctype, route)
+/* eslint-disable @typescript-eslint/no-explicit-any */
+const DOCTYPE = "NextJS Page";
+
+export async function getPageData(route: string): Promise<FinbyzGalleryProps> {
+    const links = await getLinks(route)
 
     // Get all NextJS Pages referenced in related_links
     const relatedPageNames = links.related_links.map(item => item.reference_name)
@@ -40,8 +43,8 @@ export async function getPageData(doctype: string, route: string): Promise<Finby
 }
 
 
-async function getLinks(doctype: string, route: string): Promise<Links> {
-    const url = `${process.env.FRAPPE_URL}/api/resource/${doctype}?filters=${encodeURIComponent(
+async function getLinks(route: string): Promise<Links> {
+    const url = `${process.env.FRAPPE_URL}/api/resource/${DOCTYPE}?filters=${encodeURIComponent(
         JSON.stringify([["route", "=", route]])
     )}`;
     const response = await fetch(url, {
@@ -59,7 +62,7 @@ async function getLinks(doctype: string, route: string): Promise<Links> {
     }
     const ID = jsonData.data?.[0]['name'] || '';
 
-    const docUrl = `${process.env.FRAPPE_URL}/api/resource/${doctype}/${ID}`;
+    const docUrl = `${process.env.FRAPPE_URL}/api/resource/${DOCTYPE}/${ID}`;
     const docResponse = await fetch(docUrl, {
         headers: {
             "Authorization": `token ${process.env.FRAPPE_API_KEY}:${process.env.FRAPPE_API_SECRET}`,
@@ -76,7 +79,7 @@ async function getLinks(doctype: string, route: string): Promise<Links> {
 async function getNextJSPages(names: string[]): Promise<NextJSPageData[]> {
     if (names.length === 0) return [];
 
-    const pagePayload = `${process.env.FRAPPE_URL}/api/resource/NextJS Page?filters=${encodeURIComponent(JSON.stringify([
+    const pagePayload = `${process.env.FRAPPE_URL}/api/resource/${DOCTYPE}?filters=${encodeURIComponent(JSON.stringify([
         ["name", "in", names]
     ]))}&fields=${encodeURIComponent(JSON.stringify([
         "name",
@@ -113,12 +116,12 @@ async function getNextJSPages(names: string[]): Promise<NextJSPageData[]> {
 }
 
 
-export async function getFaqs(doctype: string, route: string): Promise<FAQGroup | null> {
+export async function getFaqs(route: string): Promise<FAQGroup | null> {
     try {
         const frappeUrl = process.env.FRAPPE_URL;
 
         const docResponse = await fetch(
-            `${frappeUrl}/api/resource/${doctype}?filters=${encodeURIComponent(
+            `${frappeUrl}/api/resource/${DOCTYPE}?filters=${encodeURIComponent(
                 JSON.stringify([["route", "=", route]])
             )}`,
             {
@@ -133,7 +136,7 @@ export async function getFaqs(doctype: string, route: string): Promise<FAQGroup 
         if (!docData) return null;
 
         const fullDocResponse = await fetch(
-            `${frappeUrl}/api/resource/${doctype}/${docData.name}`,
+            `${frappeUrl}/api/resource/${DOCTYPE}/${docData.name}`,
             {
                 headers: {
                     "Authorization": `token ${process.env.FRAPPE_API_KEY}:${process.env.FRAPPE_API_SECRET}`,

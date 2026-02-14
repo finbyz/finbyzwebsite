@@ -64,9 +64,9 @@ const WebBrowsingTimeChart = ({
             tooltip: {
                 trigger: 'item',
                 formatter: (params: any) => {
-                    let totalHours = params.value
-                    let hours = Math.floor(totalHours)
-                    let minutes = Math.round((totalHours - hours) * 60)
+                    const totalHours = params.value
+                    const hours = Math.floor(totalHours)
+                    const minutes = Math.round((totalHours - hours) * 60)
                     return `${params.name} : ${hours}:${minutes < 10 ? '0' + minutes : minutes} Hours`
                 },
             },

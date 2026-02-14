@@ -19,7 +19,7 @@ export default async function Layout({
       <Header />
       <main>
         {children}
-        <FooterSection doctype="Blog Post" docname="erpnext/insights/erpnext-v16-frappe-caffeine-performance-guide" />
+        <FooterSection docname="/erpnext/insights/erpnext-v16-frappe-caffeine-performance-guide" />
       </main>
     </>
   );

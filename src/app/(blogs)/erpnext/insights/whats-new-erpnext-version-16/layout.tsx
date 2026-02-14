@@ -18,7 +18,7 @@
 //       <Header />
 //       <main>
 //         {children}
-//       <FooterSection doctype="Blog Post" docname="erpnext/insights/whats-new-erpnext-version-16" />
+//       <FooterSection docname="/erpnext/insights/whats-new-erpnext-version-16" />
 //     </>
 //   );
 // }
@@ -45,7 +45,7 @@ export default async function Layout({
       <main>
         {children}
       </main>
-      <FooterSection doctype="Blog Post" docname="erpnext/insights/whats-new-erpnext-version-16" />
+      <FooterSection docname="/erpnext/insights/whats-new-erpnext-version-16" />
     </>
   );
 }

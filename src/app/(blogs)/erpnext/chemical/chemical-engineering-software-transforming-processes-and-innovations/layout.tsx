@@ -11,7 +11,7 @@ export default async function Layout({
   return (
     <>
       {children}
-      <FooterSection doctype="Blog Post" docname="erpnext/chemical/chemical-engineering-software-transforming-processes-and-innovations" />
+      <FooterSection docname="/erpnext/chemical/chemical-engineering-software-transforming-processes-and-innovations" />
     </>
   );
 }

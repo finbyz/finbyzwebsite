@@ -7,7 +7,7 @@ export default async function Layout({
 }: {
   children: React.ReactNode;
 }) {
-  const faqsGroup = await getFaqs("ERP Insights", "erp-insights");
+  const faqsGroup = await getFaqs("erp-insights");
 
   return (
     <main>

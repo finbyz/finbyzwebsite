@@ -1,4 +1,3 @@
-import { getFaqs, getPageData } from "@/lib/getPageData";
 import Header from "@/components/layout/header";
 import FooterSection from "@/components/sections/FooterSection";
 
@@ -7,15 +6,6 @@ export default async function Layout({
 }: {
   children: React.ReactNode;
 }) {
-  const data = await getPageData(
-    "Web Page",
-    "ai-automation/apps/content-spark-marketing-automation",
-  );
-  const faqsGroup = await getFaqs(
-    "Web Page",
-    "ai-automation/apps/content-spark-marketing-automation",
-  );
-
   return (
     <>
       <main>
@@ -25,7 +15,7 @@ export default async function Layout({
         
         
       </main>
-    <FooterSection doctype="Web Page" docname="ai-automation/apps/content-spark-marketing-automation" />
+    <FooterSection docname="/ai-automation/apps/content-spark-marketing-automation" />
     </>
   );
 }

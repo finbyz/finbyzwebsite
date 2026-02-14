@@ -11,7 +11,7 @@ export default async function Layout({
   return (
     <>
       {children}
-      <FooterSection doctype="Blog Post" docname="erpnext/insights/ultimate-erp-go-live-plan" />
+      <FooterSection docname="/erpnext/insights/ultimate-erp-go-live-plan" />
     </>
   );
 }

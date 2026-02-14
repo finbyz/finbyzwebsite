@@ -102,7 +102,7 @@ export async function generateStaticParams() {
 
 const GalleryPage = async ({ params }: PageProps) => {
   const { slug } = await params;
-  const data = await getPageData("Gallery", slug || "home");
+  const data = await getPageData(slug || "home");
   if (!slug) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
@@ -116,7 +116,7 @@ const GalleryPage = async ({ params }: PageProps) => {
     notFound();
   }
 
-  const faqsGroup = await getFaqs("Gallery", slug)
+  const faqsGroup = await getFaqs(slug)
 
   return <>
     <Tutorials data={galleries} />;

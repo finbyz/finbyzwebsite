@@ -12,7 +12,7 @@ export default async function Layout({
       {/* Schema for WebPage context */}
       {/* Render main page content */}
       {children}
-      <FooterSection doctype="Web Page" docname="ai-automation" />
+      <FooterSection docname="/ai-automation" />
     </>
   );
 }

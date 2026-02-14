@@ -11,7 +11,7 @@ export default async function Layout({
   return (
     <>
       {children}
-      <FooterSection doctype="Blog Post" docname="insights/website-design-tips-for-small-business" />
+      <FooterSection docname="/insights/website-design-tips-for-small-business" />
     </>
   );
 }

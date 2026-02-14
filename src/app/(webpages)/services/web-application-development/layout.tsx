@@ -1,4 +1,3 @@
-import { getFaqs, getPageData } from "@/lib/getPageData";
 import FooterSection from "@/components/sections/FooterSection";
 
 export default async function Layout({
@@ -6,22 +5,13 @@ export default async function Layout({
 }: {
   children: React.ReactNode;
 }) {
-  const data = await getPageData(
-    "Web Page",
-    "services/web-application-development",
-  );
-  const faqsGroup = await getFaqs(
-    "Web Page",
-    "services/web-application-development",
-  );
-
   return (
     <>
       {children}
       
       
       
-    <FooterSection doctype="Web Page" docname="services/web-application-development" />
+    <FooterSection docname="/services/web-application-development" />
     </>
   );
 }

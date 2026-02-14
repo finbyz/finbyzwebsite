@@ -5,7 +5,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
       {children}
 
-      <FooterSection doctype="Web Page" docname="hiring-process" />
+      <FooterSection docname="/hiring-process" />
     </>
   );
 }

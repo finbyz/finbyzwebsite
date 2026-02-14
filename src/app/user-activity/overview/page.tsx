@@ -1099,7 +1099,7 @@ function OverviewInner() {
 
 // Persist filters to URL when they change
 // Placed after component to use the same file scope
-// eslint-disable-next-line react/display-name
+ 
 ;(() => {})()
 
 export default function Overview() {

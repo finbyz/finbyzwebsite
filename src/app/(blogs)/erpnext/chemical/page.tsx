@@ -6,9 +6,7 @@ export default async function Page() {
   return (
     <>
       <ChemicalPageContent />
-      <FooterSection
-        doctype="Web Page"
-        docname="erp-for-chemical-industry"
+      <FooterSection docname="/erp-for-chemical-industry"
         showInquiryForm={true}
       />
       <StructureData name="erp-for-chemical" type="webpage" />

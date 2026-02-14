@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "next lint --fix",
     "deploy": "npm run build && pm2 restart npm --name next-app || pm2 start npm --name next-app -- start",
     "stop": "pm2 stop next-app",
     "start-pm2": "pm2 start npm --name next-app -- start && pm2 save && pm2 startup",

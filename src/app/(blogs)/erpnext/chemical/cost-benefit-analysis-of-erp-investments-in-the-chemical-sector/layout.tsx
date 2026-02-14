@@ -11,7 +11,7 @@ export default async function Layout({
   return (
     <>
       {children}
-      <FooterSection doctype="Blog Post" docname="erpnext/chemical/cost-benefit-analysis-of-erp-investments-in-the-chemical-sector" />
+      <FooterSection docname="/erpnext/chemical/cost-benefit-analysis-of-erp-investments-in-the-chemical-sector" />
     </>
   );
 }

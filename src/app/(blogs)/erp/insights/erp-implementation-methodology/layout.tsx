@@ -12,7 +12,7 @@ export default async function Layout({
   return (
     <>
       {children}
-      <FooterSection doctype="Blog Post" docname="erp/insights/erp-implementation-methodology" />
+      <FooterSection docname="/erp/insights/erp-implementation-methodology" />
     </>
   );
 }

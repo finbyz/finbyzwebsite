@@ -8,12 +8,12 @@
 // }: {
 //   children: React.ReactNode;
 // }) {
-//   const data = await getPageData("Web Page", PAGE_SLUG);
-//   const faqsGroup = await getFaqs("Web Page", PAGE_SLUG);
+//   const data = await getPageData(PAGE_SLUG);
+//   const faqsGroup = await getFaqs(PAGE_SLUG);
 
 //   return (
 //     <main>
-//       <FooterSection doctype="Web Page" docname={PAGE_SLUG} />
+//       <FooterSection docname={`/${PAGE_SLUG}`} />
 //     </main>
 //   );
 // }
@@ -30,13 +30,13 @@ export default async function Layout({
 }: {
   children: React.ReactNode;
 }) {
-  const data = await getPageData("NextJS Page", PAGE_SLUG);
-  const faqsGroup = await getFaqs("NextJS Page", PAGE_SLUG);
+  const data = await getPageData(PAGE_SLUG);
+  const faqsGroup = await getFaqs(PAGE_SLUG);
 
   return (
     <main>
       {children}
-      <FooterSection doctype="NextJS Page" docname={PAGE_SLUG} />
+      <FooterSection docname={`/${PAGE_SLUG}`} />
     </main>
   );
 }

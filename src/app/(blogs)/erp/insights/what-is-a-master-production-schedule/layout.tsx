@@ -11,7 +11,7 @@ export default async function Layout({
   return (
     <>
       {children}
-      <FooterSection doctype="Blog Post" docname="erp/insights/what-is-a-master-production-schedule" />
+      <FooterSection docname="/erp/insights/what-is-a-master-production-schedule" />
     </>
   );
 }

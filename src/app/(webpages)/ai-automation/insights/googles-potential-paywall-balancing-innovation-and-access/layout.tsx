@@ -1,4 +1,3 @@
-import { getFaqs, getPageData } from "@/lib/getPageData";
 import FooterSection from "@/components/sections/FooterSection";
 
 export default async function Layout({
@@ -6,15 +5,6 @@ export default async function Layout({
 }: {
   children: React.ReactNode;
 }) {
-  const faqsGroup = await getFaqs(
-    "Blog Post",
-    "googles-potential-paywall-balancing-innovation-and-access",
-  );
-  const data = await getPageData(
-    "Blog Post",
-    "googles-potential-paywall-balancing-innovation-and-access",
-  );
-
   return (
     <>
       <main>
@@ -23,7 +13,7 @@ export default async function Layout({
         
         
       </main>
-    <FooterSection doctype="Web Page" docname="googles-potential-paywall-balancing-innovation-and-access" />
+    <FooterSection docname="/googles-potential-paywall-balancing-innovation-and-access" />
     </>
   );
 }

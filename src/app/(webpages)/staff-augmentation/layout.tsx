@@ -5,5 +5,5 @@ export default async function Layout({
 }: {
   children: React.ReactNode;
 }) {
-  return <main>{children}<FooterSection doctype="Web Page" docname="staff-augmentation" /></main>;
+  return <main>{children}<FooterSection docname="/staff-augmentation" /></main>;
 }

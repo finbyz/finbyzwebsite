@@ -75,14 +75,8 @@ function writePage(slug: string, code: string, type: 'webpage' | 'blog' | 'code-
   fs.writeFileSync(pagePath, code, 'utf-8');
 }
 
-function generateWebpageLayout(slug: string, id:string, seoData: SEOData, type: PageType): string {
-  const title = escapeString(seoData.seo_title || seoData.title || '');
-  const description = escapeString(seoData.description || seoData.small_description || '');
-  const keywords = escapeString(seoData.keywords || '');
+function generateWebpageLayout(slug: string, id: string, seoData: SEOData, type: PageType): string {
   const image = seoData.image || '';
-  const content = escapeString((seoData.content || '').substring(0, 500));
-  const canonicalUrl = `${process.env.FRAPPE_URL}/${slug}`;
-  const doctype = docTypes[type] || 'Web Page';
 
   return `import BusinessSlider from "@/components/sections/business-slider";
 import FinbyzGallery from "@/components/sections/FinbyzGallery";
@@ -144,8 +138,8 @@ export async function generateMetadata(): Promise<Metadata> {
 
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("${doctype}", "${slug}");
-  const faqsGroup = await getFaqs("${doctype}", "${slug}");
+  const data = await getPageData("${slug}");
+  const faqsGroup = await getFaqs("${slug}");
 
   return (
     <>

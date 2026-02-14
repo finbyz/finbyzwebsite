@@ -11,7 +11,7 @@ export default async function Layout({
   return (
     <>
       {children}
-      <FooterSection doctype="Blog Post" docname="erpnext/chemical/top-5-benefits-of-erp-for-chemical-industry" />
+      <FooterSection docname="/erpnext/chemical/top-5-benefits-of-erp-for-chemical-industry" />
     </>
   );
 }

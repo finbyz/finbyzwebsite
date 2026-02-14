@@ -11,7 +11,7 @@ export default async function Layout({
   return (
     <>
       {children}
-      <FooterSection doctype="Blog Post" docname="erp/insights/how-can-businesses-benefit-from-using-analytics-on-their-website" />
+      <FooterSection docname="/erp/insights/how-can-businesses-benefit-from-using-analytics-on-their-website" />
     </>
   );
 }

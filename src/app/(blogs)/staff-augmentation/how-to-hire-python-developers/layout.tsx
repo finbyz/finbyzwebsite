@@ -11,7 +11,7 @@ export default async function Layout({
   return (
     <>
       {children}
-      <FooterSection doctype="Blog Post" docname="staff-augmentation/how-to-hire-python-developers" />
+      <FooterSection docname="/staff-augmentation/how-to-hire-python-developers" />
     </>
   );
 }

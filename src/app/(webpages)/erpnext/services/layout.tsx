@@ -1,4 +1,3 @@
-import { getPageData } from "@/lib/getPageData";
 import type { Metadata } from "next";
 import FooterSection from "@/components/sections/FooterSection";
 
@@ -10,6 +9,6 @@ export default async function Layout({
 }: {
   children: React.ReactNode;
 }) {
-  return <main>{children}<FooterSection doctype="Web Page" docname="/erpnext/services" />
+  return <main>{children}<FooterSection docname="//erpnext/services" />
     </main>;
 }

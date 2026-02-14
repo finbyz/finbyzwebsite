@@ -11,7 +11,7 @@ export default async function Layout({
   return (
     <>
       {children}
-      <FooterSection doctype="Blog Post" docname="erpnext/insights/industry-specific-vs-generic-erp" />
+      <FooterSection docname="/erpnext/insights/industry-specific-vs-generic-erp" />
     </>
   );
 }

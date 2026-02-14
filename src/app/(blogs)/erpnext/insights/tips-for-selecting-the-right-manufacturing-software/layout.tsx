@@ -11,7 +11,7 @@ export default async function Layout({
   return (
     <>
       {children}
-      <FooterSection doctype="Blog Post" docname="erpnext/insights/tips-for-selecting-the-right-manufacturing-software" />
+      <FooterSection docname="/erpnext/insights/tips-for-selecting-the-right-manufacturing-software" />
     </>
   );
 }

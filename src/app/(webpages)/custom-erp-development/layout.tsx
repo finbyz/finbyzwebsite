@@ -8,7 +8,7 @@ export default async function Layout({
   return (
     <main>
       {children}
-      <FooterSection doctype="Web Page" docname="custom-erp-development" />
+      <FooterSection docname="/custom-erp-development" />
     </main>
   );
 }

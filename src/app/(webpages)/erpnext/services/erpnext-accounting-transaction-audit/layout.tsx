@@ -1,4 +1,3 @@
-import { getFaqs, getPageData } from "@/lib/getPageData";
 import FooterSection from "@/components/sections/FooterSection";
 
 const PAGE_SLUG = "erpnext/services/erpnext-accounting-transaction-audit";
@@ -46,29 +45,12 @@ export default async function Layout({
     },
   ];
 
-  const data = await getPageData("Web Page", PAGE_SLUG);
-  const faqsGroup = await getFaqs("Web Page", PAGE_SLUG);
-
   return (
     <>
       <main>
         {children}
-
-        {/* FAQ Section */}
-        
-
-        {/* Gallery + Related Reads */}
-        {(data.galleryItems.length > 0 || data.relatedReads.length > 0) && (
-          <FinbyzGallery
-            relatedReads={data.relatedReads}
-            galleryItems={data.galleryItems}
-          />
-        )}
-
-        {/* Business Slider */}
-        
       </main>
-    <FooterSection doctype="Web Page" docname="erpnext/services/erpnext-accounting-transaction-audit" />
+    <FooterSection docname="/erpnext/services/erpnext-accounting-transaction-audit" />
     </>
   );
 }

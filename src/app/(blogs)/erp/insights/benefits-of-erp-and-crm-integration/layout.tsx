@@ -11,7 +11,7 @@ export default async function Layout({
   return (
     <>
       {children}
-      <FooterSection doctype="Blog Post" docname="erp/insights/benefits-of-erp-and-crm-integration" />
+      <FooterSection docname="/erp/insights/benefits-of-erp-and-crm-integration" />
     </>
   );
 }

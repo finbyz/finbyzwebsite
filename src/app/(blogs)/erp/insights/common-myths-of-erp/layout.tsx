@@ -11,7 +11,7 @@ export default async function Layout({
   return (
     <>
       {children}
-      <FooterSection doctype="Blog Post" docname="erp/insights/common-myths-of-erp" />
+      <FooterSection docname="/erp/insights/common-myths-of-erp" />
     </>
   );
 }

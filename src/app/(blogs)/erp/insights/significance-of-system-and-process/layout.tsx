@@ -11,7 +11,7 @@ export default async function Layout({
   return (
     <>
       {children}
-      <FooterSection doctype="Blog Post" docname="erp/insights/significance-of-system-and-process" />
+      <FooterSection docname="/erp/insights/significance-of-system-and-process" />
     </>
   );
 }

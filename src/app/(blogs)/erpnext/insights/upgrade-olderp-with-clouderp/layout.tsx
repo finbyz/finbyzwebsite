@@ -11,7 +11,7 @@ export default async function Layout({
   return (
     <>
       {children}
-      <FooterSection doctype="Blog Post" docname="erpnext/insights/upgrade-olderp-with-clouderp" />
+      <FooterSection docname="/erpnext/insights/upgrade-olderp-with-clouderp" />
     </>
   );
 }

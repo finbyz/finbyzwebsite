@@ -1,4 +1,3 @@
-import { getFaqs, getPageData } from "@/lib/getPageData";
 import StructureData from "@/components/seo/StructureData";
 
 import { Metadata } from "next";
@@ -45,9 +44,6 @@ export const metadata: Metadata = {
 };
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const data = await getPageData("Code Snippet", "backup-&-restore-erpnext");
-  const faqsGroup = await getFaqs("Code Snippet", "backup-&-restore-erpnext");
-
   return (
     <>
       
@@ -55,7 +51,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
 
       <StructureData name="SNI-00063" type="code-snippet" />  
       
-    <FooterSection doctype="Code Snippet" docname="backup-&-restore-erpnext" />
+    <FooterSection docname="/backup-&-restore-erpnext" />
     </>
   );
 }

@@ -15,7 +15,7 @@ export default async function Layout({
       <Header />
       <main>
         {children}
-        <FooterSection doctype="Blog Post" docname="careers/insights/how-to-become-a-software-engineer-the-path-to-success" />
+        <FooterSection docname="/careers/insights/how-to-become-a-software-engineer-the-path-to-success" />
       </main>
     </>
   );

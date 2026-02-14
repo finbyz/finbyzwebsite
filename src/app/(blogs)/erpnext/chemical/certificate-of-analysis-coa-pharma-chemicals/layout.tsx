@@ -9,7 +9,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   return (
     <>
       {children}
-      <FooterSection doctype="Blog Post" docname="erpnext/chemical/certificate-of-analysis-coa-pharma-chemicals" />
+      <FooterSection docname="/erpnext/chemical/certificate-of-analysis-coa-pharma-chemicals" />
     </>
   );
 }

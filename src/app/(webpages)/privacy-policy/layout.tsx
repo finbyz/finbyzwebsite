@@ -1,18 +1,13 @@
 import FooterSection from "@/components/sections/FooterSection";
-import { getFaqs, getPageData } from "@/lib/getPageData";
-
 export default async function Layout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const data = await getPageData("Web Page", "privacy-policy");
-  const faqsGroup = await getFaqs("Web Page", "privacy-policy");
-
   return (
     <>
       {children}
-      <FooterSection doctype="Web Page" docname="privacy-policy" />
+      <FooterSection docname="/privacy-policy" />
     </>
   );
 }

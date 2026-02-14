@@ -11,7 +11,7 @@ export default async function Layout({
   return (
     <>
       {children}
-      <FooterSection doctype="Blog Post" docname="erp/insights/defining-the-best-hr-software-options-for-indian-companies" />
+      <FooterSection docname="/erp/insights/defining-the-best-hr-software-options-for-indian-companies" />
     </>
   );
 }

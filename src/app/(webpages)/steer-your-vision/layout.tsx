@@ -1,18 +1,13 @@
 import FooterSection from "@/components/sections/FooterSection";
-import { getFaqs, getPageData } from "@/lib/getPageData";
-
 export default async function Layout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const data = await getPageData("Web Page", "steer-your-vision");
-  const faqsGroup = await getFaqs("Web Page", "steer-your-vision");
-
   return (
     <>
       {children}
-      <FooterSection doctype="Web Page" docname="steer-your-vision" />
+      <FooterSection docname="/steer-your-vision" />
     </>
   );
 }

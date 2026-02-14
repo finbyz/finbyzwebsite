@@ -106,8 +106,8 @@ export default async function Layout({
     ],
   };
 
-  const data = await getPageData("Web Page", "our-story");
-  const faqsGroup = await getFaqs("Web Page", "our-story");
+  const data = await getPageData("our-story");
+  const faqsGroup = await getFaqs("our-story");
 
   return (
     <>

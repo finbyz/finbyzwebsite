@@ -11,7 +11,7 @@ export default async function Layout({
   return (
     <>
       {children}
-      <FooterSection doctype="Blog Post" docname="erpnext/trading/erp-for-commodities-trading-business" />
+      <FooterSection docname="/erpnext/trading/erp-for-commodities-trading-business" />
     </>
   );
 }

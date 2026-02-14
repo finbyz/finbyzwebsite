@@ -14,7 +14,7 @@ export default async function Layout({
   return (
     <>
       {children}
-      <FooterSection doctype="Blog Post" docname="ai-automation/clawdbot-moltbot-rebrand" />
+      <FooterSection docname="/ai-automation/clawdbot-moltbot-rebrand" />
     </>
   );
 }

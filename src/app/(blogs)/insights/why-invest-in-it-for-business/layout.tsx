@@ -11,7 +11,7 @@ export default async function Layout({
   return (
     <>
       {children}
-      <FooterSection doctype="Blog Post" docname="insights/why-invest-in-it-for-business" />
+      <FooterSection docname="/insights/why-invest-in-it-for-business" />
     </>
   );
 }

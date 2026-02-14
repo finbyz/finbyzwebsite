@@ -5,5 +5,5 @@ export default async function Layout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}<FooterSection doctype="Web Page" docname="erpnext-support-services" /></>;
+  return <>{children}<FooterSection docname="/erpnext-support-services" /></>;
 }
