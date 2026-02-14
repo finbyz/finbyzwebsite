@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+const DOCTYPE = "NextJS Page";
+
 export interface GalleryItem {
   name: string;
   title: string;
@@ -15,31 +17,35 @@ export interface GalleryItem {
 interface GalleryData {
   name: string;
   title: string;
-  gallery_title: string;
-  gallery_category: string;
-  gallery_sub_category?: string;
+  meta_title?: string;
   route: string;
   animated_image?: string;
-  svg_image?: string;
+  image?: string;
   keywords?: string;
+  content?: string;
 }
 
 async function getGallery(filters: any[][] = []): Promise<GalleryData[]> {
   const fields = [
     'name',
     'title',
-    'gallery_title',
-    'gallery_category',
-    'gallery_sub_category',
+    'meta_title',
     'route',
     'animated_image',
-    'svg_image',
-    'keywords'
+    'image',
+    'keywords',
+    'content'
   ];
 
-  const galleryPayload = `${process.env.FRAPPE_URL}/api/resource/Gallery?filters=${encodeURIComponent(
-    JSON.stringify(filters)
-  )}&fields=${encodeURIComponent(JSON.stringify(fields))}`;
+  // Always include page_type filter for Gallery
+  const allFilters = [
+    ['page_type', '=', 'Gallery'],
+    ...filters
+  ];
+
+  const galleryPayload = `${process.env.FRAPPE_URL}/api/resource/${DOCTYPE}?filters=${encodeURIComponent(
+    JSON.stringify(allFilters)
+  )}&fields=${encodeURIComponent(JSON.stringify(fields))}&limit_page_length=100`;
 
   const galleryResponse = await fetch(galleryPayload, {
     headers: {
@@ -47,7 +53,6 @@ async function getGallery(filters: any[][] = []): Promise<GalleryData[]> {
     },
     next: { revalidate: 3600 },
   });
-
   if (!galleryResponse.ok) {
     throw new Error(`Failed to fetch gallery: ${galleryResponse.statusText}`);
   }
@@ -60,34 +65,29 @@ export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams;
     const search = searchParams.get('search') || '';
-    const category = searchParams.get('category') || '';
-    const sub_category = searchParams.get('sub_category') || '';
+    // Category filters removed as they don't exist in the new schema
+    // const category = searchParams.get('category') || '';
+    // const sub_category = searchParams.get('sub_category') || '';
 
-    const filters: any[][] = [['published', '=', 1]];
+    const filters: any[][] = [['is_published', '=', 1]];
     
     if (search) {
       filters.push(['title', 'like', `%${search}%`]);
     }
     
-    if (category && category !== 'All Categories') {
-      filters.push(['gallery_category', '=', category]);
-    }
-    
-    if (sub_category && sub_category !== 'All Sub Categories') {
-      filters.push(['gallery_sub_category', '=', sub_category]);
-    }
+    // Legacy category filtering removed
 
     const gallery = await getGallery(filters);
 
     const galleryItems: GalleryItem[] = gallery.map((item) => ({
       name: item.name,
-      title: item.gallery_title || item.title,
-      description: item.title,
-      category: item.gallery_category || 'Uncategorized',
-      sub_category: item.gallery_sub_category,
+      title: item.title,
+      description: item.meta_title || item.title, // Fallback
+      category: 'General', // Default category
+      sub_category: '', 
       route: item.route,
       animated_image: item.animated_image,
-      svg_image: item.svg_image,
+      svg_image: item.image, // Map 'image' to 'svg_image' for frontend compatibility
       keywords: item.keywords,
     }));
 

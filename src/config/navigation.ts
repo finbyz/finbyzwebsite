@@ -9,7 +9,6 @@ import {
     Handshake, Briefcase, LucideIcon, Search, Pill, Mail, Atom, Image, Tablet, Headphones, ShieldCheck,
     PenTool, Radio, TreeDeciduous, MessageCircle, UserCheck, CreditCard, FileSearch, MessageSquare, Brain
 } from "lucide-react";
-import { FaPhotoFilm } from "react-icons/fa6";
 
 export type NavNode = {
     name: string;
@@ -46,7 +45,7 @@ async function getGalleryItems(): Promise<NavNode[]> {
         return items.map((item: any) => ({
             name: item.title,
             icon: Image,
-            href: `/${item.route}`,
+            href: `${item.route}`,
             description: item.description
         }));
     } catch (e) {

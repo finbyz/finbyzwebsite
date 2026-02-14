@@ -266,9 +266,9 @@ const pageGroups = {
   'code-snippet': 'erpnext'
 }
 const docTypes = {
-  blog: 'Blog Post',
-  'code-snippet': 'Code Snippet',
-  webpage: 'Web Page'
+  blog: 'NextJS Page',
+  'code-snippet': 'NextJS Page',
+  webpage: 'NextJS Page'
 };
 
 type PageType = 'webpage' | 'blog' | 'code-snippet'

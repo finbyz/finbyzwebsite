@@ -1,5 +1,7 @@
 import { MediaItem, MediaCategory } from '@/types/media';
 
+const DOCTYPE = "NextJS Page";
+
 interface GallerySidebarItem {
   gallery: string;
   title: string;
@@ -36,23 +38,23 @@ interface Gallaries {
  */
 async function getGalleryByRoute(route: string): Promise<Gallery | null> {
   try {
-    const galleryPayload = `${process.env.FRAPPE_URL}/api/resource/Gallery?filters=${encodeURIComponent(
-      JSON.stringify([["route", "=", route]])
+    const galleryPayload = `${process.env.FRAPPE_URL}/api/resource/${DOCTYPE}?filters=${encodeURIComponent(
+      JSON.stringify([["route", "=", route], ["page_type", "=", "Gallery"]])
     )}&fields=${encodeURIComponent(
       JSON.stringify([
         "name",
         "title",
-        "seo_title",
-        "small_description",
+        "meta_title",
+        "meta_description",
         "gallery_title",
         "keywords",
         "gallery_category",
         "gallery_sub_category",
         "route",
-        "description",
+        "content",
         "youtube_link",
         "svg_image",
-        "doctype",
+        "page_type",
         "gallery_sidebar"
       ])
     )}`;
@@ -87,23 +89,23 @@ async function getGalleriesByRoutes(routes: string[]): Promise<Gallery[]> {
   if (routes.length === 0) return [];
 
   try {
-    const galleryPayload = `${process.env.FRAPPE_URL}/api/resource/Gallery?filters=${encodeURIComponent(
-      JSON.stringify([["route", "in", routes]])
+    const galleryPayload = `${process.env.FRAPPE_URL}/api/resource/${DOCTYPE}?filters=${encodeURIComponent(
+      JSON.stringify([["route", "in", routes], ["page_type", "=", "Gallery"]])
     )}&fields=${encodeURIComponent(
       JSON.stringify([
         "name",
         "title",
-        "seo_title",
-        "small_description",
+        "meta_title",
+        "meta_description",
         "gallery_title",
         "keywords",
         "gallery_category",
         "gallery_sub_category",
         "route",
-        "description",
+        "content",
         "youtube_link",
         "svg_image",
-        "doctype",
+        "page_type",
         "gallery_sidebar"
       ])
     )}`;

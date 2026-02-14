@@ -16,6 +16,8 @@ interface Gallery {
     gallery_category: string;
     gallery_sub_category: string;
     route: string;
+    content_type?: string;
+    content_md?: string;
     description: string;
     youtube_link: string;
     video_duration?: string;

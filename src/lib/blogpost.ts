@@ -10,9 +10,23 @@ export interface BlogPost {
   route?: string;
 }
 
+const DOCTYPE = "NextJS Page";
 
-async function getBlogs(filters: any[][] = []): Promise<RelatedLinksData[]> {
-  const webpagePayload = `${process.env.FRAPPE_URL}/api/resource/Blog Post?filters=${encodeURIComponent(JSON.stringify(filters))}&fields=${encodeURIComponent(JSON.stringify(["name", "route", "title", "seo_title", "image_seo as image"]))}`;
+interface BlogData {
+  name: string;
+  route: string;
+  title: string;
+  meta_title?: string;
+  image?: string;
+}
+
+async function getBlogs(filters: any[][] = []): Promise<BlogData[]> {
+  // Always include page_type filter for Blog Post
+  const allFilters = [
+    ["page_type", "=", "Blog Post"],
+    ...filters
+  ];
+  const webpagePayload = `${process.env.FRAPPE_URL}/api/resource/${DOCTYPE}?filters=${encodeURIComponent(JSON.stringify(allFilters))}&fields=${encodeURIComponent(JSON.stringify(["name", "route", "title", "meta_title", "image"]))}`;
 
   const blogsResponse = await fetch(webpagePayload, {
     headers: {
@@ -21,17 +35,9 @@ async function getBlogs(filters: any[][] = []): Promise<RelatedLinksData[]> {
   });
 
   const blogsJson = await blogsResponse.json();
-  const blogsData: RelatedLinksData[] = blogsJson.data || [];
+  const blogsData: BlogData[] = blogsJson.data || [];
 
-  return blogsData.map(blog => {
-    return {
-      name: blog.name,
-      route: blog.route,
-      title: blog.title,
-      seo_title: blog.seo_title,
-      image: blog.image
-    }
-  })
+  return blogsData;
 }
 
 export async function getBlogPosts({
@@ -44,36 +50,35 @@ export async function getBlogPosts({
   category?: string;
   start_date?: string;
   end_date?: string;
-}): Promise<BlogPost[]> {
-  const params = new URLSearchParams();
+} = {}): Promise<BlogPost[]> {
+  const filters: any[][] = [];
 
-  // if (search) params.append("search", search);
-  // if (category) params.append("category", category);
-  // if (start_date && end_date) {
-  //   params.append("start_date", start_date);
-  //   params.append("end_date", end_date);
-  // }
+  if (search) {
+    filters.push(["title", "like", `%${search}%`]);
+  }
+  if (category) {
+    filters.push(["keywords", "like", `%${category}%`]);
+  }
+  if (start_date && end_date) {
+    filters.push(["published_on", "between", [start_date, end_date]]);
+  } else if (start_date) {
+    filters.push(["published_on", ">=", start_date]);
+  } else if (end_date) {
+    filters.push(["published_on", "<=", end_date]);
+  }
 
-  // const url = `https://finbyz.tech/api/method/finbyz.api.get_blog_posts?${params.toString()}`;
-
-  // const res = await fetch(url, {
-  //   headers: {
-  //     "Authorization": `token ${process.env.FRAPPE_API_KEY}:${process.env.FRAPPE_API_SECRET}`,
-  //   },
-  //   cache: "no-store",
-  // });
-  const blogs = await getBlogs()
+  const blogs = await getBlogs(filters);
   return blogs.map(blog => {
     return {
-      "name": blog.name,
-      "title": blog.title,
-      "description": blog.seo_title,
-      "date": "",
-      "author": "Mukesh",
-      "image": blog.image,
-      "read_time": "5 min",
-      "category": "business",
-      "route": blog.route
+      name: blog.name,
+      title: blog.title,
+      description: blog.meta_title || blog.title,
+      date: "",
+      author: "Mukesh",
+      image: blog.image,
+      read_time: "5 min",
+      category: "business",
+      route: blog.route
     }
   })
 }

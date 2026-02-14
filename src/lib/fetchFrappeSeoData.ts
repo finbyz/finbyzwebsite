@@ -30,6 +30,7 @@ export interface FrappePageData {
   youtube_link?: string;
   youtube_video_id?: string;
   video_duration?: string;
+  page_type?: string;
 }
 
 function getAuthHeaders() {
@@ -39,23 +40,18 @@ function getAuthHeaders() {
   return { Authorization: `token ${key}:${secret}` } as Record<string, string>;
 }
 
-const getDoctype = (type: PageType) => {
-  if (type === "gallery") return "Gallery";
-  if (type === "blog") return "Blog Post";
-  if (type === "code-snippet") return "Code Snippet";
-  return "Web Page";
-};
+const DOCTYPE = "NextJS Page";
 
 export async function fetchFrappeSchemaData({
-  type,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  type: _type,
   name,
 }: {
   type: PageType;
   name: string;
 }) {
-  const doctype = getDoctype(type);
-
-  const res = await fetch(`${process.env.FRAPPE_URL}/api/resource/${doctype}/${name}`, {
+  // Always use NextJS Page doctype - fetch by name directly
+  const res = await fetch(`${process.env.FRAPPE_URL}/api/resource/${DOCTYPE}/${name}`, {
     next: { revalidate: 3600 }, // ISR (optional)
     headers: { ...getAuthHeaders() }
   });

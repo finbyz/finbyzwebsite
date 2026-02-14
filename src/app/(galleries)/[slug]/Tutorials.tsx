@@ -4,15 +4,18 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Tabs, TabsContent } from '@/components/ui/tabs';
 import { Input } from '@/components/ui/input';
-import { ArrowBigLeft, ArrowLeft, Search } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { MediaViewer } from '@/components/ai_components/gallery/MediaViewer';
 import { MediaListItem } from '@/components/ai_components/gallery/MediaListItem';
 import { SidebarMediaItem } from '@/components/ai_components/gallery/SidebarMediaItem';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { MediaItem, MediaCategory } from '@/types/media';
+import { MediaItem } from '@/types/media';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import Link from 'next/link';
+import Image from 'next/image';
 import Breadcrumbs from '@/components/sections/BreadCrumbs';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 interface TutorialsProps {
   data: Galleries | null;
@@ -56,6 +59,7 @@ const Tutorials = ({ data }: TutorialsProps) => {
     }
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const filterItems = (items: Gallery[], _category: string | null) => {
     let filtered = items;
 
@@ -99,13 +103,13 @@ const Tutorials = ({ data }: TutorialsProps) => {
 
   const toMediaItem = (g: Gallery): MediaItem => ({
     id: g.name,
-    type: g.youtube_link ? 'video' : 'image',
+    type: (g.youtube_link && extractYouTubeId(g.youtube_link)) ? 'video' : 'image',
     title: g.gallery_title,
     description: g.description || g.small_description,
     small_description: g.small_description,
     thumbnail: g.svg_image,
     category: g.gallery_category || 'uncategorized',
-    watched: g.youtube_link ? watchedItems.has(g.name) : undefined,
+    watched: (g.youtube_link && extractYouTubeId(g.youtube_link)) ? watchedItems.has(g.name) : undefined,
     videoId: g.youtube_link ? extractYouTubeId(g.youtube_link) : undefined,
     imageUrl: !g.youtube_link ? g.svg_image : undefined,
     tags: g.keywords ? g.keywords.split(',').map(k => k.trim()).filter(Boolean) : undefined,
@@ -121,116 +125,9 @@ const Tutorials = ({ data }: TutorialsProps) => {
     );
   }
 
-  // Extract YouTube video ID from URL
-  const getVideoId = (url?: string): string | null => {
-    if (!url) return null;
-    const patterns = [
-      /(?:v=)([\w-]{11})/,
-      /youtu\.be\/([\w-]{11})/,
-      /youtube\.com\/embed\/([\w-]{11})/
-    ];
-    for (const p of patterns) {
-      const m = url.match(p);
-      if (m && m[1]) return m[1];
-    }
-    return null;
-  };
-
-  const videoId = getVideoId(data.parent.youtube_link);
-  const hasVideo = !!videoId;
-
-  // Generate structured data with BOTH BlogPosting and VideoObject when video exists
-  const generateStructuredData = () => {
-    // BlogPosting schema (always generated)
-    const blogPostingSchema = {
-      "@type": "BlogPosting",
-      "name": data.parent.seo_title || data.parent.gallery_title || data.parent.title || "Learning Hub",
-      "headline": data.parent.seo_title || data.parent.gallery_title || data.parent.title || "Learning Hub",
-      "description": data.parent.small_description || data.parent.description?.replace(/<[^>]+>/g, '').substring(0, 500) || "Explore our comprehensive collection of tutorials and resources",
-      "author": {
-        "@type": "Person",
-        "name": "FinByz Tech Pvt Ltd",
-        "url": "https://finbyz.tech"
-      },
-      "datePublished": data.parent.creation ? new Date(data.parent.creation).toISOString() : undefined,
-      "dateModified": data.parent.modified ? new Date(data.parent.modified).toISOString() : undefined,
-      "image": data.parent.svg_image ? `https://finbyz.tech/web-api/fb/n${data.parent.svg_image}` : "https://finbyz.tech/images/FinbyzLogo.png",
-      "publisher": {
-        "@type": "Organization",
-        "name": "FinByz Tech Pvt Ltd",
-        "sameAs": "https://finbyz.tech",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://finbyz.tech/images/FinbyzLogo.png",
-          "height": "300",
-          "width": "300"
-        }
-      },
-      "keywords": data.parent.keywords.split(',').map(k => k.trim()).filter(Boolean) || "",
-      "url": `https://finbyz.tech/${data.parent.route || ''}`,
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": `https://finbyz.tech/${data.parent.route || ''}`
-      }
-    };
-
-    // If video exists, return BOTH schemas using @graph
-    if (hasVideo) {
-      const videoObjectSchema = {
-        "@type": "VideoObject",
-        "name": data.parent.seo_title || data.parent.gallery_title || data.parent.title || "Video Tutorial",
-        "description": data.parent.small_description || data.parent.description?.replace(/<[^>]+>/g, '').substring(0, 500) || "Watch this video tutorial",
-        "thumbnailUrl": [
-          `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
-          `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
-          `https://img.youtube.com/vi/${videoId}/sddefault.jpg`
-        ],
-        "uploadDate": data.parent.creation ? new Date(data.parent.creation).toISOString() : new Date().toISOString(),
-        "duration": data.parent.video_duration || "PT10M",
-        "contentUrl": data.parent.youtube_link || `https://www.youtube.com/watch?v=${videoId}`,
-        "embedUrl": `https://www.youtube.com/embed/${videoId}`,
-        "author": {
-          "@type": "Person",
-          "name": "FinByz Tech Pvt Ltd",
-          "url": "https://finbyz.tech"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "FinByz Tech Pvt Ltd",
-          "sameAs": "https://finbyz.tech",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://finbyz.tech/images/FinbyzLogo.png",
-            "height": "300",
-            "width": "300"
-          }
-        },
-        "keywords": data.parent.keywords ? data.parent.keywords.split(",").map((keyword: string) => keyword.trim()) : []
-      };
-
-      // Return @graph with BOTH schemas
-      return {
-        "@context": "https://schema.org",
-        "@graph": [blogPostingSchema, videoObjectSchema]
-      };
-    }
-
-    // No video - return only BlogPosting
-    return {
-      "@context": "https://schema.org",
-      ...blogPostingSchema
-    };
-  };
 
   return (
     <div className="min-h-screen bg-background w-full mx-auto container-custom">
-      {/* Structured Data - BlogPosting + VideoObject for videos, BlogPosting only for articles */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateStructuredData())
-        }}
-      />
       <Breadcrumbs
         textColor="text-gray-600"
         currentTextColor="text-gray-900"
@@ -409,17 +306,21 @@ const Tutorials = ({ data }: TutorialsProps) => {
                   {data.parent.svg_image && (
                     <div className="space-y-4">
                       <div
-                        className="bg-muted/30 rounded-lg p-4 flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-muted/50"
+                          className="bg-muted/30 rounded-lg p-4 flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-muted/50 h-96"
                         onMouseEnter={() => setIsHovering(true)}
                         onMouseLeave={() => setIsHovering(false)}
                       >
-                        <img
-                          src={isHovering && data.parent.animated_image
-                            ? `/web-api/fb/n${data.parent.animated_image}`
-                            : `/web-api/fb/n${data.parent.svg_image}`}
-                          alt={data.parent.title || 'SVG Image'}
-                          className="max-w-full max-h-96 object-contain transition-all duration-300"
-                        />
+                          <div className="relative w-full h-full">
+                            <Image
+                              src={isHovering && data.parent.animated_image
+                                ? (data.parent.animated_image.startsWith('http') ? data.parent.animated_image : `/web-api/fb/n${data.parent.animated_image}`)
+                                : (data.parent.svg_image?.startsWith('http') ? data.parent.svg_image : `/web-api/fb/n${data.parent.svg_image}`)}
+                              alt={data.parent.title || 'SVG Image'}
+                              fill
+                              className="object-contain transition-all duration-300"
+                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            />
+                          </div>
                       </div>
                     </div>
                   )}
@@ -427,12 +328,18 @@ const Tutorials = ({ data }: TutorialsProps) => {
                   {/* Static animated image (if no SVG image) */}
                   {!data.parent.svg_image && data.parent.animated_image && (
                     <div className="space-y-4">
-                      <div className="bg-muted/30 rounded-lg p-4 flex items-center justify-center">
-                        <img
-                          src={`/web-api/fb/n${data.parent.animated_image}`}
-                          alt={data.parent.title || 'Animated Image'}
-                          className="max-w-full max-h-96 object-contain"
-                        />
+                        <div className="bg-muted/30 rounded-lg p-4 flex items-center justify-center h-96">
+                          <div className="relative w-full h-full">
+                            <Image
+                              src={data.parent.animated_image?.startsWith('http')
+                                ? data.parent.animated_image
+                                : `/web-api/fb/n${data.parent.animated_image}`}
+                              alt={data.parent.title || 'Animated Image'}
+                              fill
+                              className="object-contain"
+                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            />
+                          </div>
                       </div>
                     </div>
                   )}
@@ -446,11 +353,19 @@ const Tutorials = ({ data }: TutorialsProps) => {
                     {data.parent.small_description}
                   </p>
                 )}
-                {data.parent.description && (
-                  <div
-                    className="prose prose-lg max-w-none text-foreground"
-                    dangerouslySetInnerHTML={{ __html: data.parent.description }}
-                  />
+                  {data.parent.content_type === 'Markdown' && data.parent.content_md ? (
+                    <div className="prose prose-lg max-w-none text-foreground">
+                      <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                        {data.parent.content_md}
+                      </ReactMarkdown>
+                    </div>
+                  ) : (
+                    data.parent.description && (
+                      <div
+                        className="prose prose-lg max-w-none text-foreground"
+                        dangerouslySetInnerHTML={{ __html: data.parent.description }}
+                      />
+                      )
                 )}
               </div>
             </motion.div>

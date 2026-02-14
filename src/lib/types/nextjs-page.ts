@@ -3,7 +3,7 @@
  * Maps to the Frappe "NextJS Page" DocType
  */
 
-export type NextJSPageType = "Web page" | "Blog Post" | "Gallery";
+export type NextJSPageType = "Web Page" | "Blog Post" | "Gallery" | "Code Snippet";
 
 export interface NextJSFAQ {
   question: string;

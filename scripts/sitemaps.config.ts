@@ -37,7 +37,7 @@ export type SitemapConfig =
   | {
     name: string
     type: 'frappe'
-    doctype: 'Job Opening' | 'Gallery' | 'Code Snippet'
+    doctype: 'Job Opening' | 'NextJS Page' | 'Code Snippet'
     routeField: 'route'
     routePrefix?: string
     filters: any[][]
@@ -104,10 +104,10 @@ const config: SitemapConfig[] = [
   {
     name: 'galleries',
     type: 'frappe',
-    doctype: 'Gallery',
+    doctype: 'NextJS Page',
     routeField: 'route',
     routePrefix: '//',
-    filters: [['published', 'is', 'set']],
+    filters: [['is_published', '=', 1], ['page_type', '=', 'Gallery']],
     fields: ['route'],
     changefreq: 'weekly',
     priority: 0.6,

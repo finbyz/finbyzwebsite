@@ -51,14 +51,6 @@ export default async function StructureData({
   name?: string;
   data?: Partial<FrappePageData>;
 }) {
-  // Map page type → Frappe Doctype
-  const getDoctype = () => {
-    if (type === "gallery") return "Gallery";
-    if (type === "blog") return "Blog Post";
-    if (type === "code-snippet") return "Code Snippet";
-    return "Web Page";
-  };
-
   let data: FrappePageData | undefined;
 
   if (manualData) {
