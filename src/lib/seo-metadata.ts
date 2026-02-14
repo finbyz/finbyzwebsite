@@ -8,7 +8,6 @@ import { transformToSEOMeta, transformToNextMetadata } from './transform-seo';
 import { SEOMeta } from './types/seo-types';
 import { Metadata } from 'next';
 
-const SITE_URL = process.env.SITE_URL || 'https://finbyz.tech';
 const FRAPPE_URL = process.env.FRAPPE_URL || process.env.NEXT_PUBLIC_ERP_URL;
 
 function getAuthHeaders() {

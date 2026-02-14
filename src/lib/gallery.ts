@@ -1,4 +1,3 @@
-import { MediaItem, MediaCategory } from '@/types/media';
 
 // Ensure absolute URLs on the client; use auth headers only on the server
 const BASE_URL = process.env.FRAPPE_URL
