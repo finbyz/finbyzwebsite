@@ -96,7 +96,7 @@ export default function PricingPage() {
                 }}
                 heroImage={{
                     alt: "Pricing Plans",
-                    src: "/images/consult-finbyz.svg",
+                    src: "/images/consult-finbyz.png",
                 }}
             />
 

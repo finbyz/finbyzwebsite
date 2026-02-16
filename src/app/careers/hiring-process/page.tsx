@@ -1,10 +1,9 @@
 'use client';
 import DynamicHero from '@/components/sections/dynamic-hero';
-import TextSection from '@/components/sections/text';
 import { List } from '@/components/sections/list';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import CTA from '@/components/sections/cta';
-import { Lightbulb, UserCheck, Search, BadgeCheck, ClipboardList, FileText, Users, TrendingUp, Handshake, HeartHandshake, Star } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
 
 export default function Page() {
   return (

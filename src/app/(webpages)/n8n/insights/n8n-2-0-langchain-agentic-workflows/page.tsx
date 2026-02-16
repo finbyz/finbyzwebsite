@@ -45,7 +45,7 @@ export default function Page() {
                         id="introduction"
                         title="From Linear Automations to Autonomous Agents"
                         image={{
-                            src: '/images/316.svg',
+                            src: '/images/n8n-langchain.png',
                             alt: 'n8n 2.0 AI Agent Workflow',
                             width: 200,
                             height: 200,
@@ -114,7 +114,7 @@ export default function Page() {
                         <BlogParagraph>
                             Let us build a simple "Customer Support Agent" that can answer questions and look up order status.
                         </BlogParagraph>
-                        
+
                         <h4 className="font-semibold text-lg mt-6 mb-2">Step 1: The Agent Node</h4>
                         <BlogParagraph>
                             Drag an <strong>AI Agent</strong> node onto the canvas. Connect a Chat Trigger to it. This node acts as the "brain".
@@ -139,21 +139,21 @@ export default function Page() {
                         </BlogParagraph>
                     </BlogSection>
 
-                     {/* Conclusion */}
-                     <BlogSection id="conclusion" title="The Future is Semantic">
+                    {/* Conclusion */}
+                    <BlogSection id="conclusion" title="The Future is Semantic">
                         <BlogParagraph>
                             With n8n 2.0, we are moving away from rigid logic trees toward semantic routing. You tell the system <em>what</em> to do, and the Agent decides <em>how</em> to do it.
                         </BlogParagraph>
                         <BlogParagraph>
                             This reduces the complexity of maintaining massive "spaghetti" workflows with hundreds of if/else branches. Instead, you build small, modular tools and let the AI orchestrate them.
                         </BlogParagraph>
-                        
+
                         <div className="mt-8 p-6 bg-secondary/20 rounded-lg">
                             <h4 className="font-bold text-lg mb-2">Want to Compare Platforms?</h4>
                             <p className="mb-4">
                                 See how n8n's new AI features stack up against Zapier and Make.
                             </p>
-                             <Link 
+                            <Link
                                 href="/n8n/insights/n8n-vs-zapier-vs-make-comparison"
                                 className="text-primary font-bold hover:underline"
                             >

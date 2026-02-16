@@ -29,7 +29,7 @@ export default function Page() {
                 }}
                 heroImage={{
                     alt: "Resources",
-                    src: "/images/hero_section_image_for_website_hero_section.jpeg",
+                    src: "/images/hero_section_image_for_website_hero_section.png",
                 }}
             />
 

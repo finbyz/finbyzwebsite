@@ -82,7 +82,7 @@ export default async function DocsPage() {
                 description="Your central source for ERPNext guides, technical documentation, and business resources."
                 heroImage={{
                     alt: "Documentation Hub",
-                    src: "/images/documentation.svg", // Reusing generic image
+                    src: "/images/documentation.png", // Reusing generic image
                 }}
                 primaryButton={{
                     text: "Browse Wiki",
