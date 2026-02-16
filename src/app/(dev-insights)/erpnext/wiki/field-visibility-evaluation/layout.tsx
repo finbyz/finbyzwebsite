@@ -4,7 +4,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   return (
     <>
       {children}
-      <FooterSection docname="/erpnext/wikifield-visibility-evaluation" />
+      <FooterSection docname="/erpnext/wiki/field-visibility-evaluation" />
     </>
   );
 }

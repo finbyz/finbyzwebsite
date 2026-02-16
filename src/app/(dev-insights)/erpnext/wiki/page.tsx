@@ -1,14 +1,9 @@
-import { Metadata } from 'next';
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import CTA from '@/components/sections/cta';
 import { BookOpen } from 'lucide-react';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
-  title: 'ERPNext Wiki | Comprehensive Knowledge Base',
-  description: 'Explore the complete ERPNext documentation and knowledge base. Find guides, tutorials, and references for all ERPNext modules and features.',
-};
 
 async function getWikiPages() {
   try {
