@@ -49,7 +49,7 @@ export default function EMSSoftwarePage() {
         }}
         heroImage={{
           alt: 'EMS Software - Emergency management and response coordination',
-          src: '/ems-software-hero.png'
+          src: '/ems-software-hero.jpg'
         }}
       />
 

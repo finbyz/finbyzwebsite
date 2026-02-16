@@ -94,7 +94,7 @@ export default function JobsPage() {
           description="Unlock efficiency, automation, and growth with next-gen technology and expert talent. Join our mission to deliver cutting-edge solutions to businesses worldwide."
           heroImage={{
             alt: 'Jobs',
-            src: '/images/Advance-Authorization-License-PageDesign.svg',
+            src: '/images/Advance-Authorization-License-PageDesign.png',
           }}
         />
         {/* Search and Filters Section */}

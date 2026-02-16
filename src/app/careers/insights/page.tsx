@@ -42,7 +42,7 @@ export default function CareerInsightsPage() {
         }}
         heroImage={{
           alt: 'Career Insights - Professional growth and development',
-          src: '/career-insights-hero.jpg'
+          src: '/career-insights-hero.png'
         }}
       />
 
