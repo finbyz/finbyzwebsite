@@ -17,19 +17,21 @@ export default function Page() {
         description="Explore dynamic career opportunities at a top ERPNext & AI automation firm. Join a team passionate about innovation, learning, and making a real business impact."
         heroImage={{
           alt: 'Career Growth & Innovation at a Leading Tech Company',
-          src:'/images/why-join-finbyz.png',
+          src: '/images/why-join-finbyz.png',
         }}
-        primaryButton={{ text: 'Get Started',action: '/careers/job-openings' }}
-        secondaryButton={{ text: 'Learn More' ,action: () => {
-          const el = document.getElementById('why-join');
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
-        }}}
+        primaryButton={{ text: 'Get Started', action: '/careers/job-openings' }}
+        secondaryButton={{
+          text: 'Learn More', action: () => {
+            const el = document.getElementById('why-join');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }
+        }}
         accentColor="orange"
       />
 
       {/* OVERVIEW SECTION */}
       <section>
-        <div className="container-custom py-8"id="why-join">
+        <div className="container-custom py-8" id="why-join">
           <h2 className="text-3xl font-bold text-[#1A5276] mb-6 animate-fade-in">Overview</h2>
           <p className="text-slate-700 text-base md:text-lg mb-6 md:mb-7 text-justify">
             Discover a rewarding career path at Finbyz, a rapidly growing IT consulting and software development company. We offer unparalleled opportunities for professional development, exposure to cutting-edge technologies, and a collaborative, supportive work environment. As a leader in ERPNext and AI-powered automation, our team is dedicated to continuous learning and delivering impactful solutions for global clients. By joining Finbyz, you step into a culture that values initiative, innovation, and real business impact, giving you the tools and freedom to grow your skills and shape the future of digital transformation across diverse industries.
@@ -51,70 +53,70 @@ export default function Page() {
           <h2 className="text-3xl font-bold text-[#1A5276] mb-6 animate-fade-in container-custom">A Culture of Innovation, Collaboration, and Impact</h2>
           <p className="text-slate-700 text-base md:text-lg mb-6 md:mb-7 text-justify container-custom">Our foundation is built on a set of core values that define who we are and how we operate. When you join Finbyz, you become part of a team that thrives on values such as innovation, collaboration, integrity, and expertise.</p>
           <div className='py-8'>
-          <ResponsiveCardGrid
-            data={{
-              title: 'Our Core Values in Action',
-              cards: [
-                {
-                  id: 1,
-                  title: 'Innovation & Scalability',
-                  description: 'Build adaptable, advanced ERP and AI solutions that push boundaries. Work on projects that challenge conventional thinking and set new industry standards.',
-                  icon: 'Sparkles',
-                  iconColor: "#ffffff",
-                  iconBg: "#1A5276",
-                  className: 'border-none hover:shadow-xl transition-all',
-                },
-                {
-                  id: 2,
-                  title: 'Collaboration',
-                  description: 'Embrace a team-first, problem-solving approach. Your ideas are valued; your voice contributes to our collective success in an environment of knowledge sharing.',
-                  icon: 'Users',
-                  iconColor: "#ffffff",
-                  iconBg: "#FF8C00",
-                  className: 'border-none hover:shadow-xl transition-all',
-                },
-                {
-                  id: 3,
-                  title: 'Integrity & Respect',
-                  description: 'Operate with ethical practices and transparency. Treat every team member, client, and partner with the utmost respect, building trust in every interaction.',
-                  icon: 'ShieldCheck',
-                  iconColor: "#ffffff",
-                  iconBg: "#27AE60",
-                  className: 'border-none hover:shadow-xl transition-all',
-                },
-                {
-                  id: 4,
-                  title: 'Domain Expertise',
-                  description: 'Rely on strong functional knowledge in sectors like chemicals, EXIM, and logistics to deliver specialized, effective solutions and gain deep industry exposure.',
-                  icon: 'Award',
-                  iconColor: "#ffffff",
-                  iconBg: "#8E44AD",
-                  className: 'border-none hover:shadow-xl transition-all',
-                },
-                {
-                  id: 5,
-                  title: 'Agile Digital Transformation',
-                  description: 'Simplify complex processes to enable sustainable growth for businesses. Be instrumental in driving transformative changes and seeing direct impact.',
-                  icon: 'Activity',
-                  iconColor: "#ffffff",
-                  iconBg: "#FF3333",
-                  className: 'border-none hover:shadow-xl transition-all',
-                },
-                {
-                  id: 6,
-                  title: 'Continuous Learning',
-                  description: 'Experience a growth culture with internal workshops and knowledge sharing that help you push boundaries and advance professionally.',
-                  icon: 'BookOpen',
-                  iconColor: "#ffffff",
-                  iconBg: "#FFB347",
-                  className: 'border-none hover:shadow-xl transition-all',
-                },
-              ],
-              variant: 'iconCard',
-              layout: 'standard',
-              showImage: false,
-            }}
-          /></div>
+            <ResponsiveCardGrid
+              data={{
+                title: 'Our Core Values in Action',
+                cards: [
+                  {
+                    id: 1,
+                    title: 'Innovation & Scalability',
+                    description: 'Build adaptable, advanced ERP and AI solutions that push boundaries. Work on projects that challenge conventional thinking and set new industry standards.',
+                    icon: 'Sparkles',
+                    iconColor: "#ffffff",
+                    iconBg: "#1A5276",
+                    className: 'border-none hover:shadow-xl transition-all',
+                  },
+                  {
+                    id: 2,
+                    title: 'Collaboration',
+                    description: 'Embrace a team-first, problem-solving approach. Your ideas are valued; your voice contributes to our collective success in an environment of knowledge sharing.',
+                    icon: 'Users',
+                    iconColor: "#ffffff",
+                    iconBg: "#FF8C00",
+                    className: 'border-none hover:shadow-xl transition-all',
+                  },
+                  {
+                    id: 3,
+                    title: 'Integrity & Respect',
+                    description: 'Operate with ethical practices and transparency. Treat every team member, client, and partner with the utmost respect, building trust in every interaction.',
+                    icon: 'ShieldCheck',
+                    iconColor: "#ffffff",
+                    iconBg: "#27AE60",
+                    className: 'border-none hover:shadow-xl transition-all',
+                  },
+                  {
+                    id: 4,
+                    title: 'Domain Expertise',
+                    description: 'Rely on strong functional knowledge in sectors like chemicals, EXIM, and logistics to deliver specialized, effective solutions and gain deep industry exposure.',
+                    icon: 'Award',
+                    iconColor: "#ffffff",
+                    iconBg: "#8E44AD",
+                    className: 'border-none hover:shadow-xl transition-all',
+                  },
+                  {
+                    id: 5,
+                    title: 'Agile Digital Transformation',
+                    description: 'Simplify complex processes to enable sustainable growth for businesses. Be instrumental in driving transformative changes and seeing direct impact.',
+                    icon: 'Activity',
+                    iconColor: "#ffffff",
+                    iconBg: "#FF3333",
+                    className: 'border-none hover:shadow-xl transition-all',
+                  },
+                  {
+                    id: 6,
+                    title: 'Continuous Learning',
+                    description: 'Experience a growth culture with internal workshops and knowledge sharing that help you push boundaries and advance professionally.',
+                    icon: 'BookOpen',
+                    iconColor: "#ffffff",
+                    iconBg: "#FFB347",
+                    className: 'border-none hover:shadow-xl transition-all',
+                  },
+                ],
+                variant: 'iconCard',
+                layout: 'standard',
+                showImage: false,
+              }}
+            /></div>
         </div>
       </section>
 
@@ -283,7 +285,7 @@ export default function Page() {
       {/* GROWTH & LEARNING SECTION */}
       <section>
         <div className="py-8">
-        <h2 className="text-3xl font-bold text-[#1A5276] mb-6 animate-fade-in container-custom">Unparalleled Growth and Learning Opportunities</h2>
+          <h2 className="text-3xl font-bold text-[#1A5276] mb-6 animate-fade-in container-custom">Unparalleled Growth and Learning Opportunities</h2>
           <TextSection
             data={{
               paragraphs: [
@@ -292,70 +294,70 @@ export default function Page() {
             }}
           />
           <div className='py-8'>
-          <ResponsiveCardGrid
-            data={{
-              title: 'Master the Future of Business Technology',
-              cards: [
-                {
-                  id: 1,
-                  title: 'ERPNext Implementation',
-                  description: 'Engage in end-to-end ERP deployments with intricate, industry-focused customizations that solve real-world challenges.',
-                  icon: 'Database',
-                  iconColor: "#ffffff",
-                  iconBg: "#1A5276",
-                  className: 'border-none hover:shadow-xl transition-all',
-                },
-                {
-                  id: 2,
-                  title: 'AI Automation',
-                  description: 'Dive into AI-CRM Integration, Resume Ranker, Smarter Hiring, Call Feedback, and more. Revolutionize business processes with AI.',
-                  icon: 'Brain',
-                  iconColor: "#ffffff",
-                  iconBg: "#FF8C00",
-                  className: 'border-none hover:shadow-xl transition-all',
-                },
-                {
-                  id: 3,
-                  title: 'Custom Software Development',
-                  description: 'Craft tailored automation and business process solutions, enhancing your skills in bespoke software architecture and development.',
-                  icon: 'Code2',
-                  iconColor: "#ffffff",
-                  iconBg: "#27AE60",
-                  className: 'border-none hover:shadow-xl transition-all',
-                },
-                {
-                  id: 4,
-                  title: 'Web & Mobile Applications',
-                  description: 'Build responsive, user-centric web and mobile apps that deliver seamless digital experiences.',
-                  icon: 'TabletSmartphone',
-                  iconColor: "#ffffff",
-                  iconBg: "#8E44AD",
-                  className: 'border-none hover:shadow-xl transition-all',
-                },
-                {
-                  id: 5,
-                  title: 'IT Consulting',
-                  description: 'Contribute to digital transformation advisory and strategy, guiding clients on their technological evolution.',
-                  icon: 'Globe2',
-                  iconColor: "#ffffff",
-                  iconBg: "#FF3333",
-                  className: 'border-none hover:shadow-xl transition-all',
-                },
-                {
-                  id: 6,
-                  title: 'Data Analytics',
-                  description: 'Transform raw business data into actionable intelligence and strategic insight.',
-                  icon: 'BarChart2',
-                  iconColor: "#ffffff",
-                  iconBg: "#FFB347",
-                  className: 'border-none hover:shadow-xl transition-all',
-                },
-              ],
-              variant: 'iconCard',
-              layout: 'standard',
-              showImage: false,
-            }}
-          /></div>
+            <ResponsiveCardGrid
+              data={{
+                title: 'Master the Future of Business Technology',
+                cards: [
+                  {
+                    id: 1,
+                    title: 'ERPNext Implementation',
+                    description: 'Engage in end-to-end ERP deployments with intricate, industry-focused customizations that solve real-world challenges.',
+                    icon: 'Database',
+                    iconColor: "#ffffff",
+                    iconBg: "#1A5276",
+                    className: 'border-none hover:shadow-xl transition-all',
+                  },
+                  {
+                    id: 2,
+                    title: 'AI Automation',
+                    description: 'Dive into AI-CRM Integration, Resume Ranker, Smarter Hiring, Call Feedback, and more. Revolutionize business processes with AI.',
+                    icon: 'Brain',
+                    iconColor: "#ffffff",
+                    iconBg: "#FF8C00",
+                    className: 'border-none hover:shadow-xl transition-all',
+                  },
+                  {
+                    id: 3,
+                    title: 'Custom Software Development',
+                    description: 'Craft tailored automation and business process solutions, enhancing your skills in bespoke software architecture and development.',
+                    icon: 'Code2',
+                    iconColor: "#ffffff",
+                    iconBg: "#27AE60",
+                    className: 'border-none hover:shadow-xl transition-all',
+                  },
+                  {
+                    id: 4,
+                    title: 'Web & Mobile Applications',
+                    description: 'Build responsive, user-centric web and mobile apps that deliver seamless digital experiences.',
+                    icon: 'TabletSmartphone',
+                    iconColor: "#ffffff",
+                    iconBg: "#8E44AD",
+                    className: 'border-none hover:shadow-xl transition-all',
+                  },
+                  {
+                    id: 5,
+                    title: 'IT Consulting',
+                    description: 'Contribute to digital transformation advisory and strategy, guiding clients on their technological evolution.',
+                    icon: 'Globe2',
+                    iconColor: "#ffffff",
+                    iconBg: "#FF3333",
+                    className: 'border-none hover:shadow-xl transition-all',
+                  },
+                  {
+                    id: 6,
+                    title: 'Data Analytics',
+                    description: 'Transform raw business data into actionable intelligence and strategic insight.',
+                    icon: 'BarChart2',
+                    iconColor: "#ffffff",
+                    iconBg: "#FFB347",
+                    className: 'border-none hover:shadow-xl transition-all',
+                  },
+                ],
+                variant: 'iconCard',
+                layout: 'standard',
+                showImage: false,
+              }}
+            /></div>
 
         </div>
       </section>
@@ -363,7 +365,7 @@ export default function Page() {
       {/* PROPRIETARY SOLUTIONS & PRODUCTS SECTION */}
       <section>
         <div className="py-8">
-        <h2 className="text-3xl font-bold text-[#1A5276] mb-6 animate-fade-in container-custom">Innovate with Proprietary Solutions and Products</h2>
+          <h2 className="text-3xl font-bold text-[#1A5276] mb-6 animate-fade-in container-custom">Innovate with Proprietary Solutions and Products</h2>
           <TextSection
             data={{
               paragraphs: [
@@ -460,7 +462,7 @@ export default function Page() {
       {/* LEADERSHIP SECTION */}
       <section>
         <div className="py-8">
-        <h2 className="text-3xl font-bold text-[#1A5276] mb-6 animate-fade-in container-custom">Our Visionary Leadership</h2>
+          <h2 className="text-3xl font-bold text-[#1A5276] mb-6 animate-fade-in container-custom">Our Visionary Leadership</h2>
           <TextSection
             data={{
               paragraphs: [
@@ -474,7 +476,7 @@ export default function Page() {
       {/* WHO WE SEEK SECTION */}
       <section>
         <div className="py-8">
-        <h2 className="text-3xl font-bold text-[#1A5276] mb-6 animate-fade-in container-custom">What We Look For</h2>
+          <h2 className="text-3xl font-bold text-[#1A5276] mb-6 animate-fade-in container-custom">What We Look For</h2>
           <TextSection
             data={{
               paragraphs: [
@@ -508,7 +510,7 @@ export default function Page() {
                 icon: 'Send',
               },
               title: 'Join Our Talent-First Team',
-              highlightText:'Talent-First',
+              highlightText: 'Talent-First',
               description: 'Innovate, learn, and grow with a passionate team driving ERPNext, AI automation, and business transformation worldwide. Connect with us or explore open career opportunities at Finbyz.',
               primaryButton: {
                 text: 'Apply Now',

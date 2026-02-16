@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useCallback } from "react";
 import * as Icons from "lucide-react";
-import { ChevronLeft, LucideIcon, X } from "lucide-react";
+import { ChevronLeft, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   ChevronDown,
@@ -26,11 +26,6 @@ interface MobileNavStackItem {
   parent?: string;
 }
 
-// Type definitions
-interface CodeSnippet {
-  route: string;
-  title: string;
-}
 
 export default function Header() {
   const [navItems, setNavItems] = useState<NavNode[]>(initialNavigationItems);
@@ -40,7 +35,6 @@ export default function Header() {
   const [expandedNodes, setExpandedNodes] = useState<Set<string>>(new Set());
   const [isScrolled, setIsScrolled] = useState(false);
   const { isOpen, toggleMenu } = useMobileMenu();
-  const [expandedMobileItems, setExpandedMobileItems] = useState<string[]>([]);
   const [mobileNavStack, setMobileNavStack] = useState<MobileNavStackItem[]>([]);
   const [navAnimation, setNavAnimation] = useState<'slide-in' | 'slide-out' | null>(null);
   const [isGoingBack, setIsGoingBack] = useState(false);
@@ -59,19 +53,9 @@ export default function Header() {
     });
   };
 
-  // Helper: Get node at a specific path
-  const getNodeAtPath = (nodes: NavNode[], path: string[]): NavNode | null => {
-    if (path.length === 0) return null;
-    const [first, ...rest] = path;
-    const node = nodes.find(n => n.name === first);
-    if (!node) return null;
-    if (rest.length === 0) return node;
-    if (!node.children) return null;
-    return getNodeAtPath(node.children, rest);
-  };
 
   // Helper: Build initial tree path by auto-selecting first children with children
-  const buildAutoPath = (nodes: NavNode[] | undefined, currentPath: string[] = []): string[] => {
+  const buildAutoPath = useCallback((nodes: NavNode[] | undefined, currentPath: string[] = []): string[] => {
     if (!nodes || nodes.length === 0) return currentPath;
     // Find first node that has children
     const firstWithChildren = nodes.find(n => n.children && n.children.length > 0);
@@ -80,42 +64,9 @@ export default function Header() {
       return buildAutoPath(firstWithChildren.children, newPath);
     }
     return currentPath;
-  };
+  }, []);
 
   // Get columns to render based on current tree path
-  const getColumns = (): { nodes: NavNode[], selectedName: string | null, level: number }[] => {
-    if (!hoveredDropdown) return [];
-
-    const rootItem = navItems.find(n => n.name === hoveredDropdown);
-    if (!rootItem?.children) return [];
-
-    const columns: { nodes: NavNode[], selectedName: string | null, level: number }[] = [];
-
-    // First column: direct children of hovered dropdown
-    columns.push({
-      nodes: rootItem.children,
-      selectedName: treePath[0] || null,
-      level: 0
-    });
-
-    // Add columns for each level in the path
-    let currentNodes = rootItem.children;
-    for (let i = 0; i < treePath.length; i++) {
-      const selectedNode = currentNodes.find(n => n.name === treePath[i]);
-      if (selectedNode?.children && selectedNode.children.length > 0) {
-        columns.push({
-          nodes: selectedNode.children,
-          selectedName: treePath[i + 1] || null,
-          level: i + 1
-        });
-        currentNodes = selectedNode.children;
-      } else {
-        break;
-      }
-    }
-
-    return columns;
-  };
 
 
   // Load navigation items with dynamic children on mount
@@ -148,7 +99,7 @@ export default function Header() {
       setTreePath([]);
       setExpandedNodes(new Set());
     }
-  }, [hoveredDropdown, navItems]);
+  }, [buildAutoPath, hoveredDropdown, navItems]);
 
   // Auto-expand first child with children in the right panel
   useEffect(() => {
@@ -170,28 +121,8 @@ export default function Header() {
 
 
 
-  const toggleMobileItem = (itemName: string) => {
-    setExpandedMobileItems(prev =>
-      prev.includes(itemName)
-        ? prev.filter(name => name !== itemName)
-        : [...prev, itemName]
-    );
-  };
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      toggleMenu();
-      setExpandedMobileItems([]);
-    }
-  };
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    toggleMenu();
-    setExpandedMobileItems([]);
-  };
 
   const openMobileSubmenu = (title: string, items: any[]) => {
     setIsGoingBack(false);
