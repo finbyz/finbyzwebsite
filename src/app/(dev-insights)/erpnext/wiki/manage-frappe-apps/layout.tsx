@@ -1,7 +1,6 @@
 import StructureData from "@/components/seo/StructureData";
 
 import { Metadata } from "next";
-import Script from "next/script";
 import FooterSection from "@/components/sections/FooterSection";
 
 export const metadata: Metadata = {
@@ -52,7 +51,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
 
       <StructureData name="SNI-00072" type="code-snippet" />
       
-    <FooterSection docname="/create-install/-uninstall-app" />
+      <FooterSection docname="/erpnext/wiki/manage-frappe-apps" />
     </>
   );
 }

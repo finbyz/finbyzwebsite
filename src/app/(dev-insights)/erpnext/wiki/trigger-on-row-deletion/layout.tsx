@@ -6,7 +6,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
     <>
       
       {children}
-      <FooterSection docname="/trigger-on-row-deletion" />
+      <FooterSection docname="/erpnext/wiki/trigger-on-row-deletion" />
     </>
   );
 }

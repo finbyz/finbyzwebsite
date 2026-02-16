@@ -6,7 +6,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
     <>
       
       {children}      
-      <FooterSection docname="/add-or-replace-a-ssh-key-pair-for-your-instance" />
+      <FooterSection docname="/erpnext/wiki/add-or-replace-a-ssh-key-pair-for-your-instance" />
     </>
   );
 }

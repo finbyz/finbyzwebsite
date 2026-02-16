@@ -7,7 +7,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
 
       {children}
 
-      <FooterSection docname="/update-table-on-button-click" />
+      <FooterSection docname="/erpnext/wiki/update-table-on-button-click" />
     </>
   );
 }

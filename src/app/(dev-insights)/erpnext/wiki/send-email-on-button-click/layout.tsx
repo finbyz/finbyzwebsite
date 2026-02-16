@@ -9,7 +9,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
 
       <StructureData name="SNI-00086" type="code-snippet" />  
       
-      <FooterSection docname="/send-email-on-button-click" />
+      <FooterSection docname="/erpnext/wiki/send-email-on-button-click" />
     </>
   );
 }

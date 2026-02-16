@@ -6,7 +6,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
     <>
       
       {children}      
-      <FooterSection docname="/socketio-setup" />
+      <FooterSection docname="/erpnext/wiki/socketio-setup" />
     </>
   );
 }

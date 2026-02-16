@@ -5,7 +5,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   return (
     <>
       {children}
-      <FooterSection docname="/create-swap-file" />
+      <FooterSection docname="/erpnext/wiki/create-swap-file" />
     </>
   );
 }

@@ -5,7 +5,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
     <>
       
       {children}
-      <FooterSection docname="/install-erpnext" />
+      <FooterSection docname="/erpnext/wiki/install-erpnext" />
     </>
   );
 }

@@ -5,7 +5,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
     <>
       
       {children}      
-      <FooterSection docname="/make-read-only-field" />
+      <FooterSection docname="/erpnext/wiki/make-read-only-field" />
     </>
   );
 }

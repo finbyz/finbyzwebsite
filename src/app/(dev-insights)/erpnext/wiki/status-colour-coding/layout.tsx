@@ -4,7 +4,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   return (
     <>
       {children}
-      <FooterSection docname="/status-colour-coding" />
+      <FooterSection docname="/erpnext/wiki/status-colour-coding" />
     </>
   );
 }

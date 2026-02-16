@@ -5,7 +5,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   return (
     <>
       {children}
-      <FooterSection docname="/enable-developer-mode" />
+      <FooterSection docname="/erpnext/wiki/enable-developer-mode" />
     </>
   );
 }

@@ -6,7 +6,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
     <>
       <main>
         {children}
-        <FooterSection docname="/brochure" />
+        <FooterSection docname="/resources/brochure" />
       </main>
 
     </>

@@ -5,7 +5,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
     <>
 
       {children}
-      <FooterSection docname="/calendar-view-method" />
+      <FooterSection docname="/erpnext/wiki/calendar-view-method" />
     </>
   );
 }

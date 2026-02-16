@@ -4,7 +4,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   return (
     <>
       {children}
-      <FooterSection docname="/fetch-table-all-rows" />
+      <FooterSection docname="/erpnext/wiki/fetch-table-all-rows" />
     </>
   );
 }

@@ -5,7 +5,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
     <>
       
       {children}
-      <FooterSection docname="/install-python-on-unsupported-enviroment" />
+      <FooterSection docname="/erpnext/wiki/install-python-on-unsupported-enviroment" />
     </>
   );
 }

@@ -4,7 +4,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   return (
     <>
       {children}
-      <FooterSection docname="/override-exiting-python-methods" />
+      <FooterSection docname="/erpnext/wiki/override-exiting-python-methods" />
     </>
   );
 }

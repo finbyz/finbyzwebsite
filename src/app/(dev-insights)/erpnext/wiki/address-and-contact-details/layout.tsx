@@ -7,7 +7,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
     <>
       
       {children}      
-      <FooterSection docname="/address-and-contact-details" />
+      <FooterSection docname="/erpnext/wiki/address-and-contact-details" />
     </>
   );
 }

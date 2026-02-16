@@ -6,7 +6,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
     <>
       
       {children}      
-      <FooterSection docname="/using-where-clause-in-sql" />
+      <FooterSection docname="/erpnext/wiki/using-where-clause-in-sql" />
     </>
   );
 }

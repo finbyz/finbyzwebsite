@@ -5,7 +5,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   return (
     <>
       {children}
-      <FooterSection docname="/error:-no-module-named-psutil" />
+      <FooterSection docname="/erpnext/wiki/error:-no-module-named-psutil" />
     </>
   );
 }

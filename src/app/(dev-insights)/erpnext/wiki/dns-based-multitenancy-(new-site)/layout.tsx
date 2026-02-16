@@ -4,7 +4,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   return (
     <>
       {children}
-      <FooterSection docname="/dns-based-multitenancy-(new-site)" />
+      <FooterSection docname="/erpnext/wiki/dns-based-multitenancy-(new-site)" />
     </>
   );
 }

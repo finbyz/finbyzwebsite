@@ -4,7 +4,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   return (
     <>
       {children}
-      <FooterSection docname="/alerts/-dialogs-types" />
+      <FooterSection docname="/erpnext/wiki/alerts/-dialogs-types" />
     </>
   );
 }

@@ -5,7 +5,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   return (
     <>
       {children}
-      <FooterSection docname="/create-communication-in-timeline" />
+      <FooterSection docname="/erpnext/wiki/create-communication-in-timeline" />
     </>
   );
 }

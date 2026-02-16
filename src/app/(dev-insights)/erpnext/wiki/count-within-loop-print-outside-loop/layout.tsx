@@ -6,7 +6,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
     <>
       
       {children}
-      <FooterSection docname="/count-within-loop-print-outside-loop" />
+      <FooterSection docname="/erpnext/wiki/count-within-loop-print-outside-loop" />
     </>
   );
 }

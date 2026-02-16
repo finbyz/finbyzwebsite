@@ -51,7 +51,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
 
       <StructureData name="SNI-00063" type="code-snippet" />  
       
-    <FooterSection docname="/backup-&-restore-erpnext" />
+      <FooterSection docname="/erpnext/wiki/backup-&-restore-erpnext" />
     </>
   );
 }

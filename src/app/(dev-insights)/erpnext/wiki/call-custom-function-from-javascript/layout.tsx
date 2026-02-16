@@ -6,7 +6,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
     <>
       
       {children}
-      <FooterSection docname="/call-custom-function-from-javascript" />
+      <FooterSection docname="/erpnext/wiki/call-custom-function-from-javascript" />
     </>
   );
 }

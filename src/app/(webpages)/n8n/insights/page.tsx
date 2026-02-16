@@ -3,7 +3,7 @@
 import HeroSection from '@/components/sections/dynamic-hero';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Calendar, Clock, BookOpen, Shield, Code, Brain } from 'lucide-react';
+import { ArrowRight, Calendar, Clock, Shield, Code, Brain } from 'lucide-react';
 
 const articles = [
     {

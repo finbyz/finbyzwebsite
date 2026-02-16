@@ -5,7 +5,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   return (
     <>
       {children}
-      <FooterSection docname="/custom-button" />
+      <FooterSection docname="/erpnext/wiki/custom-button" />
     </>
   );
 }

@@ -4,7 +4,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   return (
     <>
       {children}
-      <FooterSection docname="/validate-on-loop" />
+      <FooterSection docname="/erpnext/wiki/validate-on-loop" />
     </>
   );
 }

@@ -5,7 +5,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
     <>
       
       {children}      
-      <FooterSection docname="/server-side-query" />
+      <FooterSection docname="/erpnext/wiki/server-side-query" />
     </>
   );
 }

@@ -4,7 +4,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
   return (
     <>
       {children}
-      <FooterSection docname="/nginx-service" />
+      <FooterSection docname="/erpnext/wiki/nginx-service" />
     </>
   );
 }
