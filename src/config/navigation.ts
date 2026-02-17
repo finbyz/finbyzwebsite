@@ -7,7 +7,8 @@ import {
     Globe, BookOpen, Globe2, Code2, Bot, MailPlus, Sparkles, PhoneCall, Scale,
     Puzzle, Box, HeartHandshake, ClipboardList, Send, Compass, MessageSquareQuote,
     Handshake, Briefcase, LucideIcon, Search, Pill, Mail, Atom, Image, Tablet, Headphones, ShieldCheck,
-    PenTool, Radio, TreeDeciduous, MessageCircle, UserCheck, CreditCard, FileSearch, MessageSquare, Brain
+    PenTool, Radio, TreeDeciduous, MessageCircle, UserCheck, CreditCard, FileSearch, MessageSquare, Brain,
+    Leaf
 } from "lucide-react";
 
 export type NavNode = {
@@ -198,6 +199,7 @@ const navigationItems: NavNode[] = [
                     { name: "Engineering", icon: Cog, href: "/erpnext/engineering" },
                     { name: "Fintech", icon: DollarSign, href: "/erpnext/fintech" },
                     { name: "Healthcare", icon: Heart, href: "/erpnext/healthcare" },
+                    { name: "Agriculture", icon: Leaf, href: "/erpnext/agro/erp-for-commodity-trading" },
                     { name: "Hospitality", icon: Building2, href: "/erpnext/hospitality" },
                     { name: "Logistics", icon: Truck, href: "/erpnext/logistics" },
                     {
