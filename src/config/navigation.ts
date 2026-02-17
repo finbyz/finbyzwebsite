@@ -118,7 +118,7 @@ const navigationItems: NavNode[] = [
                     { name: "Data Analytics", icon: BarChart3, href: "/erpnext/services/data-analytics", description: "Data analytics services" },
                     { name: "Custom CMS Development", icon: Code, href: "/erpnext/services/develop-custom-erp-software", description: "Develop custom ERP software" },
                     { name: "ERP Migration", icon: Database, href: "/erpnext/services/erp-migration", description: "ERPNext data migration" },
-                    { name: "ERP Software Developers", icon: Code2, href: "/erpnext/services/erp-software-development", description: "Hire expert ERP developers" },
+                    { name: "ERP Software Developers", icon: Code2, href: "/erp/services/erp-software-development", description: "Hire expert ERP developers" },
                     { name: "ERPNext Implementation in UAE", icon: Building2, href: "/erpnext/services/ERPNext-impelementation-in-uae", description: "Implementation services in UAE" },
                     { name: "ERPNext SEO Optimization", icon: Search, href: "/erpnext/services/erpnext-seo-optimization", description: "SEO optimization" },
                     { name: "ERPNext Service Provider", icon: Briefcase, href: "/erpnext/services/erpnext-service-provider", description: "Full-service ERPNext provider" },
@@ -193,7 +193,7 @@ const navigationItems: NavNode[] = [
                     },
 
                     { name: "Construction", icon: Hammer, href: "/erpnext/construction" },
-                    { name: "Education", icon: GraduationCap, href: "/erpnext/erp-education" },
+                    { name: "Education", icon: GraduationCap, href: "/erpnext/education" },
                     { name: "Electronics", icon: Zap, href: "/erpnext/electronics" },
                     { name: "Engineering", icon: Cog, href: "/erpnext/engineering" },
                     { name: "Fintech", icon: DollarSign, href: "/erpnext/fintech" },
