@@ -19,6 +19,10 @@ async function getRouteMap(): Promise<Record<string, string>> {
     const res = await fetch(`${BASE_URL}/api/resource/NextJS Page?fields=["route","actual_route"]&limit_page_length=0`, {
       headers: {
         "Authorization": `token ${process.env.FRAPPE_API_KEY}:${process.env.FRAPPE_API_SECRET}`,
+      },
+      cache: 'force-cache',
+      next: {
+        revalidate: 3600,
       }
     });
     if (!res.ok) {
