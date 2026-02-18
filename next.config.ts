@@ -405,7 +405,7 @@ const nextConfig = {
       },
       {
         source: "/smart-card-scanner-overview",
-        destination: "/erpnext/ai/smart-card-scanner-overview",
+        destination: "/erpnext/ai/ai-powered-smart-card-scanner",
         permanent: true,
       },
 
