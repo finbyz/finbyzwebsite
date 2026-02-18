@@ -1,12 +1,71 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-export function middleware(request: NextRequest) {
+const BASE_URL = process.env.FRAPPE_URL
+
+let routeMap: Record<string, string> = {
+  "/home": "/"
+};
+let lastFetched = 0;
+const CACHE_TTL = 60_000;
+
+async function getRouteMap(): Promise<Record<string, string>> {
+  const now = Date.now();
+  if (now - lastFetched < CACHE_TTL && Object.keys(routeMap).length > 0) {
+    return routeMap;
+  }
+
+  try {
+    const res = await fetch(`${BASE_URL}/api/resource/NextJS Page?fields=["route","actual_route"]&limit_page_length=0`, {
+      headers: {
+        "Authorization": `token ${process.env.FRAPPE_API_KEY}:${process.env.FRAPPE_API_SECRET}`,
+      }
+    });
+    if (!res.ok) {
+      console.error(`[middleware] Failed to fetch routes: ${res.status} ${res.statusText}`);
+      return routeMap;
+    }
+    const data = await res.json();
+    if (data && Array.isArray(data.data)) {
+      const newMap: Record<string, string> = {};
+      for (const item of data.data) {
+        if (item.route && item.actual_route && item.route !== item.actual_route) {
+          newMap[item.route] = item.actual_route;
+        }
+      }
+      routeMap = newMap;
+    }
+    lastFetched = now;
+  } catch (err) {
+    console.error('[middleware] Failed to fetch routes:', err);
+  }
+
+  return routeMap;
+}
+
+export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Set pathname header in request so it's available in Server Components
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set('x-pathname', pathname);
+
+  // ---- route mapping ----
+  const map = await getRouteMap();
+  const normalized = pathname.replace(/\/$/, '') || '/';
+  const destination = map[normalized];
+
+  if (destination) {
+    const url = request.nextUrl.clone();
+    url.pathname = destination;
+    // update the pathname header to the rewritten request
+    requestHeaders.set('x-pathname', destination);
+
+    return NextResponse.rewrite(url, {
+      request: { headers: requestHeaders },
+    });
+  }
+  // ---- end route mapping ----
 
   const response = NextResponse.next({
     request: {
@@ -24,10 +83,8 @@ export function middleware(request: NextRequest) {
   const isProtectedRoute = protectedPaths.some(path => pathname.startsWith(path));
 
   if (isProtectedRoute) {
-    // Get the session cookie (Frappe uses 'sid')
     const sid = request.cookies.get('sid')?.value;
 
-    // If no session cookie, redirect to login with the current path as redirect param
     if (!sid) {
       const loginUrl = new URL('/login', request.url);
       loginUrl.searchParams.set('redirect', pathname);
@@ -38,7 +95,6 @@ export function middleware(request: NextRequest) {
   return response;
 }
 
-// Matcher configuration - run on all routes except static files and API
 export const config = {
   matcher: [
     '/((?!_next/static|_next/image|favicon.ico|images|api).*)',
