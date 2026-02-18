@@ -1,25 +1,10 @@
 'use client';
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Header from '@/components/layout/header';
-import Footer from '@/components/layout/footer';
 import HeroSection from '@/components/sections/dynamic-hero';
-import Script from 'next/script';
 import { Job } from '@/lib/jobs';
 
-
-// Helper function to clean HTML content
-const cleanHtmlContent = (html: string): string => {
-  if (!html) return 'No description available';
-
-  // Remove any script tags and other potentially dangerous content
-  return html
-    .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
-    .replace(/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/gi, '')
-    .replace(/on\w+="[^"]*"/gi, '')
-    .replace(/javascript:/gi, '');
-};
 
 export default function JobsPage() {
   const [selectedCategory, setSelectedCategory] = useState('All Departments');
@@ -40,6 +25,7 @@ export default function JobsPage() {
           const uniqueDepts = ['All Departments', ...new Set((data.data as Job[]).map((j) => j.department))];
           setDepartments(uniqueDepts as string[]);
         }
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (err) {
         // Silently ignore; departments will remain default if this fails
       }

@@ -6,7 +6,6 @@ import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
 import Differentiators from '@/components/sections/differentiators';
 import CTA from '@/components/sections/cta';
-import { ShieldCheck, Brain, Rocket, Database, Users, Activity, TrendingUp, UserCheck, CheckCircle2, Radar } from 'lucide-react';
 
 export default function Page() {
   return (

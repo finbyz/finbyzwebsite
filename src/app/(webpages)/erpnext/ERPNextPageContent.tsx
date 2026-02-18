@@ -27,7 +27,8 @@ export default function ERPNextPageContent() {
         }}
         heroImage={{
           alt: 'ERPNext',
-          src: '/images/Hire-ERPNext-Implementor679475.svg',
+          // src: '/images/Hire-ERPNext-Implementor679475.svg',
+          src:"/erpnext.png"
         }}
       />
 

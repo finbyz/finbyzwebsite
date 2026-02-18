@@ -63,7 +63,8 @@ export default function Page() {
                 }}
                 heroImage={{
                     alt: 'ERP Insights',
-                    src: '/erp_insights.png',
+                    // src: '/erp_insights.png',
+                    src:"/erp-insights.png"
                 }}
                 accentColor="orange"
             />

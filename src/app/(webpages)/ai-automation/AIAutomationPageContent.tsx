@@ -37,7 +37,8 @@ export default function AIAutomationPageContent() {
           description="Revolutionize your workflows with Finbyz Tech’s AI-powered automation. Combine the intelligence of Artificial Intelligence with the efficiency of ERPNext to eliminate repetitive manual tasks, boost productivity, and unlock smarter, faster business decisions."
           heroImage={{
             alt: 'AI Automation Hero',
-            src: '/images/ai-automation.jpeg',
+            // src: '/images/ai-automation.jpeg',
+            src:"/ai-automation.png"
           }}
           primaryButton={{
             text: 'Get Started',

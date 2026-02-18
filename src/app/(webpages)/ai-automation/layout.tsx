@@ -1,5 +1,9 @@
 import FooterSection from "@/components/sections/FooterSection";
+import { generateAutoMetadata } from "@/lib/seo-metadata";
 
+export async function generateMetadata() {
+    return generateAutoMetadata();
+}
 export default async function Layout({
   children,
 }: {

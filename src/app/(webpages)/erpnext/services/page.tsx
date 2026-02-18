@@ -19,7 +19,8 @@ const heroData = {
     primaryButton: "Book Free Consultation",
     secondaryButton: "Contact Us",
     image: {
-        src: "/images/erpnext-dashboard-mockup.png", // Fallback or generic image
+        // src: "/images/erpnext-dashboard-mockup.png", // Fallback or generic image
+        src:"/erpnext-services.png",
         alt: "ERPNext Implementation Services"
     }
 };

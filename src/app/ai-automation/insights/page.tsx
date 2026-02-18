@@ -38,7 +38,8 @@ export default function AIInsightsPage() {
         }}
         heroImage={{
           alt: 'AI Insights - Expert articles on technology and business',
-          src: '/ai-insights-hero.jpg'
+          // src: '/ai-insights-hero.jpg'
+          src:"/ai-automation-insights.png"
         }}
       />
 

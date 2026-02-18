@@ -43,7 +43,8 @@ export default function ERPNextInsightsPage() {
         }}
         heroImage={{
           alt: 'ERPNext Insights - News and Tutorials',
-          src: '/erpnext-insights-hero.png'
+          // src: '/erpnext-insights-hero.png'
+          src:"/erpnext-insights.png"
         }}
       />
       

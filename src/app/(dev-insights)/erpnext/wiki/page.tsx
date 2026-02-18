@@ -33,7 +33,8 @@ export default async function ERPNextWikiPage() {
         description="Your central hub for ERPNext knowledge. Access comprehensive documentation, guides, and best practices to master your ERP system."
         heroImage={{
           alt: 'ERPNext Wiki - Knowledge Base',
-          src: '/wiki-hero.png', // Assuming a placeholder or generic image available
+          // src: '/wiki-hero.png', 
+          src:"/erpnext-wiki.png"
         }}
         backgroundColor="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
       />

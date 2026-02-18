@@ -18,7 +18,8 @@ export default function Page() {
                     description="Unleash the power of fair-code automation. We design, deploy, and manage n8n workflows that connect your apps, data, and AI agents into a seamless operational symphony."
                     backgroundColor="bg-gradient-to-br from-slate-900 via-[#1A5276] to-slate-900"
                     heroImage={{
-                        src: "/images/workflow-transition.png",
+                        // src: "/images/workflow-transition.png",
+                        src:"/n8n.png",
                         alt: "n8n Workflow Automation"
                     }}
                     primaryButton={{

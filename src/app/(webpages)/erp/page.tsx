@@ -21,7 +21,8 @@ export default function ERPPage() {
                     backgroundColor="bg-gradient-to-br from-slate-900 via-[#1A5276] to-slate-900"
                     heroImage={{
                         alt: 'ERP Solutions - Comprehensive business management',
-                        src: '/erp-solutions-hero.png'
+                        // src: '/erp-solutions-hero.png'
+                        src:'/erp.png'
                     }}
                     primaryButton={{
                         text: 'Explore Modules',

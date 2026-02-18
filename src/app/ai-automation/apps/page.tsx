@@ -38,7 +38,8 @@ export default function AIAutomationAppsPage() {
         }}
         heroImage={{
           alt: 'AI Automation Apps - Smart Business Tools',
-          src: '/ai-apps-hero.jpg'
+          // src: '/ai-apps-hero.jpg'
+          src:"/ai-automation-apps.png"
         }}
       />
 

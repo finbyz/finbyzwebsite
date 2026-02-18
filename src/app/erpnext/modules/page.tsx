@@ -37,7 +37,8 @@ export default function ERPNextModulesPage() {
         }}
         heroImage={{
           alt: 'ERPNext Modules - Integrated business solutions',
-          src: '/erpnext-modules-hero.jpg'
+          // src: '/erpnext-modules-hero.jpg'
+          src:"/erpnext-modules.png"
         }}
       />
 

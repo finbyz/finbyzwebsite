@@ -21,7 +21,8 @@ export default function ERPServicesPage() {
                     backgroundColor="bg-gradient-to-br from-slate-900 via-[#1A5276] to-slate-900"
                     heroImage={{
                         alt: 'ERP Services Overview',
-                        src: '/images/erpnext-dashboard-mockup.png'
+                        // src: '/images/erpnext-dashboard-mockup.png'
+                        src:"/erp-services.png"
                     }}
                     primaryButton={{
                         text: 'Explore Services',

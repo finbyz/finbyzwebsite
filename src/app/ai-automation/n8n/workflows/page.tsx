@@ -41,7 +41,8 @@ export default function N8nWorkflowsPage() {
                 }}
                 heroImage={{
                     alt: 'n8n Workflows - Library of automation templates',
-                    src: '/n8n-workflows-hero.jpg'
+                    // src: '/n8n-workflows-hero.jpg'
+                    src:"/n8n-workflows.png"
                 }}
             />
 

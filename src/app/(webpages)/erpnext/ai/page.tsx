@@ -73,7 +73,8 @@ export default function Page() {
                 }}
                 heroImage={{
                     alt: 'ERPNext AI Automation',
-                    src: '/AI_Powered_Resume_Ranker.gif', // Using an existing relevant gif
+                    // src: '/AI_Powered_Resume_Ranker.gif', 
+                    src:"/erpnext-ai.png"
                 }}
             />
 

@@ -19,7 +19,8 @@ export default function SolutionsPageContent() {
                     // Assuming a generic hero image is available or using a colored background as fallback
                     backgroundColor="bg-gradient-to-br from-slate-900 via-[#1A5276] to-slate-900"
                     heroImage={{
-                        src: "/images/Home Hero Image ERP AI Automation.png",
+                        // src: "/images/Home Hero Image ERP AI Automation.png",
+                        src:"/solutions.png",
                         alt: "Finbyz Solutions"
                     }}
                     primaryButton={{

@@ -121,7 +121,8 @@ export default function AboutPage() {
           description="Your trusted ERPNext implementation partner and AI automation experts since 2015"
           heroImage={{
             alt: 'Finbyz Tech ERPNext Implementation Partner and AI Automation Experts',
-            src: '/AboutUs-removebg-preview.png'
+            // src: '/AboutUs-removebg-preview.png'
+            src:"/about-us.png"
           }}
         />
 

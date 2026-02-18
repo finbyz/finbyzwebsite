@@ -27,7 +27,8 @@ export default function Page() {
         }}
         heroImage={{
           alt: 'ERPNext Service Provider',
-          src: '/images/Frappe-Certified-Erpnext-Partner.svg',
+          // src: '/images/Frappe-Certified-Erpnext-Partner.svg',
+          src:"/services.png"
         }}
       />
 

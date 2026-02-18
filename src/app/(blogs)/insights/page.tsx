@@ -59,7 +59,8 @@ export default function InsightsPage() {
                 description="Expert perspectives on technology, growth, and digital transformation to help you steer your vision."
                 heroImage={{
                     alt: "Business Insights",
-                    src: "/images/hero_section_image_for_website_hero_section.jpeg"
+                    // src: "/images/hero_section_image_for_website_hero_section.jpeg"
+                    src:"/insights.png"
                 }}
             />
 

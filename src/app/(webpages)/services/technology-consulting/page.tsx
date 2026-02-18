@@ -1,11 +1,9 @@
 'use client';
 import DynamicHero from '@/components/sections/dynamic-hero';
-import TextSection from '@/components/sections/text';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
 import { List } from '@/components/sections/list';
 import CTA from '@/components/sections/cta';
-import { Lightbulb, Globe2, Star, Users, Settings, Award, TrendingUp, ShieldCheck, Brain, RefreshCcw, Cloud, BarChart3, Rocket } from 'lucide-react';
 
 export default function Page() {
   return (
@@ -348,8 +346,7 @@ export default function Page() {
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1A5276] animate-fadeIn">Empower Your Business with Strategic IT Consulting</h2>
            
-          <p className="text-slate-700 text-base md:text-lg mb-6 md:mb-7 text-justify">
-         Don't let technological complexities hinder growth. Finbyz Tech transforms IT strategy into business success—helping you optimize operations, drive efficiency, and achieve your goals confidently. Whether you need a new ERP system, AI-driven process automation, or a comprehensive digital transformation partner, our expert consultants are ready to deliver measurable results at every step.
+          <p className="text-slate-700 text-base md:text-lg mb-6 md:mb-7 text-justify">Don&apos;t let technological complexities hinder growth. Finbyz Tech transforms IT strategy into business success—helping you optimize operations, drive efficiency, and achieve your goals confidently. Whether you need a new ERP system, AI-driven process automation, or a comprehensive digital transformation partner, our expert consultants are ready to deliver measurable results at every step.
           </p>
           {/* <TextSection
             data={{

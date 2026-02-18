@@ -27,7 +27,8 @@ export default function ChemicalPageContent() {
         }}
         heroImage={{
           alt: 'ERPNext for Chemical Industry',
-          src: '/images/chemical_new.svg',
+          // src: '/images/chemical_new.svg',
+          src:"/erpnext-chemical.png",
           videoSrc: '/images/ERP For Chemical .mp4',
         }}
       />

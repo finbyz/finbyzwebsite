@@ -263,7 +263,7 @@ async function getGalleryRoutes(): Promise<string[]> {
         JSON.stringify([["is_published", "=", 1], ["page_type", "=", "Gallery"]])
     )}&fields=${encodeURIComponent(
         JSON.stringify(["route"])
-    )}&limit_page_length=100`;
+        )}&limit_page_length=0`;
 
     const response = await fetch(galleryPayload, {
         headers: {

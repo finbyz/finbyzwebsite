@@ -18,7 +18,8 @@ export default function CareerPage() {
           description="Join a team where innovation meets opportunity. Shape the future of technology and grow with us."
           heroImage={{
             alt: 'Career opportunities at Finbyz Tech - Join our innovative team',
-            src: '/careers_5.png'
+            // src: '/careers_5.png'
+            src:"/carrers.png"
           }}
         />
         <AnimatedCareerPage />

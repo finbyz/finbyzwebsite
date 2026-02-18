@@ -27,7 +27,7 @@ const articles = [
     {
         title: "Building Agentic Workflows with n8n 2.0 & LangChain",
         description: "Deep dive into n8n's new AI capabilities. How to build autonomous agents using the new Tool Node and LangChain integration.",
-        image: "/images/n8n-langchain.jpg",
+        image: "/images/n8n-langchain.png",
         link: "/n8n/insights/n8n-2-0-langchain-agentic-workflows",
         date: "Dec 15, 2025",
         readTime: "10 min read",
@@ -48,7 +48,8 @@ export default function Page() {
                 }}
                 heroImage={{
                     alt: 'n8n Insights',
-                    src: '/images/n8n-insights-hero.jpg',
+                    // src: '/images/n8n-insights-hero.jpg',
+                    src:"/n8n-insights.png"
                 }}
                 accentColor="orange"
             />

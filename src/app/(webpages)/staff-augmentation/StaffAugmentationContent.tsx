@@ -22,7 +22,8 @@ export default function StaffAugmentationContent() {
                     backgroundColor="bg-transparent"
                     heroImage={{
                         alt: 'Staff Augmentation',
-                        src: '/staff_augmentation.jpeg',
+                        // src: '/staff_augmentation.jpeg',
+                        src:"/staff-augmentation.png"
                     }}
                     primaryButton={{
                         text: 'View Available Roles',

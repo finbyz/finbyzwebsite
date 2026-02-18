@@ -8,7 +8,7 @@ import { Metadata } from 'next';
 import { generateAutoMetadata } from '@/lib/seo-metadata';
 
 type PageProps = {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string[] }>;
 };
 
 export const dynamicParams = true;
@@ -25,7 +25,7 @@ export async function generateStaticParams() {
 
     return routes.map((route) => {
       return {
-        slug: route
+        slug: route.replace(/^\//, '').split('/')
       };
     });
   } catch (error) {
@@ -36,8 +36,9 @@ export async function generateStaticParams() {
 
 const GalleryPage = async ({ params }: PageProps) => {
   const { slug } = await params;
-  const data = await getPageData(slug || "home");
-  if (!slug) {
+  const slugStr = Array.isArray(slug) ? slug.join('/') : slug;
+  const data = await getPageData(slugStr || "home");
+  if (!slugStr) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <p className="text-muted-foreground">Invalid gallery route.</p>
@@ -45,12 +46,12 @@ const GalleryPage = async ({ params }: PageProps) => {
     );
   }
 
-  const galleries = await getFullGallery(slug);
+  const galleries = await getFullGallery(slugStr);
   if (!galleries?.parent) {
     notFound();
   }
 
-  const faqsGroup = await getFaqs(slug)
+  const faqsGroup = await getFaqs(slugStr)
 
   return <>
     <Tutorials data={galleries} />;

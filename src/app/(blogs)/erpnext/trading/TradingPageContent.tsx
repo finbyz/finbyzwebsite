@@ -93,7 +93,8 @@ export default function TradingPageContent() {
         }}
         heroImage={{
           alt: 'ERP for Trading',
-          src: '/images/erp for trading.svg',
+          // src: '/images/erp for trading.svg',
+          src:"/erpnext-trading.png",
           videoSrc: '/images/for_website.mp4',
         }}
       />
