@@ -10,7 +10,6 @@ import BlogCheckList from '@/components/ai_components/blog/BlogCheckList';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import Link from 'next/link';
 
-const blogID = "clawdbot-moltbot-rebrand";
 
 const heroProps = {
   title: 'ClawdBot Becomes MoltBot: Inside the Viral AI Assistant\'s Clever Rebrand',

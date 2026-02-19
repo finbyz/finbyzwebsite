@@ -8,10 +8,10 @@ import BlogTableOfContents from '@/components/ai_components/blog/BlogTableOfCont
 import BlogContent from '@/components/ai_components/blog/BlogContent';
 import BlogCheckList from '@/components/ai_components/blog/BlogCheckList';
 
-const blogID = "evolution-of-erp";
 
 import React from 'react';
 import { Package, Cog, Factory, Building2, Globe, Cloud } from 'lucide-react';
+import Link from 'next/link';
 
 type HexagonCardProps = {
   decade: string;
@@ -188,7 +188,7 @@ export default function Page() {
             }}
           >
             <BlogParagraph>
-              <a href="/erpnext/certified-partner" className="text-primary underline hover:text-primary/80 transition-colors">ERP systems</a> have been shaping the way businesses operate for over two decades. The ERP system evolution reflects a shift from basic bookkeeping tools like Tally, QuickBooks, and Microsoft Office to more integrated solutions. As computing technology progressed from bulky desktop machines to modern smartphones, business technology also transformed. Innovations such as the internet, web platforms, and cloud computing have driven the evolution of ERP. Today, ERP applications have become indispensable tools for businesses of all sizes, from local shops to multinational organizations.
+              <Link href="/erpnext/certified-partner" className="text-primary underline hover:text-primary/80 transition-colors">ERP systems</Link> have been shaping the way businesses operate for over two decades. The ERP system evolution reflects a shift from basic bookkeeping tools like Tally, QuickBooks, and Microsoft Office to more integrated solutions. As computing technology progressed from bulky desktop machines to modern smartphones, business technology also transformed. Innovations such as the internet, web platforms, and cloud computing have driven the evolution of ERP. Today, ERP applications have become indispensable tools for businesses of all sizes, from local shops to multinational organizations.
             </BlogParagraph>
           </BlogSectionWithImage>
 

@@ -4,20 +4,11 @@ import Section from '@/components/sections/Section';
 import CTA from '@/components/sections/cta';
 import List from '@/components/sections/list';
 import EducationFeatureGrid from '@/components/ai_components/EducationFeatureGrid';
-import Image from 'next/image';
-import { FaArrowRight } from 'react-icons/fa6';
 
 const heroImage = {
   alt: 'ERP For Education',
   src: '/images/icon-order-management.svg',
   videoSrc: undefined,
-};
-
-const handlePrimary = () => {
-  // TODO: Add primary action logic
-};
-const handleSecondary = () => {
-  // TODO: Add secondary action logic
 };
 
 const featureList = [

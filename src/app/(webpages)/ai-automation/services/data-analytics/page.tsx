@@ -3,9 +3,7 @@
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import CTA from '@/components/sections/cta';
-import DataAnalyticsFeatureGrid from '@/components/ai_components/DataAnalyticsFeatureGrid';
 import DataAnalyticsFeatureDetails from '@/components/ai_components/DataAnalyticsFeatureDetails';
-import { BarChart3, AreaChart, Route } from 'lucide-react';
 
 export default function Page() {
     // Button actions
@@ -14,36 +12,8 @@ export default function Page() {
             window.location.href = '/contact';
         }
     };
-    const handleLearnMore = () => {
-        if (typeof window !== 'undefined') {
-            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-        }
-    };
 
     // Features for grid
-    const features = [
-        {
-            title: 'Business Intelligence',
-            icon: '', // will be replaced by iconMap in component
-            alt: 'Business Intelligence',
-            description:
-                'Ensure everyone in your business has timely and accurate information at their fingertips. Use sophisticated data discovery and visualization, and user experience design capabilities to empower faster decisions and better understand your business, customers and markets.'
-        },
-        {
-            title: 'Data Visualizations',
-            icon: '',
-            alt: 'Data Visualizations',
-            description:
-                'Elegant and compelling visuals instantly communicate the value of your data. Well-designed visualizations let you discover new patterns, identify key relationships, share ideas, drive consistent actions, and explore possibilities.'
-        },
-        {
-            title: 'Strategy',
-            icon: '',
-            alt: 'Strategy',
-            description:
-                'Develop a strategy to take maximum advantage of data and analytics to drive growth. We provide unbiased advice, work with your stakeholders to understand requirements, evaluate solutions, and build a roadmap to achieve your corporate goals.'
-        }
-    ];
 
     // Details for feature details section
     const featureDetails = [

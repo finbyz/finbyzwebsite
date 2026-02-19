@@ -1,4 +1,3 @@
-import Header from "@/components/layout/header";
 import FooterSection from "@/components/sections/FooterSection";
 
 export default async function Layout({
@@ -6,15 +5,13 @@ export default async function Layout({
 }: {
   children: React.ReactNode;
 }) {
+  
+  
+
   return (
     <>
-      <main>
-        {children}
-        
-        
-        
-      </main>
-    <FooterSection docname="/erpnext/education" />
+      {children}
+      <FooterSection docname="/erp/insights/erpnext-and-technologies" />
     </>
   );
 }

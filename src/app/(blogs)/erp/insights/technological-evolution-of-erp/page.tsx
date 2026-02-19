@@ -7,7 +7,6 @@ import BlogTableOfContents from '@/components/ai_components/blog/BlogTableOfCont
 import BlogContent from '@/components/ai_components/blog/BlogContent';
 import BlogParagraph from '@/components/ai_components/blog/BlogParagraph';
 
-const blogID = "erpnext-and-technologies";
 
 const heroProps = {
     title: 'ERPNext & Its Modern Tech Stack: A Deep Dive',
@@ -61,7 +60,7 @@ export default function Page() {
                     {/* The Foundation: Frappe Framework */}
                     <BlogSection id="the-foundation" title="The Foundation: Frappe Framework">
                         <BlogParagraph>
-                            ERPNext is built on top of the **Frappe Framework**, a full-stack web application framework written in Python and JavaScript. Frappe provides the "batteries-included" architecture that handles metadata, database abstraction, authentication, and permission management.
+                            ERPNext is built on top of the &quot;Frappe Framework&quot;, a full-stack web application framework written in Python and JavaScript. Frappe provides the &quot;batteries-included&quot; architecture that handles metadata, database abstraction, authentication, and permission management.
                         </BlogParagraph>
                         <BlogParagraph>
                             Because of Frappe, ERPNext is metadata-driven. This means you can create new DocTypes (tables), fields, and forms directly from the UI without writing a single line of code—a feature that drastically reduces development time for custom applications.
