@@ -10,16 +10,6 @@ export default async function Layout({
       <main>
         {/* JSON-LD structured data */}
         {/* WebPage schema wrapper */}
-        <article itemScope itemType="https://schema.org/WebPage">
-          <meta
-            itemProp="name"
-            content="ERPNext Support Services | AMC, Bug Fixing &amp; Customization"
-          />
-          <meta
-            itemProp="description"
-            content="Professional ERPNext support including AMC, bug fixes, customization, upgrades and server optimization."
-          />
-        </article>
 
         {/* Page Content */}
         {children}

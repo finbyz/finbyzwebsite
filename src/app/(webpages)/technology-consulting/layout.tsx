@@ -5,7 +5,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
       {children}
 
-      <FooterSection docname="/technology-consulting" />
+      <FooterSection docname="/services/technology-consulting" />
     </>
   );
 }

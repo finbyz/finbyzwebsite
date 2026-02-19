@@ -1,52 +1,325 @@
-// import type { NextConfig } from "next";
+const galleries_redirects = [
+  {
+    source: "/7-benefits-of-erp-for-manufacturing",
+    destination: "/erpnext/insights/7-benefits-of-erp-for-manufacturing",
+    permanent: true
+  },
+  {
+    source: "/booth-management-in-ems",
+    destination: "/erpnext/insights/booth-management-in-ems",
+    permanent: true
+  },
+  {
+    source: "/building-blocks-of-our-software",
+    destination: "/erpnext/insights/building-blocks-of-our-software",
+    permanent: true
+  },
+  {
+    source: "/chemical-module",
+    destination: "/erpnext/insights/chemical-module",
+    permanent: true
+  },
+  {
+    source: "/cloud-erp-is-the-future-of-business-management-are-you-ready",
+    destination: "/erpnext/insights/cloud-erp-is-the-future-of-business-management-are-you-ready",
+    permanent: true
+  },
+  {
+    source: "/crm",
+    destination: "/erpnext/insights/crm",
+    permanent: true
+  },
+  {
+    source: "/dawn-of-finbyz-tech",
+    destination: "/about-us/dawn-of-finbyz-tech",
+    permanent: true
+  },
+  {
+    source: "/delighted-clients-of-finbyz-tech",
+    destination: "/about-us/delighted-clients-of-finbyz-tech",
+    permanent: true
+  },
+  {
+    source: "/development-methodology",
+    destination: "/erpnext/insights/development-methodology",
+    permanent: true
+  },
+  {
+    source: "/ems-analytics",
+    destination: "/erpnext/insights/ems-analytics",
+    permanent: true
+  },
+  {
+    source: "/erp-accounting",
+    destination: "/erpnext/insights/erp-accounting",
+    permanent: true
+  },
+  {
+    source: "/erp-consulting",
+    destination: "/erpnext/insights/erp-consulting",
+    permanent: true
+  },
+  {
+    source: "/erp-modules",
+    destination: "/erpnext/insights/erp-modules",
+    permanent: true
+  },
+  {
+    source: "/erp-modules-finbyz-tech-pvt-ltd",
+    destination: "/erpnext/insights/erp-modules-finbyz-tech-pvt-ltd",
+    permanent: true
+  },
+  {
+    source: "/erp-selection-process",
+    destination: "/erpnext/insights/erp-selection-process",
+    permanent: true
+  },
+  {
+    source: "/event-management-in-ems",
+    destination: "/erpnext/insights/event-management-in-ems",
+    permanent: true
+  },
+  {
+    source: "/technological-evolution-of-erp",
+    destination: "/erp/insights/technological-evolution-of-erp",
+    permanent: true
+  },
+  {
+    source: "/finbyz-services",
+    destination: "/erpnext/insights/finbyz-services",
+    permanent: true
+  },
+  {
+    source: "/how-to-apply-purchase-taxes-charges-in-erpnext",
+    destination: "/erpnext/wiki/how-to-apply-purchase-taxes-charges-in-erpnext",
+    permanent: true
+  },
+  {
+    source: "/how-to-apply-sales-taxes-charges-account-setup-in-erpnext",
+    destination: "/erpnext/wiki/how-to-apply-sales-taxes-charges-account-setup-in-erpnext",
+    permanent: true
+  },
+  {
+    source: "/how-to-build-custom-reports-in-erpnext",
+    destination: "/erpnext/wiki/how-to-build-custom-reports-in-erpnext",
+    permanent: true
+  },
+  {
+    source: "/how-to-configure-sales-and-purchase-taxes-in-erpnext",
+    destination: "/erpnext/wiki/how-to-configure-sales-and-purchase-taxes-in-erpnext",
+    permanent: true
+  },
+  {
+    source: "/how-to-create-an-item-in-erpnext",
+    destination: "/erpnext/wiki/how-to-create-an-item-in-erpnext",
+    permanent: true
+  },
+  {
+    source: "/how-to-create-bank-account-and-mode-of-payment-in-erpnext",
+    destination: "/erpnext/wiki/how-to-create-bank-account-and-mode-of-payment-in-erpnext",
+    permanent: true
+  },
+  {
+    source: "/how-to-create-bill-of-materials-without-operations-in-erpnext",
+    destination: "/erpnext/wiki/how-to-create-bill-of-materials-without-operations-in-erpnext",
+    permanent: true
+  },
+  {
+    source: "/how-to-create-company-in-erpnext",
+    destination: "/erpnext/wiki/how-to-create-company-in-erpnext",
+    permanent: true
+  },
+  {
+    source: "/how-to-create-customer-and-supplier-in-erpnext",
+    destination: "/erpnext/wiki/how-to-create-customer-and-supplier-in-erpnext",
+    permanent: true
+  },
+  {
+    source: "/how-to-create-customer-or-supplier-ledger-in-erpnext",
+    destination: "/erpnext/wiki/how-to-create-customer-or-supplier-ledger-in-erpnext",
+    permanent: true
+  },
+  {
+    source: "/how-to-create-system-user-and-employee-in-erpnext",
+    destination: "/erpnext/wiki/how-to-create-system-user-and-employee-in-erpnext",
+    permanent: true
+  },
+  {
+    source: "/how-to-define-item-wise-tax-rates-in-erpnext-step-by-step-guide",
+    destination: "/erpnext/wiki/how-to-define-item-wise-tax-rates-in-erpnext-step-by-step-guide",
+    permanent: true
+  },
+  {
+    source: "/how-to-navigate-and-use-search-bar-in-erpnext",
+    destination: "/erpnext/wiki/how-to-navigate-and-use-search-bar-in-erpnext",
+    permanent: true
+  },
+  {
+    source: "/how-to-use-chart-of-accounts-in-erpnext",
+    destination: "/erpnext/wiki/how-to-use-chart-of-accounts-in-erpnext",
+    permanent: true
+  },
+  {
+    source: "/how-to-use-list-view-in-erpnext",
+    destination: "/erpnext/wiki/how-to-use-list-view-in-erpnext",
+    permanent: true
+  },
+  {
+    source: "/how-to-use-report-builder-in-erpnext",
+    destination: "/erpnext/wiki/how-to-use-report-builder-in-erpnext",
+    permanent: true
+  },
+  {
+    source: "/how-to-use-tree-view-in-erpnext",
+    destination: "/erpnext/wiki/how-to-use-tree-view-in-erpnext",
+    permanent: true
+  },
+  {
+    source: "/human-resources",
+    destination: "/erpnext/insights/human-resources",
+    permanent: true
+  },
+  {
+    source: "/introducing-of-finByz-tech-youtube-channel",
+    destination: "/erpnext/insights/introducing-of-finbyz-tech-youtube-channel",
+    permanent: true
+  },
+  {
+    source: "/inventory",
+    destination: "/erpnext/insights/inventory",
+    permanent: true
+  },
+  {
+    source: "/issue-management-in-ems",
+    destination: "/erpnext/insights/issue-management-in-ems",
+    permanent: true
+  },
+  {
+    source: "/join-finbyz",
+    destination: "/careers/join-finbyz",
+    permanent: true
+  },
+  {
+    source: "/key-features-of-election-management-software",
+    destination: "/erpnext/insights/key-features-of-election-management-software",
+    permanent: true
+  },
+  {
+    source: "/manufacturing",
+    destination: "/erpnext/insights/manufacturing",
+    permanent: true
+  },
+  {
+    source: "/mobile-interface",
+    destination: "/erpnext/insights/mobile-interface",
+    permanent: true
+  },
+  {
+    source: "/reasons-for-trusting-us",
+    destination: "/about-us/reasons-for-trusting-us",
+    permanent: true
+  },
+  {
+    source: "/services-of-finbyz-tech",
+    destination: "/erpnext/insights/services-of-finbyz-tech",
+    permanent: true
+  },
+  {
+    source: "/finbyz-tech-services",
+    destination: "/erpnext/insights/services-of-finbyz-tech-new",
+    permanent: true
+  },
+  {
+    source: "/software-development-at-finbyz",
+    destination: "/erpnext/insights/software-development-at-finbyz",
+    permanent: true
+  },
+  {
+    source: "/steps-to-successfully-implement-an-erp-system-a-comprehensive-guide",
+    destination: "/erpnext/insights/steps-to-successfully-implement-an-erp-system-a-comprehensive-guide",
+    permanent: true
+  },
+  {
+    source: "/supply-chain-management",
+    destination: "/erpnext/insights/supply-chain-management",
+    permanent: true
+  },
+  {
+    source: "/support-system",
+    destination: "/erpnext/insights/support-system",
+    permanent: true
+  },
+  {
+    source: "/tech-consulting",
+    destination: "/erpnext/insights/tech-consulting",
+    permanent: true
+  },
+  {
+    source: "/technology-in-genes",
+    destination: "/erpnext/insights/technology-in-genes",
+    permanent: true
+  },
+  {
+    source: "/the-importance-of-crm",
+    destination: "/erpnext/insights/the-importance-of-crm",
+    permanent: true
+  },
+  {
+    source: "/the-top-5-erp-implementation-mistakes-to-avoid",
+    destination: "/erpnext/insights/the-top-5-erp-implementation-mistakes-to-avoid",
+    permanent: true
+  },
+  {
+    source: "/transform-your-business-in-2023-8-growth-hacks",
+    destination: "/erpnext/insights/transform-your-business-in-2023-8-growth-hacks",
+    permanent: true
+  },
+  {
+    source: "/two-way-communication-in-ems",
+    destination: "/erpnext/insights/two-way-communication-in-ems",
+    permanent: true
+  },
+  {
+    source: "/volunteer-tree-structure-in-ems",
+    destination: "/erpnext/insights/volunteer-tree-structure-in-ems",
+    permanent: true
+  },
+  {
+    source: "/what-define-us",
+    destination: "/about-us/what-define-us",
+    permanent: true
+  },
+  {
+    source: "/why-do-you-need-cloud-erp",
+    destination: "/erpnext/wiki/why-do-you-need-cloud-erp",
+    permanent: true
+  },
+  {
+    source: "/why-to-invest-in-it-for-business",
+    destination: "/erpnext/insights/why-to-invest-in-it-for-business",
+    permanent: true
+  },
+  {
+    source: "/yes-we-are",
+    destination: "/about-us/yes-we-are",
+    permanent: true
+  },
 
-
-// const nextConfig: NextConfig = {
-//   /* config options here */
-//   eslint:{
-//     ignoreDuringBuilds:true
-//   },
-//   images: {
-//     remotePatterns: [
-//       {
-//         protocol: 'https',
-//         hostname: 'images.unsplash.com',
-//         port: '',
-//         pathname: '/**',
-//       },
-//       {
-//         protocol: 'https',
-//         hostname: 'via.placeholder.com',
-//         port: '',
-//         pathname: '/**',
-//       },
-//       {
-//         protocol: 'https',
-//         hostname: 'picsum.photos',
-//         port: '',
-//         pathname: '/**',
-//       },
-//       {
-//         protocol: 'https',
-//         hostname: 'source.unsplash.com',
-//         port: '',
-//         pathname: '/**',
-//       }
-//     ],
-//   },
-//   async rewrites() {
-//     return [
-//       {
-//         source: '/api/frappe/:path*',
-//         destination: 'https://finbyz.tech/api/method/:path*',
-//       },
-//     ];
-//   },
-// };
-
-// export default nextConfig;
-
-
+  // ----------------------------------------------------
+  // UNMATCHED URLs from your original list
+  // Adjust the destinations below before deploying
+  // ----------------------------------------------------
+  {
+    source: "/benefit-of-erp",
+    destination: "/erpnext/insights",
+    permanent: true
+  },
+  {
+    source: "/data-analytic",
+    destination: "/erpnext/insights",
+    permanent: true
+  }
+]
 
 /**
 @type {import('next').NextConfig} */
@@ -531,10 +804,9 @@ const nextConfig = {
       // ERPNext Fintech
       {
         source: "/fintech-solutions",
-        destination: "/erpnext/fintech-solutions",
+        destination: "/erpnext/fintech",
         permanent: true,
       },
-
       // ERPNext Healthcare
       {
         source: "/erp-for-healthcare",
@@ -667,7 +939,7 @@ const nextConfig = {
       },
       {
         source: "/data-analytics",
-        destination: "/erpnext/services/data-analytics",
+        destination: "/ai-automation/services/data-analytics",
         permanent: true,
       },
       {
@@ -737,7 +1009,7 @@ const nextConfig = {
       },
       {
         source: "/erpnext-support",
-        destination: "/erpnext/services/support-amc",
+        destination: "/erpnext/services/support",
         permanent: true,
       },
       {
@@ -966,7 +1238,7 @@ const nextConfig = {
       },
       {
         source: "/fintech",
-        destination: "/erpnext/fintech-solutions",
+        destination: "/erpnext/fintech",
         permanent: true,
       },
       {
@@ -1053,7 +1325,8 @@ const nextConfig = {
         source: "/blog-post",
         destination: "/blogs",
         permanent: true,
-      }
+      },
+      ...galleries_redirects
     ];
   },
 };

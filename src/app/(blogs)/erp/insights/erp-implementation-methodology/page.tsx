@@ -69,7 +69,7 @@ export default function Page() {
 
           <BlogSection id="traditional-methodology" title="Traditional Methodology">
             <BlogParagraph>
-              The traditional methodology in ERP system implementation involves a phased, systematic approach often based on the System Development Life Cycle (SDLC), Design, and Object-Oriented <a href="/erpnext/services/data-analytics" className="text-primary underline hover:text-primary/80 transition-colors">Data Analysis</a>. This methodology has been the backbone of ERP projects across industries and continues to be effective for large, complex implementations. Below are the common phases followed in this methodology:
+              The traditional methodology in ERP system implementation involves a phased, systematic approach often based on the System Development Life Cycle (SDLC), Design, and Object-Oriented <a href="/ai-automation/services/data-analytics" className="text-primary underline hover:text-primary/80 transition-colors">Data Analysis</a>. This methodology has been the backbone of ERP projects across industries and continues to be effective for large, complex implementations. Below are the common phases followed in this methodology:
             </BlogParagraph>
             <BlogParagraph>
               <strong>1. Planning:</strong> The scope of the ERP implementation is defined. A core team is allocated, and a detailed roadmap using a chosen ERP implementation methodology is created.

@@ -44,7 +44,7 @@ const industries = [
     title: "Fintech",
     icon: "/images/icon-brokerage-commission.svg",
     number: "06",
-    href: "/erpnext/fintech-solutions",
+    href: "/erpnext/fintech",
     fade: 1
   },
   {

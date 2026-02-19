@@ -6,9 +6,12 @@ const API_SECRET = process.env.FRAPPE_API_SECRET || "";
 
 export async function GET() {
   try {
-    const url = new URL(`${BASE_URL}/api/resource/Code Snippet`);
-    url.searchParams.append("filters", JSON.stringify([["published", "=", 1]]));
-    url.searchParams.append("fields", JSON.stringify(["name", "route", "seo_description", "seo_title"]));
+    const url = new URL(`${BASE_URL}/api/resource/NextJS Page`);
+    url.searchParams.append("filters", JSON.stringify([
+      ["is_published", "=", 1],
+      ["page_type", "=", "Code Snippet"]
+    ]));
+    url.searchParams.append("fields", JSON.stringify(["name", "title", "route", "meta_title", "meta_description"]));
     url.searchParams.append("limit_page_length", "0");
 
     const response = await fetch(url.toString(), {
@@ -32,14 +35,16 @@ export async function GET() {
 
     const formattedSnippets = snippets.map((snippet: {
       name: string;
+      title: string;
       route: string;
-      seo_description: string;
-      seo_title: string;
+      meta_title: string;
+      meta_description: string;
     }) => ({
       name: snippet.name,
+      title: snippet.title,
       route: snippet.route,
-      description: snippet.seo_description,
-      title: snippet.seo_title,
+      meta_title: snippet.meta_title,
+      meta_description: snippet.meta_description,
     }));
 
     return NextResponse.json({ success: true, message: formattedSnippets });

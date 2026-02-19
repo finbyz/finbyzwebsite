@@ -261,7 +261,7 @@ export default function Footer() {
                   <li><a href="/ai-automation" className="text-slate-300 hover:text-white transition-colors text-sm">AI Automation</a></li>
                   <li><a href="/erpnext/services/erpnext-service-provider" className="text-slate-300 hover:text-white transition-colors text-sm">Software Development</a></li>
 
-                  <li><a href="/erpnext/services/data-analytics" className="text-slate-300 hover:text-white transition-colors text-sm"> Data Analytics</a></li>
+                  <li><a href="/ai-automation/services/data-analytics" className="text-slate-300 hover:text-white transition-colors text-sm"> Data Analytics</a></li>
 
 
 

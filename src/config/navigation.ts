@@ -116,7 +116,6 @@ const navigationItems: NavNode[] = [
                     { name: "Opening Balance Reconciliation", icon: Scale, href: "/erpnext/services/opening-balance-reconciliation", description: "Opening balance reconciliation services" },
                     { name: "Accounting Transaction Audit", icon: ClipboardCheck, href: "/erpnext/services/erpnext-accounting-transaction-audit", description: "ERPNext transaction audit services" },
                     { name: "API Development Services", icon: CodeSquare, href: "/erpnext/services/api-development-services", description: "ERPNext API development" },
-                    { name: "Data Analytics", icon: BarChart3, href: "/erpnext/services/data-analytics", description: "Data analytics services" },
                     { name: "Custom CMS Development", icon: Code, href: "/erpnext/services/develop-custom-erp-software", description: "Develop custom ERP software" },
                     { name: "ERP Migration", icon: Database, href: "/erpnext/services/erp-migration", description: "ERPNext data migration" },
                     { name: "ERP Software Developers", icon: Code2, href: "/erp/services/erp-software-development", description: "Hire expert ERP developers" },
@@ -131,7 +130,7 @@ const navigationItems: NavNode[] = [
                     { name: "Resource Augmentation", icon: Users, href: "/erpnext/services/resource-augmentation", description: "Scale your team" },
                     { name: "Start Your ERP Journey", icon: Rocket, href: "/erpnext/services/start-your-erp-journey", description: "Begin your transformation" },
                     { name: "Support", icon: Headphones, href: "/erpnext/services/support", description: "ERPNext support services" },
-                    { name: "Support AMC", icon: ShieldCheck, href: "/erpnext/services/support-amc", description: "Annual maintenance contracts" },
+                    { name: "Support AMC", icon: ShieldCheck, href: "/erpnext/services/support", description: "Annual maintenance contracts" },
                     { name: "System Maintenance AMC", icon: Wrench, href: "/erpnext/services/system-maintenance-amc", description: "System maintenance services" },
                     { name: "ERPNext v16 Migration", icon: TrendingUp, href: "/erpnext/services/erpnext-v16-migration", description: "Upgrade from ERPNext v15 to v16 safely" },
                     { name: "Website Development", icon: Globe, href: "/erpnext/services/website-development-on-erpnext", description: "ERPNext website development" }
@@ -270,9 +269,9 @@ const navigationItems: NavNode[] = [
                 name: "Guides",
                 icon: BookOpen,
                 children: [
-                    { name: "Proactive AI Assistant - Moltbot", icon: Bot, href: "/ai-automation/guides/proactive-ai-assistant-moltbot", description: "Complete guide to Moltbot AI assistant" },
-                    { name: "How to Install Clawdbot", icon: BookOpen, href: "/ai-automation/guides/how-to-install-clawdbot", description: "Step-by-step Clawdbot installation guide" },
-                    { name: "Moltbot vs Claude Code", icon: Code2, href: "/ai-automation/guides/moltbot-vs-claude-code", description: "Comprehensive comparison between Moltbot and Claude Code" }
+                    { name: "Proactive AI Assistant - Moltbot", icon: Bot, href: "/ai-automation/wiki/proactive-ai-assistant-moltbot", description: "Complete guide to Moltbot AI assistant" },
+                    { name: "How to Install Clawdbot", icon: BookOpen, href: "/ai-automation/wiki/how-to-install-clawdbot", description: "Step-by-step Clawdbot installation guide" },
+                    { name: "Moltbot vs Claude Code", icon: Code2, href: "/ai-automation/wiki/moltbot-vs-claude-code", description: "Comprehensive comparison between Moltbot and Claude Code" }
                 ]
             },
             {
@@ -323,7 +322,8 @@ const navigationItems: NavNode[] = [
                 name: "Services",
                 icon: Wrench,
                 children: [
-                    { name: "Digital Transformation Services", icon: Cpu, href: "/ai-automation/services/digital-transformation-services", description: "AI-led digital transformation services" }
+                    { name: "Digital Transformation Services", icon: Cpu, href: "/ai-automation/services/digital-transformation-services", description: "AI-led digital transformation services" },
+                    { name: "Data Analytics", icon: BarChart3, href: "/ai-automation/services/data-analytics", description: "Data analytics services" }
                 ]
             }
         ]

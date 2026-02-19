@@ -170,7 +170,7 @@ export default function ServicesPage() {
                         <ServiceCard title="ERP Software Solutions" link="/erpnext/services/erp-software-development" icon={Database} />
                         <ServiceCard title="API & Integration Services" link="/erpnext/services/api-development-services" icon={Layers} />
                         <ServiceCard title="Mobile App Development" link="/erpnext/services/mobile-app-development" icon={Smartphone} />
-                        <ServiceCard title="Data Analytics & BI" link="/erpnext/services/data-analytics" icon={BarChart3} />
+                        <ServiceCard title="Data Analytics & BI" link="/ai-automation/services/data-analytics" icon={BarChart3} />
                         <ServiceCard title="Website Development" link="/erpnext/services/website-development-on-erpnext" icon={Monitor} />
                         <ServiceCard title="Performance Optimization" link="/erpnext/services/performance-optimization" icon={Zap} />
                         <ServiceCard title="ERPNext SEO Optimization" link="/erpnext/services/erpnext-seo-optimization" icon={Search} />
@@ -244,9 +244,9 @@ export default function ServicesPage() {
                         Your business operates 24/7, and your ERP must keep up. We provide proactive support to ensure your system is secure, updated, and bug-free.
                     </p>
                     <div className="grid md:grid-cols-3 gap-6">
-                        <ServiceCard title="Annual Maintenance Contracts (AMC)" link="/erpnext/services/support-amc" icon={Clock} />
+                        <ServiceCard title="Annual Maintenance Contracts (AMC)" link="/erpnext/services/support" icon={Clock} />
                         <ServiceCard title="System Maintenance" link="/erpnext/services/system-maintenance-amc" icon={Settings} />
-                        <ServiceCard title="Helpdesk Support" link="/erpnext/services/support-amc" icon={HelpCircle} />
+                        <ServiceCard title="Helpdesk Support" link="/erpnext/services/support" icon={HelpCircle} />
                     </div>
                 </div>
             </section>

@@ -96,7 +96,7 @@ const productsData = [
     name: 'Smart Card Scanner',
     description:
       'Transforms business card management with AI and ERPNext integration. Scan cards via a Telegram bot for real-time, validated CRM data extraction.',
-    slug: '/erpnext/ai/smart-card-scanner-overview',
+    slug: '/erpnext/ai/ai-powered-smart-card-scanner',
     icon: ScanLine,
   },
   {

@@ -13,7 +13,7 @@ export default async function Layout({
       
       
       
-    <FooterSection docname="/ai-automation/guides/proactive-ai-assistant-moltbot" />
+      <FooterSection docname="/ai-automation/wiki/proactive-ai-assistant-moltbot" />
     </>
   );
 }

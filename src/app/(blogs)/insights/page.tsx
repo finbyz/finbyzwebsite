@@ -162,7 +162,7 @@ export default function InsightsPage() {
                         {[
                             { name: "ERP Implementation", count: "12+ Articles", link: "/erp/insights" },
                             { name: "Digital Transformation", count: "8+ Articles", link: "/insights" },
-                            { name: "Technolgy Consulting", count: "5+ Articles", link: "/technology-consulting" },
+                            { name: "Technolgy Consulting", count: "5+ Articles", link: "/services/technology-consulting" },
                             { name: "Business Growth", count: "10+ Articles", link: "/blogs" }
                         ].map((cat, idx) => (
                             <Link

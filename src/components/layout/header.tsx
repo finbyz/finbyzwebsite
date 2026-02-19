@@ -481,7 +481,7 @@ useEffect(() => {
             name: "Data Analytics",
             description: "",
             icon: Rocket,
-            href: "/erpnext/services/data-analytics"
+            href: "/ai-automation/services/data-analytics"
           },
         ],
         "Consulting": [
@@ -515,7 +515,7 @@ useEffect(() => {
             name: "ERPNext Support",
             description: "Round-the-clock technical support",
             icon: Phone,
-            href: "/erpnext/services/support-amc"
+            href: "/erpnext/services/support"
           },
           {
             name: "ERPNext System Maintenance",

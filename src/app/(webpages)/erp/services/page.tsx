@@ -132,7 +132,7 @@ export default function ERPServicesPage() {
                                 icon: "Headphones",
                                 iconBg: "#D35400",
                                 iconColor: "#ffffff",
-                                link: "/erpnext/services/support-amc",
+                                link: "/erpnext/services/support",
                                 showArrow: true
                             },
                             {
@@ -142,7 +142,7 @@ export default function ERPServicesPage() {
                                 icon: "PieChart",
                                 iconBg: "#C0392B",
                                 iconColor: "#ffffff",
-                                link: "/erpnext/services/data-analytics",
+                                link: "/ai-automation/services/data-analytics",
                                 showArrow: true
                             }
                         ],
