@@ -1,13 +1,10 @@
-import BusinessSlider from "@/components/sections/business-slider";
+import FooterSection from "@/components/sections/FooterSection";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <>
-      <main>
-        {children}
-
-        <BusinessSlider />
-      </main>
-    </>
+    <main>
+      {children}
+      <FooterSection docname="/erpnext/case-studies" showBusinessSlider={true} showInquiryForm={false} />
+    </main>
   );
 }

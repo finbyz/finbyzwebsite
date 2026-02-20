@@ -1,4 +1,4 @@
-import InquiryForm from "@/components/ui/InquiryForm";
+import FooterSection from "@/components/sections/FooterSection";
 import { generateAutoMetadata } from "@/lib/seo-metadata";
 
 export async function generateMetadata() {
@@ -14,8 +14,7 @@ export default async function MainLayout({
     <>
       <main>
         {children}
-
-        <InquiryForm />
+        <FooterSection docname="" showBusinessSlider={true} showInquiryForm={true} />
       </main>
     </>
   );

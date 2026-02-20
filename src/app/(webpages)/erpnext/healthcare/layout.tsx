@@ -1,18 +1,10 @@
-import FAQ from "@/components/ai_components/FAQ";
-import BusinessSlider from "@/components/sections/business-slider";
-import Header from "@/components/layout/header";
+import FooterSection from "@/components/sections/FooterSection";
 
-export default async function Layout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <>
-      <main>
-        {children}
-        <BusinessSlider />
-      </main>
-    </>
+    <main>
+      {children}
+      <FooterSection docname="/erpnext/healthcare" showBusinessSlider={true} showInquiryForm={false} />
+    </main>
   );
 }

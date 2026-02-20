@@ -9,6 +9,7 @@ import { headers } from "next/headers";
 interface FooterSectionProps {
   docname: string;
   showInquiryForm?: boolean;
+  showBusinessSlider?: boolean;
 }
 
 /**
@@ -20,6 +21,7 @@ interface FooterSectionProps {
 export default async function FooterSection({
   docname,
   showInquiryForm = false,
+  showBusinessSlider = true,
 }: FooterSectionProps) {
   const pathname = (await headers()).get('x-pathname')
   if (pathname !== docname) return null;
@@ -33,7 +35,7 @@ export default async function FooterSection({
           relatedReads={data.relatedReads}
         />
       )}
-      <BusinessSlider />
+      {showBusinessSlider && <BusinessSlider />}
       {showInquiryForm && <InquiryForm />}
     </>
   );

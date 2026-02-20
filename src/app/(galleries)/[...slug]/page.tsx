@@ -1,11 +1,9 @@
 import { notFound } from 'next/navigation';
 import { getFullGallery, getGalleryRoutes } from '@/lib/gallery';
 import Tutorials from './Tutorials';
-import { getFaqs, getPageData } from '@/lib/getPageData';
-import FinbyzGallery from '@/components/sections/FinbyzGallery';
-import FAQ from '@/components/ai_components/FAQ';
 import { Metadata } from 'next';
 import { generateAutoMetadata } from '@/lib/seo-metadata';
+import FooterSection from '@/components/sections/FooterSection';
 
 type PageProps = {
   params: Promise<{ slug: string[] }>;
@@ -37,7 +35,6 @@ export async function generateStaticParams() {
 const GalleryPage = async ({ params }: PageProps) => {
   const { slug } = await params;
   const slugStr = Array.isArray(slug) ? slug.join('/') : slug;
-  const data = await getPageData(slugStr || "home");
   if (!slugStr) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
@@ -51,14 +48,9 @@ const GalleryPage = async ({ params }: PageProps) => {
     notFound();
   }
 
-  const faqsGroup = await getFaqs(slugStr)
-
   return <>
-    <Tutorials data={galleries} />;
-    {faqsGroup?.faqs && faqsGroup.faqs.length > 0 && <FAQ faqs={faqsGroup.faqs} />}
-    {
-      data.relatedReads.length > 0 ? <FinbyzGallery relatedReads={data.relatedReads} /> : null
-    }
+    <Tutorials data={galleries} />
+    <FooterSection docname={slugStr} showBusinessSlider={true} showInquiryForm={false} />
   </>
 };
 

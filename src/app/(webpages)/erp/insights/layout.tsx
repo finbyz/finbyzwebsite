@@ -1,19 +1,10 @@
-import { LazyBusinessSlider } from "@/lib/lazy-components";
-import FAQ from "@/components/ai_components/FAQ";
-import { getFaqs } from "@/lib/getPageData";
+import FooterSection from "@/components/sections/FooterSection";
 
-export default async function Layout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  const faqsGroup = await getFaqs("erp-insights");
-
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <main>
       {children}
-      {faqsGroup && faqsGroup.faqs && <FAQ faqs={faqsGroup.faqs} />}
-      <LazyBusinessSlider />
+      <FooterSection docname="/erp/insights" showBusinessSlider={true} showInquiryForm={false} />
     </main>
   );
 }

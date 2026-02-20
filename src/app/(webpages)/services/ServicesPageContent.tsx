@@ -1,46 +1,11 @@
 'use client'
-import React, { useState } from 'react';
-import {
-  ArrowRight, CheckCircle, Code, Headphones, Users, Wrench, Zap, Brain,
-  Database, Cloud, TrendingUp, Settings, Lightbulb, Target, Shield, BarChart,
-  Rocket, GitBranch, Globe
-} from 'lucide-react';
+import React from 'react';
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import CTA from '@/components/sections/cta';
-import List from '@/components/sections/list';
-import PrivacySectionHeading from '@/components/ai_components/PrivacySectionHeading';
-import PrivacySubsectionHeading from '@/components/ai_components/PrivacySubsectionHeading';
-import { Mail, MapPin } from 'lucide-react';
 import Benefits from '@/components/sections/benefits';
-import Image from 'next/image';
 
 export default function ServicesPageContent() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    service: '',
-    message: '',
-  });
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    alert('Thank you! We will get back to you within 24 hours.');
-    setFormData({ name: '', email: '', phone: '', service: '', message: '' });
-  };
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = event.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const sectionHeading =
-    'text-3xl md:text-4xl font-bold text-[#1A5276] mb-6 text-center';
-  const sectionDesc =
-    'text-lg text-slate-700 leading-relaxed mb-12 max-w-4xl mx-auto text-justify';
-
-
 
   return (
     <div className="min-h-screen bg-white text-slate-700">

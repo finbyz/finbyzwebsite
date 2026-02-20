@@ -1,14 +1,10 @@
-import BusinessSlider from "@/components/sections/business-slider";
-import Header from "@/components/layout/header";
+import FooterSection from "@/components/sections/FooterSection";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <>
-      <main>
-        {children}
-
-        <BusinessSlider />
-      </main>
-    </>
+    <main>
+      {children}
+      <FooterSection docname="/services/technology-consulting" showBusinessSlider={true} showInquiryForm={false} />
+    </main>
   );
 }
