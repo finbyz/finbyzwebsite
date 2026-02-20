@@ -8,7 +8,6 @@ import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import { CheckCircle, Headphones, Shield, Clock, Users, Zap, Award} from 'lucide-react';
 import { Phone, Mail, MessageCircle, Monitor } from "lucide-react";
 import Link from 'next/link';
-import { color } from 'echarts';
 
 export default function Page() {
   return (

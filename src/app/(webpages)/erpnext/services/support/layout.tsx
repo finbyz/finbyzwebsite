@@ -13,8 +13,8 @@ export default async function Layout({
 
         {/* Page Content */}
         {children}
+        <FooterSection docname="/erpnext/services/support" />
       </main>
-    <FooterSection docname="/erpnext/services/support" />
     </>
   );
 }

@@ -1,11 +1,3 @@
-interface GalleryItem {
-    name: string
-    route: string
-    title: string
-    image: string
-    animated_gif: string
-}
-
 interface RelatedRead {
     route: string
     description: string
@@ -15,8 +7,7 @@ interface RelatedRead {
 }
 
 interface FinbyzGalleryProps {
-    galleryItems: GalleryItem[]
-    relatedReads: RelatedRead[]  
+    relatedReads: RelatedRead[]
 }
 
 
@@ -27,7 +18,6 @@ interface RelatedLinksData {
     seo_title: string
     image: string
     image_seo?: string
-    meta_image?: string
     blog_intro_image?: string
     animated_image?: string
     video?: string
@@ -48,11 +38,6 @@ interface RelatedLink {
     route: string
 }
 
-interface Links {
-    gallery_links: GalleryLink[]
-    related_links: RelatedLink[]
-    
-}
 type FAQ = {
   id: number;
   name: string;
@@ -64,4 +49,3 @@ type FAQGroup = {
   name: string;
   faqs: FAQ[];
 };
-

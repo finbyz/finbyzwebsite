@@ -55,9 +55,9 @@ const GalleryPage = async ({ params }: PageProps) => {
 
   return <>
     <Tutorials data={galleries} />;
-    {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
+    {faqsGroup?.faqs && faqsGroup.faqs.length > 0 && <FAQ faqs={faqsGroup.faqs} />}
     {
-      (data.galleryItems.length > 0 || data.relatedReads.length > 0) ? <FinbyzGallery relatedReads={data.relatedReads} galleryItems={data.galleryItems} /> : null
+      data.relatedReads.length > 0 ? <FinbyzGallery relatedReads={data.relatedReads} /> : null
     }
   </>
 };

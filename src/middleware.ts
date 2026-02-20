@@ -1,11 +1,9 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-const BASE_URL = process.env.FRAPPE_URL
+const BASE_URL = process.env.FRAPPE_URL ?? ''
 
-let routeMap: Record<string, string> = {
-  "/home": "/"
-};
+let routeMap: Record<string, string> = {};
 let lastFetched = 0;
 const CACHE_TTL = 60_000;
 
@@ -20,10 +18,6 @@ async function getRouteMap(): Promise<Record<string, string>> {
       headers: {
         "Authorization": `token ${process.env.FRAPPE_API_KEY}:${process.env.FRAPPE_API_SECRET}`,
       },
-      cache: 'force-cache',
-      next: {
-        revalidate: 3600,
-      }
     });
     if (!res.ok) {
       console.error(`[middleware] Failed to fetch routes: ${res.status} ${res.statusText}`);
@@ -37,7 +31,9 @@ async function getRouteMap(): Promise<Record<string, string>> {
           newMap[item.route] = item.actual_route;
         }
       }
-      routeMap = newMap;
+      if (Object.keys(newMap).length > 0) {
+        routeMap = newMap;
+      }
     }
     lastFetched = now;
   } catch (err) {

@@ -131,13 +131,12 @@ export default async function Layout({
       {children}
 
       {/* --- Add FAQs if exists --- */}
-      {faqsGroup?.faqs && <FAQ faqs={faqsGroup.faqs} />}
+      {faqsGroup?.faqs && faqsGroup.faqs.length > 0 && <FAQ faqs={faqsGroup.faqs} />}
 
       {/* --- Gallery and Related Reads --- */}
-      {data.galleryItems.length > 0 || data.relatedReads.length > 0 ? (
+      {data.relatedReads.length > 0 ? (
         <FinbyzGallery
           relatedReads={data.relatedReads}
-          galleryItems={data.galleryItems}
         />
       ) : null}
 

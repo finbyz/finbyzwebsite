@@ -22,7 +22,7 @@ export interface FrappePageData {
   faqs?: FrappeFAQ[];
   author?: string;
   blog_category?: string;
-  meta_image?: string;
+  meta_image?: string;  // kept for legacy layouts that still reference it
   image?: string;
   meta_description?: string;
   creation?: string;

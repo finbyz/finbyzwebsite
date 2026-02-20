@@ -24,7 +24,7 @@ interface FrappePageData {
   faqs?: FrappeFAQ[];
   author?: string;
   blog_category?: string;
-  meta_image?: string;
+  image?: string;
   meta_description?: string;
   creation?: string;
   youtube_link?: string;
@@ -72,7 +72,7 @@ export default async function StructureData({
   const getImage = () =>
     data?.svg_image ||
     data?.animated_image ||
-    data?.meta_image ||
+    data?.image ||
     `${BASE_URL}/files/FinbyzLogo.png`;
 
   // ----------------------------------------------------

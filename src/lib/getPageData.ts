@@ -1,64 +1,38 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 const DOCTYPE = "NextJS Page";
 
 export async function getPageData(route: string): Promise<FinbyzGalleryProps> {
-    const links = await getLinks(route)
-
-    // Get all NextJS Pages referenced in related_links
-    const relatedPageNames = links.related_links.map(item => item.reference_name)
+    const relatedLinks = await getRelatedLinks(route)
+    // Fetch full page data for each related page
+    const relatedPageNames = relatedLinks.map((item: any) => item.page)
     const relatedPages = await getNextJSPages(relatedPageNames)
-
-    // Get all NextJS Pages referenced in gallery_links
-    const galleryPageNames = links.gallery_links.map(gallery => gallery.gallery)
-    const galleryPages = await getNextJSPages(galleryPageNames)
-
-    // Map gallery pages to GalleryItem format
-    const galleryItems: GalleryItem[] = galleryPages.map(page => {
-        return {
-            name: page.name,
-            description: page.meta_title || page.title || '',
-            image: page.image || page.meta_image || '',
-            reference_name: page.name,
-            title: page.title,
-            route: page.route,
-            animated_gif: page.animated_image || ''
-        }
-    })
-
-    // Map related pages to RelatedRead format
     const relatedReads: RelatedRead[] = relatedPages.map(page => {
         return {
             description: page.meta_title || page.content || '',
-            image: page.image || page.meta_image || '',
+            image: page.image || '',
             route: page.route,
             reference_name: page.name,
             title: page.title
         }
     })
 
-    return {
-        galleryItems,
-        relatedReads,
-    }
+    return { relatedReads }
 }
 
 
-async function getLinks(route: string): Promise<Links> {
+async function getRelatedLinks(route: string): Promise<any[]> {
     const url = `${process.env.FRAPPE_URL}/api/resource/${DOCTYPE}?filters=${encodeURIComponent(
-        JSON.stringify([["route", "=", route]])
+        JSON.stringify([["actual_route", "=", route]])
     )}`;
     const response = await fetch(url, {
         headers: {
             "Authorization": `token ${process.env.FRAPPE_API_KEY}:${process.env.FRAPPE_API_SECRET}`,
         },
-        cache: 'force-cache'
+        // cache: 'force-cache'
     });
     const jsonData = await response.json();
     if (!response.ok || jsonData?.data?.length == 0) {
-        return {
-            related_links: [],
-            gallery_links: [],
-        }
+        return []
     }
     const ID = jsonData.data?.[0]['name'] || '';
 
@@ -70,10 +44,7 @@ async function getLinks(route: string): Promise<Links> {
     });
     const docJson = await docResponse.json()
     const doc = docJson['data']
-    return {
-        related_links: doc.nextjs_related_page || [],
-        gallery_links: doc.gallery_links || [],
-    }
+    return doc.nextjs_related_page || []
 }
 
 async function getNextJSPages(names: string[]): Promise<NextJSPageData[]> {
@@ -88,7 +59,6 @@ async function getNextJSPages(names: string[]): Promise<NextJSPageData[]> {
         "meta_title",
         "content",
         "image",
-        "meta_image",
         "animated_image"
     ]))}`;
 
@@ -108,8 +78,7 @@ async function getNextJSPages(names: string[]): Promise<NextJSPageData[]> {
             title: page.title,
             meta_title: page.meta_title,
             content: page.content,
-            image: page.image || page.meta_image || '',
-            meta_image: page.meta_image,
+            image: page.image || '',
             animated_image: page.animated_image
         }
     })
@@ -122,7 +91,7 @@ export async function getFaqs(route: string): Promise<FAQGroup | null> {
 
         const docResponse = await fetch(
             `${frappeUrl}/api/resource/${DOCTYPE}?filters=${encodeURIComponent(
-                JSON.stringify([["route", "=", route]])
+                JSON.stringify([["actual_route", "=", route]])
             )}`,
             {
                 headers: {
@@ -174,23 +143,7 @@ interface NextJSPageData {
     meta_title?: string;
     content?: string;
     image?: string;
-    meta_image?: string;
     animated_image?: string;
-}
-
-interface Links {
-    related_links: any[];
-    gallery_links: any[];
-}
-
-interface GalleryItem {
-    name: string;
-    description: string;
-    image: string;
-    reference_name: string;
-    title: string;
-    route: string;
-    animated_gif: string;
 }
 
 interface RelatedRead {
@@ -202,7 +155,6 @@ interface RelatedRead {
 }
 
 interface FinbyzGalleryProps {
-    galleryItems: GalleryItem[];
     relatedReads: RelatedRead[];
 }
 
