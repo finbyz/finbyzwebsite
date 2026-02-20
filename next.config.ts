@@ -340,7 +340,7 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'finbyz.tech',
         port: '',
-        pathname: '/api/fb/n/**',
+        pathname: '/**',
         search: '',
       },
       {
