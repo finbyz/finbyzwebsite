@@ -1,12 +1,8 @@
-'use client';
-
-import { useState } from 'react';
-import { CheckCircle, ArrowRight, Shield, Zap, Users, Database, TrendingUp, Award, Clock, Target, RefreshCw, FileCheck } from 'lucide-react';
+import { CheckCircle, Shield, Zap, Users, Database, TrendingUp, Award, Clock, Target, RefreshCw, FileCheck } from 'lucide-react';
 import HeroSection from '@/components/sections/dynamic-hero';
 
 
 export default function Page() {
-  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
   const migrationSteps = [
     {

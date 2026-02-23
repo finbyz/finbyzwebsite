@@ -116,12 +116,12 @@ const config: SitemapConfig[] = [
   {
     name: 'dev-insights',
     type: 'frappe',
-    doctype: 'Code Snippet',
+    doctype: 'NextJS Page',
     routeField: 'route',
     routePrefix: '/',
-    filters: [['published', '=', 1]],
+    filters: [['is_published', '=', 1], ['page_type', '=', 'Code Snippet']],
     fields: ['route'],
-    changefreq: 'daily',
+    changefreq: 'weekly',
     priority: 0.7,
     exclude: [],
   }
