@@ -29,7 +29,7 @@ export async function fetchNextJSPage(slug: string): Promise<NextJSPageData | nu
     // Step 1: Filter by route to get the document name
     const listRes = await fetch(
       `${FRAPPE_URL}/api/resource/NextJS Page?filters=${encodeURIComponent(
-        JSON.stringify([["route", "=", route]])
+        JSON.stringify([["actual_route", "=", route]])
       )}&fields=${encodeURIComponent(JSON.stringify(["name"]))}&limit=1`,
       {
         method: 'GET',
