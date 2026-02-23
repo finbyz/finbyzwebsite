@@ -1,4 +1,3 @@
-import FooterSection from "@/components/sections/FooterSection";
 
 const PAGE_SLUG = "erpnext/services/erpnext-accounting-transaction-audit";
 
@@ -50,7 +49,6 @@ export default async function Layout({
       <main>
         {children}
       </main>
-    <FooterSection docname="/erpnext/services/erpnext-accounting-transaction-audit" />
     </>
   );
 }

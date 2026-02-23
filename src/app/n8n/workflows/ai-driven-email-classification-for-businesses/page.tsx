@@ -268,22 +268,6 @@ export default function Page() {
 
       <ResponsiveCardGrid data={featureCards} />
       <ResponsiveCardGrid data={benefitCards} />
-
-      {/* 4️⃣ CTA SECTION (Required - Last) */}
-      <CTA
-        data={{
-          subheading: { text: 'Get started', icon: 'Sparkles' },
-          title: 'Automate your inquiry inbox with AI + ERPNext',
-          description:
-            'Deploy a production-ready email classification workflow that classifies, extracts, and creates leads automatically—so your team can move faster.',
-          primaryButton: { text: 'Book a demo', action: '/contact' },
-          secondaryButton: {
-            text: 'See How it Works',
-            action: "#workflow-step"
-          },
-          trustIndicator: { text: 'Built with enterprise security in mind', icon: 'ShieldCheck' }
-        }}
-      />
     </>
   )
 }

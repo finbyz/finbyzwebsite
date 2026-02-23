@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from "@/components/sections/Section";
-import CTA from "@/components/sections/cta";
+
 import Link from "next/link";
 import { Check, X, ArrowRight, HelpCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -218,37 +218,6 @@ export default function PricingPage() {
                     </div>
                 </div>
             </Section>
-
-            <CTA
-                data={{
-                    subheading: {
-                        text: "Still have questions?",
-                        icon: "HelpCircle"
-                    },
-                    title: "We're Here to Help",
-                    highlightText: "Help",
-                    description: "Our team is ready to answer any questions you have about our pricing and services.",
-                    primaryButton: {
-                        text: "Contact Support",
-                        icon: "MessageCircle",
-                        action: () => {
-                            window.location.href = '/contact';
-                        }
-                    },
-                    secondaryButton: {
-                        text: "FAQ",
-                        icon: "HelpCircle", // Correct icon name
-                        action: () => {
-                            const el = document.getElementById('faq');
-                            if (el) el.scrollIntoView({ behavior: 'smooth' });
-                        }
-                    },
-                    trustIndicator: {
-                        text: "No commitment required for initial consultation",
-                        icon: "Check"
-                    }
-                }}
-            />
         </>
     );
 }

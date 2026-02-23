@@ -2,7 +2,7 @@
 
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import { Cog, ClipboardList, MonitorPlay, Users, Zap, Search, BarChart3, Wrench } from 'lucide-react';
 import Link from 'next/link';
 
@@ -118,15 +118,6 @@ export default function AIServicesPage() {
 
         <Section>
           <div className="py-12">
-            <CTA
-              data={{
-                subheading: { text: "Solve Business Problems", icon: "zap" },
-                title: "Partner with AI Experts",
-                description: "Ready to leverage AI for your business? Connect with our team of experts to discuss your project and get a custom strategy.",
-                primaryButton: { text: 'Schedule Call', action: '/contact' },
-                secondaryButton: { text: 'See Case Studies', action: '/case-studies' }
-              }}
-            />
           </div>
         </Section>
       </main>

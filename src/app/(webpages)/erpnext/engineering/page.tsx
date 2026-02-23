@@ -3,7 +3,7 @@ import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import List from '@/components/sections/list';
-import CTA from '@/components/sections/cta';
+
 import EngineeringBenefitsGrid from '@/components/ai_components/EngineeringBenefitsGrid';
 import EngineeringTypesGrid from '@/components/ai_components/EngineeringTypesGrid';
 import React from 'react';
@@ -169,31 +169,6 @@ export default function Page() {
       {/* Conclusion & CTA */}
       <Section>
         <div className="mt-5">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to Transform Your Engineering Operations?',
-                icon: 'settings',
-              },
-              title: 'Get a Free ERP Consultation for Your Engineering Company',
-              highlightText: "Engineering Company",
-              description: 'Discover how ERPNext can streamline your engineering business. Contact us for a free consultation and see how we can tailor a solution for your needs.',
-              primaryButton: {
-                text: 'Book Consultation',
-                icon: 'arrowRight',
-                action: handlePrimaryCTA,
-              },
-              secondaryButton: {
-                text: 'Learn More',
-                icon: 'info',
-                action: "#engineering"
-              },
-              trustIndicator: {
-                text: 'Trusted by leading engineering firms',
-                icon: 'checkCircle',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

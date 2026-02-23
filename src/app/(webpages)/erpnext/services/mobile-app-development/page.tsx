@@ -8,7 +8,7 @@ import Benefits from '@/components/sections/benefits';
 import ContentIllustrationLeft from '@/components/sections/content-illustration-left';
 import ContentIllustrationRight from '@/components/sections/content-illustration-right';
 import Differentiators from '@/components/sections/differentiators';
-import CTA from '@/components/sections/cta';
+
 import { Trophy, Smartphone, ArrowRight, Users, ShieldCheck, Activity, Handshake, BarChart3, Layers, Rocket, Code, LayoutDashboard, UserCheck, FileText, Users2, Building2, BookOpenCheck, SearchCheck, LineChart, HardDriveUpload, Globe2, Star } from 'lucide-react';
 
 export default function Page() {
@@ -454,41 +454,6 @@ export default function Page() {
                 text: 'Finbyz Tech delivers transformative mobile solutions that empower working on-the-go, streamline workflows, and provide tangible value for modern businesses.',
                 highlight: 'Empowering modern business mobility',
                 author: 'Finbyz Tech Team'
-              }
-            }}
-          />
-        </div>
-      </section>
-
-      {/* CTA SECTION */}
-      <section className="w-full bg-transparent">
-        <div className="py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to Mobilize Your Business Operations?',
-                icon: 'Smartphone'
-              },
-              title: 'Unlock Your Business Potential with Custom Mobile Apps',
-              highlightText:'Custom Mobile Apps',
-              description:
-                'Contact us for a free consultation and discover how our expert mobile app development services can transform and streamline your operations.',
-              primaryButton: {
-                text: 'Get a Mobile App Consultation',
-                icon: 'ArrowRight',
-                action: 'https://finbyz.tech/contact'
-              },
-              secondaryButton: {
-                text: 'Learn About Our Process',
-                icon: 'BookOpenCheck',
-                action: () => {
-                  const el = document.getElementById('mobile-app');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                }
-              },
-              trustIndicator: {
-                text: 'ISO 27001:2013 Certified | 200+ projects delivered',
-                icon: 'ShieldCheck'
               }
             }}
           />

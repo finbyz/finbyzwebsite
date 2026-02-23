@@ -2,7 +2,7 @@
 import React from "react";
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import WorkingHourExceptionForm from '@/components/ai_components/WorkingHourExceptionForm';
 import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
@@ -73,35 +73,6 @@ export default function Page() {
 
       <Section>
         <div className="py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Need Help?',
-                icon: 'HelpCircle',
-              },
-              title: 'Contact HR or Admin for Assistance',
-              highlightText:"Assistance",
-              description: 'If you have any questions or face issues submitting your exception, reach out to the HR/Admin team for support.',
-              primaryButton: {
-                text: 'Contact HR',
-                icon: 'Mail',
-                action: () => {
-                  window.open('mailto:hr@yourcompany.com', '_blank');
-                },
-              },
-              secondaryButton: {
-                text: 'Back to Home',
-                icon: 'Home',
-                action: () => {
-                  window.location.href = '/';
-                },
-              },
-              trustIndicator: {
-                text: 'Your data is confidential',
-                icon: 'ShieldCheck',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

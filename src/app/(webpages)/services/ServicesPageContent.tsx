@@ -2,7 +2,7 @@
 import React from 'react';
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import Benefits from '@/components/sections/benefits';
 
 export default function ServicesPageContent() {
@@ -257,28 +257,6 @@ export default function ServicesPageContent() {
       </Section>
       <Section>
         <div className="py-8">
-          <CTA
-            data={{
-              subheading: { text: 'Our Services', icon: 'Rocket' },
-              title: 'Interested in Our Services?',
-              highlightText: 'Services',
-              description: "Let Finbyz Tech help you weave a future of efficiency, profitability, and sustainable growth with an integrated ERPNext solution .",
-              primaryButton: {
-                text: 'Talk to Our ERP Experts',
-                icon: 'MessageCircle',
-                action: 'https://finbyz.tech/contact',
-              },
-              secondaryButton: {
-                text: 'Book a Consultation',
-                icon: 'Calendar',
-                action: 'https://finbyz.tech/contact',
-              },
-              trustIndicator: {
-                text: '200+ ERPNext Projects | 7000+ Users | 12+ Countries',
-                icon: 'CheckCircle',
-              }
-            }}
-          />
         </div>
       </Section>
 

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import BlogSection from '@/components/ai_components/blog/BlogSection';
 import BlogParagraph from '@/components/ai_components/blog/BlogParagraph';
 import BlogCheckList from '@/components/ai_components/blog/BlogCheckList';
-import CTA from '@/components/sections/cta';
+
 
 export default function UpgradeCloudERPContent() {
   return (
@@ -127,34 +127,6 @@ export default function UpgradeCloudERPContent() {
           Still relying on an old ERP? Thinking about upgrading to a modern and efficient cloud ERP? Visit our <a href="/erp/services/erp-software-development" target="_blank" className="text-orange-600 underline hover:text-blue-800 transition-colors">ERP Implementation page</a> to learn more about our expert <a href="/erp/services/erp-software-development" target="_blank" className="text-orange-600 underline hover:text-blue-800 transition-colors">ERP Implementation services</a>.
         </BlogParagraph>
         <div className="mt-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to Modernize?',
-                icon: 'Cloud',
-              },
-              title: 'Upgrade to Cloud ERP Today',
-              description: 'Transform your business with a scalable, flexible, and cost-effective cloud ERP solution. Get in touch with our experts to start your journey.',
-              primaryButton: {
-                text: 'Get Started',
-                icon: 'ArrowRight',
-                action: () => {
-                  window.open('/erp/services/erp-software-development', '_blank');
-                },
-              },
-              secondaryButton: {
-                text: 'Learn More',
-                icon: 'BookOpen',
-                action: () => {
-                  window.open('/erp/services/erp-software-development', '_blank');
-                },
-              },
-              trustIndicator: {
-                text: 'Trusted by 100+ businesses',
-                icon: 'ShieldCheck',
-              },
-            }}
-          />
         </div>
       </BlogSection>
     </>

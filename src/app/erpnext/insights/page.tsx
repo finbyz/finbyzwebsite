@@ -2,7 +2,7 @@
 
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import { Sparkles, Zap, FileText, Globe, BarChart3, Factory, Rocket, ListChecks } from 'lucide-react';
 import Link from 'next/link';
 
@@ -92,15 +92,6 @@ export default function ERPNextInsightsPage() {
 
         <Section useGradient>
           <div className="container-custom py-12">
-            <CTA
-              data={{
-                subheading: { text: "Stay Informed", icon: "bell" },
-                title: "Join Our Newsletter",
-                description: "Get the latest ERPNext tips, updates, and insights delivered directly to your inbox.",
-                primaryButton: { text: 'Subscribe Now', action: '#newsletter' },
-                secondaryButton: { text: 'View All Docs', action: '/docs' }
-              }}
-            />
           </div>
         </Section>
       </main>

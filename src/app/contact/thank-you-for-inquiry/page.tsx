@@ -1,7 +1,7 @@
 'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import ThankYouCard from '@/components/ai_components/ThankYouCard';
 import { useRouter } from 'next/navigation';
 import React from 'react';
@@ -41,31 +41,6 @@ export default function Page() {
       </Section>
       <Section useGradient>
         <div className="container-custom py-8 flex flex-col items-center">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to get started?',
-                icon: 'Smile',
-              },
-              title: 'Return to Home or Explore More',
-              description: 'Discover our services and solutions to help your business grow.',
-              highlightText:'Home',
-              primaryButton: {
-                text: 'Go to Home',
-                icon: 'ArrowLeft',
-                action: "/",
-              },
-              secondaryButton: {
-                text: 'Contact Us',
-                icon: 'Mail',
-                action: "/contact",
-              },
-              trustIndicator: {
-                text: 'Trusted by 100+ businesses',
-                icon: 'CheckCircle',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

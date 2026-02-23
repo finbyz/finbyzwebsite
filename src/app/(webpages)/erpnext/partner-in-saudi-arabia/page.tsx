@@ -2,7 +2,7 @@
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
-import CTA from '@/components/sections/cta';
+
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import ERPNextBenefitsGrid from '@/components/ai_components/ERPNextBenefitsGrid';
 import IndustryServiceGrid from '@/components/ai_components/IndustryServiceGrid';
@@ -195,34 +195,6 @@ export default function Page() {
           </div>
         </div>
       </Section>
-
-      <CTA
-            data={{
-              subheading: {
-                text: 'Ready to Transform Your Business?',
-                icon: 'Rocket',
-              },
-              title: 'Get Started with ERPNext in Saudi Arabia',
-              highlightText : "ERPNext in Saudi Arabia",
-              description: 'Contact our experts today to discuss your requirements and discover how ERPNext can drive your business forward.',
-              primaryButton: {
-                text: 'Request a Demo',
-                icon: 'ArrowRight',
-                action: () => {
-                  window.location.href = '/contact';
-                },
-              },
-              secondaryButton: {
-                text: 'Learn More',
-                icon: 'Info',
-                action: "#saudi"
-              },
-              trustIndicator: {
-                text: 'Trusted by leading Saudi businesses',
-                icon: 'ShieldCheck',
-              },
-            }}
-          />
     </>
   );
 }

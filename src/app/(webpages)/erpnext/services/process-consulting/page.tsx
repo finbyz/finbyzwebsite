@@ -6,7 +6,7 @@ import { List } from '@/components/sections/list';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
 import ContentIllustrationLeft from '@/components/sections/content-illustration-left';
-import CTA from '@/components/sections/cta';
+
 import { CheckCircle, Layers3, DollarSign, BarChart3, ChevronRight, Folders, Award, ShieldCheck, Settings, ListChecks, TrendingUp, Zap,  Users } from 'lucide-react';
 
 export default function Page() {
@@ -328,37 +328,7 @@ Ready to transform your business processes and unlock new levels of efficiency? 
           </div>
        
       </section>
-      
-      {/* 4️⃣ CTA SECTION */}
-      <section>
-        <div className="py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Let\'s Get Started',
-                icon: 'Rocket'
-              },
-              title: 'Unlock Operational Excellence with Finbyz Tech',
-              highlightText:'Finbyz Tech',
-              description: 'Contact our expert consultants today and begin your journey to streamlined, scalable business processes integrated with ERPNext.',
-              primaryButton: {
-                text: 'Book Your Free Assessment',
-                icon: 'ArrowRight',
-                action: 'https://finbyz.tech/contact'
-              },
-              secondaryButton: {
-                text: 'Talk to Our Experts',
-                icon: 'MessageCircle',
-                action: 'https://finbyz.tech/contact'
-              },
-              trustIndicator: {
-                text: 'Trusted by 7000+ ERPNext Users',
-                icon: 'Users'
-              }
-            }}
-          />
-        </div>
-      </section>
+
     </>
   );
 }

@@ -5,7 +5,7 @@ import TextSection from '@/components/sections/text';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
 import Comment from '@/components/sections/comment';
-import CTA from '@/components/sections/cta';
+
 
 export default function Page() {
   return (
@@ -495,37 +495,6 @@ export default function Page() {
               text:
                 "If you\'re ready to be part of a company that values innovation, fosters growth, and makes a significant impact on businesses worldwide, we invite you to explore career opportunities at Finbyz. Discover how your skills and ambition can contribute to our collective success and help shape the future of digital transformation.",
               symbol: '',
-            }}
-          />
-        </div>
-      </section>
-
-      {/* CTA SECTION */}
-      <section>
-        <div className="py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to start your Finbyz journey?',
-                icon: 'Send',
-              },
-              title: 'Join Our Talent-First Team',
-              highlightText: 'Talent-First',
-              description: 'Innovate, learn, and grow with a passionate team driving ERPNext, AI automation, and business transformation worldwide. Connect with us or explore open career opportunities at Finbyz.',
-              primaryButton: {
-                text: 'Apply Now',
-                icon: 'ArrowRight',
-                action: 'https://finbyz.tech/contact',
-              },
-              secondaryButton: {
-                text: 'View Careers',
-                icon: 'BookOpen',
-                action: '/careers/job-openings',
-              },
-              trustIndicator: {
-                text: 'ISO 27001:2013 • ERPNext Certified Partners • 200+ Projects',
-                icon: 'CheckCircle',
-              },
             }}
           />
         </div>

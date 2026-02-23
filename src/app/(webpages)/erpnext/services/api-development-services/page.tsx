@@ -6,7 +6,7 @@ import TextSection from '@/components/sections/text';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import ContentIllustrationLeft from '@/components/sections/content-illustration-left';
 import ContentIllustrationRight from '@/components/sections/content-illustration-right';
-import CTA from '@/components/sections/cta';
+
 import { List } from '@/components/sections/list';
 
 const heroImage = {
@@ -367,35 +367,6 @@ export default function Page() {
               ]
             }}
           /> */}
-        </div>
-      </section>
-
-      {/* CTA SECTION */}
-      <section >
-        <div className="py-8">
-          <CTA
-            data={{
-              subheading: { text: 'Ready to streamline your operations?', icon: 'Rocket' },
-              title: 'Contact Finbyz Tech Today for a Consultation!',
-              highlightText:'Finbyz Tech',
-              description: 'Empower your enterprise with seamless custom API integration & automation. Let our experts connect your business ecosystem.',
-              primaryButton: {
-                text: 'Get Your API Consultation',
-                icon: 'ArrowRight',
-                action: 'mailto:inquiry@finbyz.tech'
-              },
-              secondaryButton: {
-                text: 'Learn More',
-                icon: 'BookOpen',
-                action: () => { const el = document.getElementById('overview'); 
-              if (el) el.scrollIntoView({ behavior: 'smooth' }); }
-              },
-              trustIndicator: {
-                text: 'Trusted Partner for 200+ API & ERPNext Projects',
-                icon: 'Star'
-              }
-            }}
-          />
         </div>
       </section>
     </Fragment>

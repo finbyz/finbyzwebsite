@@ -1,4 +1,3 @@
-import FooterSection from "@/components/sections/FooterSection";
 
 const PAGE_SLUG =
   "ai-automation/insights/january-2026-workflow-automation-news";
@@ -18,7 +17,6 @@ export default async function Layout({
         
         
       </main>
-    <FooterSection docname="/ai-automation/insights/january-2026-workflow-automation-news" />
     </>
   );
 }

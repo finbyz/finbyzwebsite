@@ -6,7 +6,7 @@ import Section from '@/components/sections/Section';
 import ProcessWorkflow from '@/components/sections/process-workflow';
 import Points from '@/components/sections/points';
 import Benefits from '@/components/sections/benefits';
-import CTA from '@/components/sections/cta';
+
 import FeatureCard from '@/components/ai_components/FeatureCard'; // Fixed import
 import { Mic, FileAudio, LucideWaves as Waveform, MessageSquare, ScrollText, Database, Bot, ClipboardList } from 'lucide-react';
 
@@ -250,8 +250,6 @@ export default function AiSalesCallAnalysisPage() {
           <Benefits data={benefitsData} />
         </div>
       </Section>
-
-      <CTA data={ctaData} />
     </>
   );
 }

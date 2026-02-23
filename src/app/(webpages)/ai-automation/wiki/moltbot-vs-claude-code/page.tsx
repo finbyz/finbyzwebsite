@@ -1,7 +1,7 @@
 'use client';
 import DynamicHero from '@/components/sections/dynamic-hero';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
-import CTA from '@/components/sections/cta';
+
 import { CheckCircle, XCircle, AlertTriangle, Shield, DollarSign, Zap, Users, Code2, Settings } from 'lucide-react';
 
 export default function Page() {
@@ -803,33 +803,6 @@ export default function Page() {
                             layout: 'standard',
                         }}
                         className="animate-fade-in-up"
-                    />
-                </div>
-            </section>
-
-            {/* CTA SECTION */}
-            <section>
-                <div className="container-custom py-8">
-                    <CTA
-                        data={{
-                            subheading: { text: 'Get Expert AI Implementation Support', icon: 'Sparkles' },
-                            title: 'Ready to Leverage AI Assistants for Your Business?',
-                            description: 'Don\'t navigate the complex world of AI tooling alone. FinByz Tech\'s experts can help you choose, implement, and secure the right AI assistant solution for your specific needs. Whether you need Claude Code optimization, Moltbot setup with enterprise security, or a hybrid approach, we\'ve got you covered.',
-                            primaryButton: {
-                                text: 'Schedule a Consultation',
-                                action: 'mailto:inquiry@finbyz.tech',
-                                icon: 'Mail',
-                            },
-                            secondaryButton: {
-                                text: 'View Our AI Services',
-                                icon: 'ArrowRight',
-                                action: '/ai-automation/services'
-                            },
-                            trustIndicator: {
-                                text: 'ISO 27001:2013 Certified | 10+ Years Experience | Expert AI Implementation',
-                                icon: 'ShieldCheck',
-                            },
-                        }}
                     />
                 </div>
             </section>

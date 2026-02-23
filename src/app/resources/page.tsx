@@ -3,7 +3,7 @@
 import React from "react";
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from "@/components/sections/Section";
-import CTA from "@/components/sections/cta";
+
 import Link from "next/link";
 import { FileText, BookOpen, Video, ArrowRight } from "lucide-react";
 
@@ -240,37 +240,6 @@ export default function Page() {
                     </div>
                 </div>
             </Section>
-
-
-            <CTA
-                data={{
-                    subheading: {
-                        text: "Stay Informed",
-                        icon: "Bell"
-                    },
-                    title: "Ready to Start Your Transformation?",
-                    highlightText: 'Transformation?',
-                    description: "Get in touch with our experts to discuss how we can help your business grow.",
-                    primaryButton: {
-                        text: "Contact Us",
-                        icon: "MessageCircle",
-                        action: () => {
-                            window.location.href = '/contact';
-                        }
-                    },
-                    secondaryButton: {
-                        text: "Schedule Demo",
-                        icon: "Calendar",
-                        action: () => {
-                            window.location.href = '/contact#schedule-demo';
-                        }
-                    },
-                    trustIndicator: {
-                        text: "Expert team available 24/7",
-                        icon: "ShieldCheck"
-                    }
-                }}
-            />
         </>
     );
 }

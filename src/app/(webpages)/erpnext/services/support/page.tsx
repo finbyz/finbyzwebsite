@@ -3,7 +3,7 @@
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
-import CTA from '@/components/sections/cta';
+
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import { CheckCircle, Headphones, Shield, Clock, Users, Zap, Award} from 'lucide-react';
 import { Phone, Mail, MessageCircle, Monitor } from "lucide-react";
@@ -452,41 +452,6 @@ export default function Page() {
               Whether you're running ERPNext for <Link href="/erpnext/manufacturing" className="text-primary underline hover:text-primary/80">manufacturing</Link>, <Link href="/erpnext/trading" className="text-primary underline hover:text-primary/80">trading</Link>, <Link href="/erpnext/logistics" className="text-primary underline hover:text-primary/80">logistics</Link>, or any other industry, our specialized support team understands your unique business processes and challenges.
             </p>
           </div>
-        </div>
-      </Section>
-
-      {/* CTA Section */}
-      <Section>
-        <div className="py-6">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Need Expert Support?',
-                icon: 'Headphones',
-              },
-              title: 'Get Professional ERPNext Support Today',
-              highlightText: 'ERPNext Support',
-              description: 'Contact our support team to discuss your requirements and find the perfect support plan for your business.',
-              primaryButton: {
-                text: 'Contact Support',
-                icon: 'Phone',
-                action: () => {
-                  window.location.href = '/contact';
-                },
-              },
-              secondaryButton: {
-                text: 'View All Services',
-                icon: 'ArrowRight',
-                action: () => {
-                  window.location.href = '/erpnext/services/erpnext-service-provider';
-                },
-              },
-              trustIndicator: {
-                text: 'Supporting 200+ businesses globally',
-                icon: 'Award',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

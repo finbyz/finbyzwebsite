@@ -4,7 +4,7 @@ import React from 'react';
 import Section from '@/components/sections/Section';
 import DynamicHero from '@/components/sections/dynamic-hero';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
-import CTA from '@/components/sections/cta';
+
 import Benefits from '@/components/sections/benefits';
 import ProcessWorkflow from '@/components/sections/process-workflow';
 import FAQ from '@/components/ai_components/FAQ';
@@ -236,25 +236,6 @@ export default function ERPServicesPage() {
                             answer: "Yes, our ERP solutions are built on modern architectures that allow for easy scalability. You can add more users, modules, or integrations as your business grows without major re-platforming."
                         }
                     ]}
-                />
-            </Section>
-
-            {/* CTA Section */}
-            <Section className="py-16 bg-white">
-                <CTA
-                    data={{
-                        subheading: { text: "Lets Work Together", icon: "Users" },
-                        title: "Ready to Transform Your Business?",
-                        description: "Contact our team of experts to discuss your requirements and find the perfect ERP solution for your organization.",
-                        primaryButton: {
-                            text: "Schedule Consultation",
-                            action: "/contact",
-                        },
-                        secondaryButton: {
-                            text: "View Case Studies",
-                            action: "/case-studies",
-                        },
-                    }}
                 />
             </Section>
         </div>

@@ -1,7 +1,7 @@
 'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import List from '@/components/sections/list';
 import EducationFeatureGrid from '@/components/ai_components/EducationFeatureGrid';
 
@@ -164,34 +164,6 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8 flex flex-col items-center">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to transform your institution?',
-                icon: 'School',
-              },
-              title: 'Experience the Future of Education Management',
-              highlightText:"Education Management",
-              description: 'Empower your school or institute with a modern, open-source ERP. Streamline operations, boost efficiency, and focus on what matters most — academics.',
-              primaryButton: {
-                text: 'Get Started',
-                icon: 'ArrowRight',
-                action: "erp-education"
-                  
-              },
-              secondaryButton: {
-                text: 'Request Demo',
-                icon: 'MonitorPlay',
-                action: () => {
-                  window.location.href = '/contact';
-                },
-              },
-              trustIndicator: {
-                text: 'Trusted by leading educational institutions',
-                icon: 'ShieldCheck',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

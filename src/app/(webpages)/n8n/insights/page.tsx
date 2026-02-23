@@ -157,30 +157,6 @@ export default function Page() {
                     </div>
                 </div>
             </section>
-
-            {/* CTA Section */}
-            <section className="py-20 bg-primary/5 border-t">
-                <div className="container-custom text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Scale Your Automation?</h2>
-                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-                        Whether you need a custom n8n implementation or expert consultation on AI agents, our team is here to help.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link
-                            href="/contact"
-                            className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors inline-flex items-center justify-center"
-                        >
-                            Book a Consultation
-                        </Link>
-                        <Link
-                            href="/ai-automation/services/n8n-ai-agent-orchestration"
-                            className="px-8 py-3 bg-background border border-input rounded-lg font-medium hover:bg-accent hover:text-accent-foreground transition-colors inline-flex items-center justify-center"
-                        >
-                            View Services
-                        </Link>
-                    </div>
-                </div>
-            </section>
         </>
     );
 }

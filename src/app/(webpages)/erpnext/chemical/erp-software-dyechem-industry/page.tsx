@@ -1,7 +1,7 @@
 'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import Image from 'next/image';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import ProblemList from '@/components/ai_components/ProblemList';
@@ -127,39 +127,6 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to transform your DyeChem business?',
-                icon: 'rocket',
-              },
-              title: 'Get Started with ERP for DyeChem Industry',
-              description: 'Experience seamless batch-wise inventory, recipe, and sample management. Request a demo or talk to our experts today!',
-              highlightText:'DyeChem',
-              primaryButton: {
-                text: 'Request Demo',
-                icon: 'arrowRight',
-                action: () => {
-                  if (typeof window !== 'undefined') {
-                    window.location.href = '/contact';
-                  }
-                },
-              },
-              secondaryButton: {
-                text: 'Contact Sales',
-                icon: 'phone',
-                action: () => {
-                  if (typeof window !== 'undefined') {
-                    window.location.href = '/contact';
-                  }
-                },
-              },
-              trustIndicator: {
-                text: 'Trusted by leading chemical manufacturers',
-                icon: 'checkCircle',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

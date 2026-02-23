@@ -1,4 +1,3 @@
-import FooterSection from "@/components/sections/FooterSection";
 
 export default async function Layout({
   children,
@@ -11,7 +10,6 @@ export default async function Layout({
   return (
     <>
       {children}
-      <FooterSection docname="/erpnext/insights/tips-for-selecting-the-right-manufacturing-software" />
     </>
   );
 }

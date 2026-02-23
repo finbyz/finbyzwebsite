@@ -5,7 +5,7 @@ import Section from "@/components/sections/Section";
 import DynamicHero from "@/components/sections/dynamic-hero";
 import ResponsiveCardGrid from "@/components/sections/responsive-card-grid";
 import Benefits from "@/components/sections/benefits";
-import CTA from "@/components/sections/cta";
+
 
 export default function CustomAIDevelopmentContent() {
     return (
@@ -179,26 +179,6 @@ export default function CustomAIDevelopmentContent() {
                             }
                         ],
                         variant: "iconCard",
-                    }}
-                />
-            </Section>
-
-            {/* CTA Section */}
-            <Section className="py-16">
-                <CTA
-                    data={{
-                        subheading: { text: "Future-Proof Your Business", icon: "Zap" },
-                        title: "Ready to Build Your Custom AI Strategy?",
-                        description:
-                            "Schedule a consultation with our AI specialists to discuss your use case and explore the possibilities.",
-                        primaryButton: {
-                            text: "Start the Conversation",
-                            action: "/contact",
-                        },
-                        secondaryButton: {
-                            text: "View AI Solutions",
-                            action: "/solutions",
-                        },
                     }}
                 />
             </Section>

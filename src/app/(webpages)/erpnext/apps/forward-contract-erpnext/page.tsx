@@ -4,7 +4,7 @@ import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
 import YouTubeEmbed from '@/components/sections/YouTubeEmbed';
-import CTA from '@/components/sections/cta';
+
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { CheckCircle } from 'lucide-react';
 import ForwardContractGifImage from '@/components/ai_components/ForwardContractGifImage';
@@ -163,44 +163,6 @@ export default function Page() {
           <ForwardContractGifImage
             src="/images/fwd-cnt-1.21-to-1.32.gif"
             alt="How to Cancel Forward Contracts"
-          />
-        </div>
-      </Section>
-
-      {/* Download Section */}
-    
-
-      {/* CTA Section */}
-      <Section useGradient>
-        <div className="container-custom py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to streamline your currency hedging?',
-                icon: 'TrendingUp'
-              },
-              title: 'Start Managing Forward Contracts in ERPNext',
-              highlightText:"Forward Contracts in ERPNext",
-              description: 'Take control of your forex risk and automate your forward contract management. Download the app or get in touch for a personalized demo.',
-              primaryButton: {
-                text: 'Download App',
-                icon: 'Download',
-                action: () => {
-                  window.open('https://frappecloud.com/marketplace/apps/forward_contract', '_blank');
-                }
-              },
-              secondaryButton: {
-                text: 'Contact Us',
-                icon: 'Mail',
-                action: () => {
-                  window.location.href = '/contact';
-                }
-              },
-              trustIndicator: {
-                text: 'Trusted by leading exporters & importers',
-                icon: 'ShieldCheck'
-              }
-            }}
           />
         </div>
       </Section>

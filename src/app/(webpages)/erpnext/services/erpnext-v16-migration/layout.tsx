@@ -1,4 +1,3 @@
-import FooterSection from "@/components/sections/FooterSection";
 
 const PAGE_SLUG = "erpnext/services/erpnext-v16-migration";
 const PAGE_ROUTE = "erpnext/services/erpnext-v16-migration";
@@ -16,7 +15,6 @@ export default async function Layout({
         
         
       </main>
-    <FooterSection docname="/erpnext/services/erpnext-v16-migration" />
     </>
   );
 }

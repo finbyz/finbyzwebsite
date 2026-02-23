@@ -2,7 +2,7 @@
 
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import DataAnalyticsFeatureDetails from '@/components/ai_components/DataAnalyticsFeatureDetails';
 
 export default function Page() {
@@ -95,31 +95,6 @@ export default function Page() {
 
             <Section>
                 <div className="py-8 flex flex-col items-center">
-                    <CTA
-                        data={{
-                            subheading: {
-                                text: 'Ready to unlock your data advantage?',
-                                icon: 'BarChart3'
-                            },
-                            title: 'Transform Your Business with Data Analytics',
-                            highlightText: "Data Analytics",
-                            description: 'Contact Finbyz Tech to discover how our data analytics solutions can drive growth, efficiency, and smarter decisions for your organization.',
-                            primaryButton: {
-                                text: 'Get Demo',
-                                icon: 'ArrowRight',
-                                action: handleContact
-                            },
-                            secondaryButton: {
-                                text: 'Learn More',
-                                icon: 'Info',
-                                action: "#data"
-                            },
-                            trustIndicator: {
-                                text: 'Trusted by leading businesses',
-                                icon: 'CheckCircle'
-                            }
-                        }}
-                    />
                 </div>
             </Section>
         </>

@@ -2,7 +2,7 @@
 
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import { Package, TrendingUp, DollarSign, Database, Settings, ShieldCheck, PieChart, Users, Repeat, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 
@@ -128,16 +128,6 @@ export default function ERPSolutionsPage() {
             </Link>
           </div>
         </Section>
-
-        <CTA
-          data={{
-            subheading: { text: "Ready for ERP?", icon: "CheckCircle" },
-            title: "Get a Free Consultation",
-            description: "Speak with our ERP experts to analyze your needs and find the perfect solution for your business.",
-            primaryButton: { text: 'Schedule Call', action: '/contact' },
-            secondaryButton: { text: 'View ERPNext', action: '/erpnext' }
-          }}
-        />
       </main>
     </div>
   );

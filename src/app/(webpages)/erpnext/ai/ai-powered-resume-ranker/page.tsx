@@ -214,14 +214,6 @@ export default function Page() {
           <Benefits data={benefitsData} />
         </div>
       </Section>
-
-      {/* 4️⃣ CTA SECTION */}
-      <Section>
-        <div className=" py-12">
-
-          <CTA data={ctaData} />
-        </div>
-      </Section>
     </main>
   )
 }

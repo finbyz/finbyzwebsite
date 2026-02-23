@@ -3,7 +3,7 @@
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
-import CTA from '@/components/sections/cta';
+
 import Image from 'next/image';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import FlipCard from '@/components/ai_components/FlipCard';
@@ -364,31 +364,6 @@ export default function Page() {
       </Section>
       <Section useGradient>
         <div className="container-custom py-8 flex flex-col gap-6 items-center">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to Transform Your Business?',
-                icon: 'rocket',
-              },
-              title: 'Get Started with ERPNext Services in Canada',
-              highlightText : "ERPNext Services in Canada",
-              description: 'Contact our experts today to discuss your ERPNext implementation, customization, or support needs. Let us help you drive efficiency and growth in your business.',
-              primaryButton: {
-                text: 'Contact Us',
-                icon: 'mail',
-                action: handlePrimary,
-              },
-              secondaryButton: {
-                text: 'Learn More',
-                icon: 'info',
-                action: "#canada"
-              },
-              trustIndicator: {
-                text: 'Trusted by businesses worldwide',
-                icon: 'globe',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

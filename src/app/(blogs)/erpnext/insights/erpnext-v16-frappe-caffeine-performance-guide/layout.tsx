@@ -1,4 +1,3 @@
-import FooterSection from "@/components/sections/FooterSection";
 import Header from "@/components/layout/header";
 import InquiryForm from "@/components/ui/InquiryForm";
 
@@ -19,7 +18,6 @@ export default async function Layout({
       <Header />
       <main>
         {children}
-        <FooterSection docname="/erpnext/insights/erpnext-v16-frappe-caffeine-performance-guide" />
       </main>
     </>
   );

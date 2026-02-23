@@ -5,7 +5,7 @@ import Section from "@/components/sections/Section";
 import DynamicHero from "@/components/sections/dynamic-hero";
 import ResponsiveCardGrid from "@/components/sections/responsive-card-grid";
 import Benefits from "@/components/sections/benefits";
-import CTA from "@/components/sections/cta";
+
 
 export default function ImplementationContent() {
     return (
@@ -225,26 +225,6 @@ export default function ImplementationContent() {
                             }
                         ],
                         variant: "iconCard",
-                    }}
-                />
-            </Section>
-
-            {/* CTA Section */}
-            <Section className="py-16">
-                <CTA
-                    data={{
-                        subheading: { text: "Lets Build Together", icon: "Code" },
-                        title: "Need an Entire Application Built?",
-                        description:
-                            "From the database to the dashboard, we engineer complete, scalable software solutions that drive real business value.",
-                        primaryButton: {
-                            text: "Start Application Project",
-                            action: "/contact",
-                        },
-                        secondaryButton: {
-                            text: "View Tech Stack",
-                            action: "#",
-                        },
                     }}
                 />
             </Section>

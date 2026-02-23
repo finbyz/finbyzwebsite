@@ -1,4 +1,3 @@
-import FooterSection from "@/components/sections/FooterSection";
 
 const PAGE_SLUG = "n8n/insights/n8n-vs-zapier-vs-make-comparison";
 const PAGE_ROUTE = "ai-automation/insights/n8n-vs-zapier-vs-make-comparison";
@@ -16,7 +15,6 @@ export default async function Layout({
         
         
       </main>
-    <FooterSection docname="/n8n/insights/n8n-vs-zapier-vs-make-comparison" />
     </>
   );
 }

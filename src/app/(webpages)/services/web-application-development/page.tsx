@@ -4,7 +4,7 @@ import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import FeatureCard from '@/components/ai_components/FeatureCard';
-import CTA from '@/components/sections/cta';
+
 import AdvantageList from '@/components/ai_components/AdvantageList';
 import Image from 'next/image';
 import React from 'react';
@@ -115,44 +115,6 @@ export default function Page() {
         </div>
       </Section>
 
-      {/* CTA Section */}
-      <Section>
-        <div className="py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Looking for a Web Application Development Partner?',
-                icon: 'MonitorSmartphone',
-              },
-              title: 'Let’s Build Your Next Web App',
-              highlightText: "Web App",
-              description: 'Finbyz is a leading provider of advanced web application development services customized for your specific needs. Our team of knowledgeable web app developers is committed to making your ideas a reality and giving your audience a perfect online experience.',
-              primaryButton: {
-                text: 'Request a Consultation',
-                icon: 'ArrowRight',
-                action: () => {
-                  if (typeof window !== 'undefined') {
-                    window.location.href = '/contact';
-                  }
-                },
-              },
-              secondaryButton: {
-                text: 'See Our Work',
-                icon: 'Eye',
-                action: () => {
-                  if (typeof window !== 'undefined') {
-                    window.location.href = '/portfolio';
-                  }
-                },
-              },
-              trustIndicator: {
-                text: 'Trusted by 100+ businesses',
-                icon: 'ShieldCheck',
-              },
-            }}
-          />
-        </div>
-      </Section>
     </>
   );
 }

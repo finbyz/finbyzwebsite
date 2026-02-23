@@ -1,4 +1,3 @@
-import FooterSection from "@/components/sections/FooterSection";
 
 
 export default async function Layout({
@@ -10,7 +9,6 @@ export default async function Layout({
   return (
     <>
       {children}
-      <FooterSection docname="/about-us/our-story" showBusinessSlider={true} showInquiryForm={false} />
     </>
   );
 }

@@ -5,7 +5,7 @@ import TextSection from '@/components/sections/text';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
 import Differentiators from '@/components/sections/differentiators';
-import CTA from '@/components/sections/cta';
+
 import { CheckCircle, Award, Layers, Boxes, ClipboardList, Globe, BarChart3, Zap, Users, Star } from 'lucide-react';
 
 export default function Page() {
@@ -356,41 +356,6 @@ export default function Page() {
                   palette: { iconBg: '#fff4ed', iconColor: '#fa7207' }
                 }
               ]
-            }}
-          />
-        </div>
-      </section>
-
-      {/* CTA SECTION */}
-      <section>
-        <div className="py-8">
-          <CTA
-            data={{
-              component_type: 'Text',
-              subheading: {
-                text: "Ready to Electrify Your Business Operations?",
-                icon: 'zap'
-              },
-              title: 'Book a Personalized ERP Demo Today',
-              highlightText:'ERP Demo Today',
-              description: 'Don\'t let outdated systems hold you back. Embrace the future of electronics manufacturing with a robust, integrated ERP solution for agility, efficiency, and growth.',
-              primaryButton: {
-                text: 'Get Started',
-                icon: 'arrow-right',
-                action: '/contact'
-              },
-              secondaryButton: {
-                text: 'Learn More',
-                icon: 'info',
-               action: () => {
-              const el = document.getElementById('erpnext-overview');
-              if (el) el.scrollIntoView({ behavior: 'smooth' });
-            }
-              },
-              trustIndicator: {
-                text: 'Trusted by 200+ manufacturers worldwide',
-                icon: 'users'
-              }
             }}
           />
         </div>

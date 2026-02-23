@@ -5,7 +5,7 @@ import Section from '@/components/sections/Section';
 import TechnologyStack from '@/components/sections/technology-stack';
 import ProcessWorkflow from '@/components/sections/process-workflow';
 import StatsShowcase from '@/components/sections/stats-showcase';
-import CTA from '@/components/sections/cta';
+
 import { Bot, Brain, Workflow, Zap, Shield, Globe, Cpu, Target, TrendingUp, Users, Clock, CheckCircle, Sparkles, Network, Layers } from 'lucide-react';
 
 // Custom AI Models Technology Stack Data
@@ -392,37 +392,6 @@ export default function Page() {
                             </div>
                         </div>
                     </div>
-                </div>
-            </Section>
-
-            {/* CTA Section */}
-            <Section>
-                <div className="container-custom py-8" id="contact-section">
-                    <CTA
-                        data={{
-                            subheading: {
-                                text: 'Ready to Transform Your Business with AI?',
-                                icon: 'Sparkles',
-                            },
-                            title: 'Build Your AI Agent Ecosystem Today',
-                            highlightText: "AI Agent Ecosystem",
-                            description: 'Schedule a consultation with our AI automation experts to explore how multi-agent systems can revolutionize your workflow.',
-                            primaryButton: {
-                                text: 'Schedule Consultation',
-                                icon: 'ArrowRight',
-                                action: '/contact-us'
-                            },
-                            secondaryButton: {
-                                text: 'View Case Studies',
-                                icon: 'FileText',
-                                action: '/ai-automation/insights'
-                            },
-                            trustIndicator: {
-                                text: 'Trusted by 100+ enterprises worldwide',
-                                icon: 'ShieldCheck',
-                            },
-                        }}
-                    />
                 </div>
             </Section>
         </>

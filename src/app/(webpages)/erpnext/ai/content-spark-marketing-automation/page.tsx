@@ -6,7 +6,7 @@ import ProcessWorkflow from '@/components/sections/process-workflow';
 import Benefits from '@/components/sections/benefits';
 import Points from '@/components/sections/points';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
-import CTA from '@/components/sections/cta';
+
 
 export default function Page() {
   const seoTitle = 'Content Spark Streamline Marketing Automation';
@@ -253,25 +253,6 @@ export default function Page() {
         className=""
       />
 
-      {/* 4️⃣ CTA SECTION (Required - Last) */}
-      <CTA
-        data={{
-          subheading: { text: 'Get Started', icon: 'Rocket' },
-          title: 'Start creating on-brand content in minutes',
-          description:
-            'Empower your marketing team with AI agents that ideate, write, and design—right inside ERPNext. Faster campaigns, consistent branding, and better results.',
-          primaryButton: { text: 'Request a demo', icon: 'Calendar', action: '/contact' },
-          secondaryButton: {
-            text: 'See it in action',
-            icon: 'PlayCircle',
-            action: () => {
-              const el = document.getElementById('content-spark');
-              if (el) el.scrollIntoView({ behavior: 'smooth' });
-            }
-          },
-          trustIndicator: { text: 'Built for ERPNext on Frappe Framework', icon: 'ShieldCheck' },
-        }}
-      />
     </>
   );
 }

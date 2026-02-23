@@ -1,4 +1,4 @@
-import CTA from '@/components/sections/cta';
+
 import { FC } from 'react';
 
 const CallToActionSection: FC = () => {

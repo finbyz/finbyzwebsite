@@ -1,5 +1,4 @@
 import Header from "@/components/layout/header";
-import FooterSection from "@/components/sections/FooterSection";
 
 export default async function Layout({
   children,
@@ -15,7 +14,6 @@ export default async function Layout({
         
         
       </main>
-    <FooterSection docname="/ai-automation/apps/content-spark-marketing-automation" />
     </>
   );
 }

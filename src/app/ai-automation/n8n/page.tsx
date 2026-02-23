@@ -2,7 +2,7 @@
 
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import { Workflow, Zap, Network, Shield, Code, Server } from 'lucide-react';
 import Link from 'next/link';
 
@@ -106,15 +106,6 @@ export default function N8nPage() {
 
         <Section>
           <div className="py-12">
-            <CTA
-              data={{
-                subheading: { text: "Start Automating", icon: "rocket" },
-                title: "Unlock Efficiency with n8n",
-                description: "Let us help you design, build, and deploy custom automation workflows that save you time and money.",
-                primaryButton: { text: 'Book Consultation', action: '/contact' },
-                secondaryButton: { text: 'View Services', action: '/ai-automation/services' }
-              }}
-            />
           </div>
         </Section>
       </main>

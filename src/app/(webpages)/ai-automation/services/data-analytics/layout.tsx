@@ -1,4 +1,3 @@
-import FooterSection from "@/components/sections/FooterSection";
 
 export default async function Layout({
   children,
@@ -10,7 +9,6 @@ export default async function Layout({
       <main>
         {children}
       </main>
-      <FooterSection docname="/ai-automation/services/data-analytics" />
     </>
   );
 }

@@ -2,7 +2,7 @@
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
-import CTA from '@/components/sections/cta';
+
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import FlipCard from '@/components/ai_components/FlipCard';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
@@ -190,41 +190,6 @@ export default function Page() {
             The main objective of using software in the Human resource departments is to have insights for effective decision making as
             <span className="block italic mt-2">“The goal is to turn data into information, and information into insights” (Carly Fiorina).</span>
           </h2>
-        </div>
-      </Section>
-
-      {/* CTA Section */}
-      <Section>
-        <div className="py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to Transform Your HR?',
-                icon: 'UserCheck',
-              },
-              title: 'Experience the Power of Advanced Human Resource Software',
-              highlightText:"Advanced Human Resource Software",
-              description: 'Streamline your HR and payroll processes, empower your workforce, and drive business growth. Get started with Finbyz Tech today!',
-              primaryButton: {
-                text: 'Request a Demo',
-                icon: 'ArrowRight',
-                action: () => {
-                  window.location.href = '/contact';
-                },
-              },
-              secondaryButton: {
-                text: 'Contact Sales',
-                icon: 'Phone',
-                action: () => {
-                  window.location.href = '/contact';
-                },
-              },
-              trustIndicator: {
-                text: 'Trusted by leading businesses',
-                icon: 'ShieldCheck',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

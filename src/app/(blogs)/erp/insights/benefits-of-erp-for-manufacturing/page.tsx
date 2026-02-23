@@ -8,7 +8,7 @@ import BlogTableOfContents from '@/components/ai_components/blog/BlogTableOfCont
 import BlogContent from '@/components/ai_components/blog/BlogContent';
 import BlogCheckList from '@/components/ai_components/blog/BlogCheckList';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
-import CTA from '@/components/sections/cta';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { CalendarDays, Clock } from 'lucide-react';

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import List from '@/components/sections/list';
 import PrivacySectionHeading from '@/components/ai_components/PrivacySectionHeading';
 import PrivacySubsectionHeading from '@/components/ai_components/PrivacySubsectionHeading';
@@ -388,37 +388,6 @@ export default function CustomERPDevelopment() {
     </div>
   </div>
 </Section>
-
-      {/* FINAL CTA SECTION */}
-      <Section>
-        <div className="py-8">
-          <CTA
-            data={{
-              subheading: { text: 'Ready to Customize your ERP?', icon: 'Rocket' },
-              title: 'Start Your Custom ERP Development Journey',
-              highlightText:'ERP',
-              description: "Contact us today to discuss your requirements and discover how our custom ERP experts can help you achieve operational excellence.",
-              primaryButton: {
-                text: 'Talk to Our ERP Experts',
-                icon: 'MessageCircle',
-                action: 'https://finbyz.tech/contact',
-              },
-              secondaryButton: {
-                text: 'Learn More',
-                icon: 'Calendar',
-                action: () => {
-                  const el = document.getElementById('overview');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                }
-              },
-              trustIndicator: {
-                text: '200+ ERPNext Projects | 7000+ Users | 12+ Countries',
-                icon: 'CheckCircle',
-              }
-            }}
-          />
-        </div>
-      </Section>
 
     </div>
   );

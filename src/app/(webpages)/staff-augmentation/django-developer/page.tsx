@@ -8,7 +8,7 @@ import DjangoAdvantageGrid from '@/components/ai_components/DjangoAdvantageGrid'
 import DjangoWhyBestGrid from '@/components/ai_components/DjangoWhyBestGrid';
 import List from '@/components/sections/list';
 import DjangoOutsourcingBenefitsGrid from '@/components/ai_components/DjangoOutsourcingBenefitsGrid';
-import CTA from '@/components/sections/cta';
+
 import Image from 'next/image';
 import { CheckCircle2 } from 'lucide-react';
 
@@ -333,31 +333,6 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to Hire Django Developers?',
-                icon: 'UserCheck',
-              },
-              title: 'Let’s Build Your Next Project Together',
-              description: 'Contact us today to discuss your Django development needs and discover how our expert team can help you achieve your goals.',
-              highlightText:'Project',
-              primaryButton: {
-                text: 'Get Started',
-                icon: 'ArrowRight',
-                action: "#django",
-              },
-              secondaryButton: {
-                text: 'Contact Sales',
-                icon: 'Mail',
-                action: heroSecondaryAction,
-              },
-              trustIndicator: {
-                text: 'Trusted by 100+ businesses',
-                icon: 'ShieldCheck',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

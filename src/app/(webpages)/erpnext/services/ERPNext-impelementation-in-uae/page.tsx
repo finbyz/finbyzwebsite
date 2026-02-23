@@ -7,7 +7,7 @@ import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import FeatureCard from '@/components/ai_components/FeatureCard';
 import IndustryGrid from '@/components/ai_components/IndustryGrid';
 import ClientCountryGrid from '@/components/ai_components/ClientCountryGrid';
-import CTA from '@/components/sections/cta';
+
 import FlipCard from '@/components/ai_components/FlipCard';
 import Image from 'next/image';
 import { FaCheckCircle } from 'react-icons/fa';
@@ -277,31 +277,6 @@ export default function Page() {
       </Section>
       <Section useGradient>
         <div className="container-custom py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: "Ready to Transform Your Business?",
-                icon: "Rocket"
-              },
-              title: "Get Started with ERPNext in UAE",
-              highlightText : "ERPNext in UAE",
-              description: "Contact Finbyz Tech today to discuss your ERP requirements and discover how we can help your business grow.",
-              primaryButton: {
-                text: "Contact Us",
-                icon: "Mail",
-                action: "/contact"
-              },
-              secondaryButton: {
-                text: "Learn More",
-                icon: "ArrowRight",
-                action: "#uae"
-              },
-              trustIndicator: {
-                text: "Trusted by businesses worldwide",
-                icon: "CheckCircle"
-              }
-            }}
-          />
         </div>
       </Section>
     </>

@@ -2,7 +2,7 @@
 
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import { Lightbulb, TrendingUp, Monitor, Laptop, Code2, BrainCircuit, Rss, BookOpen, Globe } from 'lucide-react';
 import Link from 'next/link';
 
@@ -105,15 +105,6 @@ export default function AIInsightsPage() {
 
         <Section>
           <div className="py-12">
-            <CTA
-              data={{
-                subheading: { text: "Stay Informed", icon: "rss" },
-                title: "Get Insights Delivered to Your Inbox",
-                description: "Don't miss out on the latest technology trends and expert advice. Subscribe to our newsletter today.",
-                primaryButton: { text: 'Subscribe Now', action: '#newsletter' },
-                secondaryButton: { text: 'View All Posts', action: '/blog' }
-              }}
-            />
           </div>
         </Section>
       </main>

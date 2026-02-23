@@ -3,7 +3,7 @@
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
-import CTA from '@/components/sections/cta';
+
 import Image from 'next/image';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import ChemFeatureCheckboxGrid from '@/components/ai_components/ChemFeatureCheckboxGrid';
@@ -252,29 +252,6 @@ export default function ChemicalPageContent() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to Transform Your Chemical Business?',
-                icon: 'flask-conical',
-              },
-              title: 'Get Started with ERPNext for Chemical Industry',
-              highlightText: "ERPNext for Chemical Industry",
-              description: 'Streamline your operations, ensure compliance, and boost productivity. Book a free consultation with our experts today!',
-              primaryButton: {
-                text: 'Book Free Consultation',
-                icon: 'calendar-check',
-                action: () => {
-                  window.location.href = '/contact';
-                },
-              },
-
-              trustIndicator: {
-                text: 'Trusted by leading chemical manufacturers',
-                icon: 'award',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

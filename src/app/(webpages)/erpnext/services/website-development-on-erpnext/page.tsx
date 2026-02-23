@@ -5,7 +5,7 @@ import Section from '@/components/sections/Section';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import FeatureGrid from '@/components/ai_components/FeatureGrid';
 import ProcessStepCard from '@/components/ai_components/ProcessStepCard';
-import CTA from '@/components/sections/cta';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -174,35 +174,6 @@ export default function Page() {
 
       <Section>
         <div className="py-8 flex flex-col items-center">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to Grow?',
-                icon: 'Rocket',
-              },
-              title: 'Let’s Build Your Next Website!',
-              highlightText:"Website",
-              description: 'Contact us today for a free consultation and see how we can help you grow your business online.',
-              primaryButton: {
-                text: 'Get Started',
-                icon: 'ArrowRight',
-                action: "#website"
-              },
-              secondaryButton: {
-                text: 'See Our Work',
-                icon: 'Eye',
-                action: () => {
-                  if (typeof window !== 'undefined') {
-                    window.open('/about-us/clients', '_blank');
-                  }
-                }
-              },
-              trustIndicator: {
-                text: 'Trusted by 100+ Businesses',
-                icon: 'ShieldCheck',
-              }
-            }}
-          />
         </div>
       </Section>
     </>

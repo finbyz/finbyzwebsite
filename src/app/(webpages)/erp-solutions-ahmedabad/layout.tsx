@@ -1,6 +1,5 @@
 // import type { Metadata } from "next";
-// import FooterSection from "@/components/sections/FooterSection";
-
+// 
 // const PAGE_SLUG = "erp-solutions-ahmedabad";
 
 // export default async function Layout({
@@ -13,14 +12,13 @@
 
 //   return (
 //     <main>
-//       <FooterSection docname={`/${PAGE_SLUG}`} />
+//
 //     </main>
 //   );
 // }
 
 
 import type { Metadata } from "next";
-import FooterSection from "@/components/sections/FooterSection";
 import { getPageData, getFaqs } from "@/lib/getPageData";
 
 const PAGE_SLUG = "erp-solutions-ahmedabad";
@@ -36,7 +34,6 @@ export default async function Layout({
   return (
     <main>
       {children}
-      <FooterSection docname={`/${PAGE_SLUG}`} />
     </main>
   );
 }

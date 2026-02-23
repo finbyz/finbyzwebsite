@@ -8,6 +8,7 @@ import { MobileMenuProvider } from "@/contexts/MobileMenuContext";
 import Header from "@/components/layout/new-header";
 import Footer from "@/components/layout/footer";
 import { AutoPageSchemas } from "@/components/schema/PageSchemas";
+import FooterSection from "@/components/sections/FooterSection";
 
 
 
@@ -102,6 +103,7 @@ export default function RootLayout({
         <MobileMenuProvider>
           <Header />
           {children}
+          <FooterSection />
           <Footer />
         </MobileMenuProvider>
       </body>

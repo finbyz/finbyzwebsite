@@ -1,7 +1,7 @@
 'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import Image from 'next/image';
@@ -175,37 +175,6 @@ export default function Page() {
                             </div>
                         ))}
                     </div>
-                </div>
-            </Section>
-
-            {/* Section 6: CTA Section */}
-            <Section>
-                <div className="py-16">
-                    <CTA
-                        data={{
-                            subheading: {
-                                text: 'Step into the future',
-                                icon: 'Rocket',
-                            },
-                            title: 'Build Your Intelligent ERP Blueprint',
-                            highlightText: "Intelligent ERP",
-                            description: 'Whether it is automated lead processing or intelligent inventory forecasting, let us help you design the AI strategy that fits your growth.',
-                            primaryButton: {
-                                text: 'Request AI Demo',
-                                icon: 'CalendarCheck',
-                                action: handleContact,
-                            },
-                            secondaryButton: {
-                                text: 'Contact Expert',
-                                icon: 'FileText',
-                                action: handleContact
-                            },
-                            trustIndicator: {
-                                text: 'ERPNext Certified AI Specialists',
-                                icon: 'CalendarCheck',
-                            },
-                        }}
-                    />
                 </div>
             </Section>
         </>

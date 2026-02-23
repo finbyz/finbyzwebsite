@@ -5,7 +5,7 @@ import Section from "@/components/sections/Section";
 import DynamicHero from "@/components/sections/dynamic-hero";
 import ResponsiveCardGrid from "@/components/sections/responsive-card-grid";
 import Benefits from "@/components/sections/benefits";
-import CTA from "@/components/sections/cta";
+
 
 export default function SolutionsPageContent() {
     return (
@@ -118,26 +118,6 @@ export default function SolutionsPageContent() {
                                 palette: { iconBg: "#27AE60", iconColor: "#ffffff" },
                             },
                         ],
-                    }}
-                />
-            </Section>
-
-            {/* CTA Section */}
-            <Section className="py-16">
-                <CTA
-                    data={{
-                        subheading: { text: "Start Your Journey", icon: "Rocket" },
-                        title: "Ready to Upgrade Your Business?",
-                        description:
-                            "Whether you need a robust ERP system, smart AI agents, or a dedicated development team, Finbyz Tech has the solution.",
-                        primaryButton: {
-                            text: "Get a Free Consultation",
-                            action: "/contact",
-                        },
-                        secondaryButton: {
-                            text: "View Case Studies",
-                            action: "/case-studies", // Assuming this exists or redirects to home
-                        },
                     }}
                 />
             </Section>

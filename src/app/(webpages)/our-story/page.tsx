@@ -278,37 +278,6 @@ export default function Page() {
           </div>
         </motion.div>
       </Section>
-
-      {/* --- CTA --- */}
-      <Section>
-        <CTA
-          data={{
-            subheading: { text: 'Partner with Finbyz Tech', icon: 'Rocket' },
-            title: 'Join Our Story of Innovation and Growth',
-            highlightText: 'Innovation and Growth',
-            description:
-              'Collaborate with Finbyz Tech to leverage intelligent ERP, AI, and automation solutions that help your business thrive in the digital era.',
-            primaryButton: {
-              text: 'Contact Us',
-              icon: 'MessageCircle',
-              action: 'https://finbyz.tech/contact',
-            },
-            secondaryButton: {
-              text: 'Learn More',
-              icon: 'Zap',
-              action: () => {
-                const el = document.getElementById('journey')
-                if (el) el.scrollIntoView({ behavior: 'smooth' })
-              },
-            },
-            trustIndicator: {
-              text: 'Trusted by 200+ Businesses Across 12+ Countries',
-              icon: 'CheckCircle',
-            },
-          }}
-        />
-      </Section>
-
     </div>
   )
 }

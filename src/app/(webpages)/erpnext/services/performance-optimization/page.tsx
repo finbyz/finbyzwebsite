@@ -5,7 +5,7 @@ import TextSection from '@/components/sections/text';
 import { List } from '@/components/sections/list';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
-import CTA from '@/components/sections/cta';
+
 
 export default function Page() {
     return (
@@ -325,23 +325,6 @@ export default function Page() {
                     variant: "iconCard"
                 }}
             />
-
-            {/* 4️⃣ CTA SECTION */}
-            <section>
-                <div className="py-8">
-                    <CTA
-                        data={{
-                            subheading: { text: "Ready to Transform?", icon: "Zap" },
-                            title: "Request Your ERPNext Performance Audit Today",
-                            highlightText: 'ERPNext',
-                            description: "Take the first step to unlock unmatched speed, reliability, and efficiency for your business.",
-                            primaryButton: { text: "Contact Us", action: 'https://finbyz.tech/contact', icon: "Mail" },
-                            secondaryButton: { text: "Learn About Our Approach", action: "#overview", icon: "ArrowRight" },
-                            trustIndicator: { text: "10+ Years of ERPNext Success", icon: "Smile" }
-                        }}
-                    />
-                </div>
-            </section>
         </>
     );
 }

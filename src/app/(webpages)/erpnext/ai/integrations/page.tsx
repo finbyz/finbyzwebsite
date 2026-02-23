@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import DynamicHero from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { MailCheck, Users, MessageCircle, FileText, Sparkles, FileSearch, Mic, ScanLine, Send, Brain, Bot, DatabaseZap, CheckCircle, ArrowRight } from 'lucide-react';
 
@@ -160,7 +160,6 @@ export default function AiProductsHomePage() {
 
       <Section useGradient>
         <div className="container-custom py-16">
-          <CTA data={ctaData} />
         </div>
       </Section>
     </>

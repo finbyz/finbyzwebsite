@@ -2,7 +2,7 @@
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
-import CTA from '@/components/sections/cta';
+
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import AgricultureFeatureGrid from '@/components/ai_components/AgricultureFeatureGrid';
 import Image from 'next/image';
@@ -150,37 +150,6 @@ export default function Page() {
                     <QuoteBlock
                         text="Without change, performance would never improve. Adopting the latest technology is the only road to sustainable growth."
                         isHeading={false}
-                    />
-                </div>
-            </Section>
-
-            {/* Section 6: CTA Section */}
-            <Section>
-                <div className="py-16">
-                    <CTA
-                        data={{
-                            subheading: {
-                                text: 'Ready to Revolutionize Your Agro Business?',
-                                icon: 'leaf',
-                            },
-                            title: 'Get Started with ERPNext for Agriculture',
-                            highlightText: "ERPNext for Agriculture",
-                            description: 'Join leading agribusinesses and transform your operations with a modern, scalable ERP solution. Request your personalized demo today.',
-                            primaryButton: {
-                                text: 'Request a Demo',
-                                icon: 'arrowRight',
-                                action: handleContact,
-                            },
-                            secondaryButton: {
-                                text: 'Learn More',
-                                icon: 'info',
-                                action: "#content"
-                            },
-                            trustIndicator: {
-                                text: 'Certified ERPNext Partners',
-                                icon: 'checkCircle',
-                            },
-                        }}
                     />
                 </div>
             </Section>

@@ -6,7 +6,7 @@ import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import FeatureCard from '@/components/ai_components/FeatureCard';
 import BenefitCard from '@/components/ai_components/BenefitCard';
 import ProcessPhasesTabs from '@/components/ai_components/ProcessPhasesTabs';
-import CTA from '@/components/sections/cta';
+
 
 const heroHighlightWords = [ "Logistics", "Industry"];
 
@@ -217,45 +217,6 @@ export default function Page() {
         </div>
       </Section>
 
-      {/* CTA Section */}
-      <Section>
-        <div className="py-8 custom-cta">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to Transform Your Logistics Operations?',
-                icon: 'Truck',
-              },
-              title: 'Get Started with ERPNext for Logistics Industry',
-              highlightText:"ERPNext for Logistics Industry",
-              description: 'Contact us today to schedule a personalized demo and see how our ERP solutions can drive efficiency and growth for your logistics business.',
-              primaryButton: {
-                text: 'Request a Demo',
-                icon: 'ArrowRight',
-                action: () => {
-                  if (typeof window !== 'undefined') {
-                    window.location.href = '/contact';
-                  }
-                },
-              },
-              secondaryButton: {
-                text: 'Learn More',
-                icon: 'Download',
-                action: "#benefits-section"
-              },
-              trustIndicator: {
-                text: 'Trusted by leading logistics companies',
-                icon: 'ShieldCheck',
-              },
-            }}
-          />
-        </div>
-        <style jsx>{`
-          .custom-cta h2 {
-            color: #1A5276 !important;
-          }
-        `}</style>
-      </Section>
     </>
   );
 }

@@ -5,7 +5,7 @@ import Section from "@/components/sections/Section";
 import DynamicHero from "@/components/sections/dynamic-hero";
 import ResponsiveCardGrid from "@/components/sections/responsive-card-grid";
 import Benefits from "@/components/sections/benefits";
-import CTA from "@/components/sections/cta";
+
 
 export default function CaseStudiesPageContent() {
     return (
@@ -130,26 +130,6 @@ export default function CaseStudiesPageContent() {
                                 palette: { iconBg: "#27AE60", iconColor: "#ffffff" },
                             },
                         ],
-                    }}
-                />
-            </Section>
-
-            {/* CTA Section */}
-            <Section className="py-16">
-                <CTA
-                    data={{
-                        subheading: { text: "Join Our Success Stories", icon: "Star" },
-                        title: "Ready to Write Your Success Story?",
-                        description:
-                            "Contact us today to discuss how we can help you achieve similar results.",
-                        primaryButton: {
-                            text: "Get Started",
-                            action: "/contact",
-                        },
-                        secondaryButton: {
-                            text: "Explore Services",
-                            action: "/solutions",
-                        },
                     }}
                 />
             </Section>

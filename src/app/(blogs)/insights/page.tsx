@@ -5,7 +5,7 @@ import DynamicHero from '@/components/sections/dynamic-hero';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Monitor, TrendingUp, AlertCircle, BarChart3, ChevronRight, Code } from 'lucide-react';
-import CTA from '@/components/sections/cta';
+
 
 const FEATURED_INSIGHTS = [
     {
@@ -227,17 +227,6 @@ export default function InsightsPage() {
                     </div>
                 </div>
             </Section>
-
-            <CTA
-                data={{
-                    title: "Ready to implement these insights?",
-                    description: "Talk to our experts about applying these strategies to your business.",
-                    primaryButton: {
-                        text: "Start a Conversation",
-                        action: "/contact"
-                    }
-                }}
-            />
         </div>
     );
 }

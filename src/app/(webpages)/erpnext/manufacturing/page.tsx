@@ -3,7 +3,7 @@
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
-import CTA from '@/components/sections/cta';
+
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import ManufacturingTypesGrid from '@/components/ai_components/ManufacturingTypesGrid';
 import ManufacturingBenefitsGrid from '@/components/ai_components/ManufacturingBenefitsGrid';
@@ -225,31 +225,6 @@ export default function Page() {
 
       <Section>
         <div className="py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to transform your manufacturing operations?',
-                icon: 'Factory',
-              },
-              title: 'Get Started with ERPNext for Manufacturing',
-              highlightText: "ERPNext for Manufacturing",
-              description: 'Contact us today to schedule a personalized demo or consultation and see how ERPNext can streamline your production, inventory, and business processes.',
-              primaryButton: {
-                text: 'Request a Demo',
-                icon: 'ArrowRight',
-                action: handleSecondary,
-              },
-              secondaryButton: {
-                text: 'Contact Sales',
-                icon: 'Phone',
-                action: handlePrimary,
-              },
-              trustIndicator: {
-                text: 'Trusted by leading manufacturers',
-                icon: 'ShieldCheck',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

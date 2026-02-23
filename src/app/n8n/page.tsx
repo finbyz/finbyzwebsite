@@ -5,7 +5,7 @@ import Section from "@/components/sections/Section";
 import DynamicHero from "@/components/sections/dynamic-hero";
 import ResponsiveCardGrid from "@/components/sections/responsive-card-grid";
 import Benefits from "@/components/sections/benefits";
-import CTA from "@/components/sections/cta";
+
 
 export default function Page() {
     return (
@@ -172,26 +172,6 @@ export default function Page() {
                             }
                         ],
                         variant: "iconCard",
-                    }}
-                />
-            </Section>
-
-            {/* CTA Section */}
-            <Section className="py-16">
-                <CTA
-                    data={{
-                        subheading: { text: "Automate Everything", icon: "Zap" },
-                        title: "Ready to Streamline Your Operations?",
-                        description:
-                            "Stop wasting time on manual inputs. Let us build the invisible workforce that scales your business.",
-                        primaryButton: {
-                            text: "Start Automating",
-                            action: "/contact",
-                        },
-                        secondaryButton: {
-                            text: "Read Insights",
-                            action: "/n8n/insights",
-                        },
                     }}
                 />
             </Section>

@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import StructureData from "@/components/seo/StructureData";
-import FooterSection from "@/components/sections/FooterSection";
 
 export const metadata: Metadata = {
     title: "Pricing | Finbyz Tech",
@@ -17,7 +16,6 @@ export default async function Layout({ children }: { children: React.ReactNode }
     return (
         <main>
             {children}
-            <FooterSection docname="/pricing" />
             <StructureData type="webpage" />
         </main>
     );

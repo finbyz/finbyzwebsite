@@ -4,7 +4,7 @@ import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { List } from '@/components/sections/list';
-import CTA from '@/components/sections/cta';
+
 import WhatsappPolicyList from '@/components/ai_components/WhatsappPolicyList';
 import WhatsappMessagePolicyList from '@/components/ai_components/WhatsappMessagePolicyList';
 import UserRightsList from '@/components/ai_components/UserRightsList';
@@ -369,32 +369,6 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: "Ready to Secure Your Data?",
-                icon: "ShieldCheck",
-              },
-              title: "Contact Us for More Information or Support",
-              description: "Have questions about our privacy policy or your data? Reach out to our support team for assistance.",
-              primaryButton: {
-                text: "Contact Support",
-                icon: "Mail",
-                action: () => {
-                  window.location.href = '/contact';
-                },
-              },
-              secondaryButton: {
-                text: "Learn More",
-                icon: "Info",
-                action: "#info-section"
-              },
-              trustIndicator: {
-                text: "Trusted by 1000+ Businesses",
-                icon: "Users",
-              },
-            }}
-          />
         </div>
       </Section>
     </>

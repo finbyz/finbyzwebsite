@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import List from '@/components/sections/list';
 import PrivacySectionHeading from '@/components/ai_components/PrivacySectionHeading';
@@ -401,33 +401,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <Section>
-        <div className="py-8">
-          <CTA
-            data={{
-              subheading: { text: 'Hire Our Experts', icon: 'Rocket' },
-              title: 'Ready to Build Your Dream Team?',
-              highlightText:'Team',
-              description: "Let Finbyz Tech connect you with pre-vetted expert developers who can start contributing to your project immediately.",
-              primaryButton: {
-                text: 'Start Hiring Today',
-                icon: 'MessageCircle',
-                action: 'https://finbyz.tech/contact',
-              },
-              secondaryButton: {
-                text: 'Book a Consultation',
-                icon: 'Calendar',
-                action: 'https://finbyz.tech/contact',
-              },
-              trustIndicator: {
-                text: '200+ ERPNext Projects | 7000+ Users | 12+ Countries',
-                icon: 'CheckCircle',
-              }
-            }}
-          />
-        </div>
-      </Section>
     </div>
   );
 }

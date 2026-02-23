@@ -1,7 +1,7 @@
 'use client';
 import DynamicHero from '@/components/sections/dynamic-hero';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
-import CTA from '@/components/sections/cta';
+
 
 export default function ProactiveAIAssistantPage() {
     return (
@@ -290,20 +290,6 @@ export default function ProactiveAIAssistantPage() {
                     </p>
                 </div>
             </section >
-
-            {/* CTA SECTION */}
-            < CTA
-                data={{
-                    subheading: { text: 'Ready to Transform Your Life?' },
-                    title: 'Stop Managing Your Life. Start Living It.',
-                    description: 'Discover how Moltbot and proactive AI assistants can eliminate decision fatigue, automate mundane tasks, and give you back your most valuable resource: time.',
-                    primaryButton: {
-                        text: 'Get Started with AI Automation',
-                        action: '/contact',
-                    },
-                }
-                }
-            />
         </>
     );
 }

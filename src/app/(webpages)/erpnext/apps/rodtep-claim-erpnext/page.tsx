@@ -3,7 +3,7 @@ import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import YouTubeEmbed from '@/components/sections/YouTubeEmbed';
 import List from '@/components/sections/list';
-import CTA from '@/components/sections/cta';
+
 import HowToUseRodtepAppList from '@/components/ai_components/HowToUseRodtepAppList';
 import Image from 'next/image';
 import { LucideDownload } from 'lucide-react';
@@ -126,31 +126,6 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to streamline your RODTEP claims?',
-                icon: 'check-circle',
-              },
-              title: 'Get Started with RODTEP Claim Management in ERPNext',
-              highlightText:"RODTEP Claim Management in ERPNext",
-              description: 'Simplify your export incentive process and automate your RODTEP and Duty Drawback claims. Download the app or contact us for a personalized demo.',
-              primaryButton: {
-                text: 'Download App',
-                icon: 'download',
-                action: () => window.open('https://frappecloud.com/marketplace/apps/rodtep_claim_management', '_blank'),
-              },
-              secondaryButton: {
-                text: 'Contact Us',
-                icon: 'mail',
-                action: () => window.open('https://finbyz.tech/contact', '_blank'),
-              },
-              trustIndicator: {
-                text: 'Trusted ERPNext Partner',
-                icon: 'star',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

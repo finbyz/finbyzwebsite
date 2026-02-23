@@ -328,36 +328,6 @@ export default function AIAutomationPageContent() {
           }}
         />
       </Section>
-
-      {/* CTA */}
-      <Section>
-        <CTA
-          data={{
-            subheading: { text: 'AI-Powered ERP Solutions', icon: 'Rocket' },
-            title: 'Ready to Automate Intelligently?',
-            highlightText: 'Automate Intelligently',
-            description:
-              'Let Finbyz Tech integrate Artificial Intelligence into your ERPNext workflows to drive efficiency, accuracy, and exponential business growth. Experience the future of automation today.',
-            primaryButton: {
-              text: 'Schedule Consultation',
-              icon: 'MessageCircle',
-              action: 'https://finbyz.tech/contact',
-            },
-            secondaryButton: {
-              text: 'Explore Solutions',
-              icon: 'Zap',
-              action: () => {
-                const el = document.getElementById('solutions')
-                if (el) el.scrollIntoView({ behavior: 'smooth' })
-              },
-            },
-            trustIndicator: {
-              text: '200+ ERP Projects | 7000+ Users | 12+ Countries',
-              icon: 'CheckCircle',
-            },
-          }}
-        />
-      </Section>
     </div>
   )
 }

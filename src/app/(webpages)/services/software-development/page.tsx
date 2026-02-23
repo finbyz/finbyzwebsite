@@ -6,7 +6,7 @@ import ServiceFlipCards from '@/components/ai_components/ServiceFlipCards';
 import HexProcessGrid from '@/components/ai_components/HexProcessGrid';
 import FeatureGrid from '@/components/ai_components/FeatureGrid';
 import ApproachFeatureGrid from '@/components/ai_components/ApproachFeatureGrid';
-import CTA from '@/components/sections/cta';
+
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import React from 'react';
@@ -245,7 +245,6 @@ export default function Page() {
       {/* Conclusion Section with CTA */}
       <Section>
         <div className="container-custom py-8">
-          <CTA data={ctaData} />
         </div>
       </Section>
     </>

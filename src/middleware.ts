@@ -5,7 +5,7 @@ const BASE_URL = process.env.FRAPPE_URL ?? ''
 
 let routeMap: Record<string, string> = {};
 let lastFetched = 0;
-const CACHE_TTL = 60_000;
+const CACHE_TTL = 3600;
 
 async function getRouteMap(): Promise<Record<string, string>> {
   const now = Date.now();
@@ -17,6 +17,9 @@ async function getRouteMap(): Promise<Record<string, string>> {
     const res = await fetch(`${BASE_URL}/api/resource/NextJS Page?fields=["route","actual_route"]&limit_page_length=0`, {
       headers: {
         "Authorization": `token ${process.env.FRAPPE_API_KEY}:${process.env.FRAPPE_API_SECRET}`,
+      },
+      next: {
+        revalidate: CACHE_TTL
       },
     });
     if (!res.ok) {

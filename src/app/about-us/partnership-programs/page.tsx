@@ -4,7 +4,7 @@ import TextSection from '@/components/sections/text';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
 import { List } from '@/components/sections/list';
-import CTA from '@/components/sections/cta';
+
 
 export default function Page() {
   return (
@@ -308,36 +308,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section>
-        <div className="py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to Partner for Success?',
-                icon: 'Handshake',
-              },
-              title: 'Start Your Strategic Partnership Journey Today',
-              highlightText:'Partnership Journey Today',
-              description: 'Connect with our partnership team to accelerate your growth, enhance your portfolio, and make a lasting impact. Let\'s build the future together.',
-              primaryButton: {
-                text: 'Contact Partnership Team',
-                icon: 'Send',
-                action: 'mailto:inquiry@finbyz.tech',
-              },
-              secondaryButton: {
-                text: 'See Program Details',
-                icon: 'ArrowRight',
-                action: 'https://finbyz.tech/contact',
-              },
-              trustIndicator: {
-                text: 'Trusted by 200+ global partners',
-                icon: 'CheckCircle',
-              },
-            }}
-          />
-        </div>
-      </section>
     </>
   );
 }

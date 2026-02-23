@@ -237,9 +237,6 @@ export default function Page() {
         data={benefitsData}
         className="container-custom"
       />
-
-      {/* 4️⃣ CTA Section (Required - Last) */}
-      <CTA data={ctaData} />
     </>
   )
 }

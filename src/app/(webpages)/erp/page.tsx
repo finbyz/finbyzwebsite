@@ -5,7 +5,7 @@ import Section from "@/components/sections/Section";
 import DynamicHero from "@/components/sections/dynamic-hero";
 import ResponsiveCardGrid from "@/components/sections/responsive-card-grid";
 import Benefits from "@/components/sections/benefits";
-import CTA from "@/components/sections/cta";
+
 import ModulesSection from "@/components/sections/modules-erp";
 import ErpModulesTabs from "@/components/ai_components/ErpModuleTabs";
 
@@ -142,26 +142,6 @@ export default function ERPPage() {
                                 palette: { iconBg: "#27AE60", iconColor: "#ffffff" },
                             },
                         ],
-                    }}
-                />
-            </Section>
-
-            {/* Final CTA */}
-            <Section className="py-16">
-                <CTA
-                    data={{
-                        subheading: { text: "Start Your Transformation", icon: "Rocket" },
-                        title: "Ready to Streamline Your Business?",
-                        description:
-                            "Contact us today for a free consultation and discover how the right ERP solution can drive your growth.",
-                        primaryButton: {
-                            text: "Schedule Consultation",
-                            action: "/contact",
-                        },
-                        secondaryButton: {
-                            text: "Request Demo",
-                            action: "/contact",
-                        },
                     }}
                 />
             </Section>

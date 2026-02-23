@@ -2,7 +2,7 @@
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import YouTubeEmbed from '@/components/sections/YouTubeEmbed';
-import CTA from '@/components/sections/cta';
+
 import HowToUseFDAppSteps from '@/components/ai_components/HowToUseFDAppSteps';
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
@@ -102,35 +102,6 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8 flex flex-col items-center text-center">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to simplify your FD management?',
-                icon: 'CheckCircle2'
-              },
-              title: 'Start Managing Fixed Deposits in ERPNext',
-              highlightText: "Fixed Deposits in ERPNext",
-              description: 'Automate, track, and optimize your financial assets with ease. Download the FD Management App or get in touch for a personalized demo.',
-              primaryButton: {
-                text: 'Download App',
-                icon: 'Download',
-                action: () => {
-                  window.open('https://frappecloud.com/marketplace/apps/fd_management', '_blank');
-                }
-              },
-              secondaryButton: {
-                text: 'Contact Us',
-                icon: 'Mail',
-                action: () => {
-                  window.location.href = '/contact';
-                }
-              },
-              trustIndicator: {
-                text: 'Trusted by ERPNext users',
-                icon: 'ShieldCheck'
-              }
-            }}
-          />
         </div>
       </Section>
     </>

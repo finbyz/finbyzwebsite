@@ -2,7 +2,7 @@
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
-import CTA from '@/components/sections/cta';
+
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import ERPNextPartnerServices from '@/components/ai_components/ERPNextPartnerServices';
 import ClientCountryGrid from '@/components/ai_components/ClientCountryGrid';
@@ -194,33 +194,6 @@ export default function Page() {
 
             <Section>
                 <div className="py-6">
-                    <CTA
-                        data={{
-                            subheading: {
-                                text: 'Ready to Transform Your Business?',
-                                icon: 'Rocket',
-                            },
-                            title: 'Partner with a Certified ERPNext Expert',
-                            highlightText: ' ERPNext Expert',
-                            description: 'Get in touch with Finbyz Tech for tailored ERPNext implementation, customization, and support. Let’s drive your business growth together!',
-                            primaryButton: {
-                                text: 'Get Started',
-                                icon: 'ArrowRight',
-                                action: () => {
-                                    window.location.href = '/contact';
-                                },
-                            },
-                            secondaryButton: {
-                                text: 'Learn More',
-                                icon: 'Info',
-                                action: "#certified"
-                            },
-                            trustIndicator: {
-                                text: 'Trusted by 100+ businesses globally',
-                                icon: 'ShieldCheck',
-                            },
-                        }}
-                    />
                 </div>
             </Section>
         </>

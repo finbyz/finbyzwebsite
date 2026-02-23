@@ -3,7 +3,7 @@ import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import FeatureGrid from '@/components/ai_components/FeatureGrid';
-import CTA from '@/components/sections/cta';
+
 import TradingGainTabs from '@/components/ai_components/TradingGainTabs';
 import Image from 'next/image';
 import { LucideArrowRight } from 'lucide-react';
@@ -164,34 +164,6 @@ export default function TradingPageContent() {
           </div>
         </div>
       </Section>
-
-      <CTA
-        data={{
-          subheading: {
-            text: 'Ready to transform your trading business?',
-            icon: 'rocket',
-          },
-          title: 'Get Started with ERP for Trading',
-          highlightText: "ERP for Trading",
-          description: 'Unlock efficiency, boost sales, and gain a competitive edge. Contact us today to see how our ERP can revolutionize your trading operations.',
-          primaryButton: {
-            text: 'Request a Demo',
-            icon: 'arrow-right',
-            action: () => {
-              window.open('/contact', '_self');
-            },
-          },
-          secondaryButton: {
-            text: 'Learn More',
-            icon: 'info',
-            action: "#erp-trading"
-          },
-          trustIndicator: {
-            text: 'Trusted by leading trading businesses',
-            icon: 'check-circle',
-          },
-        }}
-      />
     </>
   );
 }

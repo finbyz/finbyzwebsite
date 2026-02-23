@@ -1,7 +1,7 @@
 'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import WhyChooseFinbyzGrid from '@/components/ai_components/WhyChooseFinbyzGrid';
 import ERPNextServicesGrid from '@/components/ai_components/ERPNextServicesGrid';
 import ERPNextDifferenceGrid from '@/components/ai_components/ERPNextDifferenceGrid';
@@ -162,35 +162,6 @@ export default function Page() {
 
             <Section>
                 <div>
-                    <CTA
-                        data={{
-                            subheading: {
-                                text: 'Get in Touch',
-                                icon: 'Mail',
-                            },
-                            title: 'Start Your Implementation Journey',
-                            highlightText: "Finbyz",
-                            description: 'Contact us today to discuss your ERPNext implementation needs. Our experts are ready to build a roadmap for your success.',
-                            primaryButton: {
-                                text: 'Schedule a Consultation',
-                                icon: 'ArrowRight',
-                                action: () => {
-                                    if (typeof window !== 'undefined') {
-                                        window.location.href = '/contact';
-                                    }
-                                },
-                            },
-                            secondaryButton: {
-                                text: 'Learn More',
-                                icon: 'Info',
-                                action: "#implementation-service"
-                            },
-                            trustIndicator: {
-                                text: 'Trusted by leading businesses',
-                                icon: 'ShieldCheck',
-                            },
-                        }}
-                    />
                 </div>
             </Section>
         </>

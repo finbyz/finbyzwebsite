@@ -2,7 +2,7 @@
 
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import ContactInfoCard from '@/components/ai_components/ContactInfoCard';
 import ContactForm from '@/components/ai_components/ContactForm';
 import Image from 'next/image';
@@ -70,37 +70,6 @@ export default function Page() {
           <ContactForm />
         </div>
       </Section>
-
-      <CTA
-        data={{
-          subheading: {
-            text: 'Ready to Transform?',
-            icon: 'Phone',
-          },
-          title: 'Let’s Connect and Grow Your Business',
-          highlightText:"Grow Your Business",
-          description: 'Contact Finbyz for expert ERP and digital solutions. Our team is ready to help you streamline your business operations.',
-          primaryButton: {
-            text: 'Contact Now',
-            icon: 'Send',
-            action: () => {
-              const el = document.getElementById('contact-form-section');
-              if (el) el.scrollIntoView({ behavior: 'smooth' });
-            }
-          },
-          secondaryButton: {
-            text: 'Call Us',
-            icon: 'Phone',
-            action: () => {
-              window.open('tel:+919925701446', '_self');
-            }
-          },
-          trustIndicator: {
-            text: 'Trusted by 100+ businesses',
-            icon: 'CheckCircle',
-          }
-        }}
-      />
     </>
   );
 }

@@ -5,7 +5,7 @@ import TextSection from '@/components/sections/text';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
 import Differentiators from '@/components/sections/differentiators';
-import CTA from '@/components/sections/cta';
+
 
 export default function Page() {
   return (
@@ -202,40 +202,6 @@ export default function Page() {
                 highlight: 'FinTech operations?',
                 author: 'Finbyz Tech',
               }
-            }}
-          />
-        </div>
-      </section>
-
-      {/* CTA SECTION */}
-      <section>
-        <div className="py-4 animate-fade-in-up">
-          <CTA
-            data={{
-              component_type: 'Text',
-              subheading: {
-                text: 'Let\'s Build the Future of Finance',
-                icon: 'Rocket',
-              },
-              title: 'Contact Finbyz Tech for a Personalized Demo & Strategy Session',
-              description: 'Partner with experts for tailor-made ERPNext and FinTech software solutions. Let\'s drive growth, security, and innovation together.',
-              primaryButton: {
-                text: 'Get Started',
-                icon: 'UserCheck',
-                action: 'https://finbyz.tech/contact',
-              },
-              secondaryButton: {
-                text: 'Learn More',
-                icon: 'Radar',
-                action: () => {
-                  const el = document.getElementById('fintech');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                }
-              },
-              trustIndicator: {
-                text: 'Trusted by 200+ FinTech organizations worldwide',
-                icon: 'TrendingUp',
-              },
             }}
           />
         </div>

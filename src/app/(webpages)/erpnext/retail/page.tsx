@@ -6,7 +6,7 @@ import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
 import Differentiators from '@/components/sections/differentiators';
 import { List } from '@/components/sections/list';
-import CTA from '@/components/sections/cta';
+
 import { Award, Database, TrendingUp, Users, BarChart3, ShieldCheck, ShoppingCart, BarChartHorizontal, UserCheck, PackageCheck, Cloud, CreditCard, Truck, Store, Zap, UserPlus } from 'lucide-react';
 
 export default function Page() {
@@ -313,38 +313,6 @@ export default function Page() {
             accentColor="#F59E42"
             // Icon={BarChart3}
             iconColor="text-[#1A5276]"
-          />
-        </div>
-      </section>
-
-      {/* CTA SECTION */}
-      <section>
-        <div className="py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Start Your Retail Transformation',
-                icon: 'TrendingUp',
-              },
-              title: 'Ready to Transform Your Retail Business?',
-              highlightText:'Retail Business',
-              description:
-                'Unlock next-level efficiency and customer experience with Finbyz Tech’s tailored ERPNext retail solutions. Connect with our team for a free personalized consultation today!',
-              primaryButton: {
-                text: 'Get a Free Consultation',
-                icon: 'UserCheck',
-                action: 'https://finbyz.tech/contact',
-              },
-              secondaryButton: {
-                text: 'Explore Our ERPNext Services',
-                icon: 'Store',
-                action: 'https://finbyz.tech/erpnext-software',
-              },
-              trustIndicator: {
-                text: 'Trusted by leading retailers for digital transformation',
-                icon: 'Award',
-              },
-            }}
           />
         </div>
       </section>

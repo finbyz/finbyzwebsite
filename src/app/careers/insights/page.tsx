@@ -2,7 +2,7 @@
 
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import { Code2, BookOpen, UserCheck, Briefcase, Laptop, Rocket } from 'lucide-react';
 import Link from 'next/link';
 
@@ -123,16 +123,6 @@ export default function CareerInsightsPage() {
             </div>
           </div>
         </Section>
-
-        <CTA
-          data={{
-            subheading: { text: "Join Our Team", icon: "Rocket" },
-            title: "See Career Opportunities",
-            description: "Ready to apply your skills? Check out our current job openings and find your place at Finbyz.",
-            primaryButton: { text: 'View Job Openings', action: '/careers/job-openings' },
-            secondaryButton: { text: 'Life at Finbyz', action: '/about-us/life-at-finbyz' }
-          }}
-        />
       </main>
     </div>
   );

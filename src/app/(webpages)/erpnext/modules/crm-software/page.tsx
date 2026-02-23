@@ -4,7 +4,7 @@ import React from 'react';
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
-import CTA from '@/components/sections/cta';
+
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import FeatureCard from '@/components/ai_components/FeatureCard';
 import UniqueSellingPropositions from '@/components/ai_components/UniqueSellingPropositions';
@@ -157,41 +157,6 @@ export default function Page() {
               description="Generate detailed reports including lead reports, call logs, appointment summaries, and inquiry status insights using the CRM software."
             />
           </div>
-        </div>
-      </Section>
-
-      {/* Conclusion/CTA Section */}
-      <Section>
-        <div className="py-8">
-
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to transform your business with CRM?',
-                icon: 'CheckCircle2',
-              },
-              title: 'Get a Free Consultation',
-              description: 'Contact us today to discover how our CRM software can help you grow your business and build lasting customer relationships.',
-              primaryButton: {
-                text: 'Contact Us',
-                icon: 'Mail',
-                action: () => {
-                  window.location.href = '/contact';
-                },
-              },
-              secondaryButton: {
-                text: 'Request Demo',
-                icon: 'PlayCircle',
-                action: () => {
-                  window.location.href = '/contact';
-                },
-              },
-              trustIndicator: {
-                text: 'Trusted by 100+ businesses',
-                icon: 'ShieldCheck',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

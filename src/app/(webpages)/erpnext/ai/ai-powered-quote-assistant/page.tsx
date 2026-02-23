@@ -268,28 +268,6 @@ export default function Page() {
           }}
         />
       </Section>
-
-      {/* 4️⃣ CTA SECTION (Required - Last) */}
-      <Section>
-        <CTA
-          data={{
-            subheading: { text: 'Ready to accelerate quoting?', icon: 'Zap' },
-            title: 'Launch Quote Assistant for your ERPNext pipeline',
-            description:
-              'Cut response times from days to minutes. Automate intake, map items with AI, and ship accurate, tailored quotes—faster.',
-            primaryButton: { text: 'Request a Demo', icon: 'Bot', action: '/contact' },
-            secondaryButton: {
-              text: 'See Workflow Details',
-              icon: 'FileText',
-              action: () => {
-                const el = document.getElementById('quote-assistant');
-                if (el) el.scrollIntoView({ behavior: 'smooth' });
-              }
-            },
-            trustIndicator: { text: 'Secure. ERPNext-native. Human-in-the-loop.', icon: 'ShieldCheck' }
-          }}
-        />
-      </Section>
     </>
   )
 }

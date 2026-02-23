@@ -1,7 +1,7 @@
 'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import ModuleSection from '@/components/ai_components/ModuleSection';
 
 const modules = [
@@ -195,39 +195,6 @@ export default function Page() {
       </Section>
       <Section>
         <div className="py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to Transform Your Business?',
-                icon: 'Rocket',
-              },
-              title: 'Get Started with ERP Software Modules',
-              highlightText:"ERP Software Modules",
-              description: 'Unlock the full potential of your business with our comprehensive ERP modules. Contact us for a personalized demo or download our brochure to learn more.',
-              primaryButton: {
-                text: 'Request Demo',
-                icon: 'ArrowRight',
-                action: () => {
-                  if (typeof window !== 'undefined') {
-                    window.location.href = '/contact';
-                  }
-                }
-              },
-              secondaryButton: {
-                text: 'Download Brochure',
-                icon: 'Download',
-                action: () => {
-                  if (typeof window !== 'undefined') {
-                    window.location.href = '/resources/brochure';
-                  }
-                }
-              },
-              trustIndicator: {
-                text: 'Trusted by 100+ Businesses',
-                icon: 'ShieldCheck',
-              }
-            }}
-          />
         </div>
       </Section>
     </>

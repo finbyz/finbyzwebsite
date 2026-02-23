@@ -250,35 +250,7 @@ export default function Page() {
 
       {/* <Section useGradient>
         <div className="container-custom py-8 animate-fade-in-up">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to Secure Your Data?',
-                icon: 'ShieldCheck',
-              },
-              title: 'Contact Finbyz Tech for Privacy Questions',
-              description: 'Have questions or concerns about your privacy? Reach out to our team for more information or support.',
-              primaryButton: {
-                text: 'Email Us',
-                icon: 'Mail',
-                action: () => {
-                  window.location.href = 'mailto:support@finbyz.tech';
-                },
-              },
-              secondaryButton: {
-                text: 'Visit Website',
-                icon: 'Link2',
-                action: () => {
-                  window.open('https://finbyz.tech', '_blank');
-                },
-              },
-              trustIndicator: {
-                text: 'Trusted by 100+ Businesses',
-                icon: 'Users',
-              },
-            }}
-          />
-        </div>
+</div>
       </Section> */}
     </>
   );

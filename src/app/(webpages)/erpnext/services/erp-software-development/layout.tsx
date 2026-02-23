@@ -1,4 +1,3 @@
-import FooterSection from "@/components/sections/FooterSection";
 
 export default async function Layout({
   children,
@@ -13,7 +12,6 @@ export default async function Layout({
         {/* Main Page Content */}
         {children}
       </main>
-      <FooterSection docname="/custom-erp-development" showInquiryForm />
     </>
   );
 }

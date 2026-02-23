@@ -7,7 +7,7 @@ import BlogParagraph from '@/components/ai_components/blog/BlogParagraph';
 import BlogTableOfContents from '@/components/ai_components/blog/BlogTableOfContents';
 import BlogContent from '@/components/ai_components/blog/BlogContent';
 import BlogCheckList from '@/components/ai_components/blog/BlogCheckList';
-import CTA from '@/components/sections/cta';
+
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import Image from 'next/image';
 import { FaQuoteLeft } from 'react-icons/fa';

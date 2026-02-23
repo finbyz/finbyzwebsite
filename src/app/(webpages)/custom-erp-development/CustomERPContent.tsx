@@ -4,7 +4,7 @@ import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import List from '@/components/sections/list';
-import CTA from '@/components/sections/cta';
+
 import Image from 'next/image';
 import { FaCode, FaCogs, FaRocket, FaUserCheck, FaLayerGroup } from 'react-icons/fa';
 
@@ -124,35 +124,6 @@ export default function CustomERPContent() {
             {/* 5. CTA */}
             <Section id="contact">
                 <div className=" py-8">
-                    <CTA
-                        data={{
-                            subheading: {
-                                text: 'Have a vision?',
-                                icon: 'rocket',
-                            },
-                            title: 'Let\'s Build Your Dream ERP',
-                            highlightText: "Together",
-                            description: 'Whether you need a niche industry solution or a complex enterprise system, we have the expertise to deliver.',
-                            primaryButton: {
-                                text: 'Book Free Consultation',
-                                icon: 'calendar',
-                                action: () => {
-                                    window.location.href = '/contact';
-                                },
-                            },
-                            secondaryButton: {
-                                text: 'View Case Studies',
-                                icon: 'arrow-right',
-                                action: () => {
-                                    window.location.href = '/case-studies';
-                                },
-                            },
-                            trustIndicator: {
-                                text: '100% Code Ownership Available',
-                                icon: 'check-circle',
-                            },
-                        }}
-                    />
                 </div>
             </Section>
         </>

@@ -1,6 +1,6 @@
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import Link from 'next/link';
 import { BookOpen, FileText, Code, Users, Search, ArrowRight, ExternalLink, Workflow, Brain, ShoppingCart, CreditCard, MessageSquare, Truck } from 'lucide-react';
 
@@ -285,25 +285,6 @@ export default async function DocsPage() {
                     </div>
                 </div>
             </Section>
-
-            <CTA
-                data={{
-                    subheading: { text: "Still need help?", icon: "HelpCircle" },
-                    title: "Contact Support",
-                    description: "Can't find the documentation you're looking for? Our team is available to assist you.",
-                    primaryButton: {
-                        text: "Get Support",
-                        icon: "MessageCircle",
-                        action: '/contact'
-                    },
-                    secondaryButton: {
-                        text: "ERP Services",
-                        icon: "Server",
-                        action: '/erpnext/services'
-                    },
-                    trustIndicator: { text: "Dedicated support team", icon: "ShieldCheck" }
-                }}
-            />
         </>
     );
 }

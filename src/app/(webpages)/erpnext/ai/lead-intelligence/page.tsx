@@ -4,7 +4,7 @@ import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import ProcessWorkflow from '@/components/sections/process-workflow';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
-import CTA from '@/components/sections/cta';
+
 
 export default function Page() {
   const seoTitle = 'Lead Intelligence: Revolutionizing Inquiry Processing';
@@ -216,8 +216,6 @@ export default function Page() {
         data={benefitsData}
       />
 
-      {/* 4️⃣ CTA SECTION (Required - Last) */}
-      <CTA data={ctaData} />
     </main>
   );
 }

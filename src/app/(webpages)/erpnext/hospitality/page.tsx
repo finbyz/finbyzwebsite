@@ -5,7 +5,7 @@ import TextSection from '@/components/sections/text';
 import { List } from '@/components/sections/list';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
-import CTA from '@/components/sections/cta';
+
 
 import { BookUser, Layers, BedDouble, FileText, LineChart, ShieldCheck, Users, Workflow, UserCheck, LayoutList, Briefcase, ListChecks, PackageSearch, BarChart, UserCircle, Headset, Coins, Trophy, Store, ThumbsUp, MessageCircle, Users2 } from 'lucide-react';
 
@@ -277,35 +277,6 @@ export default function Page() {
             ]
           }}
         />
-      </section>
-
-      {/* CTA SECTION */}
-      <section>
-        <div className="py-8">
-          <CTA
-            data={{
-              component_type: 'Text',
-              subheading: { text: 'Embrace Smarter Hospitality', icon: 'ThumbsUp' },
-              title: 'Ready to revolutionize your Travel & Hospitality operations?',
-              highlightText:'Travel & Hospitality',
-              description: 'Contact Finbyz Tech for a free consultation and discover how our tailored ERPNext solutions can elevate your business.',
-              primaryButton: {
-                text: 'Get Free Consultation',
-                icon: 'UserCheck',
-                action: 'https://finbyz.tech/contact'
-              },
-              secondaryButton: {
-                text: 'Learn More',
-                icon: 'BookUser',
-                action: () => { const el = document.getElementById('overview'); if (el) el.scrollIntoView({ behavior: 'smooth' }); }
-              },
-              trustIndicator: {
-                text: 'Trusted by 200+ hospitality businesses worldwide',
-                icon: 'Users2'
-              }
-            }}
-          />
-        </div>
       </section>
     </>
   );

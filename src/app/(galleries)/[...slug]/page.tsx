@@ -3,7 +3,6 @@ import { getFullGallery, getGalleryRoutes } from '@/lib/gallery';
 import Tutorials from './Tutorials';
 import { Metadata } from 'next';
 import { generateAutoMetadata } from '@/lib/seo-metadata';
-import FooterSection from '@/components/sections/FooterSection';
 
 type PageProps = {
   params: Promise<{ slug: string[] }>;
@@ -50,7 +49,6 @@ const GalleryPage = async ({ params }: PageProps) => {
 
   return <>
     <Tutorials data={galleries} />
-    <FooterSection docname={slugStr} showBusinessSlider={true} showInquiryForm={false} />
   </>
 };
 

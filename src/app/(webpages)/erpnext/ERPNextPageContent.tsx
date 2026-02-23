@@ -6,7 +6,7 @@ import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import ERPNextFeatureGrid from '@/components/ai_components/ERPNextFeatureGrid';
 import ERPNextKeyFeaturesSlider from '@/components/ai_components/ERPNextKeyFeaturesSlider';
 import List from '@/components/sections/list';
-import CTA from '@/components/sections/cta';
+
 import Image from 'next/image';
 import { FaCheckCircle } from 'react-icons/fa';
 
@@ -222,35 +222,6 @@ export default function ERPNextPageContent() {
 
       <Section>
         <div className=" py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to Transform Your Business?',
-                icon: 'rocket',
-              },
-              title: 'Get Started with ERPNext Today',
-              highlightText: "ERPNext",
-              description: 'Experience the power of a unified, open-source ERP solution. Contact us for a free consultation or demo.',
-              primaryButton: {
-                text: 'Request a Demo',
-                icon: 'play-circle',
-                action: () => {
-                  window.location.href = '/contact';
-                },
-              },
-              secondaryButton: {
-                text: 'Contact Us',
-                icon: 'mail',
-                action: () => {
-                  window.location.href = '/contact';
-                },
-              },
-              trustIndicator: {
-                text: 'Trusted by 100+ businesses worldwide',
-                icon: 'check-circle',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

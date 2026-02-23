@@ -2,7 +2,7 @@
 
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import { FileText, Star, BarChart3, Factory, AlertTriangle, Info, Workflow, ListChecks, TrendingUp, Rocket, LineChart, Settings, Calendar, BookOpen } from 'lucide-react';
 import Link from 'next/link';
 
@@ -101,16 +101,6 @@ export default function ERPInsightsPage() {
             })}
           </div>
         </Section>
-
-        <CTA
-          data={{
-            subheading: { text: "Need Expert Advice?", icon: "BookOpen" },
-            title: "Consult with ERP Specialists",
-            description: "Our team has guided hundreds of businesses through successful ERP implementations. Let us help you navigate your journey.",
-            primaryButton: { text: 'Book Consultation', action: '/contact' },
-            secondaryButton: { text: 'View Solutions', action: '/solutions/erp' }
-          }}
-        />
       </main>
     </div>
   );

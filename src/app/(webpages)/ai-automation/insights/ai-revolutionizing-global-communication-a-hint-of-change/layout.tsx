@@ -1,4 +1,3 @@
-import FooterSection from "@/components/sections/FooterSection";
 
 export default async function Layout({
   children,
@@ -14,7 +13,6 @@ export default async function Layout({
         
         
       </main>
-    <FooterSection docname="/ai-automation/insights/ai-revolutionizing-global-communication-a-hint-of-change" />
     </>
   );
 }

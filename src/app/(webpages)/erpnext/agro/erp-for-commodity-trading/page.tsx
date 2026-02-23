@@ -2,7 +2,7 @@
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
-import CTA from '@/components/sections/cta';
+
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import AgricultureFeatureGrid from '@/components/ai_components/AgricultureFeatureGrid';
 import Image from 'next/image';
@@ -140,38 +140,6 @@ export default function Page() {
               isHeading={false}
             />
           </div>
-        </div>
-      </Section>
-
-      {/* CTA Section */}
-      <Section>
-        <div className="py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to Transform Your Agro Business?',
-                icon: 'leaf',
-              },
-              title: 'Get Started with ERPNext for Agriculture',
-              highlightText: "ERPNext for Agriculture",
-              description: 'Contact our experts to discuss your requirements and see how ERPNext can revolutionize your agricultural operations.',
-              primaryButton: {
-                text: 'Request a Demo',
-                icon: 'arrowRight',
-                action: handleContact,
-              },
-              secondaryButton: {
-                text: 'Learn More',
-                icon: 'info',
-                // action: handleLearnMore,
-                action: "#erp-for-agro"
-              },
-              trustIndicator: {
-                text: 'Trusted by leading agro businesses',
-                icon: 'checkCircle',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

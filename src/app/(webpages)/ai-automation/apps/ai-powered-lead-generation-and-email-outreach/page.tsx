@@ -4,7 +4,7 @@ import Section from '@/components/sections/Section';
 import ProcessWorkflow from '@/components/sections/process-workflow';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Points from '@/components/sections/points';
-import CTA from '@/components/sections/cta';
+
 import AdvantageList from '@/components/ai_components/AdvantageList';
 
 export default function Page() {
@@ -157,18 +157,6 @@ export default function Page() {
         />
       </Section>
 
-      {/* 4️⃣ CTA SECTION (Required - Last) */}
-      <CTA
-        data={{
-          subheading: { text: 'Ready to scale your outreach?', icon: 'Rocket' },
-          title: 'Launch AI-Powered Outreach',
-          description:
-            'See how AI-driven research and automated drafting can transform your pipeline. Get a live demo or talk to an expert today.',
-          primaryButton: { text: 'Get a Demo', icon: 'Play', action: () => { window.location.href = '/contact'; } },
-          secondaryButton: { text: 'Download Workflow', icon: 'Download', action: '#resources' },
-          trustIndicator: { text: 'No spam. Cancel anytime.', icon: 'ShieldCheck' }
-        }}
-      />
     </>
   );
 }

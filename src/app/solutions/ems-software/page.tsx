@@ -2,7 +2,7 @@
 
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import { MessageCircle, TreeDeciduous, Siren, Radio, MapPin, Users, Activity } from 'lucide-react';
 import Link from 'next/link';
 
@@ -127,16 +127,6 @@ export default function EMSSoftwarePage() {
             </div>
           </div>
         </Section>
-
-        <CTA
-          data={{
-            subheading: { text: "Enhance Your Response", icon: "Activity" },
-            title: "See EMS in Action",
-            description: "Schedule a demo to see how our Emergency Management System can improve your organization's readiness and response capabilities.",
-            primaryButton: { text: 'Request Demo', action: '/contact' },
-            secondaryButton: { text: 'Contact Support', action: '/contact' }
-          }}
-        />
       </main>
     </div>
   );

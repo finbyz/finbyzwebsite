@@ -1,4 +1,3 @@
-import FooterSection from "@/components/sections/FooterSection";
 
 const PAGE_SLUG = "it-services-ahmedabad";
 
@@ -10,7 +9,6 @@ export default async function Layout({
   return (
     <>
       <main>{children}</main>
-      <FooterSection docname={`/${PAGE_SLUG}`} />
     </>
   );
 }

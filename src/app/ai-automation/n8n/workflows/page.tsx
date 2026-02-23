@@ -2,7 +2,7 @@
 
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import { Workflow, GitBranch, Repeat, Database, MessageSquare, Share2, Mail, Users, FileCheck } from 'lucide-react';
 import Link from 'next/link';
 
@@ -119,15 +119,6 @@ export default function N8nWorkflowsPage() {
 
                 <Section>
                     <div className="py-12">
-                        <CTA
-                            data={{
-                                subheading: { text: "Need Special Logic?", icon: "workflow" },
-                                title: "Custom Workflow Development",
-                                description: "Have a unique automation challenge? Our certified n8n experts can build custom workflows tailored to your specific needs.",
-                                primaryButton: { text: 'Contact Us', action: '/contact' },
-                                secondaryButton: { text: 'Learn N8n', action: '/ai-automation/n8n' }
-                            }}
-                        />
                     </div>
                 </Section>
             </main>

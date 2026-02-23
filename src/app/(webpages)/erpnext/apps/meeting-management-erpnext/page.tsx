@@ -4,7 +4,7 @@ import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
 import YouTubeEmbed from '@/components/sections/YouTubeEmbed';
-import CTA from '@/components/sections/cta';
+
 import MeetingGifImage from '@/components/ai_components/MeetingGifImage';
 import { FaDownload } from 'react-icons/fa';
 
@@ -91,31 +91,6 @@ export default function Page() {
 
       <Section>
         <div className=" py-8 animate-fade-in-up">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to streamline your meetings?',
-                icon: 'calendar-check',
-              },
-              title: 'Get Started with ERPNext Meeting Management',
-              highlightText:"ERPNext Meeting Management",
-              description: 'Download the app now and experience seamless meeting scheduling, note-taking, and action tracking—all within ERPNext.',
-              primaryButton: {
-                text: 'Download Now',
-                icon: 'download',
-                action: () => window.open('https://frappecloud.com/marketplace/apps/meeting_management', '_blank'),
-              },
-              secondaryButton: {
-                text: 'Contact Us',
-                icon: 'mail',
-                action: () => window.location.href = '/contact',
-              },
-              trustIndicator: {
-                text: 'Trusted by ERPNext users',
-                icon: 'star',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

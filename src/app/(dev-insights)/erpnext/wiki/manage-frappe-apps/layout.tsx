@@ -1,7 +1,6 @@
 import StructureData from "@/components/seo/StructureData";
 
 import { Metadata } from "next";
-import FooterSection from "@/components/sections/FooterSection";
 
 export const metadata: Metadata = {
   title: "Bench App Management Cheat Sheet: Install, Remove & Get Apps",
@@ -50,8 +49,6 @@ export default async function Layout({ children }: { children: React.ReactNode }
       {children}
 
       <StructureData name="SNI-00072" type="code-snippet" />
-      
-      <FooterSection docname="/erpnext/wiki/manage-frappe-apps" />
     </>
   );
 }

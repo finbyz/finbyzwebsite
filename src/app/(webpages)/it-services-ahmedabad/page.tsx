@@ -1,9 +1,9 @@
 'use client';
 
-import CTA from "@/components/sections/cta";
-import InquiryForm from "@/components/ui/InquiryForm";
+
 import ResponsiveCardGrid from "@/components/sections/responsive-card-grid";
 import { Code, Users, TrendingUp, Shield, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
 
 export default function ITServicesAhmedabadPage() {
   const handleGetStarted = () => {
@@ -54,12 +54,12 @@ export default function ITServicesAhmedabadPage() {
               >
                 Get Free Project Quote
               </button>
-              <a
+              <Link
                 href="/contact"
                 className="bg-white hover:bg-gray-100 text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
               >
                 View Our Portfolio
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -307,35 +307,6 @@ export default function ITServicesAhmedabadPage() {
           </div>
         </div>
       </section>
-
-      {/* CTA */}
-      <CTA
-        data={{
-          title: "Ready to Start Your IT Project?",
-          highlightText: "IT Project",
-          description: "Get a free consultation and detailed project proposal. Our Ahmedabad team is ready to help you transform your business with technology.",
-          subheading: { text: "Free Consultation Available", icon: "CalendarCheck" },
-          primaryButton: { text: "Schedule Meeting", icon: "CalendarCheck", action: '/contact' },
-          secondaryButton: { text: "Call Us Now", icon: "Phone", action: "tel:+919925701446" },
-          trustIndicator: { text: "✓ Based in Navrangpura | ✓ 100+ Projects | ✓ Free Consultation", icon: "CalendarCheck" }
-        }}
-      />
-
-      {/* Inquiry Form */}
-      <InquiryForm
-        data={{
-          title: "Get Free IT Consultation in Ahmedabad",
-          highlightText: "Free IT Consultation",
-          description: "Tell us about your project requirements. Our team will get back to you within 24 hours with a detailed proposal and cost estimate.",
-          fields: {
-            name: "Name",
-            organization: "Company Name",
-            email: "Email",
-            mobile: "Mobile No"
-          },
-          submitText: "REQUEST FREE CONSULTATION"
-        }}
-      />
     </div>
   );
 }

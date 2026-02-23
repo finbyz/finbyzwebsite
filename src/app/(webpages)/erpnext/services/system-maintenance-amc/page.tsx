@@ -5,7 +5,7 @@ import TextSection from '@/components/sections/text';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
 import Comment from '@/components/sections/comment';
-import CTA from '@/components/sections/cta';
+
 
 export default function Page(): ReactElement {
   return (
@@ -272,41 +272,6 @@ export default function Page(): ReactElement {
             data={{
               text: "Don't let neglected maintenance compromise your business operations. Partner with Finbyz Tech to ensure your ERPNext system is always secure, high-performing, and ready to support your growth.",
               symbol: '',
-            }}
-          />
-        </div>
-      </section>
-
-      {/* CTA SECTION */}
-      <section>
-        <div className="py-8">
-          <CTA
-            data={{
-              component_type: 'Text',
-              subheading: {
-                text: 'Secure your ERPNext investment',
-                icon: 'ShieldCheck',
-              },
-              title: 'Ready to Optimize Your ERPNext Performance?',
-              highlightText:'ERPNext',
-              description: 'Contact Finbyz Tech today for a consultation and discover how our experts can design a comprehensive maintenance and optimization plan for your business.',
-              primaryButton: {
-                text: 'Connect with Experts',
-                icon: 'Send',
-                action: 'https://finbyz.tech/contact',
-              },
-              secondaryButton: {
-                text: 'Explore Our Methodology',
-                icon: 'Lightbulb',
-                action: () => {
-                  const el = document.getElementById('overview');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                },
-              },
-              trustIndicator: {
-                text: 'Over 200+ ERPNext projects delivered for 7000+ users globally',
-                icon: 'Users',
-              },
             }}
           />
         </div>

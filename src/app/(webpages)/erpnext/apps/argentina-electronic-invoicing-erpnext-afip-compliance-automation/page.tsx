@@ -4,7 +4,7 @@ import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
 import YouTubeEmbed from '@/components/sections/YouTubeEmbed';
-import CTA from '@/components/sections/cta';
+
 import ProcessStepImageCard from '@/components/ai_components/ProcessStepImageCard';
 import Image from 'next/image';
 import { FaCheckCircle } from 'react-icons/fa';
@@ -559,33 +559,6 @@ export default function Page() {
 
 
           <div className="mt-6">
-            <CTA
-              data={{
-                subheading: {
-                  text: 'Ready to Automate Your Invoicing?',
-                  icon: 'BsQrCode'
-                },
-                title: 'Get AFIP-Compliant Electronic Invoicing in ERPNext',
-                highlightText: "Electronic Invoicing in ERPNext",
-                description: 'Contact us to implement seamless, automated, and compliant invoicing for your business in Argentina.',
-                primaryButton: {
-                  text: 'Request a Demo',
-                  icon: 'HiOutlineDocumentText',
-                  action: () => {
-                    if (typeof window !== 'undefined') window.location.href = '/contact';
-                  }
-                },
-                secondaryButton: {
-                  text: 'Learn More',
-                  icon: 'TbApi',
-                  action: "#invoice"
-                },
-                trustIndicator: {
-                  text: 'Trusted by leading businesses in Argentina',
-                  icon: 'FaCheckCircle'
-                }
-              }}
-            />
           </div>
         </div>
       </Section>

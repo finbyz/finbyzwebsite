@@ -9,7 +9,7 @@ import FeatureCard from '@/components/ai_components/FeatureCard';
 import FlipCard from '@/components/ai_components/FlipCard';
 import ERPNextImplementationProcessGrid from '@/components/ai_components/ERPNextImplementationProcessGrid';
 import ClientCountryGrid from '@/components/ai_components/ClientCountryGrid';
-import CTA from '@/components/sections/cta';
+
 import Grid from '@/components/layout/Grid';
 import { motion } from "framer-motion";
 
@@ -428,35 +428,6 @@ export default function Page() {
 
       <Section>
         <div className="py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to Transform Your Business?',
-                icon: 'rocket',
-              },
-              title: 'Start Your ERPNext Implementation Journey with Finbyz Tech',
-              highlightText: "ERPNext Implementation",
-              description: 'Contact us today to discuss your requirements and discover how our ERPNext experts can help you achieve operational excellence.',
-              primaryButton: {
-                text: 'Get a Free Consultation',
-                icon: 'arrow-right',
-                action: () => {
-                  window.location.href = '/contact';
-                },
-              },
-              secondaryButton: {
-                text: 'Learn More',
-                icon: 'info',
-                action: () => {
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                },
-              },
-              trustIndicator: {
-                text: 'Trusted by 140+ businesses',
-                icon: 'check-circle',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

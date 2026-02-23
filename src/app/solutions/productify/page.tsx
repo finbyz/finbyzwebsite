@@ -5,7 +5,7 @@ import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import FeatureGrid from '@/components/ai_components/FeatureGrid';
 import ProductifyImageSection from '@/components/ai_components/ProductifyImageSection';
 import ProductifyDualImageSection from '@/components/ai_components/ProductifyDualImageSection';
-import CTA from '@/components/sections/cta';
+
 import List from '@/components/sections/list';
 import Image from 'next/image';
 import { FaDownload } from 'react-icons/fa';
@@ -336,31 +336,6 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to boost your team’s productivity?',
-                icon: 'rocket',
-              },
-              title: 'Start with Productify Today',
-              highlightText :"Productify",
-              description: 'Empower your workforce with actionable insights and seamless monitoring. Try Productify and transform your productivity management.',
-              primaryButton: {
-                text: 'Get Productify',
-                icon: 'download',
-                action: () => window.open('https://frappecloud.com/marketplace/apps/productivity_next', '_blank'),
-              },
-              secondaryButton: {
-                text: 'Contact Us',
-                icon: 'mail',
-                action: () => window.location.href = '/contact',
-              },
-              trustIndicator: {
-                text: 'Trusted by leading teams',
-                icon: 'users',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

@@ -3,7 +3,7 @@
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
-import CTA from '@/components/sections/cta';
+
 import StatusIndicatorsGrid from '@/components/ai_components/StatusIndicatorsGrid';
 import BenefitsGrid from '@/components/ai_components/BenefitsGrid';
 import Image from 'next/image';
@@ -288,31 +288,6 @@ export default function Page() {
           <p className="text-gray-700 mb-6 container-custom">
             This workflow transition system provides comprehensive tracking, automated notifications, and detailed reporting to ensure smooth document processing and accountability across the organization. By leveraging role-based permissions and project-specific access controls, the system ensures relevant stakeholders stay informed while maintaining data security.
           </p>
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to streamline your workflow?',
-                icon: 'CheckCircle',
-              },
-              title: 'Get Started with Workflow Transition',
-              highlightText:"Workflow Transition",
-              description: 'Experience seamless document tracking, automated reminders, and actionable insights. Empower your team with accountability and transparency.',
-              primaryButton: {
-                text: 'Request Demo',
-                icon: 'ArrowRight',
-                action: handleGetStarted,
-              },
-              secondaryButton: {
-                text: 'Contact Sales',
-                icon: 'Mail',
-                action: handleContact,
-              },
-              trustIndicator: {
-                text: 'Trusted by leading organizations',
-                icon: 'ShieldCheck',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

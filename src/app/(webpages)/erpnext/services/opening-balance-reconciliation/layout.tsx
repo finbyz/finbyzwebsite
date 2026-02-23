@@ -1,4 +1,3 @@
-import FooterSection from "@/components/sections/FooterSection";
 
 const PAGE_SLUG = "erpnext/services/opening-balance-reconciliation";
 
@@ -50,7 +49,6 @@ export default async function Layout({
       <main>
         {children}
       </main>
-    <FooterSection docname="/erpnext/services/opening-balance-reconciliation" />
     </>
   );
 }

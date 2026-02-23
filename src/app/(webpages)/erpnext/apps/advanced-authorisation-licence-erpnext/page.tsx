@@ -4,7 +4,7 @@ import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import YouTubeEmbed from '@/components/sections/YouTubeEmbed';
 import List from '@/components/sections/list';
-import CTA from '@/components/sections/cta';
+
 import ImportExportInfoCards from '@/components/ai_components/ImportExportInfoCards';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
@@ -185,33 +185,6 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to streamline your import-export compliance?',
-                icon: 'CheckCircle',
-              },
-              title: 'Get Advanced Authorisation Licence App for ERPNext',
-              highlightText: "Authorisation Licence App for ERPNext",
-              description: 'Automate, track, and manage your licences with ease. Ensure compliance and maximize your export-import benefits today.',
-              primaryButton: {
-                text: 'Get Started',
-                icon: 'ArrowRight',
-                action: "#aal-section"
-              },
-              secondaryButton: {
-                text: 'Download App',
-                icon: 'Download',
-                action: () => {
-                  window.open('https://frappecloud.com/marketplace/apps/advance_authorisation_licence', '_blank');
-                },
-              },
-              trustIndicator: {
-                text: 'Trusted by leading exporters',
-                icon: 'ShieldCheck',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

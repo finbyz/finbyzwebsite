@@ -7,7 +7,7 @@ import FeatureCard from '@/components/ai_components/FeatureCard';
 import ProcessStepCard from '@/components/ai_components/ProcessStepCard';
 import IndustryHexGrid from '@/components/ai_components/IndustryHexGrid';
 import List from '@/components/sections/list';
-import CTA from '@/components/sections/cta';
+
 import Image from 'next/image';
 import { FaArrowRight } from 'react-icons/fa';
 
@@ -239,31 +239,6 @@ export default function Page() {
           </p>
         </div>
       </Section>
-      <CTA
-        data={{
-          subheading: {
-            text: 'Let’s Get Started',
-            icon: 'Rocket',
-          },
-          title: 'Hire Expert Web Application Developers',
-          highlightText: "Web Application Developers",
-          description: 'Contact us today to discuss your project and see how we can help you grow.',
-          primaryButton: {
-            text: 'Contact Us',
-            icon: 'ArrowRight',
-            action: handleContact,
-          },
-          secondaryButton: {
-            text: 'Learn More',
-            icon: 'Info',
-            action: handleLearnMore,
-          },
-          trustIndicator: {
-            text: 'Trusted by 100+ businesses',
-            icon: 'ShieldCheck',
-          },
-        }}
-      />
     </>
   );
 }

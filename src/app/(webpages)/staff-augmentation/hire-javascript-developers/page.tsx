@@ -5,7 +5,7 @@ import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import FeatureCard from '@/components/ai_components/FeatureCard';
 import FlipCard from '@/components/ai_components/FlipCard';
 import WhyChooseFinbyzGrid from '@/components/ai_components/WhyChooseFinbyzGrid';
-import CTA from '@/components/sections/cta';
+
 import CircleReasonTabs from '@/components/ai_components/CircleReasonTabs';
 import Image from 'next/image';
 import { CheckCircle2 } from 'lucide-react';
@@ -405,34 +405,6 @@ export default function Page() {
       {/* flex flex-col items-center */}
       <Section>
         <div className="py-8 ">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to Hire JavaScript Developers?',
-                icon: 'UserPlus',
-              },
-              title: 'Let’s Build Your Next Project Together',
-              description: 'Contact us today to discuss your requirements and get a free consultation with our JavaScript experts.',
-              primaryButton: {
-                text: 'Get a Free Consultation',
-                icon: 'ArrowRight',
-                action: () => {
-                  window.location.href = '/contact';
-                }
-              },
-              secondaryButton: {
-                text: 'See Our Work',
-                icon: 'Eye',
-                action: () => {
-                  window.location.href = '/erpnext/case-studies';
-                }
-              },
-              trustIndicator: {
-                text: 'Trusted by 100+ Clients',
-                icon: 'ShieldCheck',
-              }
-            }}
-          />
         </div>
       </Section>
     </>

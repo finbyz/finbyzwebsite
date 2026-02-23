@@ -1,4 +1,3 @@
-import FooterSection from "@/components/sections/FooterSection";
 
 export default async function Layout({
   children,
@@ -9,7 +8,6 @@ export default async function Layout({
   return (
     <>
       {children}
-      <FooterSection docname="/erpnext/ai/ai-powered-quote-assistant" />
     </>
   );
 }

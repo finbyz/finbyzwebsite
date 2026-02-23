@@ -4,7 +4,7 @@ import DynamicHero from '@/components/sections/dynamic-hero';
 import TextSection from '@/components/sections/text';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
-import CTA from '@/components/sections/cta';
+
 
 export default function Page() {
   return (
@@ -402,40 +402,7 @@ export default function Page() {
             }
           ],
         }}
-      /></div>
-
-      {/* CTA SECTION */}
-      <section>
-        <div className="py-8">
-          <CTA
-            data={{
-              component_type: 'Text',
-              subheading: { text: 'Connect with ERPNext Experts', icon: 'UserCheck' },
-              title: 'Ready to Scale Your ERPNext Capabilities?',
-              highlightText:'ERPNext',
-              description:
-                "Don't let talent constraints hinder your progress. With Finbyz Tech's ERPNext resource augmentation, you gain a strategic advantage: delivering projects on time, within budget, and to the highest standards.",
-              primaryButton: {
-                text: 'Get Started',
-                icon: 'ArrowRight',
-                action: 'https://finbyz.tech/contact',
-              },
-              secondaryButton: {
-                text: 'Learn More',
-                icon: 'Info',
-                action: () => {
-                  const el = document.getElementById('erpnext-resource');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                }
-              },
-              trustIndicator: {
-                text: 'ISO 27001:2013 Certified • 200+ Projects Delivered • 7000+ ERPNext Users',
-                icon: 'ShieldCheck',
-              }
-            }}
-          />
-        </div>
-      </section>
+        /></div>
     </>
   );
 }

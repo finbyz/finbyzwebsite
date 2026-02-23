@@ -3,7 +3,7 @@
 import DynamicHero from '@/components/sections/dynamic-hero';
 import TextSection from '@/components/sections/text';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
-import CTA from '@/components/sections/cta';
+
 import { List } from '@/components/sections/list';
 
 export default function Page() {
@@ -338,32 +338,6 @@ export default function Page() {
       {/* Call To Action Section */}
       <section>
         <div className="py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to Transform?',
-                icon: 'Rocket',
-              },
-              title: 'Start Your Pharma ERP Journey with Finbyz Tech',
-              highlightText:' Finbyz Tech',
-              description: 'Discover the impact of tailored ERP solutions on pharma efficiency, compliance, and growth. Book a personalized demo and consultation with our experts now.',
-              primaryButton: {
-                text: 'Book a Consultation',
-                icon: 'CalendarDays',
-                action: 'https://finbyz.tech/contact',
-              },
-              secondaryButton: {
-                text: 'See ERP in Action',
-                icon: 'PlayCircle',
-                action: 'https://finbyz.tech/contact',
-              },
-              trustIndicator: {
-                text: 'Trusted by 7000+ ERPNext users',
-                icon: 'Star',
-              },
-              //  • 7000+ users • 12+ countries
-            }}
-          />
         </div>
       </section>
     </>

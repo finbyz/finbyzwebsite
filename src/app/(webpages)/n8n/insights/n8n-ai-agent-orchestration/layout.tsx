@@ -1,4 +1,3 @@
-import FooterSection from "@/components/sections/FooterSection";
 
 export default async function Layout({
   children,
@@ -12,7 +11,6 @@ export default async function Layout({
       <main>
         {children}
       </main>
-    <FooterSection docname="/n8n/insights/n8n-ai-agent-orchestration" />
     </>
   );
 }

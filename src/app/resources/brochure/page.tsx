@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from "@/components/sections/Section";
-import CTA from "@/components/sections/cta";
+
 import DownloadSection from "@/components/ai_components/DownloadSection";
 import DownloadFormModal from "@/components/ai_components/DownloadFormModal";
 
@@ -193,36 +193,6 @@ export default function Page() {
           <p className="text-muted-foreground">Contact us to learn more about our solutions or request a personalized demo.</p>
         </div>
       </Section>
-      <CTA
-        data={{
-          subheading: {
-            text: "Get Started",
-            icon: "Rocket"
-          },
-          title: "Download, Explore, and Accelerate Your Growth!",
-          highlightText:'Accelerate Your Growth!',
-          description: "Access our brochures and discover how our AI-powered ERPNext solutions can help your business thrive.",
-          primaryButton: {
-            text: "Download Now",
-            icon: "Download",
-            action: () => {
-              const el = document.getElementById('brochure-section');
-              if (el) el.scrollIntoView({ behavior: 'smooth' });
-            }
-          },
-          secondaryButton: {
-            text: "Contact Sales",
-            icon: "MessageCircle",
-            action: () => {
-              window.location.href = '/contact';
-            }
-          },
-          trustIndicator: {
-            text: "Trusted by 100+ businesses",
-            icon: "ShieldCheck"
-          }
-        }}
-      />
     </>
   );
 }

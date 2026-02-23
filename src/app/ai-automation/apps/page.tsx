@@ -2,7 +2,7 @@
 
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import { MailPlus, Sparkles, PhoneCall } from 'lucide-react';
 import Link from 'next/link';
 
@@ -86,15 +86,6 @@ export default function AIAutomationAppsPage() {
 
         <Section useGradient>
           <div className="container-custom py-12">
-            <CTA
-              data={{
-                subheading: { text: "Go Custom", icon: "cpu" },
-                title: "Need a Custom AI Solution?",
-                description: "Our AI engineers can build bespoke automation tools tailored to your specific business challenges.",
-                primaryButton: { text: 'Talk to Experts', action: '/contact' },
-                secondaryButton: { text: 'Explore Pricing', action: '/pricing' }
-              }}
-            />
           </div>
         </Section>
       </main>

@@ -2,7 +2,7 @@
 
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import List from '@/components/sections/list';
 import PrivacySectionHeading from '@/components/ai_components/PrivacySectionHeading';
 import PrivacySubsectionHeading from '@/components/ai_components/PrivacySubsectionHeading';
@@ -170,39 +170,6 @@ export default function Page() {
 
       <Section useGradient>
         <div className="container-custom py-8 animate-fade-in-up">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to get started?',
-                icon: 'ShieldCheck',
-              },
-              title: 'Experience Secure Productivity with Productify',
-              highlightText:'Productify',
-              description: 'Contact us for any privacy concerns or to learn more about how we protect your data.',
-              primaryButton: {
-                text: 'Contact Support',
-                icon: 'Mail',
-                // action: () => {
-                //   window.location.href = 'mailto:support@finbyz.tech';
-                // },
-                action: () => {
-                  window.location.href = './contact';
-                },
-
-              },
-              secondaryButton: {
-                text: 'Back to Productify',
-                icon: 'ArrowLeft',
-                action: () => {
-                  window.location.href = '/solutions/productify';
-                },
-              },
-              trustIndicator: {
-                text: 'Trusted by leading organizations',
-                icon: 'ShieldCheck',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

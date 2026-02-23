@@ -7,7 +7,7 @@ import BlogTableOfContents from '@/components/ai_components/blog/BlogTableOfCont
 import BlogContent from '@/components/ai_components/blog/BlogContent';
 import BlogParagraph from '@/components/ai_components/blog/BlogParagraph';
 import BlogCheckList from '@/components/ai_components/blog/BlogCheckList';
-import CTA from '@/components/sections/cta';
+
 import Image from 'next/image';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { LucideShieldCheck, LucideClipboardList, LucideUsers, LucideFileText, LucideCheckCircle2, LucidePenTool, LucideSignature, LucideSend, LucideRefreshCw } from 'lucide-react';

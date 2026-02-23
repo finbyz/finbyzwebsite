@@ -1,7 +1,7 @@
 'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import WhyChooseFinbyzGrid from '@/components/ai_components/WhyChooseFinbyzGrid';
 import ERPNextServicesGrid from '@/components/ai_components/ERPNextServicesGrid';
 import ERPNextDifferenceGrid from '@/components/ai_components/ERPNextDifferenceGrid';
@@ -163,35 +163,6 @@ export default function Page() {
 
       <Section>
         <div>
-          <CTA
-            data={{
-              subheading: {
-                text: 'Get in Touch',
-                icon: 'Mail',
-              },
-              title: 'Start Your ERPNext Journey with Finbyz',
-              highlightText: "ERPNext",
-              description: 'Contact us today to discover how our ERPNext solutions can drive your business forward. Our team is ready to assist you at every step.',
-              primaryButton: {
-                text: 'Request a Consultation',
-                icon: 'ArrowRight',
-                action: () => {
-                  if (typeof window !== 'undefined') {
-                    window.location.href = '/contact';
-                  }
-                },
-              },
-              secondaryButton: {
-                text: 'Learn More',
-                icon: 'Info',
-                action: "#erp-service"
-              },
-              trustIndicator: {
-                text: 'Trusted by leading businesses',
-                icon: 'ShieldCheck',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

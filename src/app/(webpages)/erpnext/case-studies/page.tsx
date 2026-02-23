@@ -4,7 +4,7 @@ import TextSection from '@/components/sections/text';
 import Benefits from '@/components/sections/benefits';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import ERPIntroText from '@/components/sections/erp-intro-text';
-import CTA from '@/components/sections/cta';
+
 
 export default function Page() {
   return (
@@ -326,37 +326,6 @@ export default function Page() {
               ]
             }}
           /> */}
-        </div>
-      </section>
-
-      {/* CTA SECTION */}
-      <section>
-        <div className="py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to Transform Your Business?',
-                icon: 'Rocket'
-              },
-              title: 'Unlock ERPNext Success with Finbyz Tech',
-              highlightText: 'Finbyz Tech',
-              description: 'Get a personalized consultation and discover how our certified ERPNext experts can drive real results for your organization. Embrace efficiency, automation, and growth with solutions tailored to your needs.',
-              primaryButton: {
-                text: 'Connect for a Demo',
-                icon: 'ArrowRight',
-                action: 'https://finbyz.tech/contact'
-              },
-              secondaryButton: {
-                text: 'Explore Our Services',
-                icon: 'ExternalLink',
-                action: 'https://finbyz.tech/hire-erpnext-implementer'
-              },
-              trustIndicator: {
-                text: 'Trusted by 7000+ ERPNext Users Across 12+ Countries',
-                icon: 'UserCheck'
-              }
-            }}
-          />
         </div>
       </section>
     </>

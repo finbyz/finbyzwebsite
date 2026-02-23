@@ -1,7 +1,7 @@
 'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import List from '@/components/sections/list';
 import InvestmentProcessStepCard from '@/components/ai_components/InvestmentProcessStepCard';
 import Image from 'next/image';
@@ -141,35 +141,6 @@ export default function Page() {
         <div className="py-8 flex flex-col items-center text-center ">
           {/* <h3 className="text-xl font-semibold text-black"> */}
           {/* Ready to optimize your investment management?</h3> */}
-          <CTA
-            data={{
-              subheading: {
-                text: 'Get Started with ERPNext',
-                icon: 'TrendingUp',
-              },
-              title: 'Transform Your Investment Portfolio Management',
-              highlightText : 'Investment Portfolio Management',
-              description: 'Experience seamless, automated, and insightful investment tracking with ERPNext. Contact us to get started or request a demo today.',
-              primaryButton: {
-                text: 'Request Demo',
-                icon: 'ArrowRight',
-                action: () => {
-                  window.location.href = '/contact';
-                },
-              },
-              secondaryButton: {
-                text: 'Contact Us',
-                icon: 'Mail',
-                action: () => {
-                  window.location.href = '/contact';
-                },
-              },
-              trustIndicator: {
-                text: 'Trusted by leading businesses',
-                icon: 'ShieldCheck',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

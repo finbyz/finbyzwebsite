@@ -1,14 +1,12 @@
 import Hero from "@/components/sections/hero";
 import Benefits from "@/components/sections/benefits";
 import Testimonials from "@/components/sections/testimonials";
-import CTA from "@/components/sections/cta";
+
 import ClientLogos from "@/components/sections/client-logos";
 import ResponsiveCardGrid from "@/components/sections/responsive-card-grid";
-import InquiryForm from "@/components/ui/InquiryForm";
 import { Metadata } from "next";
 import CooprtaionSchema from "@/components/seo/CorporationSchema";
 import ModulesSection from "@/components/sections/modules-erp";
-import FooterSection from "@/components/sections/FooterSection";
 
 export const metadata: Metadata = {
   title: "ERP Solution Provider & AI Automation Experts | ERPNext Implementation | Finbyz Tech",
@@ -175,39 +173,9 @@ export default async function Home() {
 
         <ModulesSection />
         <Testimonials />
-        
+
 
         <ClientLogos data={{ useAPI: true, apiEndpoint: '/api/client-logos' }} />
-        <CTA
-          data={{
-            title: "Ready to Transform Your Business with ERP & AI?",
-            highlightText: "ERP & AI?",
-            description: "Join 100+ growing businesses worldwide. We believe technology can be the lighthouse to navigate towards your goals. Using latest technology, we steer our clients from where they are to where their Vision aspires them to be. Get a free consultation and custom roadmap for your digital transformation.",
-            subheading: { text: "Limited Consultation Slots Available", icon: "CalendarCheck" },
-            primaryButton: { text: "Book Free Demo", icon: "CalendarCheck", action: '/contact' },
-            secondaryButton: { text: "Get Custom Quote", icon: "FileText", action: '/contact' },
-            trustIndicator: { text: "✓ 100+ Successful Implementations | ✓ 24/7 Support | ✓ 10+ Years Experience", icon: "CalendarCheck" }
-          }}
-        />
-
-
-        {/* Inquiry Form */}
-        <InquiryForm
-          data={{
-            title: "Get Your Free ERP Consultation",
-            highlightText: "Free ERP Consultation",
-            description: "Need a solid software foundation for your business? Custom Enterprise software serves your unique business needs. Your business needs a reliable enterprise software solution to support many operations. Schedule a 30-minute consultation with our ERP experts. Get a custom roadmap and ROI analysis. No obligation required.",
-            fields: {
-              name: "Name",
-              organization: "Organization Name",
-              email: "Email",
-              mobile: "Mobile No"
-            },
-            submitText: "BOOK MY FREE CONSULTATION"
-          }}
-        />
-
-        <FooterSection docname="/homepage" showInquiryForm={false} />
 
       </main>
 

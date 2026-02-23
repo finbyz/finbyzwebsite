@@ -8,7 +8,7 @@ import WhereNotToUsePythonGrid from '@/components/ai_components/WhereNotToUsePyt
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import FlipCard from '@/components/ai_components/FlipCard';
 import WhyChooseFinbyzGrid from '@/components/ai_components/WhyChooseFinbyzGrid';
-import CTA from '@/components/sections/cta';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
@@ -177,31 +177,6 @@ export default function Page() {
       </Section>
       <Section useGradient>
         <div className="container-custom py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to hire expert Python developers?',
-                icon: 'UserCheck',
-              },
-              title: 'Let’s Build Your Next Python Project Together',
-              highlightText:"Python",
-              description: 'Contact us today to discuss your requirements and get a free consultation with our Python experts.',
-              primaryButton: {
-                text: 'Hire Python Developer',
-                icon: 'ArrowRight',
-                action: () => { window.location.href = '/contact'; },
-              },
-              secondaryButton: {
-                text: 'See Our Work',
-                icon: 'BookOpen',
-                action: () => { window.location.href = '/erpnext/case-studies'; },
-              },
-              trustIndicator: {
-                text: 'Trusted by 100+ businesses',
-                icon: 'ShieldCheck',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

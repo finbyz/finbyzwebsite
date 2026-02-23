@@ -1,7 +1,6 @@
 import StructureData from "@/components/seo/StructureData";
 
 import { Metadata } from "next";
-import FooterSection from "@/components/sections/FooterSection";
 
 export const metadata: Metadata = {
   title: "ERPNext Backup & Restore Cheat Sheet: Bench Commands, Files & Migration",
@@ -49,9 +48,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
       
       {children}
 
-      <StructureData name="SNI-00063" type="code-snippet" />  
-      
-      <FooterSection docname="/erpnext/wiki/backup-&-restore-erpnext" />
+      <StructureData name="SNI-00063" type="code-snippet" />
     </>
   );
 }

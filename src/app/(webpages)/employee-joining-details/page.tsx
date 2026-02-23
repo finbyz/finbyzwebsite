@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import EmployeeJoiningForm from '@/components/ai_components/EmployeeJoiningForm';
 import { UserPlus } from 'lucide-react';
 import { Suspense } from "react";
@@ -94,33 +94,6 @@ export default function Page() {
       </Section>
       <Section>
         <div className="py-1">
-          <CTA
-            data={{
-              subheading: {
-                text: "Ready to Join?",
-                icon: "UserPlus"
-              },
-              title: "Complete Your Onboarding Today!",
-              highlightText: "Onboarding",
-              description: "Submit your joining details and start your journey with us. We look forward to working with you!",
-              primaryButton: {
-                text: "Submit Now",
-                icon: "Save",
-                action: "#employee-joining-form-section"
-              },
-              secondaryButton: {
-                text: "Contact HR",
-                icon: "UserPlus",
-                action: () => {
-                  window.open('https://finbyz.tech/contact', '_blank');
-                }
-              },
-              trustIndicator: {
-                text: "100% Secure & Confidential",
-                icon: "ShieldCheck"
-              }
-            }}
-          />
         </div>
       </Section>
     </>

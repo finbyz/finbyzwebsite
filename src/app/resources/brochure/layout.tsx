@@ -1,4 +1,3 @@
-import FooterSection from "@/components/sections/FooterSection";
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
 
@@ -6,7 +5,6 @@ export default async function Layout({ children }: { children: React.ReactNode }
     <>
       <main>
         {children}
-        <FooterSection docname="/resources/brochure" />
       </main>
 
     </>

@@ -1,4 +1,3 @@
-import FooterSection from "@/components/sections/FooterSection";
 
 
 export default async function Layout({
@@ -10,6 +9,5 @@ export default async function Layout({
     <main>
       {children}
     </main>
-    <FooterSection docname="/erpnext/services" />
   </>
 }

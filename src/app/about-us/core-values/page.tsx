@@ -4,7 +4,7 @@ import DynamicHero from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/text';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import TextSection from '@/components/sections/text';
-import CTA from '@/components/sections/cta';
+
 import { Lightbulb, Users, ShieldCheck, BookOpenCheck, Zap } from 'lucide-react';
 import React from 'react';
 
@@ -391,13 +391,6 @@ export default function Page() {
               ]
             }}
           /> */}
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section >
-        <div className="py-8">
-          <CTA data={ctaData} />
         </div>
       </section>
     </>

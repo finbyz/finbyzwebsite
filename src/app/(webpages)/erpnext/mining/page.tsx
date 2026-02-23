@@ -4,7 +4,7 @@ import DynamicHero from '@/components/sections/dynamic-hero';
 import TextSection from '@/components/sections/text';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
-import CTA from '@/components/sections/cta';
+
 
 export default function Page() {
   return (
@@ -266,37 +266,6 @@ export default function Page() {
           ]
         }}
       />
-
-      {/* CTA SECTION */}
-      <section>
-        <div className="container-custom py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to Dig Deeper?',
-                icon: 'Search'
-              },
-              title: 'Revolutionize Your Mining Operations with ERPNext',
-              highlightText:"Mining Operations with ERPNext",
-              description: 'Contact Finbyz Tech for a personalized consultation and see how our mining ERP solutions deliver efficiency and profitability from mine to market.',
-              primaryButton: {
-                text: 'Talk to Our Experts',
-                icon: 'MessageSquare',
-                action: 'https://finbyz.tech/contact'
-              },
-              secondaryButton: {
-                text: 'Request a Demo',
-                icon: 'PlayCircle',
-                action: 'https://finbyz.tech/contact'
-              },
-              trustIndicator: {
-                text: 'Trusted by 200+ Mining & Industrial Clients',
-                icon: 'CheckCircle'
-              }
-            }}
-          />
-        </div>
-      </section>
     </>
   );
 }

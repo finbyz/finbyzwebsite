@@ -2,7 +2,7 @@
 
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import List from '@/components/sections/list';
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/components/ui/card';
 import { CheckCircle, Shield, Zap, LayoutTemplate } from 'lucide-react';
@@ -244,31 +244,6 @@ export default function Page() {
             {/* Trust & CTA */}
             <Section id="contact-section">
                 <div className="container-custom py-8">
-                    <CTA
-                        data={{
-                            subheading: {
-                                text: 'Ready for the future of ERP?',
-                                icon: 'CheckCircle',
-                            },
-                            title: 'Secure Your ERPNext v16 Migration Today',
-                            highlightText: "Secure Your ERPNext v16 Migration",
-                            description: 'Don\'t let technical debt hold you back. Partner with FinByz for a smooth, secure, and successful upgrade to ERPNext Version 16.',
-                            primaryButton: {
-                                text: 'Schedule Free Consultation',
-                                icon: 'ArrowRight',
-                                action: "/contact"
-                            },
-                            secondaryButton: {
-                                text: 'View Case Studies',
-                                icon: 'Code',
-                                action: "/erpnext/case-studies"
-                            },
-                            trustIndicator: {
-                                text: 'Silver Tier Frappe Partner • 100% Success Rate',
-                                icon: 'Shield',
-                            },
-                        }}
-                    />
                 </div>
             </Section>
         </>

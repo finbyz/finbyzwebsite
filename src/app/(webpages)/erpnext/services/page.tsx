@@ -10,7 +10,7 @@ import {
     Smartphone, BarChart3
 } from 'lucide-react';
 import FAQ from '@/components/ai_components/FAQ';
-import CTA from '@/components/sections/cta';
+
 
 // Data for the page
 const heroData = {
@@ -346,21 +346,6 @@ export default function ServicesPage() {
 
             {/* Final CTA */}
             <div id="get-started">
-                <CTA
-                    data={{
-                        title: "Ready to Future-Proof Your Business?",
-                        description: "Partner with a Certified ERPNext expert to streamline your operations and drive growth.",
-                        highlightText: "Future-Proof",
-                        primaryButton: {
-                            text: "Contact Us Today for a Free Discovery Call",
-                            action: "/contact"
-                        },
-                        secondaryButton: {
-                            text: "Explore Our Services",
-                            action: "/erpnext/services"
-                        }
-                    }}
-                />
             </div>
         </div>
     );

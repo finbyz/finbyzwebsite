@@ -2,7 +2,7 @@
 
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import { Users, UserPlus, FileCheck, DollarSign, Lock, TrendingUp, BarChart3, Calendar, ClipboardCheck, Repeat } from 'lucide-react';
 import Link from 'next/link';
 
@@ -85,15 +85,6 @@ export default function ERPNextModulesPage() {
 
         <Section useGradient>
           <div className="container-custom py-12">
-            <CTA
-              data={{
-                subheading: { text: "Complete Suite", icon: "box" },
-                title: "Ready to Scale?",
-                description: "Discover how ERPNext modules can be customized to fit your unique business processes.",
-                primaryButton: { text: 'Schedule Demo', action: '/contact' },
-                secondaryButton: { text: 'View All Features', action: '/erpnext' }
-              }}
-            />
           </div>
         </Section>
       </main>

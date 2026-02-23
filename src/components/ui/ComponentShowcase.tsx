@@ -62,11 +62,12 @@ import ResourceCenter from '@/components/sections/resource-center';
 import ContactInfo from '@/components/sections/contact-info';
 import GlobalPresence from '@/components/sections/global-presence';
 import Comment from '@/components/sections/comment';
-import CTA from '@/components/sections/cta';
+
 import Differentiators from '@/components/sections/differentiators';
 // import FAQ from '@/components/sections/faq';
 // import ProcessWorkflow from '@/components/sections/process-workflow';
 import HeroSectionWithoutButton from '@/components/sections/hero_section_without_button';
+import CTA from '../sections/cta';
 
 
 // 1. Hero Section Component

@@ -2,7 +2,7 @@
 import DynamicHero from '@/components/sections/dynamic-hero';
 import { List } from '@/components/sections/list';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
-import CTA from '@/components/sections/cta';
+
 import { TrendingUp } from 'lucide-react';
 
 export default function Page() {
@@ -229,23 +229,6 @@ export default function Page() {
               ]
             }}
           /> */}
-        </div>
-      </section>
-
-      {/* CTA SECTION */}
-      <section>
-        <div className="py-8">
-          <CTA
-            data={{
-              subheading: { text: 'Jumpstart Your Career', icon: 'TrendingUp' },
-              title: 'Explore Opportunities at Finbyz Tech',
-              highlightText:'Finbyz Tech',
-              description: 'Take the next step in your career and join a company committed to innovation, transparency, and your professional growth.',
-              primaryButton: { text: 'View Current Openings', icon: 'Search', action: 'https://finbyz.tech/jobs' },
-              secondaryButton: { text: 'Contact Our Team', icon: 'Handshake', action: '/contact' },
-              trustIndicator: { text: '7000+ ERPNext users, 200+ projects globally', icon: 'Star' }
-            }}
-          />
         </div>
       </section>
     </>

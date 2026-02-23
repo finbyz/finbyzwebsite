@@ -3,7 +3,7 @@ import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import YouTubeEmbed from '@/components/sections/YouTubeEmbed';
 import List from '@/components/sections/list';
-import CTA from '@/components/sections/cta';
+
 import HowToUseEMDSteps from '@/components/ai_components/HowToUseEMDSteps';
 import { CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
@@ -108,31 +108,6 @@ export default function Page() {
 
       <Section>
         <div className="py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to streamline EMD management?',
-                icon: 'CheckCircle2',
-              },
-              title: 'Get Started with EMD Management in ERPNext',
-              highlightText:"EMD Management in ERPNext",
-              description: 'Automate, track, and ensure compliance for all your Earnest Money Deposits. Download the app or contact us for a personalized demo.',
-              primaryButton: {
-                text: 'Download Now',
-                icon: 'Download',
-                action: () => window.open('https://frappecloud.com/marketplace/apps/emd_management', '_blank'),
-              },
-              secondaryButton: {
-                text: 'Request Demo',
-                icon: 'PlayCircle',
-                action: () => window.location.href = '/contact',
-              },
-              trustIndicator: {
-                text: 'Trusted by ERPNext users',
-                icon: 'ShieldCheck',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

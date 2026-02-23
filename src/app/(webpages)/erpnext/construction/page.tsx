@@ -3,7 +3,7 @@ import DynamicHero from '@/components/sections/dynamic-hero';
 import TextSection from '@/components/sections/text';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Comment from '@/components/sections/comment';
-import CTA from '@/components/sections/cta';
+
 
 export default function Page() {
   return (
@@ -599,35 +599,6 @@ export default function Page() {
           "In the construction industry, efficiency isn't just a buzzword – it's the bedrock of profitability and success. At Finbyz Tech, we believe in empowering businesses with solutions that bring clarity, drive efficiency, and deliver tangible impact. Our ERPNext implementations simplify complex construction processes, putting you in control of your projects, resources, and finances. We're not just selling software; we're providing a strategic advantage that helps you build smarter, faster, and more profitably."<br/>- Mukesh Variyani, CEO
         </h2>
       </div>
-      
-
-      {/* CTA SECTION */}
-      <section>
-        <div className="py-8">
-          <CTA
-            data={{
-              subheading: { text: 'Ready to Build a More Efficient Future?', icon: 'Rocket' },
-              title: 'Get Your Personalized Construction ERP Consultation',
-              highlightText:'Construction ERP Consultation',
-              description: 'Contact us today to discover how ERPNext can transform your construction business for greater efficiency and profitability.',
-              primaryButton: {
-                text: 'Request a Free Consultation',
-                icon: 'ArrowRight',
-                action: 'https://finbyz.tech/contact'
-              },
-              secondaryButton: {
-                text: 'Explore ERPNext Services',
-                icon: 'BookOpen',
-                action: 'https://finbyz.tech/hire-erpnext-implementer'
-              },
-              trustIndicator: {
-                text: 'Trusted by 7000+ users in 12+ countries',
-                icon: 'ShieldCheck'
-              }
-            }}
-          />
-        </div>
-      </section>
     </>
   );
 }

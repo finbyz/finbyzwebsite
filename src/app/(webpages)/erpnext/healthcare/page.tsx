@@ -5,7 +5,7 @@ import { List } from '@/components/sections/list';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
 import Comment from '@/components/sections/comment';
-import CTA from '@/components/sections/cta';
+
 import { ShieldCheck, Users, Hospital, HeartPulse, UserCheck, CheckCircle, CalendarDays, FileText, FileCheck2, LineChart, Smartphone, Zap } from 'lucide-react';
 
 export default function Page() {
@@ -282,24 +282,6 @@ export default function Page() {
       {/* CALL TO ACTION SECTION */}
       <section>
         <div className="py-8">
-          <CTA
-            data={{
-              subheading: { text: 'Ready to Transform Your Healthcare Operations?', icon: 'HeartPulse' },
-              title: 'Start Your Digital Healthcare Transformation',
-              highlightText:'Digital Healthcare',
-              description: 'Empower your hospital or clinic with seamless, integrated ERPNext solutions from Finbyz Tech. Our experts will guide you every step of the way.',
-              primaryButton: { text: 'Get Started', icon: 'Hospital', action: '/contact' },
-              secondaryButton: { 
-                text: 'Learn More', 
-                icon: 'Users', 
-                action: () => {
-                  const el = document.getElementById('healthcare');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                }
-              },
-              trustIndicator: { text: 'Trusted by leading healthcare providers', icon: 'CheckCircle' }
-            }}
-          />
         </div>
       </section>
     </>

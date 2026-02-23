@@ -95,24 +95,7 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
         return;
       }
 
-      // Combine country code with mobile number
-      const fullMobileNumber = `${formData.countryCode}${formData.mobile}`;
-
-      const payload = {
-        lead_name: formData.name,
-        company_name: formData.organization,
-        mobile_no: fullMobileNumber,
-        title: typeof window !== "undefined" ? window.location.href : "Website Inquiry",
-        email: formData.email,
-      };
-
-
       // Use the same API as business slider
-      const res = await fetch('/web-api/fb/method/finbyzweb.api.set_form_data', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
 
 
       //  Redirect after successful submit
@@ -133,7 +116,7 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
   };
 
   return (
-    <div className={cn('inquiry-form', className)}>
+    <div className={cn('inquiry-form', className)} id='bottom-inquiry-form'>
       {/* Main Form Container */}
       <div className="container-custom">
         <div className="inquiry-form__inner">
@@ -199,7 +182,7 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
               <div className="w-full">
                 <div className="inquiry-form__form-header">
                   <h3 className="inquiry-form__form-title">Get Started Today</h3>
-                  <p className="inquiry-form__form-subtitle">Fill out the form below and we'll get back to you within 24 hours</p>
+                  <p className="inquiry-form__form-subtitle">Fill out the form below and we&apos;ll get back to you within 24 hours</p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="inquiry-form__form">

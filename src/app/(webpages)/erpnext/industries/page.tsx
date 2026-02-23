@@ -2,7 +2,7 @@
 
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import IndustryTabs from '@/components/ai_components/IndustryTabs';
 
 export default function Page() {
@@ -107,35 +107,6 @@ export default function Page() {
 
       <Section>
         <div className="py-8">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to Transform Your Industry?',
-                icon: 'factory',
-              },
-              title: 'Get a Customized ERP Solution for Your Business',
-              highlightText:' ERP Solution ',
-              description: 'Contact us today to discover how our tailored ERP solutions can streamline your operations and drive growth.',
-              primaryButton: {
-                text: 'Request a Demo',
-                icon: 'arrow-right',
-                action: () => {
-                  window.location.href = '/contact';
-                },
-              },
-              secondaryButton: {
-                text: 'Talk to an Expert',
-                icon: 'phone',
-                action: () => {
-                  window.location.href = '/contact';
-                },
-              },
-              trustIndicator: {
-                text: 'Trusted by 100+ Industry Leaders',
-                icon: 'check-circle',
-              },
-            }}
-          />
         </div>
       </Section>
     </>

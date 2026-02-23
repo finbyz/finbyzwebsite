@@ -1,4 +1,3 @@
-import FooterSection from "@/components/sections/FooterSection";
 
 export default function Layout({
   children,
@@ -7,6 +6,5 @@ export default function Layout({
 }) {
   return <>
     {children}
-    <FooterSection docname="/erpnext/wiki" showBusinessSlider={true} showInquiryForm={false} />
   </>;
 }

@@ -3,7 +3,7 @@ import DynamicHero from '@/components/sections/dynamic-hero';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
 import { List } from '@/components/sections/list';
-import CTA from '@/components/sections/cta';
+
 
 export default function Page() {
   return (
@@ -356,25 +356,6 @@ export default function Page() {
               ]
             }}
           /> */}
-        </div>
-      </section>
-
-      {/* CTA SECTION */}
-      <section>
-        <div className="mt-5">
-          <CTA
-            data={{
-              subheading: { text: 'Ready to Accelerate Your Digital Journey?', icon: 'Rocket' },
-              title: 'Get a Personalized Technology Consultation',
-              highlightText:'Technology Consultation',
-              description: 'Contact Finbyz Tech and partner with experienced consultants who turn technology challenges into measurable success—let\'s unlock your business\'s full potential.',
-              primaryButton: { text: 'Book Consultation', icon: 'Star', action: '/contact' },
-              secondaryButton: { text: 'Learn More', icon: 'Lightbulb',
-                 action: () => { const el = document.getElementById('overview'); 
-              if (el) el.scrollIntoView({ behavior: 'smooth' }); } },
-              trustIndicator: { text: 'Trusted by clients in 12+ countries', icon: 'Globe2' }
-            }}
-          />
         </div>
       </section>
     </>

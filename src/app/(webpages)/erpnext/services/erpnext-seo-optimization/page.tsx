@@ -2,7 +2,7 @@
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
-import CTA from '@/components/sections/cta';
+
 import SeoImprovementGrid from '@/components/ai_components/SeoImprovementGrid';
 import { CheckCircle } from 'lucide-react';
 
@@ -169,36 +169,6 @@ export default function Page() {
           <h3 className="text-xl font-semibold mb-4">Unlock ERPNext SEO's full potential to drive sustainable growth for your business in the digital world. Get started optimizing your platform today!</h3>
         </div>
       </Section>
-
-      <CTA
-        data={{
-          subheading: {
-            text: 'Ready to boost your ERPNext SEO?',
-            icon: 'rocket',
-          },
-          title: 'Start Your SEO Journey with ERPNext',
-          highlightText:"ERPNext",
-          description: 'Contact us to discover how we can help you optimize your ERPNext platform for maximum online visibility and growth.',
-          primaryButton: {
-            text: 'Get Started',
-            icon: 'arrow-right',
-            action: () => {
-              window.location.href = '/contact';
-            },
-          },
-          secondaryButton: {
-            text: 'Learn More',
-            icon: 'info',
-            action: () => {
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            },
-          },
-          trustIndicator: {
-            text: 'Trusted by leading businesses',
-            icon: 'star',
-          },
-        }}
-      />
     </>
   );
 }

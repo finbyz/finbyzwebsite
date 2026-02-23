@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { CheckCircle, ArrowRight, Shield, Zap, Users, Database, TrendingUp, Award, Clock, Target, RefreshCw, FileCheck } from 'lucide-react';
 import HeroSection from '@/components/sections/dynamic-hero';
-import CTA from '@/components/sections/cta';
+
 
 export default function Page() {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
@@ -241,62 +241,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-
-
-      {/* CTA Section */}     
-      <CTA
-            data={{
-              subheading: {
-                text: 'Ready to Migrate Your ERP?',
-                icon: 'factory',
-              },
-              title: 'Get a free Migration assessment and discover transition to ERPNext.',
-              highlightText:' ERPNext',
-              description: 'Contact us today to discover how our tailored ERP solutions can streamline your operations and drive growth.',
-              primaryButton: {
-                text: 'Request a Demo',
-                icon: 'arrow-right',
-                action: () => {
-                  window.location.href = '/contact';
-                },
-              },
-              secondaryButton: {
-                text: 'Talk to an Expert',
-                icon: 'phone',
-                action: () => {
-                  window.location.href = '/contact';
-                },
-              },
-              trustIndicator: {
-                text: 'Trusted by 100+ Industry Leaders',
-                icon: 'check-circle',
-              },
-            }}
-          />
-
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes slideInLeft {
-          from {
-            opacity: 0;
-            transform: translateX(-30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-      `}</style>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 'use client';
 import DynamicHero from '@/components/sections/dynamic-hero';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
-import CTA from '@/components/sections/cta';
+
 import { Server, Zap, MessageSquare, CheckCircle, AlertTriangle, DollarSign, Cpu, Clock, Shield } from 'lucide-react';
 
 export default function Page() {
@@ -602,18 +602,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* CTA SECTION */}
-      <CTA
-        data={{
-          subheading: { text: 'Need Professional Help?' },
-          title: 'Let Our Team Set Up Your AI Automation',
-          description: 'Setting up Clawdbot is straightforward, but connecting it to your business systems, customizing workflows, and ensuring security takes expertise. Our AI automation specialists can deploy and configure Clawdbot for your specific needs—from email management to complex multi-agent systems.',
-          primaryButton: {
-            text: 'Get Expert Setup',
-            action: '/contact',
-          },
-        }}
-      />
     </>
   );
 }

@@ -4,7 +4,7 @@ import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import ITConsultingFlipCards from '@/components/ai_components/ITConsultingFlipCards';
-import CTA from '@/components/sections/cta';
+
 
 export default function Page() {
   return (
@@ -60,35 +60,6 @@ export default function Page() {
 
       <Section>
         <div className="py-8 " id="It">
-          <CTA
-            data={{
-              subheading: {
-                text: 'Ready to Transform Your IT?',
-                icon: 'Zap'
-              },
-              title: 'Get Expert IT Consulting Today',
-              highlightText:"IT Consulting",
-              description: 'Contact us for unbiased, innovative, and expert IT solutions tailored to your business goals.',
-              primaryButton: {
-                text: 'Request Consultation',
-                icon: 'ArrowRight',
-                action: () => {
-                  if (typeof window !== 'undefined') {
-                    window.location.href = '/contact';
-                  }
-                }
-              },
-              secondaryButton: {
-                text: 'Learn More',
-                icon: 'Info',
-                 action: "#it-consulting"
-              },
-              trustIndicator: {
-                text: 'Trusted by 100+ Businesses',
-                icon: 'ShieldCheck'
-              }
-            }}
-          />
         </div>
       </Section>
     </>

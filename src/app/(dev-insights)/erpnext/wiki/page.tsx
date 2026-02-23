@@ -1,6 +1,6 @@
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
-import CTA from '@/components/sections/cta';
+
 import { BookOpen } from 'lucide-react';
 import Link from 'next/link';
 
@@ -83,16 +83,6 @@ export default async function ERPNextWikiPage() {
 
       <Section useGradient>
         <div className="container-custom py-12">
-          <CTA
-            data={{
-              subheading: { text: "Need More Help?", icon: "help-circle" },
-              title: "Can't Find What You're Looking For?",
-              description: "Our support team is here to assist you with specific questions and deeper insights into ERPNext.",
-              primaryButton: { text: 'Contact Support', action: '/contact' },
-              secondaryButton: { text: 'View Services', action: '/erpnext/services' },
-              trustIndicator: { text: 'Expert assistance available', icon: 'check-circle' }
-            }}
-          />
         </div>
       </Section>
     </>

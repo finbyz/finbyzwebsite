@@ -6,7 +6,7 @@ import BlogSectionWithImage from '@/components/ai_components/blog/BlogSectionWit
 import BlogParagraph from '@/components/ai_components/blog/BlogParagraph';
 import BlogTableOfContents from '@/components/ai_components/blog/BlogTableOfContents';
 import BlogContent from '@/components/ai_components/blog/BlogContent';
-import CTA from '@/components/sections/cta';
+
 import Image from 'next/image';
 
 const heroProps = {

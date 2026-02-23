@@ -1,4 +1,3 @@
-import FooterSection from "@/components/sections/FooterSection";
 import { generateAutoMetadata } from "@/lib/seo-metadata";
 
 export async function generateMetadata() {
@@ -16,7 +15,6 @@ export default async function Layout({
       {/* Schema for WebPage context */}
       {/* Render main page content */}
       {children}
-      <FooterSection docname="/ai-automation" />
     </>
   );
 }

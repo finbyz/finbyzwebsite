@@ -5,7 +5,7 @@ import Section from "@/components/sections/Section";
 import DynamicHero from "@/components/sections/dynamic-hero";
 import ResponsiveCardGrid from "@/components/sections/responsive-card-grid";
 import Benefits from "@/components/sections/benefits";
-import CTA from "@/components/sections/cta";
+
 import Link from "next/link";
 import List from "@/components/sections/list";
 import { FaUserPlus, FaSearch, FaHandshake, FaRocket } from "react-icons/fa";
@@ -204,26 +204,6 @@ export default function StaffAugmentationContent() {
                                 palette: { iconBg: "#16a34a", iconColor: "#ffffff" },
                             },
                         ],
-                    }}
-                />
-            </Section>
-
-            {/* CTA Section */}
-            <Section className="py-16">
-                <CTA
-                    data={{
-                        subheading: { text: "Build Your Dream Team", icon: "Users" },
-                        title: "Ready to Scale Your Development Capacity?",
-                        description:
-                            "Get access to the specialized skills you need to deliver your project on time and within budget.",
-                        primaryButton: {
-                            text: "Request Talent",
-                            action: "/contact",
-                        },
-                        secondaryButton: {
-                            text: "Schedule Call",
-                            action: "/contact",
-                        },
                     }}
                 />
             </Section>
