@@ -32,27 +32,36 @@ function createJobPostingData(job: any) {
     const isRemote = (job.location || '').toLowerCase().includes('remote');
     const isHybrid = (job.location || '').toLowerCase().includes('hybrid');
 
-    // Parse skills for structured data
-    const parseSkills = (skills: unknown): string[] => {
-        if (!skills) return [];
+    // Parse skills as a single comma-separated string for structured data
+    const parseSkillsAsString = (skills: unknown): string => {
+        if (!skills) return '';
+
         if (Array.isArray(skills)) {
             return skills
                 .map((s) => (typeof s === 'string' ? s : ''))
-                .map((s) => s.replace(/<[^>]+>/g, '').trim()) // Strip HTML tags
-                .filter(Boolean);
+                .map((s) => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim())
+                .filter(Boolean)
+                .join(', ');
         }
+
         if (typeof skills === 'string') {
-            // First remove HTML tags, then split by common delimiters
-            const cleanedSkills = skills.replace(/<[^>]+>/g, ' '); // Replace HTML tags with space
-            return cleanedSkills
+            // Strip HTML tags and normalize whitespace, then join as comma-separated string
+            const plainText = skills
+                .replace(/<[^>]+>/g, ' ')
+                .replace(/\s+/g, ' ')
+                .trim();
+
+            return plainText
                 .split(/[,\n]+/)
                 .map((s) => s.trim())
-                .filter(Boolean);
+                .filter(Boolean)
+                .join(', ');
         }
-        return [];
+
+        return '';
     };
 
-    const skills = parseSkills(job.skills);
+    const skillsString = parseSkillsAsString(job.skills);
 
     const jobPosting: any = {
         '@context': 'https://schema.org/',
@@ -165,9 +174,9 @@ function createJobPostingData(job: any) {
         };
     }
 
-    // Add skills if available
-    if (skills.length > 0) {
-        jobPosting.skills = skills;
+    // ✅ Add skills as a plain string (not array)
+    if (skillsString) {
+        jobPosting.skills = skillsString;
     }
 
     // Add qualifications
