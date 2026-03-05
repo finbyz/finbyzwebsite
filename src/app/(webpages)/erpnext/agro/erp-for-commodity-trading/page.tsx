@@ -118,7 +118,7 @@ export default function Page() {
         <div className="container-custom py-8">
           <h2 className="text-2xl text-[#1A5276] font-bold text-center mb-6">Benefits of Implementing ERPNext in Agriculture</h2>
           <p className="text-gray-700 text-center mb-6">
-            Above the general <a href="https://finbyz.tech/benefits-of-erp" target="_blank" className="text-orange-600 underline">benefits of ERP Software</a>, there are various benefits, specific for Agro-Industry, some of them are as below
+            Above the general <a href="/erp/insights/benefits-of-erp" target="_blank" className="text-orange-600 underline">benefits of ERP Software</a>, there are various benefits, specific for Agro-Industry, some of them are as below
           </p>
           <List
             title=""

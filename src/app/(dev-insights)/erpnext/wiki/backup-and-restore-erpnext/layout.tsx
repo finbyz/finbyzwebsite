@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://finbyz.tech/erpnext/wiki/backup-and-restore-erpnext",
+    canonical: "/erpnextwiki/backup-and-restore-erpnext",
   },
   openGraph: {
     title: "ERPNext Backup & Restore Cheat Sheet",
     description: "Master bench backup and restore commands. Includes --with-files and migration steps.",
-    url: "https://finbyz.tech/erpnext/wiki/backup-and-restore-erpnext",
+    url: "/erpnextwiki/backup-and-restore-erpnext",
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",

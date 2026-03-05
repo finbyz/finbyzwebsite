@@ -4,7 +4,6 @@
  */
 
 import { ParsedSchema } from '@/lib/schema-generator';
-import Script from 'next/script';
 
 interface PageSchemasProps {
   schemas: ParsedSchema[];
@@ -20,7 +19,7 @@ export function PageSchemas({ schemas }: PageSchemasProps) {
   return (
     <>
       {schemas.map((schema, index) => (
-        <Script
+        <script
           key={`structured-data-${schema.type}-${index}`}
           id={`structured-data-${schema.type}-${index}`}
           type="application/ld+json"

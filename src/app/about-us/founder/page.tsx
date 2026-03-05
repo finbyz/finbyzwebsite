@@ -1,11 +1,11 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Code, TrendingUp, Users, Zap, Globe, Award, BookOpen, Building2, Briefcase } from 'lucide-react';
+import { ArrowRight, Code, TrendingUp, Users, Zap, Globe, Award, Building2, Briefcase } from 'lucide-react';
 import Script from 'next/script';
 
 export default function Page() {
   const [scrollY, setScrollY] = useState(0);
-  const [isVisible, setIsVisible] = useState({});
+  const [, setIsVisible] = useState({});
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -193,7 +193,7 @@ export default function Page() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(personSchema)
         }}
-        strategy="afterInteractive"
+        strategy="beforeInteractive"
       />
       {/* ========== END: SCHEMA SCRIPT ========== */}
       

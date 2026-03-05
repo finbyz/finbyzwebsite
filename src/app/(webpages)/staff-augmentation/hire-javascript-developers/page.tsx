@@ -69,7 +69,7 @@ const serviceCards = [
     image: '/images/Hire-JS-Dev.svg',
     alt: 'Web Development',
     description: `We develop custom web applications using JavaScript. Although JS is primarily used for front-end web development, where it's used to create dynamic, interactive user interfaces and add functionality to websites. However, we can also enable you to use JS for the server side using Node.js. We offer all sorts of JS web development`,
-    link: 'https://finbyz.tech/web-application-development'
+    link: '/services/web-application-development'
   },
   {
     title: 'Web-Based Application Development',

@@ -52,7 +52,7 @@ export default function Page() {
           >
             <BlogParagraph>
               Systems for enterprise resource planning, or ERP, have long been essential to operations management across a range of businesses. A{' '}
-              <a className="text-primary underline hover:text-primary/80 transition-colors" href="https://finbyz.tech/erp-software" target="_blank" rel="noopener noreferrer">ERP Software</a>{' '}
+              <a className="text-primary underline hover:text-primary/80 transition-colors" href="/erp/services/erp-software-development" target="_blank" rel="noopener noreferrer">ERP Software</a>{' '}
               designed specifically for commodity management can revolutionize how companies handle trading in sectors such as metals, agriculture, and energy. In this highly volatile industry, ERP for commodity enables businesses to streamline processes, mitigate risks, and enhance overall profitability.
             </BlogParagraph>
           </BlogSectionWithImage>
@@ -61,7 +61,7 @@ export default function Page() {
           <BlogSection id="what-is-commodity-erp" title="Commodity ERP: What Is It?">
             <BlogParagraph>
               A{' '}
-              <a className="text-primary underline hover:text-primary/80 transition-colors" href="https://finbyz.tech/erp-for-agro-commodity" target="_blank" rel="noopener noreferrer">commodity trading ERP</a>{' '}
+              <a className="text-primary underline hover:text-primary/80 transition-colors" href="/erpnext/agro/erp-for-commodity-trading" target="_blank" rel="noopener noreferrer">commodity trading ERP</a>{' '}
               system is a purpose-built platform designed specifically for organizations engaged in the trading, buying, selling, or storage of commodities. Unlike generic ERP platforms, ERP for commodity includes features that address price fluctuations, inventory tracking, logistics coordination, and ever-evolving compliance needs. These systems integrate financial control, transaction visibility, and real-time analytics tailored for the commodity sector.
             </BlogParagraph>
           </BlogSection>

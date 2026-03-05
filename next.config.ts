@@ -303,21 +303,6 @@ const galleries_redirects = [
     source: "/yes-we-are",
     destination: "/about-us/yes-we-are",
     permanent: true
-  },
-
-  // ----------------------------------------------------
-  // UNMATCHED URLs from your original list
-  // Adjust the destinations below before deploying
-  // ----------------------------------------------------
-  {
-    source: "/benefit-of-erp",
-    destination: "/erpnext/insights",
-    permanent: true
-  },
-  {
-    source: "/data-analytic",
-    destination: "/erpnext/insights",
-    permanent: true
   }
 ]
 

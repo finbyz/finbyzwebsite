@@ -45,7 +45,7 @@ export default async function Layout({
       name: "Hire ERPNext Accountant",
       description:
         "Hire expert ERPNext accountants backed by 10+ years implementation experience",
-      url: "https://finbyz.tech/erpnext/services/hire-erpnext-accountant",
+      url: "/erpnextservices/hire-erpnext-accountant",
     },
   ];
 

@@ -57,7 +57,7 @@ export default function Page() {
               cover:true
             }}>
             <BlogParagraph>
-              In the chemical sector, <a className="text-primary underline hover:text-primary/80 transition-colors" href="https://finbyz.tech/erpnext-certified-partner" target="_blank" rel="noopener noreferrer">Enterprise Resource Planning (ERP) solutions</a> stand out for providing unmatched control over complex processes. Before committing to any major investment, it is essential to conduct a comprehensive cost-benefit analysis. This article explores the direct and indirect financial impacts of ERP systems within the chemical industry.
+              In the chemical sector, <a className="text-primary underline hover:text-primary/80 transition-colors" href="/erpnext/certified-partner" target="_blank" rel="noopener noreferrer">Enterprise Resource Planning (ERP) solutions</a> stand out for providing unmatched control over complex processes. Before committing to any major investment, it is essential to conduct a comprehensive cost-benefit analysis. This article explores the direct and indirect financial impacts of ERP systems within the chemical industry.
             </BlogParagraph>
 
           </BlogSectionWithImage>
@@ -238,7 +238,7 @@ export default function Page() {
             variant="default"
           >
             <BlogParagraph>
-              Enhancing <a className="text-primary underline hover:text-primary/80 transition-colors" href="https://finbyz.tech/clients" target="_blank" rel="noopener noreferrer">customers</a> satisfaction through better service delivery and responsiveness can lead to increased market share and loyalty from customers.
+              Enhancing <a className="text-primary underline hover:text-primary/80 transition-colors" href="/about-us/clients" target="_blank" rel="noopener noreferrer">customers</a> satisfaction through better service delivery and responsiveness can lead to increased market share and loyalty from customers.
             </BlogParagraph>
           </BlogSectionWithImage>
 
@@ -298,7 +298,7 @@ export default function Page() {
             variant="default"
           >
             <BlogParagraph>
-              We would be happy to hear about your experiences with <a className="text-primary underline hover:text-primary/80 transition-colors" href="https://finbyz.tech/erp-for-chemical-industry" target="_blank" rel="noopener noreferrer">ERP For Chemical</a> and how chemical ERP Software has impacted your operations in the industry. Let’s continue the conversation on maximizing returns from ERP systems tailored for the chemical sector.
+              We would be happy to hear about your experiences with <a className="text-primary underline hover:text-primary/80 transition-colors" href="/erpnext/chemical" target="_blank" rel="noopener noreferrer">ERP For Chemical</a> and how chemical ERP Software has impacted your operations in the industry. Let’s continue the conversation on maximizing returns from ERP systems tailored for the chemical sector.
             </BlogParagraph>
           </BlogSectionWithImage>
 

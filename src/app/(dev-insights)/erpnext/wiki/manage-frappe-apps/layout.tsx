@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   creator: "FinByz Tech Pvt Ltd",
   publisher: "FinByz Tech Pvt Ltd",
   alternates: {
-    canonical: "https://finbyz.tech/erpnext/wiki/manage-frappe-apps",
+    canonical: "/erpnextwiki/manage-frappe-apps",
   },
   openGraph: {
     title: "Bench App Management Cheat Sheet",
     description: "Install, Uninstall, and Manage Frappe Apps with Bench.",
-    url: "https://finbyz.tech/erpnext/wiki/manage-frappe-apps",
+    url: "/erpnextwiki/manage-frappe-apps",
     siteName: "Finbyz Tech",
     type: "website",
     locale: "en_US",

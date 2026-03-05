@@ -1,5 +1,3 @@
-import Script from "next/script";
-
 const CorporationSchema = () => {
     const schema = {
         "@context": "https://schema.org",
@@ -159,10 +157,9 @@ const CorporationSchema = () => {
     };
 
     return (
-        <Script
+        <script
             id="finbyz-corporation-schema"
             type="application/ld+json"
-            strategy="afterInteractive"
             dangerouslySetInnerHTML={{
                 __html: JSON.stringify(schema)
             }}

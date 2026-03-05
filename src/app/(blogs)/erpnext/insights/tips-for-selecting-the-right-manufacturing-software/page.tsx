@@ -111,7 +111,7 @@ export default function Page() {
             variant="default"
           >
             <BlogParagraph>
-              A modern <strong>ERP for manufacturing</strong> should integrate effortlessly with your existing systems—be it accounting software, <a className="text-primary underline hover:text-primary/80 transition-colors" href="https://finbyz.tech/crm-software" target="_blank" rel="noopener noreferrer">CRM software</a>, or <a className="text-primary underline hover:text-primary/80 transition-colors" href="https://finbyz.tech/hire-erpnext-implementer" target="_blank" rel="noopener noreferrer">ERP platforms</a>. Compatibility with current data sources reduces disruption and speeds up implementation. Also, consider the time and cost of data migration and how well the solution connects with your operational ecosystem.
+              A modern <strong>ERP for manufacturing</strong> should integrate effortlessly with your existing systems—be it accounting software, <a className="text-primary underline hover:text-primary/80 transition-colors" href="/erpnext/modules/crm-software" target="_blank" rel="noopener noreferrer">CRM software</a>, or <a className="text-primary underline hover:text-primary/80 transition-colors" href="/erpnext/services/hire-erpnext-implementer" target="_blank" rel="noopener noreferrer">ERP platforms</a>. Compatibility with current data sources reduces disruption and speeds up implementation. Also, consider the time and cost of data migration and how well the solution connects with your operational ecosystem.
             </BlogParagraph>
           </BlogSectionWithImage>
 
@@ -130,7 +130,7 @@ export default function Page() {
             variant="default"
           >
             <BlogParagraph>
-              While selecting the Best Manufacturing Software, it's essential to evaluate the available deployment options—on-premises, cloud, or hybrid. Cloud-based ERP for manufacturing can offer scalability, remote access, and reduced upfront investment. On the other hand, on-premise setups might suit manufacturers requiring tighter data control. Small businesses can benefit from small manufacturing ERP software that provides cloud deployment for easier maintenance and cost-efficiency. Balance flexibility, data security, and IT capabilities with your business needs to make the right choice. Consider expert <a className="text-primary underline hover:text-primary/80 transition-colors" href="https://finbyz.tech/it-consulting" target="_blank" rel="noopener noreferrer">IT consulting</a> for a guided approach.
+              While selecting the Best Manufacturing Software, it's essential to evaluate the available deployment options—on-premises, cloud, or hybrid. Cloud-based ERP for manufacturing can offer scalability, remote access, and reduced upfront investment. On the other hand, on-premise setups might suit manufacturers requiring tighter data control. Small businesses can benefit from small manufacturing ERP software that provides cloud deployment for easier maintenance and cost-efficiency. Balance flexibility, data security, and IT capabilities with your business needs to make the right choice. Consider expert <a className="text-primary underline hover:text-primary/80 transition-colors" href="/erpnext/services/it-consulting" target="_blank" rel="noopener noreferrer">IT consulting</a> for a guided approach.
             </BlogParagraph>
           </BlogSectionWithImage>
 

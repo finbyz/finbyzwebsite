@@ -1,6 +1,5 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import Script from 'next/script';
 import { Metadata } from 'next';
 import Breadcrumbs from '@/components/sections/BreadCrumbs';
 
@@ -13,181 +12,75 @@ export const revalidate = 1800;
 
 // ✅ 1) Structured Data Helper
 function createJobPostingData(job: any) {
-    const cleanHtml = (html: string) => {
-        const input = html || '';
-        const withoutScripts = input.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '');
-        const withoutStyles = withoutScripts.replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '');
-        return withoutStyles
-            .replace(/on\w+="[^"]*"/gi, '')
-            .replace(/javascript:/gi, '')
-            .replace(/<ol(\s[^>]*)?>/gi, '<ul$1>')
-            .replace(/<\/ol>/gi, '</ul>');
-    };
+    // Escape double quotes to single quotes for safe JSON embedding
+    const escapeQuotes = (text: string) => (text || '').replace(/"/g, "'");
 
-    const plainDescription = cleanHtml(job.description || '')
-        .replace(/<[^>]+>/g, ' ')
-        .replace(/\s+/g, ' ')
-        .trim();
+    const descriptionHtml = escapeQuotes(job.description || '');
+    const skillsHtml = escapeQuotes(job.skills || '');
 
-    const isRemote = (job.location || '').toLowerCase().includes('remote');
-    const isHybrid = (job.location || '').toLowerCase().includes('hybrid');
+    const fullDescription =
+        `<h2><strong>Job Description</strong></h2><br><p>${descriptionHtml}</p><br>` +
+        `<h2><strong>Key Skills</strong></h2><p>${skillsHtml}</p><br><br>` +
+        `<h2><strong>About Finbyz Tech</strong></h2>` +
+        `<p>At Finbyz Tech, we are passionate about revolutionizing businesses through latest technology. ` +
+        `We build scalable and innovative software solutions that streamlines your business processes efficiently. ` +
+        `We value collaboration and strive to create a positive working environment by celebrating innovation.` +
+        `At FinByz, we believe the team builds company. Initiator or leader, Technical or Creative there is a space for each one. ` +
+        `We create an environment where you can learn, grow, and thrive.</p>`;
 
-    // Parse skills as a single comma-separated string for structured data
-    const parseSkillsAsString = (skills: unknown): string => {
-        if (!skills) return '';
+    const salaryValue = job.salary
+        ? typeof job.salary === 'string'
+            ? parseFloat(job.salary)
+            : job.salary
+        : 0;
 
-        if (Array.isArray(skills)) {
-            return skills
-                .map((s) => (typeof s === 'string' ? s : ''))
-                .map((s) => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim())
-                .filter(Boolean)
-                .join(', ');
-        }
-
-        if (typeof skills === 'string') {
-            // Strip HTML tags and normalize whitespace, then join as comma-separated string
-            const plainText = skills
-                .replace(/<[^>]+>/g, ' ')
-                .replace(/\s+/g, ' ')
-                .trim();
-
-            return plainText
-                .split(/[,\n]+/)
-                .map((s) => s.trim())
-                .filter(Boolean)
-                .join(', ');
-        }
-
-        return '';
-    };
-
-    const skillsString = parseSkillsAsString(job.skills);
+    const slug = (job.route || job.name || '').replace(/^\/?/, '');
+    const canonicalUrl = `https://finbyz.tech/careers/job-openings/${slug}`;
 
     const jobPosting: any = {
-        '@context': 'https://schema.org/',
+        '@context': 'http://schema.org',
         '@type': 'JobPosting',
+        '@id': canonicalUrl,
         title: job.job_title || job.name,
-        description: plainDescription,
-        identifier: {
-            '@type': 'PropertyValue',
-            name: 'FinByz Job ID',
-            value: job.name
-        },
         hiringOrganization: {
             '@type': 'Organization',
             name: 'FinByz Tech Pvt Ltd',
-            url: 'https://finbyz.tech',
-            logo: 'https://finbyz.tech/files/FinbyzLogo.png',
             sameAs: [
-                'https://www.linkedin.com/company/finbyz-tech',
-                'https://twitter.com/finbyztech'
-            ]
+                'https://www.facebook.com/finbyz',
+                'https://www.instagram.com/finbyz',
+                'https://www.linkedin.com/company/finbyz',
+                'https://www.youtube.com/@Finbyz',
+            ],
+            logo: 'https://finbyz.tech/files/FinbyzLogo.png',
+            email: 'career@finbyz.tech',
         },
-        employmentType: job.employment_type || 'FULL_TIME',
-        industry: job.department || 'Technology',
-        datePosted: job.posted_on || job.creation || job.modified || new Date().toISOString(),
-        jobBenefits: [
-            'Competitive salary',
-            'Health insurance',
-            'Professional development opportunities',
-            'Flexible work arrangements'
-        ],
-        workHours: '40 hours per week'
-    };
-
-    // ✅ Valid through - only include if valid_till exists
-    if (job.valid_till) {
-        jobPosting.validThrough = job.valid_till;
-    } else {
-        // Fallback to 30 days from now if not provided
-        jobPosting.validThrough = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString();
-    }
-
-    // ✅ Salary info - use actual job data if available
-    if (job.lower_range && job.upper_range) {
-        // Use salary range if available
-        jobPosting.baseSalary = {
-            '@type': 'MonetaryAmount',
-            currency: job.currency || 'INR',
-            value: {
-                '@type': 'QuantitativeValue',
-                minValue: job.lower_range,
-                maxValue: job.upper_range,
-                unitText: (job.salary_per || 'MONTH').toUpperCase()
-            }
-        };
-    } else if (job.salary) {
-        // Use single salary value if range not available
-        const salaryValue = typeof job.salary === 'string' ? parseFloat(job.salary) : job.salary;
-        if (!isNaN(salaryValue) && salaryValue > 0) {
-            jobPosting.baseSalary = {
-                '@type': 'MonetaryAmount',
-                currency: job.currency || 'INR',
-                value: {
-                    '@type': 'QuantitativeValue',
-                    value: salaryValue,
-                    unitText: (job.salary_per || 'MONTH').toUpperCase()
-                }
-            };
-        }
-    } else {
-        // Default fallback if no salary data
-        jobPosting.baseSalary = {
+        jobLocation: {
+            '@type': 'Place',
+            address: {
+                '@type': 'PostalAddress',
+                name: 'FinByz Tech Pvt Ltd',
+                addressLocality: 'Ahmedabad',
+                addressRegion: 'Gujarat',
+                addressCountry: 'India',
+                postalCode: '380009',
+                streetAddress:
+                    '504-Addor Ambition, Nr. Navrang Circle, Navrangpura',
+            },
+        },
+        datePosted: job.modified || job.creation || new Date().toISOString(),
+        baseSalary: {
             '@type': 'MonetaryAmount',
             currency: 'INR',
             value: {
                 '@type': 'QuantitativeValue',
-                minValue: 0,
-                maxValue: 1000000,
-                unitText: 'MONTH'
-            }
-        };
-    }
-
-    // Add job location
-    if (isRemote) {
-        jobPosting.jobLocationType = 'TELECOMMUTE';
-    } else if (isHybrid) {
-        jobPosting.jobLocationType = 'TELECOMMUTE';
-        jobPosting.jobLocation = {
-            '@type': 'Place',
-            address: {
-                '@type': 'PostalAddress',
-                addressLocality: job.location,
-                addressRegion: 'India',
-                addressCountry: 'IN',
-                postalCode: '110001',
-                streetAddress: job.location
-            }
-        };
-    } else {
-        jobPosting.jobLocation = {
-            '@type': 'Place',
-            address: {
-                '@type': 'PostalAddress',
-                addressLocality: job.location || 'India',
-                addressRegion: 'India',
-                addressCountry: 'IN',
-                postalCode: '380009',
-                streetAddress: job.location || 'India'
-            }
-        };
-    }
-
-    // ✅ Add skills as a plain string (not array)
-    if (skillsString) {
-        jobPosting.skills = skillsString;
-    }
-
-    // Add qualifications
-    if (job.qualifications) {
-        jobPosting.qualifications = job.qualifications;
-    }
-
-    // Add responsibilities
-    if (job.responsibilities) {
-        jobPosting.responsibilities = job.responsibilities;
-    }
+                value: salaryValue,
+                unitText: job.salary_per || 'Month',
+            },
+        },
+        description: fullDescription,
+        employmentType: 'Full-Time',
+        validThrough: job.valid_till || '',
+    };
 
     return jobPosting;
 }
@@ -432,10 +325,9 @@ export default async function JobOpeningPage({ params }: PageProps) {
     return (
         <div className="container-custom mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-                <Script
+                <script
                     id="jobposting-structured-data"
                     type="application/ld+json"
-                    strategy="afterInteractive"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jobPosting) }}
                 />
                 <Breadcrumbs currentTextColor='black' textColor='black' />

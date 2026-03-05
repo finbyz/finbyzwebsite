@@ -64,7 +64,7 @@ export default function Page() {
           {/* Understanding HR Software */}
           <BlogSection id="understanding-hr-software" title="Understanding HR Software">
             <BlogParagraph>
-              Before diving into specific features, let’s explore what <a className="text-orange-600 underline hover:text-blue-800 transition-colors" href="https://finbyz.tech/human-resource-system" target="_blank" rel="noopener noreferrer">HR software</a> truly is. HR systems encompass a range of digital tools designed to automate and streamline HR functions such as recruitment, onboarding, attendance, performance tracking, and payroll. By centralizing data and automating repetitive tasks, HR software in India allows HR professionals to focus on strategic goals while delivering a seamless experience to employees.
+              Before diving into specific features, let’s explore what <a className="text-orange-600 underline hover:text-blue-800 transition-colors" href="/erpnext/modules/human-resource-system" target="_blank" rel="noopener noreferrer">HR software</a> truly is. HR systems encompass a range of digital tools designed to automate and streamline HR functions such as recruitment, onboarding, attendance, performance tracking, and payroll. By centralizing data and automating repetitive tasks, HR software in India allows HR professionals to focus on strategic goals while delivering a seamless experience to employees.
             </BlogParagraph>
           </BlogSection>
 
