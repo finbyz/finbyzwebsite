@@ -1,7 +1,3 @@
-
-const PAGE_SLUG = "ai-automation/insights/n8n-vs-zapier-vs-make-comparison";
-const PAGE_ROUTE = "ai-automation/insights/n8n-vs-zapier-vs-make-comparison";
-
 export default async function Layout({
   children,
 }: {
@@ -11,9 +7,6 @@ export default async function Layout({
     <>
       <main>
         {children}
-        
-        
-        
       </main>
     </>
   );
