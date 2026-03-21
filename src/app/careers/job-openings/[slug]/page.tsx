@@ -28,12 +28,6 @@ function createJobPostingData(job: any) {
         `At FinByz, we believe the team builds company. Initiator or leader, Technical or Creative there is a space for each one. ` +
         `We create an environment where you can learn, grow, and thrive.</p>`;
 
-    const salaryValue = job.salary
-        ? typeof job.salary === 'string'
-            ? parseFloat(job.salary)
-            : job.salary
-        : 0;
-
     const slug = (job.route || job.name || '').replace(/^\/?/, '');
     const canonicalUrl = `https://finbyz.tech/careers/job-openings/${slug}`;
 
@@ -42,9 +36,15 @@ function createJobPostingData(job: any) {
         '@type': 'JobPosting',
         '@id': canonicalUrl,
         title: job.job_title || job.name,
+        identifier: {
+            "@type": "PropertyValue",
+            "name": "FinByz Tech Pvt Ltd",
+            "value": job.name
+        },
         hiringOrganization: {
             '@type': 'Organization',
             name: 'FinByz Tech Pvt Ltd',
+            '@id': 'https://finbyz.tech/#organization',
             sameAs: [
                 'https://www.facebook.com/finbyz',
                 'https://www.instagram.com/finbyz',
@@ -67,19 +67,20 @@ function createJobPostingData(job: any) {
                     '504-Addor Ambition, Nr. Navrang Circle, Navrangpura',
             },
         },
-        datePosted: job.modified || job.creation || new Date().toISOString(),
+        datePosted: job.posted_on || job.creation || new Date().toISOString(),
         baseSalary: {
             '@type': 'MonetaryAmount',
             currency: 'INR',
             value: {
                 '@type': 'QuantitativeValue',
-                value: salaryValue,
+                minValue: job.lower_range,
+                maxValue: job.upper_range,
                 unitText: job.salary_per || 'Month',
             },
         },
         description: fullDescription,
-        employmentType: 'Full-Time',
-        validThrough: job.valid_till || '',
+        employmentType: job.employment_type || "FULL_TIME",
+        validThrough: job.closes_on || '',
     };
 
     return jobPosting;
@@ -103,12 +104,12 @@ async function getJobByRoute(route: string) {
         'image',
         'skills',
         'salary',
-        'valid_till',
         'posted_on',
         'lower_range',
         'upper_range',
         'salary_per',
         'currency',
+        'closes_on',
     ];
 
     const filters: any[][] = [
