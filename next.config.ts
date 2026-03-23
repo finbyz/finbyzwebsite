@@ -5,6 +5,16 @@ const galleries_redirects = [
     permanent: true
   },
   {
+    source: "/erpnext/7-benefits-of-erp-for-manufacturing",
+    destination: "/erpnext/insights/7-benefits-of-erp-for-manufacturing",
+    permanent: true
+  },
+  {
+    source: "/staff-augmentation/wiki/7-benefits-of-erp-for-manufacturing",
+    destination: "/erpnext/insights/7-benefits-of-erp-for-manufacturing",
+    permanent: true
+  },
+  {
     source: "/booth-management-in-ems",
     destination: "/erpnext/insights/booth-management-in-ems",
     permanent: true
@@ -21,6 +31,11 @@ const galleries_redirects = [
   },
   {
     source: "/cloud-erp-is-the-future-of-business-management-are-you-ready",
+    destination: "/erpnext/insights/cloud-erp-is-the-future-of-business-management-are-you-ready",
+    permanent: true
+  },
+  {
+    source: "/erpnext/apps/cloud-erp-is-the-future-of-business-management-are-you-ready",
     destination: "/erpnext/insights/cloud-erp-is-the-future-of-business-management-are-you-ready",
     permanent: true
   },
@@ -55,6 +70,16 @@ const galleries_redirects = [
     permanent: true
   },
   {
+    source: "/erpnext/erp-accounting",
+    destination: "/erpnext/insights/erp-accounting",
+    permanent: true
+  },
+  {
+    source: "/erpnext/modules/erp-accounting",
+    destination: "/erpnext/insights/erp-accounting",
+    permanent: true
+  },
+  {
     source: "/erp-consulting",
     destination: "/erpnext/insights/erp-consulting",
     permanent: true
@@ -70,7 +95,27 @@ const galleries_redirects = [
     permanent: true
   },
   {
+    source: "/staff-augmentation/erp-modules-finbyz-tech-pvt-ltd",
+    destination: "/erpnext/insights/erp-modules-finbyz-tech-pvt-ltd",
+    permanent: true
+  },
+  {
+    source: "/erpnext/trading/erp-modules-finbyz-tech-pvt-ltd",
+    destination: "/erpnext/insights/erp-modules-finbyz-tech-pvt-ltd",
+    permanent: true
+  },
+  {
+    source: "/erpnext/erp-modules-finbyz-tech-pvt-ltd",
+    destination: "/erpnext/insights/erp-modules-finbyz-tech-pvt-ltd",
+    permanent: true
+  },
+  {
     source: "/erp-selection-process",
+    destination: "/erpnext/insights/erp-selection-process",
+    permanent: true
+  },
+  {
+    source: "/ai-automation/insights/erp-selection-process",
     destination: "/erpnext/insights/erp-selection-process",
     permanent: true
   },
@@ -210,12 +255,22 @@ const galleries_redirects = [
     permanent: true
   },
   {
+    source: "/erp/insights/manufacturing",
+    destination: "/erpnext/insights/manufacturing",
+    permanent: true
+  },
+  {
     source: "/mobile-interface",
     destination: "/erpnext/insights/mobile-interface",
     permanent: true
   },
   {
     source: "/reasons-for-trusting-us",
+    destination: "/about-us/reasons-for-trusting-us",
+    permanent: true
+  },
+  {
+    source: "/services/reasons-for-trusting-us",
     destination: "/about-us/reasons-for-trusting-us",
     permanent: true
   },
@@ -227,6 +282,12 @@ const galleries_redirects = [
   {
     source: "/finbyz-tech-services",
     destination: "/erpnext/insights/services-of-finbyz-tech-new",
+    permanent: true
+  },
+
+  {
+    source: "/support-amc",
+    destination: "/erpnext/services/system-maintenance-amc",
     permanent: true
   },
   {
@@ -250,6 +311,11 @@ const galleries_redirects = [
     permanent: true
   },
   {
+    source: "/erpnext/services/support-amc",
+    destination: "/erpnext/insights/support-system",
+    permanent: true
+  },
+  {
     source: "/tech-consulting",
     destination: "/erpnext/insights/tech-consulting",
     permanent: true
@@ -266,6 +332,16 @@ const galleries_redirects = [
   },
   {
     source: "/the-top-5-erp-implementation-mistakes-to-avoid",
+    destination: "/erpnext/insights/the-top-5-erp-implementation-mistakes-to-avoid",
+    permanent: true
+  },
+  {
+    source: "/erpnext/services/the-top-5-erp-implementation-mistakes-to-avoid",
+    destination: "/erpnext/insights/the-top-5-erp-implementation-mistakes-to-avoid",
+    permanent: true
+  },
+  {
+    source: "/erpnext/the-top-5-erp-implementation-mistakes-to-avoid",
     destination: "/erpnext/insights/the-top-5-erp-implementation-mistakes-to-avoid",
     permanent: true
   },
@@ -295,6 +371,26 @@ const galleries_redirects = [
     permanent: true
   },
   {
+    source: "/erpnext/modules/why-do-you-need-cloud-erp",
+    destination: "/erpnext/wiki/why-do-you-need-cloud-erp",
+    permanent: true
+  },
+  {
+    source: "/services/why-invest-in-it-for-business",
+    destination: "/erpnext/insights/why-to-invest-in-it-for-business",
+    permanent: true
+  },
+  {
+    source: "/erpnext/modules/why-invest-in-it-for-business",
+    destination: "/erpnext/insights/why-to-invest-in-it-for-business",
+    permanent: true
+  },
+  {
+    source: "/erpnext/chemical/why-do-you-need-cloud-erp",
+    destination: "/erpnext/insights/why-to-invest-in-it-for-business",
+    permanent: true
+  },
+  {
     source: "/why-to-invest-in-it-for-business",
     destination: "/erpnext/insights/why-to-invest-in-it-for-business",
     permanent: true
@@ -306,6 +402,387 @@ const galleries_redirects = [
   }
 ]
 
+
+const code_snippets_redirects = [
+  { source: "/erpnext/validate-on-loop", destination: "/erpnext/wiki/validate-on-loop", permanent: true },
+  { source: "/validate-on-loop", destination: "/erpnext/wiki/validate-on-loop", permanent: true },
+
+  { source: "/erpnext/using-where-clause-in-sql", destination: "/erpnext/wiki/using-where-clause-in-sql", permanent: true },
+  { source: "/using-where-clause-in-sql", destination: "/erpnext/wiki/using-where-clause-in-sql", permanent: true },
+
+  { source: "/erpnext/update-table-on-button-click", destination: "/erpnext/wiki/update-table-on-button-click", permanent: true },
+  { source: "/update-table-on-button-click", destination: "/erpnext/wiki/update-table-on-button-click", permanent: true },
+
+  { source: "/erpnext/trigger-on-row-deletion", destination: "/erpnext/wiki/trigger-on-row-deletion", permanent: true },
+  { source: "/trigger-on-row-deletion", destination: "/erpnext/wiki/trigger-on-row-deletion", permanent: true },
+
+  { source: "/erpnext/table-field-filteration", destination: "/erpnext/wiki/table-field-filteration", permanent: true },
+  { source: "/table-field-filteration", destination: "/erpnext/wiki/table-field-filteration", permanent: true },
+
+  { source: "/erpnext/status-colour-coding", destination: "/erpnext/wiki/status-colour-coding", permanent: true },
+  { source: "/status-colour-coding", destination: "/erpnext/wiki/status-colour-coding", permanent: true },
+
+  { source: "/erpnext/socketio-setup", destination: "/erpnext/wiki/socketio-setup", permanent: true },
+  { source: "/socketio-setup", destination: "/erpnext/wiki/socketio-setup", permanent: true },
+
+  { source: "/erpnext/server-side-query", destination: "/erpnext/wiki/server-side-query", permanent: true },
+  { source: "/server-side-query", destination: "/erpnext/wiki/server-side-query", permanent: true },
+
+  { source: "/erpnext/send-email-on-button-click", destination: "/erpnext/wiki/send-email-on-button-click", permanent: true },
+  { source: "/send-email-on-button-click", destination: "/erpnext/wiki/send-email-on-button-click", permanent: true },
+
+  { source: "/erpnext/restrict-users-to-add/delete-rows", destination: "/erpnext/wiki/restrict-users-to-add/delete-rows", permanent: true },
+  { source: "/restrict-users-to-add/delete-rows", destination: "/erpnext/wiki/restrict-users-to-add/delete-rows", permanent: true },
+
+  { source: "/erpnext/resolve-update-errors", destination: "/erpnext/wiki/resolve-update-errors", permanent: true },
+  { source: "/resolve-update-errors", destination: "/erpnext/wiki/resolve-update-errors", permanent: true },
+
+  { source: "/erpnext/remove-table-row", destination: "/erpnext/wiki/remove-table-row", permanent: true },
+  { source: "/remove-table-row", destination: "/erpnext/wiki/remove-table-row", permanent: true },
+
+  { source: "/erpnext/override-exiting-python-methods", destination: "/erpnext/wiki/override-exiting-python-methods", permanent: true },
+  { source: "/override-exiting-python-methods", destination: "/erpnext/wiki/override-exiting-python-methods", permanent: true },
+
+  { source: "/erpnext/nginx-service", destination: "/erpnext/wiki/nginx-service", permanent: true },
+  { source: "/nginx-service", destination: "/erpnext/wiki/nginx-service", permanent: true },
+
+  { source: "/erpnext/merge-strings", destination: "/erpnext/wiki/merge-strings", permanent: true },
+  { source: "/merge-strings", destination: "/erpnext/wiki/merge-strings", permanent: true },
+
+  { source: "/erpnext/map-document-using-custom-button", destination: "/erpnext/wiki/map-document-using-custom-button", permanent: true },
+  { source: "/map-document-using-custom-button", destination: "/erpnext/wiki/map-document-using-custom-button", permanent: true },
+
+  { source: "/erpnext/make-read-only-field", destination: "/erpnext/wiki/make-read-only-field", permanent: true },
+  { source: "/make-read-only-field", destination: "/erpnext/wiki/make-read-only-field", permanent: true },
+
+  { source: "/erpnext/list-of-events", destination: "/erpnext/wiki/list-of-events", permanent: true },
+  { source: "/list-of-events", destination: "/erpnext/wiki/list-of-events", permanent: true },
+
+  { source: "/erpnext/install-python-on-unsupported-enviroment", destination: "/erpnext/wiki/install-python-on-unsupported-enviroment", permanent: true },
+  { source: "/install-python-on-unsupported-enviroment", destination: "/erpnext/wiki/install-python-on-unsupported-enviroment", permanent: true },
+
+  { source: "/erpnext/install-erpnext", destination: "/erpnext/wiki/install-erpnext", permanent: true },
+  { source: "/install-erpnext", destination: "/erpnext/wiki/install-erpnext", permanent: true },
+
+  { source: "/erpnext/gunicorn", destination: "/erpnext/wiki/gunicorn", permanent: true },
+  { source: "/gunicorn", destination: "/erpnext/wiki/gunicorn", permanent: true },
+
+  { source: "/erpnext/get-contact-details-from-party", destination: "/erpnext/wiki/get-contact-details-from-party", permanent: true },
+  { source: "/get-contact-details-from-party", destination: "/erpnext/wiki/get-contact-details-from-party", permanent: true },
+
+  { source: "/erpnext/field-visibility-evaluation", destination: "/erpnext/wiki/field-visibility-evaluation", permanent: true },
+  { source: "/field-visibility-evaluation", destination: "/erpnext/wiki/field-visibility-evaluation", permanent: true },
+
+  { source: "/erpnext/field-filteration", destination: "/erpnext/wiki/field-filteration", permanent: true },
+  { source: "/field-filteration", destination: "/erpnext/wiki/field-filteration", permanent: true },
+
+  { source: "/erpnext/fetch-user-name-and-role", destination: "/erpnext/wiki/fetch-user-name-and-role", permanent: true },
+  { source: "/fetch-user-name-and-role", destination: "/erpnext/wiki/fetch-user-name-and-role", permanent: true },
+
+  { source: "/erpnext/fetch-table-all-rows", destination: "/erpnext/wiki/fetch-table-all-rows", permanent: true },
+  { source: "/fetch-table-all-rows", destination: "/erpnext/wiki/fetch-table-all-rows", permanent: true },
+
+  { source: "/erpnext/fetch-session-user-and-modified", destination: "/erpnext/wiki/fetch-session-user-and-modified", permanent: true },
+  { source: "/fetch-session-user-and-modified", destination: "/erpnext/wiki/fetch-session-user-and-modified", permanent: true },
+
+  { source: "/erpnext/error-no-module-named-psutil", destination: "/erpnext/wiki/error-no-module-named-psutil", permanent: true },
+  { source: "/error-no-module-named-psutil", destination: "/erpnext/wiki/error-no-module-named-psutil", permanent: true },
+
+  { source: "/erpnext/enable-scheduler", destination: "/erpnext/wiki/enable-scheduler", permanent: true },
+  { source: "/enable-scheduler", destination: "/erpnext/wiki/enable-scheduler", permanent: true },
+
+  { source: "/erpnext/enable-developer-mode", destination: "/erpnext/wiki/enable-developer-mode", permanent: true },
+  { source: "/enable-developer-mode", destination: "/erpnext/wiki/enable-developer-mode", permanent: true },
+
+  { source: "/erpnext/dns-based-multitenancy-new-site", destination: "/erpnext/wiki/dns-based-multitenancy-new-site", permanent: true },
+  { source: "/erpnext/dns-based-multitenancy-(new-site)", destination: "/erpnext/wiki/dns-based-multitenancy-new-site", permanent: true },
+  { source: "/dns-based-multitenancy-new-site", destination: "/erpnext/wiki/dns-based-multitenancy-new-site", permanent: true },
+
+  { source: "/erpnext/custom-button", destination: "/erpnext/wiki/custom-button", permanent: true },
+  { source: "/custom-button", destination: "/erpnext/wiki/custom-button", permanent: true },
+
+  { source: "/erpnext/create-swap-file", destination: "/erpnext/wiki/create-swap-file", permanent: true },
+  { source: "/create-swap-file", destination: "/erpnext/wiki/create-swap-file", permanent: true },
+
+  { source: "/erpnext/create-mapped-document", destination: "/erpnext/wiki/create-mapped-document", permanent: true },
+  { source: "/create-mapped-document", destination: "/erpnext/wiki/create-mapped-document", permanent: true },
+
+  { source: "/erpnext/wiki/create-install-uninstall-app", destination: "/erpnext/wiki/create-install-uninstall-app", permanent: true },
+  { source: "/erpnext/wiki/create-install/-uninstall-app", destination: "/erpnext/wiki/create-install-uninstall-app", permanent: true },
+  { source: "/create-install/-uninstall-app", destination: "/erpnext/wiki/create-install-uninstall-app", permanent: true },
+  { source: "/erpnext/create-install-uninstall-app", destination: "/erpnext/wiki/create-install-uninstall-app", permanent: true },
+  { source: "/create-install-uninstall-app", destination: "/erpnext/wiki/create-install-uninstall-app", permanent: true },
+
+  { source: "/erpnext/create-communication-in-timeline", destination: "/erpnext/wiki/create-communication-in-timeline", permanent: true },
+  { source: "/create-communication-in-timeline", destination: "/erpnext/wiki/create-communication-in-timeline", permanent: true },
+
+  { source: "/erpnext/count-within-loop-print-outside-loop", destination: "/erpnext/wiki/count-within-loop-print-outside-loop", permanent: true },
+  { source: "/count-within-loop-print-outside-loop", destination: "/erpnext/wiki/count-within-loop-print-outside-loop", permanent: true },
+
+  { source: "/erpnext/contact-query-filter", destination: "/erpnext/wiki/contact-query-filter", permanent: true },
+  { source: "/contact-query-filter", destination: "/erpnext/wiki/contact-query-filter", permanent: true },
+
+  { source: "/erpnext/change-site-name", destination: "/erpnext/wiki/change-site-name", permanent: true },
+  { source: "/change-site-name", destination: "/erpnext/wiki/change-site-name", permanent: true },
+
+  { source: "/erpnext/call-custom-function-from-javascript", destination: "/erpnext/wiki/call-custom-function-from-javascript", permanent: true },
+  { source: "/call-custom-function-from-javascript", destination: "/erpnext/wiki/call-custom-function-from-javascript", permanent: true },
+
+  { source: "/erpnext/calendar-view-method", destination: "/erpnext/wiki/calendar-view-method", permanent: true },
+  { source: "/calendar-view-method", destination: "/erpnext/wiki/calendar-view-method", permanent: true },
+
+  { source: "/erpnext/calendar-view", destination: "/erpnext/wiki/calendar-view", permanent: true },
+  { source: "/calendar-view", destination: "/erpnext/wiki/calendar-view", permanent: true },
+
+  { source: "/erpnext/backup-and-restore-erpnext", destination: "/erpnext/wiki/backup-and-restore-erpnext", permanent: true },
+  { source: "/backup-and-restore-erpnext", destination: "/erpnext/wiki/backup-and-restore-erpnext", permanent: true },
+
+  { source: "/erpnext/alerts/-dialogs-types", destination: "/erpnext/wiki/alerts/-dialogs-types", permanent: true },
+  { source: "/alerts/-dialogs-types", destination: "/erpnext/wiki/alerts/-dialogs-types", permanent: true },
+
+  { source: "/erpnext/address-and-contact-details", destination: "/erpnext/wiki/address-and-contact-details", permanent: true },
+  { source: "/address-and-contact-details", destination: "/erpnext/wiki/address-and-contact-details", permanent: true },
+]
+
+
+const url_404_redirects = [
+  // ============================================================
+  // NEW REDIRECTS — derived from crawl / 404 analysis
+  // Paste these into the appropriate sections inside async redirects()
+  // in next.config.mjs
+  // ============================================================
+
+  // ── AI / Automation ──────────────────────────────────────────
+  {
+    source: "/ai-automation/wiki",
+    destination: "/erpnext/wiki",
+    permanent: true,
+  },
+  {
+    source: "/ai-products",
+    destination: "/erpnext/ai/integrations",
+    permanent: true,
+  },
+  {
+    source: "/resume-ranker",
+    destination: "/erpnext/ai/ai-powered-resume-ranker",
+    permanent: true,
+  },
+  {
+    source: "/quote-assistant-overview",
+    destination: "/erpnext/ai/ai-powered-quote-assistant",
+    permanent: true,
+  },
+  {
+    source: "/ai-automation/insights/erp-modules-finbyz-tech-pvt-ltd",
+    destination: "/erpnext/insights/erp-modules-finbyz-tech-pvt-ltd",
+    permanent: true,
+  },
+
+  // ── ERPNext (miscellaneous) ───────────────────────────────────
+  {
+    source: "/erpnext/chemical/erp-for-chemical-industry",
+    destination: "/erpnext/chemical/",
+    permanent: true,
+  },
+  {
+    source: "/erpnext/modules/erpnext-certified-partner",
+    destination: "/erpnext/certified-partner",
+    permanent: true,
+  },
+  {
+    source: "/erpnext/modules/development-methodology",
+    destination: "/erpnext/insights/development-methodology",
+    permanent: true,
+  },
+  {
+    source: "/erpnext/apps/benefit-of-erp",
+    destination: "/erp/insights/benefits-of-erp",
+    permanent: true,
+  },
+  {
+    source: "/erpnext/services/finbyz-tech-services",
+    destination: "/erpnext/insights/services-of-finbyz-tech-new",
+    permanent: true,
+  },
+  {
+    source: "/erpnext/handlePrimaryCTA",
+    destination: "/erpnext/",
+    permanent: true,
+  },
+  {
+    source: "/erpnext/handlePrimary",
+    destination: "/erpnext/",
+    permanent: true,
+  },
+  {
+    source: "/Streamline-Your-Business-with-ERPNext-Solutions",
+    destination: "/erpnext/",
+    permanent: true,
+  },
+  {
+    source: "/meeting-managment",          // typo in original URL
+    destination: "/erpnext/apps/meeting-management-erpnext",
+    permanent: true,
+  },
+  {
+    source: "/erpnext-tutorials",
+    destination: "/erpnext/wiki",
+    permanent: true,
+  },
+
+  // ── ERPNext Wiki ──────────────────────────────────────────────
+  {
+    source: "/add-or-replace-a-ssh-key-pair-for-your-instance",
+    destination: "/erpnext/wiki/add-or-replace-a-ssh-key-pair-for-your-instance",
+    permanent: true,
+  },
+  {
+    source: "/dns-based-multitenancy-(new-site)",
+    destination: "/erpnext/wiki/dns-based-multitenancy-new-site",
+    permanent: true,
+  },
+  {
+    source: "/backup-&-restore-erpnext",   // ampersand variant
+    destination: "/erpnext/wiki/backup-and-restore-erpnext",
+    permanent: true,
+  },
+  // ── Staff Augmentation ────────────────────────────────────────
+  {
+    source: "/staff-augmentation/benefit-of-erp",
+    destination: "/erp/insights/benefits-of-erp",
+    permanent: true,
+  },
+  {
+    source: "/staff-augmentation/building-blocks-of-our-software",
+    destination: "/erpnext/insights/building-blocks-of-our-software",
+    permanent: true,
+  },
+  {
+    source: "/staff-augmentation/why-do-you-need-cloud-erp",
+    destination: "/erpnext/wiki/why-do-you-need-cloud-erp",
+    permanent: true,
+  },
+  {
+    source: "/staff-augmentation/hire-python-developer",
+    destination: "/staff-augmentation/hire-python-developers",
+    permanent: true,
+  },
+
+  // ── Careers / Job Pages ───────────────────────────────────────
+  // (individual slugs that arrived before the /jobs/:slug pattern existed)
+  {
+    source: "/video-editor-youtube",
+    destination: "/careers/job-openings",
+    permanent: true,
+  },
+  {
+    source: "/marketing-manager",
+    destination: "/careers/job-openings",
+    permanent: true,
+  },
+  {
+    source: "/marketing-executive",
+    destination: "/careers/job-openings",
+    permanent: true,
+  },
+  {
+    source: "/seo-social-media-manager",
+    destination: "/careers/job-openings",
+    permanent: true,
+  },
+  {
+    source: "/erp-business-analyst",
+    destination: "/careers/job-openings",
+    permanent: true,
+  },
+  {
+    source: "/erp-functional-consultant",
+    destination: "/careers/job-openings",
+    permanent: true,
+  },
+  {
+    source: "/erpnext-developer",
+    destination: "/careers/job-openings",
+    permanent: true,
+  },
+  {
+    source: "/erpnext-fico-consultant",
+    destination: "/careers/job-openings",
+    permanent: true,
+  },
+  {
+    source: "/motion-graphic-designer",
+    destination: "/careers/job-openings",
+    permanent: true,
+  },
+  {
+    source: "/digital-marketing-intern",
+    destination: "/careers/job-openings",
+    permanent: true,
+  },
+  {
+    source: "/ai-automation-internship",
+    destination: "/careers/job-openings",
+    permanent: true,
+  },
+  {
+    source: "/sales-manager-it-services",
+    destination: "/careers/job-openings",
+    permanent: true,
+  },
+
+  // ── Ad Landing Pages ──────────────────────────────────────────
+  {
+    source: "/ad/free-demo",
+    destination: "/contact",
+    permanent: true,
+  },
+  {
+    source: "/ad/erp-for-manufacturing",
+    destination: "/erpnext/manufacturing",
+    permanent: true,
+  },
+
+  // ── Reviews (old Frappe-based review slugs) ───────────────────
+  {
+    source: "/reviews/construction-pillars",
+    destination: "/erpnext/case-studies",
+    permanent: true,
+  },
+  {
+    source: "/reviews/pampero-apicola",
+    destination: "/erpnext/case-studies",
+    permanent: true,
+  },
+  {
+    source: "/reviews/millennium-vitrified-tiles",
+    destination: "/erpnext/case-studies",
+    permanent: true,
+  },
+
+  // ── General ───────────────────────────────────────────────────
+  {
+    source: "/support",
+    destination: "/erpnext/services/support",
+    permanent: true,
+  },
+  {
+    source: "/blog/technology",
+    destination: "/blogs",
+    permanent: true,
+  },
+  {
+    source: "/web-development",
+    destination: "/services/web-application-development",
+    permanent: true,
+  },
+  {
+    source: "/contact/new",
+    destination: "/contact",
+    permanent: true,
+  },
+]
 /**
 @type {import('next').NextConfig} */
 const nextConfig = {
@@ -360,7 +837,7 @@ const nextConfig = {
       {
         source: "/web-api/fb/n/:path*",
         destination: "/api/fb/n/:path*",
-        
+
       },
       {
         source: "/web-api/:path*",
@@ -373,6 +850,21 @@ const nextConfig = {
       // ============================================================
       // ABOUT US SECTION
       // ============================================================
+      {
+        source: "/home",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/index",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/homepage",
+        destination: "/",
+        permanent: true,
+      },
       {
         source: "/about",
         destination: "/about-us",
@@ -419,7 +911,28 @@ const nextConfig = {
       // ============================================================
       // /ai-automation now has its own page.tsx, no redirect needed
       {
+        source: "/ai-automation/guides/proactive-ai-assistant-moltbot",
+        destination: "/ai-automation/wiki/proactive-ai-assistant-moltbot",
+        permanent: true,
+      },
+      {
+        source: "/moltbot-faq",
+        destination: "/ai-automation/services/openclaw-personal-assistant",
+        permanent: true,
+      },
+      {
+        source: "/moltbot-agency-white-label",
+        destination: "/ai-automation/services/openclaw-personal-assistant",
+        permanent: true,
+      },
+
+      {
         source: "/ai-powered-lead-generation-and-email-outreach",
+        destination: "/ai-automation/apps/ai-powered-lead-generation-and-email-outreach",
+        permanent: true,
+      },
+      {
+        source: "/ai-outreach-lead-generation-research",
         destination: "/ai-automation/apps/ai-powered-lead-generation-and-email-outreach",
         permanent: true,
       },
@@ -430,6 +943,11 @@ const nextConfig = {
       },
       {
         source: "/ai-sales-call-recording-and-analysis-in-erpnext",
+        destination: "/ai-automation/apps/sales-call-recording-and-analysis-in-erpnext",
+        permanent: true,
+      },
+      {
+        source: "/ai-sales-call-analysis-erpnext",
         destination: "/ai-automation/apps/sales-call-recording-and-analysis-in-erpnext",
         permanent: true,
       },
@@ -463,6 +981,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/careers/job-application",
+        destination: "/careers/apply",
+        permanent: true,
+      },
+      {
         source: "/hiring-process",
         destination: "/careers/hiring-process",
         permanent: true,
@@ -474,6 +997,11 @@ const nextConfig = {
       },
       {
         source: "/job-application",
+        destination: "/careers/apply",
+        permanent: true,
+      },
+      {
+        source: "/job-application-form/new",
         destination: "/careers/apply",
         permanent: true,
       },
@@ -501,12 +1029,27 @@ const nextConfig = {
         destination: "/contact/thank-you-for-inquiry",
         permanent: true,
       },
+      {
+        source: "/thank-you",
+        destination: "/contact/thank-you-for-inquiry",
+        permanent: true,
+      },
 
       // ============================================================
       // ERP INSIGHTS SECTION
       // ============================================================
       {
         source: "/benefits-of-erp",
+        destination: "/erp/insights/benefits-of-erp",
+        permanent: true,
+      },
+      {
+        source: "/benefit-of-erp",
+        destination: "/erp/insights/benefits-of-erp",
+        permanent: true,
+      },
+      {
+        source: "/erpnext/benefit-of-erp",
         destination: "/erp/insights/benefits-of-erp",
         permanent: true,
       },
@@ -537,6 +1080,11 @@ const nextConfig = {
       },
       {
         source: "/erp-implementation-methodology",
+        destination: "/erp/insights/erp-implementation-methodology",
+        permanent: true,
+      },
+      {
+        source: "/erp-implementaion",
         destination: "/erp/insights/erp-implementation-methodology",
         permanent: true,
       },
@@ -629,10 +1177,20 @@ const nextConfig = {
         destination: "/erpnext/agro/erp-for-commodity-trading",
         permanent: true,
       },
+      {
+        source: "/erpnext/agro/erp-software",
+        destination: "/erpnext/agro/erp-for-commodity-trading",
+        permanent: true,
+      },
 
       // ERPNext AI Section
       {
         source: "/ai-powered-follow-up-buddy-automate-your-sales-follow-up-process",
+        destination: "/erpnext/ai/ai-powered-follow-up-buddy-automate-your-sales-follow-up-process",
+        permanent: true,
+      },
+      {
+        source: "/follow-up-buddy",
         destination: "/erpnext/ai/ai-powered-follow-up-buddy-automate-your-sales-follow-up-process",
         permanent: true,
       },
@@ -663,6 +1221,11 @@ const nextConfig = {
       },
       {
         source: "/smart-card-scanner-overview",
+        destination: "/erpnext/ai/ai-powered-smart-card-scanner",
+        permanent: true,
+      },
+      {
+        source: "/erpnext/ai/smart-card-scanner-overview",
         destination: "/erpnext/ai/ai-powered-smart-card-scanner",
         permanent: true,
       },
@@ -771,6 +1334,21 @@ const nextConfig = {
         destination: "/erpnext/education",
         permanent: true,
       },
+      {
+        source: "/erp-education",
+        destination: "/erpnext/education",
+        permanent: true,
+      },
+      {
+        source: "/erpnext/education",
+        destination: "/erpnext/education",
+        permanent: true,
+      },
+      {
+        source: "/erpnext/erp-education",
+        destination: "/erpnext/education",
+        permanent: true,
+      },
 
       // ERPNext Electronics
       {
@@ -787,6 +1365,11 @@ const nextConfig = {
       },
 
       // ERPNext Fintech
+      {
+        source: "/erpnext/fintech-solutions",
+        destination: "/erpnext/fintech",
+        permanent: true,
+      },
       {
         source: "/fintech-solutions",
         destination: "/erpnext/fintech",
@@ -807,6 +1390,11 @@ const nextConfig = {
       // ERPNext Hire Developers
       {
         source: "/hire-erpnext-implementer",
+        destination: "/erpnext/services/hire-erpnext-implementer",
+        permanent: true,
+      },
+      {
+        source: "/erpnext/hire-developers",
         destination: "/erpnext/services/hire-erpnext-implementer",
         permanent: true,
       },
@@ -832,6 +1420,16 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/erpnext/insights/erpnext-v16-frappe-caffeine-performance-optimization-guide",
+        destination: "/erpnext/insights/erpnext-v16-frappe-caffeine-performance-guide",
+        permanent: true,
+      },
+      {
+        source: "/erpnext-v-16-new-features",
+        destination: "/erpnext/insights/whats-new-erpnext-version-16",
+        permanent: true,
+      },
+      {
         source: "/how-website-benefits-a-business",
         destination: "/erpnext/insights/how-website-benefits-a-business",
         permanent: true,
@@ -842,12 +1440,27 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/erpnext/industry-specific-vs-generic-erp",
+        destination: "/erpnext/insights/industry-specific-vs-generic-erp",
+        permanent: true,
+      },
+      {
         source: "/tips-for-selecting-the-right-manufacturing-software",
         destination: "/erpnext/insights/tips-for-selecting-the-right-manufacturing-software",
         permanent: true,
       },
       {
         source: "/blog/Business/ultimate-erp-go-live-plan",
+        destination: "/erpnext/insights/ultimate-erp-go-live-plan",
+        permanent: true,
+      },
+      {
+        source: "/blog/business",
+        destination: "/erpnext/insights/ultimate-erp-go-live-plan",
+        permanent: true,
+      },
+      {
+        source: "/blog/Business",
         destination: "/erpnext/insights/ultimate-erp-go-live-plan",
         permanent: true,
       },
@@ -867,6 +1480,11 @@ const nextConfig = {
       // ERPNext Manufacturing
       {
         source: "/erp-for-manufacturing-industry",
+        destination: "/erpnext/manufacturing",
+        permanent: true,
+      },
+      {
+        source: "/erpnext/erp-for-manufacturing-industry",
         destination: "/erpnext/manufacturing",
         permanent: true,
       },
@@ -928,6 +1546,21 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/data-analytic",
+        destination: "/ai-automation/services/data-analytics",
+        permanent: true,
+      },
+      {
+        source: "/erpnext/services/data-analytics",
+        destination: "/ai-automation/services/data-analytics",
+        permanent: true,
+      },
+      {
+        source: "/erp/insights/data-analytic",
+        destination: "/ai-automation/services/data-analytics",
+        permanent: true,
+      },
+      {
         source: "/custom-erp",
         destination: "/erpnext/services/develop-custom-erp-software",
         permanent: true,
@@ -949,6 +1582,16 @@ const nextConfig = {
       },
       {
         source: "/erpnext-service-provider",
+        destination: "/erpnext/services/erpnext-service-provider",
+        permanent: true,
+      },
+      {
+        source: "/erpnext/erpnext-service-provider",
+        destination: "/erpnext/services/erpnext-service-provider",
+        permanent: true,
+      },
+      {
+        source: "/erpnext/services/erpnext-service-providersoftware-development",
         destination: "/erpnext/services/erpnext-service-provider",
         permanent: true,
       },
@@ -998,6 +1641,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/erpnext-support-services",
+        destination: "/erpnext/services/support",
+        permanent: true,
+      },
+      {
         source: "/erpnext-system-maintenance",
         destination: "/erpnext/services/system-maintenance-amc",
         permanent: true,
@@ -1027,7 +1675,7 @@ const nextConfig = {
         permanent: true,
       },
 
-      // ERPNext Wiki
+
       {
         source: "/erpnext/address-and-contact-details",
         destination: "/erpnext/wiki/address-and-contact-details",
@@ -1071,6 +1719,21 @@ const nextConfig = {
         destination: "/n8n/workflows/ai-driven-email-classification-for-businesses",
         permanent: true,
       },
+      {
+        source: "/email-classification",
+        destination: "/n8n/workflows/ai-driven-email-classification-for-businesses",
+        permanent: true,
+      },
+      {
+        source: "/n8n/workflows",
+        destination: "/n8n/workflows/ai-driven-email-classification-for-businesses",
+        permanent: true,
+      },
+      {
+        source: "/ai-automation/insights/self-hosting-n8n-enterprise-guide",
+        destination: "/n8n/insights/self-hosting-n8n-enterprise-guide",
+        permanent: true,
+      },
 
       // ============================================================
       // RESOURCES
@@ -1086,6 +1749,11 @@ const nextConfig = {
       // ============================================================
       {
         source: "/software-development",
+        destination: "/services/software-development",
+        permanent: true,
+      },
+      {
+        source: "/erp/insights/software-development",
         destination: "/services/software-development",
         permanent: true,
       },
@@ -1217,6 +1885,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/erpnext/services/certified-partner",
+        destination: "/erpnext/certified-partner",
+        permanent: true,
+      },
+      {
         source: "/erpnext-implementer",
         destination: "/erpnext/services/hire-erpnext-implementer",
         permanent: true,
@@ -1282,6 +1955,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/erp/insights/erpnext-service-provider",
+        destination: "/erpnext/services/erpnext-service-provider",
+        permanent: true,
+      },
+      {
         source: "/start-erp-journey",
         destination: "/erpnext/services/start-your-erp-journey",
         permanent: true,
@@ -1307,11 +1985,23 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/services/erpnext-accounting-transaction-audit",
+        destination: "/erpnext/services/erpnext-accounting-transaction-audit",
+        permanent: true,
+      },
+      {
         source: "/blog-post",
         destination: "/blogs",
         permanent: true,
       },
-      ...galleries_redirects
+      {
+        source: "/blog",
+        destination: "/blogs",
+        permanent: true,
+      },
+      ...galleries_redirects,
+      ...code_snippets_redirects,
+      ...url_404_redirects
     ];
   },
 };
