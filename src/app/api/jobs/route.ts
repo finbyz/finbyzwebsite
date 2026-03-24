@@ -72,22 +72,25 @@ export async function GET(request: NextRequest) {
       valid_till: job.valid_till,
       small_description: job.small_description,
       keywords: job.keywords,
-      posted_on: job.posted_on, 
+      posted_on: job.posted_on,
       company: job.company,
       department: job.department,
       seo_title: job.seo_title,
       planned_vacancies: job.planned_vacancies,
       vacancies: job.vacancies,
       route: job.route,
-      description: job.description, 
-      skills: job.skills, 
-      image: job.image, 
+      description: job.description,
+      skills: job.skills,
+      image: job.image,
       title: job.title,
       currency: job.currency,
       lower_range: job.lower_range,
       upper_range: job.upper_range,
-      salary_per: job.salary_per, // e.g., "Month"
-      publish_salary_range: job.publish_salary_range
+      salary_per: job.salary_per,
+      publish_salary_range: job.publish_salary_range,
+      location: job.location,
+      employment_type: job.employment_type,
+      closes_on: job.closes_on
     }));
 
 

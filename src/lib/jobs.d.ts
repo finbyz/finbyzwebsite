@@ -6,23 +6,23 @@ export interface Job {
   valid_till: string;
   small_description: string;
   keywords: string;
-  posted_on: string; 
+  posted_on: string;
   company: string;
   department: string;
   seo_title: string;
   planned_vacancies: number;
   vacancies?: number;
   route: string;
-  description: string; 
+  description: string;
   skills: string;
-  image?: string; 
+  image?: string;
   title: string;
   currency: string;
   lower_range: number;
   upper_range: number;
-  salary_per: string; 
+  salary_per: string;
   publish_salary_range: number;
-  location:string;
-  employment_type:string;
-  closes_on?:string
+  location: string;
+  employment_type: string;
+  closes_on?: string;
 }

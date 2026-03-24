@@ -1,3 +1,4 @@
+import BreadcrumbSchema from "@/components/seo/BreadCrumbSchema";
 
 export default async function JobLayout({
   children,
@@ -5,9 +6,9 @@ export default async function JobLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="py-12 md:py-16">
+    <main className="py-0">
+      <BreadcrumbSchema />
       {children}
-
     </main>
   );
 }

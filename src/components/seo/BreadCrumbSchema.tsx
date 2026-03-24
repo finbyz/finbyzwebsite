@@ -89,6 +89,7 @@ export default function BreadcrumbSchema({
   return (
     <Script
       type="application/ld+json"
+      id={`breadcrumb-schema-for-${pathname.replace(/\//g, '-')}`}
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
   );
