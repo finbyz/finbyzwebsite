@@ -38,10 +38,19 @@ function createJobPostingData(job: any) {
   const slug = (job.route || job.name || '').split('/').pop() || '';
   const canonicalUrl = `https://finbyz.tech/careers/job-openings/${slug}`;
 
+  // Helper to ensure Frappe dates ("YYYY-MM-DD HH:mm:ss" or "YYYY-MM-DD") become valid ISO 8601 with timezone
+  const toIsoDate = (dateStr: string, isEndOfDay = false) => {
+    if (!dateStr) return '';
+    if (dateStr.includes('T')) return dateStr; // Already ISO
+    if (dateStr.includes(' ')) return dateStr.replace(' ', 'T') + '+05:30';
+    return isEndOfDay ? `${dateStr}T23:59:59+05:30` : `${dateStr}T00:00:00+05:30`;
+  };
+
   return {
     '@context': 'http://schema.org',
     '@type': 'JobPosting',
     '@id': canonicalUrl,
+    url: canonicalUrl, // ADDED: Root URL property
     title: job.job_title || job.name,
     identifier: { '@type': 'PropertyValue', name: 'FinByz Tech Pvt Ltd', value: job.name },
     hiringOrganization: {
@@ -69,20 +78,22 @@ function createJobPostingData(job: any) {
         streetAddress: '504-Addor Ambition, Nr. Navrang Circle, Navrangpura',
       },
     },
-    datePosted: job.posted_on || job.creation || new Date().toISOString(),
+    // UPDATED: Strictly formatted ISO Dates
+    datePosted: toIsoDate(job.posted_on || job.creation) || new Date().toISOString(),
+    validThrough: toIsoDate(job.closes_on, true), // Appends T23:59:59+05:30 if just a date
     baseSalary: {
       '@type': 'MonetaryAmount',
-      currency: 'INR',
+      currency: job.currency || 'INR',
       value: {
         '@type': 'QuantitativeValue',
         minValue: job.lower_range,
         maxValue: job.upper_range,
-        unitText: job.salary_per || 'Month',
+        // UPDATED: Uppercase unitText (YEAR, MONTH, WEEK, DAY, HOUR)
+        unitText: (job.salary_per || 'Month').toUpperCase(), 
       },
     },
     description: fullDesc,
     employmentType: job.employment_type || 'FULL_TIME',
-    validThrough: job.closes_on || '',
   };
 }
 
