@@ -195,7 +195,7 @@ export default function Page() {
       {/* Process Section */}
       <Section useGradient>
         <div className="container-custom py-8 flex flex-col items-center">
-          <h2 className="text-2xl font-bold mb-4 text-center" style={{color:" #1A5276;"}}>ERP Software Process in the Logistics Industry</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center" style={{color:" #1A5276"}}>ERP Software Process in the Logistics Industry</h2>
           <h3 className="text-lg font-semibold mb-8 text-center text-[#1A5276]">The simplified process followed by ERP software is as below:</h3>
           <div className="w-full text-center mb-8">
             <ProcessPhasesTabs phases={processPhases} />

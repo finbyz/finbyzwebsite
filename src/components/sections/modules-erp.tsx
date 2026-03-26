@@ -173,9 +173,13 @@ export default function ModulesSection() {
 
   const scroll = (direction: 'left' | 'right') => {
     if (carouselRef.current) {
-      const cardWidth = 320 + 24; // card width (320px) + gap (24px)
       const container = carouselRef.current;
-      const scrollAmount = cardWidth;
+      const firstCard = container.firstElementChild as HTMLElement;
+      if (!firstCard) return;
+
+      const containerStyle = window.getComputedStyle(container);
+      const gap = parseFloat(containerStyle.gap) || 0;
+      const scrollAmount = firstCard.offsetWidth + gap;
 
       if (direction === 'right') {
         // Scrolling right
@@ -213,17 +217,17 @@ export default function ModulesSection() {
     <section className="py-16 md:py-24 bg-gradient-to-br from-[#1A5276] to-[#154360]" id="modules">
       <div className="container mx-auto px-4 md:px-8 lg:px-12">
         {/* Header Row */}
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-8 mb-12">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-6 mb-10">
           {/* Title */}
           <div className="text-center lg:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold text-white relative inline-block pb-3">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white relative inline-block pb-3">
               Modules of ERP
               <span className="absolute bottom-0 left-0 w-full h-1 bg-[#FF8C00]"></span>
             </h2>
           </div>
 
           {/* Counters */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-0">
+          <div className="flex justify-center gap-0">
             <Counter end={100} label="Completed Projects" showLines="after" />
             <Counter end={6000} label="Active Users" />
             <Counter end={25} label="Expert Resources" showLines="before" />
@@ -231,25 +235,25 @@ export default function ModulesSection() {
         </div>
 
         {/* Content Row */}
-        <div className="grid lg:grid-cols-12 gap-8">
+        <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-8">
           {/* Description */}
-          <div className="lg:col-span-4 space-y-4">
-            <p className="text-white text-base leading-relaxed">
+          <div className="lg:col-span-4 space-y-3">
+            <p className="text-white text-sm md:text-base leading-relaxed">
               Finbyz Tech Pvt Ltd track record spans over 10+ years of IT business solutions. We have
               technology in our genes. We provide innovative solution that work for all the
               Industries/businesses.
             </p>
-            <p className="text-white text-base leading-relaxed">
+            <p className="text-white text-sm md:text-base leading-relaxed">
               We are adept enough to help fit an ERP solution that exactly meets your goals.
             </p>
           </div>
 
           {/* Carousel */}
           <div className="lg:col-span-8 relative">
-            {/* Navigation Buttons */}
+            {/* Navigation Buttons — hidden on mobile, shown on lg+ */}
             <button
               onClick={() => scroll('left')}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-2 rounded-full shadow-lg transition-all opacity-100"
+              className="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-2 rounded-full shadow-lg transition-all items-center justify-center"
               aria-label="Scroll left"
             >
               <ChevronLeft className="w-6 h-6 text-[#1A5276]" />
@@ -257,7 +261,7 @@ export default function ModulesSection() {
 
             <button
               onClick={() => scroll('right')}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-2 rounded-full shadow-lg transition-all opacity-100"
+              className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-2 rounded-full shadow-lg transition-all items-center justify-center"
               aria-label="Scroll right"
             >
               <ChevronRight className="w-6 h-6 text-[#1A5276]" />
@@ -266,7 +270,7 @@ export default function ModulesSection() {
             {/* Carousel Container */}
             <div
               ref={carouselRef}
-              className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth px-8"
+              className="flex gap-4 md:gap-6 overflow-x-auto scrollbar-hide scroll-smooth lg:px-8"
               style={{
                 scrollbarWidth: 'none',
                 msOverflowStyle: 'none',
@@ -277,26 +281,30 @@ export default function ModulesSection() {
                 <a
                   key={module.id}
                   href={module.href || "/modules-of-erp"}
-                  className="flex-shrink-0 w-80 group"
-                  style={{ textDecoration: 'none', color: 'inherit' }}
+                  className="flex-shrink-0 group"
+                  style={{
+                    width: 'min(85vw, 260px)',
+                    textDecoration: 'none',
+                    color: 'inherit'
+                  }}
                 >
                   <div className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full flex flex-col">
                     {/* Image Container */}
-                    <div className="p-8 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-t-lg">
+                    <div className="p-5 md:p-8 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-t-lg min-h-[160px]">
                       <img
                         src={module.image}
                         alt={module.alt}
-                        className="object-contain group-hover:scale-110 transition-transform duration-300"
+                        className="w-full max-h-36 object-contain group-hover:scale-110 transition-transform duration-300"
                       />
                     </div>
 
                     {/* Content Container */}
-                    <div className="p-6 flex-grow flex flex-col justify-center text-center">
-                      <h3 className="text-2xl font-bold text-[#1A5276] mb-4 relative inline-block mx-auto">
+                    <div className="p-4 md:p-6 flex-grow flex flex-col justify-center text-center">
+                      <h3 className="text-lg md:text-2xl font-bold text-[#1A5276] mb-3 relative inline-block mx-auto">
                         {module.title}
                         <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-[#FF8C00] group-hover:w-full transition-all"></span>
                       </h3>
-                      <p className="text-gray-700 text-sm leading-relaxed">
+                      <p className="text-gray-700 text-xs md:text-sm leading-relaxed mt-3">
                         {module.quote}
                         {module.author && (
                           <>
@@ -310,11 +318,27 @@ export default function ModulesSection() {
                 </a>
               ))}
             </div>
+
+            {/* Mobile prev/next buttons below carousel */}
+            <div className="flex justify-center gap-4 mt-4 lg:hidden">
+              <button
+                onClick={() => scroll('left')}
+                className="bg-white/90 hover:bg-white p-2 rounded-full shadow-lg transition-all"
+                aria-label="Scroll left"
+              >
+                <ChevronLeft className="w-5 h-5 text-[#1A5276]" />
+              </button>
+              <button
+                onClick={() => scroll('right')}
+                className="bg-white/90 hover:bg-white p-2 rounded-full shadow-lg transition-all"
+                aria-label="Scroll right"
+              >
+                <ChevronRight className="w-5 h-5 text-[#1A5276]" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
-
-
     </section>
   );
 }
