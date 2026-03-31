@@ -46,7 +46,7 @@ export default function ERPModules({ data }: ERPModulesProps) {
     yearsOfExperience: 10,
     statistics: [
       { number: "100+", label: "Completed Projects" },
-      { number: "6000+", label: "Active Users" },
+      { number: "7000+", label: "Active Users" },
       { number: "25+", label: "Expert Resources" }
     ],
     services: [
