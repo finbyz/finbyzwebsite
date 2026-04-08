@@ -7,7 +7,7 @@ import { BookOpen, FileText, Code, Users, Search, ArrowRight, ExternalLink, Work
 async function getFeaturedWikiPages() {
     try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/web-api/wiki-pages`, {
-            next: { revalidate: 3600 }
+            next: { revalidate: 7200 }
         });
         if (!res.ok) return [];
         const data = await res.json();
@@ -39,14 +39,6 @@ export default async function DocsPage() {
             href: "/n8n/docs", // Assuming this path or similar exists/will exist
             color: "text-red-600",
             bg: "bg-red-50"
-        },
-        {
-            title: "AI Solutions",
-            description: "LLM integration, chatbots, and predictive analytics docs.",
-            icon: Brain,
-            href: "/ai/docs", // Assuming this path
-            color: "text-purple-600",
-            bg: "bg-purple-50"
         },
         {
             title: "Resources Library",

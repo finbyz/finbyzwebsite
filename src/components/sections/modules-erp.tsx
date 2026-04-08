@@ -229,7 +229,7 @@ export default function ModulesSection() {
           {/* Counters */}
           <div className="flex justify-center gap-0">
             <Counter end={100} label="Completed Projects" showLines="after" />
-            <Counter end={6000} label="Active Users" />
+            <Counter end={7000} label="Active Users" />
             <Counter end={25} label="Expert Resources" showLines="before" />
           </div>
         </div>

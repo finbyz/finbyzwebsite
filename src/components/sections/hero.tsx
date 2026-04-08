@@ -117,7 +117,7 @@ export default function Hero({ data = {} }: { data?: Record<string, any> }) {
   }
 
   return (
-    <section className="container-custom min-h-screen mx-auto bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white mt-12">
+    <section className="container-custom min-h-screen mx-auto bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white mt-10">
       {/* Professional Background Pattern */}
       <div className="hero-background" aria-hidden="true">
         {/* Subtle geometric pattern */}

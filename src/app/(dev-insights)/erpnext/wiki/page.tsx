@@ -11,7 +11,7 @@ async function getWikiPages() {
     // or we can assume relative URL works if Next.js handles it, strictly better to use full path if possible or relative if same host.
     // However, usually referencing the API route works.
     const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/web-api/wiki-pages`, {
-      next: { revalidate: 3600 }
+      next: { revalidate: 7200 }
     });
     if (!res.ok) return [];
     const data = await res.json();
