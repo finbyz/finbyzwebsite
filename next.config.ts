@@ -507,7 +507,6 @@ const code_snippets_redirects = [
   { source: "/erpnext/create-mapped-document", destination: "/erpnext/wiki/create-mapped-document", permanent: true },
   { source: "/create-mapped-document", destination: "/erpnext/wiki/create-mapped-document", permanent: true },
 
-  { source: "/erpnext/wiki/create-install-uninstall-app", destination: "/erpnext/wiki/create-install-uninstall-app", permanent: true },
   { source: "/erpnext/wiki/create-install/-uninstall-app", destination: "/erpnext/wiki/create-install-uninstall-app", permanent: true },
   { source: "/create-install/-uninstall-app", destination: "/erpnext/wiki/create-install-uninstall-app", permanent: true },
   { source: "/erpnext/create-install-uninstall-app", destination: "/erpnext/wiki/create-install-uninstall-app", permanent: true },
