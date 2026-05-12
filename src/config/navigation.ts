@@ -80,7 +80,7 @@ async function getBlogPosts(): Promise<NavNode[]> {
         return items.map((item: any) => ({
             name: item.title,
             icon: BookOpen,
-            href: `/${item.route}`,
+            href: `${item.route}`,
             description: item.description
         }));
     } catch (e) {

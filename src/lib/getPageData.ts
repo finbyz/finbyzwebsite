@@ -226,6 +226,50 @@ export async function getFaqs(route: string): Promise<FAQGroup | null> {
     }
 }
 
+export interface HeroImageData {
+    image: string | null;
+    animated_image: string | null;
+}
+
+/**
+ * Fetches the hero image fields (image, animated_image) for a page from
+ * the "NextJS Page" DocType using its actual_route.
+ * Returns null values when the page is not found or the request fails.
+ */
+export async function getHeroImageFromERP(): Promise<HeroImageData> {
+    try {
+
+        const { headers } = await import('next/headers');
+        const headersList = await headers();
+        const pathname = headersList.get('x-pathname') || '/';
+        const route = pathname === '/' ? '/' : pathname.replace(/\/$/, '');
+        console.log(route, 'route')
+
+        const url = `${process.env.FRAPPE_URL}/api/resource/${DOCTYPE}?filters=${encodeURIComponent(
+            JSON.stringify([["actual_route", "=", route]])
+        )}&fields=${encodeURIComponent(JSON.stringify(["name", "image", "animated_image"]))}`;
+
+
+        const response = await fetch(url, {
+            headers: {
+                "Authorization": `token ${process.env.FRAPPE_API_KEY}:${process.env.FRAPPE_API_SECRET}`,
+            },
+            next: { revalidate: 3600 },
+        });
+        if (!response.ok) return { image: null, animated_image: null };
+        const json = await response.json();
+        const doc = json?.data?.[0];
+        if (!doc) return { image: null, animated_image: null };
+        return {
+            image: doc.image || null,
+            animated_image: doc.animated_image || null,
+        };
+    } catch (error) {
+        console.error('errpr found', error)
+        return { image: null, animated_image: null };
+    }
+}
+
 // Type definitions
 interface NextJSPageData {
     name: string;

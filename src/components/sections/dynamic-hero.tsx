@@ -3,6 +3,7 @@ import { ArrowRight, Users, Code, Clock } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/sections/BreadCrumbs';
+import { getHeroImageFromERP } from '@/lib/getPageData';
 
 type ColorKey = 'orange' | 'blue' | 'green' | 'purple';
 
@@ -41,7 +42,7 @@ interface HeroSectionProps {
   className?: string;
 }
 
-const HeroSection: React.FC<HeroSectionProps> = ({
+const HeroSection: React.FC<HeroSectionProps> = async ({
   headline = "Empowering Businesses with ERPNext Solutions Worldwide",
   highlightWords = ["ERPNext Solutions"],
   description = "From implementation to custom development, we provide comprehensive ERPNext services that transform businesses across 25+ countries with 500+ successful deployments.",
@@ -61,6 +62,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   className = "mt-12"
 }) => {
   // Dynamic color classes based on accentColor prop
+  const { image, animated_image } = await getHeroImageFromERP()
+  console.log('image', image)
+  console.log('animated_image', animated_image)
   const colorClasses: Record<ColorKey, {
     text: string;
     bg: string;
@@ -216,7 +220,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 />
               ) : (
                 <Image
-                  src={heroImage.poster || heroImage.src || ""}
+                    src={image || animated_image || heroImage.poster || heroImage.src || ""}
                   alt={heroImage.alt || "Hero image"}
                   width={600}
                   height={450}
