@@ -1,5 +1,3 @@
-'use client'
-
 import BlogHero from '@/components/ai_components/blog/BlogHero';
 import BlogSection from '@/components/ai_components/blog/BlogSection';
 import BlogSectionWithImage from '@/components/ai_components/blog/BlogSectionWithImage';
@@ -8,13 +6,11 @@ import BlogCheckList from '@/components/ai_components/blog/BlogCheckList';
 import BlogTableOfContents from '@/components/ai_components/blog/BlogTableOfContents';
 import BlogContent from '@/components/ai_components/blog/BlogContent';
 
-import Image from 'next/image';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
 
-const blogID = "benefits-of-erp";
 
 const heroProps = {
   title: 'Understanding the Benefits of ERP Systems',

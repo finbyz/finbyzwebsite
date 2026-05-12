@@ -1,5 +1,3 @@
-'use client'
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
@@ -22,9 +20,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Call Us',
-          action: () => {
-            window.open('tel:9925701446', '_self');
-          }
+          action: 'tel:9925701446'
         }}
         heroImage={{
           alt: 'contact',

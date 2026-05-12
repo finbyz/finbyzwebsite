@@ -1,5 +1,3 @@
-'use client'
-
 import BlogHero from '@/components/ai_components/blog/BlogHero';
 import BlogSection from '@/components/ai_components/blog/BlogSection';
 import BlogSectionWithImage from '@/components/ai_components/blog/BlogSectionWithImage';
@@ -119,7 +117,6 @@ export default function Page() {
             />
           </BlogSectionWithImage>
 
-
           <BlogSectionWithImage
             id="step-3-details"
             title="Step 3: Transaction Reset & Data Import"
@@ -143,7 +140,6 @@ export default function Page() {
               ]}
             />
           </BlogSectionWithImage>
-
 
           <BlogSectionWithImage
             id="step-4-details"
@@ -169,7 +165,6 @@ export default function Page() {
               ]}
             />
           </BlogSectionWithImage>
-
 
           <BlogSectionWithImage
             id="step-5-details"

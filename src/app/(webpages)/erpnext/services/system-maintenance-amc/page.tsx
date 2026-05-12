@@ -1,11 +1,9 @@
-'use client';
 import { ReactElement } from 'react';
 import DynamicHero from '@/components/sections/dynamic-hero';
 import TextSection from '@/components/sections/text';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
 import Comment from '@/components/sections/comment';
-
 
 export default function Page(): ReactElement {
   return (
@@ -26,10 +24,7 @@ export default function Page(): ReactElement {
           }}
           secondaryButton={{
             text: 'Learn More',
-            action: () => {
-              const el = document.getElementById('overview');
-              if (el) el.scrollIntoView({ behavior: 'smooth' });
-            },
+            action: '#overview',
           }}
           accentColor="orange"
         />

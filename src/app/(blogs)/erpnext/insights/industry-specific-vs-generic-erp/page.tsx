@@ -1,5 +1,3 @@
-'use client'
-
 import BlogHero from '@/components/ai_components/blog/BlogHero';
 import BlogTableOfContents from '@/components/ai_components/blog/BlogTableOfContents';
 import BlogContent from '@/components/ai_components/blog/BlogContent';

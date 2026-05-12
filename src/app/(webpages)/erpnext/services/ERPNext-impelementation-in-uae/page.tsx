@@ -1,4 +1,3 @@
-'use client'
 import React from "react";
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from "@/components/sections/Section";
@@ -12,10 +11,7 @@ import FlipCard from '@/components/ai_components/FlipCard';
 import Image from 'next/image';
 import { FaCheckCircle } from 'react-icons/fa';
 
-
 const heroHighlightWords = ["in", "UAE", "Service Provider"];
-
-
 
 const flipCards = [
   {
@@ -183,7 +179,6 @@ export default function Page() {
             />
           ))}
         </div>
-
 
         </div>
       </Section>

@@ -1,4 +1,3 @@
-'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
@@ -21,9 +20,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Request Demo',
-          action: () => {
-            window.location.href = '/contact';
-          },
+          action: '/contact',
         }}
         heroImage={{
           alt: 'Investment Portfolio Management in ERPNext',
@@ -41,7 +38,6 @@ export default function Page() {
           </p>
         </div>
       </Section>
-
 
       <Section>
         <div className="container-custom py-8" id="how-to-use">

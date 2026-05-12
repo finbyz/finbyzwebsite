@@ -1,5 +1,3 @@
-'use client'
-
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import ClientLogos from '@/components/sections/client-logos';
@@ -21,5 +19,4 @@ export default function ClientsPage() {
     </div>
   );
 }
-
 

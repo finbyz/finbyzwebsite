@@ -1,11 +1,8 @@
-'use client';
-
 import DynamicHero from '@/components/sections/dynamic-hero';
 import TextSection from '@/components/sections/text';
 import { List } from '@/components/sections/list';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
-
 
 export default function Page() {
     return (
@@ -22,10 +19,7 @@ export default function Page() {
                 }}
                 primaryButton={{ text: 'Get Started', action: 'https://finbyz.tech/contact' }}
                 secondaryButton={{
-                    text: 'Learn More', action: () => {
-                        const el = document.getElementById('performance');
-                        if (el) el.scrollIntoView({ behavior: 'smooth' });
-                    },
+                    text: 'Learn More', action: '#performance',
                 }}
                 accentColor="orange"
             />

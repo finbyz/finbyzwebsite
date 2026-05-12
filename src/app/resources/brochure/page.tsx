@@ -145,9 +145,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: "Contact Us",
-          action: () => {
-            window.location.href = '/contact';
-          }
+          action: '/contact'
         }}
         heroImage={{
           alt: "Brochure",

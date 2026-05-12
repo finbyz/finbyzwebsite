@@ -1,5 +1,3 @@
-'use client'
-
 import BlogHero from '@/components/ai_components/blog/BlogHero';
 import BlogSection from '@/components/ai_components/blog/BlogSection';
 import BlogSectionWithImage from '@/components/ai_components/blog/BlogSectionWithImage';
@@ -9,11 +7,7 @@ import BlogContent from '@/components/ai_components/blog/BlogContent';
 import BlogCheckList from '@/components/ai_components/blog/BlogCheckList';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 
-import Image from 'next/image';
 import Link from 'next/link';
-import { CalendarDays, Clock } from 'lucide-react';
-
-const blogID = "benefits-of-erp-for-manufacturing";
 
 const heroProps = {
   title: 'Unlocking the Benefits of ERP for Manufacturing Industry',

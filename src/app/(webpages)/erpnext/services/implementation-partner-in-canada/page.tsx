@@ -1,5 +1,3 @@
-'use client'
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
@@ -10,16 +8,7 @@ import FlipCard from '@/components/ai_components/FlipCard';
 import FeatureCard from '@/components/ai_components/FeatureCard';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import ClientCountryGrid from '@/components/ai_components/ClientCountryGrid';
-import { FaCheckCircle } from 'react-icons/fa';
-
-const handlePrimary = () => {
-  window.location.href = '/contact';
-};
-const handleSecondary = () => {
-  window.location.href = '/erpnext/certified-partner';
-};
-
-const heroHighlightWords = [ 'Canada', 'Services'];
+import { FaCheckCircle } from 'react-icons/fa';const heroHighlightWords = [ 'Canada', 'Services'];
 
 const flipCards = [
   {
@@ -223,7 +212,7 @@ export default function Page() {
         primaryButton={{ text: 'Get Started', 
           action: "#canada"
          }}
-        secondaryButton={{ text: 'Our ERPNext Partners', action: handleSecondary }}
+        secondaryButton={{ text: 'Our ERPNext Partners', action: '/contact' }}
         heroImage={{
           alt: 'ERPNext Services in Canada',
           src: '/images/Hire-ERPNext-Implementor679475.svg',
@@ -260,7 +249,6 @@ export default function Page() {
               />
             ))}
           </div>
-
 
            
         </div>

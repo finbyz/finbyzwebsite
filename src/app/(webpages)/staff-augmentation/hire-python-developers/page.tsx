@@ -1,5 +1,3 @@
-'use client'
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
@@ -23,9 +21,7 @@ const heroProps = {
   },
   secondaryButton: {
     text: 'View Portfolio',
-    action: () => {
-      window.location.href = '/erpnext/case-studies';
-    }
+    action: '/erpnext/case-studies'
   },
   heroImage: {
     alt: 'Hire Python Developer',

@@ -6,13 +6,6 @@ import Section from '@/components/sections/Section';
 import Link from 'next/link';
 
 export default function HireAccountantContent() {
-    const handleGetStarted = () => {
-        const element = document.getElementById('inquiry-form-section');
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
-
     return (
         <div className="min-h-screen bg-white text-slate-700">
             {/* 
@@ -31,7 +24,7 @@ export default function HireAccountantContent() {
                 description="Stop training your accountant on software they don't understand. Hire expert ERPNext accountants backed by a firm with 10+ years of implementation experience."
                 primaryButton={{
                     text: "Schedule a Discovery Call",
-                    action: handleGetStarted
+                    action: "#inquiry-form-section"
                 }}
                 heroImage={{
                     alt: "Hire ERPNext Accountant",

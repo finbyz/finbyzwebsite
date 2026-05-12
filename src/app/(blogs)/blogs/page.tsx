@@ -1,6 +1,3 @@
-
-
-
 'use client';
 import { useEffect, useMemo, useState } from "react";
 import { Badge } from "@/components/ui/badge";
@@ -93,8 +90,8 @@ function BlogCard({ post }: { post: BlogPost }) {
 export default function BlogPostPage() {
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState<string>("All Posts");
-  const [startDate, setStartDate] = useState<string>("");
-  const [endDate, setEndDate] = useState<string>("");
+  const [startDate] = useState<string>("");
+  const [endDate] = useState<string>("");
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(false);
 

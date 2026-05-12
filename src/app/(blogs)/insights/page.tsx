@@ -1,11 +1,8 @@
-'use client';
-
 import Section from '@/components/sections/Section';
 import DynamicHero from '@/components/sections/dynamic-hero';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Monitor, TrendingUp, AlertCircle, BarChart3, ChevronRight, Code } from 'lucide-react';
-
 
 const FEATURED_INSIGHTS = [
     {

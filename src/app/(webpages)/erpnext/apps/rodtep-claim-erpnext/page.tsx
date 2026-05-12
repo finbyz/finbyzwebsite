@@ -1,4 +1,3 @@
-'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import YouTubeEmbed from '@/components/sections/YouTubeEmbed';
@@ -17,11 +16,11 @@ export default function Page() {
         description="Streamline your RODTEP and Duty Drawback claims using ERPNext. Finbyz Tech, a leading ERPNext Implementation Partner in Ahmedabad, offers tailored solutions for exporters."
         primaryButton={{
           text: 'Download App',
-          action: () => window.open('https://frappecloud.com/marketplace/apps/rodtep_claim_management', '_blank'),
+          action: 'https://frappecloud.com/marketplace/apps/rodtep_claim_management',
         }}
         secondaryButton={{
           text: 'Contact Us',
-          action: () => window.open('https://finbyz.tech/contact', '_blank'),
+          action: 'https://finbyz.tech/contact',
         }}
         heroImage={{
           alt: 'RODTEP Claim Management in ERPNext',

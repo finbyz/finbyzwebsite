@@ -1,5 +1,3 @@
-'use client'
-
 import BlogHero from '@/components/ai_components/blog/BlogHero';
 import BlogTableOfContents from '@/components/ai_components/blog/BlogTableOfContents';
 import BlogContent from '@/components/ai_components/blog/BlogContent';
@@ -7,7 +5,6 @@ import BlogSection from '@/components/ai_components/blog/BlogSection';
 import BlogSectionWithImage from '@/components/ai_components/blog/BlogSectionWithImage';
 import BlogParagraph from '@/components/ai_components/blog/BlogParagraph';
 
-const blogID = "significance-of-system-and-process";
 
 const heroProps = {
   title: 'Enhancing Business Efficiency: The Importance of Systems, Processes, and SOPs',

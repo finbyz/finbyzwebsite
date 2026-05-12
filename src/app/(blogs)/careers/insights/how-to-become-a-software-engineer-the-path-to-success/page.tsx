@@ -1,14 +1,10 @@
-'use client'
-
 import BlogHero from '@/components/ai_components/blog/BlogHero';
 import BlogSection from '@/components/ai_components/blog/BlogSection';
 import BlogSectionWithImage from '@/components/ai_components/blog/BlogSectionWithImage';
 import BlogTableOfContents from '@/components/ai_components/blog/BlogTableOfContents';
 import BlogContent from '@/components/ai_components/blog/BlogContent';
 import BlogParagraph from '@/components/ai_components/blog/BlogParagraph';
-import BlogCheckList from '@/components/ai_components/blog/BlogCheckList';
-
-const blogID = "how-to-become-a-software-engineer-the-path-to-success";
+import Link from 'next/link';
 
 const heroProps = {
   title: 'How to Become a Software Engineer: The Path to Success',
@@ -55,7 +51,7 @@ export default function Page() {
             }}
           >
             <BlogParagraph>
-              Wondering how to become a software engineer? It's one of the most sought-after careers in today’s technology-driven world. Software engineers are at the forefront of innovation, creating applications that shape how we live and work. While the path may seem challenging, with the right mindset and persistence, you can succeed. This guide walks you through the key steps to mastering <a href="/erpnext/services/erpnext-service-provider" className="text-primary underline hover:text-primary/80 transition-colors">software development</a>.
+              Wondering how to become a software engineer? It's one of the most sought-after careers in today’s technology-driven world. Software engineers are at the forefront of innovation, creating applications that shape how we live and work. While the path may seem challenging, with the right mindset and persistence, you can succeed. This guide walks you through the key steps to mastering <Link href="/erpnext/services/erpnext-service-provider" className="text-primary underline hover:text-primary/80 transition-colors">software development</Link>.
             </BlogParagraph>
           </BlogSectionWithImage>
 

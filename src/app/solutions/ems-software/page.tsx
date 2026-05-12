@@ -1,5 +1,3 @@
-'use client';
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
@@ -10,13 +8,7 @@ export default function EMSSoftwarePage() {
   const handleGetStarted = () => {
     const element = document.getElementById('ems-content');
     element?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleContact = () => {
-    window.location.href = '/contact';
-  };
-
-  const features = [
+  };const features = [
     {
       title: 'Two-Way Communication',
       icon: MessageCircle,
@@ -41,11 +33,11 @@ export default function EMSSoftwarePage() {
         description="Advanced software solutions for emergency response coordination. Empowering organizations to manage crises effectively with real-time communication and resource mobilization."
         primaryButton={{
           text: 'Explore Features',
-          action: handleGetStarted
+          action: '/contact'
         }}
         secondaryButton={{
           text: 'Contact Us',
-          action: handleContact
+          action: '/contact'
         }}
         heroImage={{
           alt: 'EMS Software - Emergency management and response coordination',

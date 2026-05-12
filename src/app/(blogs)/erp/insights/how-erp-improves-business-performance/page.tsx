@@ -1,5 +1,3 @@
-'use client'
-
 import BlogHero from '@/components/ai_components/blog/BlogHero';
 import BlogSection from '@/components/ai_components/blog/BlogSection';
 import BlogSectionWithImage from '@/components/ai_components/blog/BlogSectionWithImage';
@@ -8,9 +6,6 @@ import BlogCheckList from '@/components/ai_components/blog/BlogCheckList';
 import BlogTableOfContents from '@/components/ai_components/blog/BlogTableOfContents';
 import BlogContent from '@/components/ai_components/blog/BlogContent';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
-import { FaQuoteLeft } from 'react-icons/fa';
-
-const blogID = "how-erp-improves-business-performance";
 
 const heroProps = {
   title: 'How ERP Enhances Business Performance',

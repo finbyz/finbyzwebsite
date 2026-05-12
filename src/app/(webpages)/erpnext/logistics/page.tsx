@@ -1,12 +1,9 @@
-'use client'
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import FeatureCard from '@/components/ai_components/FeatureCard';
 import BenefitCard from '@/components/ai_components/BenefitCard';
 import ProcessPhasesTabs from '@/components/ai_components/ProcessPhasesTabs';
-
 
 const heroHighlightWords = [ "Logistics", "Industry"];
 
@@ -115,11 +112,7 @@ export default function Page() {
         description="Discover how Finbyz Tech's ERP solutions streamline logistics operations, enhance efficiency, and provide real-time analytics for the logistics industry."
         primaryButton={{
           text: 'Get a Demo',
-          action: () => {
-            if (typeof window !== 'undefined') {
-              window.location.href = '/contact';
-            }
-          }
+          action: '/contact'
         }}
         secondaryButton={{
           text: 'Learn More',

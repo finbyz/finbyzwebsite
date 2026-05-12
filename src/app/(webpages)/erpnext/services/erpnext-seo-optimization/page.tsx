@@ -1,4 +1,3 @@
-'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
@@ -101,16 +100,11 @@ export default function Page() {
         description="Optimize your ERPNext platform with SEO to increase visibility, attract more visitors, and drive growth. Start enhancing your online presence today!"
         primaryButton={{
           text: 'Get Started',
-          action: () => {
-            window.location.href = '/contact';
-          },
+          action: '/contact',
         }}
         secondaryButton={{
           text: 'Learn More',
-          action: () => {
-            const el = document.getElementById('benefits-section');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          },
+          action: '#benefits-section',
         }}
         heroImage={{
           alt: 'ERPNext SEO',

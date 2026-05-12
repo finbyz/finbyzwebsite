@@ -1,5 +1,3 @@
-'use client';
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
@@ -10,13 +8,7 @@ export default function ERPNextModulesPage() {
   const handleGetStarted = () => {
     const element = document.getElementById('modules-content');
     element?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleContact = () => {
-    window.location.href = '/contact';
-  };
-
-  const modules = [
+  };const modules = [
     { title: 'CRM Software', icon: Users, href: '/erpnext/modules/crm-software', description: 'Comprehensive Customer Relationship Management' },
     { title: 'Human Resource System', icon: UserPlus, href: '/erpnext/modules/human-resource-system', description: 'Complete HR Management Solution' }
   ];
@@ -29,11 +21,11 @@ export default function ERPNextModulesPage() {
         description="Explore the comprehensive suite of ERPNext modules designed to streamline every aspect of your business operations."
         primaryButton={{
           text: 'Explore Modules',
-          action: handleGetStarted
+          action: '/contact'
         }}
         secondaryButton={{
           text: 'Contact Sales',
-          action: handleContact
+          action: '/contact'
         }}
         heroImage={{
           alt: 'ERPNext Modules - Integrated business solutions',

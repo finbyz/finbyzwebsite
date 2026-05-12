@@ -1,4 +1,3 @@
-'use client';
 import DynamicHero from '@/components/sections/dynamic-hero';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 
@@ -19,10 +18,7 @@ export default function Page() {
                 }}
                 primaryButton={{ text: 'Get Expert Consultation', action: 'https://finbyz.tech/contact' }}
                 secondaryButton={{
-                    text: 'Explore AI Solutions', action: () => {
-                        const el = document.getElementById('comparison-overview');
-                        if (el) el.scrollIntoView({ behavior: 'smooth' });
-                    }
+                    text: 'Explore AI Solutions', action: '#comparison-overview'
                 }}
             />
 

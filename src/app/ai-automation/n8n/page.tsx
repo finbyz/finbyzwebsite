@@ -1,5 +1,3 @@
-'use client';
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
@@ -10,13 +8,7 @@ export default function N8nPage() {
   const handleGetStarted = () => {
     const element = document.getElementById('n8n-content');
     element?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleContact = () => {
-    window.location.href = '/contact';
-  };
-
-  const features = [
+  };const features = [
     { title: 'Visual Workflow Editor', icon: Workflow, description: 'Design complex automations with an intuitive node-based interface.' },
     { title: '200+ Integrations', icon: Network, description: 'Connect seamlessly with your favorite apps and services out of the box.' },
     { title: 'Custom Code Support', icon: Code, description: 'Extend functionality with JavaScript when pre-built nodes aren\'t enough.' },
@@ -31,11 +23,11 @@ export default function N8nPage() {
         description="Streamline your operations with n8n, the extendable workflow automation tool. Connect your apps, automate processes, and save time with powerful, custom workflows."
         primaryButton={{
           text: 'Explore n8n',
-          action: handleGetStarted
+          action: '/contact'
         }}
         secondaryButton={{
           text: 'Contact Experts',
-          action: handleContact
+          action: '/contact'
         }}
         heroImage={{
           alt: 'n8n Automation - Visual workflow automation platform',

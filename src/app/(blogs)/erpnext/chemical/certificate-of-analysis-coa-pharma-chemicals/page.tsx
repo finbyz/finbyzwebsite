@@ -1,5 +1,3 @@
-'use client'
-
 import BlogHero from '@/components/ai_components/blog/BlogHero';
 import BlogSection from '@/components/ai_components/blog/BlogSection';
 import BlogSectionWithImage from '@/components/ai_components/blog/BlogSectionWithImage';
@@ -8,7 +6,6 @@ import BlogContent from '@/components/ai_components/blog/BlogContent';
 import BlogParagraph from '@/components/ai_components/blog/BlogParagraph';
 import BlogCheckList from '@/components/ai_components/blog/BlogCheckList';
 
-import Image from 'next/image';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { LucideShieldCheck, LucideClipboardList, LucideUsers, LucideFileText, LucideCheckCircle2, LucidePenTool, LucideSignature, LucideSend, LucideRefreshCw } from 'lucide-react';
 

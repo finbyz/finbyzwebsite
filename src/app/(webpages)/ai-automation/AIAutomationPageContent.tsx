@@ -42,17 +42,11 @@ export default function AIAutomationPageContent() {
           }}
           primaryButton={{
             text: 'Get Started',
-            action: () => {
-              const el = document.getElementById('overview')
-              if (el) el.scrollIntoView({ behavior: 'smooth' })
-            },
+            action: '#overview',
           }}
           secondaryButton={{
             text: 'Explore Solutions',
-            action: () => {
-              const el = document.getElementById('solutions')
-              if (el) el.scrollIntoView({ behavior: 'smooth' })
-            },
+            action: '#solutions',
           }}
           accentColor="orange"
         />

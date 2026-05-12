@@ -18,16 +18,11 @@ export default function ServicesPageContent() {
             costs, and scale with confidence."
         primaryButton={{
           text: 'Get Started',
-          action: () => {
-            const el = document.getElementById('overview');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }
+          action: '#overview',
         }}
         secondaryButton={{
           text: 'Contact Support',
-          action: () => {
-            window.location.href = './contact';
-          },
+          action: '/contact',
         }}
         heroImage={{
           alt: ' Services ',

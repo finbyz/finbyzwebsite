@@ -1,5 +1,3 @@
-'use client'
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
@@ -18,15 +16,11 @@ export default function Page() {
         description="Learn how Productify collects, uses, and protects your data. We are committed to transparency and security for all our users."
         primaryButton={{
           text: 'Contact Support',
-          action: () => {
-            window.location.href = './contact';
-          },
+          action: './contact',
         }}
         secondaryButton={{
           text: 'Back to Productify',
-          action: () => {
-            window.location.href = '/solutions/productify';
-          },
+          action: '/solutions/productify',
         }}
         heroImage={{
           alt: 'Productify Privacy Policy',

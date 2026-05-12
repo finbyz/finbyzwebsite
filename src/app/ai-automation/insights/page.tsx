@@ -1,5 +1,3 @@
-'use client';
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
@@ -10,13 +8,7 @@ export default function AIInsightsPage() {
   const handleGetStarted = () => {
     const element = document.getElementById('ai-insights-content');
     element?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleContact = () => {
-    window.location.href = '/contact';
-  };
-
-  const insights = [
+  };const insights = [
     { title: 'Website Design Tips for Small Business', icon: Monitor, href: '/insights/website-design-tips-for-small-business', description: 'Essential design principles for growing businesses', category: 'Design' },
     { title: 'Biggest Challenge in Going Online', icon: Globe, href: '/insights/whats-the-biggest-challenge-for-most-businesses-when-going-online', description: 'Overcoming common hurdles in digital transformation', category: 'Strategy' },
     { title: 'Why Invest in IT?', icon: TrendingUp, href: '/insights/why-invest-in-it-for-business', description: 'The ROI of technology investment for modern businesses', category: 'Business' }
@@ -30,11 +22,11 @@ export default function AIInsightsPage() {
         description="Stay ahead of the curve with our expert insights on Artificial Intelligence, IT strategy, and digital transformation. Read articles that help you navigate the rapidly evolving tech landscape."
         primaryButton={{
           text: 'Read Articles',
-          action: handleGetStarted
+          action: '/contact'
         }}
         secondaryButton={{
           text: 'Subscribe',
-          action: handleContact
+          action: '/contact'
         }}
         heroImage={{
           alt: 'AI Insights - Expert articles on technology and business',

@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import DynamicHero from '@/components/sections/dynamic-hero';
 import TextSection from '@/components/sections/text';
@@ -17,10 +16,7 @@ export default function Page() {
         highlightWords={["ERP Solutions", "Manufacturing", "Supply Chain"]}
         description="Optimize electronics manufacturing, inventory, and global supply chains with powerful ERP solutions. Streamline production, enhance quality, and reduce costs."
         primaryButton={{ text: "Get Started" , action: 'https://finbyz.tech/contact'}}
-        secondaryButton={{ text: "Learn More",action: () => {
-              const el = document.getElementById('erpnext-overview');
-              if (el) el.scrollIntoView({ behavior: 'smooth' });
-            } }}
+        secondaryButton={{ text: "Learn More",action: '#erpnext-overview' }}
         heroImage={{
           alt: 'ERP Solutions for Electronics Manufacturing & Supply Chain',
           src: '/images/erp-for-electronics-industry.png'

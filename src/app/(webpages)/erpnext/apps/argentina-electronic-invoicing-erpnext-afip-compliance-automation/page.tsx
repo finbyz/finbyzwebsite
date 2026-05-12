@@ -1,5 +1,3 @@
-'use client'
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
@@ -31,9 +29,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Contact Us',
-          action: () => {
-            if (typeof window !== 'undefined') window.location.href = '/contact';
-          }
+          action: '/contact'
         }}
         heroImage={{
           alt: 'Argentina Electronic Invoicing in ERPNext: AFIP Compliance & Automation',
@@ -52,7 +48,6 @@ export default function Page() {
           </div>
         </div>
       </Section>
-
 
       <Section useGradient>
         <div className="container-custom py-8 items-center">
@@ -99,8 +94,6 @@ export default function Page() {
               ]}
             />
 
-
-
             <Section>
               <div className="">
                 <h6 className="text-2xl font-semibold mb-2 flex items-center gap-2 text-[#1A5276]">Step 1: Create Required file</h6>
@@ -133,13 +126,11 @@ export default function Page() {
                   <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
                     4. Note that in the serialNumber field, you must write ‘CUIT’ followed by a blank space and then the 11 digits of the CUIT without separators.
 
-
                   </p>
 
                 </div>
               </div>
             </Section>
-
 
             <Section>
               <div className="">
@@ -169,7 +160,6 @@ export default function Page() {
 
                   <p className="text-sm sm:text-lg text-justify leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose">
                     5. Then you must copy and paste it into a plain text editor to save it on your local hard drive.
-
 
                   </p>
 
@@ -203,7 +193,6 @@ export default function Page() {
                 </div>
               </div>
             </Section>
-
 
             <Section>
               <div className="text-justify">
@@ -535,14 +524,12 @@ export default function Page() {
             </p>
           </div>
 
-
           <h2 className="text-2xl font-bold text-[#1A5276]">Documentation </h2>
           <div className="text-gray-900 text-lg">
             <p>
               Complete documentation for Argentina Electronic Invoicing in ERPNext is available <Link href="/erpnext/apps/argentina-electronic-invoicing-erpnext-afip-compliance-automation" className="text-orange-600 underline" target="_blank">here</Link>.
             </p>
           </div>
-
 
           <h2 className="text-2xl font-bold text-[#1A5276]">License </h2>
 
@@ -554,9 +541,6 @@ export default function Page() {
               The code is licensed under the GNU General Public License (v3), and copyright is owned by FinByz Tech Pvt Ltd.
             </p>
           </div>
-
-
-
 
           <div className="mt-6">
           </div>

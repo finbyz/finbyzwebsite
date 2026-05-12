@@ -1,18 +1,15 @@
-'use client'
-
 import BlogHero from '@/components/ai_components/blog/BlogHero';
 import BlogTableOfContents from '@/components/ai_components/blog/BlogTableOfContents';
 import BlogContent from '@/components/ai_components/blog/BlogContent';
 import BlogSection from '@/components/ai_components/blog/BlogSection';
 import BlogSectionWithImage from '@/components/ai_components/blog/BlogSectionWithImage';
 import BlogParagraph from '@/components/ai_components/blog/BlogParagraph';
+import Link from 'next/link';
 import BlogCheckList from '@/components/ai_components/blog/BlogCheckList';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import Image from 'next/image';
 import { FaRegMoneyBillAlt } from 'react-icons/fa';
-import { LucideSettings, LucideUsers, LucideTrendingUp, LucideTarget, LucideListChecks, LucideUserCheck } from 'lucide-react';
-
-const blogID = "how-to-choose-the-right-erp-software-for-your-company";
+import { LucideSettings, LucideUsers, LucideTrendingUp, LucideTarget, LucideListChecks } from 'lucide-react';
 
 const heroProps = {
   title: 'How to Choose the Best ERP Software for Your Company',
@@ -131,7 +128,7 @@ export default function Page() {
                 />
                 <h3 className="text-lg font-semibold mb-2 flex items-center gap-2"><LucideUsers className="w-5 h-5 text-primary" />ERP vendors</h3>
                 <p className="text-muted-foreground text-base">
-                  Even the <a href="/erp/services/erp-software-development" className="text-primary underline hover:text-primary/80 transition-colors">Best ERP Software</a> can fall short if implemented poorly. It is essential to evaluate the vendor’s expertise and experience with ERP solutions. Ask detailed questions during demos to assess their knowledge. A well-informed vendor can be a long-term partner in your journey toward implementing the best ERP system.
+                  Even the <Link href="/erp/services/erp-software-development" className="text-primary underline hover:text-primary/80 transition-colors">Best ERP Software</Link> can fall short if implemented poorly. It is essential to evaluate the vendor’s expertise and experience with ERP solutions. Ask detailed questions during demos to assess their knowledge. A well-informed vendor can be a long-term partner in your journey toward implementing the best ERP system.
                 </p>
               </div>
               {/* Analyze the benefits */}
@@ -190,7 +187,7 @@ export default function Page() {
               />
             </div>
             <BlogParagraph>
-              Implementing the Best ERP Software is not a simple task—it involves a structured approach, time investment, and significant costs. A wrong decision can lead to wasted resources and unfavorable business outcomes. Hence, it is crucial to evaluate all potential ERP solutions thoroughly before making a final decision. Spending the right amount of time on selecting the best ERP system for your organization and following the correct <a href="/erp/insights/erp-implementation-steps" className="text-primary underline hover:text-primary/80 transition-colors">ERP implementation steps</a> can save considerable time and effort that would otherwise go into fixing implementation issues later.
+              Implementing the Best ERP Software is not a simple task—it involves a structured approach, time investment, and significant costs. A wrong decision can lead to wasted resources and unfavorable business outcomes. Hence, it is crucial to evaluate all potential ERP solutions thoroughly before making a final decision. Spending the right amount of time on selecting the best ERP system for your organization and following the correct <Link href="/erp/insights/erp-implementation-steps" className="text-primary underline hover:text-primary/80 transition-colors">ERP implementation steps</Link> can save considerable time and effort that would otherwise go into fixing implementation issues later.
             </BlogParagraph>
           </BlogSection>
 

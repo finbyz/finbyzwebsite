@@ -1,4 +1,3 @@
-'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
@@ -19,15 +18,11 @@ export default function Page() {
                 description="Finbyz Tech, a certified ERPNext and Frappe Partner in Ahmedabad, offers expert ERP implementation, customization, and support services tailored to your business needs."
                 primaryButton={{
                     text: 'Contact Us',
-                    action: () => {
-                        window.location.href = '/contact';
-                    }
+                    action: '/contact'
                 }}
                 secondaryButton={{
                     text: 'View Certificate',
-                    action: () => {
-                        window.open('https://frappe.io/partners/India/Finbyz-Tech-Pvt-Ltd', '_blank');
-                    }
+                    action: 'https://frappe.io/partners/India/Finbyz-Tech-Pvt-Ltd'
                 }}
                 heroImage={{
                     alt: 'ERPNext Certified Partner',
@@ -63,7 +58,6 @@ export default function Page() {
                                 As a trusted ERPNext Partner in Ahmedabad, Gujarat, Finbyz Tech empowers businesses with scalable, robust, and intuitive ERP solutions. ERPNext is a comprehensive and user-friendly Enterprise Resource Planning (ERP) platform, designed specifically for small to medium-sized businesses. It is trusted by users in <span className="font-semibold text-primary">over 100 countries</span>, available in more than <span className="font-semibold text-primary">30 languages</span>, and is known for its flexibility with both cloud and on-premise deployments. Whether you're transitioning from SAP, Oracle, Odoo, Microsoft Dynamics, Tally, or Zoho, <Link href="/erpnext-software" className="text-primary font-semibold underline decoration-2 underline-offset-4 hover:text-primary/80 transition-colors">ERPNext</Link> provides a seamless shift with lower costs and enhanced control. Learn more about how to <a href="/erpnext/insights/how-to-choose-the-right-erp-software-for-your-company" target="_blank" className="text-primary font-semibold underline decoration-2 underline-offset-4 hover:text-primary/80 transition-colors">choose the right ERP</a> for your company.
                             </p>
                         </div>
-
 
                     </div>
 

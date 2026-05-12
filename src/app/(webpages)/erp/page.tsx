@@ -1,4 +1,4 @@
-"use client";
+
 
 import React from "react";
 import Section from "@/components/sections/Section";
@@ -26,10 +26,7 @@ export default function ERPPage() {
                     }}
                     primaryButton={{
                         text: 'Explore Modules',
-                        action: () => {
-                            const el = document.getElementById('erp-modules-carousel')
-                            if (el) el.scrollIntoView({ behavior: 'smooth' })
-                        },
+                        action: '#erp-modules-carousel',
                     }}
                     secondaryButton={{
                         text: 'Contact Us',

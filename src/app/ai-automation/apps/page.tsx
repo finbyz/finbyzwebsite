@@ -1,5 +1,3 @@
-'use client';
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
@@ -10,13 +8,7 @@ export default function AIAutomationAppsPage() {
   const handleGetStarted = () => {
     const element = document.getElementById('ai-apps-content');
     element?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleContact = () => {
-    window.location.href = '/contact';
-  };
-
-  const apps = [
+  };const apps = [
     { title: 'AI-powered Lead Generation', icon: MailPlus, href: '/ai-automation/apps/ai-powered-lead-generation-and-email-outreach', description: 'Automate your outreach and qualify leads with AI.' },
     { title: 'Content Spark Marketing', icon: Sparkles, href: '/ai-automation/apps/content-spark-marketing-automation', description: 'Generate high-converting marketing content instantly.' },
     { title: 'Sales Call Analysis', icon: PhoneCall, href: '/ai-automation/apps/sales-call-recording-and-analysis-in-erpnext', description: 'Record and analyze sales calls for training and insights.' }
@@ -30,11 +22,11 @@ export default function AIAutomationAppsPage() {
         description="Supercharge your workflow with our suite of AI-powered applications. From marketing to sales, automate complex tasks and drive growth."
         primaryButton={{
           text: 'Explore Apps',
-          action: handleGetStarted
+          action: '/contact'
         }}
         secondaryButton={{
           text: 'Request Demo',
-          action: handleContact
+          action: '/contact'
         }}
         heroImage={{
           alt: 'AI Automation Apps - Smart Business Tools',

@@ -1,4 +1,3 @@
-'use client';
 import Image from "next/image";
 import React from 'react';
 import HeroSection from '@/components/sections/dynamic-hero';
@@ -244,15 +243,11 @@ export default function Page() {
         description="Looking for a trusted ERPNext Implementation Partner? Finbyz Tech offers expert ERPNext services tailored to your business needs."
         primaryButton={{
           text: 'Get Started',
-          action: () => {
-            window.scrollTo({ top: 600, behavior: 'smooth' });
-          }
+          action: '#content'
         }}
         secondaryButton={{
           text: 'Contact Us',
-          action: () => {
-            window.location.href = '/contact';
-          }
+          action: '/contact'
         }}
         heroImage={{
           alt: 'ERPNext Implementation',
@@ -292,9 +287,6 @@ export default function Page() {
           </div>
         </div>
       </Section>
-
-
-
 
       <Section className="bg-gradient-to-b from-gray-50 to-white py-20 relative">
         <div className="container-custom">
@@ -358,7 +350,6 @@ export default function Page() {
         </div>
       </Section>
 
-
       <Section useGradient className="py-16">
         <div className="container-custom">
           {/* Heading */}
@@ -414,8 +405,6 @@ export default function Page() {
         </div>
       </Section>
 
-
-
       <Section useGradient>
         <div className="container-custom py-8">
           <h2 className="text-2xl font-bold mb-4 text-center  text-[#1A5276]">We Serve Businesses Across the Globe</h2>
@@ -423,8 +412,6 @@ export default function Page() {
           <ClientCountryGrid countries={countries} />
         </div>
       </Section>
-
-
 
       <Section>
         <div className="py-8">

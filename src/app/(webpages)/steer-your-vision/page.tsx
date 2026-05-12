@@ -1,4 +1,3 @@
-'use client';
 import HeroSection from '@/components/sections/dynamic-hero';
 
 export default function Page() {
@@ -24,16 +23,12 @@ export default function Page() {
     primaryButton: {
       text: 'Request a Consultation',
       icon: 'ArrowRight',
-      action: () => {
-        window.location.href = '/contact';
-      },
+      action: '/contact',
     },
     secondaryButton: {
       text: 'See Our Work',
       icon: 'Eye',
-      action: () => {
-        window.location.href = '/erpnext/case-studies';
-      },
+      action: '/erpnext/case-studies',
     },
     trustIndicator: {
       text: 'Trusted by 100+ Businesses',

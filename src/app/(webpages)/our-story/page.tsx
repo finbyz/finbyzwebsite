@@ -32,17 +32,11 @@ export default function Page() {
             }}
             primaryButton={{
               text: 'Join Our Journey',
-              action: () => {
-                const el = document.getElementById('journey')
-                if (el) el.scrollIntoView({ behavior: 'smooth' })
-              },
+              action: '#journey',
             }}
             secondaryButton={{
               text: 'Explore Our Vision',
-              action: () => {
-                const el = document.getElementById('mission')
-                if (el) el.scrollIntoView({ behavior: 'smooth' })
-              },
+              action: '#mission',
             }}
             accentColor="orange"
           />
@@ -142,10 +136,8 @@ export default function Page() {
         </div>
       </Section>
 
-
       {/* Our Milestones Timeline - Lazy loaded for performance */}
       <LazyCompanyHistoryTimeline />
-
 
       {/* --- Mission & Vision --- */}
       <Section id="mission" className="bg-gray-50 py-16">

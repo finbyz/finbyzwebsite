@@ -1,17 +1,11 @@
-'use client'
-
 import BlogHero from '@/components/ai_components/blog/BlogHero';
 import BlogSection from '@/components/ai_components/blog/BlogSection';
 import BlogSectionWithImage from '@/components/ai_components/blog/BlogSectionWithImage';
 import BlogTableOfContents from '@/components/ai_components/blog/BlogTableOfContents';
 import BlogContent from '@/components/ai_components/blog/BlogContent';
 import BlogParagraph from '@/components/ai_components/blog/BlogParagraph';
-import BlogCheckList from '@/components/ai_components/blog/BlogCheckList';
+import Link from 'next/link';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
-import Image from 'next/image';
-import { FaUserTie, FaRegClock } from 'react-icons/fa';
-
-const blogID = "common-myths-of-erp";
 
 const heroProps = {
   title: 'Common myths of ERP',
@@ -114,7 +108,7 @@ export default function Page() {
               variant="default"
             >
               <BlogParagraph>
-                A common ERP myth is confusing it with other software like supply chain management (SCM) or <a href="/erpnext/modules/crm-software" className="text-primary underline hover:text-primary/80 transition-colors">customer relationship management</a> (CRM) systems. ERP vs CRM is an important distinction: while CRM focuses on managing customer interactions, ERP integrates various business processes across departments. Each software serves unique purposes, and understanding these differences helps businesses choose the right tools.
+                A common ERP myth is confusing it with other software like supply chain management (SCM) or <Link href="/erpnext/modules/crm-software" className="text-primary underline hover:text-primary/80 transition-colors">customer relationship management</Link> (CRM) systems. ERP vs CRM is an important distinction: while CRM focuses on managing customer interactions, ERP integrates various business processes across departments. Each software serves unique purposes, and understanding these differences helps businesses choose the right tools.
               </BlogParagraph>
             </BlogSectionWithImage>
 
@@ -133,7 +127,7 @@ export default function Page() {
               variant="default"
             >
               <BlogParagraph>
-                The myth that a single <a href="/erp/services/erp-software-development" className="text-primary underline hover:text-primary/80 transition-colors">ERP software</a> fits all companies or functions is not true. Many ERP vendors provide customizable solutions tailored for specific industries or organizational needs. Whether you run a small business or a specialized operation, ERP software can be configured to fit your unique requirements, enhancing usability and efficiency.
+                The myth that a single <Link href="/erp/services/erp-software-development" className="text-primary underline hover:text-primary/80 transition-colors">ERP software</Link> fits all companies or functions is not true. Many ERP vendors provide customizable solutions tailored for specific industries or organizational needs. Whether you run a small business or a specialized operation, ERP software can be configured to fit your unique requirements, enhancing usability and efficiency.
               </BlogParagraph>
             </BlogSectionWithImage>
 

@@ -1,4 +1,3 @@
-'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
@@ -17,7 +16,7 @@ export default function Page() {
         description="Discover life at Finbyz Tech – where innovation meets growth. Explore our vibrant work culture, values, and commitment to learning, collaboration, and work-life balance."
         primaryButton={{
           text: 'Explore Openings',
-          action: () => window.location.assign('/careers/job-openings'),
+          action: '/careers/job-openings'
         }}
         heroImage={{
           alt: 'Life at Finbyz',

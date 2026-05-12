@@ -18,12 +18,12 @@ interface CTAProps {
     primaryButton?: {
       text?: string;
       icon?: string;
-      action?: string | (() => void) ;
+      action?: string;
     };
     secondaryButton?: {
       text?: string;
       icon?: string;
-      action?: string | (() => void);
+      action?: string;
     };
     trustIndicator?: {
       text?: string;
@@ -104,7 +104,7 @@ export default function CTA({ data = {} }: CTAProps) {
           </p>
 
           <div className="cta-button-group">
-            {typeof primaryButton?.action === "string" ? (
+            {primaryButton?.action && (
               <Link href={primaryButton.action} passHref>
                 <Button
                   size="lg"
@@ -115,24 +115,9 @@ export default function CTA({ data = {} }: CTAProps) {
                   {primaryButton.text}
                 </Button>
               </Link>
-            ) : (
-              <Button
-                size="lg"
-                className="cta-primary-button"
-                aria-label={`${primaryButton.text} with our experts`}
-                onClick={
-                  typeof primaryButton?.action === "function"
-                    ? primaryButton.action
-                    : undefined
-                }
-              >
-                <PrimaryIcon className="cta-button-icon" aria-hidden="true" />
-                {primaryButton.text}
-              </Button>
             )}
 
-
-            {typeof secondaryButton?.action === "string" ? (
+            {secondaryButton?.action && (
               <Link href={secondaryButton.action} passHref>
                 <Button
                   variant="outline"
@@ -144,21 +129,6 @@ export default function CTA({ data = {} }: CTAProps) {
                   {secondaryButton.text}
                 </Button>
               </Link>
-            ) : (
-              <Button
-                variant="outline"
-                size="lg"
-                className="cta-secondary-button"
-                aria-label={secondaryButton.text}
-                onClick={
-                  typeof secondaryButton?.action === "function"
-                    ? secondaryButton.action
-                    : undefined
-                }
-              >
-                <SecondaryIcon className="cta-button-icon" aria-hidden="true" />
-                {secondaryButton.text}
-              </Button>
             )}
           </div>
 

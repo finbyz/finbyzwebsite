@@ -1,5 +1,3 @@
-'use client'
-
 import Link from 'next/link';
 import BlogHero from '@/components/ai_components/blog/BlogHero';
 import BlogSection from '@/components/ai_components/blog/BlogSection';

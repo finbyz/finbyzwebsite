@@ -1,4 +1,3 @@
-'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
@@ -125,7 +124,6 @@ const jsFrameworkServices = [
   }
 ];
 
-
 const nodeJsFeatures = [
   {
     title: 'Asynchronous and Event-Driven',
@@ -232,9 +230,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'View Portfolio',
-          action: () => {
-            window.location.href = '/erpnext/case-studies';
-          }
+          action: '/erpnext/case-studies'
         }}
         heroImage={{
           alt: 'Hire JavaScript Developer',
@@ -328,7 +324,6 @@ export default function Page() {
           ))}
         </div>
       </Section>
-
 
       <div className="clear-both py-8"></div>
         <br></br><br></br><br></br><br></br><br></br><br></br>

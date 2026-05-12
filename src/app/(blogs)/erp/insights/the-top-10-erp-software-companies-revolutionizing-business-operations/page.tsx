@@ -1,14 +1,11 @@
-'use client'
-
 import BlogHero from '@/components/ai_components/blog/BlogHero';
 import BlogSection from '@/components/ai_components/blog/BlogSection';
 import BlogSectionWithImage from '@/components/ai_components/blog/BlogSectionWithImage';
 import BlogParagraph from '@/components/ai_components/blog/BlogParagraph';
 import BlogTableOfContents from '@/components/ai_components/blog/BlogTableOfContents';
 import BlogContent from '@/components/ai_components/blog/BlogContent';
-import BlogCheckList from '@/components/ai_components/blog/BlogCheckList';
 
-const blogID = "the-top-10-erp-software-companies-revolutionizing-business-operations";
+
 
 const heroProps = {
   title: 'The 10 ERP Software Companies Revolutionizing Business Operations',

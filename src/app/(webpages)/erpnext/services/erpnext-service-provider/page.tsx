@@ -1,4 +1,3 @@
-'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
@@ -19,11 +18,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Contact Us',
-          action: () => {
-            if (typeof window !== 'undefined') {
-              window.location.href = '/contact';
-            }
-          },
+          action: '/contact',
         }}
         heroImage={{
           alt: 'ERPNext Service Provider',

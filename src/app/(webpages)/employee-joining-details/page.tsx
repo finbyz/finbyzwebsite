@@ -42,9 +42,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: "Contact Us",
-          action: () => {
-            window.open('/contact', '_blank');
-          }
+          action: '/contact'
         }}
         heroImage={{
           alt: "Employee Joining details",

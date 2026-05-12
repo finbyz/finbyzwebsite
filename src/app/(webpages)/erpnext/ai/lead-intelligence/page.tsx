@@ -163,10 +163,7 @@ export default function Page() {
     secondaryButton: {
       text: 'See How it Works',
       icon: 'Phone',
-      action: () => {
-        const el = document.getElementById('lead');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }
+      action: '#lead'
     },
     trustIndicator: { text: 'No lock-in • Secure • Auditable', icon: 'ShieldCheck' }
   };

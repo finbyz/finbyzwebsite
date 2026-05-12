@@ -1,4 +1,3 @@
-'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
@@ -69,7 +68,7 @@ export default function Page() {
                 description="Supercharge your enterprise operations with cutting-edge AI integrations. From autonomous lead processing to predictive recruitment, we bring the power of intelligence to your ERP."
                 primaryButton={{ text: 'Explore Solutions', action: '#tools' }}
                 secondaryButton={{
-                    text: 'Get a Demo', action: handleContact
+                    text: 'Get a Demo', action: '/contact'
                 }}
                 heroImage={{
                     alt: 'ERPNext AI Automation',

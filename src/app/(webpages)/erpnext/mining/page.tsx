@@ -1,10 +1,7 @@
-'use client';
-
 import DynamicHero from '@/components/sections/dynamic-hero';
 import TextSection from '@/components/sections/text';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
-
 
 export default function Page() {
   return (

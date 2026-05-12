@@ -1,5 +1,3 @@
-'use client'
-
 import BlogHero from '@/components/ai_components/blog/BlogHero';
 import BlogTableOfContents from '@/components/ai_components/blog/BlogTableOfContents';
 import BlogContent from '@/components/ai_components/blog/BlogContent';
@@ -8,10 +6,6 @@ import BlogSectionWithImage from '@/components/ai_components/blog/BlogSectionWit
 import BlogParagraph from '@/components/ai_components/blog/BlogParagraph';
 import BlogCheckList from '@/components/ai_components/blog/BlogCheckList';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
-import Image from 'next/image';
-import { Separator } from "@/components/ui/separator";
-
-const blogID = "erp-implementation-phases";
 
 const heroProps = {
   title: 'ERP Implementation Life Cycle: Comprehensive Guide to ERP Implementation Phases',

@@ -1,5 +1,3 @@
-'use client';
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
@@ -10,13 +8,7 @@ export default function ERPSolutionsPage() {
   const handleGetStarted = () => {
     const element = document.getElementById('erp-content');
     element?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleContact = () => {
-    window.location.href = '/contact';
-  };
-
-  return (
+  };return (
     <div className="min-h-screen">
       <HeroSection
         headline="Enterprise Resource Planning Solutions"
@@ -24,11 +16,11 @@ export default function ERPSolutionsPage() {
         description="Streamline your entire business operation with our comprehensive ERP solutions. From finance to supply chain, gain complete control and visibility over your organization."
         primaryButton={{
           text: 'Explore Solutions',
-          action: handleGetStarted
+          action: '/contact'
         }}
         secondaryButton={{
           text: 'Contact Us',
-          action: handleContact
+          action: '/contact'
         }}
         heroImage={{
           alt: 'ERP Solutions - Comprehensive business management',

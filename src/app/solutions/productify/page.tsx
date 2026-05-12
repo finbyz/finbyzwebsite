@@ -1,4 +1,3 @@
-'use client';
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
@@ -19,7 +18,7 @@ export default function Page() {
         description="Boost your team's efficiency with Productify, the leading employee productivity tracker and sales person monitoring software. Gain insights, enhance accountability, and drive performance."
         primaryButton={{
           text: 'Get Productify',
-          action: () => window.open('https://frappecloud.com/marketplace/apps/productivity_next', '_blank'),
+          action: 'https://frappecloud.com/marketplace/apps/productivity_next',
         }}
         secondaryButton={{
           text: 'Learn More',
@@ -206,7 +205,6 @@ export default function Page() {
   </div>
 </Section>
 
-
       <Section useGradient>
         <div className="container-custom py-8">
           <h2 className="text-2xl text-[#1A5276] font-semibold text-center mb-6 animate-fadeInUp">Domain Analysis Report</h2>
@@ -272,7 +270,6 @@ export default function Page() {
     </div>
   </div>
 </Section>
-
 
       <Section useGradient>
         <div className="container-custom py-8">

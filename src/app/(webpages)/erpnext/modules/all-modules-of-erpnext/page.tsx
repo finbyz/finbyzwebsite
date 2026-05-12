@@ -1,4 +1,3 @@
-'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
@@ -164,11 +163,7 @@ export default function Page() {
         description="From Customer Relationship Management (CRM) to Supply Chain Management (SCM), from Accounts to HR we cover it all. Our ERP Software is highly developed which helps any business to get a control on management of almost all the major functions of the business."
         primaryButton={{
           text: 'Get a Demo',
-          action: () => {
-            if (typeof window !== 'undefined') {
-              window.location.href = '/contact';
-            }
-          }
+          action: '/contact'
         }}
         // secondaryButton={{
         //   text: 'Download Brochure',

@@ -1,5 +1,3 @@
-'use client';
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
@@ -10,13 +8,7 @@ export default function N8nWorkflowsPage() {
     const handleGetStarted = () => {
         const element = document.getElementById('workflows-content');
         element?.scrollIntoView({ behavior: 'smooth' });
-    };
-
-    const handleContact = () => {
-        window.location.href = '/contact';
-    };
-
-    const workflows = [
+    };const workflows = [
         { name: 'Connect ERPNext with WhatsApp', icon: MessageSquare, href: '/ai-automation/n8n/workflows/how-to-connect-erpnext-with-whatsapp-using-n8n', description: 'Automate WhatsApp notifications from ERPNext events' },
         { name: 'Automate Invoice Integration', icon: FileCheck, href: '/ai-automation/n8n/workflows/automate-invoice-integration-between-erpnext-and-tally-prime', description: 'Sync invoices seamlessly between ERPNext and Tally Prime' },
         { name: 'Social Media Automation', icon: Share2, href: '/ai-automation/n8n/workflows/social-media-automation', description: 'Auto-post content to multiple social platforms' },
@@ -33,11 +25,11 @@ export default function N8nWorkflowsPage() {
                 description="Jumpstart your automation journey with our library of pre-built n8n workflows. Save time and reduce effort by implementing proven automation patterns for common business tasks."
                 primaryButton={{
                     text: 'Browse Workflows',
-                    action: handleGetStarted
+                    action: '/contact'
                 }}
                 secondaryButton={{
                     text: 'Request Workflow',
-                    action: handleContact
+                    action: '/contact'
                 }}
                 heroImage={{
                     alt: 'n8n Workflows - Library of automation templates',

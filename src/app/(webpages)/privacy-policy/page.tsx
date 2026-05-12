@@ -1,5 +1,3 @@
-'use client'
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
@@ -15,15 +13,11 @@ export default function Page() {
         description="Learn how Finbyz Tech collects, uses, and protects your personal data. Your privacy and data security are our top priorities."
         primaryButton={{
           text: 'Contact Us',
-          action: () => {
-            window.location.href = '/contact';
-          },
+          action: '/contact',
         }}
         secondaryButton={{
           text: 'Visit Website',
-          action: () => {
-            window.open('https://finbyz.tech', '_blank');
-          }
+          action: 'https://finbyz.tech'
         }}
         heroImage={{
           alt: 'Finbyz Tech Privacy Policy',

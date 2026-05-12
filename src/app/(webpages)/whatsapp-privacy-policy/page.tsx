@@ -1,5 +1,3 @@
-'use client'
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
@@ -20,9 +18,7 @@ export default function Page() {
         description="Learn how Finbyz Tech collects, uses, and protects your personal information when you use our WhatsApp-related services. Stay informed about your rights, data security, and our commitment to privacy."
         primaryButton={{
           text: "Contact Support",
-          action: () => {
-            window.location.href = '/contact';
-          },
+          action: '/contact',
         }}
         secondaryButton={{
           text: "Learn More",

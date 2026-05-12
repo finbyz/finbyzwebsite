@@ -1,4 +1,3 @@
-'use client';
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
@@ -24,9 +23,7 @@ export default function Page() {
     },
     secondaryButton: {
       text: 'Request Consultation',
-      action: () => {
-        window.location.href = '/contact';
-      },
+      action: '/contact',
     },
     heroImage: {
       alt: 'Software Development',
@@ -155,8 +152,6 @@ export default function Page() {
         'We don’t just build software; we deliver solutions that go beyond expectations. Our software development services are designed to maximize value and performance for your business operations.',
     },
   ];
-
-  // CTA Data
   const ctaData = {
     subheading: {
       text: 'Ready to Transform Your Business?',
@@ -168,16 +163,12 @@ export default function Page() {
     primaryButton: {
       text: 'Request a Consultation',
       icon: 'ArrowRight',
-      action: () => {
-        window.location.href = '/contact';
-      },
+      action: '/contact',
     },
     secondaryButton: {
       text: 'See Our Work',
       icon: 'Eye',
-      action: () => {
-        window.location.href = '/portfolio';
-      },
+      action: '/portfolio',
     },
     trustIndicator: {
       text: 'Trusted by 100+ Businesses',

@@ -1,4 +1,3 @@
-'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
@@ -19,9 +18,7 @@ export default function Page() {
         description="Discover leading ERPNext service providers and partners in Saudi Arabia. Trusted solutions tailored to optimize your business operations and drive growth."
         primaryButton={{
           text: 'Get Consultation',
-          action: () => {
-            window.location.href = '/contact';
-          },
+          action: '/contact',
         }}
         secondaryButton={{
           text: 'Learn More',

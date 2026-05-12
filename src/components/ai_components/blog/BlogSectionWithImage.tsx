@@ -124,7 +124,7 @@ export default function BlogSectionWithImage({
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .clearfix::after {
           content: "";
           display: table;

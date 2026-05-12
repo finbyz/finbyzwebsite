@@ -1,4 +1,3 @@
-'use client';
 import { Fragment } from 'react';
 import dynamic from 'next/dynamic';
 import DynamicHero from '@/components/sections/dynamic-hero';
@@ -30,8 +29,7 @@ export default function Page() {
             ]}
             description="Unlock seamless data flow and process automation with custom API development services. Integrate ERPNext with your enterprise applications for enhanced efficiency."
             primaryButton={{ text: 'Get Started' ,action: 'https://finbyz.tech/contact'}}
-            secondaryButton={{ text: 'Learn More', action: () => { const el = document.getElementById('overview'); 
-              if (el) el.scrollIntoView({ behavior: 'smooth' }); } }}
+            secondaryButton={{ text: 'Learn More', action: '#overview' }}
             heroImage={heroImage}
             accentColor="orange"
           />

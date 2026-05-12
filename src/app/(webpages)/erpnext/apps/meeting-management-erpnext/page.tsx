@@ -1,5 +1,3 @@
-'use client'
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
@@ -17,7 +15,7 @@ export default function Page() {
         description="Optimize your meeting processes with ERPNext's Meeting Management App. Schedule meetings, record summaries, and track action items seamlessly within your CRM."
         primaryButton={{
           text: 'Download App',
-          action: () => window.open('https://frappecloud.com/marketplace/apps/meeting_management', '_blank'),
+          action: 'https://frappecloud.com/marketplace/apps/meeting_management',
         }}
         secondaryButton={{
           text: 'Watch Video',

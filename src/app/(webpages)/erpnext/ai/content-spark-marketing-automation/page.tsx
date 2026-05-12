@@ -1,4 +1,3 @@
-'use client'
 import React from 'react';
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
@@ -6,7 +5,6 @@ import ProcessWorkflow from '@/components/sections/process-workflow';
 import Benefits from '@/components/sections/benefits';
 import Points from '@/components/sections/points';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
-
 
 export default function Page() {
   const seoTitle = 'Content Spark Streamline Marketing Automation';

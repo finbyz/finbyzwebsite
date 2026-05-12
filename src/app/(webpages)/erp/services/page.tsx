@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import Section from '@/components/sections/Section';
 import DynamicHero from '@/components/sections/dynamic-hero';
@@ -26,10 +24,7 @@ export default function ERPServicesPage() {
                     }}
                     primaryButton={{
                         text: 'Explore Services',
-                        action: () => {
-                            const el = document.getElementById('services-grid');
-                            if (el) el.scrollIntoView({ behavior: 'smooth' });
-                        }
+                        action: '#services-grid'
                     }}
                     secondaryButton={{
                         text: 'Contact Us',

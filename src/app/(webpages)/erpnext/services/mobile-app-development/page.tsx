@@ -1,5 +1,3 @@
-'use client';
-
 import DynamicHero from '@/components/sections/dynamic-hero';
 import TextSection from '@/components/sections/text';
 import { List } from '@/components/sections/list';
@@ -25,10 +23,7 @@ export default function Page() {
             src:'/images/mobile-app-development2.png',
           }}
           primaryButton={{ text: 'Get Started',action: 'https://finbyz.tech/contact' }}
-          secondaryButton={{ text: 'Learn More' , action: () => {
-            const el = document.getElementById('mobile-app');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          },}}
+          secondaryButton={{ text: 'Learn More' , action: '#mobile-app',}}
           accentColor="orange"
         />
       </section>

@@ -205,17 +205,11 @@ export default function Page() {
           }}
           primaryButton={{
             text: "Get Started",
-            action: () => {
-              const el = document.getElementById('hire-expert');
-              if (el) el.scrollIntoView({ behavior: 'smooth' });
-            }
+            action: '#hire-expert'
           }}
           secondaryButton={{
             text: "Learn More",
-            action: () => {
-              const el = document.getElementById('hire-expert');
-              if (el) el.scrollIntoView({ behavior: 'smooth' });
-            }
+            action: '#hire-expert'
           }}
           accentColor="orange"
         />

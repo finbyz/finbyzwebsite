@@ -1,5 +1,3 @@
-'use client';
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
@@ -10,13 +8,7 @@ export default function AIServicesPage() {
   const handleGetStarted = () => {
     const element = document.getElementById('services-content');
     element?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleContact = () => {
-    window.location.href = '/contact';
-  };
-
-  const services = [
+  };const services = [
     { title: 'AI Consulting', icon: Users, href: '/ai-automation/services/ai-consulting', description: 'Expert guidance to help you identify high-impact AI opportunities' },
     { title: 'Workflow Automation', icon: Zap, href: '/ai-automation/apps', description: 'Streamline repetitive tasks with custom automated workflows' },
     { title: 'Custom AI Development', icon: Cog, href: '/ai-automation/services/custom-ai-development', description: 'Tailor-made AI solutions designed for your specific business needs' },
@@ -32,11 +24,11 @@ export default function AIServicesPage() {
         description="Comprehensive AI and automation services to drive digital transformation. From strategy to implementation, we partner with you to unlock the full potential of artificial intelligence."
         primaryButton={{
           text: 'Explore Services',
-          action: handleGetStarted
+          action: '/contact'
         }}
         secondaryButton={{
           text: 'Get Consultation',
-          action: handleContact
+          action: '/contact'
         }}
         heroImage={{
           alt: 'AI Services - Professional AI consulting and development',

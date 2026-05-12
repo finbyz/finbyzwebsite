@@ -236,19 +236,21 @@ export interface HeroImageData {
  * the "NextJS Page" DocType using its actual_route.
  * Returns null values when the page is not found or the request fails.
  */
+const normalizeUrl = (value: string | null | undefined): string | null => {
+    if (!value || !value.trim()) return null;
+    return value.startsWith('http') ? value : `${process.env.FRAPPE_URL}${value}`;
+};
+
 export async function getHeroImageFromERP(): Promise<HeroImageData> {
     try {
-
         const { headers } = await import('next/headers');
         const headersList = await headers();
         const pathname = headersList.get('x-pathname') || '/';
         const route = pathname === '/' ? '/' : pathname.replace(/\/$/, '');
-        console.log(route, 'route')
 
         const url = `${process.env.FRAPPE_URL}/api/resource/${DOCTYPE}?filters=${encodeURIComponent(
             JSON.stringify([["actual_route", "=", route]])
         )}&fields=${encodeURIComponent(JSON.stringify(["name", "image", "animated_image"]))}`;
-
 
         const response = await fetch(url, {
             headers: {
@@ -256,29 +258,34 @@ export async function getHeroImageFromERP(): Promise<HeroImageData> {
             },
             next: { revalidate: 3600 },
         });
+
         if (!response.ok) return { image: null, animated_image: null };
+
         const json = await response.json();
         const doc = json?.data?.[0];
         if (!doc) return { image: null, animated_image: null };
-        if (
-            doc.image &&
+
+        const image = typeof doc.image === 'string' && doc.image.trim() ? doc.image.trim() : null;
+        const animatedImage = typeof doc.animated_image === 'string' && doc.animated_image.trim()
+            ? doc.animated_image.trim()
+            : null;
+
+        const isLogoOrInvalid =
+            image &&
             (
-                doc.image.includes("FinByz Logo 2025 copy.png") ||
-                doc.image.toLowerCase().includes("logo")
-            )
-        ) {
-            return { image: null, animated_image: null };
-        }
+                image.includes("FinByz Logo 2025 copy.png") ||
+                image.toLowerCase().includes("logo")
+            );
+
         return {
-            image: doc.image || null,
-            animated_image: doc.animated_image || null,
+            image: isLogoOrInvalid ? null : normalizeUrl(image),
+            animated_image: normalizeUrl(animatedImage),
         };
     } catch (error) {
-        console.error('errpr found', error)
+        console.error('error found', error);
         return { image: null, animated_image: null };
     }
 }
-
 // Type definitions
 interface NextJSPageData {
     name: string;

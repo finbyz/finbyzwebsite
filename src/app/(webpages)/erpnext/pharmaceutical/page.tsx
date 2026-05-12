@@ -1,5 +1,3 @@
-'use client';
-
 import DynamicHero from '@/components/sections/dynamic-hero';
 import TextSection from '@/components/sections/text';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
@@ -28,10 +26,7 @@ export default function Page() {
           }}
           secondaryButton={{
             text: 'Learn More',
-            action: () => {
-              const el = document.getElementById('overview');
-              if (el) el.scrollIntoView({ behavior: 'smooth' });
-            }
+            action: '#overview'
           }}
           accentColor="orange"
         />

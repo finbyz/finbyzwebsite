@@ -1,4 +1,3 @@
-'use client';
 import DynamicHero from '@/components/sections/dynamic-hero';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 
@@ -19,10 +18,7 @@ export default function Page() {
         }}
         primaryButton={{
           text: 'Start Installation',
-          action: () => {
-            const el = document.getElementById('installation-steps');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }
+          action: '#installation-steps'
         }}
         secondaryButton={{ text: 'Get Expert Help', action: 'https://finbyz.tech/contact' }}
       />

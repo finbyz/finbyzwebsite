@@ -1,4 +1,4 @@
-'use client'
+
 
 import React from "react";
 import HeroSection from '@/components/sections/dynamic-hero';
@@ -6,6 +6,7 @@ import Section from "@/components/sections/Section";
 
 import Link from "next/link";
 import { FileText, BookOpen, Video, ArrowRight } from "lucide-react";
+import ImageWithFallback from '@/components/ui/ImageWithFallback';
 
 export default function Page() {
     return (
@@ -16,16 +17,11 @@ export default function Page() {
                 description="Access our comprehensive library of brochures, guides, case studies, and insights to empower your business transformation journey."
                 primaryButton={{
                     text: "Explore Brochures",
-                    action: () => {
-                        const el = document.getElementById('brochures');
-                        if (el) el.scrollIntoView({ behavior: 'smooth' });
-                    }
+                    action: '#brochures'
                 }}
                 secondaryButton={{
                     text: "Contact Us",
-                    action: () => {
-                        window.location.href = '/contact';
-                    }
+                    action: '/contact'
                 }}
                 heroImage={{
                     alt: "Resources",
@@ -172,9 +168,7 @@ export default function Page() {
                         <div className="group cursor-pointer">
                             <div className="rounded-xl overflow-hidden mb-4 relative aspect-video">
                                 <div className="absolute inset-0 bg-gray-200 animate-pulse">
-                                    {/* Placeholder for image - using standard Next.js Image would be better but keeping it simple for now */}
-                                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                                    <img src="/images/erpnext-dashboard-mockup.png" alt="ERPNext 15" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-0 onload-opacity-100" onLoad={(e) => e.currentTarget.classList.remove('opacity-0')} onError={(e) => e.currentTarget.style.display = 'none'} />
+                                    <ImageWithFallback src="/images/erpnext-dashboard-mockup.png" alt="ERPNext 15" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                                 </div>
                             </div>
                             <div className="flex gap-2 mb-2">

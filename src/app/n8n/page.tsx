@@ -1,4 +1,4 @@
-"use client";
+
 
 import React from "react";
 import Section from "@/components/sections/Section";
@@ -24,10 +24,7 @@ export default function Page() {
                     }}
                     primaryButton={{
                         text: 'Explore Services',
-                        action: () => {
-                            const el = document.getElementById('n8n-services')
-                            if (el) el.scrollIntoView({ behavior: 'smooth' })
-                        },
+                        action: '#n8n-services',
                     }}
                     secondaryButton={{
                         text: 'Consult an Expert',

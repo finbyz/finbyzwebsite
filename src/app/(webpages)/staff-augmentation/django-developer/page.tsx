@@ -1,4 +1,3 @@
-'use client';
 import React from "react";
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
@@ -12,17 +11,6 @@ import DjangoOutsourcingBenefitsGrid from '@/components/ai_components/DjangoOuts
 import Image from 'next/image';
 import { CheckCircle2 } from 'lucide-react';
 
-const heroPrimaryAction = () => {
-  if (typeof window !== 'undefined') {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-  }
-};
-const heroSecondaryAction = () => {
-  if (typeof window !== 'undefined') {
-    window.location.href = '/contact';
-  }
-};
-
 export default function Page() {
   return (
     <>
@@ -31,7 +19,7 @@ export default function Page() {
         highlightWords={["Django", "Developer"]}
         description="Looking to hire Django developers? Find expert Python Django developers for your project needs. Hire Django developers today and level up your project!"
         primaryButton={{ text: 'Hire Now', action: "#django" }}
-        secondaryButton={{ text: 'Contact Us', action: heroSecondaryAction }}
+        secondaryButton={{ text: 'Contact Us', action: '/contact' }}
         heroImage={{
           alt: 'Hire Django Developer',
           src: '/Hire-dJango-Dev - New.svg',

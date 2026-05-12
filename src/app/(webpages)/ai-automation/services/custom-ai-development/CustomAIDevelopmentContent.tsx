@@ -23,10 +23,7 @@ export default function CustomAIDevelopmentContent() {
                     }}
                     primaryButton={{
                         text: 'Explore AI Services',
-                        action: () => {
-                            const el = document.getElementById('services')
-                            if (el) el.scrollIntoView({ behavior: 'smooth' })
-                        },
+                        action: '#services',
                     }}
                     secondaryButton={{
                         text: 'Book Consultation',

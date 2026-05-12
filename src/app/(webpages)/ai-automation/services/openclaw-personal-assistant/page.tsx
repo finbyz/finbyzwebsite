@@ -1,4 +1,3 @@
-'use client';
 import DynamicHero from '@/components/sections/dynamic-hero';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 
@@ -16,10 +15,7 @@ export default function Page() {
                 }}
                 primaryButton={{
                     text: 'Discover OpenClaw',
-                    action: () => {
-                        const el = document.getElementById('what-is-openclaw');
-                        if (el) el.scrollIntoView({ behavior: 'smooth' });
-                    }
+                    action: '#what-is-openclaw'
                 }}
                 secondaryButton={{ text: 'Contact Us', action: '/contact' }}
             />

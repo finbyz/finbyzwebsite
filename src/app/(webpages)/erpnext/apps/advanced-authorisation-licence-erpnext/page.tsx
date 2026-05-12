@@ -1,5 +1,3 @@
-'use client'
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import YouTubeEmbed from '@/components/sections/YouTubeEmbed';
@@ -22,9 +20,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Download App',
-          action: () => {
-            window.open('https://frappecloud.com/marketplace/apps/advance_authorisation_licence', '_blank');
-          },
+          action: 'https://frappecloud.com/marketplace/apps/advance_authorisation_licence',
         }}
         heroImage={{
           alt: 'Advanced Authorisation Licence In ERPNext',

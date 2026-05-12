@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import Hero from '@/components/sections/hero';
 import Link from 'next/link';
@@ -10,7 +8,6 @@ import {
     Smartphone, BarChart3
 } from 'lucide-react';
 import FAQ from '@/components/ai_components/FAQ';
-
 
 // Data for the page
 const heroData = {

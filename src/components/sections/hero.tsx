@@ -37,13 +37,12 @@
  */
 
 
-"use client";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import heroData from "@/data/hero.json";
 import { renderTemplateObject } from "@/utils/templateEngine";
 import "@/styles/components/hero.css";
 import "@/styles/components/unified-container.css";
+import HeroClientButtons from "@/components/sections/HeroClientButtons";
 
 /**
  * Hero section component with animated content and interactive elements.
@@ -108,14 +107,6 @@ export default function Hero({ data = {} }: { data?: Record<string, any> }) {
     ...renderedData
   };
 
-  // Scroll to inquiry form section
-  function GotoInquiryForm() {
-    const inquiryForm = document.getElementsByClassName('inquiry-form')[0];;
-    if (inquiryForm) {
-      inquiryForm.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-
   return (
     <section className="container-custom min-h-screen mx-auto bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white mt-10">
       {/* Professional Background Pattern */}
@@ -145,26 +136,10 @@ export default function Hero({ data = {} }: { data?: Record<string, any> }) {
           <p className="hero-subtitle">
             {renderedData.subtitle}
           </p>
-          <div className="hero-button-group">
-            <Button 
-              size="lg"
-              className="hero-primary-button"
-              onClick={GotoInquiryForm}
-            >
-              {renderedData.primaryButton}
-            </Button>
-           
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="hero-secondary-button"
-              onClick={()=>{
-                window.location.href = '/contact'
-              }}
-            >
-              {renderedData.secondaryButton}
-            </Button>
-          </div>
+          <HeroClientButtons
+            primaryButtonText={renderedData.primaryButton}
+            secondaryButtonText={renderedData.secondaryButton}
+          />
         </div>
         {/* Right: Image - now blended with background */}
         <div className="hero-image-container">
@@ -197,4 +172,3 @@ export default function Hero({ data = {} }: { data?: Record<string, any> }) {
     </section>
   );
 }
-

@@ -1,11 +1,8 @@
-'use client';
-
 import DynamicHero from '@/components/sections/dynamic-hero';
 import TextSection from '@/components/sections/text';
 import { List } from '@/components/sections/list';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
-
 
 import { BookUser, Layers, BedDouble, FileText, LineChart, ShieldCheck, Users, Workflow, UserCheck, LayoutList, Briefcase, ListChecks, PackageSearch, BarChart, UserCircle, Headset, Coins, Trophy, Store, ThumbsUp, MessageCircle, Users2 } from 'lucide-react';
 
@@ -28,7 +25,7 @@ export default function Page() {
           }}
           secondaryButton={{
             text: 'Learn More',
-            action: () => { const el = document.getElementById('overview'); if (el) el.scrollIntoView({ behavior: 'smooth' }); }
+            action: '#overview'
           }}
           accentColor="orange"
         />

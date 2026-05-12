@@ -21,9 +21,7 @@ export default function ChemicalPageContent() {
         description="Discover Finbyz Tech's tailored ERP solutions for the chemical industry. Streamline operations, ensure compliance, and boost productivity with our specialized ERP software."
         primaryButton={{
           text: 'Get Free Consultation',
-          action: () => {
-            window.location.href = '/contact';
-          },
+          action: '/contact',
         }}
         heroImage={{
           alt: 'ERPNext for Chemical Industry',

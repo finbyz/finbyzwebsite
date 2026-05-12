@@ -1,4 +1,3 @@
-'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import YouTubeEmbed from '@/components/sections/YouTubeEmbed';
@@ -22,9 +21,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Download App',
-          action: () => {
-            window.open('https://frappecloud.com/marketplace/apps/fd_management', '_blank');
-          }
+          action: 'https://frappecloud.com/marketplace/apps/fd_management'
         }}
         heroImage={{
           alt: 'FD Management In ERPNext',

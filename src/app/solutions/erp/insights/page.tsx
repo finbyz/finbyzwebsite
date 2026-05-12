@@ -1,5 +1,3 @@
-'use client';
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
@@ -10,13 +8,7 @@ export default function ERPInsightsPage() {
   const handleGetStarted = () => {
     const element = document.getElementById('erp-insights-content');
     element?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleContact = () => {
-    window.location.href = '/contact';
-  };
-
-  const insights = [
+  };const insights = [
     { title: 'What is ERP Software?', icon: FileText, href: '/erp/insights/What-is-ERP-software', description: 'Introduction to ERP software and its core concepts', category: 'Basics' },
     { title: 'Benefits of ERP', icon: Star, href: '/erp/insights/benefits-of-erp', description: 'Key benefits of implementing ERP systems', category: 'Benefits' },
     { title: 'ERP & CRM Integration', icon: BarChart3, href: '/erp/insights/benefits-of-erp-and-crm-integration', description: 'Why integrate ERP and CRM for better growth', category: 'Integration' },
@@ -40,11 +32,11 @@ export default function ERPInsightsPage() {
         description="Deep dive into the world of Enterprise Resource Planning. From basics to advanced implementation strategies, access our comprehensive knowledge base."
         primaryButton={{
           text: 'Read Articles',
-          action: handleGetStarted
+          action: '/contact'
         }}
         secondaryButton={{
           text: 'Contact Us',
-          action: handleContact
+          action: '/contact'
         }}
         heroImage={{
           alt: 'ERP Insights - comprehensive guide to enterprise resource planning',

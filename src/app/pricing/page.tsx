@@ -83,16 +83,11 @@ export default function PricingPage() {
                 description="Choose the perfect plan for your business. No hidden fees, just value-driven solutions for ERPNext and Automation."
                 primaryButton={{
                     text: "View Plans",
-                    action: () => {
-                        const el = document.getElementById('pricing-plans');
-                        if (el) el.scrollIntoView({ behavior: 'smooth' });
-                    }
+                    action: '#pricing-plans'
                 }}
                 secondaryButton={{
                     text: "Contact Sales",
-                    action: () => {
-                        window.location.href = '/contact';
-                    }
+                    action: '/contact'
                 }}
                 heroImage={{
                     alt: "Pricing Plans",

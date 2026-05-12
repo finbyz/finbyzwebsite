@@ -1,4 +1,3 @@
-'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
@@ -17,11 +16,7 @@ export default function Page() {
         description="ERP Software for DyeChem industry solves problems of batch-wise Inventory management, Samples management, and Manufacturing of dyes and Pigment with yield, concentration and purity."
         primaryButton={{
           text: 'Get a Demo',
-          action: () => {
-            if (typeof window !== 'undefined') {
-              window.location.href = '/contact';
-            }
-          },
+          action: '/contact',
         }}
         secondaryButton={{
           text: 'Learn More',

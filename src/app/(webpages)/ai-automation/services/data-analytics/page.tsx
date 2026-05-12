@@ -1,5 +1,3 @@
-'use client'
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
@@ -47,7 +45,7 @@ export default function Page() {
                 headline="Data Analytics"
                 highlightWords={["Data", "Analytics"]}
                 description="Unlock business intelligence with Finbyz Tech’s data analytics solutions. We deliver CRM analytics, real-time dashboards, and predictive insights to drive growth."
-                primaryButton={{ text: 'Request Demo', action: handleContact }}
+                primaryButton={{ text: 'Request Demo', action: '/contact' }}
                 secondaryButton={{
                     text: 'Learn More',
                     action: "#data"
@@ -69,7 +67,6 @@ export default function Page() {
                         Our advanced data analytics solutions go beyond traditional business intelligence. Whether you’re looking to optimize operations or integrate CRM analytics for deeper customer insights, our experienced data scientists apply cutting-edge techniques to uncover meaningful patterns and solve real-world business challenges. At Finbyz, we turn raw data into strategic advantage.
                     </p>
 
-
                     {/* <p>
             A person's capacity to make quick, predictable and full proof choices is essential in the present information-driven market. Customer focused organizations will accomplish this through the ideal mix of people, process and technology.
           </p>
@@ -84,8 +81,6 @@ export default function Page() {
           <DataAnalyticsFeatureGrid features={features} />
         </div>
       </Section> */}
-
-
 
             <Section useGradient>
                 <div className="container-custom py-8">

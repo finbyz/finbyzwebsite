@@ -1,10 +1,8 @@
-'use client';
 import React from 'react';
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import ITConsultingFlipCards from '@/components/ai_components/ITConsultingFlipCards';
-
 
 export default function Page() {
   return (
@@ -15,19 +13,11 @@ export default function Page() {
         description="Elevate your business goals with our IT Consulting Services in Ahmedabad. Expert support, unbiased advice, and innovative solutions for optimal IT investment."
         primaryButton={{
           text: 'Get Consultation',
-          action: () => {
-            if (typeof window !== 'undefined') {
-              window.location.href = '/contact';
-            }
-          }
+          action: '/contact'
         }}
         secondaryButton={{
           text: 'Contact Us',
-          action: () => {
-            if (typeof window !== 'undefined') {
-              window.location.href = '/contact';
-            }
-          }
+          action: '/contact'
         }}
         heroImage={{
           alt: 'IT Consulting',

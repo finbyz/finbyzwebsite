@@ -1,4 +1,3 @@
-'use client';
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
@@ -11,10 +10,8 @@ import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
 const handlePrimaryAction = () => {
-  // Implement primary CTA action
 };
 const handleSecondaryAction = () => {
-  // Implement secondary CTA action
 };
 
 export default function Page() {
@@ -30,9 +27,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Request Demo',
-          action: () => {
-            window.location.href = '/contact';
-          },
+          action: '/contact',
         }}
         heroImage={{
           alt: 'Advanced Human Resource Software',

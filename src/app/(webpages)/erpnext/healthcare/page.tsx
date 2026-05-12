@@ -1,4 +1,3 @@
-'use client';
 import DynamicHero from '@/components/sections/dynamic-hero';
 import TextSection from '@/components/sections/text';
 import { List } from '@/components/sections/list';
@@ -17,10 +16,7 @@ export default function Page() {
         highlightWords={['Healthcare Providers', 'Streamline Operations']}
         description="Transform healthcare operations with robust ERP solutions. Enhance patient care, streamline billing, manage inventory."
         primaryButton={{ text: 'Get Started',action: 'https://finbyz.tech/contact' }}
-        secondaryButton={{ text: 'Learn More' , action: () => {
-          const el = document.getElementById('healthcare');
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
-        }}}
+        secondaryButton={{ text: 'Learn More' , action: '#healthcare'}}
         heroImage={{
           alt: 'ERP Solutions for Healthcare Providers Streamline Operations',
           src: '/images/ai-image.png',

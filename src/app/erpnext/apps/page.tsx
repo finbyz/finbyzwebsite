@@ -1,5 +1,3 @@
-'use client';
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
@@ -10,13 +8,7 @@ export default function ERPNextAppsPage() {
   const handleGetStarted = () => {
     const element = document.getElementById('apps-content');
     element?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleContact = () => {
-    window.location.href = '/contact';
-  };
-
-  const apps = [
+  };const apps = [
     { title: 'Advanced Authorisation Licence', icon: FileCheck, href: '/erpnext/apps/advanced-authorisation-licence-erpnext', description: 'Manage advance authorisation licences efficiently' },
     { title: 'Argentina E-Invoicing', icon: Receipt, href: '/erpnext/apps/argentina-electronic-invoicing-erpnext-afip-compliance-automation', description: 'AFIP compliance automation for Argentina' },
     { title: 'EMD Management', icon: DollarSign, href: '/erpnext/apps/emd-management-erpnext', description: 'Track Earnest Money Deposits' },
@@ -36,11 +28,11 @@ export default function ERPNextAppsPage() {
         description="Extend the functionality of your ERP with our range of specialized apps tailored for specific business needs and regional compliance."
         primaryButton={{
           text: 'Browse Apps',
-          action: handleGetStarted
+          action: '/contact'
         }}
         secondaryButton={{
           text: 'Request Custom App',
-          action: handleContact
+          action: '/contact'
         }}
         heroImage={{
           alt: 'ERPNext Apps - Extensions and Plugins',

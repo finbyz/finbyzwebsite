@@ -1,4 +1,3 @@
-'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
@@ -107,9 +106,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Request Demo',
-          action: () => {
-            window.location.href = '/contact';
-          },
+          action: '/contact',
         }}
         heroImage={heroImage}
       />

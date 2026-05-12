@@ -1,5 +1,3 @@
-'use client'
-
 import BlogHero from '@/components/ai_components/blog/BlogHero';
 import BlogSection from '@/components/ai_components/blog/BlogSection';
 import BlogSectionWithImage from '@/components/ai_components/blog/BlogSectionWithImage';
@@ -9,7 +7,6 @@ import BlogParagraph from '@/components/ai_components/blog/BlogParagraph';
 import BlogCheckList from '@/components/ai_components/blog/BlogCheckList';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import Link from 'next/link';
-
 
 const heroProps = {
   title: 'ClawdBot Becomes MoltBot: Inside the Viral AI Assistant\'s Clever Rebrand',

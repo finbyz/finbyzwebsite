@@ -1,6 +1,3 @@
-'use client';
-
-
 import ResponsiveCardGrid from "@/components/sections/responsive-card-grid";
 import { Building2, Users, Award, HeadphonesIcon, CheckCircle2, TrendingUp } from "lucide-react";
 

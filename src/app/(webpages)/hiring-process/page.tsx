@@ -1,4 +1,3 @@
-'use client';
 import DynamicHero from '@/components/sections/dynamic-hero';
 import TextSection from '@/components/sections/text';
 import { List } from '@/components/sections/list';
@@ -15,10 +14,7 @@ export default function Page() {
         highlightWords={["Transparent", "Hiring ", " Opportunities"]}
         description="Discover Finbyz Tech's structured and transparent hiring process. Learn how we recruit top talent for ERPNext, AI automation, and IT roles, ensuring a fair and engaging selection experience."
         primaryButton={{ text: 'Get Started',action: 'https://finbyz.tech/contact' }}
-        secondaryButton={{ text: 'Learn More' , action: () => {
-          const el = document.getElementById('hiring');
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
-        }}}
+        secondaryButton={{ text: 'Learn More' , action: '#hiring'}}
         heroImage={{
           alt: 'Transparent Hiring Process & Career Opportunities',
           src: '/images/hiring-process.png',

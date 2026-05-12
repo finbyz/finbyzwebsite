@@ -23,10 +23,7 @@ export default function ImplementationContent() {
                     }}
                     primaryButton={{
                         text: 'Explore Full Services',
-                        action: () => {
-                            const el = document.getElementById('full-stack-services')
-                            if (el) el.scrollIntoView({ behavior: 'smooth' })
-                        },
+                        action: '#full-stack-services',
                     }}
                     secondaryButton={{
                         text: 'Consult an Architect',

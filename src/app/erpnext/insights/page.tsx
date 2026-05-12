@@ -1,5 +1,3 @@
-'use client';
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
@@ -10,13 +8,7 @@ export default function ERPNextInsightsPage() {
   const handleGetStarted = () => {
     const element = document.getElementById('insights-content');
     element?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleContact = () => {
-    window.location.href = '/contact';
-  };
-
-  const insights = [
+  };const insights = [
     { title: "What's New in ERPNext v16", icon: Sparkles, href: '/erpnext/insights/whats-new-erpnext-version-16', description: 'Deep dive into the latest features and updates.' },
     { title: "Performance Guide", icon: Zap, href: '/erpnext/insights/erpnext-v16-frappe-caffeine-performance-guide', description: 'Optimizing ERPNext with Frappe Caffeine.' },
     { title: "Choosing ERP Software", icon: FileText, href: '/erpnext/insights/how-to-choose-the-right-erp-software-for-your-company', description: 'Guide to selecting the best ERP for your business.' },
@@ -35,11 +27,11 @@ export default function ERPNextInsightsPage() {
         description="Stay updated with the latest trends, guides, and performance tips for ERPNext. Expert knowledge to help you get the most out of your system."
         primaryButton={{
           text: 'Read Latest',
-          action: handleGetStarted
+          action: '/contact'
         }}
         secondaryButton={{
           text: 'Subscribe',
-          action: handleContact
+          action: '/contact'
         }}
         heroImage={{
           alt: 'ERPNext Insights - News and Tutorials',

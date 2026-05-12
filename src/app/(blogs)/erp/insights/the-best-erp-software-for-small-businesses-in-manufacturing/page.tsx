@@ -1,5 +1,3 @@
-'use client'
-
 import BlogHero from '@/components/ai_components/blog/BlogHero';
 import BlogSection from '@/components/ai_components/blog/BlogSection';
 import BlogSectionWithImage from '@/components/ai_components/blog/BlogSectionWithImage';
@@ -9,7 +7,6 @@ import BlogParagraph from '@/components/ai_components/blog/BlogParagraph';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { FaCloud, FaRegSmile, FaIndustry, FaMoneyBillWave } from 'react-icons/fa';
 import Link from 'next/link';
-
 
 const heroProps = {
   title: 'Best ERP Software for Small Manufacturing Businesses in 2025',

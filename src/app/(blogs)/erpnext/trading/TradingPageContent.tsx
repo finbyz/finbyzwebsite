@@ -87,9 +87,7 @@ export default function TradingPageContent() {
         }}
         secondaryButton={{
           text: 'Watch Demo',
-          action: () => {
-            window.open('https://www.youtube.com/results?search_query=erp+for+trading', '_blank');
-          }
+          action: 'https://www.youtube.com/results?search_query=erp+for+trading',
         }}
         heroImage={{
           alt: 'ERP for Trading',

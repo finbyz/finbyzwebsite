@@ -1,5 +1,3 @@
-'use client'
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
@@ -23,11 +21,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Contact Us',
-          action: () => {
-            if (typeof window !== 'undefined') {
-              window.location.href = '/contact';
-            }
-          }
+          action: '/contact'
         }}
         heroImage={{
           alt: 'Web Application Development',

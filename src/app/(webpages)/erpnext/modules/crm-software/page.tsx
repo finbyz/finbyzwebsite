@@ -1,4 +1,3 @@
-'use client';
 import Image from "next/image";
 import React from 'react';
 import HeroSection from '@/components/sections/dynamic-hero';
@@ -26,9 +25,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Contact Us',
-          action: () => {
-            window.location.href = '/contact';
-          },
+          action: '/contact',
         }}
         heroImage={{
           alt: 'CRM Software',

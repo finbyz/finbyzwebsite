@@ -1,4 +1,3 @@
-'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import YouTubeEmbed from '@/components/sections/YouTubeEmbed';
@@ -17,7 +16,7 @@ export default function Page() {
         description="Optimize your Earnest Money Deposit processes with ERPNext. Manage EMDs efficiently, automate accounting entries, and ensure compliance with ease."
         primaryButton={{
           text: 'Download App',
-          action: () => window.open('https://frappecloud.com/marketplace/apps/emd_management', '_blank'),
+          action: 'https://frappecloud.com/marketplace/apps/emd_management',
         }}
         secondaryButton={{
           text: 'Learn More',

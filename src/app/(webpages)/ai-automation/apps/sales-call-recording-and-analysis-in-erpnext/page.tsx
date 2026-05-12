@@ -1,4 +1,3 @@
-'use client'
 import React from 'react';
 import type { Metadata } from 'next';
 import HeroSection from '@/components/sections/dynamic-hero';
@@ -196,10 +195,7 @@ const ctaData = {
   secondaryButton: {
     text: 'See workflow',
     icon: 'ClipboardList',
-    action: () => {
-      const el = document.getElementById('workflow');
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-    }
+    action: '#workflow'
   },
   trustIndicator: { text: 'Secure by design • Built for ERPNext', icon: 'Database' },
 };

@@ -14,13 +14,6 @@ import {
 } from 'lucide-react';
 
 export default function TransactionAuditContent() {
-    const handleGetStarted = () => {
-        const element = document.getElementById('inquiry-form-section');
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
-
     return (
         <div className="min-h-screen bg-white text-slate-700">
             {/* 
@@ -41,7 +34,7 @@ export default function TransactionAuditContent() {
                 description="Don't let data entry errors derail your ERP success. We validate your transactions, correct COGS, ensure compliance, and train your team for accurate financial reporting."
                 primaryButton={{
                     text: "Get Started",
-                    action: handleGetStarted
+                    action: "#inquiry-form-section"
                 }}
                 secondaryButton={{
                     text: "Contact Us",

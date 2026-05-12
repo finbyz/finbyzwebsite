@@ -7,13 +7,6 @@ import Section from '@/components/sections/Section';
 
 
 export default function OpeningBalanceContent() {
-    const handleGetStarted = () => {
-        const element = document.getElementById('inquiry-form-section');
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
-
     return (
         <div className="min-h-screen bg-white text-slate-700">
             {/* 
@@ -32,7 +25,7 @@ export default function OpeningBalanceContent() {
                 description="Start your ERP journey with a clean slate. We take the complex burden of historical data matching off your shoulders so you can focus on day-to-day growth."
                 primaryButton={{
                     text: "Get Started",
-                    action: handleGetStarted
+                    action: "#inquiry-form-section"
                 }}
                 secondaryButton={{
                     text: "Contact Us",

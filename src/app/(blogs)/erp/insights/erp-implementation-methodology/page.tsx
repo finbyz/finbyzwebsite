@@ -1,5 +1,3 @@
-'use client'
-
 import BlogHero from '@/components/ai_components/blog/BlogHero';
 import BlogTableOfContents from '@/components/ai_components/blog/BlogTableOfContents';
 import BlogContent from '@/components/ai_components/blog/BlogContent';
@@ -7,10 +5,8 @@ import BlogSection from '@/components/ai_components/blog/BlogSection';
 import BlogSectionWithImage from '@/components/ai_components/blog/BlogSectionWithImage';
 import BlogParagraph from '@/components/ai_components/blog/BlogParagraph';
 import BlogCheckList from '@/components/ai_components/blog/BlogCheckList';
+import Link from 'next/link';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
-import Image from 'next/image';
-
-const blogID = "erp-implementation-methodology";
 
 const heroProps = {
   title: 'Understanding ERP Implementation Methodologies',
@@ -69,7 +65,7 @@ export default function Page() {
 
           <BlogSection id="traditional-methodology" title="Traditional Methodology">
             <BlogParagraph>
-              The traditional methodology in ERP system implementation involves a phased, systematic approach often based on the System Development Life Cycle (SDLC), Design, and Object-Oriented <a href="/ai-automation/services/data-analytics" className="text-primary underline hover:text-primary/80 transition-colors">Data Analysis</a>. This methodology has been the backbone of ERP projects across industries and continues to be effective for large, complex implementations. Below are the common phases followed in this methodology:
+              The traditional methodology in ERP system implementation involves a phased, systematic approach often based on the System Development Life Cycle (SDLC), Design, and Object-Oriented <Link href="/ai-automation/services/data-analytics" className="text-primary underline hover:text-primary/80 transition-colors">Data Analysis</Link>. This methodology has been the backbone of ERP projects across industries and continues to be effective for large, complex implementations. Below are the common phases followed in this methodology:
             </BlogParagraph>
             <BlogParagraph>
               <strong>1. Planning:</strong> The scope of the ERP implementation is defined. A core team is allocated, and a detailed roadmap using a chosen ERP implementation methodology is created.
@@ -81,7 +77,7 @@ export default function Page() {
               <strong>3. Configuration:</strong> Business processes are structured, and system settings are configured by vendor consultants. However, the core team remains actively involved.
             </BlogParagraph>
             <BlogParagraph>
-              <strong>4. Conference Room Pilot:</strong> The configured system is tested in real-world scenarios through Conference Room Pilots (CRP) and refined to ensure readiness for production. <a href="/erpnext/services/erpnext-service-provider" className="text-primary underline hover:text-primary/80 transition-colors">Software development</a> modifications may also be implemented at this stage.
+              <strong>4. Conference Room Pilot:</strong> The configured system is tested in real-world scenarios through Conference Room Pilots (CRP) and refined to ensure readiness for production. <Link href="/erpnext/services/erpnext-service-provider" className="text-primary underline hover:text-primary/80 transition-colors">Software development</Link> modifications may also be implemented at this stage.
             </BlogParagraph>
             <BlogParagraph>
               <strong>5. Cut-over Activities:</strong> Final data migration and user training are conducted. Vendor consultants support the business in preparing for the go-live.

@@ -1,5 +1,3 @@
-'use client'
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
@@ -21,9 +19,7 @@ export default function Page() {
                 }}
                 secondaryButton={{
                     text: 'Explore v16 Features',
-                    action: () => {
-                        window.open('/erpnext/insights/whats-new-erpnext-version-16', '_blank');
-                    },
+                    action: '/erpnext/insights/whats-new-erpnext-version-16',
                 }}
                 heroImage={{
                     alt: 'ERPNext Migration Services',

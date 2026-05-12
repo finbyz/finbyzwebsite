@@ -1,4 +1,4 @@
-'use client';
+
 
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
@@ -12,14 +12,6 @@ import Image from 'next/image';
 import React from 'react';
 
 export default function Page() {
-  // Hero Section CTA actions
-  const handlePrimary = () => {
-    window.location.href = '/contact';
-  };
-  const handleSecondary = () => {
-    window.location.href = '/contact';
-  };
-
   return (
     <>
       <HeroSection
@@ -28,12 +20,9 @@ export default function Page() {
         description="FinByz Tech’s ERPNext manufacturing ERP software streamlines production and inventory management, reducing costs and improving efficiency."
         primaryButton={{
           text: 'Get Started',
-          action: () => {
-            const el = document.getElementById('manufacturing');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }
+          action: '#manufacturing'
         }}
-        secondaryButton={{ text: 'Request Demo', action: handleSecondary }}
+        secondaryButton={{ text: 'Request Demo', action: '/contact' }}
         heroImage={{
           alt: 'ERPNext for Manufacturing',
           src: '/images/Manufacturingc334bc.svg',

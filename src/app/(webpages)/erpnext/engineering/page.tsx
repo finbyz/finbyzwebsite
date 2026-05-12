@@ -1,4 +1,3 @@
-'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
@@ -9,21 +8,13 @@ import EngineeringTypesGrid from '@/components/ai_components/EngineeringTypesGri
 import React from 'react';
 
 export default function Page() {
-  // CTA actions
-  const handlePrimaryCTA = () => {
-    window.location.href = '/contact';
-  };
-  const handleSecondaryCTA = () => {
-    window.location.href = '/erp/services/erp-software-development';
-  };
-
   return (
     <>
       <HeroSection
         headline="ERPNext for the Engineering Industry"
         highlightWords={["Engineering Industry"]}
         description="FinByz Tech delivers ERPNext-based engineering ERP software solutions. Streamline engineering and software engineering operations with integrated project, inventory, and financial management."
-        primaryButton={{ text: 'Get Free Consultation', action: handlePrimaryCTA }}
+        primaryButton={{ text: 'Get Free Consultation', action: '/contact' }}
         secondaryButton={{
           text: 'Learn More',
           action: "#engineering"

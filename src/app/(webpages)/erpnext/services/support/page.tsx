@@ -1,5 +1,3 @@
-'use client';
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
@@ -8,6 +6,7 @@ import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import { CheckCircle, Headphones, Shield, Clock, Users, Zap, Award} from 'lucide-react';
 import { Phone, Mail, MessageCircle, Monitor } from "lucide-react";
 import Link from 'next/link';
+import ScrollButton from '@/components/ui/ScrollButton';
 
 export default function Page() {
   return (
@@ -18,16 +17,11 @@ export default function Page() {
         description="Round-the-clock expert assistance for your ERPNext system. Get technical support, troubleshooting, and guidance from certified ERPNext specialists to keep your business running smoothly."
         primaryButton={{
           text: 'Get Support Now',
-          action: () => {
-            window.location.href = '/contact';
-          }
+          action: '/contact'
         }}
         secondaryButton={{
           text: 'View Support Plans',
-          action: () => {
-            const element = document.getElementById('support-plans');
-            if (element) element.scrollIntoView({ behavior: 'smooth' });
-          }
+          action: '#support-plans'
         }}
         heroImage={{
           alt: 'ERPNext Support Services',
@@ -208,17 +202,12 @@ export default function Page() {
             </li>
           ))}
         </ul>
-        <button
-  onClick={() => {
-    const consultationSection = document.getElementById('erpnext-support');
-    if (consultationSection) {
-      consultationSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }}
+        <ScrollButton
+  targetId="erpnext-support"
   className="mt-auto w-full py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition-all"
 >
   Get Started
-</button>
+</ScrollButton>
       </div>
 
       {/* Professional Support */}
@@ -309,7 +298,6 @@ export default function Page() {
     </div>
   </div>
 </Section>
-
 
       {/* Support Features List */}
       <Section useGradient>
@@ -423,7 +411,6 @@ export default function Page() {
     </div>
   </div>
 </Section>
-
 
       {/* Why Choose Finbyz */}
       <Section useGradient>

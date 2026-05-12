@@ -1,5 +1,3 @@
-'use client'
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
@@ -23,9 +21,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Download App',
-          action: () => {
-            window.open('https://frappecloud.com/marketplace/apps/forward_contract', '_blank');
-          }
+          action: 'https://frappecloud.com/marketplace/apps/forward_contract'
         }}
         heroImage={{
           alt: 'Forward Contract Management in ERPNext',

@@ -1,5 +1,3 @@
-'use client'
-
 import BlogHero from '@/components/ai_components/blog/BlogHero';
 import BlogTableOfContents from '@/components/ai_components/blog/BlogTableOfContents';
 import BlogContent from '@/components/ai_components/blog/BlogContent';
@@ -8,9 +6,8 @@ import BlogSectionWithImage from '@/components/ai_components/blog/BlogSectionWit
 import BlogParagraph from '@/components/ai_components/blog/BlogParagraph';
 import BlogCheckList from '@/components/ai_components/blog/BlogCheckList';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
-import Image from 'next/image';
 
-const blogID = "challenges-of-erp-implementation";
+
 
 const heroProps = {
   title: 'Overcoming the 8 Most Common ERP Implementation Challenges',
@@ -29,17 +26,6 @@ const tocItems = [
   { id: 'erp-challenges', title: '8 Most Common ERP Implementation Challenges' },
   { id: 'overcoming-challenges', title: 'How to Overcome ERP Implementation Challenges?' },
   { id: 'conclusion', title: 'Conclusion' },
-];
-
-const erpChallenges = [
-  'Finding the right ERP software',
-  'Adequate Training',
-  'Implementation Costs',
-  'Management Involvement',
-  'Timeline',
-  'Improper analysis of Needs',
-  'Sufficient Testing of the software',
-  'Proper use of ERP software',
 ];
 
 const overcomingSteps = [

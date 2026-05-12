@@ -1,5 +1,3 @@
-'use client'
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
@@ -14,12 +12,7 @@ export default function Page() {
   // Button actions
   const handleGetStarted = () => {
     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-  };
-  const handleContact = () => {
-    window.location.href = '/contact';
-  };
-
-  return (
+  };return (
     <>
       {/* Hero Section */}
       <HeroSection
@@ -27,12 +20,9 @@ export default function Page() {
         highlightWords={["Workflow", "Transition"]}
         description="Track document state changes with visual indicators, automated reminders, and comprehensive reports. Ensure accountability and transparency in your workflow with real-time insights and notifications."
         primaryButton={{ text: 'Get Started', 
-          action: () => {
-            const el = document.getElementById('workflow');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }
+          action: '#workflow'
         }}
-        secondaryButton={{ text: 'Contact Us', action: handleContact }}
+        secondaryButton={{ text: 'Contact Us', action: '/contact' }}
         heroImage={{
           alt: 'Workflow Transition',
           src: '/images/workflow-transition.png'

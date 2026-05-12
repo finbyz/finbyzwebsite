@@ -25,10 +25,7 @@ export default function SolutionsPageContent() {
                     }}
                     primaryButton={{
                         text: 'Explore Offerings',
-                        action: () => {
-                            const el = document.getElementById('offerings')
-                            if (el) el.scrollIntoView({ behavior: 'smooth' })
-                        },
+                        action: '#offerings',
                     }}
                     secondaryButton={{
                         text: 'Contact Us',

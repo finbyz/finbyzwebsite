@@ -1,11 +1,8 @@
-'use client';
-
 import DynamicHero from '@/components/sections/dynamic-hero';
 import TextSection from '@/components/sections/text';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
 import Differentiators from '@/components/sections/differentiators';
-
 
 export default function Page() {
   return (
@@ -21,10 +18,7 @@ export default function Page() {
           src:"/images/fintech-solutions.png",
         }}
         primaryButton={{ text: "Get Started" , action: 'https://finbyz.tech/contact'}}
-        secondaryButton={{ text: 'Learn More' , action: () => {
-          const el = document.getElementById('fintech');
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
-        },}}
+        secondaryButton={{ text: 'Learn More' , action: '#fintech',}}
         accentColor="orange"
       />
 

@@ -1,5 +1,3 @@
-'use client'
-
 import BlogHero from '@/components/ai_components/blog/BlogHero';
 import BlogSection from '@/components/ai_components/blog/BlogSection';
 import BlogSectionWithImage from '@/components/ai_components/blog/BlogSectionWithImage';
@@ -7,7 +5,6 @@ import BlogTableOfContents from '@/components/ai_components/blog/BlogTableOfCont
 import BlogContent from '@/components/ai_components/blog/BlogContent';
 import BlogParagraph from '@/components/ai_components/blog/BlogParagraph';
 
-const blogID = "what-is-erp-software";
 
 const heroProps = {
   title: 'What is ERP software? Enterprise Resource Planning System',

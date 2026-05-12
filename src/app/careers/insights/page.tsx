@@ -1,5 +1,3 @@
-'use client';
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
@@ -10,13 +8,7 @@ export default function CareerInsightsPage() {
   const handleGetStarted = () => {
     const element = document.getElementById('career-insights-content');
     element?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleContact = () => {
-    window.location.href = '/careers';
-  };
-
-  const insights = [
+  };const insights = [
     {
       title: 'How to Become a Software Engineer',
       icon: Code2,
@@ -34,11 +26,11 @@ export default function CareerInsightsPage() {
         description="Navigate your professional journey with our expert career advice. From skill development to job search strategies, find the guidance you need to succeed in tech."
         primaryButton={{
           text: 'Read Insights',
-          action: handleGetStarted
+          action: '/contact'
         }}
         secondaryButton={{
           text: 'View Openings',
-          action: handleContact
+          action: '/contact'
         }}
         heroImage={{
           alt: 'Career Insights - Professional growth and development',

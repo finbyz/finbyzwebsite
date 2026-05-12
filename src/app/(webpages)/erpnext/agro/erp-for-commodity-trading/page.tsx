@@ -1,4 +1,3 @@
-'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
@@ -9,7 +8,6 @@ import Image from 'next/image';
 import { LucideQuote } from 'lucide-react';
 
 export default function Page() {
-  // Handlers for CTA buttons
   const handleContact = () => {
     if (typeof window !== 'undefined') {
       window.location.href = '/contact';
@@ -27,7 +25,7 @@ export default function Page() {
         headline="ERPNext for Commodity"
         highlightWords={["for", "Commodity"]}
         description="Discover how Finbyz Tech's ERPNext solutions revolutionize agricultural operations. Enhance efficiency, ensure compliance, and drive growth in your agro commodity business."
-        primaryButton={{ text: 'Get a Demo', action: handleContact }}
+        primaryButton={{ text: 'Get a Demo', action: '/contact' }}
         secondaryButton={{
           text: 'Learn More', action: "#erp-for-agro"
         }}

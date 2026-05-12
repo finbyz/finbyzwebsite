@@ -1,4 +1,3 @@
-'use client'
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
@@ -22,7 +21,7 @@ export default function Page() {
                 headline="ERPNext for Agriculture Industry"
                 highlightWords={["for", "Agriculture"]}
                 description="Revolutionize your agribusiness with Finbyz Tech's specialized ERPNext solutions. Enhance operational efficiency, ensure compliance, and drive sustainable growth."
-                primaryButton={{ text: 'Get a Demo', action: handleContact }}
+                primaryButton={{ text: 'Get a Demo', action: '/contact' }}
                 secondaryButton={{
                     text: 'Learn More', action: "#content"
                 }}

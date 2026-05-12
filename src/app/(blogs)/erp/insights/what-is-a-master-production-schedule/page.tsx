@@ -1,17 +1,11 @@
-'use client'
-
 import BlogHero from '@/components/ai_components/blog/BlogHero';
 import BlogTableOfContents from '@/components/ai_components/blog/BlogTableOfContents';
 import BlogContent from '@/components/ai_components/blog/BlogContent';
 import BlogSection from '@/components/ai_components/blog/BlogSection';
 import BlogSectionWithImage from '@/components/ai_components/blog/BlogSectionWithImage';
 import BlogParagraph from '@/components/ai_components/blog/BlogParagraph';
-import BlogCheckList from '@/components/ai_components/blog/BlogCheckList';
 import Image from 'next/image';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
-import { CalendarCheck, Layers, Clock, Users, TrendingUp, Database, RefreshCw, BarChart2, AlertTriangle, UserCheck, MessageCircle, Repeat } from 'lucide-react';
-
-const blogID = "what-is-a-master-production-schedule";
 
 const heroProps = {
   title: 'What is a Master Production Schedule (MPS)?',

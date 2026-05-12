@@ -1,7 +1,5 @@
-'use client';
 import DynamicHero from '@/components/sections/dynamic-hero';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
-
 
 export default function ProactiveAIAssistantPage() {
     return (
@@ -17,10 +15,7 @@ export default function ProactiveAIAssistantPage() {
                 }}
                 primaryButton={{
                     text: 'Explore Moltbot',
-                    action: () => {
-                        const el = document.getElementById('what-is-proactive');
-                        if (el) el.scrollIntoView({ behavior: 'smooth' });
-                    }
+                    action: '#what-is-proactive'
                 }}
                 secondaryButton={{ text: 'Contact Us', action: '/contact' }}
             />

@@ -1,5 +1,3 @@
-'use client'
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
@@ -103,17 +101,11 @@ export default function Page() {
         description="Boost your presence with our premier website development company. We offer expert web development services, specializing in web design & development."
         primaryButton={{
           text: 'Get a Free Consultation',
-          action: () => {
-            window.location.href = '/contact';
-          },
+          action: '/contact',
         }}
         secondaryButton={{
           text: 'View Our Clients',
-          action: () => {
-            if (typeof window !== 'undefined') {
-              window.open('/about-us/clients', '_blank');
-            }
-          }
+          action: '/about-us/clients'
         }}
         heroImage={{
           alt: 'Website Development',

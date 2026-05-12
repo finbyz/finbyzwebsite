@@ -82,24 +82,22 @@ export default function CodeBlock({
         {/* Code Content */}
         <div className="relative overflow-x-auto">
           <pre className="p-4 text-sm leading-relaxed">
-            <code className="font-mono text-gray-300">
-              {showLineNumbers ? (
-                <table className="w-full">
-                  <tbody>
-                    {lines.map((line, index) => (
-                      <tr key={index}>
-                        <td className="pr-4 text-right text-gray-500 select-none w-12">
-                          {index + 1}
-                        </td>
-                        <td className="text-gray-300">{line || '\n'}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              ) : (
-                code
-              )}
-            </code>
+            {showLineNumbers ? (
+              <table className="w-full font-mono text-gray-300">
+                <tbody>
+                  {lines.map((line, index) => (
+                    <tr key={index}>
+                      <td className="pr-4 text-right text-gray-500 select-none w-12">
+                        {index + 1}
+                      </td>
+                      <td className="text-gray-300">{line || '\n'}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            ) : (
+              <code className="font-mono text-gray-300">{code}</code>
+            )}
           </pre>
         </div>
       </div>

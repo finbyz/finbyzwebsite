@@ -1,9 +1,7 @@
-'use client';
 import DynamicHero from '@/components/sections/dynamic-hero';
 import TextSection from '@/components/sections/text';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Comment from '@/components/sections/comment';
-
 
 export default function Page() {
   return (
@@ -19,10 +17,7 @@ export default function Page() {
          
         }}
         primaryButton={{ text: 'Get Started', action: 'https://finbyz.tech/contact' }}
-        secondaryButton={{ text: 'Learn More', action: () => {
-            const el = document.getElementById('contruction-resources');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }}}
+        secondaryButton={{ text: 'Learn More', action: '#contruction-resources'}}
         accentColor="orange"
       />
 

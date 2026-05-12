@@ -27,10 +27,7 @@ export default function StaffAugmentationContent() {
                     }}
                     primaryButton={{
                         text: 'View Available Roles',
-                        action: () => {
-                            const el = document.getElementById('roles')
-                            if (el) el.scrollIntoView({ behavior: 'smooth' })
-                        },
+                        action: '#roles',
                     }}
                     secondaryButton={{
                         text: 'Hire Now',

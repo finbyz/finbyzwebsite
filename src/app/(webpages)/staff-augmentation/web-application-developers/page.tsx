@@ -1,5 +1,3 @@
-'use client'
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
@@ -12,13 +10,6 @@ import Image from 'next/image';
 import { FaArrowRight } from 'react-icons/fa';
 
 export default function Page() {
-  // Button actions
-  const handleContact = () => {
-    window.location.href = '/contact';
-  };
-  const handleLearnMore = () => {
-    window.location.href = '/services/web-application-development';
-  };
 
   return (
     <>
@@ -27,8 +18,8 @@ export default function Page() {
         headline="Hire Web Application Developers"
         highlightWords={["Web Application", "Developers"]}
         description="Looking for top-notch web application development services? Hire skilled web app developers for website and app development, expert in web programming."
-        primaryButton={{ text: 'Contact Us', action: handleContact }}
-        secondaryButton={{ text: 'Learn More', action: handleLearnMore }}
+        primaryButton={{ text: 'Contact Us', action: '/contact' }}
+        secondaryButton={{ text: 'Learn More', action: '/services/web-application-development' }}
         heroImage={{
           alt: 'Hire Web Application Developers',
           src: '/images/Hire-Web-App-Developer.svg',

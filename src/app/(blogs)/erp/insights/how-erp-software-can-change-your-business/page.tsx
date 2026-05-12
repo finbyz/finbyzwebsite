@@ -1,19 +1,12 @@
-'use client'
-
 import BlogHero from '@/components/ai_components/blog/BlogHero';
 import BlogTableOfContents from '@/components/ai_components/blog/BlogTableOfContents';
 import BlogContent from '@/components/ai_components/blog/BlogContent';
 import BlogSection from '@/components/ai_components/blog/BlogSection';
 import BlogSectionWithImage from '@/components/ai_components/blog/BlogSectionWithImage';
 import BlogParagraph from '@/components/ai_components/blog/BlogParagraph';
-import BlogCheckList from '@/components/ai_components/blog/BlogCheckList';
 import Image from 'next/image';
-import { FaShippingFast } from 'react-icons/fa';
-import { MdOutlineDataUsage } from 'react-icons/md';
-import { FaRegMoneyBillAlt } from 'react-icons/fa';
-import { HiOutlineUserGroup } from 'react-icons/hi';
 
-const blogID = "how-erp-software-can-change-your-business";
+
 
 const heroProps = {
   title: 'How ERP Software Revolutionizes Business Operations',

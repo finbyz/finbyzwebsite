@@ -23,10 +23,7 @@ export default function CaseStudiesPageContent() {
                     }}
                     primaryButton={{
                         text: 'View Success Stories',
-                        action: () => {
-                            const el = document.getElementById('stories')
-                            if (el) el.scrollIntoView({ behavior: 'smooth' })
-                        },
+                        action: '#stories',
                     }}
                 />
             </Section>

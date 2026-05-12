@@ -23,10 +23,7 @@ export default function AIConsultingContent() {
                     }}
                     primaryButton={{
                         text: 'Explore Consulting Services',
-                        action: () => {
-                            const el = document.getElementById('consulting-services')
-                            if (el) el.scrollIntoView({ behavior: 'smooth' })
-                        },
+                        action: '#consulting-services',
                     }}
                     secondaryButton={{
                         text: 'Book Strategy Session',

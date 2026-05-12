@@ -204,10 +204,7 @@ export default function Page() {
       'Deploy Follow Up Buddy to identify stale opportunities, craft on-brand outreach, and send perfectly timed follow-ups — automatically.',
     primaryButton: { text: 'Get a Demo', icon: 'Send', action: '/contact' },
     secondaryButton: {
-      text: 'See how it works', icon: 'Play', action: () => {
-        const el = document.getElementById('follow-up');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }
+      text: 'See how it works', icon: 'Play', action: '#follow-up'
     },
     trustIndicator: { text: 'Secure by design • ERPNext-ready', icon: 'ShieldCheck' },
   }
