@@ -63,8 +63,6 @@ const HeroSection: React.FC<HeroSectionProps> = async ({
 }) => {
   // Dynamic color classes based on accentColor prop
   const { image, animated_image } = await getHeroImageFromERP()
-  console.log('image', image)
-  console.log('animated_image', animated_image)
   const colorClasses: Record<ColorKey, {
     text: string;
     bg: string;
@@ -220,7 +218,7 @@ const HeroSection: React.FC<HeroSectionProps> = async ({
                 />
               ) : (
                 <Image
-                    src={image || animated_image || heroImage.poster || heroImage.src || ""}
+                    src={heroImage.poster || heroImage.src || animated_image || image || ""}
                   alt={heroImage.alt || "Hero image"}
                   width={600}
                   height={450}

@@ -260,6 +260,15 @@ export async function getHeroImageFromERP(): Promise<HeroImageData> {
         const json = await response.json();
         const doc = json?.data?.[0];
         if (!doc) return { image: null, animated_image: null };
+        if (
+            doc.image &&
+            (
+                doc.image.includes("FinByz Logo 2025 copy.png") ||
+                doc.image.toLowerCase().includes("logo")
+            )
+        ) {
+            return { image: null, animated_image: null };
+        }
         return {
             image: doc.image || null,
             animated_image: doc.animated_image || null,
