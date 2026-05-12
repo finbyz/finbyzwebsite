@@ -1329,11 +1329,6 @@ const nextConfig = {
 
       // ERPNext Education
       {
-        source: "/erp-for-education",
-        destination: "/erpnext/education",
-        permanent: true,
-      },
-      {
         source: "/erp-education",
         destination: "/erpnext/education",
         permanent: true,
