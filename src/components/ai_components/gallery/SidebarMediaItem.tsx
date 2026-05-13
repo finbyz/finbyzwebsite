@@ -1,3 +1,4 @@
+"use client";
 import { motion } from 'framer-motion';
 import { MediaItem } from '@/types/media';
 import { Badge } from '@/components/ui/badge';

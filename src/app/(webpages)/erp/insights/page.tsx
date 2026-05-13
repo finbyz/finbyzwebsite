@@ -1,6 +1,6 @@
 import HeroSection from '@/components/sections/dynamic-hero';
 import Link from 'next/link';
-import Image from 'next/image';
+import SafeImage from '@/components/ui/SafeImage';
 import { ArrowRight, Layers, Factory, ShoppingCart, TestTube, Truck, Briefcase } from 'lucide-react';
 
 const featuredLinks = [
@@ -114,15 +114,12 @@ export default function Page() {
                 <div className="container-custom">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="relative aspect-square lg:aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-                            <Image
+                            <SafeImage
                                 src="/images/erpnext-services.svg"
                                 alt="Finbyz ERP Team"
                                 fill
                                 className="object-cover"
-                                onError={(e) => {
-                                    const target = e.target as HTMLImageElement;
-                                    target.src = '/images/Frappe-Certified-parnter-Page Design-SVG.svg';
-                                }}
+                                fallbackSrc="/images/Frappe-Certified-parnter-Page Design-SVG.svg"
                             />
                         </div>
 

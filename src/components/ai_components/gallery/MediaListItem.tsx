@@ -1,3 +1,4 @@
+"use client";
 import { motion } from 'framer-motion';
 import { Play, Clock, Image as ImageIcon, CheckCircle2, Eye } from 'lucide-react';
 import { MediaItem } from '@/types/media';

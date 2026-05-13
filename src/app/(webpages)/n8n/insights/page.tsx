@@ -1,6 +1,6 @@
 import HeroSection from '@/components/sections/dynamic-hero';
 import Link from 'next/link';
-import Image from 'next/image';
+import SafeImage from '@/components/ui/SafeImage';
 import { ArrowRight, Calendar, Clock, Shield, Code, Brain } from 'lucide-react';
 
 const articles = [
@@ -64,15 +64,12 @@ export default function Page() {
                             >
                                 <div className="relative h-48 w-full overflow-hidden">
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
-                                    <Image
+                                    <SafeImage
                                         src={article.image}
                                         alt={article.title}
                                         fill
                                         className="object-cover transition-transform duration-500 group-hover:scale-105"
-                                        onError={(e) => {
-                                            const target = e.target as HTMLImageElement;
-                                            target.src = '/images/placeholder-blog.jpg';
-                                        }}
+                                        fallbackSrc="/images/placeholder-blog.jpg"
                                     />
                                     <div className="absolute top-4 left-4 z-20">
                                         <span className="px-3 py-1 text-xs font-semibold text-white bg-primary/90 rounded-full backdrop-blur-sm">

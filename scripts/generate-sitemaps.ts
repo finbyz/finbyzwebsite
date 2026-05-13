@@ -18,13 +18,22 @@ async function ensureDir(dir: string) {
   await mkdir(dir, { recursive: true })
 }
 
+function xmlEscape(str: string) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;')
+}
+
 function buildUrlEntry(url: string, lastmod?: string, changefreq?: string, priority?: number) {
   const parts: string[] = [
     '<url>',
-    `<loc>${url}</loc>`,
+    `<loc>${xmlEscape(url)}</loc>`,
   ]
-  if (lastmod) parts.push(`<lastmod>${lastmod}</lastmod>`)
-  if (changefreq) parts.push(`<changefreq>${changefreq}</changefreq>`)
+  if (lastmod) parts.push(`<lastmod>${xmlEscape(lastmod)}</lastmod>`)
+  if (changefreq) parts.push(`<changefreq>${xmlEscape(changefreq)}</changefreq>`)
   if (priority !== undefined) parts.push(`<priority>${priority}</priority>`)
   parts.push('</url>')
   return parts.join('')

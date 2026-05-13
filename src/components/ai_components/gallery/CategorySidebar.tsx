@@ -1,3 +1,4 @@
+"use client";
 import { motion } from 'framer-motion';
 import { MediaCategory } from '@/types/media';
 import { Button } from '@/components/ui/button';

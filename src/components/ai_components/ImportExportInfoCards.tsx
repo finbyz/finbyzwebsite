@@ -1,3 +1,4 @@
+"use client";
 import ImportExportFeatureCard from '@/components/ai_components/ImportExportFeatureCard';
 import { motion } from 'framer-motion';
 

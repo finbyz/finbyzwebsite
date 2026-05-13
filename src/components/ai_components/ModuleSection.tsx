@@ -1,3 +1,4 @@
+"use client";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import List from '@/components/sections/list';
