@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "skills": {
+    "commit-and-push": {
+      "source": "fradser/dotclaude",
+      "sourceType": "github",
+      "skillPath": "git/skills/commit-and-push/SKILL.md",
+      "computedHash": "01a20522cf71deffb47dcd1a5488bf14020baf3859b61dc795a7149824eadb57"
+    },
+    "next-best-practices": {
+      "source": "vercel-labs/next-skills",
+      "sourceType": "github",
+      "skillPath": "skills/next-best-practices/SKILL.md",
+      "computedHash": "f4678aef4ffc10a5ea64a91e57abe5a5081af813b06d58d565caf3e8ef56e26c"
+    },
+    "nextjs-developer": {
+      "source": "jeffallan/claude-skills",
+      "sourceType": "github",
+      "skillPath": "skills/nextjs-developer/SKILL.md",
+      "computedHash": "e53bdeaf766e6d5d29d1328f424777a8236f80f489134f1661bbda6c8c4149e9"
+    },
+    "shadcn": {
+      "source": "shadcn/ui",
+      "sourceType": "github",
+      "skillPath": "skills/shadcn/SKILL.md",
+      "computedHash": "80a6226e78f6d1fe464214ae0ef449d49d8ffaa3e7704f011e9b418c678ad4d1"
+    }
+  }
+}

@@ -1,5 +1,3 @@
-
-"use client"
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import ProcessWorkflow from '@/components/sections/process-workflow';

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "frappe": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "frappe-mcp-server"
+      ],
+      "enabled": true,
+      "environment": {
+        "FRAPPE_URL": "https://erp.finbyz.tech",
+        "FRAPPE_API_KEY": "{file:~/.secrets/frappe-api-key}",
+        "FRAPPE_API_SECRET": "{file:~/.secrets/frappe-api-secret}",
+      }
+    },
+    "image-gen": {
+      "type": "local",
+      "command": [
+        "npx",
+        "image-mcp@latest"
+      ],
+      "enabled": true,
+      "environment": {
+        "OPENAI_API_KEY": "{file:~/.secrets/openai-api-key}",
+        "REPLICATE_API_TOKEN": "{file:~/.secrets/replicate-api-token}",
+        "MCP_TIMEOUT": "1200000"
+      }
+    }
+  }
+}

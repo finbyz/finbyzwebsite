@@ -1,10 +1,7 @@
-'use client'
-import React, { useState } from "react";
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from "@/components/sections/Section";
 
-import DownloadSection from "@/components/ai_components/DownloadSection";
-import DownloadFormModal from "@/components/ai_components/DownloadFormModal";
+import BrochureClient from "./BrochureClient";
 
 const brochureItems = [
   {
@@ -106,33 +103,6 @@ const aiAutomationItems = [
 ];
 
 export default function Page() {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedFile, setSelectedFile] = useState<string | null>(null);
-
-  // Simulate download after form submit
-  const handleDownload = (fileUrl: string) => {
-    setSelectedFile(fileUrl);
-    setModalOpen(true);
-  };
-
-  const handleModalClose = () => {
-    setModalOpen(false);
-    setSelectedFile(null);
-  };
-
-  const handleFormSubmit = (form: { name: string; email: string; mobile: string; organization: string; fileUrl: string }) => {
-    // Here you can send form data to backend or analytics
-    // After submit, trigger download
-    const link = document.createElement('a');
-    link.href = form.fileUrl;
-    link.download = '';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    setModalOpen(false);
-    setSelectedFile(null);
-  };
-
   return (
     <>
       <HeroSection
@@ -154,36 +124,7 @@ export default function Page() {
         }}
       />
 
-      <div id="brochure-section" className="text-[#1A5276]">
-        <DownloadSection
-          title="Download Brochure"
-          items={brochureItems}
-          onDownload={handleDownload}
-        />
-      </div>
-       
-      <div className="text-[#1A5276]">
-      <DownloadSection 
-        title="AI-CRM Integration with ERPNext"
-        items={aiCrmItems}
-        onDownload={handleDownload}
-      />
-      </div>
-
-      <div className="text-[#1A5276]">
-        <DownloadSection
-        title="AI Automations"
-        items={aiAutomationItems}
-        onDownload={handleDownload}
-      />
-      </div>
-
-      <DownloadFormModal
-        open={modalOpen}
-        onClose={handleModalClose}
-        fileUrl={selectedFile}
-        onSubmit={handleFormSubmit}
-      />
+      <BrochureClient brochureItems={brochureItems} aiCrmItems={aiCrmItems} aiAutomationItems={aiAutomationItems} />
 
       <Section>
         <div className="container-custom py-8 flex flex-col items-center text-center gap-4">

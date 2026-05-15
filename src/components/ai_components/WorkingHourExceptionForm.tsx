@@ -1,12 +1,16 @@
+"use client"
+
 import React, { useEffect, useState } from "react";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { Loader2, CheckCircle2, XCircle } from "lucide-react";
+import { useRouter } from 'next/navigation';
+import { toast } from 'sonner';
 
 interface WorkingHourExceptionFormProps {
-  onSuccess: () => void;
+  onSuccess?: () => void;
 }
 
 interface ExceptionData {
@@ -105,7 +109,11 @@ const WorkingHourExceptionForm: React.FC<WorkingHourExceptionFormProps> = ({ onS
     setSubmitting(false);
     if (result === "success") {
       setSuccess(true);
-      onSuccess();
+      onSuccess?.();
+      toast.success('Submitted successfully!');
+      setTimeout(() => {
+        window.location.href = '/thank-you';
+      }, 1200);
     } else {
       setSubmitError("Submission failed. Please try again.");
     }

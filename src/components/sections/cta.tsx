@@ -39,8 +39,8 @@ export default function CTA({ data = {} }: CTAProps) {
     highlightText = "",
     title = "Ready to Scale with Smart Tech? Let's Talk.",
     description = "Transform your business processes with AI-powered automation and expert implementation.",
-    primaryButton = { text: "Book Demo", icon: "CalendarCheck", action: '/contact' },
-    secondaryButton = { text: "Get Proposal", icon: "FileText", action: '/contact' },
+    primaryButton,
+    secondaryButton,
     trustIndicator = { text: "Trusted by 100+ businesses", icon: "CalendarCheck" }
   } = data;
 
@@ -60,8 +60,8 @@ export default function CTA({ data = {} }: CTAProps) {
   };
 
   const SubheadingIcon = getIconComponent(subheading.icon || "CalendarCheck");
-  const PrimaryIcon = getIconComponent(primaryButton.icon || "CalendarCheck");
-  const SecondaryIcon = getIconComponent(secondaryButton.icon || "FileText");
+  const PrimaryIcon = primaryButton ? getIconComponent(primaryButton.icon || "CalendarCheck") : null;
+  const SecondaryIcon = secondaryButton ? getIconComponent(secondaryButton.icon || "FileText") : null;
   const TrustIcon = getIconComponent(trustIndicator.icon || "CalendarCheck");
 
   return (

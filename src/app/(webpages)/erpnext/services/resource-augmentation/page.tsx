@@ -16,16 +16,16 @@ export default function Page() {
           // src: '/web-api/fb/n/files/placeholder.jpg',
           src:'/images/resource-augmentation.png',
         }}
-        primaryButton={{ text: 'Get Started',action: 'https://finbyz.tech/contact' }}
+        primaryButton={{ text: 'Get Started',action: '#bottom-inquiry-form' }}
         secondaryButton={{ text: 'Learn More' , action: '#erpnext-resource',}}
         accentColor="orange"
       />
 
       {/* OVERVIEW SECTION */}
-      <section>
+      <section id="erpnext-resource" className='scroll-mt-5'>
         <div className="container-custom py-8">
           <h2 className="text-3xl font-bold text-[#1A5276] mb-4">Overview</h2>
-          <p className="text-lg text-black leading-relaxed" id="erpnext-resource">
+          <p className="text-lg text-black leading-relaxed">
             Elevate your projects with Finbyz Tech's ERPNext resource augmentation services. Our goal is to empower organizations to swiftly address skill gaps, meet pressing project deadlines, and optimize operational costs through flexible engagement models. We offer scalable access to certified ERPNext consultants, developers, and functional experts who seamlessly integrate with your current teams, drive operational efficiency, and accelerate your digital transformation journey. By leveraging our domain expertise and robust resource pool, businesses of any size can minimize recruitment overheads and ensure timely, high-quality delivery—making ERPNext resource augmentation a strategic advantage in today’s competitive business landscape.
           </p>
         </div>

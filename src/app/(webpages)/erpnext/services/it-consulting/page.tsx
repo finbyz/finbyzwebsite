@@ -13,11 +13,7 @@ export default function Page() {
         description="Elevate your business goals with our IT Consulting Services in Ahmedabad. Expert support, unbiased advice, and innovative solutions for optimal IT investment."
         primaryButton={{
           text: 'Get Consultation',
-          action: '/contact'
-        }}
-        secondaryButton={{
-          text: 'Contact Us',
-          action: '/contact'
+          action: '#bottom-inquiry-form'
         }}
         heroImage={{
           alt: 'IT Consulting',

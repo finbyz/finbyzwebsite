@@ -28,7 +28,7 @@ export default function Page() {
               
             ]}
             description="Unlock seamless data flow and process automation with custom API development services. Integrate ERPNext with your enterprise applications for enhanced efficiency."
-            primaryButton={{ text: 'Get Started' ,action: 'https://finbyz.tech/contact'}}
+            primaryButton={{ text: 'Get Started' ,action: '#bottom-inquiry-form'}}
             secondaryButton={{ text: 'Learn More', action: '#overview' }}
             heroImage={heroImage}
             accentColor="orange"
@@ -37,7 +37,7 @@ export default function Page() {
       </section>
 
       {/* OVERVIEW SECTION */}
-      <section>
+      <section id='overview'>
         <div className="container-custom mt-5">
         
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1A5276] animate-fadeIn  ">Overview</h2>
@@ -59,7 +59,7 @@ export default function Page() {
       </section>
 
       {/* MAIN CONTENT: Introduction */}
-      <section  id='overview'>
+      <section>
         <div className="container-custom ">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1A5276] animate-fadeIn  ">Custom API Development Services: Connecting Your Business Ecosystem</h2>
           <p className="text-slate-700 text-base md:text-lg mb-6 md:mb-7 text-justify">

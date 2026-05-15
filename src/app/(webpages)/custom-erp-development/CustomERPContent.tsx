@@ -1,9 +1,6 @@
-'use client'
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
-import List from '@/components/sections/list';
 
 import Image from 'next/image';
 import { FaCode, FaCogs, FaRocket, FaUserCheck, FaLayerGroup } from 'react-icons/fa';

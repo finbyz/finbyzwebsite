@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import HeroSection from '@/components/sections/dynamic-hero';
 import Link from 'next/link';
@@ -26,10 +24,6 @@ export default function OpeningBalanceContent() {
                 primaryButton={{
                     text: "Get Started",
                     action: "#inquiry-form-section"
-                }}
-                secondaryButton={{
-                    text: "Contact Us",
-                    action: "/contact"
                 }}
                 heroImage={{
                     alt: "ERPNext Opening Balance Reconciliation Service",

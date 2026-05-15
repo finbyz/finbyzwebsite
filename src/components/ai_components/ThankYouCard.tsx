@@ -2,15 +2,14 @@ import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/componen
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import React from "react";
+import Link from "next/link";
 
 interface ThankYouCardProps {
   title: string;
   message: string;
-  buttonText: string;
-  buttonAction: () => void;
 }
 
-const ThankYouCard: React.FC<ThankYouCardProps> = ({ title, message, buttonText, buttonAction }) => {
+const ThankYouCard: React.FC<ThankYouCardProps> = ({ title, message }) => {
   return (
     <Card className="border-none shadow-lg bg-white/90 hover:shadow-xl transition-shadow duration-300">
       <CardHeader className="flex flex-col items-center gap-2 pb-0">
@@ -24,12 +23,14 @@ const ThankYouCard: React.FC<ThankYouCardProps> = ({ title, message, buttonText,
         {message}
       </CardContent>
       <CardFooter className="flex justify-center pt-6">
-        <Button onClick={buttonAction} variant="default" className="gap-2 px-6 py-2 rounded-full text-base font-medium shadow-md bg-[#FF8C00] hover:bg-orange-500 hover:scale-105 transition-transform">
-          <ArrowLeft className="w-4 h-4" />
-          {buttonText}
-        </Button>
+        <Link href='/'>
+          <Button variant="default" className="gap-2 px-6 py-2 rounded-full text-base font-medium shadow-md bg-[#FF8C00] hover:bg-orange-500 hover:scale-105 transition-transform">
+            <ArrowLeft className="w-4 h-4" />
+            Home
+          </Button>
+        </Link>
       </CardFooter>
-    </Card>
+    </Card >
   );
 };
 

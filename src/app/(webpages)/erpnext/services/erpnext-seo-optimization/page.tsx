@@ -100,7 +100,7 @@ export default function Page() {
         description="Optimize your ERPNext platform with SEO to increase visibility, attract more visitors, and drive growth. Start enhancing your online presence today!"
         primaryButton={{
           text: 'Get Started',
-          action: '/contact',
+          action: '#bottom-inquiry-form',
         }}
         secondaryButton={{
           text: 'Learn More',

@@ -1,5 +1,3 @@
-'use client'
-
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';

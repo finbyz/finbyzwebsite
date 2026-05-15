@@ -1,13 +1,10 @@
 import DynamicHero from '@/components/sections/dynamic-hero';
-import TextSection from '@/components/sections/text';
 import { List } from '@/components/sections/list';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
-import ContentIllustrationLeft from '@/components/sections/content-illustration-left';
 import ContentIllustrationRight from '@/components/sections/content-illustration-right';
 import Differentiators from '@/components/sections/differentiators';
 
-import { Trophy, Smartphone, ArrowRight, Users, ShieldCheck, Activity, Handshake, BarChart3, Layers, Rocket, Code, LayoutDashboard, UserCheck, FileText, Users2, Building2, BookOpenCheck, SearchCheck, LineChart, HardDriveUpload, Globe2, Star } from 'lucide-react';
 
 export default function Page() {
   return (
@@ -22,14 +19,14 @@ export default function Page() {
             alt: 'Custom Mobile App Development Business & ERPNext Solutions',
             src:'/images/mobile-app-development2.png',
           }}
-          primaryButton={{ text: 'Get Started',action: 'https://finbyz.tech/contact' }}
+          primaryButton={{ text: 'Get Started', action: '#bottom-inquiry-form' }}
           secondaryButton={{ text: 'Learn More' , action: '#mobile-app',}}
           accentColor="orange"
-        />
+      />
       </section>
 
       {/* OVERVIEW SECTION */}
-      <section className="w-full bg-transparent" >
+      <section className="w-full bg-transparent" id='overview' >
         <div className="container-custom py-8">
           <h2 className="text-3xl font-bold mb-4 text-[#1A5276] animate-fade-in-up">Overview</h2>
           <p className="text-slate-700 text-base md:text-lg mb-6 md:mb-7 text-justify" >
@@ -40,7 +37,7 @@ export default function Page() {
 
       {/* MAIN CONTENT SECTIONS */}
       {/* Section: Solutions Introduction */}
-      <section className="w-full bg-transparent" id="mobile-app">
+      <section className="w-full bg-transparent scroll-mt-5" id="mobile-app">
         <div className="container-custom py-8">
         <h2 className="text-3xl font-bold mb-4 text-[#1A5276] animate-fade-in-up">Mobile App Development Solutions for Modern Businesses</h2>
         <p className="text-slate-700 text-base md:text-lg mb-6 md:mb-7 text-justify" >

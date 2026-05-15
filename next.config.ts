@@ -1334,11 +1334,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/erpnext/education",
-        destination: "/erpnext/education",
-        permanent: true,
-      },
-      {
         source: "/erpnext/erp-education",
         destination: "/erpnext/education",
         permanent: true,

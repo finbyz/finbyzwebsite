@@ -9,7 +9,6 @@ import ClientCountryGrid from '@/components/ai_components/ClientCountryGrid';
 
 import FlipCard from '@/components/ai_components/FlipCard';
 import Image from 'next/image';
-import { FaCheckCircle } from 'react-icons/fa';
 
 const heroHighlightWords = ["in", "UAE", "Service Provider"];
 
@@ -138,7 +137,7 @@ export default function Page() {
         description="ERPNext Partner offers bespoke ERP solutions in manufacturing, agro, chemical, healthcare & pharmaceutical sectors."
         primaryButton={{ 
           text: "Get Started", 
-          action: "#uae"
+          action: "#bottom-inquiry-form"
          }}
         secondaryButton={{ text: "Our Partnership", action: '/about-us/partnership-programs' }}
         heroImage={{

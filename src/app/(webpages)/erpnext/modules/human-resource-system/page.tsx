@@ -27,7 +27,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Request Demo',
-          action: '/contact',
+          action: '#bottom-inquiry-form',
         }}
         heroImage={{
           alt: 'Advanced Human Resource Software',
@@ -38,14 +38,14 @@ export default function Page() {
 
       {/* Quote Section */}
       
-      <Section >
+      <Section id='human-resources'>
         <div className="container-custom py-8 flex flex-col gap-6 items-center">
          <h2 className='text-2xl font-bold text-center text-[#1A5276]'>Looking for a Complete HR and Payroll Software Solution for Your Business?</h2>
           <div className="text-gray-700 text-justify text-lg leading-relaxed">
             <p className="mb-4">
               Human resource, often considered the backbone of any organization, is the only function with a strong human element at its core. As businesses move toward complete automation, it’s essential for HR departments to embrace technology through advanced human resource software. While automation may seem to reduce the “human touch,” it actually empowers HR professionals by simplifying complex processes. With increasing business demands, automating HR functions—especially recruitment—has become a necessity. Our HR software offers the perfect solution to streamline your operations, reduce manual workload, and enhance productivity.
             </p>
-            <p id="human-resources">
+            <p>
               Every business has a unique structure, but core HR functions remain largely similar. Implementing effective human resource software simplifies day-to-day activities, increases efficiency, and accelerates task execution across all departments.
             </p>
           </div>

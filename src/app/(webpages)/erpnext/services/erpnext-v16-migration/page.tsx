@@ -15,7 +15,7 @@ export default function Page() {
                 description="Upgrade your business to ERPNext v16 with confidence. Our expert team ensures a secure, zero-downtime migration from v15 or earlier versions, unlocking 2x performance gains and new features."
                 primaryButton={{
                     text: 'Get Migration Quote',
-                    action: "#contact-section"
+                    action: "#bottom-inquiry-form"
                 }}
                 secondaryButton={{
                     text: 'Explore v16 Features',
@@ -234,12 +234,6 @@ export default function Page() {
                             </CardFooter>
                         </Card>
                     </div>
-                </div>
-            </Section>
-
-            {/* Trust & CTA */}
-            <Section id="contact-section">
-                <div className="container-custom py-8">
                 </div>
             </Section>
         </>

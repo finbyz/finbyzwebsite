@@ -6,7 +6,6 @@ import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import { CheckCircle, Headphones, Shield, Clock, Users, Zap, Award} from 'lucide-react';
 import { Phone, Mail, MessageCircle, Monitor } from "lucide-react";
 import Link from 'next/link';
-import ScrollButton from '@/components/ui/ScrollButton';
 
 export default function Page() {
   return (
@@ -17,7 +16,7 @@ export default function Page() {
         description="Round-the-clock expert assistance for your ERPNext system. Get technical support, troubleshooting, and guidance from certified ERPNext specialists to keep your business running smoothly."
         primaryButton={{
           text: 'Get Support Now',
-          action: '/contact'
+          action: '/contact#contact-form-section'
         }}
         secondaryButton={{
           text: 'View Support Plans',
@@ -202,12 +201,12 @@ export default function Page() {
             </li>
           ))}
         </ul>
-        <ScrollButton
-  targetId="erpnext-support"
-  className="mt-auto w-full py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition-all"
+        <Link
+  href="/contact?plan=basic#contact-form-section"
+  className="block mt-auto w-full py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition-all text-center"
 >
   Get Started
-</ScrollButton>
+</Link>
       </div>
 
       {/* Professional Support */}
@@ -241,17 +240,12 @@ export default function Page() {
             </li>
           ))}
         </ul>
-        <button
-  onClick={() => {
-    const consultationSection = document.getElementById('erpnext-support');
-    if (consultationSection) {
-      consultationSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }}
-  className="mt-auto w-full py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition-all"
+        <Link
+  href="/contact?plan=professional#contact-form-section"
+  className="block mt-auto w-full py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition-all text-center"
 >
   Get Started
-</button>
+</Link>
 
       </div>
 
@@ -283,17 +277,12 @@ export default function Page() {
             </li>
           ))}
         </ul>
-        <button
-  onClick={() => {
-    const consultationSection = document.getElementById('erpnext-support');
-    if (consultationSection) {
-      consultationSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }}
-  className="mt-auto w-full py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition-all"
+        <Link
+  href="/contact?plan=enterprise#contact-form-section"
+  className="block mt-auto w-full py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition-all text-center"
 >
   Get Started
-</button>
+</Link>
       </div>
     </div>
   </div>

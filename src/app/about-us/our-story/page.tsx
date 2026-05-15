@@ -1,11 +1,9 @@
-'use client'
 import React from 'react'
 import Section from '@/components/sections/Section'
-import { motion } from 'framer-motion'
 import DynamicHero from '@/components/sections/dynamic-hero'
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid'
 import { LazyCompanyHistoryTimeline } from "@/lib/lazy-components";
-import CTA from '@/components/sections/cta'
+import FadeInView from './FadeInView'
 
 export default function Page() {
   return (
@@ -47,12 +45,7 @@ export default function Page() {
       <Section id="journey" className="py-16">
         <div className="container-custom grid md:grid-cols-2 gap-10 items-center">
           
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <FadeInView x={-40}>
             <h2 className="text-4xl font-bold text-[#1A5276] mb-4">
               Our Journey So Far
             </h2>
@@ -70,17 +63,15 @@ export default function Page() {
               unwavering focus on innovation, agility, and measurable business
               impact.
             </p>
-          </motion.div>
+          </FadeInView>
 
-          <motion.img
-            src="/AboutUs-removebg-preview.png"
-            alt="Finbyz Journey"
-            className="rounded-2xl shadow-lg w-full object-cover"
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          />
+          <FadeInView x={40}>
+            <img
+              src="/AboutUs-removebg-preview.png"
+              alt="Finbyz Journey"
+              className="rounded-2xl shadow-lg w-full object-cover"
+            />
+          </FadeInView>
         </div>
       </Section>
 
@@ -88,28 +79,20 @@ export default function Page() {
       <Section className="py-12 bg-gray-50">
         <div className="container-custom text-center">
           
-          <motion.h2
-            className="text-4xl font-bold text-[#1A5276] mb-6"
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            Driven by People, Defined by Innovation
-          </motion.h2>
+          <FadeInView y={-20}>
+            <h2 className="text-4xl font-bold text-[#1A5276] mb-6">
+              Driven by People, Defined by Innovation
+            </h2>
+          </FadeInView>
 
-          <motion.p
-            className="text-slate-700 text-base md:text-lg mb-12 max-w-3xl mx-auto"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            Our team of passionate developers, analysts, designers, and innovators works
-            tirelessly to deliver transformative digital solutions. We believe
-            great technology is built by great teams — driven by collaboration,
-            creativity, and curiosity.
-          </motion.p>
+          <FadeInView>
+            <p className="text-slate-700 text-base md:text-lg mb-12 max-w-3xl mx-auto">
+              Our team of passionate developers, analysts, designers, and innovators works
+              tirelessly to deliver transformative digital solutions. We believe
+              great technology is built by great teams — driven by collaboration,
+              creativity, and curiosity.
+            </p>
+          </FadeInView>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-items-center">
             {[
@@ -117,20 +100,13 @@ export default function Page() {
               { src: '/images/nishita-mam.jpeg', alt: 'Nishita Mam' },
               { src: '/images/ravin-ramoliya.jpg', alt: 'Ravin Ramoliya' },
             ].map((member, i) => (
-              <motion.div
-                key={i}
-                className="relative w-full max-w-sm aspect-[3/4] overflow-hidden rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: i * 0.2 }}
-                viewport={{ once: true }}
-              >
+              <FadeInView key={i} scale={0.9} delay={i * 0.2} className="relative w-full max-w-sm aspect-[3/4] overflow-hidden rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300">
                 <img
                   src={member.src}
                   alt={member.alt}
                   className="object-cover w-full h-full rounded-2xl hover:scale-105 transition-transform duration-500"
                 />
-              </motion.div>
+              </FadeInView>
             ))}
           </div>
         </div>
@@ -144,12 +120,7 @@ export default function Page() {
         <div className="container-custom grid md:grid-cols-2 gap-10 items-start">
 
           {/* Mission */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <FadeInView x={-40}>
             <img
               src="/images/our-mission.jpeg"
               alt="Finbyz Mission"
@@ -163,15 +134,10 @@ export default function Page() {
               solutions that streamline workflows, improve collaboration, and
               foster sustainable growth.
             </p>
-          </motion.div>
+          </FadeInView>
 
           {/* Vision */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <FadeInView x={40}>
             <img
               src="/images/our-vision.jpeg"
               alt="Finbyz Vision"
@@ -185,7 +151,7 @@ export default function Page() {
               by enabling enterprises to achieve operational excellence,
               intelligent decision-making, and long-term innovation.
             </p>
-          </motion.div>
+          </FadeInView>
 
         </div>
       </Section>
@@ -241,13 +207,7 @@ export default function Page() {
 
       {/* --- Global Impact --- */}
       <Section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20">
-        <motion.div
-          className="container-custom text-center"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
+        <FadeInView className="container-custom text-center">
           <h2 className="text-4xl font-bold mb-10">Our Global Impact</h2>
 
           <div className="grid md:grid-cols-3 gap-10">
@@ -256,19 +216,13 @@ export default function Page() {
               { value: "200+", label: "Successful Projects" },
               { value: "7000+", label: "Active Users" },
             ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: i * 0.2 }}
-                viewport={{ once: true }}
-              >
+              <FadeInView key={i} y={20} delay={i * 0.2}>
                 <h3 className="text-5xl font-bold text-[#FF8C00]">{item.value}</h3>
                 <p className="text-lg">{item.label}</p>
-              </motion.div>
+              </FadeInView>
             ))}
           </div>
-        </motion.div>
+        </FadeInView>
       </Section>
 
     </div>

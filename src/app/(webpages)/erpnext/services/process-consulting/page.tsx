@@ -26,7 +26,7 @@ export default function Page() {
               }}
               primaryButton={{
             text: "Get Started",
-            action: 'https://finbyz.tech/contact'
+            action: '#bottom-inquiry-form'
           }}
           secondaryButton={{
             text: "Learn More",

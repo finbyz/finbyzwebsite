@@ -17,7 +17,7 @@ export default function Page() {
                     // src: "/web-api/fb/n/files/placeholder.jpg"
                     src: "/images/erpnext-performance-optimization.png",
                 }}
-                primaryButton={{ text: 'Get Started', action: 'https://finbyz.tech/contact' }}
+                primaryButton={{ text: 'Get Started', action: '#bottom-inquiry-form' }}
                 secondaryButton={{
                     text: 'Learn More', action: '#performance',
                 }}
@@ -25,10 +25,10 @@ export default function Page() {
             />
 
             {/* 2️⃣ OVERVIEW SECTION */}
-            <section>
+            <section id='performance' className='scroll-mt-5'>
                 <div className="container-custom py-8">
                     <h2 className="text-3xl font-bold text-[#1A5276] mb-4">Overview</h2>
-                    <p className="text-black text-lg mb-6" id="performance">
+                    <p className="text-black text-lg mb-6">
                         Is your ERPNext system struggling with speed or scalability? Finbyz Tec offers specialized performance optimization services designed to enhance your ERP's efficiency, reliability, and responsiveness. Our experts diagnose bottlenecks, implement robust solutions, and ensure your system supports your business growth seamlessly. Trust us to transform your ERPNext into a high-performing asset ready for modern business demands.
                     </p>
                 </div>

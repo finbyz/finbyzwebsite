@@ -1,31 +1,15 @@
-'use client'
-import React, { useState } from 'react';
+import React from 'react';
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import List from '@/components/sections/list';
-import PrivacySectionHeading from '@/components/ai_components/PrivacySectionHeading';
-import PrivacySubsectionHeading from '@/components/ai_components/PrivacySubsectionHeading';
-import { Mail, MapPin } from 'lucide-react';
-import Benefits from '@/components/sections/benefits';
-import Image from 'next/image';
+
 import DynamicHero from '@/components/sections/dynamic-hero';
-import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle, Code, Database, Wrench, Globe, Zap, Users, Star, Clock, Award, ChevronDown, ChevronUp } from 'lucide-react';
+import { ArrowRight, Code, Database, Wrench, Globe, Clock, Award } from 'lucide-react';
 
 
 export default function Page() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company:'',
-    expertise: '',
-    message: ''
-  });
-  
-  const [openFaq, setOpenFaq] = useState(null);
 
   const experts = [
     {
@@ -83,39 +67,6 @@ export default function Page() {
     }
   ];
 
-  const benefits = [
-    {
-      icon: <Award className="w-10 h-10" />,
-      title: "Vetted Experts",
-      description: "All our developers are thoroughly vetted through technical assessments and interviews to ensure top-quality talent."
-    },
-    {
-      icon: <Clock className="w-10 h-10" />,
-      title: "Quick Onboarding",
-      description: "Get started fast with our streamlined onboarding process. Developers can join your team within 48-72 hours."
-    },
-    {
-      icon: <Zap className="w-10 h-10" />,
-      title: "Flexible Engagement",
-      description: "Choose from full-time, part-time, or contract-based hiring models that fit your project needs and budget."
-    },
-    {
-      icon: <Users className="w-10 h-10" />,
-      title: "Seamless Integration",
-      description: "Our developers integrate smoothly with your existing teams, processes, and tools for maximum productivity."
-    },
-    {
-      icon: <Star className="w-10 h-10" />,
-      title: "Proven Track Record",
-      description: "200+ successful projects delivered across diverse industries with consistent 5-star client ratings."
-    },
-    {
-      icon: <Globe className="w-10 h-10" />,
-      title: "Global Talent Pool",
-      description: "Access skilled developers working across multiple time zones to ensure 24/7 productivity and coverage."
-    }
-  ];
-
   const hiringProcess = [
     {
       step: "01",
@@ -139,56 +90,7 @@ export default function Page() {
     }
   ];
 
-  const whyChoose = [
-    "Access to 100+ experienced developers across multiple technologies and domains",
-    "Flexible hiring models: full-time, part-time, or project-based engagement options",
-    "No hidden costs: transparent pricing with clear terms and no surprise charges",
-    "Direct communication: work directly with developers, no middlemen or barriers",
-    "Quality assurance: code reviews, testing, and quality checks built into our process",
-    "Risk-free trial: evaluate developers for 1-2 weeks before making a long-term commitment"
-  ];
 
-  const faqs = [
-    {
-      question: "How quickly can I hire a developer?",
-      answer: "Once you share your requirements, we can provide shortlisted profiles within 24-48 hours. After interviews and selection, developers can start working within 2-3 days."
-    },
-    {
-      question: "What engagement models do you offer?",
-      answer: "We offer flexible engagement models including full-time (160 hours/month), part-time (80 hours/month), and project-based hiring. You can choose what works best for your needs."
-    },
-    {
-      question: "Can I interview the developers before hiring?",
-      answer: "Absolutely! We encourage you to interview candidates to assess their technical skills, communication abilities, and cultural fit with your team."
-    },
-    {
-      question: "What if the developer doesn't meet expectations?",
-      answer: "We offer a risk-free trial period. If you're not satisfied within the first 1-2 weeks, we'll provide a replacement at no additional cost or offer a full refund."
-    },
-    {
-      question: "How do you ensure code quality?",
-      answer: "Our developers follow industry best practices including code reviews, automated testing, documentation, and version control. We also conduct regular quality audits."
-    },
-    {
-      question: "Can I scale the team up or down?",
-      answer: "Yes, our engagement model is flexible. You can easily scale your team size up or down based on project requirements with minimal notice."
-    }
-  ];
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    alert("Thank you! We’ll get back to you shortly.");
-    // setFormData({ name: "", email: "", phone: "", company: "", message: "" });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-//   const toggleFaq = (index) => {
-//     setOpenFaq(openFaq === index ? null : index);
-//   };
 
   return (
 

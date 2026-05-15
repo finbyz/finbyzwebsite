@@ -18,7 +18,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Contact Us',
-          action: '/contact',
+          action: '#bottom-inquiry-form',
         }}
         heroImage={{
           alt: 'ERPNext Service Provider',

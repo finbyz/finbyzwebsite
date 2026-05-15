@@ -1,30 +1,9 @@
-'use client'
 import React from 'react'
 import Section from '@/components/sections/Section'
 import CTA from '@/components/sections/cta'
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid'
 import Benefits from '@/components/sections/benefits';
 import DynamicHero from '@/components/sections/dynamic-hero'
-import {
-  Shield,
-  Rocket,
-  Brain,
-  TrendingUp,
-  Users,
-  CheckCircle,
-  BarChart,
-  DollarSign,
-  Zap,
-  Lightbulb,
-  FileText,
-  Phone,
-  Mail,
-  MessageSquare,
-  Calculator,
-  UserCheck,
-  Target,
-  Search,
-} from 'lucide-react'
 
 export default function AIAutomationPageContent() {
   return (

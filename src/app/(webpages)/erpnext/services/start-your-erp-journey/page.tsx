@@ -19,7 +19,7 @@ export default function Page() {
             'Adoption'
           ]}
           description="Unlock business growth with expert ERPNext adoption and digital transformation services. Guided implementation for every stage of your business journey."
-          primaryButton={{ text: 'Get Started', action: 'https://finbyz.tech/contact' }}
+          primaryButton={{ text: 'Get Started', action: '#bottom-inquiry-form' }}
           secondaryButton={{
             text: 'Learn More',
             action: '#overview'
@@ -34,7 +34,7 @@ export default function Page() {
       </section>
 
       {/* OVERVIEW SECTION */}
-      <section id="overview">
+      <section id="overview" className='scroll-mt-5'>
         <div className="container-custom py-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1A5276] animate-fadeIn">Overview</h2>
            <p className=" text-slate-700 text-base md:text-lg mb-6 md:mb-7 text-justify">

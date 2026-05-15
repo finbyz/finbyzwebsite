@@ -212,7 +212,6 @@ export default function Page() {
         primaryButton={{ text: 'Get Started', 
           action: "#canada"
          }}
-        secondaryButton={{ text: 'Our ERPNext Partners', action: '/contact' }}
         heroImage={{
           alt: 'ERPNext Services in Canada',
           src: '/images/Hire-ERPNext-Implementor679475.svg',

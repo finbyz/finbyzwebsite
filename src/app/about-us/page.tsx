@@ -1,6 +1,3 @@
-"use client";
-
-import { Metadata } from "next";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import HeroSection from '@/components/sections/dynamic-hero';

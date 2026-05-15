@@ -31,16 +31,20 @@ export async function getPageData(route: string): Promise<FinbyzGalleryProps> {
         highlightText: pageDetails.highlight_text || '',
         title: pageDetails.cta_title || 'Ready to Scale with Smart Tech? Let\'s Talk.',
         description: pageDetails.cta_description || 'Transform your business processes with AI-powered automation and expert implementation.',
-        primaryButton: {
-            text: pageDetails.primary_button_text || 'Book Demo',
-            icon: pageDetails.primary_button_icon || 'CalendarCheck',
-            action: pageDetails.primary_button_action || '/contact',
-        },
-        secondaryButton: {
-            text: pageDetails.secondary_button_text || 'Get Proposal',
-            icon: pageDetails.secondary_button_icon || 'FileText',
-            action: pageDetails.secondary_button_action || '/contact',
-        },
+        primaryButton: (pageDetails.primary_button_text || pageDetails.primary_button_icon || pageDetails.primary_button_action)
+            ? {
+                text: pageDetails.primary_button_text || undefined,
+                icon: pageDetails.primary_button_icon || undefined,
+                action: pageDetails.primary_button_action || undefined,
+            }
+            : undefined,
+        secondaryButton: (pageDetails.secondary_button_text || pageDetails.secondary_button_icon || pageDetails.secondary_button_action)
+            ? {
+                text: pageDetails.secondary_button_text || undefined,
+                icon: pageDetails.secondary_button_icon || undefined,
+                action: pageDetails.secondary_button_action || undefined,
+            }
+            : undefined,
         trustIndicator: {
             text: pageDetails.trust_indicator_text || 'Trusted by 100+ businesses',
             icon: pageDetails.trust_indicator_icon || 'CalendarCheck',

@@ -1,48 +1,22 @@
-'use client'
-import React, { useState } from 'react';
-import HeroSection from '@/components/sections/dynamic-hero';
+import React from 'react';
 import Section from '@/components/sections/Section';
 
 import List from '@/components/sections/list';
-import PrivacySectionHeading from '@/components/ai_components/PrivacySectionHeading';
-import PrivacySubsectionHeading from '@/components/ai_components/PrivacySubsectionHeading';
-import { Mail, MapPin } from 'lucide-react';
 import Benefits from '@/components/sections/benefits';
 import Image from 'next/image';
 import DynamicHero from '@/components/sections/dynamic-hero';
-import { motion } from "framer-motion";
+import AnimatedText from './AnimatedText';
 import {
-  ArrowRight,
-  CheckCircle,
   Code,
   Database,
-  Shield,
-  Zap,
-  Users,
   Settings,
   TrendingUp,
   Layers,
   Lock,
-  Clock,
   Globe,
-  ChevronDown,
-  ChevronUp,
 } from "lucide-react";
 
 export default function CustomERPDevelopment() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    message: "",
-  });
-  const [openFaq, setOpenFaq] = useState(null);
-
-  const accent = "#1A5276";
-
-  
-
   const industries = [
     { title: 'Chemical', image: '/images/nav-chemical.svg', alt: 'Chemical', description: '', link: '/erpnext/chemical/' },
     { title: 'Engineering', image: '/images/nav-engineering.svg', alt: 'Engineering', description: '', link: '/erpnext/engineering' },
@@ -56,38 +30,6 @@ export default function CustomERPDevelopment() {
     { title: 'Ceramics', image: '/images/Ceramics.svg', alt: 'Ceramics', description: '', link: '' }
   ];
 
-  
-
-  const faqs = [
-    {
-      question: "What is Custom ERP Development?",
-      answer:
-        "It’s the process of designing an ERP system tailored specifically to your workflows, ensuring perfect fit and scalability for your organization.",
-    },
-    {
-      question: "How long does ERP development take?",
-      answer:
-        "It depends on scope and complexity — smaller systems take 3–6 months, while enterprise-grade implementations can take 9–18 months.",
-    },
-    {
-      question: "Do you integrate ERP with existing systems?",
-      answer:
-        "Yes, we specialize in integrating ERP with CRMs, eCommerce, accounting software, and more using APIs and secure data connections.",
-    },
-  ];
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    alert("Thank you! We’ll get back to you shortly.");
-    setFormData({ name: "", email: "", phone: "", company: "", message: "" });
-  };
-  
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-  
-//   const toggleFaq = (i: number) => setOpenFaq(openFaq === i ? null : i);
   
 
   return (
@@ -106,7 +48,7 @@ export default function CustomERPDevelopment() {
           }}
           primaryButton={{
             text: "Get Started",
-            action: '#overview'
+            action: '#bottom-inquiry-form'
           }}
           secondaryButton={{
             text: "Learn More",
@@ -342,16 +284,9 @@ export default function CustomERPDevelopment() {
       Industries We Serve with <span className="text-primary">Expert ERPNext Solutions</span>
     </h2>
 
-    {/* Paragraph with scroll animation */}
-    <motion.p
-      className="mb-12 text-gray-700 text-center max-w-3xl mx-auto text-lg"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.5 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-    >
+    <AnimatedText className="mb-12 text-gray-700 text-center max-w-3xl mx-auto text-lg">
       As a trusted ERPNext Implementation Partner globally, FinByz Tech serves diverse industries with custom ERPNext solutions. Our ERPNext service providers design systems that meet unique operational needs across sectors.
-    </motion.p>
+    </AnimatedText>
 
     {/* Industries Grid */}
     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 justify-items-center">

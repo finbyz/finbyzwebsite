@@ -101,7 +101,7 @@ export default function Page() {
         description="Expert ERP migration services from SAP, Oracle, Tally, Odoo, and other legacy systems to ERPNext. Zero data loss. Minimal downtime. Maximum efficiency."
         primaryButton={{
           text: 'Get Started',
-          action: "#migrate"
+          action: "#bottom-inquiry-form"
         }}
         secondaryButton={{
           text: 'Learn More',

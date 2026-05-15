@@ -1,23 +1,10 @@
-'use client'
-import React from "react";
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
 import WorkingHourExceptionForm from '@/components/ai_components/WorkingHourExceptionForm';
-import { useRouter } from 'next/navigation';
-import { toast } from 'sonner';
 import { FileText } from 'lucide-react';
 
 export default function Page() {
-  const router = useRouter();
-
-  const handleFormSuccess = React.useCallback(() => {
-    toast.success('Submitted successfully!');
-    setTimeout(() => {
-      router.push('/thank-you');
-    }, 1200);
-  }, [router]);
-
   return (
     <>
       <HeroSection
@@ -58,7 +45,7 @@ export default function Page() {
 
       <Section>
         <div className="container-custom py-8" >
-          <WorkingHourExceptionForm onSuccess={handleFormSuccess} />
+          <WorkingHourExceptionForm />
         </div>
       </Section>
 

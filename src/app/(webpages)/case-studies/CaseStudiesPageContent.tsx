@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Section from "@/components/sections/Section";
 import DynamicHero from "@/components/sections/dynamic-hero";

@@ -1,6 +1,5 @@
-'use client'
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
@@ -26,10 +25,6 @@ const fields = [
 ];
 
 export default function Page() {
-  // In real, fetch fields from API and set state
-  // const [fields, setFields] = useState([]);
-  // useEffect(() => { fetchFields().then(setFields); }, []);
-
   return (
     <>
       <HeroSection
