@@ -1,4 +1,5 @@
 import HeroSection from '@/components/sections/dynamic-hero';
+import { contactUrl } from '@/lib/contact'
 
 export default function Page() {
   const heroProps = {
@@ -23,10 +24,10 @@ export default function Page() {
     primaryButton: {
       text: "Request a Consultation",
       icon: 'ArrowRight',
-      action: '/contact',
+      action: contactUrl({ notes: 'We want to steer our vision with your help', referer: '/about-us/steer-your-vision' }),
     },
     secondaryButton: {
-      text: "See Our Work",
+      text: 'See Our Work',
       icon: 'Eye',
       action: '/erpnext/case-studies',
     },

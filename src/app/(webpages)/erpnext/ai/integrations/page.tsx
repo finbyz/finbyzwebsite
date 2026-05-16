@@ -6,6 +6,7 @@ import Section from '@/components/sections/Section';
 
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { MailCheck, Users, MessageCircle, FileText, Sparkles, FileSearch, Mic, ScanLine, Send, Brain, Bot, DatabaseZap, CheckCircle, ArrowRight } from 'lucide-react';
+import { contactUrl } from '@/lib/contact';
 
 export const metadata: Metadata = {
   title: 'AI-Powered Solutions for ERPNext',
@@ -113,7 +114,7 @@ const ctaData = {
   title: 'Integrate Intelligence into Your Workflow Today',
   description:
     'Discover how our suite of AI tools can reduce manual work, accelerate sales, and provide critical insights for your business. Schedule a personalized demo to see them in action.',
-  primaryButton: { text: 'Request a Demo', icon: 'ArrowRight', action: '/contact' },
+  primaryButton: { text: 'Request a Demo', icon: 'ArrowRight', action: contactUrl({ notes: 'We are interested in AI Integrations for ERPNext', referer: '/erpnext/ai/integrations' }) },
 };
 
 export default function AiProductsHomePage() {

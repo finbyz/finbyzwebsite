@@ -5,6 +5,7 @@ import ProcessWorkflow from '@/components/sections/process-workflow';
 import Benefits from '@/components/sections/benefits';
 import Points from '@/components/sections/points';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   const seoTitle = 'Content Spark Streamline Marketing Automation';
@@ -20,7 +21,7 @@ export default function Page() {
         highlightWords={highlightWords}
         description={seoDescription}
         heroImage={{ alt: seoTitle, src: heroImage }}
-        primaryButton={{ text: 'Get a demo', action: '/contact' }}
+        primaryButton={{ text: 'Get a demo', action: contactUrl({ notes: 'We are interested in Content Spark Marketing Automation', referer: '/erpnext/ai/content-spark-marketing-automation' }) }}
       />
 
       {/* 2️⃣ OVERVIEW SECTION (Required) */}

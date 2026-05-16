@@ -6,6 +6,7 @@ import FeatureCard from '@/components/ai_components/FeatureCard';
 import AdvantageList from '@/components/ai_components/AdvantageList';
 import Image from 'next/image';
 import React from 'react';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   return (
@@ -21,7 +22,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Contact Us',
-          action: '/contact'
+          action: contactUrl({ notes: "We are interested in Web Application Development services", referer: "/services/web-application-development" })
         }}
         heroImage={{
           alt: 'Web Application Development',

@@ -3,6 +3,7 @@ import TextSection from '@/components/sections/text';
 import Benefits from '@/components/sections/benefits';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import ERPIntroText from '@/components/sections/erp-intro-text';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   return (
@@ -22,7 +23,7 @@ export default function Page() {
           src: '/images/erpnext-use-cases.png',
 
         }}
-        primaryButton={{ text: 'Get Started', action: 'https://finbyz.tech/contact', }}
+        primaryButton={{ text: 'Get Started', action: contactUrl({ notes: 'We are interested in ERPNext Case Studies', referer: '/erpnext/case-studies' }), }}
         secondaryButton={{
           text: 'Learn More', action: '#erpnext-overview'
         }}

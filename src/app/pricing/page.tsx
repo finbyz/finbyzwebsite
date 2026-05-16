@@ -1,5 +1,6 @@
 import HeroSection from '@/components/sections/dynamic-hero';
 import PricingClient from "./PricingClient";
+import { contactUrl } from '@/lib/contact'
 export default function PricingPage() {
     return (
         <>
@@ -17,7 +18,7 @@ export default function PricingPage() {
                 }}
                 secondaryButton={{
                     text: 'Talk to Sales',
-                    action: '/contact',
+                    action: contactUrl({ notes: 'We are interested in Pricing plans', referer: '/pricing' }),
                 }}
             />
 

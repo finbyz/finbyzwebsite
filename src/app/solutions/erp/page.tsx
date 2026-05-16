@@ -3,6 +3,7 @@ import Section from '@/components/sections/Section';
 
 import { Package, TrendingUp, DollarSign, Database, Settings, ShieldCheck, PieChart, Users, Repeat, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
+import { contactUrl } from '@/lib/contact'
 
 export default function ERPSolutionsPage() {
   const handleGetStarted = () => {
@@ -16,11 +17,11 @@ export default function ERPSolutionsPage() {
         description="Streamline your entire business operation with our comprehensive ERP solutions. From finance to supply chain, gain complete control and visibility over your organization."
         primaryButton={{
           text: 'Explore Solutions',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in ERP solutions', referer: '/solutions/erp' })
         }}
         secondaryButton={{
           text: 'Contact Us',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in ERP solutions', referer: '/solutions/erp' })
         }}
         heroImage={{
           alt: 'ERP Solutions - Comprehensive business management',

@@ -3,6 +3,7 @@ import Section from '@/components/sections/Section';
 
 import { Package, FileCheck, Receipt, DollarSign, Lock, TrendingUp, BarChart3, Calendar, ClipboardCheck, Repeat } from 'lucide-react';
 import Link from 'next/link';
+import { contactUrl } from '@/lib/contact';
 
 export default function ERPNextAppsPage() {
   const handleGetStarted = () => {
@@ -28,11 +29,11 @@ export default function ERPNextAppsPage() {
         description="Extend the functionality of your ERP with our range of specialized apps tailored for specific business needs and regional compliance."
         primaryButton={{
           text: 'Browse Apps',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in ERPNext Apps', referer: '/erpnext/apps' })
         }}
         secondaryButton={{
           text: 'Request Custom App',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in ERPNext Apps', referer: '/erpnext/apps' })
         }}
         heroImage={{
           alt: 'ERPNext Apps - Extensions and Plugins',

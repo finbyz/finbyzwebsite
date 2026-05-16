@@ -6,6 +6,7 @@ import BlogContent from '@/components/ai_components/blog/BlogContent';
 import BlogParagraph from '@/components/ai_components/blog/BlogParagraph';
 import BlogCheckList from '@/components/ai_components/blog/BlogCheckList';
 import Link from 'next/link';
+import { contactUrl } from '@/lib/contact';
 
 const heroProps = {
   title: "ERPNext v16 Frappe Caffeine Performance Optimization Guide",
@@ -172,7 +173,7 @@ export default function Page() {
               Frappe Caffeine represents the maturing of ERPNext into a truly high-scale enterprise platform. By solving the read-amplification problem at the architectural level, v16 opens the door for deployments with thousands of concurrent users.
             </BlogParagraph>
             <BlogParagraph>
-              <Link href="/contact" className="text-primary underline hover:text-primary/80 transition-colors">Contact FinByz Tech</Link> today to audit your current performance bottlenecks and plan your upgrade to ERPNext v16.
+              <Link href={contactUrl({ notes: 'I am interested in ERPNext v16 performance optimization', referer: '/erpnext/insights/erpnext-v16-frappe-caffeine-performance-guide' })} className="text-primary underline hover:text-primary/80 transition-colors">Contact FinByz Tech</Link> today to audit your current performance bottlenecks and plan your upgrade to ERPNext v16.
             </BlogParagraph>
           </BlogSection>
         </BlogContent>

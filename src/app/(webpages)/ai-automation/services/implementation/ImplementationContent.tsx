@@ -3,6 +3,7 @@ import Section from "@/components/sections/Section";
 import DynamicHero from "@/components/sections/dynamic-hero";
 import ResponsiveCardGrid from "@/components/sections/responsive-card-grid";
 import Benefits from "@/components/sections/benefits";
+import { contactUrl } from '@/lib/contact';
 
 
 export default function ImplementationContent() {
@@ -25,7 +26,7 @@ export default function ImplementationContent() {
                     }}
                     secondaryButton={{
                         text: 'Consult an Architect',
-                        action: '/contact',
+                        action: contactUrl({ notes: 'We are interested in AI Implementation services', referer: '/ai-automation/services/implementation' }),
                     }}
                 />
             </Section>

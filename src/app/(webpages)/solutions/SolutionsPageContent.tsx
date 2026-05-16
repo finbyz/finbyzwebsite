@@ -3,6 +3,7 @@ import Section from "@/components/sections/Section";
 import DynamicHero from "@/components/sections/dynamic-hero";
 import ResponsiveCardGrid from "@/components/sections/responsive-card-grid";
 import Benefits from "@/components/sections/benefits";
+import { contactUrl } from '@/lib/contact';
 
 
 export default function SolutionsPageContent() {
@@ -27,7 +28,7 @@ export default function SolutionsPageContent() {
                     }}
                     secondaryButton={{
                         text: 'Contact Us',
-                        action: '/contact',
+                        action: contactUrl({ notes: 'We are interested in your Solutions', referer: '/solutions' }),
                     }}
                 />
             </Section>

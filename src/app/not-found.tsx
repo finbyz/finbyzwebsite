@@ -4,6 +4,7 @@ import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { Home, ArrowLeft, Search, FileText, Users, Building2, Wrench } from "lucide-react";
 import Link from "next/link";
+import { contactUrl } from '@/lib/contact';
 
 export default function NotFound() {
 
@@ -43,7 +44,7 @@ export default function NotFound() {
                     </Link>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="border-2 border-black text-black hover:bg-gray-100 hover:border-gray-700 transition-all duration-200 rounded-full px-8 py-4 bg-white">
-                    <Link href="/contact" className="flex items-center gap-2">
+                    <Link href={contactUrl({ notes: 'I need help with your services', referer: '/404' })} className="flex items-center gap-2">
                       <ArrowLeft className="w-5 h-5" />
                       Contact Support
                     </Link>
@@ -112,7 +113,7 @@ export default function NotFound() {
                     <p className="text-slate-600 mb-4">
                       Ready to start your project? Contact our team for a consultation and quote.
                     </p>
-                    <Link href="/contact" className="text-orange-600 hover:text-orange-700 font-medium inline-flex items-center gap-1">
+                    <Link href={contactUrl({ notes: 'I need help with your services', referer: '/404' })} className="text-orange-600 hover:text-orange-700 font-medium inline-flex items-center gap-1">
                       Contact Us
                       <ArrowLeft className="w-4 h-4 rotate-180" />
                     </Link>

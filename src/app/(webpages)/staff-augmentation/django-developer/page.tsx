@@ -10,6 +10,7 @@ import DjangoOutsourcingBenefitsGrid from '@/components/ai_components/DjangoOuts
 
 import Image from 'next/image';
 import { CheckCircle2 } from 'lucide-react';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   return (
@@ -19,7 +20,7 @@ export default function Page() {
         highlightWords={["Django", "Developer"]}
         description="Looking to hire Django developers? Find expert Python Django developers for your project needs. Hire Django developers today and level up your project!"
         primaryButton={{ text: 'Hire Now', action: "#django" }}
-        secondaryButton={{ text: 'Contact Us', action: '/contact' }}
+        secondaryButton={{ text: 'Contact Us', action: contactUrl({ notes: 'We want to hire Django developers', referer: '/staff-augmentation/django-developer' }) }}
         heroImage={{
           alt: 'Hire Django Developer',
           src: '/Hire-dJango-Dev - New.svg',

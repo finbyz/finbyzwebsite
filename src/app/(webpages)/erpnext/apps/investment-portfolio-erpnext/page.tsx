@@ -5,6 +5,7 @@ import List from '@/components/sections/list';
 import InvestmentProcessStepCard from '@/components/ai_components/InvestmentProcessStepCard';
 import Image from 'next/image';
 import { CheckCircle } from 'lucide-react';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   return (
@@ -20,7 +21,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Request Demo',
-          action: '/contact',
+          action: contactUrl({ notes: 'We need help to setup Investment Portfolio app', referer: '/erpnext/apps/investment-portfolio-erpnext' }),
         }}
         heroImage={{
           alt: 'Investment Portfolio Management in ERPNext',

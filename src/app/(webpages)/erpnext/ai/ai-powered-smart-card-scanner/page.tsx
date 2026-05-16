@@ -7,6 +7,7 @@ import ProcessWorkflow from '@/components/sections/process-workflow'
 import Benefits from '@/components/sections/benefits'
 import CTA from '@/components/sections/cta'
 import { Cpu, Bot, Database } from 'lucide-react'
+import { contactUrl } from '@/lib/contact'
 
 
 // Data for the Hero Section
@@ -21,7 +22,7 @@ const heroData = {
   },
   primaryButton: {
     text: 'Get a Demo',
-    action: '/contact'
+    action: contactUrl({ notes: 'We are interested in AI-powered Smart Card Scanner', referer: '/erpnext/ai/ai-powered-smart-card-scanner' })
   },
   features: [
     {

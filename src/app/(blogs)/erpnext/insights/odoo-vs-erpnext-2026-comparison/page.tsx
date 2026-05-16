@@ -6,6 +6,7 @@ import BlogContent from '@/components/ai_components/blog/BlogContent';
 import BlogParagraph from '@/components/ai_components/blog/BlogParagraph';
 import BlogCheckList from '@/components/ai_components/blog/BlogCheckList';
 import Link from 'next/link';
+import { contactUrl } from '@/lib/contact';
 
 const heroProps = {
     title: "Odoo vs ERPNext in 2026: The Real Cost of Open Source",
@@ -199,7 +200,7 @@ export default function Page() {
                             Don&apos;t pay a &quot;success tax&quot; on your growth. Build on a foundation that you own.
                         </BlogParagraph>
                         <BlogParagraph>
-                            <strong>Thinking about migrating from Odoo to ERPNext?</strong> <Link href="/contact" className="text-primary underline hover:text-primary/80 transition-colors">Talk to our migration experts</Link> today.
+                            <strong>Thinking about migrating from Odoo to ERPNext?</strong> <Link href={contactUrl({ notes: 'I am interested in Odoo vs ERPNext comparison', referer: '/erpnext/insights/odoo-vs-erpnext-2026-comparison' })} className="text-primary underline hover:text-primary/80 transition-colors">Talk to our migration experts</Link> today.
                         </BlogParagraph>
                     </BlogSection>
                 </BlogContent>

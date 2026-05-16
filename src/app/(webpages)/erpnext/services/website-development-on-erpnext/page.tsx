@@ -6,6 +6,7 @@ import ProcessStepCard from '@/components/ai_components/ProcessStepCard';
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { contactUrl } from '@/lib/contact';
 
 const features = [
   {
@@ -101,7 +102,7 @@ export default function Page() {
         description="Boost your presence with our premier website development company. We offer expert web development services, specializing in web design & development."
         primaryButton={{
           text: 'Get a Free Consultation',
-          action: '/contact',
+          action: contactUrl({ notes: "We are interested in Website Development on ERPNext", referer: "/erpnext/services/website-development-on-erpnext" }),
         }}
         secondaryButton={{
           text: 'View Our Clients',

@@ -6,6 +6,7 @@ import BlogContent from '@/components/ai_components/blog/BlogContent';
 import BlogParagraph from '@/components/ai_components/blog/BlogParagraph';
 import BlogCheckList from '@/components/ai_components/blog/BlogCheckList';
 import Link from 'next/link';
+import { contactUrl } from '@/lib/contact';
 
 const heroProps = {
   title: "What's New in ERPNext Version 16: Complete Feature Guide",
@@ -280,7 +281,7 @@ export default function Page() {
               Whether you&apos;re upgrading from an earlier version or evaluating ERPNext for a new implementation, v16 delivers enterprise-grade capabilities without the enterprise price tag.
             </BlogParagraph>
             <BlogParagraph>
-              <strong>Ready to upgrade to ERPNext v16?</strong> <Link href="/contact" className="text-primary underline hover:text-primary/80 transition-colors">Contact our team</Link> for a free consultation on your migration strategy and discover how FinByz can help you maximize the value of your ERPNext investment.
+              <strong>Ready to upgrade to ERPNext v16?</strong> <Link href={contactUrl({ notes: 'I am interested in ERPNext Version 16', referer: '/erpnext/insights/whats-new-erpnext-version-16' })} className="text-primary underline hover:text-primary/80 transition-colors">Contact our team</Link> for a free consultation on your migration strategy and discover how FinByz can help you maximize the value of your ERPNext investment.
             </BlogParagraph>
           </BlogSection>
         </BlogContent>

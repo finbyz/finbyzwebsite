@@ -14,6 +14,7 @@ import { GiReceiveMoney } from 'react-icons/gi';
 import { Banknote as LuBanknote } from 'lucide-react';
 import Link from 'next/link';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   return (
@@ -29,7 +30,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Contact Us',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in Argentina Electronic Invoicing app', referer: '/erpnext/apps/argentina-electronic-invoicing-erpnext-afip-compliance-automation' })
         }}
         heroImage={{
           alt: 'Argentina Electronic Invoicing in ERPNext: AFIP Compliance & Automation',

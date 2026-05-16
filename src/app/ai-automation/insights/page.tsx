@@ -3,6 +3,7 @@ import Section from '@/components/sections/Section';
 
 import { Lightbulb, TrendingUp, Monitor, Laptop, Code2, BrainCircuit, Rss, BookOpen, Globe } from 'lucide-react';
 import Link from 'next/link';
+import { contactUrl } from '@/lib/contact'
 
 export default function AIInsightsPage() {
   const handleGetStarted = () => {
@@ -22,11 +23,11 @@ export default function AIInsightsPage() {
         description="Stay ahead of the curve with our expert insights on Artificial Intelligence, IT strategy, and digital transformation. Read articles that help you navigate the rapidly evolving tech landscape."
         primaryButton={{
           text: 'Read Articles',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in AI Automation Insights', referer: '/ai-automation/insights' })
         }}
         secondaryButton={{
           text: 'Subscribe',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in AI Automation Insights', referer: '/ai-automation/insights' })
         }}
         heroImage={{
           alt: 'AI Insights - Expert articles on technology and business',

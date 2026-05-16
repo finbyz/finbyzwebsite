@@ -10,6 +10,7 @@ import ClientCountryGrid from '@/components/ai_components/ClientCountryGrid';
 
 import Grid from '@/components/layout/Grid';
 import HireERPNextMotionSections from '@/components/ai_components/HireERPNextMotionSections';
+import { contactUrl } from '@/lib/contact';
 
 const whyChooseList = [
   'Boost operational efficiency and reduce costs with expert ERPNext implementation by a trusted partner.',
@@ -246,7 +247,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Contact Us',
-          action: '/contact'
+          action: contactUrl({ notes: "We want to hire an ERPNext Implementer", referer: "/erpnext/services/hire-erpnext-implementer" })
         }}
         heroImage={{
           alt: 'ERPNext Implementation',
@@ -255,7 +256,7 @@ export default function Page() {
         }}
       />
 
-      <Section>
+      <Section id='content'>
         <div className="container-custom py-8  text-[#000000] ">
           {/* <QuoteBlock
             text="Looking to digitally transform your business? Choose Finbyz Tech – a leading ERPNext Implementation Company in Ahmedabad, Gujarat. Here's why"

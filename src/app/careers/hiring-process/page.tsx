@@ -3,6 +3,7 @@ import { List } from '@/components/sections/list';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 
 import { TrendingUp } from 'lucide-react';
+import { contactUrl } from '@/lib/contact'
 
 export default function Page() {
   return (
@@ -12,7 +13,7 @@ export default function Page() {
         headline="Transparent Hiring Process & Career Opportunities"
         highlightWords={["Transparent", "Hiring ", " Opportunities"]}
         description="Discover Finbyz Tech's structured and transparent hiring process. Learn how we recruit top talent for ERPNext, AI automation, and IT roles, ensuring a fair and engaging selection experience."
-        primaryButton={{ text: 'Get Started',action: 'https://finbyz.tech/contact' }}
+        primaryButton={{ text: 'Get Started',action: contactUrl({ notes: 'We are interested in your hiring process', referer: '/careers/hiring-process' }) }}
         secondaryButton={{ text: 'Learn More' , action: '#hiring'}}
         heroImage={{
           alt: 'Transparent Hiring Process & Career Opportunities',

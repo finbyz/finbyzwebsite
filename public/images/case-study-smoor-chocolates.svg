@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1024" width="1792" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#1A5276"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accent1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1A5276" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#2980B9" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#1A5276" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="accent2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF8C00" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FF8C00" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#FF8C00" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="textGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1792" height="1024" fill="url(#bg)"/>
+  <rect width="1792" height="1024" fill="url(#grid)"/>
+
+  <!-- Subtle glow overlay -->
+  <rect width="1792" height="1024" fill="url(#glow)"/>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="4" height="1024" fill="#2980B9" opacity="0.3"/>
+
+  <!-- Decorative circles -->
+  <circle cx="200" cy="800" r="180" fill="url(#accent2)"/>
+  <circle cx="1500" cy="250" r="250" fill="url(#accent1)"/>
+  <circle cx="1600" cy="850" r="120" fill="#1A5276" opacity="0.2"/>
+
+  <!-- Data flow lines - top -->
+  <path d="M 100 150 Q 300 100 500 180 Q 700 260 900 150" fill="none" stroke="#2980B9" stroke-opacity="0.15" stroke-width="1.5"/>
+  <path d="M 100 160 Q 300 110 500 190 Q 700 270 900 160" fill="none" stroke="#3498DB" stroke-opacity="0.08" stroke-width="1"/>
+
+  <!-- Data flow lines - bottom -->
+  <path d="M 800 900 Q 1100 850 1400 920 Q 1600 950 1792 880" fill="none" stroke="#2980B9" stroke-opacity="0.12" stroke-width="1.5"/>
+  <path d="M 800 910 Q 1100 860 1400 930 Q 1600 960 1792 890" fill="none" stroke="#3498DB" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- Pulse ring - large -->
+  <circle cx="1400" cy="380" r="200" fill="none" stroke="#FF8C00" stroke-opacity="0.06" stroke-width="1"/>
+  <circle cx="1400" cy="380" r="150" fill="none" stroke="#FF8C00" stroke-opacity="0.08" stroke-width="1"/>
+  <circle cx="1400" cy="380" r="100" fill="none" stroke="#FF8C00" stroke-opacity="0.1" stroke-width="1"/>
+
+  <!-- Dots on data lines -->
+  <circle cx="300" cy="125" r="3" fill="#3498DB" opacity="0.3"/>
+  <circle cx="600" cy="210" r="2.5" fill="#3498DB" opacity="0.25"/>
+  <circle cx="1100" cy="875" r="3" fill="#3498DB" opacity="0.3"/>
+  <circle cx="1400" cy="925" r="2.5" fill="#3498DB" opacity="0.25"/>
+
+  <!-- Performance bars (right side) -->
+  <g opacity="0.1">
+    <rect x="1450" y="520" width="8" height="40" rx="2" fill="#FF8C00"/>
+    <rect x="1470" y="500" width="8" height="60" rx="2" fill="#FF8C00"/>
+    <rect x="1490" y="480" width="8" height="80" rx="2" fill="#FF8C00"/>
+    <rect x="1510" y="440" width="8" height="120" rx="2" fill="#2980B9"/>
+    <rect x="1530" y="460" width="8" height="100" rx="2" fill="#2980B9"/>
+    <rect x="1550" y="430" width="8" height="130" rx="2" fill="#FF8C00"/>
+    <rect x="1570" y="490" width="8" height="70" rx="2" fill="#2980B9"/>
+    <rect x="1590" y="510" width="8" height="50" rx="2" fill="#2980B9"/>
+  </g>
+
+  <!-- Performance bars - smaller set -->
+  <g opacity="0.06">
+    <rect x="1300" y="600" width="5" height="30" rx="1.5" fill="#3498DB"/>
+    <rect x="1315" y="580" width="5" height="50" rx="1.5" fill="#3498DB"/>
+    <rect x="1330" y="550" width="5" height="80" rx="1.5" fill="#FF8C00"/>
+    <rect x="1345" y="560" width="5" height="70" rx="1.5" fill="#FF8C00"/>
+    <rect x="1360" y="540" width="5" height="90" rx="1.5" fill="#3498DB"/>
+    <rect x="1375" y="590" width="5" height="40" rx="1.5" fill="#3498DB"/>
+  </g>
+
+  <!-- 30x text -->
+  <text x="1400" y="400" font-family="Arial, Helvetica, sans-serif" font-size="110" font-weight="bold" fill="#FF8C00" text-anchor="middle" dominant-baseline="middle" opacity="0.15" filter="url(#textGlow)">30x</text>
+  <text x="1398" y="398" font-family="Arial, Helvetica, sans-serif" font-size="110" font-weight="bold" fill="#FF8C00" text-anchor="middle" dominant-baseline="middle" opacity="0.25">30x</text>
+
+  <text x="1400" y="440" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#FF8C00" text-anchor="middle" dominant-baseline="middle" opacity="0.2" letter-spacing="4">PERFORMANCE IMPROVEMENT</text>
+
+  <!-- Subtle horizontal lines -->
+  <line x1="200" y1="512" x2="500" y2="512" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+  <line x1="1100" y1="512" x2="1300" y2="512" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+
+  <!-- Corner accents -->
+  <path d="M 1700 80 L 1750 80 L 1750 130" fill="none" stroke="#2980B9" stroke-opacity="0.2" stroke-width="1.5"/>
+  <path d="M 1750 170 L 1750 80 L 1700 80" fill="none" stroke="#FF8C00" stroke-opacity="0.1" stroke-width="1"/>
+
+  <path d="M 92 894 L 42 894 L 42 844" fill="none" stroke="#2980B9" stroke-opacity="0.2" stroke-width="1.5"/>
+  <path d="M 42 804 L 42 894 L 92 894" fill="none" stroke="#FF8C00" stroke-opacity="0.1" stroke-width="1"/>
+
+  <!-- Bottom fade -->
+  <rect x="0" y="900" width="1792" height="124" fill="url(#bg)" opacity="0.8"/>
+</svg>

@@ -8,6 +8,7 @@ import Benefits from '@/components/sections/benefits';
 
 import FeatureCard from '@/components/ai_components/FeatureCard'; // Fixed import
 import { Mic, FileAudio, LucideWaves as Waveform, MessageSquare, ScrollText, Database, Bot, ClipboardList } from 'lucide-react';
+import { contactUrl } from '@/lib/contact';
 
 
 // --- DATA CONSTANTS ---
@@ -23,7 +24,7 @@ const heroData = {
   },
   primaryButton: {
     text: 'Get a Demo',
-    action: '/contact'
+    action: contactUrl({ notes: 'We are interested in Sales Call Recording and Analysis', referer: '/ai-automation/apps/sales-call-recording-and-analysis-in-erpnext' })
   },
   features: [
     { icon: Mic, title: 'In-app recording', description: 'Record or upload calls directly in ERPNext.' },
@@ -191,7 +192,7 @@ const ctaData = {
   title: 'Turn every call into a coaching moment inside ERPNext',
   description:
     'Get AI-powered transcripts, feedback, and scripts—automatically stored in the Voice Recording doctype for faster reviews and better conversions.',
-  primaryButton: { text: 'Get a demo', icon: 'Mic', action: '/contact' },
+  primaryButton: { text: 'Get a demo', icon: 'Mic', action: contactUrl({ notes: 'We are interested in Sales Call Recording and Analysis', referer: '/ai-automation/apps/sales-call-recording-and-analysis-in-erpnext' }) },
   secondaryButton: {
     text: 'See workflow',
     icon: 'ClipboardList',

@@ -6,6 +6,7 @@ import List from '@/components/sections/list';
 import EngineeringBenefitsGrid from '@/components/ai_components/EngineeringBenefitsGrid';
 import EngineeringTypesGrid from '@/components/ai_components/EngineeringTypesGrid';
 import React from 'react';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   return (
@@ -14,7 +15,7 @@ export default function Page() {
         headline="ERPNext for the Engineering Industry"
         highlightWords={["Engineering Industry"]}
         description="FinByz Tech delivers ERPNext-based engineering ERP software solutions. Streamline engineering and software engineering operations with integrated project, inventory, and financial management."
-        primaryButton={{ text: 'Get Free Consultation', action: '/contact' }}
+        primaryButton={{ text: 'Get Free Consultation', action: contactUrl({ notes: 'We are interested in ERPNext for Engineering', referer: '/erpnext/engineering' }) }}
         secondaryButton={{
           text: 'Learn More',
           action: "#engineering"

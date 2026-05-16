@@ -8,6 +8,7 @@ import List from '@/components/sections/list';
 
 import Image from 'next/image';
 import { FaArrowRight } from 'react-icons/fa';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
 
@@ -18,7 +19,7 @@ export default function Page() {
         headline="Hire Web Application Developers"
         highlightWords={["Web Application", "Developers"]}
         description="Looking for top-notch web application development services? Hire skilled web app developers for website and app development, expert in web programming."
-        primaryButton={{ text: 'Contact Us', action: '/contact' }}
+        primaryButton={{ text: 'Contact Us', action: contactUrl({ notes: 'We want to hire Web Application developers', referer: '/staff-augmentation/web-application-developers' }) }}
         secondaryButton={{ text: 'Learn More', action: '/services/web-application-development' }}
         heroImage={{
           alt: 'Hire Web Application Developers',

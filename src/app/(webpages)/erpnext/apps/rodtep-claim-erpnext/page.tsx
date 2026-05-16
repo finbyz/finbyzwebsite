@@ -6,6 +6,7 @@ import List from '@/components/sections/list';
 import HowToUseRodtepAppList from '@/components/ai_components/HowToUseRodtepAppList';
 import Image from 'next/image';
 import { LucideDownload } from 'lucide-react';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   return (
@@ -20,7 +21,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Contact Us',
-          action: 'https://finbyz.tech/contact',
+          action: contactUrl({ notes: 'We need help to setup Rodtep Claim app', referer: '/erpnext/apps/rodtep-claim-erpnext' }),
         }}
         heroImage={{
           alt: 'RODTEP Claim Management in ERPNext',

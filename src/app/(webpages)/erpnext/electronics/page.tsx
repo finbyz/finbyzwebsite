@@ -6,6 +6,7 @@ import Benefits from '@/components/sections/benefits';
 import Differentiators from '@/components/sections/differentiators';
 
 import { CheckCircle, Award, Layers, Boxes, ClipboardList, Globe, BarChart3, Zap, Users, Star } from 'lucide-react';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   return (
@@ -15,7 +16,7 @@ export default function Page() {
         headline="ERP Solutions for Electronics Manufacturing & Supply Chain"
         highlightWords={["ERP Solutions", "Manufacturing", "Supply Chain"]}
         description="Optimize electronics manufacturing, inventory, and global supply chains with powerful ERP solutions. Streamline production, enhance quality, and reduce costs."
-        primaryButton={{ text: "Get Started" , action: 'https://finbyz.tech/contact'}}
+        primaryButton={{ text: "Get Started" , action: contactUrl({ notes: 'We are interested in ERPNext for Electronics', referer: '/erpnext/electronics' })}}
         secondaryButton={{ text: "Learn More",action: '#erpnext-overview' }}
         heroImage={{
           alt: 'ERP Solutions for Electronics Manufacturing & Supply Chain',

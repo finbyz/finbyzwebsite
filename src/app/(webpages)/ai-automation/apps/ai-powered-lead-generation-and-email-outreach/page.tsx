@@ -5,6 +5,7 @@ import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Points from '@/components/sections/points';
 
 import AdvantageList from '@/components/ai_components/AdvantageList';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   // SEO Inputs
@@ -20,7 +21,7 @@ export default function Page() {
         highlightWords={["Lead Generation", "Email Outreach"]}
         description={seoDescription}
         heroImage={{ src: "/AI_Powered_Resume_Ranker.gif", alt: 'AI_Powered_Resume_Ranker' }}
-        primaryButton={{ text: 'Get a Demo', action: '/contact' }}
+        primaryButton={{ text: 'Get a Demo', action: contactUrl({ notes: 'We are interested in AI-powered Lead Generation', referer: '/ai-automation/apps/ai-powered-lead-generation-and-email-outreach' }) }}
 
       // secondaryButton={{ text: 'See Workflow' }}
       />

@@ -3,6 +3,7 @@ import Section from '@/components/sections/Section';
 
 import { MailPlus, Sparkles, PhoneCall } from 'lucide-react';
 import Link from 'next/link';
+import { contactUrl } from '@/lib/contact'
 
 export default function AIAutomationAppsPage() {
   const handleGetStarted = () => {
@@ -22,11 +23,11 @@ export default function AIAutomationAppsPage() {
         description="Supercharge your workflow with our suite of AI-powered applications. From marketing to sales, automate complex tasks and drive growth."
         primaryButton={{
           text: 'Explore Apps',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in AI Automation Apps', referer: '/ai-automation/apps' })
         }}
         secondaryButton={{
           text: 'Request Demo',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in AI Automation Apps', referer: '/ai-automation/apps' })
         }}
         heroImage={{
           alt: 'AI Automation Apps - Smart Business Tools',

@@ -147,7 +147,7 @@ export default function Page() {
                             </ul>
 
                             <Link
-                                href="/contact"
+                                href="/contact?notes=We%20are%20interested%20in%20ERP%20Insights&referer=/erp/insights#contact-form-section"
                                 className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors inline-flex items-center"
                             >
                                 Start Your Transformation

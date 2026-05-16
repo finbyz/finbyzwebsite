@@ -4,6 +4,7 @@ import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import FeatureCard from '@/components/ai_components/FeatureCard';
 import BenefitCard from '@/components/ai_components/BenefitCard';
 import ProcessPhasesTabs from '@/components/ai_components/ProcessPhasesTabs';
+import { contactUrl } from '@/lib/contact';
 
 const heroHighlightWords = [ "Logistics", "Industry"];
 
@@ -112,7 +113,7 @@ export default function Page() {
         description="Discover how Finbyz Tech's ERP solutions streamline logistics operations, enhance efficiency, and provide real-time analytics for the logistics industry."
         primaryButton={{
           text: 'Get a Demo',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in ERPNext for Logistics', referer: '/erpnext/logistics' })
         }}
         secondaryButton={{
           text: 'Learn More',

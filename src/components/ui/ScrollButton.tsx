@@ -1,28 +1,15 @@
 'use client';
 
-import React from 'react';
+export default function ScrollButton({ children, className }: { children: React.ReactNode; className?: string }) {
+  const handleClick = () => {
+    const form = document.querySelector('.inquiry-form');
+    if (form) {
+      form.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
-interface ScrollButtonProps {
-  targetId: string;
-  className?: string;
-  children: React.ReactNode;
-}
-
-/**
- * Client component for buttons that scroll to a target element.
- * Extracted so parent pages can remain server components.
- */
-export default function ScrollButton({ targetId, className = '', children }: ScrollButtonProps) {
   return (
-    <button
-      onClick={() => {
-        const el = document.getElementById(targetId);
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }}
-      className={className}
-    >
+    <button onClick={handleClick} className={className}>
       {children}
     </button>
   );

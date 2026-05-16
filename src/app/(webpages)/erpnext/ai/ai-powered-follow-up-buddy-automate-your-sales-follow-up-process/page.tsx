@@ -4,6 +4,7 @@ import TextSection from '@/components/sections/text'
 import ProcessWorkflow from '@/components/sections/process-workflow'
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid'
 import CTA from '@/components/sections/cta'
+import { contactUrl } from '@/lib/contact'
 
 export default function Page() {
   const heroProps = {
@@ -11,7 +12,7 @@ export default function Page() {
     highlightWords: ['Automation', 'Effective Sales'],
     description:
       'Follow Up Buddy automates the sales process by generating personalized follow-up emails and identifying inactive leads, saving time and enhancing customer relationships.',
-    primaryButton: { text: 'Get a Demo', action: '/contact' },
+    primaryButton: { text: 'Get a Demo', action: contactUrl({ notes: 'We are interested in AI-powered Follow-up Buddy', referer: '/erpnext/ai/ai-powered-follow-up-buddy' }) },
     // secondaryButton: { text: 'Learn More', action: () => {
     //   const el = document.getElementById('follow-up');
     //   if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -201,7 +202,7 @@ export default function Page() {
     title: 'Never let a lead go cold again',
     description:
       'Deploy Follow Up Buddy to identify stale opportunities, craft on-brand outreach, and send perfectly timed follow-ups — automatically.',
-    primaryButton: { text: 'Get a Demo', icon: 'Send', action: '/contact' },
+    primaryButton: { text: 'Get a Demo', icon: 'Send', action: contactUrl({ notes: 'We are interested in AI-powered Follow-up Buddy', referer: '/erpnext/ai/ai-powered-follow-up-buddy' }) },
     secondaryButton: {
       text: 'See how it works', icon: 'Play', action: '#follow-up'
     },

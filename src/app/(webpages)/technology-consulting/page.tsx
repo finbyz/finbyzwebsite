@@ -5,6 +5,7 @@ import Benefits from '@/components/sections/benefits';
 import { List } from '@/components/sections/list';
 
 import { Lightbulb, Globe2, Star, Users, Settings, Award, TrendingUp, ShieldCheck, Brain, RefreshCcw, Cloud, BarChart3, Rocket } from 'lucide-react';
+import { contactUrl } from '@/lib/contact'
 
 export default function Page() {
   return (
@@ -21,7 +22,7 @@ export default function Page() {
         }}
          primaryButton={{
             text: "Get Started",
-            action: 'https://finbyz.tech/contact'
+            action: contactUrl({ notes: 'We are interested in Technology Consulting', referer: '/technology-consulting' }),
           }}
           secondaryButton={{
             text: "Learn More",

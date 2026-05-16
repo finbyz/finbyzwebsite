@@ -3,6 +3,7 @@ import Section from '@/components/sections/Section';
 
 import { Code2, BookOpen, UserCheck, Briefcase, Laptop, Rocket } from 'lucide-react';
 import Link from 'next/link';
+import { contactUrl } from '@/lib/contact'
 
 export default function CareerInsightsPage() {
   const handleGetStarted = () => {
@@ -26,11 +27,11 @@ export default function CareerInsightsPage() {
         description="Navigate your professional journey with our expert career advice. From skill development to job search strategies, find the guidance you need to succeed in tech."
         primaryButton={{
           text: 'Read Insights',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in career opportunities', referer: '/careers/insights' })
         }}
         secondaryButton={{
           text: 'View Openings',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in career opportunities', referer: '/careers/insights' })
         }}
         heroImage={{
           alt: 'Career Insights - Professional growth and development',

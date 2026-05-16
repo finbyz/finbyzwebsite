@@ -8,6 +8,7 @@ import WhatsappMessagePolicyList from '@/components/ai_components/WhatsappMessag
 import UserRightsList from '@/components/ai_components/UserRightsList';
 import { Mail, ShieldCheck, UserCheck, Lock, Globe, FileText, Users, AlertCircle, MessageCircle, UserX, UserPlus, Info, RefreshCw } from 'lucide-react';
 import Image from 'next/image';
+import { contactUrl } from '@/lib/contact'
 
 export default function Page() {
   return (
@@ -18,7 +19,7 @@ export default function Page() {
         description="Learn how Finbyz Tech collects, uses, and protects your personal information when you use our WhatsApp-related services. Stay informed about your rights, data security, and our commitment to privacy."
         primaryButton={{
           text: "Contact Support",
-          action: '/contact',
+          action: contactUrl({ notes: 'I have a question about the WhatsApp privacy policy', referer: '/whatsapp-privacy-policy' }),
         }}
         secondaryButton={{
           text: "Learn More",

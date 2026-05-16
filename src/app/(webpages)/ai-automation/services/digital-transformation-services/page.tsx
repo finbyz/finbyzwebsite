@@ -3,6 +3,7 @@ import TextSection from '@/components/sections/text';
 import { List } from '@/components/sections/list';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   return (
@@ -19,7 +20,7 @@ export default function Page() {
           
         }}
        
-        primaryButton={{ text: 'Get Demo', action: 'https://finbyz.tech/contact' }}
+        primaryButton={{ text: 'Get Demo', action: contactUrl({ notes: 'We are interested in Digital Transformation services', referer: '/ai-automation/services/digital-transformation-services' }) }}
         secondaryButton={{ text: 'Learn More', action: '#contruction-resources'}}
       />
 

@@ -3,6 +3,7 @@ import Section from '@/components/sections/Section';
 
 import { Cog, ClipboardList, MonitorPlay, Users, Zap, Search, BarChart3, Wrench } from 'lucide-react';
 import Link from 'next/link';
+import { contactUrl } from '@/lib/contact'
 
 export default function AIServicesPage() {
   const handleGetStarted = () => {
@@ -24,11 +25,11 @@ export default function AIServicesPage() {
         description="Comprehensive AI and automation services to drive digital transformation. From strategy to implementation, we partner with you to unlock the full potential of artificial intelligence."
         primaryButton={{
           text: 'Explore Services',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in AI Automation Services', referer: '/ai-automation/services' })
         }}
         secondaryButton={{
           text: 'Get Consultation',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in AI Automation Services', referer: '/ai-automation/services' })
         }}
         heroImage={{
           alt: 'AI Services - Professional AI consulting and development',

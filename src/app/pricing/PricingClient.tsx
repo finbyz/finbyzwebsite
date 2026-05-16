@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { Check, X, ArrowRight, HelpCircle } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { contactUrl } from '@/lib/contact'
 import PricingComparisonTable from "@/components/sections/pricing-comparison"
 
 const plans = [
@@ -65,7 +66,7 @@ export default function PricingClient() {
               <span className="text-4xl font-extrabold text-gray-900">${isYearly ? plan.yearlyPrice : plan.monthlyPrice}</span>
               <span className="text-gray-400 text-sm ml-1">{isYearly ? "/year" : "/month"}</span>
             </div>
-            <Link href="/contact" className={cn("text-center py-3 rounded-xl font-semibold text-sm transition-all", plan.popular ? "bg-orange-500 text-white hover:bg-orange-600" : "bg-gray-100 text-gray-800 hover:bg-gray-200")}>
+            <Link href={contactUrl({ notes: 'We are interested in your pricing plans', referer: '/pricing' })} className={cn("text-center py-3 rounded-xl font-semibold text-sm transition-all", plan.popular ? "bg-orange-500 text-white hover:bg-orange-600" : "bg-gray-100 text-gray-800 hover:bg-gray-200")}>
               {plan.cta} <ArrowRight className="inline w-4 h-4 ml-1" />
             </Link>
             <ul className="mt-6 space-y-3 flex-1">

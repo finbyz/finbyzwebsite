@@ -1,14 +1,9 @@
 import ResponsiveCardGrid from "@/components/sections/responsive-card-grid";
+import ScrollButton from "@/components/ui/ScrollButton";
 import { Building2, Users, Award, HeadphonesIcon, CheckCircle2, TrendingUp } from "lucide-react";
+import { contactUrl } from '@/lib/contact';
 
 export default function ERPSolutionsAhmedabadPage() {
-  const handleGetStarted = () => {
-    const form = document.querySelector('.inquiry-form');
-    if (form) {
-      form.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -22,14 +17,11 @@ export default function ERPSolutionsAhmedabadPage() {
               Certified ERPNext partner delivering enterprise ERP solutions for pharma, chemical, manufacturing, and trading businesses. Get custom ERP software tailored to your industry needs with 24/7 support and guaranteed ROI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={handleGetStarted}
-                className="bg-[#FF8C00] hover:bg-[#FF7700] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all"
-              >
+              <ScrollButton className="bg-[#FF8C00] hover:bg-[#FF7700] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all">
                 Get Free Consultation
-              </button>
+              </ScrollButton>
               <a
-                href="/contact"
+                href={contactUrl({ notes: 'We are interested in ERP solutions in Ahmedabad', referer: '/erp-solutions-ahmedabad' })}
                 className="bg-white hover:bg-gray-100 text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
               >
                 View Our Work

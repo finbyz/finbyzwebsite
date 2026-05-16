@@ -6,6 +6,7 @@ import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
 
 import Section from '@/components/sections/Section';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   return (
@@ -22,7 +23,7 @@ export default function Page() {
           }}
           primaryButton={{
             text: "Get Started",
-            action: "https://finbyz.tech/contact"
+            action: contactUrl({ notes: 'We are interested in ERPNext for Textile', referer: '/erpnext/textile' })
           }}
           secondaryButton={{
             text: "Learn More",

@@ -1,5 +1,6 @@
 import HeroSection from '@/components/sections/dynamic-hero';
 import BrochureClient from "./BrochureClient";
+import { contactUrl } from '@/lib/contact'
 
 const brochureItems = [
   {
@@ -113,7 +114,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: "Contact Us",
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in your brochure', referer: '/resources/brochure' })
         }}
         heroImage={{
           alt: "Brochure",

@@ -2,6 +2,7 @@ import DynamicHero from '@/components/sections/dynamic-hero';
 import TextSection from '@/components/sections/text';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Comment from '@/components/sections/comment';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   return (
@@ -16,7 +17,7 @@ export default function Page() {
           src:'/images/erp-for-construction-industry.png',
          
         }}
-        primaryButton={{ text: 'Get Started', action: 'https://finbyz.tech/contact' }}
+        primaryButton={{ text: 'Get Started', action: contactUrl({ notes: 'We are interested in ERPNext for Construction', referer: '/erpnext/construction' }) }}
         secondaryButton={{ text: 'Learn More', action: '#contruction-resources'}}
         accentColor="orange"
       />

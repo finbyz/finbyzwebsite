@@ -9,6 +9,7 @@ import ApproachFeatureGrid from '@/components/ai_components/ApproachFeatureGrid'
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import React from 'react';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   // Hero Section props
@@ -23,7 +24,7 @@ export default function Page() {
     },
     secondaryButton: {
       text: 'Request Consultation',
-      action: '/contact',
+      action: contactUrl({ notes: "We are interested in Software Development services", referer: "/services/software-development" }),
     },
     heroImage: {
       alt: 'Software Development',
@@ -163,7 +164,7 @@ export default function Page() {
     primaryButton: {
       text: 'Request a Consultation',
       icon: 'ArrowRight',
-      action: '/contact',
+      action: contactUrl({ notes: "We are interested in Software Development services", referer: "/services/software-development" }),
     },
     secondaryButton: {
       text: 'See Our Work',

@@ -3,6 +3,7 @@ import Section from '@/components/sections/Section';
 
 import { MessageCircle, TreeDeciduous, Siren, Radio, MapPin, Users, Activity } from 'lucide-react';
 import Link from 'next/link';
+import { contactUrl } from '@/lib/contact'
 
 export default function EMSSoftwarePage() {
   const handleGetStarted = () => {
@@ -33,11 +34,11 @@ export default function EMSSoftwarePage() {
         description="Advanced software solutions for emergency response coordination. Empowering organizations to manage crises effectively with real-time communication and resource mobilization."
         primaryButton={{
           text: 'Explore Features',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in EMS Software', referer: '/solutions/ems-software' })
         }}
         secondaryButton={{
           text: 'Contact Us',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in EMS Software', referer: '/solutions/ems-software' })
         }}
         heroImage={{
           alt: 'EMS Software - Emergency management and response coordination',

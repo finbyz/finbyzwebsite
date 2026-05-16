@@ -2,12 +2,13 @@ import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
 import DataAnalyticsFeatureDetails from '@/components/ai_components/DataAnalyticsFeatureDetails';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
     // Button actions
     const handleContact = () => {
         if (typeof window !== 'undefined') {
-            window.location.href = '/contact';
+            window.location.href = contactUrl({ notes: 'We are interested in Data Analytics services', referer: '/ai-automation/services/data-analytics' });
         }
     };
 
@@ -45,7 +46,7 @@ export default function Page() {
                 headline="Data Analytics"
                 highlightWords={["Data", "Analytics"]}
                 description="Unlock business intelligence with Finbyz Tech’s data analytics solutions. We deliver CRM analytics, real-time dashboards, and predictive insights to drive growth."
-                primaryButton={{ text: 'Request Demo', action: '/contact' }}
+                primaryButton={{ text: 'Request Demo', action: contactUrl({ notes: 'We are interested in Data Analytics services', referer: '/ai-automation/services/data-analytics' }) }}
                 secondaryButton={{
                     text: 'Learn More',
                     action: "#data"

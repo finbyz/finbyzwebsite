@@ -6,6 +6,7 @@ import ProcessWorkflow from '@/components/sections/process-workflow'
 import Benefits from '@/components/sections/benefits'
 import Points, { PointsData } from '@/components/sections/points'
 import CTA from '@/components/sections/cta'
+import { contactUrl } from '@/lib/contact'
 
 export default function Page() {
   const seoTitle = 'AI Powered Resume Ranker'
@@ -169,7 +170,7 @@ export default function Page() {
     title: 'Hire faster with unbiased AI resume ranking',
     description:
       'Plug into ERPNext, parse resumes automatically, and get explainable candidate scores for faster, fairer shortlisting.',
-    primaryButton: { text: 'Request a Demo', icon: 'Rocket', action: '/contact' },
+    primaryButton: { text: 'Request a Demo', icon: 'Rocket', action: contactUrl({ notes: 'We are interested in AI-powered Resume Ranker', referer: '/erpnext/ai/ai-powered-resume-ranker' }) },
     secondaryButton: { text: 'See How It Works', icon: 'Play', action: '/erpnext/ai/ai-powered-resume-ranker' },
     trustIndicator: { text: 'GDPR-ready • ERPNext integration', icon: 'ShieldCheck' }
   }
@@ -182,7 +183,7 @@ export default function Page() {
         highlightWords={["Resume Ranker"]}
         description={seoDescription}
         heroImage={{ src: "/AI_Powered_Resume_Ranker.gif", alt: seoTitle }}
-        primaryButton={{ text: 'Get a Demo', action: '/contact' }}
+        primaryButton={{ text: 'Get a Demo', action: contactUrl({ notes: 'We are interested in AI-powered Resume Ranker', referer: '/erpnext/ai/ai-powered-resume-ranker' }) }}
 
       />
 

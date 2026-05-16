@@ -7,6 +7,7 @@ import Benefits from "@/components/sections/benefits";
 import Link from "next/link";
 import List from "@/components/sections/list";
 import { FaUserPlus, FaSearch, FaHandshake, FaRocket } from "react-icons/fa";
+import { contactUrl } from '@/lib/contact';
 
 export default function StaffAugmentationContent() {
     return (
@@ -29,7 +30,7 @@ export default function StaffAugmentationContent() {
                     }}
                     secondaryButton={{
                         text: 'Hire Now',
-                        action: '/contact',
+                        action: contactUrl({ notes: 'We are interested in Staff Augmentation services', referer: '/staff-augmentation' }),
                     }}
                 />
             </div>

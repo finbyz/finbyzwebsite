@@ -6,6 +6,7 @@ import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import ProblemList from '@/components/ai_components/ProblemList';
 import SolutionList from '@/components/ai_components/SolutionList';
 import ErpModulesTabs from '@/components/ai_components/ErpModuleTabs';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   return (
@@ -16,7 +17,7 @@ export default function Page() {
         description="ERP Software for DyeChem industry solves problems of batch-wise Inventory management, Samples management, and Manufacturing of dyes and Pigment with yield, concentration and purity."
         primaryButton={{
           text: 'Get a Demo',
-          action: '/contact',
+          action: contactUrl({ notes: 'We are interested in ERP for Dyechem Industry', referer: '/erpnext/chemical/erp-software-dyechem-industry' }),
         }}
         secondaryButton={{
           text: 'Learn More',

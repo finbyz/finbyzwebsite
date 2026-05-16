@@ -6,6 +6,7 @@ import PrivacySectionHeading from '@/components/ai_components/PrivacySectionHead
 import PrivacySubsectionHeading from '@/components/ai_components/PrivacySubsectionHeading';
 import { Mail, MapPin } from 'lucide-react';
 import Image from 'next/image';
+import { contactUrl } from '@/lib/contact'
 
 export default function Page() {
   return (
@@ -16,7 +17,7 @@ export default function Page() {
         description="Learn how Productify collects, uses, and protects your data. We are committed to transparency and security for all our users."
         primaryButton={{
           text: 'Contact Support',
-          action: './contact',
+          action: contactUrl({ notes: 'We have a privacy policy inquiry', referer: '/solutions/productify/privacy-policy' }),
         }}
         secondaryButton={{
           text: 'Back to Productify',

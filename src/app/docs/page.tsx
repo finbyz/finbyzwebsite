@@ -2,6 +2,7 @@ import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
 import Link from 'next/link';
+import { contactUrl } from '@/lib/contact';
 import { BookOpen, FileText, Code, Users, Search, ArrowRight, ExternalLink, Workflow, Brain, ShoppingCart, CreditCard, MessageSquare, Truck } from 'lucide-react';
 
 async function getFeaturedWikiPages() {
@@ -264,7 +265,7 @@ export default async function DocsPage() {
                             </span>
                         </a>
 
-                        <Link href="/contact" className="bg-white p-6 rounded-xl border border-gray-100 hover:shadow-lg transition-all text-center group">
+                        <Link href={contactUrl({ notes: 'I have a question about your documentation', referer: '/docs' })} className="bg-white p-6 rounded-xl border border-gray-100 hover:shadow-lg transition-all text-center group">
                             <div className="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-600 group-hover:text-white transition-colors">
                                 <Search className="w-6 h-6" />
                             </div>

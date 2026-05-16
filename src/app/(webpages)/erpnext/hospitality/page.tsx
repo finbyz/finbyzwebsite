@@ -5,6 +5,7 @@ import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
 
 import { BookUser, Layers, BedDouble, FileText, LineChart, ShieldCheck, Users, Workflow, UserCheck, LayoutList, Briefcase, ListChecks, PackageSearch, BarChart, UserCircle, Headset, Coins, Trophy, Store, ThumbsUp, MessageCircle, Users2 } from 'lucide-react';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   return (
@@ -21,7 +22,7 @@ export default function Page() {
           }}
           primaryButton={{
             text: 'Get Started',
-            action: 'https://finbyz.tech/contact'
+            action: contactUrl({ notes: 'We are interested in ERPNext for Hospitality', referer: '/erpnext/hospitality' })
           }}
           secondaryButton={{
             text: 'Learn More',

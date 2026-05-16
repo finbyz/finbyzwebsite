@@ -1,5 +1,6 @@
 import DynamicHero from '@/components/sections/dynamic-hero';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
     return (
@@ -17,7 +18,7 @@ export default function Page() {
                     text: 'Discover OpenClaw',
                     action: '#what-is-openclaw'
                 }}
-                secondaryButton={{ text: 'Contact Us', action: '/contact' }}
+                secondaryButton={{ text: 'Contact Us', action: contactUrl({ notes: 'We are interested in OpenClaw Personal Assistant', referer: '/ai-automation/services/openclaw-personal-assistant' }) }}
             />
 
             {/* WHAT IS OPENCLAW */}

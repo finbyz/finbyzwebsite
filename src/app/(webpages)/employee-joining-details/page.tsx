@@ -6,6 +6,7 @@ import Section from '@/components/sections/Section';
 import EmployeeJoiningForm from '@/components/ai_components/EmployeeJoiningForm';
 import { UserPlus } from 'lucide-react';
 import { Suspense } from "react";
+import { contactUrl } from '@/lib/contact'
 const excludedFieldnames = [
   "employee_name", "status", "company_email", "designation", "department", "salary_mode", "job_applicant", "job_offer", "naming_series", "url", "employment_type", "salary_slip", "is_intern"
 ];
@@ -37,7 +38,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: "Contact Us",
-          action: '/contact'
+          action: contactUrl({ notes: 'We have a question about employee joining', referer: '/employee-joining-details' })
         }}
         heroImage={{
           alt: "Employee Joining details",

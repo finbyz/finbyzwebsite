@@ -6,11 +6,12 @@ import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import AgricultureFeatureGrid from '@/components/ai_components/AgricultureFeatureGrid';
 import Image from 'next/image';
 import { LucideQuote } from 'lucide-react';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   const handleContact = () => {
     if (typeof window !== 'undefined') {
-      window.location.href = '/contact';
+      window.location.href = contactUrl({ notes: 'We are interested in ERPNext for Commodity Trading', referer: '/erpnext/agro/erp-for-commodity-trading' });
     }
   };
   const handleLearnMore = () => {
@@ -25,7 +26,7 @@ export default function Page() {
         headline="ERPNext for Commodity"
         highlightWords={["for", "Commodity"]}
         description="Discover how Finbyz Tech's ERPNext solutions revolutionize agricultural operations. Enhance efficiency, ensure compliance, and drive growth in your agro commodity business."
-        primaryButton={{ text: 'Get a Demo', action: '/contact' }}
+        primaryButton={{ text: 'Get a Demo', action: contactUrl({ notes: 'We are interested in ERPNext for Commodity Trading', referer: '/erpnext/agro/erp-for-commodity-trading' }) }}
         secondaryButton={{
           text: 'Learn More', action: "#erp-for-agro"
         }}

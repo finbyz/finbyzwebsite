@@ -3,6 +3,7 @@ import Section from '@/components/sections/Section';
 
 import { Sparkles, Zap, FileText, Globe, BarChart3, Factory, Rocket, ListChecks } from 'lucide-react';
 import Link from 'next/link';
+import { contactUrl } from '@/lib/contact'
 
 export default function ERPNextInsightsPage() {
   const handleGetStarted = () => {
@@ -27,11 +28,11 @@ export default function ERPNextInsightsPage() {
         description="Stay updated with the latest trends, guides, and performance tips for ERPNext. Expert knowledge to help you get the most out of your system."
         primaryButton={{
           text: 'Read Latest',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in ERPNext Insights', referer: '/erpnext/insights' })
         }}
         secondaryButton={{
           text: 'Subscribe',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in ERPNext Insights', referer: '/erpnext/insights' })
         }}
         heroImage={{
           alt: 'ERPNext Insights - News and Tutorials',

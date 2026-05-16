@@ -4,6 +4,7 @@ import TextSection from '@/components/sections/text';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
 import Comment from '@/components/sections/comment';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page(): ReactElement {
   return (
@@ -20,7 +21,7 @@ export default function Page(): ReactElement {
           }}
           primaryButton={{
             text: 'Get Started',
-            action: 'https://finbyz.tech/contact',
+            action: contactUrl({ notes: "We are interested in System Maintenance AMC", referer: "/erpnext/services/system-maintenance-amc" }),
           }}
           secondaryButton={{
             text: 'Learn More',

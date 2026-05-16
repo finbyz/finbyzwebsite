@@ -6,6 +6,7 @@ import Benefits from '@/components/sections/benefits';
 import Comment from '@/components/sections/comment';
 
 import { ShieldCheck, Users, Hospital, HeartPulse, UserCheck, CheckCircle, CalendarDays, FileText, FileCheck2, LineChart, Smartphone, Zap } from 'lucide-react';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   return (
@@ -15,7 +16,7 @@ export default function Page() {
         headline="ERP Solutions for Healthcare Providers Streamline Operations"
         highlightWords={['Healthcare Providers', 'Streamline Operations']}
         description="Transform healthcare operations with robust ERP solutions. Enhance patient care, streamline billing, manage inventory."
-        primaryButton={{ text: 'Get Started',action: 'https://finbyz.tech/contact' }}
+        primaryButton={{ text: 'Get Started',action: contactUrl({ notes: 'We are interested in ERPNext for Healthcare', referer: '/erpnext/healthcare' }) }}
         secondaryButton={{ text: 'Learn More' , action: '#healthcare'}}
         heroImage={{
           alt: 'ERP Solutions for Healthcare Providers Streamline Operations',

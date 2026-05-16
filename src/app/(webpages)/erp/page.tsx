@@ -8,6 +8,7 @@ import Benefits from "@/components/sections/benefits";
 
 import ModulesSection from "@/components/sections/modules-erp";
 import ErpModulesTabs from "@/components/ai_components/ErpModuleTabs";
+import { contactUrl } from '@/lib/contact';
 
 export default function ERPPage() {
     return (
@@ -30,7 +31,7 @@ export default function ERPPage() {
                     }}
                     secondaryButton={{
                         text: 'Contact Us',
-                        action: '/contact',
+                        action: contactUrl({ notes: 'We are interested in ERP solutions', referer: '/erp' }),
                     }}
                 />
             </Section>

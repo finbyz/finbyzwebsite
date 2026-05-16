@@ -7,6 +7,7 @@ import Section from "@/components/sections/Section";
 import Link from "next/link";
 import { FileText, BookOpen, Video, ArrowRight } from "lucide-react";
 import ImageWithFallback from '@/components/ui/ImageWithFallback';
+import { contactUrl } from '@/lib/contact'
 
 export default function Page() {
     return (
@@ -21,7 +22,7 @@ export default function Page() {
                 }}
                 secondaryButton={{
                     text: "Contact Us",
-                    action: '/contact'
+                    action: contactUrl({ notes: 'We are interested in your resources', referer: '/resources' })
                 }}
                 heroImage={{
                     alt: "Resources",

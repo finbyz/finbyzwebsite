@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const BASE_URL = process.env.FRAPPE_BASE_URL || "https://erp.finbyz.tech";
+const BASE_URL = process.env.FRAPPE_URL || "https://erp.finbyz.tech";
 const API_KEY = process.env.FRAPPE_API_KEY || "";
 const API_SECRET = process.env.FRAPPE_API_SECRET || "";
 

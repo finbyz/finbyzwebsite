@@ -3,6 +3,7 @@ import Section from "@/components/sections/Section";
 import DynamicHero from "@/components/sections/dynamic-hero";
 import ResponsiveCardGrid from "@/components/sections/responsive-card-grid";
 import Benefits from "@/components/sections/benefits";
+import { contactUrl } from '@/lib/contact';
 
 
 export default function CustomAIDevelopmentContent() {
@@ -25,7 +26,7 @@ export default function CustomAIDevelopmentContent() {
                     }}
                     secondaryButton={{
                         text: 'Book Consultation',
-                        action: '/contact',
+                        action: contactUrl({ notes: 'We are interested in Custom AI Development', referer: '/ai-automation/services/custom-ai-development' }),
                     }}
                 />
             </Section>

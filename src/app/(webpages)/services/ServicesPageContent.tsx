@@ -3,6 +3,7 @@ import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
 import Benefits from '@/components/sections/benefits';
+import { contactUrl } from '@/lib/contact';
 
 export default function ServicesPageContent() {
 
@@ -21,7 +22,7 @@ export default function ServicesPageContent() {
         }}
         secondaryButton={{
           text: 'Contact Support',
-          action: '/contact',
+          action: contactUrl({ notes: "We are interested in your Services", referer: "/services" }),
         }}
         heroImage={{
           alt: ' Services ',

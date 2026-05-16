@@ -3,6 +3,7 @@ import Section from '@/components/sections/Section';
 
 import { Workflow, GitBranch, Repeat, Database, MessageSquare, Share2, Mail, Users, FileCheck } from 'lucide-react';
 import Link from 'next/link';
+import { contactUrl } from '@/lib/contact'
 
 export default function N8nWorkflowsPage() {
     const handleGetStarted = () => {
@@ -25,11 +26,11 @@ export default function N8nWorkflowsPage() {
                 description="Jumpstart your automation journey with our library of pre-built n8n workflows. Save time and reduce effort by implementing proven automation patterns for common business tasks."
                 primaryButton={{
                     text: 'Browse Workflows',
-                    action: '/contact'
+                    action: contactUrl({ notes: 'We are interested in n8n Workflows', referer: '/ai-automation/n8n/workflows' })
                 }}
                 secondaryButton={{
                     text: 'Request Workflow',
-                    action: '/contact'
+                    action: contactUrl({ notes: 'We are interested in n8n Workflows', referer: '/ai-automation/n8n/workflows' })
                 }}
                 heroImage={{
                     alt: 'n8n Workflows - Library of automation templates',

@@ -8,6 +8,7 @@ import ClientCountryGrid from '@/components/ai_components/ClientCountryGrid';
 import Image from 'next/image';
 import { CheckCircle } from 'lucide-react';
 import Link from 'next/link';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
     return (
@@ -18,7 +19,7 @@ export default function Page() {
                 description="Finbyz Tech, a certified ERPNext and Frappe Partner in Ahmedabad, offers expert ERP implementation, customization, and support services tailored to your business needs."
                 primaryButton={{
                     text: 'Contact Us',
-                    action: '/contact'
+                    action: contactUrl({ notes: 'We are interested in ERPNext Certified Partnership', referer: '/erpnext/certified-partner' })
                 }}
                 secondaryButton={{
                     text: 'View Certificate',

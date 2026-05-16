@@ -4,6 +4,7 @@ import Section from '@/components/sections/Section';
 import WhyChooseFinbyzGrid from '@/components/ai_components/WhyChooseFinbyzGrid';
 import ERPNextServicesGrid from '@/components/ai_components/ERPNextServicesGrid';
 import ERPNextDifferenceGrid from '@/components/ai_components/ERPNextDifferenceGrid';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
     return (
@@ -18,7 +19,7 @@ export default function Page() {
                 }}
                 secondaryButton={{
                     text: 'Contact Us',
-                    action: '/contact',
+                    action: contactUrl({ notes: "We are interested in ERPNext Implementation Service", referer: "/erpnext/services/erpnext-implementation-service" }),
                 }}
                 heroImage={{
                     alt: 'ERPNext Implementation Service',

@@ -6,6 +6,7 @@ import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
 import ProcessWorkflow from '@/components/sections/process-workflow';
 import FAQ from '@/components/ai_components/FAQ';
+import { contactUrl } from '@/lib/contact';
 
 export default function ERPServicesPage() {
     return (
@@ -28,7 +29,7 @@ export default function ERPServicesPage() {
                     }}
                     secondaryButton={{
                         text: 'Contact Us',
-                        action: '/contact'
+                        action: contactUrl({ notes: 'We are interested in ERP services', referer: '/erp/services' })
                     }}
                 />
             </Section>

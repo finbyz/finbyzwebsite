@@ -5,6 +5,7 @@ import TextSection from '@/components/sections/text';
 
 import { Lightbulb, Users, ShieldCheck, BookOpenCheck, Zap } from 'lucide-react';
 import React from 'react';
+import { contactUrl } from '@/lib/contact'
 
 const overviewText = `Finbyz Tech's core values form the cornerstone of how we help clients navigate digital transformation. Our unwavering commitment to excellence, innovation, and integrity has empowered organizations to embrace change, adopt powerful technology, and unlock new opportunities for growth. By cultivating strong partnerships grounded in transparency and respect, fostering deep domain expertise, and engineering future-ready solutions, we ensure every client benefits from a truly consultative approach. Explore our foundational principles and see how they fuel operational efficiency, client success, and transformative results across industries.`;
 
@@ -271,12 +272,12 @@ const ctaData = {
     'Connect with our experts today and discover how Finbyz Tech\'s core values deliver real business results. Experience partnership based on innovation, integrity, and client success.',
   primaryButton: {
     text: 'Get Started',
-    action: 'https://finbyz.tech/contact',
+    action: contactUrl({ notes: 'We are interested in your company core values', referer: '/about-us/core-values' }),
     icon: 'Rocket'
   },
   secondaryButton: {
     text: 'Contact Us',
-    action: 'https://finbyz.tech/contact',
+    action: contactUrl({ notes: 'We are interested in your company core values', referer: '/about-us/core-values' }),
     icon: 'Users'
   },
   trustIndicator: {
@@ -296,7 +297,7 @@ export default function Page() {
           description="Discover the foundational values that define our approach to IT consulting, ERPNext implementation, and AI automation. Experience innovation, integrity, and client success."
           primaryButton={{
             text: "Get Started",
-            action: 'https://finbyz.tech/contact'
+            action: contactUrl({ notes: 'We are interested in your company core values', referer: '/about-us/core-values' })
           }}
           secondaryButton={{
             text: "Learn More",

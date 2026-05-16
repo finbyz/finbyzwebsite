@@ -5,13 +5,9 @@ import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import Image from 'next/image';
 import { Brain, Search, Users, FileText, Zap, ShieldCheck, TrendingUp, Cpu } from 'lucide-react';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
-    const handleContact = () => {
-        if (typeof window !== 'undefined') {
-            window.location.href = '/contact';
-        }
-    };
 
     const aiToolsData = {
         title: 'Precision AI Toolset',
@@ -68,7 +64,7 @@ export default function Page() {
                 description="Supercharge your enterprise operations with cutting-edge AI integrations. From autonomous lead processing to predictive recruitment, we bring the power of intelligence to your ERP."
                 primaryButton={{ text: 'Explore Solutions', action: '#tools' }}
                 secondaryButton={{
-                    text: 'Get a Demo', action: '/contact'
+                    text: 'Get a Demo', action: contactUrl({ notes: 'We are interested in AI solutions for ERPNext', referer: '/erpnext/ai' })
                 }}
                 heroImage={{
                     alt: 'ERPNext AI Automation',

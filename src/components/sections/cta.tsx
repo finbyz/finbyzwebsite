@@ -44,7 +44,7 @@ export default function CTA({ data = {} }: CTAProps) {
     trustIndicator = { text: "Trusted by 100+ businesses", icon: "CalendarCheck" }
   } = data;
 
-  const getIconComponent = (iconName: string) => {
+  const getIconComponent = (iconName: string): React.ComponentType<{ className?: string }> => {
     switch (iconName) {
       case "CalendarCheck":
         return CalendarCheck;
@@ -60,8 +60,8 @@ export default function CTA({ data = {} }: CTAProps) {
   };
 
   const SubheadingIcon = getIconComponent(subheading.icon || "CalendarCheck");
-  const PrimaryIcon = primaryButton ? getIconComponent(primaryButton.icon || "CalendarCheck") : null;
-  const SecondaryIcon = secondaryButton ? getIconComponent(secondaryButton.icon || "FileText") : null;
+  const PrimaryIcon = getIconComponent(primaryButton?.icon || "CalendarCheck");
+  const SecondaryIcon = getIconComponent(secondaryButton?.icon || "FileText");
   const TrustIcon = getIconComponent(trustIndicator.icon || "CalendarCheck");
 
   return (

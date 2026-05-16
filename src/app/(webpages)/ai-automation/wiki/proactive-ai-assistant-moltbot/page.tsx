@@ -1,5 +1,6 @@
 import DynamicHero from '@/components/sections/dynamic-hero';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
+import { contactUrl } from '@/lib/contact';
 
 export default function ProactiveAIAssistantPage() {
     return (
@@ -17,7 +18,7 @@ export default function ProactiveAIAssistantPage() {
                     text: 'Explore Moltbot',
                     action: '#what-is-proactive'
                 }}
-                secondaryButton={{ text: 'Contact Us', action: '/contact' }}
+                secondaryButton={{ text: 'Contact Us', action: contactUrl({ notes: 'We are interested in Proactive AI Assistant Moltbot', referer: '/ai-automation/wiki/proactive-ai-assistant-moltbot' }) }}
             />
 
             {/* WHAT IS A PROACTIVE AI PERSONAL ASSISTANT */}

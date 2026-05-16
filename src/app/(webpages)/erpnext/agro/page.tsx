@@ -6,11 +6,12 @@ import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import AgricultureFeatureGrid from '@/components/ai_components/AgricultureFeatureGrid';
 import Image from 'next/image';
 import { Leaf, BarChart3, Factory, ShieldCheck, TrendingUp, Settings } from 'lucide-react';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
     const handleContact = () => {
         if (typeof window !== 'undefined') {
-            window.location.href = '/contact';
+            window.location.href = contactUrl({ notes: 'We are interested in ERPNext for Agriculture', referer: '/erpnext/agro' });
         }
     };
 
@@ -21,7 +22,7 @@ export default function Page() {
                 headline="ERPNext for Agriculture Industry"
                 highlightWords={["for", "Agriculture"]}
                 description="Revolutionize your agribusiness with Finbyz Tech's specialized ERPNext solutions. Enhance operational efficiency, ensure compliance, and drive sustainable growth."
-                primaryButton={{ text: 'Get a Demo', action: '/contact' }}
+                primaryButton={{ text: 'Get a Demo', action: contactUrl({ notes: 'We are interested in ERPNext for Agriculture', referer: '/erpnext/agro' }) }}
                 secondaryButton={{
                     text: 'Learn More', action: "#content"
                 }}

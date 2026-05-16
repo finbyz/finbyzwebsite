@@ -6,6 +6,7 @@ import Benefits from '@/components/sections/benefits'
 import TextSection from '@/components/sections/text'
 import CTA from '@/components/sections/cta'
 import { Bot, Paperclip, Boxes, FileText, CheckCircle2, Zap, ShieldCheck, Users, Briefcase, BarChart3, Layers, Search, Mail, Brain, ListChecks, History, GitMerge } from 'lucide-react'
+import { contactUrl } from '@/lib/contact'
 
 
 export default function Page() {
@@ -21,7 +22,7 @@ export default function Page() {
         highlightWords={highlightWords}
         description={seoDescription}
         heroImage={{ alt: seoTitle, src: "/images/Quote Assistant.gif" }}
-        primaryButton={{ text: 'Get a Demo', action: '/contact' }}
+        primaryButton={{ text: 'Get a Demo', action: contactUrl({ notes: 'We are interested in AI-powered Quote Assistant', referer: '/erpnext/ai/ai-powered-quote-assistant' }) }}
 
         features={[
           {

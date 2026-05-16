@@ -167,6 +167,7 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
         mobile_no: fullMobileNumber,
         title: typeof window !== "undefined" ? window.location.href : "Website Inquiry",
         email: formData.email,
+        message: "",
       };
 
       // Use the proxy endpoint to avoid CORS
@@ -283,7 +284,7 @@ export default function BusinessSlider({ data = {} }: { data?: Record<string, an
             </button>
             <div className="form-content">
               <h3 className="form-title">Free Demo</h3>
-              <form onSubmit={handleSubmit} className="form-container">
+              <form onSubmit={handleSubmit} onKeyDown={(e) => { if (e.key === 'Enter') e.preventDefault(); }} className="form-container">
                 <div>
                   <input
                     type="text"

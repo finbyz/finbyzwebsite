@@ -3,6 +3,7 @@ import TextSection from '@/components/sections/text';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
 import Differentiators from '@/components/sections/differentiators';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   return (
@@ -17,7 +18,7 @@ export default function Page() {
           // src: "/web-api/fb/n/files/placeholder.jpg",
           src:"/images/fintech-solutions.png",
         }}
-        primaryButton={{ text: "Get Started" , action: 'https://finbyz.tech/contact'}}
+        primaryButton={{ text: "Get Started" , action: contactUrl({ notes: 'We are interested in ERPNext for Fintech', referer: '/erpnext/fintech' })}}
         secondaryButton={{ text: 'Learn More' , action: '#fintech',}}
         accentColor="orange"
       />

@@ -2,6 +2,7 @@ import DynamicHero from '@/components/sections/dynamic-hero';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import Benefits from '@/components/sections/benefits';
 import { List } from '@/components/sections/list';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   return (
@@ -18,7 +19,7 @@ export default function Page() {
         }}
          primaryButton={{
             text: "Get Started",
-            action: 'https://finbyz.tech/contact'
+            action: contactUrl({ notes: "We are interested in Technology Consulting services", referer: "/services/technology-consulting" })
           }}
           secondaryButton={{
             text: "Learn More",

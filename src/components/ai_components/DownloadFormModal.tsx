@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import { X, Download, User, Mail, Phone, Building2, CheckCircle } from "lucide-react";
 import { PhoneField } from "../ui/PhoneField";

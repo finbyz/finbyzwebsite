@@ -2,6 +2,7 @@ import DynamicHero from '@/components/sections/dynamic-hero';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 
 import { CheckCircle, XCircle, AlertTriangle, Shield, DollarSign, Zap, Users, Code2, Settings } from 'lucide-react';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
     return (
@@ -16,7 +17,7 @@ export default function Page() {
                     alt: 'Moltbot vs Claude Code Comparison',
                     src: '/images/moltbot-vs-claude-code-hero.png',
                 }}
-                primaryButton={{ text: 'Get Expert Consultation', action: 'https://finbyz.tech/contact' }}
+                primaryButton={{ text: 'Get Expert Consultation', action: contactUrl({ notes: 'We are interested in Moltbot vs Claude Code comparison', referer: '/ai-automation/wiki/moltbot-vs-claude-code' }) }}
                 secondaryButton={{
                     text: 'Explore AI Solutions', action: '#comparison-overview'
                 }}

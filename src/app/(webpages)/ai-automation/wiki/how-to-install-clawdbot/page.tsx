@@ -2,6 +2,7 @@ import DynamicHero from '@/components/sections/dynamic-hero';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 
 import { Server, Zap, MessageSquare, CheckCircle, AlertTriangle, DollarSign, Cpu, Clock, Shield } from 'lucide-react';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   return (
@@ -20,7 +21,7 @@ export default function Page() {
           text: 'Start Installation',
           action: '#installation-steps'
         }}
-        secondaryButton={{ text: 'Get Expert Help', action: 'https://finbyz.tech/contact' }}
+        secondaryButton={{ text: 'Get Expert Help', action: contactUrl({ notes: 'We are interested in installing Clawdbot', referer: '/ai-automation/wiki/how-to-install-clawdbot' }) }}
       />
 
       {/* WHAT IS CLAWDBOT */}

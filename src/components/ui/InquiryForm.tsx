@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Input } from './input';
 import { Button } from './button';
+import { Textarea } from './textarea';
 import { cn } from '@/lib/utils';
 import { Mail, Phone, Building, User } from 'lucide-react';
 import { useRouter } from "next/navigation";
@@ -23,7 +24,8 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
     organization: '',
     email: '',
     mobile: '',
-    countryCode: '+91'
+    countryCode: '+91',
+    notes: '',
   });
 
   // Update country code when detected
@@ -45,7 +47,8 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
       name: "Name",
       organization: "Organization Name",
       email: "Email",
-      mobile: "Mobile No"
+      mobile: "Mobile No",
+      message: "Message"
     },
     submitText: "SUBMIT",
     backgroundImage: undefined
@@ -66,14 +69,12 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-
     e.preventDefault();
-    if (isSubmitting) return; // stop double click
-    // router.push("/contact/thank-you-for-inquiry");
+    if (isSubmitting) return;
+
     setIsSubmitting(true);
 
     try {
-      // Basic client-side validation
       if (!formData.name.trim()) {
         alert("Please enter your name.");
         setIsSubmitting(false);
@@ -95,17 +96,37 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
         return;
       }
 
-      // Use the same API as business slider
+      const fullMobileNumber = `${formData.countryCode}${formData.mobile}`;
 
+      const payload = {
+        lead_name: formData.name,
+        company_name: formData.organization,
+        mobile_no: fullMobileNumber,
+        title: typeof window !== "undefined" ? window.location.href : "Website Inquiry",
+        email: formData.email,
+        notes: formData.notes,
+        message: formData.notes,
+      };
 
-      //  Redirect after successful submit
-      router.push("/contact/thank-you-for-inquiry");
+      const res = await fetch('/web-api/fb/method/finbyzweb.api.set_form_data', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      if (res.ok) {
+        router.push("/contact/thank-you-for-inquiry");
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+
       setFormData({
         name: '',
         organization: '',
         email: '',
         mobile: '',
-        countryCode: '+91'
+        countryCode: geoLocation.dialCode || '+91',
+        notes: '',
       });
       setIsSubmitting(false);
     } catch (error) {
@@ -185,7 +206,7 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
                   <p className="inquiry-form__form-subtitle">Fill out the form below and we&apos;ll get back to you within 24 hours</p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="inquiry-form__form">
+                <form onSubmit={handleSubmit} onKeyDown={(e) => { if (e.key === 'Enter') e.preventDefault(); }} className="inquiry-form__form">
                   {/* Hidden Component Type Field */}
                   <input type="hidden" name="component_type" value={component_type} />
 
@@ -256,6 +277,22 @@ export function InquiryForm({ data, className }: InquiryFormProps) {
                       required
                       placeholder="Enter your phone number"
                     />
+                  </div>
+
+                  {/* Message Field */}
+                  <div className="inquiry-form__field">
+                    <label className="inquiry-form__label">
+                      {formConfig.fields?.message} <span className="text-gray-400 text-xs font-normal">(optional)</span>
+                    </label>
+                    <div className="inquiry-form__input-wrapper">
+                      <Textarea
+                        placeholder="Tell us about your requirements..."
+                        value={formData.notes}
+                        onChange={(e) => handleInputChange('notes', e.target.value)}
+                        className="inquiry-form__input"
+                        rows={3}
+                      />
+                    </div>
                   </div>
 
                   {/* Submit Button */}

@@ -6,6 +6,7 @@ import ResponsiveCardGrid from "@/components/sections/responsive-card-grid";
 import Benefits from "@/components/sections/benefits";
 import CTA from "@/components/sections/cta";
 import BusinessSlider from "@/components/sections/business-slider";
+import { contactUrl } from '@/lib/contact'
 
 export default function SmoorCaseStudyPage() {
   return (
@@ -16,7 +17,7 @@ export default function SmoorCaseStudyPage() {
         description="From 15 Minutes to Under 30 Seconds: Transforming ERPNext Performance at SMOOR Chocolates"
         backgroundColor="bg-gradient-to-br from-slate-900 via-[#1A5276] to-slate-900"
         heroImage={{
-          src: "/images/case-study-smoor-chocolates.svg",
+          src: "/images/smoor-chocolate.png",
           alt: "ERPNext Performance Optimization Case Study - SMOOR Chocolates",
         }}
         primaryButton={{
@@ -25,7 +26,7 @@ export default function SmoorCaseStudyPage() {
         }}
         secondaryButton={{
           text: "Talk to an Expert",
-          action: "/contact",
+          action: contactUrl({ notes: 'We are interested in ERPNext performance optimization', referer: '/case-studies/erpnext-performance-optimization-case-study-smoor-chocolates' }),
         }}
         features={[
           {
@@ -274,8 +275,8 @@ export default function SmoorCaseStudyPage() {
           title: "Ready to Scale with Smart Tech? Let's Talk.",
           description: "Transform your business processes with AI-powered automation and expert implementation.",
           subheading: { text: "Talk to our Experts", icon: "CalendarCheck" },
-          primaryButton: { text: "Book Demo", icon: "CalendarCheck", action: "/contact" },
-          secondaryButton: { text: "Get Proposal", icon: "FileText", action: "/contact" },
+          primaryButton: { text: "Book Demo", icon: "CalendarCheck", action: contactUrl({ notes: 'We are interested in ERPNext performance optimization', referer: '/case-studies/erpnext-performance-optimization-case-study-smoor-chocolates' }) },
+          secondaryButton: { text: "Get Proposal", icon: "FileText", action: contactUrl({ notes: 'We are interested in ERPNext performance optimization', referer: '/case-studies/erpnext-performance-optimization-case-study-smoor-chocolates' }) },
           trustIndicator: { text: "Trusted by 100+ businesses", icon: "CalendarCheck" },
         }}
       />

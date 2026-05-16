@@ -3,6 +3,7 @@ import Section from '@/components/sections/Section';
 
 import { Workflow, Zap, Network, Shield, Code, Server } from 'lucide-react';
 import Link from 'next/link';
+import { contactUrl } from '@/lib/contact'
 
 export default function N8nPage() {
   const handleGetStarted = () => {
@@ -23,11 +24,11 @@ export default function N8nPage() {
         description="Streamline your operations with n8n, the extendable workflow automation tool. Connect your apps, automate processes, and save time with powerful, custom workflows."
         primaryButton={{
           text: 'Explore n8n',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in n8n for AI Automation', referer: '/ai-automation/n8n' })
         }}
         secondaryButton={{
           text: 'Contact Experts',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in n8n for AI Automation', referer: '/ai-automation/n8n' })
         }}
         heroImage={{
           alt: 'n8n Automation - Visual workflow automation platform',

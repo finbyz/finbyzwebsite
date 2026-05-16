@@ -3,6 +3,7 @@ import Section from '@/components/sections/Section';
 
 import { Users, UserPlus, FileCheck, DollarSign, Lock, TrendingUp, BarChart3, Calendar, ClipboardCheck, Repeat } from 'lucide-react';
 import Link from 'next/link';
+import { contactUrl } from '@/lib/contact'
 
 export default function ERPNextModulesPage() {
   const handleGetStarted = () => {
@@ -21,11 +22,11 @@ export default function ERPNextModulesPage() {
         description="Explore the comprehensive suite of ERPNext modules designed to streamline every aspect of your business operations."
         primaryButton={{
           text: 'Explore Modules',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in ERPNext Modules', referer: '/erpnext/modules' })
         }}
         secondaryButton={{
           text: 'Contact Sales',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in ERPNext Modules', referer: '/erpnext/modules' })
         }}
         heroImage={{
           alt: 'ERPNext Modules - Integrated business solutions',

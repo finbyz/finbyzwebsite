@@ -6,6 +6,7 @@ import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
 import { CheckCircle, Headphones, Shield, Clock, Users, Zap, Award} from 'lucide-react';
 import { Phone, Mail, MessageCircle, Monitor } from "lucide-react";
 import Link from 'next/link';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   return (
@@ -16,7 +17,7 @@ export default function Page() {
         description="Round-the-clock expert assistance for your ERPNext system. Get technical support, troubleshooting, and guidance from certified ERPNext specialists to keep your business running smoothly."
         primaryButton={{
           text: 'Get Support Now',
-          action: '/contact#contact-form-section'
+          action: contactUrl({ notes: "We are interested in ERPNext Support plans", referer: "/erpnext/services/support" })
         }}
         secondaryButton={{
           text: 'View Support Plans',
@@ -202,7 +203,7 @@ export default function Page() {
           ))}
         </ul>
         <Link
-  href="/contact?plan=basic#contact-form-section"
+          href={contactUrl({ plan: 'basic', notes: "We are interested in ERPNext Support plans", referer: "/erpnext/services/support" })}
   className="block mt-auto w-full py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition-all text-center"
 >
   Get Started
@@ -241,7 +242,7 @@ export default function Page() {
           ))}
         </ul>
         <Link
-  href="/contact?plan=professional#contact-form-section"
+          href={contactUrl({ plan: 'professional', notes: "We are interested in ERPNext Support plans", referer: "/erpnext/services/support" })}
   className="block mt-auto w-full py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition-all text-center"
 >
   Get Started
@@ -278,7 +279,7 @@ export default function Page() {
           ))}
         </ul>
         <Link
-  href="/contact?plan=enterprise#contact-form-section"
+          href={contactUrl({ plan: 'enterprise', notes: "We are interested in ERPNext Support plans", referer: "/erpnext/services/support" })}
   className="block mt-auto w-full py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition-all text-center"
 >
   Get Started

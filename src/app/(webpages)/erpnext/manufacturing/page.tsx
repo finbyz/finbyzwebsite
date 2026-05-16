@@ -10,6 +10,7 @@ import ManufacturingBenefitsGrid from '@/components/ai_components/ManufacturingB
 import { CheckCircle } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   return (
@@ -22,7 +23,7 @@ export default function Page() {
           text: 'Get Started',
           action: '#manufacturing'
         }}
-        secondaryButton={{ text: 'Request Demo', action: '/contact' }}
+        secondaryButton={{ text: 'Request Demo', action: contactUrl({ notes: 'We are interested in ERPNext for Manufacturing', referer: '/erpnext/manufacturing' }) }}
         heroImage={{
           alt: 'ERPNext for Manufacturing',
           src: '/images/Manufacturingc334bc.svg',

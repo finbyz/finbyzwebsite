@@ -2,6 +2,7 @@ import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 
 import ModuleSection from '@/components/ai_components/ModuleSection';
+import { contactUrl } from '@/lib/contact';
 
 const modules = [
   {
@@ -163,7 +164,7 @@ export default function Page() {
         description="From Customer Relationship Management (CRM) to Supply Chain Management (SCM), from Accounts to HR we cover it all. Our ERP Software is highly developed which helps any business to get a control on management of almost all the major functions of the business."
         primaryButton={{
           text: 'Get a Demo',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in ERPNext Modules', referer: '/erpnext/modules/all-modules-of-erpnext' })
         }}
         // secondaryButton={{
         //   text: 'Download Brochure',

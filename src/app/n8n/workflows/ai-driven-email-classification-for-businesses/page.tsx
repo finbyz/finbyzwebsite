@@ -1,4 +1,5 @@
 import HeroSection from '@/components/sections/dynamic-hero'
+import { contactUrl } from '@/lib/contact'
 import Section from '@/components/sections/Section'
 import ProcessWorkflow from '@/components/sections/process-workflow'
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid'
@@ -245,7 +246,7 @@ export default function Page() {
         highlightWords={seo.highlightwords}
         description={seo.description || undefined}
         heroImage={{ alt: seo.title, src: "/images/email_classifiaction.gif" }}
-        primaryButton={{ text: 'Get a Demo', action: '/contact' }}
+        primaryButton={{ text: 'Get a Demo', action: contactUrl({ notes: 'We are interested in AI-driven email classification', referer: '/n8n/workflows/ai-driven-email-classification-for-businesses' }) }}
 
       />
 

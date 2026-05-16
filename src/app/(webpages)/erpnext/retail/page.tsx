@@ -6,6 +6,7 @@ import Differentiators from '@/components/sections/differentiators';
 import { List } from '@/components/sections/list';
 
 import { Award, Database, TrendingUp, Users, BarChart3, ShieldCheck, ShoppingCart, BarChartHorizontal, UserCheck, PackageCheck, Cloud, CreditCard, Truck, Store, Zap, UserPlus } from 'lucide-react';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   return (
@@ -18,7 +19,7 @@ export default function Page() {
           description="Transform your retail business with ERPNext solutions. Optimize inventory, POS, supply chain, and customer experience for enhanced efficiency and growth."
           primaryButton={{
             text: 'Get Started',
-            action: 'https://finbyz.tech/contact',
+            action: contactUrl({ notes: 'We are interested in ERPNext for Retail', referer: '/erpnext/retail' }),
           }}
           secondaryButton={{
             text: 'Learn More',

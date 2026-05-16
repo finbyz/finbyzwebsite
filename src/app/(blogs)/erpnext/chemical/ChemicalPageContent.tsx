@@ -9,6 +9,7 @@ import QuoteBlock from '@/components/ai_components/QuoteBlock';
 import ChemFeatureCheckboxGrid from '@/components/ai_components/ChemFeatureCheckboxGrid';
 import ChemInfoBox from '@/components/ai_components/ChemInfoBox';
 import { CheckCircle } from 'lucide-react';
+import { contactUrl } from '@/lib/contact';
 
 
 
@@ -21,7 +22,7 @@ export default function ChemicalPageContent() {
         description="Discover Finbyz Tech's tailored ERP solutions for the chemical industry. Streamline operations, ensure compliance, and boost productivity with our specialized ERP software."
         primaryButton={{
           text: 'Get Free Consultation',
-          action: '/contact',
+          action: contactUrl({ notes: 'We are interested in ERPNext for Chemical industry', referer: '/erpnext/chemical' }),
         }}
         heroImage={{
           alt: 'ERPNext for Chemical Industry',

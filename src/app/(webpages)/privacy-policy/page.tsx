@@ -3,6 +3,7 @@ import Section from '@/components/sections/Section';
 import List from '@/components/sections/list';
 import ContactDetailsBlock from '@/components/ai_components/ContactDetailsBlock';
 import React from 'react';
+import { contactUrl } from '@/lib/contact'
 
 export default function Page() {
   return (
@@ -13,7 +14,7 @@ export default function Page() {
         description="Learn how Finbyz Tech collects, uses, and protects your personal data. Your privacy and data security are our top priorities."
         primaryButton={{
           text: 'Contact Us',
-          action: '/contact',
+          action: contactUrl({ notes: 'I have a question about the privacy policy', referer: '/privacy-policy' }),
         }}
         secondaryButton={{
           text: 'Visit Website',

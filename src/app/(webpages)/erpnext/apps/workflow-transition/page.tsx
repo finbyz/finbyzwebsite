@@ -7,12 +7,11 @@ import BenefitsGrid from '@/components/ai_components/BenefitsGrid';
 import Image from 'next/image';
 import { CheckCircle, HelpCircle, XCircle } from 'lucide-react';
 import React from 'react';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   // Button actions
-  const handleGetStarted = () => {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-  };return (
+  return (
     <>
       {/* Hero Section */}
       <HeroSection
@@ -22,7 +21,7 @@ export default function Page() {
         primaryButton={{ text: 'Get Started', 
           action: '#workflow'
         }}
-        secondaryButton={{ text: 'Contact Us', action: '/contact' }}
+        secondaryButton={{ text: 'Contact Us', action: contactUrl({ notes: 'We need help to setup Workflow Transition app', referer: '/erpnext/apps/workflow-transition' }) }}
         heroImage={{
           alt: 'Workflow Transition',
           src: '/images/workflow-transition.png'

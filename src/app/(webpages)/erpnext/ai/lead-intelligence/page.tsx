@@ -2,6 +2,7 @@ import HeroSection from '@/components/sections/dynamic-hero';
 import Section from '@/components/sections/Section';
 import ProcessWorkflow from '@/components/sections/process-workflow';
 import ResponsiveCardGrid from '@/components/sections/responsive-card-grid';
+import { contactUrl } from '@/lib/contact';
 
 
 export default function Page() {
@@ -157,7 +158,7 @@ export default function Page() {
     title: 'Automate inquiry-to-lead in ERPNext',
     description:
       'Turn unstructured emails into clean, actionable CRM records with AI-powered classification, extraction, and deduplication.',
-    primaryButton: { text: 'Request a demo', icon: 'Sparkles', action: '/contact' },
+    primaryButton: { text: 'Request a demo', icon: 'Sparkles', action: contactUrl({ notes: 'We are interested in Lead Intelligence', referer: '/erpnext/ai/lead-intelligence' }) },
     secondaryButton: {
       text: 'See How it Works',
       icon: 'Phone',
@@ -174,7 +175,7 @@ export default function Page() {
         description={seoDescription}
         heroImage={{ alt: seoTitle, src: "/images/Lead Intelligence.gif" }}
         highlightWords={["Lead Intelligence"]}
-        primaryButton={{ text: 'Get a Demo', action: '/contact' }}
+        primaryButton={{ text: 'Get a Demo', action: contactUrl({ notes: 'We are interested in Lead Intelligence', referer: '/erpnext/ai/lead-intelligence' }) }}
 
       // accentColor="blue"
       />

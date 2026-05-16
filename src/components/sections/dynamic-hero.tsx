@@ -132,6 +132,18 @@ const HeroSection: React.FC<HeroSectionProps> = async ({
     }).filter(Boolean);
   };
 
+  const hasValidImage = [
+    heroImage?.poster,
+    heroImage?.src,
+    animated_image,
+    image,
+  ].some(
+    (img) =>
+      typeof img === "string" &&
+      img.trim() !== "" &&
+      /\.(jpg|jpeg|png|webp|gif|svg|avif)$/i.test(img)
+  );
+
   return (
     <div className={`container-custom min-h-screen ${backgroundColor} text-white ${className}`}>
       {/* Main Hero Section */}
@@ -186,6 +198,7 @@ const HeroSection: React.FC<HeroSectionProps> = async ({
                   height={450}
                     className={imageClassName}
                   priority
+                  unoptimized={!hasValidImage}
                 />
               )}
               {/* "w-full h-auto max-h-[520px] rounded-2xl object-contain" */}

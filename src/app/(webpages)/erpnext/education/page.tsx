@@ -3,6 +3,7 @@ import Section from '@/components/sections/Section';
 
 import List from '@/components/sections/list';
 import EducationFeatureGrid from '@/components/ai_components/EducationFeatureGrid';
+import { contactUrl } from '@/lib/contact';
 
 const heroImage = {
   alt: 'ERP For Education',
@@ -106,7 +107,7 @@ export default function Page() {
         }}
         secondaryButton={{
           text: 'Request Demo',
-          action: '/contact',
+          action: contactUrl({ notes: 'We are interested in ERPNext for Education', referer: '/erpnext/education' }),
         }}
         heroImage={heroImage}
       />

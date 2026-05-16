@@ -3,6 +3,7 @@ import Section from '@/components/sections/Section';
 
 import { FileText, Star, BarChart3, Factory, AlertTriangle, Info, Workflow, ListChecks, TrendingUp, Rocket, LineChart, Settings, Calendar, BookOpen } from 'lucide-react';
 import Link from 'next/link';
+import { contactUrl } from '@/lib/contact'
 
 export default function ERPInsightsPage() {
   const handleGetStarted = () => {
@@ -32,11 +33,11 @@ export default function ERPInsightsPage() {
         description="Deep dive into the world of Enterprise Resource Planning. From basics to advanced implementation strategies, access our comprehensive knowledge base."
         primaryButton={{
           text: 'Read Articles',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in ERP Insights', referer: '/solutions/erp/insights' })
         }}
         secondaryButton={{
           text: 'Contact Us',
-          action: '/contact'
+          action: contactUrl({ notes: 'We are interested in ERP Insights', referer: '/solutions/erp/insights' })
         }}
         heroImage={{
           alt: 'ERP Insights - comprehensive guide to enterprise resource planning',

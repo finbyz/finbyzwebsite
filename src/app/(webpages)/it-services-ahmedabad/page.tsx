@@ -1,15 +1,9 @@
 import ResponsiveCardGrid from "@/components/sections/responsive-card-grid";
+import ScrollButton from "@/components/ui/ScrollButton";
 import { Code, Users, TrendingUp, Shield, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 
 export default function ITServicesAhmedabadPage() {
-  const handleGetStarted = () => {
-    const form = document.querySelector('.inquiry-form');
-    if (form) {
-      form.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   const industries = [
     "Pharma & Healthcare",
     "Chemical & Manufacturing",
@@ -45,14 +39,11 @@ export default function ITServicesAhmedabadPage() {
               Premier IT services company offering custom software development, ERP solutions, AI automation, web & mobile development. Based in Navrangpura with a team of 50+ experts serving 100+ businesses across Ahmedabad and India.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={handleGetStarted}
-                className="bg-[#FF8C00] hover:bg-[#FF7700] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all"
-              >
+              <ScrollButton className="bg-[#FF8C00] hover:bg-[#FF7700] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all">
                 Get Free Project Quote
-              </button>
+              </ScrollButton>
               <Link
-                href="/contact"
+                href="/contact?notes=We%20are%20interested%20in%20IT%20services%20in%20Ahmedabad&referer=/it-services-ahmedabad#contact-form-section"
                 className="bg-white hover:bg-gray-100 text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
               >
                 View Our Portfolio
@@ -294,12 +285,9 @@ export default function ITServicesAhmedabadPage() {
               <p className="text-lg text-gray-700 mb-4">
                 Whether you need a custom software solution, ERP implementation, or IT consulting, our team is ready to help.
               </p>
-              <button
-                onClick={handleGetStarted}
-                className="bg-[#FF8C00] hover:bg-[#FF7700] text-white px-6 py-3 rounded-lg font-semibold transition-all"
-              >
+              <ScrollButton className="bg-[#FF8C00] hover:bg-[#FF7700] text-white px-6 py-3 rounded-lg font-semibold transition-all">
                 Schedule Free Consultation
-              </button>
+              </ScrollButton>
             </div>
           </div>
         </div>

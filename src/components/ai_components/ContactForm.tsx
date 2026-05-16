@@ -20,32 +20,53 @@ const planMessages: Record<string, string> = {
 const ContactForm: React.FC = () => {
   const searchParams = useSearchParams();
 
-  const initialState = {
-    lead_name: searchParams.get('lead_name') || '',
-    email_id: searchParams.get('email_id') || '',
-    mobile_no: searchParams.get('mobile_no') || '',
-    country_code: searchParams.get('country_code') || '+91',
-    company_name: searchParams.get('company_name') || '',
-    notes: searchParams.get('notes') || (searchParams.get('plan') ? planMessages[searchParams.get('plan')!] || '' : ''),
-  };
-  const [form, setForm] = useState(initialState);
+  const [form, setForm] = useState({
+    lead_name: '',
+    email_id: '',
+    mobile_no: '',
+    country_code: '+91',
+    company_name: '',
+    notes: '',
+  });
   const [loading, setLoading] = useState(false);
-  const [referer, setReferer] = useState(searchParams.get('referer') || '');
+  const [referer, setReferer] = useState('');
   const router = useRouter();
 
   const geoLocation = useGeoLocation('+91');
 
   useEffect(() => {
-    if (!geoLocation.loading && geoLocation.dialCode) {
-      setForm(prev => ({ ...prev, country_code: geoLocation.dialCode }));
-    }
-  }, [geoLocation.loading, geoLocation.dialCode]);
+    const paramsLeadName = searchParams.get('lead_name') || '';
+    const paramsEmail = searchParams.get('email_id') || '';
+    const paramsMobile = searchParams.get('mobile_no') || '';
+    const paramsCountryCode = searchParams.get('country_code') || '+91';
+    const paramsCompany = searchParams.get('company_name') || '';
+    const paramsPlan = searchParams.get('plan');
+    const paramsNotes = searchParams.get('notes') || (paramsPlan ? planMessages[paramsPlan] || '' : '');
+    const paramsReferer = searchParams.get('referer') || '';
 
-  useEffect(() => {
-    if (!referer && typeof document !== 'undefined') {
-      setReferer(document.referrer || 'direct');
+    setForm(prev => ({
+      lead_name: paramsLeadName || prev.lead_name,
+      email_id: paramsEmail || prev.email_id,
+      mobile_no: paramsMobile || prev.mobile_no,
+      country_code: geoLocation.dialCode || paramsCountryCode,
+      company_name: paramsCompany || prev.company_name,
+      notes: paramsNotes || prev.notes,
+    }));
+
+    const toAbsolute = (url: string) => {
+      if (url.startsWith('http')) return url;
+      return `${window.location.origin}${url}`;
+    };
+    const stripQuery = (url: string) => {
+      try { const u = new URL(url); u.search = ''; return u.href.replace(/\/$/, ''); } catch { return url; }
+    };
+
+    if (paramsReferer) {
+      setReferer(stripQuery(toAbsolute(paramsReferer)));
+    } else {
+      setReferer(stripQuery(document.referrer || window.location.href));
     }
-  }, [referer]);
+  }, [searchParams, geoLocation.dialCode]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -53,39 +74,28 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    router.push("/contact/thank-you-for-inquiry");
     setLoading(true);
 
     try {
-      const data = {
-        name1: form.lead_name,
+      const payload = {
+        lead_name: form.lead_name,
+        company_name: form.company_name || "Website",
+        mobile_no: `${form.country_code}${form.mobile_no}`,
+        title: referer || (typeof window !== "undefined" ? window.location.href : "Website Inquiry"),
         email: form.email_id,
-        subject: `${form.country_code}${form.mobile_no}`,
+        notes: form.notes,
         message: form.notes,
-        doctype: "Contact Us",
-        web_form_name: "contact",
-        custom_referer: referer,
       };
 
-      const formBody = new URLSearchParams({
-        data: JSON.stringify(data),
-        web_form: "contact",
-        for_payment: "false",
-        cmd: "frappe.website.doctype.web_form.web_form.accept",
-      }).toString();
-
-      const res = await fetch("web-api/fb/n", {
+      const res = await fetch("/web-api/fb/method/finbyzweb.api.set_form_data", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-          "Accept": "application/json, text/javascript, */*; q=0.01",
-          "X-Requested-With": "XMLHttpRequest",
-        },
-        body: formBody,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       });
 
       if (res.ok) {
-        setForm(initialState);
+        setForm({ lead_name: '', email_id: '', mobile_no: '', country_code: '+91', company_name: '', notes: '' });
+        router.push("/contact/thank-you-for-inquiry");
       } else {
         alert("Something went wrong. Please try again.");
       }
@@ -107,7 +117,7 @@ const ContactForm: React.FC = () => {
         </CardTitle>
         <p className="text-white/70 text-base mt-1.5">Fill the form and our team will get back to you within 24 hours</p>
       </div>
-      <form onSubmit={handleSubmit} autoComplete="off">
+      <form onSubmit={handleSubmit} onKeyDown={(e) => { if (e.key === 'Enter') e.preventDefault(); }} autoComplete="off">
         <CardContent className="flex flex-col gap-6 pt-8 px-8">
           <div className="relative">
             <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />

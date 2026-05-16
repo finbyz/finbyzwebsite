@@ -8,6 +8,7 @@ import IndustryServiceGrid from '@/components/ai_components/IndustryServiceGrid'
 import Image from 'next/image';
 import { CheckCircle } from 'lucide-react';
 import PartnerSaudiArabiaMotionCards from '@/components/ai_components/PartnerSaudiArabiaMotionCards';
+import { contactUrl } from '@/lib/contact';
 
 export default function Page() {
   return (
@@ -18,7 +19,7 @@ export default function Page() {
         description="Discover leading ERPNext service providers and partners in Saudi Arabia. Trusted solutions tailored to optimize your business operations and drive growth."
         primaryButton={{
           text: 'Get Consultation',
-          action: '/contact',
+          action: contactUrl({ notes: 'We are interested in ERPNext Partnership in Saudi Arabia', referer: '/erpnext/partner-in-saudi-arabia' }),
         }}
         secondaryButton={{
           text: 'Learn More',
